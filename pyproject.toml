@@ -7,7 +7,7 @@ name = "scm-python"
 version = "0.1.0"
 description = "Palo Alto Networks SCM Python SDK"
 authors = [
-    { name = "Palo Alto Networks", email = "vnarayanan@paloaltonetworks.com" },
+  { name="Palo Alto Networks", email="devrel@paloaltonetworks.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,7 +21,6 @@ dependencies = [
     "python-dateutil",
     "pydantic >= 2.0.0",
     "typing-extensions",
-    # Add auth dependencies found in cdot65
     "oauthlib >= 3.3.0",
     "requests-oauthlib >= 2.0.0",
 ]
@@ -34,7 +33,7 @@ dev = [
     "mypy >= 1.0",
 ]
 
-# Configure Ruff (Linter) - Copying cdot65's style config
+# Configure Ruff (Linter)
 [tool.ruff]
 line-length = 100
 target-version = "py310"
