@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scm-python"
+version = "0.1.0"
+description = "Palo Alto Networks SCM Python SDK"
+authors = [
+  { name="Palo Alto Networks", email="devrel@paloaltonetworks.com" },
+]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "urllib3 >= 1.25.3, < 2.1.0",
+    "python-dateutil",
+    "pydantic >= 2",
+    "typing-extensions",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scm*"]

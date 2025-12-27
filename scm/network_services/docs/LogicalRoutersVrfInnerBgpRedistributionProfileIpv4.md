@@ -1,0 +1,29 @@
+# LogicalRoutersVrfInnerBgpRedistributionProfileIpv4
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**unicast** | **str** |  | [optional] 
+
+## Example
+
+```python
+from scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4 import LogicalRoutersVrfInnerBgpRedistributionProfileIpv4
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of LogicalRoutersVrfInnerBgpRedistributionProfileIpv4 from a JSON string
+logical_routers_vrf_inner_bgp_redistribution_profile_ipv4_instance = LogicalRoutersVrfInnerBgpRedistributionProfileIpv4.from_json(json)
+# print the JSON string representation of the object
+print(LogicalRoutersVrfInnerBgpRedistributionProfileIpv4.to_json())
+
+# convert the object into a dict
+logical_routers_vrf_inner_bgp_redistribution_profile_ipv4_dict = logical_routers_vrf_inner_bgp_redistribution_profile_ipv4_instance.to_dict()
+# create an instance of LogicalRoutersVrfInnerBgpRedistributionProfileIpv4 from a dict
+logical_routers_vrf_inner_bgp_redistribution_profile_ipv4_from_dict = LogicalRoutersVrfInnerBgpRedistributionProfileIpv4.from_dict(logical_routers_vrf_inner_bgp_redistribution_profile_ipv4_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

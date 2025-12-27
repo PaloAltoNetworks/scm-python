@@ -1,0 +1,32 @@
+# SDWANRulesListResponse
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**List[SdwanRules]**](SdwanRules.md) |  | 
+**limit** | **int** | The maximum number of results per page | [default to 200]
+**offset** | **int** | The offset into the list of results returned | [default to 0]
+**total** | **int** | The total count of results | 
+
+## Example
+
+```python
+from scm_network_services.models.sdwan_rules_list_response import SDWANRulesListResponse
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of SDWANRulesListResponse from a JSON string
+sdwan_rules_list_response_instance = SDWANRulesListResponse.from_json(json)
+# print the JSON string representation of the object
+print(SDWANRulesListResponse.to_json())
+
+# convert the object into a dict
+sdwan_rules_list_response_dict = sdwan_rules_list_response_instance.to_dict()
+# create an instance of SDWANRulesListResponse from a dict
+sdwan_rules_list_response_from_dict = SDWANRulesListResponse.from_dict(sdwan_rules_list_response_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
