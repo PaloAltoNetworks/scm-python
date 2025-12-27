@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_send_community import BgpAddressFamilySendCommunity
+from scm.network_services.models.bgp_address_family_send_community import BgpAddressFamilySendCommunity
 
 class TestBgpAddressFamilySendCommunity(unittest.TestCase):
     """BgpAddressFamilySendCommunity unit test stubs"""
@@ -36,11 +36,11 @@ class TestBgpAddressFamilySendCommunity(unittest.TestCase):
         model = BgpAddressFamilySendCommunity()
         if include_optional:
             return BgpAddressFamilySendCommunity(
-                all = scm_network_services.models.all.all(),
-                both = scm_network_services.models.both.both(),
-                extended = scm_network_services.models.extended.extended(),
-                large = scm_network_services.models.large.large(),
-                standard = scm_network_services.models.standard.standard()
+                all = scm.network_services.models.all.all(),
+                both = scm.network_services.models.both.both(),
+                extended = scm.network_services.models.extended.extended(),
+                large = scm.network_services.models.large.large(),
+                standard = scm.network_services.models.standard.standard()
             )
         else:
             return BgpAddressFamilySendCommunity(

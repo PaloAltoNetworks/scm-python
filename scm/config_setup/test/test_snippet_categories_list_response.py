@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_categories_list_response import SnippetCategoriesListResponse
+from scm.config_setup.models.snippet_categories_list_response import SnippetCategoriesListResponse
 
 class TestSnippetCategoriesListResponse(unittest.TestCase):
     """SnippetCategoriesListResponse unit test stubs"""

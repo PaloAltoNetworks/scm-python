@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
+from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
 
 # TODO update the JSON string below
 json = "{}"

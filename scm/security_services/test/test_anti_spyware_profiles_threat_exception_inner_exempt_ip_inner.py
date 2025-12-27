@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner import AntiSpywareProfilesThreatExceptionInnerExemptIpInner
+from scm.security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner import AntiSpywareProfilesThreatExceptionInnerExemptIpInner
 
 class TestAntiSpywareProfilesThreatExceptionInnerExemptIpInner(unittest.TestCase):
     """AntiSpywareProfilesThreatExceptionInnerExemptIpInner unit test stubs"""

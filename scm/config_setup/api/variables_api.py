@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.variables import Variables
-from scm_config_setup.models.variables_list_response import VariablesListResponse
+from scm.config_setup.models.variables import Variables
+from scm.config_setup.models.variables_list_response import VariablesListResponse
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class VariablesApi:

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
+from scm.device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
 
 class TestHaConfigurationsGroupStateSynchronization(unittest.TestCase):
     """HaConfigurationsGroupStateSynchronization unit test stubs"""
@@ -37,7 +37,7 @@ class TestHaConfigurationsGroupStateSynchronization(unittest.TestCase):
         if include_optional:
             return HaConfigurationsGroupStateSynchronization(
                 enabled = True,
-                ha2_keep_alive = scm_device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
+                ha2_keep_alive = scm.device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
                     action = 'log-only', 
                     enabled = True, 
                     threshold = 5000, ),

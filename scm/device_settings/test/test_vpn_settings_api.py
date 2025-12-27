@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.vpn_settings_api import VPNSettingsApi
+from scm.device_settings.api.vpn_settings_api import VPNSettingsApi
 
 
 class TestVPNSettingsApi(unittest.TestCase):

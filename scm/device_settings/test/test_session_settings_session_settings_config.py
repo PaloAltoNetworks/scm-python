@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_settings_session_settings_config import SessionSettingsSessionSettingsConfig
+from scm.device_settings.models.session_settings_session_settings_config import SessionSettingsSessionSettingsConfig
 
 class TestSessionSettingsSessionSettingsConfig(unittest.TestCase):
     """SessionSettingsSessionSettingsConfig unit test stubs"""

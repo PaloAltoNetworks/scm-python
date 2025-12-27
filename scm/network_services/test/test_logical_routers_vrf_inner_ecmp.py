@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ecmp import LogicalRoutersVrfInnerEcmp
+from scm.network_services.models.logical_routers_vrf_inner_ecmp import LogicalRoutersVrfInnerEcmp
 
 class TestLogicalRoutersVrfInnerEcmp(unittest.TestCase):
     """LogicalRoutersVrfInnerEcmp unit test stubs"""
@@ -36,16 +36,16 @@ class TestLogicalRoutersVrfInnerEcmp(unittest.TestCase):
         model = LogicalRoutersVrfInnerEcmp()
         if include_optional:
             return LogicalRoutersVrfInnerEcmp(
-                algorithm = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm.logical_routers_vrf_inner_ecmp_algorithm(
-                    balanced_round_robin = scm_network_services.models.balanced_round_robin.balanced_round_robin(), 
-                    ip_hash = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash.logical_routers_vrf_inner_ecmp_algorithm_ip_hash(
+                algorithm = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm.logical_routers_vrf_inner_ecmp_algorithm(
+                    balanced_round_robin = scm.network_services.models.balanced_round_robin.balanced_round_robin(), 
+                    ip_hash = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash.logical_routers_vrf_inner_ecmp_algorithm_ip_hash(
                         hash_seed = 56, 
                         src_only = True, 
                         use_port = True, ), 
-                    ip_modulo = scm_network_services.models.ip_modulo.ip_modulo(), 
-                    weighted_round_robin = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin(
+                    ip_modulo = scm.network_services.models.ip_modulo.ip_modulo(), 
+                    weighted_round_robin = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin(
                         interface = [
-                            scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
                                 name = '', 
                                 weight = 56, )
                             ], ), ),

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
+from scm.network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
 
 class TestLoopbackInterfacesIpInner(unittest.TestCase):
     """LoopbackInterfacesIpInner unit test stubs"""

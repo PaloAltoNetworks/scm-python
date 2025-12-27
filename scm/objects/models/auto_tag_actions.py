@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
+from scm.objects.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
 from typing import Optional, Set
 from typing_extensions import Self
 

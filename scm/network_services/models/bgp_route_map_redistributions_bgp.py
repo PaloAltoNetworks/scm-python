@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_route_map_redistributions_bgp_ospf import BgpRouteMapRedistributionsBgpOspf
-from scm_network_services.models.bgp_route_map_redistributions_bgp_rib import BgpRouteMapRedistributionsBgpRib
+from scm.network_services.models.bgp_route_map_redistributions_bgp_ospf import BgpRouteMapRedistributionsBgpOspf
+from scm.network_services.models.bgp_route_map_redistributions_bgp_rib import BgpRouteMapRedistributionsBgpRib
 from typing import Optional, Set
 from typing_extensions import Self
 

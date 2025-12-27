@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.external_dynamic_lists_type_url_auth import ExternalDynamicListsTypeUrlAuth
-from scm_objects.models.external_dynamic_lists_type_url_recurring import ExternalDynamicListsTypeUrlRecurring
+from scm.objects.models.external_dynamic_lists_type_url_auth import ExternalDynamicListsTypeUrlAuth
+from scm.objects.models.external_dynamic_lists_type_url_recurring import ExternalDynamicListsTypeUrlRecurring
 from typing import Optional, Set
 from typing_extensions import Self
 

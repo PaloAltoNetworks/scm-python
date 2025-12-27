@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_default_action import AntiSpywareSignaturesDefaultAction
+from scm.security_services.models.anti_spyware_signatures_default_action import AntiSpywareSignaturesDefaultAction
 
 class TestAntiSpywareSignaturesDefaultAction(unittest.TestCase):
     """AntiSpywareSignaturesDefaultAction unit test stubs"""
@@ -36,15 +36,15 @@ class TestAntiSpywareSignaturesDefaultAction(unittest.TestCase):
         model = AntiSpywareSignaturesDefaultAction()
         if include_optional:
             return AntiSpywareSignaturesDefaultAction(
-                alert = scm_security_services.models.alert.alert(),
-                allow = scm_security_services.models.allow.allow(),
-                block_ip = scm_security_services.models.anti_spyware_signatures_default_action_block_ip.anti_spyware_signatures_default_action_block_ip(
+                alert = scm.security_services.models.alert.alert(),
+                allow = scm.security_services.models.allow.allow(),
+                block_ip = scm.security_services.models.anti_spyware_signatures_default_action_block_ip.anti_spyware_signatures_default_action_block_ip(
                     duration = 1, 
                     track_by = 'source-and-destination', ),
-                drop = scm_security_services.models.drop.drop(),
-                reset_both = scm_security_services.models.reset_both.reset_both(),
-                reset_client = scm_security_services.models.reset_client.reset_client(),
-                reset_server = scm_security_services.models.reset_server.reset_server()
+                drop = scm.security_services.models.drop.drop(),
+                reset_both = scm.security_services.models.reset_both.reset_both(),
+                reset_client = scm.security_services.models.reset_client.reset_client(),
+                reset_server = scm.security_services.models.reset_server.reset_server()
             )
         else:
             return AntiSpywareSignaturesDefaultAction(

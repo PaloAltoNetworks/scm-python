@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_maps_route_map_inner_set import BgpRouteMapsRouteMapInnerSet
+from scm.network_services.models.bgp_route_maps_route_map_inner_set import BgpRouteMapsRouteMapInnerSet
 
 class TestBgpRouteMapsRouteMapInnerSet(unittest.TestCase):
     """BgpRouteMapsRouteMapInnerSet unit test stubs"""
@@ -36,7 +36,7 @@ class TestBgpRouteMapsRouteMapInnerSet(unittest.TestCase):
         model = BgpRouteMapsRouteMapInnerSet()
         if include_optional:
             return BgpRouteMapsRouteMapInnerSet(
-                aggregator = scm_network_services.models.bgp_route_maps_route_map_inner_set_aggregator.bgp_route_maps_route_map_inner_set_aggregator(
+                aggregator = scm.network_services.models.bgp_route_maps_route_map_inner_set_aggregator.bgp_route_maps_route_map_inner_set_aggregator(
                     as = 1, 
                     router_id = '', ),
                 aspath_exclude = [
@@ -46,14 +46,14 @@ class TestBgpRouteMapsRouteMapInnerSet(unittest.TestCase):
                     56
                     ],
                 atomic_aggregate = True,
-                ipv4 = scm_network_services.models.bgp_route_maps_route_map_inner_set_ipv4.bgp_route_maps_route_map_inner_set_ipv4(
+                ipv4 = scm.network_services.models.bgp_route_maps_route_map_inner_set_ipv4.bgp_route_maps_route_map_inner_set_ipv4(
                     next_hop = '', 
                     source_address = '', ),
                 large_community = [
                     ''
                     ],
                 local_preference = 0,
-                metric = scm_network_services.models.bgp_route_maps_route_map_inner_set_metric.bgp_route_maps_route_map_inner_set_metric(
+                metric = scm.network_services.models.bgp_route_maps_route_map_inner_set_metric.bgp_route_maps_route_map_inner_set_metric(
                     action = 'set', 
                     value = 0, ),
                 origin = 'none',

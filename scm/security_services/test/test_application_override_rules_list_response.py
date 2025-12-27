@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.application_override_rules_list_response import ApplicationOverrideRulesListResponse
+from scm.security_services.models.application_override_rules_list_response import ApplicationOverrideRulesListResponse
 
 class TestApplicationOverrideRulesListResponse(unittest.TestCase):
     """ApplicationOverrideRulesListResponse unit test stubs"""

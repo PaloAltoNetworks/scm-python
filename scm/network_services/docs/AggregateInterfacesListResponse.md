@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.aggregate_interfaces_list_response import AggregateInterfacesListResponse
+from scm.network_services.models.aggregate_interfaces_list_response import AggregateInterfacesListResponse
 
 # TODO update the JSON string below
 json = "{}"

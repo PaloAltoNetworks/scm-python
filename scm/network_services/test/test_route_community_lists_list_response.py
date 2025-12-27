@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_list_response import RouteCommunityListsListResponse
+from scm.network_services.models.route_community_lists_list_response import RouteCommunityListsListResponse
 
 class TestRouteCommunityListsListResponse(unittest.TestCase):
     """RouteCommunityListsListResponse unit test stubs"""

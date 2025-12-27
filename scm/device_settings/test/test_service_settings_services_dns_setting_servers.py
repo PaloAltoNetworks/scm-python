@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_settings_services_dns_setting_servers import ServiceSettingsServicesDnsSettingServers
+from scm.device_settings.models.service_settings_services_dns_setting_servers import ServiceSettingsServicesDnsSettingServers
 
 class TestServiceSettingsServicesDnsSettingServers(unittest.TestCase):
     """ServiceSettingsServicesDnsSettingServers unit test stubs"""

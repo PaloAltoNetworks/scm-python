@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.labels_list_response import LabelsListResponse
+from scm.config_setup.models.labels_list_response import LabelsListResponse
 
 # TODO update the JSON string below
 json = "{}"

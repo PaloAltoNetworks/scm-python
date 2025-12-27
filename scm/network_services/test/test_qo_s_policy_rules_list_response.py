@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
+from scm.network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
 
 class TestQoSPolicyRulesListResponse(unittest.TestCase):
     """QoSPolicyRulesListResponse unit test stubs"""

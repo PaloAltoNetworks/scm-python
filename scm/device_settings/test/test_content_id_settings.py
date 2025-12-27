@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.content_id_settings import ContentIdSettings
+from scm.device_settings.models.content_id_settings import ContentIdSettings
 
 class TestContentIdSettings(unittest.TestCase):
     """ContentIdSettings unit test stubs"""
@@ -36,10 +36,10 @@ class TestContentIdSettings(unittest.TestCase):
         model = ContentIdSettings()
         if include_optional:
             return ContentIdSettings(
-                content_id = scm_device_settings.models.content_id_settings_content_id.content_id_settings_content_id(
+                content_id = scm.device_settings.models.content_id_settings_content_id.content_id_settings_content_id(
                     allow_forward_decrypted_content = True, 
                     allow_http_range = True, 
-                    application = scm_device_settings.models.content_id_settings_content_id_application.content_id_settings_content_id_application(
+                    application = scm.device_settings.models.content_id_settings_content_id_application.content_id_settings_content_id_application(
                         bypass_exceed_queue = True, ), 
                     extended_capture_segment = 56, 
                     strip_x_fwd_for = True, 

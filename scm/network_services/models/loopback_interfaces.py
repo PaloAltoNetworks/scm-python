@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
-from scm_network_services.models.loopback_interfaces_ipv6 import LoopbackInterfacesIpv6
+from scm.network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
+from scm.network_services.models.loopback_interfaces_ipv6 import LoopbackInterfacesIpv6
 from typing import Optional, Set
 from typing_extensions import Self
 

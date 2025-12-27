@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list import LogicalRoutersVrfInnerRipGlobalInboundDistributeList
+from scm.network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list import LogicalRoutersVrfInnerRipGlobalInboundDistributeList
 
 class TestLogicalRoutersVrfInnerRipGlobalInboundDistributeList(unittest.TestCase):
     """LogicalRoutersVrfInnerRipGlobalInboundDistributeList unit test stubs"""

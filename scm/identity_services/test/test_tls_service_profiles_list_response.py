@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tls_service_profiles_list_response import TLSServiceProfilesListResponse
+from scm.identity_services.models.tls_service_profiles_list_response import TLSServiceProfilesListResponse
 
 class TestTLSServiceProfilesListResponse(unittest.TestCase):
     """TLSServiceProfilesListResponse unit test stubs"""

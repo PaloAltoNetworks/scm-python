@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services_protocol import ServicesProtocol
+from scm.objects.models.services_protocol import ServicesProtocol
 
 class TestServicesProtocol(unittest.TestCase):
     """ServicesProtocol unit test stubs"""
@@ -36,15 +36,15 @@ class TestServicesProtocol(unittest.TestCase):
         model = ServicesProtocol()
         if include_optional:
             return ServicesProtocol(
-                tcp = scm_objects.models.services_protocol_tcp.services_protocol_tcp(
-                    override = scm_objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
+                tcp = scm.objects.models.services_protocol_tcp.services_protocol_tcp(
+                    override = scm.objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
                         halfclose_timeout = 1, 
                         timeout = 1, 
                         timewait_timeout = 1, ), 
                     port = '0', 
                     source_port = '0', ),
-                udp = scm_objects.models.services_protocol_udp.services_protocol_udp(
-                    override = scm_objects.models.services_protocol_udp_override.services_protocol_udp_override(
+                udp = scm.objects.models.services_protocol_udp.services_protocol_udp(
+                    override = scm.objects.models.services_protocol_udp_override.services_protocol_udp_override(
                         timeout = 1, ), 
                     port = '0', 
                     source_port = '0', )

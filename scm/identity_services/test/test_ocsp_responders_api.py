@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.ocsp_responders_api import OCSPRespondersApi
+from scm.identity_services.api.ocsp_responders_api import OCSPRespondersApi
 
 
 class TestOCSPRespondersApi(unittest.TestCase):

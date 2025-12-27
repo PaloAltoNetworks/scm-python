@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersGatewaysInnerInterfacesInnerSdwanLinkSettings
+from scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersGatewaysInnerInterfacesInnerSdwanLinkSettings
 from typing import Optional, Set
 from typing_extensions import Self
 

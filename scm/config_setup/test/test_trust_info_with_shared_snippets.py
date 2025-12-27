@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.trust_info_with_shared_snippets import TrustInfoWithSharedSnippets
+from scm.config_setup.models.trust_info_with_shared_snippets import TrustInfoWithSharedSnippets
 
 class TestTrustInfoWithSharedSnippets(unittest.TestCase):
     """TrustInfoWithSharedSnippets unit test stubs"""
@@ -51,7 +51,7 @@ class TestTrustInfoWithSharedSnippets(unittest.TestCase):
                 recipient_tsg = '',
                 recipient_validate_before_update = 56,
                 shared_snippets = [
-                    scm_config_setup.models.snippet_share_info.snippet_share_info(
+                    scm.config_setup.models.snippet_share_info.snippet_share_info(
                         created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         donor_created = 56, 
                         donor_snippet_file_id = 56, 
@@ -64,7 +64,7 @@ class TestTrustInfoWithSharedSnippets(unittest.TestCase):
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         msg_uuid = '', 
                         properties = [
-                            scm_config_setup.models.snippet_share_property.snippet_share_property(
+                            scm.config_setup.models.snippet_share_property.snippet_share_property(
                                 created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 created_by = '', 
                                 donor_tenant = '', 

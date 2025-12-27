@@ -21,10 +21,10 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
-from scm_security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
-from scm_security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
-from scm_security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
+from scm.security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
+from scm.security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
+from scm.security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
+from scm.security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
 from typing import Optional, Set
 from typing_extensions import Self
 

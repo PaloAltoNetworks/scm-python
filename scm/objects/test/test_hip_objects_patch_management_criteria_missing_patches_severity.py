@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_patch_management_criteria_missing_patches_severity import HipObjectsPatchManagementCriteriaMissingPatchesSeverity
+from scm.objects.models.hip_objects_patch_management_criteria_missing_patches_severity import HipObjectsPatchManagementCriteriaMissingPatchesSeverity
 
 class TestHipObjectsPatchManagementCriteriaMissingPatchesSeverity(unittest.TestCase):
     """HipObjectsPatchManagementCriteriaMissingPatchesSeverity unit test stubs"""

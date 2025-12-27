@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.file_blocking_profiles_rules_inner import FileBlockingProfilesRulesInner
+from scm.security_services.models.file_blocking_profiles_rules_inner import FileBlockingProfilesRulesInner
 
 class TestFileBlockingProfilesRulesInner(unittest.TestCase):
     """FileBlockingProfilesRulesInner unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
+from scm.network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
 
 # TODO update the JSON string below
 json = "{}"

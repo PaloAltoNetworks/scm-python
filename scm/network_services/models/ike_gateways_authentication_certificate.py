@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
+from scm.network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.traffic_steering_rules_api import TrafficSteeringRulesApi
+from scm.deployment_services.api.traffic_steering_rules_api import TrafficSteeringRulesApi
 
 
 class TestTrafficSteeringRulesApi(unittest.TestCase):

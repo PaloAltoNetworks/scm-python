@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces_layer3_ddns_config import AggregateInterfacesLayer3DdnsConfig
+from scm.network_services.models.aggregate_interfaces_layer3_ddns_config import AggregateInterfacesLayer3DdnsConfig
 
 class TestAggregateInterfacesLayer3DdnsConfig(unittest.TestCase):
     """AggregateInterfacesLayer3DdnsConfig unit test stubs"""

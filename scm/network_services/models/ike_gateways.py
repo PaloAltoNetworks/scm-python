@@ -21,13 +21,13 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
-from scm_network_services.models.ike_gateways_local_address import IkeGatewaysLocalAddress
-from scm_network_services.models.ike_gateways_local_id import IkeGatewaysLocalId
-from scm_network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
-from scm_network_services.models.ike_gateways_peer_id import IkeGatewaysPeerId
-from scm_network_services.models.ike_gateways_protocol import IkeGatewaysProtocol
-from scm_network_services.models.ike_gateways_protocol_common import IkeGatewaysProtocolCommon
+from scm.network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
+from scm.network_services.models.ike_gateways_local_address import IkeGatewaysLocalAddress
+from scm.network_services.models.ike_gateways_local_id import IkeGatewaysLocalId
+from scm.network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
+from scm.network_services.models.ike_gateways_peer_id import IkeGatewaysPeerId
+from scm.network_services.models.ike_gateways_protocol import IkeGatewaysProtocol
+from scm.network_services.models.ike_gateways_protocol_common import IkeGatewaysProtocolCommon
 from typing import Optional, Set
 from typing_extensions import Self
 

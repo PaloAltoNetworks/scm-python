@@ -1,4 +1,4 @@
-# scm_identity_services.AuthenticationRulesApi
+# scm.identity_services.AuthenticationRulesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/identity/v1*
 
@@ -24,14 +24,14 @@ Create a new authentication rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.authentication_rules import AuthenticationRules
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.authentication_rules import AuthenticationRules
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -41,16 +41,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     position = pre # str | The relative position of the rule  (default to pre)
-    authentication_rules = scm_identity_services.AuthenticationRules() # AuthenticationRules | Created (optional)
+    authentication_rules = scm.identity_services.AuthenticationRules() # AuthenticationRules | Created (optional)
 
     try:
         # Create an authentication rule
@@ -109,13 +109,13 @@ Delete an authentication rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -125,14 +125,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -190,14 +190,14 @@ Get an existing authentication rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.authentication_rules import AuthenticationRules
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.authentication_rules import AuthenticationRules
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -207,14 +207,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -273,14 +273,14 @@ Retrieve a list of authentication rules.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -290,14 +290,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     position = pre # str | The relative position of the rule  (default to pre)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
@@ -368,14 +368,14 @@ Move an existing authentication rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.rule_based_move import RuleBasedMove
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.rule_based_move import RuleBasedMove
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -385,16 +385,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    rule_based_move = scm_identity_services.RuleBasedMove() # RuleBasedMove | OK (optional)
+    rule_based_move = scm.identity_services.RuleBasedMove() # RuleBasedMove | OK (optional)
 
     try:
         # Move an authentication rule
@@ -451,14 +451,14 @@ Update an existing authentication rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.authentication_rules import AuthenticationRules
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.authentication_rules import AuthenticationRules
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -468,16 +468,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.AuthenticationRulesApi(api_client)
+    api_instance = scm.identity_services.AuthenticationRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    authentication_rules = scm_identity_services.AuthenticationRules() # AuthenticationRules | OK (optional)
+    authentication_rules = scm.identity_services.AuthenticationRules() # AuthenticationRules | OK (optional)
 
     try:
         # Update an authentication rule

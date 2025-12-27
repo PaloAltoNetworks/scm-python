@@ -17,11 +17,11 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from scm_network_services.models.license_result import LicenseResult
+from scm.network_services.models.license_result import LicenseResult
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class RemoteNetworksLicenseApi:

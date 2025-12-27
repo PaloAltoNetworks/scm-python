@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.services import Services
+from scm.objects.models.services import Services
 
 # TODO update the JSON string below
 json = "{}"

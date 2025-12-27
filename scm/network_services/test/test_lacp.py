@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.lacp import Lacp
+from scm.network_services.models.lacp import Lacp
 
 class TestLacp(unittest.TestCase):
     """Lacp unit test stubs"""

@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
-from scm_identity_services.models.certificate_profiles_username_field import CertificateProfilesUsernameField
+from scm.identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
+from scm.identity_services.models.certificate_profiles_username_field import CertificateProfilesUsernameField
 from typing import Optional, Set
 from typing_extensions import Self
 

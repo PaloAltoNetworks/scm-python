@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
+from scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
 
 # TODO update the JSON string below
 json = "{}"

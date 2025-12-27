@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
+from scm.objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
 
 class TestPayloadFormatHeadersInner(unittest.TestCase):
     """PayloadFormatHeadersInner unit test stubs"""

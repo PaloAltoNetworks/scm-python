@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.dos_protection_profiles_flood_icmp import DosProtectionProfilesFloodIcmp
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
+from scm.security_services.models.dos_protection_profiles_flood_icmp import DosProtectionProfilesFloodIcmp
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
 from typing import Optional, Set
 from typing_extensions import Self
 

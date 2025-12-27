@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_method_ldap import AuthenticationProfilesMethodLdap
+from scm.identity_services.models.authentication_profiles_method_ldap import AuthenticationProfilesMethodLdap
 
 class TestAuthenticationProfilesMethodLdap(unittest.TestCase):
     """AuthenticationProfilesMethodLdap unit test stubs"""

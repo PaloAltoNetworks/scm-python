@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
+from scm.network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
 
 class TestSdwanPathQualityProfilesMetric(unittest.TestCase):
     """SdwanPathQualityProfilesMetric unit test stubs"""
@@ -36,22 +36,22 @@ class TestSdwanPathQualityProfilesMetric(unittest.TestCase):
         model = SdwanPathQualityProfilesMetric()
         if include_optional:
             return SdwanPathQualityProfilesMetric(
-                jitter = scm_network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
+                jitter = scm.network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
                     sensitivity = 'medium', 
                     threshold = 10, ),
-                latency = scm_network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
+                latency = scm.network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
                     sensitivity = 'medium', 
                     threshold = 10, ),
-                pkt_loss = scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
+                pkt_loss = scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
                     sensitivity = 'medium', 
                     threshold = 1, )
             )
         else:
             return SdwanPathQualityProfilesMetric(
-                jitter = scm_network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
+                jitter = scm.network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
                     sensitivity = 'medium', 
                     threshold = 10, ),
-                latency = scm_network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
+                latency = scm.network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
                     sensitivity = 'medium', 
                     threshold = 10, ),
         )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_route_route_service_inner_source import ServiceRouteRouteServiceInnerSource
+from scm.device_settings.models.service_route_route_service_inner_source import ServiceRouteRouteServiceInnerSource
 
 class TestServiceRouteRouteServiceInnerSource(unittest.TestCase):
     """ServiceRouteRouteServiceInnerSource unit test stubs"""

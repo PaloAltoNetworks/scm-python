@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.security_zones_api import SecurityZonesApi
+from scm.network_services.api.security_zones_api import SecurityZonesApi
 
 
 class TestSecurityZonesApi(unittest.TestCase):

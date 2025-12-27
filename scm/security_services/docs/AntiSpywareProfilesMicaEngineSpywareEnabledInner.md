@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner import AntiSpywareProfilesMicaEngineSpywareEnabledInner
+from scm.security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner import AntiSpywareProfilesMicaEngineSpywareEnabledInner
 
 # TODO update the JSON string below
 json = "{}"

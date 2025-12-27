@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_host_info_criteria_os_contains import HipObjectsHostInfoCriteriaOsContains
+from scm.objects.models.hip_objects_host_info_criteria_os_contains import HipObjectsHostInfoCriteriaOsContains
 
 class TestHipObjectsHostInfoCriteriaOsContains(unittest.TestCase):
     """HipObjectsHostInfoCriteriaOsContains unit test stubs"""

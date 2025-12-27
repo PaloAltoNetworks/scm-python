@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast import LogicalRoutersVrfInnerMulticast
+from scm.network_services.models.logical_routers_vrf_inner_multicast import LogicalRoutersVrfInnerMulticast
 
 class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticast unit test stubs"""
@@ -38,10 +38,10 @@ class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
             return LogicalRoutersVrfInnerMulticast(
                 enable = True,
                 enable_v6 = True,
-                igmp = scm_network_services.models.logical_routers_vrf_inner_multicast_igmp.logical_routers_vrf_inner_multicast_igmp(
-                    dynamic = scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(
+                igmp = scm.network_services.models.logical_routers_vrf_inner_multicast_igmp.logical_routers_vrf_inner_multicast_igmp(
+                    dynamic = scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(
                         interface = [
-                            scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner(
                                 group_filter = '', 
                                 max_groups = '', 
                                 max_sources = '', 
@@ -53,29 +53,29 @@ class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
                             ], ), 
                     enable = True, 
                     static = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
                             group_address = '', 
                             name = '', 
                             source_address = '', )
                         ], ),
                 interface_group = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner.logical_routers_vrf_inner_multicast_interface_group_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner.logical_routers_vrf_inner_multicast_interface_group_inner(
                         description = '', 
-                        group_permission = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
+                        group_permission = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
                             any_source_multicast = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                                     group_address = '', 
                                     included = True, 
                                     name = '', )
                                 ], 
                             source_specific_multicast = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
                                     group_address = '', 
                                     included = True, 
                                     name = '', 
                                     source_address = '', )
                                 ], ), 
-                        igmp = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_igmp.logical_routers_vrf_inner_multicast_interface_group_inner_igmp(
+                        igmp = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_igmp.logical_routers_vrf_inner_multicast_interface_group_inner_igmp(
                             enable = True, 
                             immediate_leave = True, 
                             last_member_query_interval = 56, 
@@ -91,9 +91,9 @@ class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
                             ''
                             ], 
                         name = '', 
-                        pim = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
+                        pim = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
                             allowed_neighbors = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
                                     name = '', )
                                 ], 
                             assert_interval = 56, 
@@ -104,35 +104,35 @@ class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
                             join_prune_interval = 56, ), )
                     ],
                 mode = 'PIM-SM',
-                msdp = scm_network_services.models.logical_routers_vrf_inner_multicast_msdp.logical_routers_vrf_inner_multicast_msdp(
+                msdp = scm.network_services.models.logical_routers_vrf_inner_multicast_msdp.logical_routers_vrf_inner_multicast_msdp(
                     enable = True, 
                     global_authentication = '', 
                     global_timer = '', 
-                    originator_id = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                    originator_id = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                         interface = '', 
                         ip = '', ), 
                     peer = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner.logical_routers_vrf_inner_multicast_msdp_peer_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner.logical_routers_vrf_inner_multicast_msdp_peer_inner(
                             authentication = '', 
                             enable = True, 
                             inbound_sa_filter = '', 
-                            local_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                            local_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                                 interface = '', 
                                 ip = '', ), 
                             max_sa = 56, 
                             name = '', 
                             outbound_sa_filter = '', 
-                            peer_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
+                            peer_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
                                 fqdn = '', 
                                 ip = '', ), 
                             peer_as = '', )
                         ], ),
-                pim = scm_network_services.models.logical_routers_vrf_inner_multicast_pim.logical_routers_vrf_inner_multicast_pim(
+                pim = scm.network_services.models.logical_routers_vrf_inner_multicast_pim.logical_routers_vrf_inner_multicast_pim(
                     enable = True, 
                     group_permission = '', 
                     if_timer_global = '', 
                     interface = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner.logical_routers_vrf_inner_multicast_pim_interface_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner.logical_routers_vrf_inner_multicast_pim_interface_inner(
                             description = '', 
                             dr_priority = 56, 
                             if_timer = '', 
@@ -141,68 +141,68 @@ class TestLogicalRoutersVrfInnerMulticast(unittest.TestCase):
                             send_bsm = True, )
                         ], 
                     route_ageout_time = 56, 
-                    rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
+                    rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
                         external_rp = [
-                            scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
                                 group_list = '', 
                                 name = '', 
                                 override = True, )
                             ], 
-                        local_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
-                            candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
+                        local_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
+                            candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
                                 address = '', 
                                 advertisement_interval = 56, 
                                 group_list = '', 
                                 priority = 56, ), 
-                            static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
+                            static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
                                 address = '', 
                                 group_list = '', 
                                 override = True, ), ), ), 
                     rpf_lookup_mode = 'mrib-then-urib', 
                     spt_threshold = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
                             name = '', 
                             threshold = '', )
                         ], 
-                    ssm_address_space = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
+                    ssm_address_space = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
                         group_list = '', ), ),
                 route_ageout_time = 56,
-                rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp.logical_routers_vrf_inner_multicast_rp(
+                rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp.logical_routers_vrf_inner_multicast_rp(
                     external_rp = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_rp_external_rp_inner.logical_routers_vrf_inner_multicast_rp_external_rp_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_rp_external_rp_inner.logical_routers_vrf_inner_multicast_rp_external_rp_inner(
                             group_addresses = [
                                 ''
                                 ], 
                             name = '', 
                             override = True, )
                         ], 
-                    local_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp.logical_routers_vrf_inner_multicast_rp_local_rp(
-                        candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
+                    local_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp.logical_routers_vrf_inner_multicast_rp_local_rp(
+                        candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
                             address = '', 
                             advertisement_interval = 56, 
                             interface = '', 
                             priority = 56, ), 
-                        static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
+                        static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
                             address = '', 
                             interface = '', 
                             override = True, ), ), ),
                 spt_threshold = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
                         name = '', 
                         threshold = '', )
                     ],
                 ssm_address_space = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                         group_address = '', 
                         included = True, 
                         name = '', )
                     ],
                 static_route = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_static_route_inner.logical_routers_vrf_inner_multicast_static_route_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_static_route_inner.logical_routers_vrf_inner_multicast_static_route_inner(
                         destination = '', 
                         interface = '', 
                         name = '', 
-                        nexthop = scm_network_services.models.logical_routers_vrf_inner_multicast_static_route_inner_nexthop.logical_routers_vrf_inner_multicast_static_route_inner_nexthop(
+                        nexthop = scm.network_services.models.logical_routers_vrf_inner_multicast_static_route_inner_nexthop.logical_routers_vrf_inner_multicast_static_route_inner_nexthop(
                             ip_address = '', ), 
                         preference = 56, )
                     ]

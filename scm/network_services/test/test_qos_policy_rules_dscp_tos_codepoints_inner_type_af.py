@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af import QosPolicyRulesDscpTosCodepointsInnerTypeAf
+from scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af import QosPolicyRulesDscpTosCodepointsInnerTypeAf
 
 class TestQosPolicyRulesDscpTosCodepointsInnerTypeAf(unittest.TestCase):
     """QosPolicyRulesDscpTosCodepointsInnerTypeAf unit test stubs"""

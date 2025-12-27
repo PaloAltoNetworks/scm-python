@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_imsi_recurring import ExternalDynamicListsTypeImsiRecurring
+from scm.objects.models.external_dynamic_lists_type_imsi_recurring import ExternalDynamicListsTypeImsiRecurring
 
 class TestExternalDynamicListsTypeImsiRecurring(unittest.TestCase):
     """ExternalDynamicListsTypeImsiRecurring unit test stubs"""
@@ -36,14 +36,14 @@ class TestExternalDynamicListsTypeImsiRecurring(unittest.TestCase):
         model = ExternalDynamicListsTypeImsiRecurring()
         if include_optional:
             return ExternalDynamicListsTypeImsiRecurring(
-                daily = scm_objects.models.external_dynamic_lists_type_imsi_recurring_daily.external_dynamic_lists_type_imsi_recurring_daily(
+                daily = scm.objects.models.external_dynamic_lists_type_imsi_recurring_daily.external_dynamic_lists_type_imsi_recurring_daily(
                     at = '00', ),
-                five_minute = scm_objects.models.five_minute.five_minute(),
-                hourly = scm_objects.models.hourly.hourly(),
-                monthly = scm_objects.models.external_dynamic_lists_type_imsi_recurring_monthly.external_dynamic_lists_type_imsi_recurring_monthly(
+                five_minute = scm.objects.models.five_minute.five_minute(),
+                hourly = scm.objects.models.hourly.hourly(),
+                monthly = scm.objects.models.external_dynamic_lists_type_imsi_recurring_monthly.external_dynamic_lists_type_imsi_recurring_monthly(
                     at = '00', 
                     day_of_month = 1, ),
-                weekly = scm_objects.models.external_dynamic_lists_type_imsi_recurring_weekly.external_dynamic_lists_type_imsi_recurring_weekly(
+                weekly = scm.objects.models.external_dynamic_lists_type_imsi_recurring_weekly.external_dynamic_lists_type_imsi_recurring_weekly(
                     at = '00', 
                     day_of_week = 'sunday', )
             )

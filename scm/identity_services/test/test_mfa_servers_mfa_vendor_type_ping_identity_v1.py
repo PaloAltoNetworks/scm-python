@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.mfa_servers_mfa_vendor_type_ping_identity_v1 import MfaServersMfaVendorTypePingIdentityV1
+from scm.identity_services.models.mfa_servers_mfa_vendor_type_ping_identity_v1 import MfaServersMfaVendorTypePingIdentityV1
 
 class TestMfaServersMfaVendorTypePingIdentityV1(unittest.TestCase):
     """MfaServersMfaVendorTypePingIdentityV1 unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.http_server_profiles_format import HttpServerProfilesFormat
+from scm.objects.models.http_server_profiles_format import HttpServerProfilesFormat
 
 class TestHttpServerProfilesFormat(unittest.TestCase):
     """HttpServerProfilesFormat unit test stubs"""
@@ -36,239 +36,239 @@ class TestHttpServerProfilesFormat(unittest.TestCase):
         model = HttpServerProfilesFormat()
         if include_optional:
             return HttpServerProfilesFormat(
-                auth = scm_objects.models.payload_format.payload-format(
+                auth = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                config = scm_objects.models.payload_format.payload-format(
+                config = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                correlation = scm_objects.models.payload_format.payload-format(
+                correlation = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                data = scm_objects.models.payload_format.payload-format(
+                data = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                decryption = scm_objects.models.payload_format.payload-format(
+                decryption = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                globalprotect = scm_objects.models.payload_format.payload-format(
+                globalprotect = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                gtp = scm_objects.models.payload_format.payload-format(
+                gtp = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                hip_match = scm_objects.models.payload_format.payload-format(
+                hip_match = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                iptag = scm_objects.models.payload_format.payload-format(
+                iptag = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                sctp = scm_objects.models.payload_format.payload-format(
+                sctp = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                system = scm_objects.models.payload_format.payload-format(
+                system = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                threat = scm_objects.models.payload_format.payload-format(
+                threat = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                traffic = scm_objects.models.payload_format.payload-format(
+                traffic = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                tunnel = scm_objects.models.payload_format.payload-format(
+                tunnel = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                url = scm_objects.models.payload_format.payload-format(
+                url = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                userid = scm_objects.models.payload_format.payload-format(
+                userid = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 
                     payload = '', 
                     url_format = '', ),
-                wildfire = scm_objects.models.payload_format.payload-format(
+                wildfire = scm.objects.models.payload_format.payload-format(
                     headers = [
-                        scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                        scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                             name = '', 
                             value = '', )
                         ], 
                     name = 'Default', 
                     params = [
-                        scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                        scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                             name = '', 
                             value = '', )
                         ], 

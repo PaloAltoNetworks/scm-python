@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub import LogicalRoutersVrfInnerOspfAreaInnerTypeStub
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub import LogicalRoutersVrfInnerOspfAreaInnerTypeStub
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeStub(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeStub unit test stubs"""
@@ -36,16 +36,16 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeStub(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeStub()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeStub(
-                abr = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
+                abr = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
                     export_list = '', 
                     import_list = '', 
                     inbound_filter_list = '', 
                     outbound_filter_list = '', ),
                 accept_summary = True,
-                default_route = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route(
-                    advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
+                default_route = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route(
+                    advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
                         metric = 56, ), 
-                    disable = scm_network_services.models.disable.disable(), ),
+                    disable = scm.network_services.models.disable.disable(), ),
                 default_route_metric = 56,
                 no_summary = True
             )

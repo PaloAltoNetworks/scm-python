@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
+from scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
 from typing import Optional, Set
 from typing_extensions import Self
 

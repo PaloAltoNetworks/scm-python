@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
+from scm.security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
 
 class TestDecryptionRulesListResponse(unittest.TestCase):
     """DecryptionRulesListResponse unit test stubs"""

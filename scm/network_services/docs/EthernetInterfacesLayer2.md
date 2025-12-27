@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
+from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# scm_config_setup.SnippetSnapshotsApi
+# scm.config_setup.SnippetSnapshotsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -25,15 +25,15 @@ Compare Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.compare_snippet_snapshot_config_payload import CompareSnippetSnapshotConfigPayload
-from scm_config_setup.models.snippet_snapshot_compare_entry import SnippetSnapshotCompareEntry
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.compare_snippet_snapshot_config_payload import CompareSnippetSnapshotConfigPayload
+from scm.config_setup.models.snippet_snapshot_compare_entry import SnippetSnapshotCompareEntry
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -43,15 +43,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    compare_snippet_snapshot_config_payload = scm_config_setup.CompareSnippetSnapshotConfigPayload() # CompareSnippetSnapshotConfigPayload | The `Snippet Snapshots To Compare` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    compare_snippet_snapshot_config_payload = scm.config_setup.CompareSnippetSnapshotConfigPayload() # CompareSnippetSnapshotConfigPayload | The `Snippet Snapshots To Compare` resource definition (optional)
 
     try:
         # Compare Snippet Snapshots
@@ -109,14 +109,14 @@ Convert Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.common_snippet_snapshot_payload import CommonSnippetSnapshotPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.common_snippet_snapshot_payload import CommonSnippetSnapshotPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -126,15 +126,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    common_snippet_snapshot_payload = scm_config_setup.CommonSnippetSnapshotPayload() # CommonSnippetSnapshotPayload | The `Snippet Snapshots To Convert` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    common_snippet_snapshot_payload = scm.config_setup.CommonSnippetSnapshotPayload() # CommonSnippetSnapshotPayload | The `Snippet Snapshots To Convert` resource definition (optional)
 
     try:
         # Convert Snippet Snapshots
@@ -192,15 +192,15 @@ Diff Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.compare_tlo_payload import CompareTloPayload
-from scm_config_setup.models.snippet_snapshot_diff_response import SnippetSnapshotDiffResponse
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.compare_tlo_payload import CompareTloPayload
+from scm.config_setup.models.snippet_snapshot_diff_response import SnippetSnapshotDiffResponse
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -210,15 +210,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    compare_tlo_payload = scm_config_setup.CompareTloPayload() # CompareTloPayload | The `Snippet Snapshots To Differentiate` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    compare_tlo_payload = scm.config_setup.CompareTloPayload() # CompareTloPayload | The `Snippet Snapshots To Differentiate` resource definition (optional)
 
     try:
         # Diff Snippet Snapshots
@@ -276,15 +276,15 @@ Load Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_snapshot_load_snippet_payload import SnippetSnapshotLoadSnippetPayload
-from scm_config_setup.models.snippet_snapshot_load_snippet_response import SnippetSnapshotLoadSnippetResponse
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_snapshot_load_snippet_payload import SnippetSnapshotLoadSnippetPayload
+from scm.config_setup.models.snippet_snapshot_load_snippet_response import SnippetSnapshotLoadSnippetResponse
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -294,15 +294,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    snippet_snapshot_load_snippet_payload = scm_config_setup.SnippetSnapshotLoadSnippetPayload() # SnippetSnapshotLoadSnippetPayload | The `Snippet Snapshots To Load` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    snippet_snapshot_load_snippet_payload = scm.config_setup.SnippetSnapshotLoadSnippetPayload() # SnippetSnapshotLoadSnippetPayload | The `Snippet Snapshots To Load` resource definition (optional)
 
     try:
         # Load Snippet Snapshots
@@ -360,15 +360,15 @@ Publish Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_snapshot_publish_request import SnippetSnapshotPublishRequest
-from scm_config_setup.models.snippet_snapshot_publish_response import SnippetSnapshotPublishResponse
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_snapshot_publish_request import SnippetSnapshotPublishRequest
+from scm.config_setup.models.snippet_snapshot_publish_response import SnippetSnapshotPublishResponse
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -378,15 +378,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    snippet_snapshot_publish_request = scm_config_setup.SnippetSnapshotPublishRequest() # SnippetSnapshotPublishRequest | The `Snippet Snapshots To Publish` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    snippet_snapshot_publish_request = scm.config_setup.SnippetSnapshotPublishRequest() # SnippetSnapshotPublishRequest | The `Snippet Snapshots To Publish` resource definition (optional)
 
     try:
         # Publish Snippet Snapshots
@@ -444,15 +444,15 @@ Save Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.save_snippet_snapshot_config_response import SaveSnippetSnapshotConfigResponse
-from scm_config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.save_snippet_snapshot_config_response import SaveSnippetSnapshotConfigResponse
+from scm.config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -462,15 +462,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    save_snippet_snapshot_payload = scm_config_setup.SaveSnippetSnapshotPayload() # SaveSnippetSnapshotPayload | The `Save Snippet Snapshots` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    save_snippet_snapshot_payload = scm.config_setup.SaveSnippetSnapshotPayload() # SaveSnippetSnapshotPayload | The `Save Snippet Snapshots` resource definition (optional)
 
     try:
         # Save Snippet Snapshots
@@ -528,15 +528,15 @@ Update Snippet Snapshots.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_response import SnippetSnapshotSubscriberCompareResponse
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_response import SnippetSnapshotSubscriberCompareResponse
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -546,15 +546,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SnippetSnapshotsApi(api_client)
-    snippet_snapshot_subscriber_compare_payload = scm_config_setup.SnippetSnapshotSubscriberComparePayload() # SnippetSnapshotSubscriberComparePayload | The `Snippet Snapshots To Update` resource definition (optional)
+    api_instance = scm.config_setup.SnippetSnapshotsApi(api_client)
+    snippet_snapshot_subscriber_compare_payload = scm.config_setup.SnippetSnapshotSubscriberComparePayload() # SnippetSnapshotSubscriberComparePayload | The `Snippet Snapshots To Update` resource definition (optional)
 
     try:
         # Update Snippet Snapshots

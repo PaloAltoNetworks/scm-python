@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dhcp_interfaces_relay import DhcpInterfacesRelay
+from scm.network_services.models.dhcp_interfaces_relay import DhcpInterfacesRelay
 
 # TODO update the JSON string below
 json = "{}"

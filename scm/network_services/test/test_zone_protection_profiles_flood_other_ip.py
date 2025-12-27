@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_other_ip import ZoneProtectionProfilesFloodOtherIp
+from scm.network_services.models.zone_protection_profiles_flood_other_ip import ZoneProtectionProfilesFloodOtherIp
 
 class TestZoneProtectionProfilesFloodOtherIp(unittest.TestCase):
     """ZoneProtectionProfilesFloodOtherIp unit test stubs"""
@@ -37,7 +37,7 @@ class TestZoneProtectionProfilesFloodOtherIp(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesFloodOtherIp(
                 enable = True,
-                red = scm_network_services.models.zone_protection_profiles_flood_other_ip_red.zone_protection_profiles_flood_other_ip_red(
+                red = scm.network_services.models.zone_protection_profiles_flood_other_ip_red.zone_protection_profiles_flood_other_ip_red(
                     activate_rate = 10000, 
                     alarm_rate = 10000, 
                     maximal_rate = 40000, )

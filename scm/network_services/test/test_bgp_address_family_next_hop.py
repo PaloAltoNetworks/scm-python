@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_next_hop import BgpAddressFamilyNextHop
+from scm.network_services.models.bgp_address_family_next_hop import BgpAddressFamilyNextHop
 
 class TestBgpAddressFamilyNextHop(unittest.TestCase):
     """BgpAddressFamilyNextHop unit test stubs"""
@@ -36,8 +36,8 @@ class TestBgpAddressFamilyNextHop(unittest.TestCase):
         model = BgpAddressFamilyNextHop()
         if include_optional:
             return BgpAddressFamilyNextHop(
-                var_self = scm_network_services.models.self.self(),
-                self_force = scm_network_services.models.self_force.self_force()
+                var_self = scm.network_services.models.self.self(),
+                self_force = scm.network_services.models.self_force.self_force()
             )
         else:
             return BgpAddressFamilyNextHop(

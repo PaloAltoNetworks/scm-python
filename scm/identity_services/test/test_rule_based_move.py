@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.rule_based_move import RuleBasedMove
+from scm.identity_services.models.rule_based_move import RuleBasedMove
 
 class TestRuleBasedMove(unittest.TestCase):
     """RuleBasedMove unit test stubs"""

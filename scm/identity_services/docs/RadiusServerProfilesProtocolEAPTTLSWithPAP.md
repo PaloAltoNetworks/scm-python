@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.radius_server_profiles_protocol_eapttls_with_pap import RadiusServerProfilesProtocolEAPTTLSWithPAP
+from scm.identity_services.models.radius_server_profiles_protocol_eapttls_with_pap import RadiusServerProfilesProtocolEAPTTLSWithPAP
 
 # TODO update the JSON string below
 json = "{}"

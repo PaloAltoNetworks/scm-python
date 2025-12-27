@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.mfa_servers_api import MFAServersApi
+from scm.identity_services.api.mfa_servers_api import MFAServersApi
 
 
 class TestMFAServersApi(unittest.TestCase):

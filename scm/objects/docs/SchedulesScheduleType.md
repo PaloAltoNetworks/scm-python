@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.schedules_schedule_type import SchedulesScheduleType
+from scm.objects.models.schedules_schedule_type import SchedulesScheduleType
 
 # TODO update the JSON string below
 json = "{}"

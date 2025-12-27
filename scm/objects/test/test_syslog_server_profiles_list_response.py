@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.syslog_server_profiles_list_response import SyslogServerProfilesListResponse
+from scm.objects.models.syslog_server_profiles_list_response import SyslogServerProfilesListResponse
 
 class TestSyslogServerProfilesListResponse(unittest.TestCase):
     """SyslogServerProfilesListResponse unit test stubs"""

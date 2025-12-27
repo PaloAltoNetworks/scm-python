@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles import ScepProfiles
+from scm.identity_services.models.scep_profiles import ScepProfiles
 
 class TestScepProfiles(unittest.TestCase):
     """ScepProfiles unit test stubs"""
@@ -36,11 +36,11 @@ class TestScepProfiles(unittest.TestCase):
         model = ScepProfiles()
         if include_optional:
             return ScepProfiles(
-                algorithm = scm_identity_services.models.scep_profiles_algorithm.scep_profiles_algorithm(
-                    rsa = scm_identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
+                algorithm = scm.identity_services.models.scep_profiles_algorithm.scep_profiles_algorithm(
+                    rsa = scm.identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
                         rsa_nbits = 1024, ), ),
                 ca_identity_name = '',
-                certificate_attributes = scm_identity_services.models.scep_profiles_certificate_attributes.scep_profiles_certificate_attributes(
+                certificate_attributes = scm.identity_services.models.scep_profiles_certificate_attributes.scep_profiles_certificate_attributes(
                     dnsname = '', 
                     rfc822name = '', 
                     uniform_resource_identifier = '', ),
@@ -51,8 +51,8 @@ class TestScepProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 scep_ca_cert = '',
-                scep_challenge = scm_identity_services.models.scep_profiles_scep_challenge.scep_profiles_scep_challenge(
-                    dynamic = scm_identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
+                scep_challenge = scm.identity_services.models.scep_profiles_scep_challenge.scep_profiles_scep_challenge(
+                    dynamic = scm.identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
                         otp_server_url = '', 
                         password = '', 
                         username = '', ), 
@@ -67,15 +67,15 @@ class TestScepProfiles(unittest.TestCase):
             )
         else:
             return ScepProfiles(
-                algorithm = scm_identity_services.models.scep_profiles_algorithm.scep_profiles_algorithm(
-                    rsa = scm_identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
+                algorithm = scm.identity_services.models.scep_profiles_algorithm.scep_profiles_algorithm(
+                    rsa = scm.identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
                         rsa_nbits = 1024, ), ),
                 ca_identity_name = '',
                 digest = 'sha1',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
-                scep_challenge = scm_identity_services.models.scep_profiles_scep_challenge.scep_profiles_scep_challenge(
-                    dynamic = scm_identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
+                scep_challenge = scm.identity_services.models.scep_profiles_scep_challenge.scep_profiles_scep_challenge(
+                    dynamic = scm.identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
                         otp_server_url = '', 
                         password = '', 
                         username = '', ), 

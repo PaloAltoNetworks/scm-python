@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_identity_services.models.trusted_certificate_authorities import TrustedCertificateAuthorities
+from scm.identity_services.models.trusted_certificate_authorities import TrustedCertificateAuthorities
 from typing import Optional, Set
 from typing_extensions import Self
 

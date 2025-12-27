@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_settings_services_dns_setting import ServiceSettingsServicesDnsSetting
+from scm.device_settings.models.service_settings_services_dns_setting import ServiceSettingsServicesDnsSetting
 
 class TestServiceSettingsServicesDnsSetting(unittest.TestCase):
     """ServiceSettingsServicesDnsSetting unit test stubs"""
@@ -37,7 +37,7 @@ class TestServiceSettingsServicesDnsSetting(unittest.TestCase):
         if include_optional:
             return ServiceSettingsServicesDnsSetting(
                 dns_proxy_object = '',
-                servers = scm_device_settings.models.service_settings_services_dns_setting_servers.service_settings_services_dns_setting_servers(
+                servers = scm.device_settings.models.service_settings_services_dns_setting_servers.service_settings_services_dns_setting_servers(
                     primary = '', 
                     secondary = '', )
             )

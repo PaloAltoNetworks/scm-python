@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_anti_malware_vendor_inner import HipObjectsAntiMalwareVendorInner
-from scm_objects.models.hip_objects_disk_backup_criteria import HipObjectsDiskBackupCriteria
+from scm.objects.models.hip_objects_anti_malware_vendor_inner import HipObjectsAntiMalwareVendorInner
+from scm.objects.models.hip_objects_disk_backup_criteria import HipObjectsDiskBackupCriteria
 from typing import Optional, Set
 from typing_extensions import Self
 

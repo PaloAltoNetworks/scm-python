@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_rules import DecryptionRules
+from scm.security_services.models.decryption_rules import DecryptionRules
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network import LogicalRoutersVrfInnerBgpAdvertiseNetwork
+from scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network import LogicalRoutersVrfInnerBgpAdvertiseNetwork
 
 class TestLogicalRoutersVrfInnerBgpAdvertiseNetwork(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAdvertiseNetwork unit test stubs"""
@@ -36,17 +36,17 @@ class TestLogicalRoutersVrfInnerBgpAdvertiseNetwork(unittest.TestCase):
         model = LogicalRoutersVrfInnerBgpAdvertiseNetwork()
         if include_optional:
             return LogicalRoutersVrfInnerBgpAdvertiseNetwork(
-                ipv4 = scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4.logical_routers_vrf_inner_bgp_advertise_network_ipv4(
+                ipv4 = scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4.logical_routers_vrf_inner_bgp_advertise_network_ipv4(
                     network = [
-                        scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner(
                             backdoor = True, 
                             multicast = True, 
                             name = '', 
                             unicast = True, )
                         ], ),
-                ipv6 = scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6.logical_routers_vrf_inner_bgp_advertise_network_ipv6(
+                ipv6 = scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6.logical_routers_vrf_inner_bgp_advertise_network_ipv6(
                     network = [
-                        scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner(
                             name = '', 
                             unicast = True, )
                         ], )

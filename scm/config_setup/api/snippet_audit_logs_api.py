@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.snippet_audit_history import SnippetAuditHistory
-from scm_config_setup.models.snippet_audit_payload import SnippetAuditPayload
+from scm.config_setup.models.snippet_audit_history import SnippetAuditHistory
+from scm.config_setup.models.snippet_audit_payload import SnippetAuditPayload
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class SnippetAuditLogsApi:

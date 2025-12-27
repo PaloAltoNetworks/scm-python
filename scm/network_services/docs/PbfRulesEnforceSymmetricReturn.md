@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
+from scm.network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
 
 # TODO update the JSON string below
 json = "{}"

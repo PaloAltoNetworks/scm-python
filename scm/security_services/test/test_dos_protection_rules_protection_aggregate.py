@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_rules_protection_aggregate import DosProtectionRulesProtectionAggregate
+from scm.security_services.models.dos_protection_rules_protection_aggregate import DosProtectionRulesProtectionAggregate
 
 class TestDosProtectionRulesProtectionAggregate(unittest.TestCase):
     """DosProtectionRulesProtectionAggregate unit test stubs"""

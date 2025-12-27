@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_filter_conditional_advertisement import BgpFilterConditionalAdvertisement
+from scm.network_services.models.bgp_filter_conditional_advertisement import BgpFilterConditionalAdvertisement
 
 class TestBgpFilterConditionalAdvertisement(unittest.TestCase):
     """BgpFilterConditionalAdvertisement unit test stubs"""
@@ -36,10 +36,10 @@ class TestBgpFilterConditionalAdvertisement(unittest.TestCase):
         model = BgpFilterConditionalAdvertisement()
         if include_optional:
             return BgpFilterConditionalAdvertisement(
-                exist = scm_network_services.models.bgp_filter_conditional_advertisement_exist.bgp_filter_conditional_advertisement_exist(
+                exist = scm.network_services.models.bgp_filter_conditional_advertisement_exist.bgp_filter_conditional_advertisement_exist(
                     advertise_map = '', 
                     exist_map = '', ),
-                non_exist = scm_network_services.models.bgp_filter_conditional_advertisement_non_exist.bgp_filter_conditional_advertisement_non_exist(
+                non_exist = scm.network_services.models.bgp_filter_conditional_advertisement_non_exist.bgp_filter_conditional_advertisement_non_exist(
                     advertise_map = '', 
                     non_exist_map = '', )
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
+from scm.deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
 
 class TestServiceConnectionGroupsListResponse(unittest.TestCase):
     """ServiceConnectionGroupsListResponse unit test stubs"""

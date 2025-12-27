@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dos_protection_profiles_flood_icmp import DosProtectionProfilesFloodIcmp
+from scm.security_services.models.dos_protection_profiles_flood_icmp import DosProtectionProfilesFloodIcmp
 
 # TODO update the JSON string below
 json = "{}"

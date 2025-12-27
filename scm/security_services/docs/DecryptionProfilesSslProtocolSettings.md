@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
+from scm.security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
 
 # TODO update the JSON string below
 json = "{}"

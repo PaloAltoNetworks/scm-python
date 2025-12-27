@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_graceful_restart import LogicalRoutersVrfInnerOspfGracefulRestart
+from scm.network_services.models.logical_routers_vrf_inner_ospf_graceful_restart import LogicalRoutersVrfInnerOspfGracefulRestart
 
 class TestLogicalRoutersVrfInnerOspfGracefulRestart(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfGracefulRestart unit test stubs"""

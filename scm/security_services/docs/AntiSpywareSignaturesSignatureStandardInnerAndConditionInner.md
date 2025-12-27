@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner import AntiSpywareSignaturesSignatureStandardInnerAndConditionInner
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner import AntiSpywareSignaturesSignatureStandardInnerAndConditionInner
 
 # TODO update the JSON string below
 json = "{}"

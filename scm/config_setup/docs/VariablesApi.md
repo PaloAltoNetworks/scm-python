@@ -1,4 +1,4 @@
-# scm_config_setup.VariablesApi
+# scm.config_setup.VariablesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -23,14 +23,14 @@ Create a new variable.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.variables import Variables
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.variables import Variables
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -40,18 +40,18 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.VariablesApi(api_client)
+    api_instance = scm.config_setup.VariablesApi(api_client)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
     device = 'device_example' # str | The device in which the resource is defined  (optional)
-    variables = scm_config_setup.Variables() # Variables | The `variable` resource definition. (optional)
+    variables = scm.config_setup.Variables() # Variables | The `variable` resource definition. (optional)
 
     try:
         # Create a variable
@@ -112,13 +112,13 @@ Delete an existing variable.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -128,14 +128,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.VariablesApi(api_client)
+    api_instance = scm.config_setup.VariablesApi(api_client)
     id = 'id_example' # str | The UUID of the resource
 
     try:
@@ -193,14 +193,14 @@ Retrieve an existing variable.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.variables import Variables
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.variables import Variables
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -210,14 +210,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.VariablesApi(api_client)
+    api_instance = scm.config_setup.VariablesApi(api_client)
     id = 'id_example' # str | The UUID of the resource
 
     try:
@@ -276,14 +276,14 @@ Retrieve a list of variables.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.variables_list_response import VariablesListResponse
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.variables_list_response import VariablesListResponse
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -293,14 +293,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.VariablesApi(api_client)
+    api_instance = scm.config_setup.VariablesApi(api_client)
     limit = 56 # int | The maximum number of resources to return (optional)
     offset = 56 # int | The offset into the list of resources returned (optional)
     name = 'name_example' # str | The name of the resource (optional)
@@ -369,14 +369,14 @@ Update an existing variable.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.variables import Variables
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.variables import Variables
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -386,16 +386,16 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.VariablesApi(api_client)
+    api_instance = scm.config_setup.VariablesApi(api_client)
     id = 'id_example' # str | The UUID of the resource
-    variables = scm_config_setup.Variables() # Variables | The `variable` resource definition. (optional)
+    variables = scm.config_setup.Variables() # Variables | The `variable` resource definition. (optional)
 
     try:
         # Update a variable

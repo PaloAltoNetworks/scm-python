@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_security_services.models.get_saas_tenant_restrictions_list_response import GetSaasTenantRestrictionsListResponse
-from scm_security_services.models.saas_tenant_restrictions import SaasTenantRestrictions
+from scm.security_services.models.get_saas_tenant_restrictions_list_response import GetSaasTenantRestrictionsListResponse
+from scm.security_services.models.saas_tenant_restrictions import SaasTenantRestrictions
 
-from scm_security_services.api_client import ApiClient, RequestSerialized
-from scm_security_services.api_response import ApiResponse
-from scm_security_services.rest import RESTResponseType
+from scm.security_services.api_client import ApiClient, RequestSerialized
+from scm.security_services.api_response import ApiResponse
+from scm.security_services.rest import RESTResponseType
 
 
 class SaasTenantRestrictionsApi:

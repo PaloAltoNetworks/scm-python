@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_snapshot_diff_response_before import SnippetSnapshotDiffResponseBefore
+from scm.config_setup.models.snippet_snapshot_diff_response_before import SnippetSnapshotDiffResponseBefore
 
 class TestSnippetSnapshotDiffResponseBefore(unittest.TestCase):
     """SnippetSnapshotDiffResponseBefore unit test stubs"""
@@ -38,7 +38,7 @@ class TestSnippetSnapshotDiffResponseBefore(unittest.TestCase):
             return SnippetSnapshotDiffResponseBefore(
                 ts = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 entry = [
-                    scm_config_setup.models.dynamic_entry.dynamic_entry()
+                    scm.config_setup.models.dynamic_entry.dynamic_entry()
                     ]
             )
         else:

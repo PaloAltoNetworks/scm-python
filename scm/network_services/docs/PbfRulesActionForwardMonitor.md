@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
+from scm.network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
 
 # TODO update the JSON string below
 json = "{}"

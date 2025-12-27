@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
+from scm.network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
 
 class TestEthernetInterfacesLayer2Lldp(unittest.TestCase):
     """EthernetInterfacesLayer2Lldp unit test stubs"""

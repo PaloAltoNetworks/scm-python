@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.variables_api import VariablesApi
+from scm.config_setup.api.variables_api import VariablesApi
 
 
 class TestVariablesApi(unittest.TestCase):

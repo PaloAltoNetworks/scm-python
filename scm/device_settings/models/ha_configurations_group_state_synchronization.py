@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive import HaConfigurationsGroupStateSynchronizationHa2KeepAlive
+from scm.device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive import HaConfigurationsGroupStateSynchronizationHa2KeepAlive
 from typing import Optional, Set
 from typing_extensions import Self
 

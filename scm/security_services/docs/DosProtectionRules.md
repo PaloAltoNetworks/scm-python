@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dos_protection_rules import DosProtectionRules
+from scm.security_services.models.dos_protection_rules import DosProtectionRules
 
 # TODO update the JSON string below
 json = "{}"

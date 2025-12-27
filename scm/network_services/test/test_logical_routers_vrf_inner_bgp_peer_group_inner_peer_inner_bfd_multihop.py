@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfdMultihop
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfdMultihop
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfdMultihop(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfdMultihop unit test stubs"""

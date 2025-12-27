@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificate_profiles import CertificateProfiles
+from scm.identity_services.models.certificate_profiles import CertificateProfiles
 
 class TestCertificateProfiles(unittest.TestCase):
     """CertificateProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestCertificateProfiles(unittest.TestCase):
                 block_unauthenticated_cert = True,
                 block_unknown_cert = True,
                 ca_certificates = [
-                    scm_identity_services.models.certificate_profiles_ca_certificates_inner.certificate_profiles_ca_certificates_inner(
+                    scm.identity_services.models.certificate_profiles_ca_certificates_inner.certificate_profiles_ca_certificates_inner(
                         default_ocsp_url = '', 
                         name = '', 
                         ocsp_verify_cert = '', 
@@ -58,14 +58,14 @@ class TestCertificateProfiles(unittest.TestCase):
                 snippet = 'My Snippet',
                 use_crl = True,
                 use_ocsp = True,
-                username_field = scm_identity_services.models.certificate_profiles_username_field.certificate_profiles_username_field(
+                username_field = scm.identity_services.models.certificate_profiles_username_field.certificate_profiles_username_field(
                     subject = 'common-name', 
                     subject_alt = 'email', )
             )
         else:
             return CertificateProfiles(
                 ca_certificates = [
-                    scm_identity_services.models.certificate_profiles_ca_certificates_inner.certificate_profiles_ca_certificates_inner(
+                    scm.identity_services.models.certificate_profiles_ca_certificates_inner.certificate_profiles_ca_certificates_inner(
                         default_ocsp_url = '', 
                         name = '', 
                         ocsp_verify_cert = '', 

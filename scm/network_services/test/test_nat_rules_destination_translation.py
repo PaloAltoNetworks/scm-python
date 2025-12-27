@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_destination_translation import NatRulesDestinationTranslation
+from scm.network_services.models.nat_rules_destination_translation import NatRulesDestinationTranslation
 
 class TestNatRulesDestinationTranslation(unittest.TestCase):
     """NatRulesDestinationTranslation unit test stubs"""
@@ -36,7 +36,7 @@ class TestNatRulesDestinationTranslation(unittest.TestCase):
         model = NatRulesDestinationTranslation()
         if include_optional:
             return NatRulesDestinationTranslation(
-                dns_rewrite = scm_network_services.models.nat_rules_destination_translation_dns_rewrite.nat_rules_destination_translation_dns_rewrite(
+                dns_rewrite = scm.network_services.models.nat_rules_destination_translation_dns_rewrite.nat_rules_destination_translation_dns_rewrite(
                     direction = 'reverse', ),
                 translated_address = '',
                 translated_port = 1

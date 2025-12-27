@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_audit_history import SnippetAuditHistory
+from scm.config_setup.models.snippet_audit_history import SnippetAuditHistory
 
 # TODO update the JSON string below
 json = "{}"

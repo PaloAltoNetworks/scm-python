@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_security_services.models.do_s_protection_profiles_list_response import DoSProtectionProfilesListResponse
-from scm_security_services.models.dos_protection_profiles import DosProtectionProfiles
+from scm.security_services.models.do_s_protection_profiles_list_response import DoSProtectionProfilesListResponse
+from scm.security_services.models.dos_protection_profiles import DosProtectionProfiles
 
-from scm_security_services.api_client import ApiClient, RequestSerialized
-from scm_security_services.api_response import ApiResponse
-from scm_security_services.rest import RESTResponseType
+from scm.security_services.api_client import ApiClient, RequestSerialized
+from scm.security_services.api_response import ApiResponse
+from scm.security_services.rest import RESTResponseType
 
 
 class DoSProtectionProfilesApi:

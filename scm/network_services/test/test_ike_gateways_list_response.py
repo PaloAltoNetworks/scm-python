@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_list_response import IKEGatewaysListResponse
+from scm.network_services.models.ike_gateways_list_response import IKEGatewaysListResponse
 
 class TestIKEGatewaysListResponse(unittest.TestCase):
     """IKEGatewaysListResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.link_tags_list_response import LinkTagsListResponse
+from scm.network_services.models.link_tags_list_response import LinkTagsListResponse
 
 class TestLinkTagsListResponse(unittest.TestCase):
     """LinkTagsListResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_option_inheritance import DhcpInterfacesServerOptionInheritance
+from scm.network_services.models.dhcp_interfaces_server_option_inheritance import DhcpInterfacesServerOptionInheritance
 
 class TestDhcpInterfacesServerOptionInheritance(unittest.TestCase):
     """DhcpInterfacesServerOptionInheritance unit test stubs"""

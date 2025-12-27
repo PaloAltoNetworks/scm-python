@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_mode_active_passive import HaConfigurationsGroupModeActivePassive
+from scm.device_settings.models.ha_configurations_group_mode_active_passive import HaConfigurationsGroupModeActivePassive
 
 class TestHaConfigurationsGroupModeActivePassive(unittest.TestCase):
     """HaConfigurationsGroupModeActivePassive unit test stubs"""

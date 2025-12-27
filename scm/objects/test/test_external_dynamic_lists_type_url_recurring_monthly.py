@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_url_recurring_monthly import ExternalDynamicListsTypeUrlRecurringMonthly
+from scm.objects.models.external_dynamic_lists_type_url_recurring_monthly import ExternalDynamicListsTypeUrlRecurringMonthly
 
 class TestExternalDynamicListsTypeUrlRecurringMonthly(unittest.TestCase):
     """ExternalDynamicListsTypeUrlRecurringMonthly unit test stubs"""

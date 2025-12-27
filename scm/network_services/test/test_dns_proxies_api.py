@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.dns_proxies_api import DNSProxiesApi
+from scm.network_services.api.dns_proxies_api import DNSProxiesApi
 
 
 class TestDNSProxiesApi(unittest.TestCase):

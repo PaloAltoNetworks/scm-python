@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_icmpv6_red import ZoneProtectionProfilesFloodIcmpv6Red
+from scm.network_services.models.zone_protection_profiles_flood_icmpv6_red import ZoneProtectionProfilesFloodIcmpv6Red
 
 class TestZoneProtectionProfilesFloodIcmpv6Red(unittest.TestCase):
     """ZoneProtectionProfilesFloodIcmpv6Red unit test stubs"""

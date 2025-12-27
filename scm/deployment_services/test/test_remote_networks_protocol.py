@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks_protocol import RemoteNetworksProtocol
+from scm.deployment_services.models.remote_networks_protocol import RemoteNetworksProtocol
 
 class TestRemoteNetworksProtocol(unittest.TestCase):
     """RemoteNetworksProtocol unit test stubs"""
@@ -36,7 +36,7 @@ class TestRemoteNetworksProtocol(unittest.TestCase):
         model = RemoteNetworksProtocol()
         if include_optional:
             return RemoteNetworksProtocol(
-                bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                     do_not_export_routes = True, 
                     enable = True, 
                     local_ip_address = '', 
@@ -46,7 +46,7 @@ class TestRemoteNetworksProtocol(unittest.TestCase):
                     peering_type = 'exchange-v4-over-v4', 
                     secret = '', 
                     summarize_mobile_user_routes = True, ),
-                bgp_peer = scm_deployment_services.models.remote_networks_protocol_bgp_peer.remote_networks_protocol_bgp_peer(
+                bgp_peer = scm.deployment_services.models.remote_networks_protocol_bgp_peer.remote_networks_protocol_bgp_peer(
                     local_ip_address = '', 
                     peer_ip_address = '', 
                     secret = '', )

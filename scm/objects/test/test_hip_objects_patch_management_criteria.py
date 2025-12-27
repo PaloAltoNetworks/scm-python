@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_patch_management_criteria import HipObjectsPatchManagementCriteria
+from scm.objects.models.hip_objects_patch_management_criteria import HipObjectsPatchManagementCriteria
 
 class TestHipObjectsPatchManagementCriteria(unittest.TestCase):
     """HipObjectsPatchManagementCriteria unit test stubs"""
@@ -38,12 +38,12 @@ class TestHipObjectsPatchManagementCriteria(unittest.TestCase):
             return HipObjectsPatchManagementCriteria(
                 is_enabled = 'no',
                 is_installed = True,
-                missing_patches = scm_objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
+                missing_patches = scm.objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
                     check = 'has-any', 
                     patches = [
                         'jUR,rZ#UM/?R,Fp^l6$ARj'
                         ], 
-                    severity = scm_objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
+                    severity = scm.objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
                         greater_equal = 0, 
                         greater_than = 0, 
                         is = 0, 

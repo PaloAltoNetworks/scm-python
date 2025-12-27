@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dos_protection_profiles_flood_icmp_red_block import DosProtectionProfilesFloodIcmpRedBlock
+from scm.security_services.models.dos_protection_profiles_flood_icmp_red_block import DosProtectionProfilesFloodIcmpRedBlock
 
 # TODO update the JSON string below
 json = "{}"

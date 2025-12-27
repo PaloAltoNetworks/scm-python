@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_crypto_profiles_lifesize import IpsecCryptoProfilesLifesize
+from scm.network_services.models.ipsec_crypto_profiles_lifesize import IpsecCryptoProfilesLifesize
 
 class TestIpsecCryptoProfilesLifesize(unittest.TestCase):
     """IpsecCryptoProfilesLifesize unit test stubs"""

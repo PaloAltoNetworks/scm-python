@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp import IpsecTunnelsAutoKeyProxyIdInnerProtocolTcp
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp import IpsecTunnelsAutoKeyProxyIdInnerProtocolTcp
 
 # TODO update the JSON string below
 json = "{}"

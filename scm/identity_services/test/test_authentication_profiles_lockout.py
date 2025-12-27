@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_lockout import AuthenticationProfilesLockout
+from scm.identity_services.models.authentication_profiles_lockout import AuthenticationProfilesLockout
 
 class TestAuthenticationProfilesLockout(unittest.TestCase):
     """AuthenticationProfilesLockout unit test stubs"""

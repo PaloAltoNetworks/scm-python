@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.security_rule_type_profile_setting import SecurityRuleTypeProfileSetting
+from scm.security_services.models.security_rule_type_profile_setting import SecurityRuleTypeProfileSetting
 
 class TestSecurityRuleTypeProfileSetting(unittest.TestCase):
     """SecurityRuleTypeProfileSetting unit test stubs"""

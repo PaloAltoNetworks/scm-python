@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
+from scm.security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
 
 class TestDecryptionProfilesSslForwardProxy(unittest.TestCase):
     """DecryptionProfilesSslForwardProxy unit test stubs"""

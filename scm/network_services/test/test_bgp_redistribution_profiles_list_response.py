@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_redistribution_profiles_list_response import BGPRedistributionProfilesListResponse
+from scm.network_services.models.bgp_redistribution_profiles_list_response import BGPRedistributionProfilesListResponse
 
 class TestBGPRedistributionProfilesListResponse(unittest.TestCase):
     """BGPRedistributionProfilesListResponse unit test stubs"""

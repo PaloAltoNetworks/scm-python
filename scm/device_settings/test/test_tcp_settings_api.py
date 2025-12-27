@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.tcp_settings_api import TCPSettingsApi
+from scm.device_settings.api.tcp_settings_api import TCPSettingsApi
 
 
 class TestTCPSettingsApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies import DnsProxies
+from scm.network_services.models.dns_proxies import DnsProxies
 
 class TestDnsProxies(unittest.TestCase):
     """DnsProxies unit test stubs"""
@@ -36,20 +36,20 @@ class TestDnsProxies(unittest.TestCase):
         model = DnsProxies()
         if include_optional:
             return DnsProxies(
-                cache = scm_network_services.models.dns_proxies_cache.dns_proxies_cache(
+                cache = scm.network_services.models.dns_proxies_cache.dns_proxies_cache(
                     cache_edns = True, 
                     enabled = True, 
-                    max_ttl = scm_network_services.models.dns_proxies_cache_max_ttl.dns_proxies_cache_max_ttl(
+                    max_ttl = scm.network_services.models.dns_proxies_cache_max_ttl.dns_proxies_cache_max_ttl(
                         enabled = True, 
                         time_to_live = 60, ), ),
-                default = scm_network_services.models.dns_proxies_default.dns_proxies_default(
-                    inheritance = scm_network_services.models.dns_proxies_default_inheritance.dns_proxies_default_inheritance(
+                default = scm.network_services.models.dns_proxies_default.dns_proxies_default(
+                    inheritance = scm.network_services.models.dns_proxies_default_inheritance.dns_proxies_default_inheritance(
                         source = '', ), 
                     primary = 'inherited', 
                     secondary = 'inherited', ),
                 device = 'My Device',
                 domain_servers = [
-                    scm_network_services.models.dns_proxies_domain_servers_inner.dns_proxies_domain_servers_inner(
+                    scm.network_services.models.dns_proxies_domain_servers_inner.dns_proxies_domain_servers_inner(
                         cacheable = True, 
                         domain_name = [
                             ''
@@ -67,25 +67,25 @@ class TestDnsProxies(unittest.TestCase):
                 name = '',
                 snippet = 'My Snippet',
                 static_entries = [
-                    scm_network_services.models.dns_proxies_static_entries_inner.dns_proxies_static_entries_inner(
+                    scm.network_services.models.dns_proxies_static_entries_inner.dns_proxies_static_entries_inner(
                         address = [
                             ''
                             ], 
                         domain = '', 
                         name = '', )
                     ],
-                tcp_queries = scm_network_services.models.dns_proxies_tcp_queries.dns_proxies_tcp_queries(
+                tcp_queries = scm.network_services.models.dns_proxies_tcp_queries.dns_proxies_tcp_queries(
                     enabled = True, 
                     max_pending_requests = 64, ),
-                udp_queries = scm_network_services.models.dns_proxies_udp_queries.dns_proxies_udp_queries(
-                    retries = scm_network_services.models.dns_proxies_udp_queries_retries.dns_proxies_udp_queries_retries(
+                udp_queries = scm.network_services.models.dns_proxies_udp_queries.dns_proxies_udp_queries(
+                    retries = scm.network_services.models.dns_proxies_udp_queries_retries.dns_proxies_udp_queries_retries(
                         attempts = 1, 
                         interval = 1, ), )
             )
         else:
             return DnsProxies(
-                default = scm_network_services.models.dns_proxies_default.dns_proxies_default(
-                    inheritance = scm_network_services.models.dns_proxies_default_inheritance.dns_proxies_default_inheritance(
+                default = scm.network_services.models.dns_proxies_default.dns_proxies_default(
+                    inheritance = scm.network_services.models.dns_proxies_default_inheritance.dns_proxies_default_inheritance(
                         source = '', ), 
                     primary = 'inherited', 
                     secondary = 'inherited', ),

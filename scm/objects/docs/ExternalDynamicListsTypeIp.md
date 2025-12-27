@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.external_dynamic_lists_type_ip import ExternalDynamicListsTypeIp
+from scm.objects.models.external_dynamic_lists_type_ip import ExternalDynamicListsTypeIp
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive import HaConfigurationsGroupStateSynchronizationHa2KeepAlive
+from scm.device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive import HaConfigurationsGroupStateSynchronizationHa2KeepAlive
 
 class TestHaConfigurationsGroupStateSynchronizationHa2KeepAlive(unittest.TestCase):
     """HaConfigurationsGroupStateSynchronizationHa2KeepAlive unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.url_categories_api import URLCategoriesApi
+from scm.security_services.api.url_categories_api import URLCategoriesApi
 
 
 class TestURLCategoriesApi(unittest.TestCase):

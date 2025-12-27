@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_traffic_distribution_profiles_link_tags_inner import SdwanTrafficDistributionProfilesLinkTagsInner
+from scm.network_services.models.sdwan_traffic_distribution_profiles_link_tags_inner import SdwanTrafficDistributionProfilesLinkTagsInner
 
 class TestSdwanTrafficDistributionProfilesLinkTagsInner(unittest.TestCase):
     """SdwanTrafficDistributionProfilesLinkTagsInner unit test stubs"""

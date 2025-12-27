@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.zone_protection_profiles_flood_icmpv6_red import ZoneProtectionProfilesFloodIcmpv6Red
+from scm.network_services.models.zone_protection_profiles_flood_icmpv6_red import ZoneProtectionProfilesFloodIcmpv6Red
 from typing import Optional, Set
 from typing_extensions import Self
 

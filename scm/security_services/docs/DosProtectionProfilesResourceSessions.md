@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dos_protection_profiles_resource_sessions import DosProtectionProfilesResourceSessions
+from scm.security_services.models.dos_protection_profiles_resource_sessions import DosProtectionProfilesResourceSessions
 
 # TODO update the JSON string below
 json = "{}"

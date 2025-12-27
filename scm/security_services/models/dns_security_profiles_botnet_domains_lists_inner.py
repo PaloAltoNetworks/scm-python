@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner_action import DnsSecurityProfilesBotnetDomainsListsInnerAction
+from scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner_action import DnsSecurityProfilesBotnetDomainsListsInnerAction
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.authentication_profiles_method_cloud import AuthenticationProfilesMethodCloud
+from scm.identity_services.models.authentication_profiles_method_cloud import AuthenticationProfilesMethodCloud
 
 # TODO update the JSON string below
 json = "{}"

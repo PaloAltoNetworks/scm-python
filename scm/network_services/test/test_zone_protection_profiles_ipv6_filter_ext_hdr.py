@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr import ZoneProtectionProfilesIpv6FilterExtHdr
+from scm.network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr import ZoneProtectionProfilesIpv6FilterExtHdr
 
 class TestZoneProtectionProfilesIpv6FilterExtHdr(unittest.TestCase):
     """ZoneProtectionProfilesIpv6FilterExtHdr unit test stubs"""

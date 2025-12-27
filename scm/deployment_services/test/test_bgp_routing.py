@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.bgp_routing import BgpRouting
+from scm.deployment_services.models.bgp_routing import BgpRouting
 
 class TestBgpRouting(unittest.TestCase):
     """BgpRouting unit test stubs"""
@@ -42,9 +42,9 @@ class TestBgpRouting(unittest.TestCase):
                 outbound_routes_for_services = [
                     ''
                     ],
-                routing_preference = scm_deployment_services.models.bgp_routing_routing_preference.bgp_routing_routing_preference(
-                    default = scm_deployment_services.models.default.default(), 
-                    hot_potato_routing = scm_deployment_services.models.hot_potato_routing.hot_potato_routing(), ),
+                routing_preference = scm.deployment_services.models.bgp_routing_routing_preference.bgp_routing_routing_preference(
+                    default = scm.deployment_services.models.default.default(), 
+                    hot_potato_routing = scm.deployment_services.models.hot_potato_routing.hot_potato_routing(), ),
                 withdraw_static_route = True
             )
         else:

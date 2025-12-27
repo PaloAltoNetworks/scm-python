@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
+from scm.network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
 
 # TODO update the JSON string below
 json = "{}"

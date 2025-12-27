@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.labels_api import LabelsApi
+from scm.config_setup.api.labels_api import LabelsApi
 
 
 class TestLabelsApi(unittest.TestCase):

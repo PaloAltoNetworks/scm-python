@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.management_interface_management_interface_service import ManagementInterfaceManagementInterfaceService
+from scm.device_settings.models.management_interface_management_interface_service import ManagementInterfaceManagementInterfaceService
 
 # TODO update the JSON string below
 json = "{}"

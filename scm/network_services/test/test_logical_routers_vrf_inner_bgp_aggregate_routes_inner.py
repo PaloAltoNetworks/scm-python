@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner import LogicalRoutersVrfInnerBgpAggregateRoutesInner
+from scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner import LogicalRoutersVrfInnerBgpAggregateRoutesInner
 
 class TestLogicalRoutersVrfInnerBgpAggregateRoutesInner(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAggregateRoutesInner unit test stubs"""
@@ -42,12 +42,12 @@ class TestLogicalRoutersVrfInnerBgpAggregateRoutesInner(unittest.TestCase):
                 name = '',
                 same_med = True,
                 summary_only = True,
-                type = scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type(
-                    ipv4 = scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4(
+                type = scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type(
+                    ipv4 = scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4(
                         attribute_map = '', 
                         summary_prefix = '', 
                         suppress_map = '', ), 
-                    ipv6 = scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4(
+                    ipv6 = scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4(
                         attribute_map = '', 
                         summary_prefix = '', 
                         suppress_map = '', ), )

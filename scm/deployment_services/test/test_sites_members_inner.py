@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.sites_members_inner import SitesMembersInner
+from scm.deployment_services.models.sites_members_inner import SitesMembersInner
 
 class TestSitesMembersInner(unittest.TestCase):
     """SitesMembersInner unit test stubs"""

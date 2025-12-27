@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd import LogicalRoutersVrfInnerBgpGlobalBfd
+from scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd import LogicalRoutersVrfInnerBgpGlobalBfd
 
 class TestLogicalRoutersVrfInnerBgpGlobalBfd(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpGlobalBfd unit test stubs"""

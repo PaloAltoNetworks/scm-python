@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.traffic_steering_rules_action_forward import TrafficSteeringRulesActionForward
+from scm.deployment_services.models.traffic_steering_rules_action_forward import TrafficSteeringRulesActionForward
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.update_schedule import UpdateSchedule
+from scm.device_settings.models.update_schedule import UpdateSchedule
 
 # TODO update the JSON string below
 json = "{}"

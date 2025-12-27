@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.tags_api import TagsApi
+from scm.objects.api.tags_api import TagsApi
 
 
 class TestTagsApi(unittest.TestCase):

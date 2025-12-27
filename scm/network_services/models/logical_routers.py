@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.logical_routers_vrf_inner import LogicalRoutersVrfInner
+from scm.network_services.models.logical_routers_vrf_inner import LogicalRoutersVrfInner
 from typing import Optional, Set
 from typing_extensions import Self
 

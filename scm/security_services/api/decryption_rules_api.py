@@ -20,13 +20,13 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_security_services.models.decryption_rules import DecryptionRules
-from scm_security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
-from scm_security_services.models.rule_based_move import RuleBasedMove
+from scm.security_services.models.decryption_rules import DecryptionRules
+from scm.security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
+from scm.security_services.models.rule_based_move import RuleBasedMove
 
-from scm_security_services.api_client import ApiClient, RequestSerialized
-from scm_security_services.api_response import ApiResponse
-from scm_security_services.rest import RESTResponseType
+from scm.security_services.api_client import ApiClient, RequestSerialized
+from scm.security_services.api_response import ApiResponse
+from scm.security_services.rest import RESTResponseType
 
 
 class DecryptionRulesApi:

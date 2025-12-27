@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
 
 class TestSslDecryptionSettings(unittest.TestCase):
     """SslDecryptionSettings unit test stubs"""
@@ -39,17 +39,17 @@ class TestSslDecryptionSettings(unittest.TestCase):
                 disabled_ssl_exclude_cert_from_predefined = [
                     None
                     ],
-                forward_trust_certificate = scm_network_services.models.ssl_decryption_settings_forward_trust_certificate.ssl_decryption_settings_forward_trust_certificate(
+                forward_trust_certificate = scm.network_services.models.ssl_decryption_settings_forward_trust_certificate.ssl_decryption_settings_forward_trust_certificate(
                     ecdsa = '', 
                     rsa = '', ),
-                forward_untrust_certificate = scm_network_services.models.ssl_decryption_settings_forward_trust_certificate.ssl_decryption_settings_forward_trust_certificate(
+                forward_untrust_certificate = scm.network_services.models.ssl_decryption_settings_forward_trust_certificate.ssl_decryption_settings_forward_trust_certificate(
                     ecdsa = '', 
                     rsa = '', ),
                 root_ca_exclude_list = [
                     None
                     ],
                 ssl_exclude_cert = [
-                    scm_network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner.ssl_decryption_settings_ssl_exclude_cert_inner(
+                    scm.network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner.ssl_decryption_settings_ssl_exclude_cert_inner(
                         description = '', 
                         exclude = True, 
                         name = '', )

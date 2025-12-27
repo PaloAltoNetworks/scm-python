@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ipsec_tunnels_auto_key import IpsecTunnelsAutoKey
+from scm.network_services.models.ipsec_tunnels_auto_key import IpsecTunnelsAutoKey
 
 # TODO update the JSON string below
 json = "{}"

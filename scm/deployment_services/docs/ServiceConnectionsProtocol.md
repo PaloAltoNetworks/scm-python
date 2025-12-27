@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
+from scm.deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
 
 # TODO update the JSON string below
 json = "{}"

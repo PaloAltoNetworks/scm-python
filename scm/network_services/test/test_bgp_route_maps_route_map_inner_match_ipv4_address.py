@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address import BgpRouteMapsRouteMapInnerMatchIpv4Address
+from scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address import BgpRouteMapsRouteMapInnerMatchIpv4Address
 
 class TestBgpRouteMapsRouteMapInnerMatchIpv4Address(unittest.TestCase):
     """BgpRouteMapsRouteMapInnerMatchIpv4Address unit test stubs"""

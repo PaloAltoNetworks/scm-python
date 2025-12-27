@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.motd_color import MotdColor
+from scm.device_settings.models.motd_color import MotdColor
 
 class TestMotdColor(unittest.TestCase):
     """MotdColor unit test stubs"""

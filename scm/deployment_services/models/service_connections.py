@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
-from scm_deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
-from scm_deployment_services.models.service_connections_qos import ServiceConnectionsQos
+from scm.deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
+from scm.deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
+from scm.deployment_services.models.service_connections_qos import ServiceConnectionsQos
 from typing import Optional, Set
 from typing_extensions import Self
 

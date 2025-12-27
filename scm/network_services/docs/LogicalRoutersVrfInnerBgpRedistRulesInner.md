@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner import LogicalRoutersVrfInnerBgpRedistRulesInner
+from scm.network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner import LogicalRoutersVrfInnerBgpRedistRulesInner
 
 # TODO update the JSON string below
 json = "{}"

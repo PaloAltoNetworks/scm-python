@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_from import PbfRulesFrom
+from scm.network_services.models.pbf_rules_from import PbfRulesFrom
 
 class TestPbfRulesFrom(unittest.TestCase):
     """PbfRulesFrom unit test stubs"""

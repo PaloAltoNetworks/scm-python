@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks_criteria_plist_inner import HipObjectsCustomChecksCriteriaPlistInner
+from scm.objects.models.hip_objects_custom_checks_criteria_plist_inner import HipObjectsCustomChecksCriteriaPlistInner
 
 class TestHipObjectsCustomChecksCriteriaPlistInner(unittest.TestCase):
     """HipObjectsCustomChecksCriteriaPlistInner unit test stubs"""
@@ -37,7 +37,7 @@ class TestHipObjectsCustomChecksCriteriaPlistInner(unittest.TestCase):
         if include_optional:
             return HipObjectsCustomChecksCriteriaPlistInner(
                 key = [
-                    scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
+                    scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
                         name = '', 
                         negate = True, 
                         value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )

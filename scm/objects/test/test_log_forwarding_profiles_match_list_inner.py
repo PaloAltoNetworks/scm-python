@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.log_forwarding_profiles_match_list_inner import LogForwardingProfilesMatchListInner
+from scm.objects.models.log_forwarding_profiles_match_list_inner import LogForwardingProfilesMatchListInner
 
 class TestLogForwardingProfilesMatchListInner(unittest.TestCase):
     """LogForwardingProfilesMatchListInner unit test stubs"""

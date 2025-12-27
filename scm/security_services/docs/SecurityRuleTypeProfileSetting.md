@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.security_rule_type_profile_setting import SecurityRuleTypeProfileSetting
+from scm.security_services.models.security_rule_type_profile_setting import SecurityRuleTypeProfileSetting
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.payload_format import PayloadFormat
+from scm.objects.models.payload_format import PayloadFormat
 
 # TODO update the JSON string below
 json = "{}"

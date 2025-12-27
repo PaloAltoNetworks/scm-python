@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ospf_export_rules_inner import LogicalRoutersVrfInnerOspfExportRulesInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_export_rules_inner import LogicalRoutersVrfInnerOspfExportRulesInner
 
 # TODO update the JSON string below
 json = "{}"

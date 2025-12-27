@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.payload_format_params_inner import PayloadFormatParamsInner
+from scm.objects.models.payload_format_params_inner import PayloadFormatParamsInner
 
 class TestPayloadFormatParamsInner(unittest.TestCase):
     """PayloadFormatParamsInner unit test stubs"""

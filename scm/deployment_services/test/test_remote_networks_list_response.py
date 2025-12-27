@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks_list_response import RemoteNetworksListResponse
+from scm.deployment_services.models.remote_networks_list_response import RemoteNetworksListResponse
 
 class TestRemoteNetworksListResponse(unittest.TestCase):
     """RemoteNetworksListResponse unit test stubs"""

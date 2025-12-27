@@ -20,13 +20,13 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.authentication_rules import AuthenticationRules
-from scm_identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
-from scm_identity_services.models.rule_based_move import RuleBasedMove
+from scm.identity_services.models.authentication_rules import AuthenticationRules
+from scm.identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
+from scm.identity_services.models.rule_based_move import RuleBasedMove
 
-from scm_identity_services.api_client import ApiClient, RequestSerialized
-from scm_identity_services.api_response import ApiResponse
-from scm_identity_services.rest import RESTResponseType
+from scm.identity_services.api_client import ApiClient, RequestSerialized
+from scm.identity_services.api_response import ApiResponse
+from scm.identity_services.rest import RESTResponseType
 
 
 class AuthenticationRulesApi:

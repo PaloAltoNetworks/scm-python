@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_authentication_profiles_list_response import BGPAuthenticationProfilesListResponse
+from scm.network_services.models.bgp_authentication_profiles_list_response import BGPAuthenticationProfilesListResponse
 
 # TODO update the JSON string below
 json = "{}"

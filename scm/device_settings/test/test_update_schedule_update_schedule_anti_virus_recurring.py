@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring import UpdateScheduleUpdateScheduleAntiVirusRecurring
+from scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring import UpdateScheduleUpdateScheduleAntiVirusRecurring
 
 class TestUpdateScheduleUpdateScheduleAntiVirusRecurring(unittest.TestCase):
     """UpdateScheduleUpdateScheduleAntiVirusRecurring unit test stubs"""
@@ -36,16 +36,16 @@ class TestUpdateScheduleUpdateScheduleAntiVirusRecurring(unittest.TestCase):
         model = UpdateScheduleUpdateScheduleAntiVirusRecurring()
         if include_optional:
             return UpdateScheduleUpdateScheduleAntiVirusRecurring(
-                daily = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
+                daily = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
                     action = 'download-only', 
                     at = '23:20', ),
-                hourly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
+                hourly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
                     action = 'download-only', 
                     at = 0, ),
-                var_none = scm_device_settings.models.none.none(),
+                var_none = scm.device_settings.models.none.none(),
                 sync_to_peer = True,
                 threshold = 1,
-                weekly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
+                weekly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
                     action = 'download-only', 
                     at = '23:20', 
                     day_of_week = 'sunday', )

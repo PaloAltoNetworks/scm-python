@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.ldap_server_profiles import LdapServerProfiles
+from scm.identity_services.models.ldap_server_profiles import LdapServerProfiles
 
 class TestLdapServerProfiles(unittest.TestCase):
     """LdapServerProfiles unit test stubs"""
@@ -47,7 +47,7 @@ class TestLdapServerProfiles(unittest.TestCase):
                 name = '',
                 retry_interval = 56,
                 server = [
-                    scm_identity_services.models.ldap_server_profiles_server_inner.ldap_server_profiles_server_inner(
+                    scm.identity_services.models.ldap_server_profiles_server_inner.ldap_server_profiles_server_inner(
                         address = '', 
                         name = '', 
                         port = 1, )
@@ -62,7 +62,7 @@ class TestLdapServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_identity_services.models.ldap_server_profiles_server_inner.ldap_server_profiles_server_inner(
+                    scm.identity_services.models.ldap_server_profiles_server_inner.ldap_server_profiles_server_inner(
                         address = '', 
                         name = '', 
                         port = 1, )

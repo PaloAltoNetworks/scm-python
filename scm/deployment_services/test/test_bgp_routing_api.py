@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.bgp_routing_api import BGPRoutingApi
+from scm.deployment_services.api.bgp_routing_api import BGPRoutingApi
 
 
 class TestBGPRoutingApi(unittest.TestCase):

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
+from scm.network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
 
 # TODO update the JSON string below
 json = "{}"

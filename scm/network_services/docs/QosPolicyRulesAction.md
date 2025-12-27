@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.qos_policy_rules_action import QosPolicyRulesAction
+from scm.network_services.models.qos_policy_rules_action import QosPolicyRulesAction
 
 # TODO update the JSON string below
 json = "{}"

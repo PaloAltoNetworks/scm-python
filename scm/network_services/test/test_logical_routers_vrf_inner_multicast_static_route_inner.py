@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_static_route_inner import LogicalRoutersVrfInnerMulticastStaticRouteInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_static_route_inner import LogicalRoutersVrfInnerMulticastStaticRouteInner
 
 class TestLogicalRoutersVrfInnerMulticastStaticRouteInner(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastStaticRouteInner unit test stubs"""
@@ -39,7 +39,7 @@ class TestLogicalRoutersVrfInnerMulticastStaticRouteInner(unittest.TestCase):
                 destination = '',
                 interface = '',
                 name = '',
-                nexthop = scm_network_services.models.logical_routers_vrf_inner_multicast_static_route_inner_nexthop.logical_routers_vrf_inner_multicast_static_route_inner_nexthop(
+                nexthop = scm.network_services.models.logical_routers_vrf_inner_multicast_static_route_inner_nexthop.logical_routers_vrf_inner_multicast_static_route_inner_nexthop(
                     ip_address = '', ),
                 preference = 56
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol import RemoteNetworksEcmpTunnelsInnerProtocol
+from scm.deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol import RemoteNetworksEcmpTunnelsInnerProtocol
 
 class TestRemoteNetworksEcmpTunnelsInnerProtocol(unittest.TestCase):
     """RemoteNetworksEcmpTunnelsInnerProtocol unit test stubs"""
@@ -36,7 +36,7 @@ class TestRemoteNetworksEcmpTunnelsInnerProtocol(unittest.TestCase):
         model = RemoteNetworksEcmpTunnelsInnerProtocol()
         if include_optional:
             return RemoteNetworksEcmpTunnelsInnerProtocol(
-                bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                     do_not_export_routes = True, 
                     enable = True, 
                     local_ip_address = '', 

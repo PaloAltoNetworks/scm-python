@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.tacacs_server_profiles_server_inner import TacacsServerProfilesServerInner
+from scm.identity_services.models.tacacs_server_profiles_server_inner import TacacsServerProfilesServerInner
 from typing import Optional, Set
 from typing_extensions import Self
 

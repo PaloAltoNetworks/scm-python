@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner import WildfireAntiVirusProfilesMlavExceptionInner
+from scm.security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner import WildfireAntiVirusProfilesMlavExceptionInner
 
 class TestWildfireAntiVirusProfilesMlavExceptionInner(unittest.TestCase):
     """WildfireAntiVirusProfilesMlavExceptionInner unit test stubs"""

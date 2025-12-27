@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.error_detail_cause_info import ErrorDetailCauseInfo
+from scm.device_settings.models.error_detail_cause_info import ErrorDetailCauseInfo
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp import LogicalRoutersVrfInnerMulticastRpLocalRpCandidateRp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp import LogicalRoutersVrfInnerMulticastRpLocalRpCandidateRp
 
 class TestLogicalRoutersVrfInnerMulticastRpLocalRpCandidateRp(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastRpLocalRpCandidateRp unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_disk_encryption_criteria import HipObjectsDiskEncryptionCriteria
+from scm.objects.models.hip_objects_disk_encryption_criteria import HipObjectsDiskEncryptionCriteria
 
 # TODO update the JSON string below
 json = "{}"

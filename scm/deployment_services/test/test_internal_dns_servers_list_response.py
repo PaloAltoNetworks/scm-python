@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.internal_dns_servers_list_response import InternalDNSServersListResponse
+from scm.deployment_services.models.internal_dns_servers_list_response import InternalDNSServersListResponse
 
 class TestInternalDNSServersListResponse(unittest.TestCase):
     """InternalDNSServersListResponse unit test stubs"""

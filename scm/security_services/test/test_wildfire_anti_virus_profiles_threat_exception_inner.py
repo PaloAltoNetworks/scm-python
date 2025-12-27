@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.wildfire_anti_virus_profiles_threat_exception_inner import WildfireAntiVirusProfilesThreatExceptionInner
+from scm.security_services.models.wildfire_anti_virus_profiles_threat_exception_inner import WildfireAntiVirusProfilesThreatExceptionInner
 
 class TestWildfireAntiVirusProfilesThreatExceptionInner(unittest.TestCase):
     """WildfireAntiVirusProfilesThreatExceptionInner unit test stubs"""

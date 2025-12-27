@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.dos_protection_rules_action import DosProtectionRulesAction
-from scm_security_services.models.dos_protection_rules_protection import DosProtectionRulesProtection
+from scm.security_services.models.dos_protection_rules_action import DosProtectionRulesAction
+from scm.security_services.models.dos_protection_rules_protection import DosProtectionRulesProtection
 from typing import Optional, Set
 from typing_extensions import Self
 

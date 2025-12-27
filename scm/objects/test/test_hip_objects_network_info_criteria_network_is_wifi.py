@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_network_info_criteria_network_is_wifi import HipObjectsNetworkInfoCriteriaNetworkIsWifi
+from scm.objects.models.hip_objects_network_info_criteria_network_is_wifi import HipObjectsNetworkInfoCriteriaNetworkIsWifi
 
 class TestHipObjectsNetworkInfoCriteriaNetworkIsWifi(unittest.TestCase):
     """HipObjectsNetworkInfoCriteriaNetworkIsWifi unit test stubs"""

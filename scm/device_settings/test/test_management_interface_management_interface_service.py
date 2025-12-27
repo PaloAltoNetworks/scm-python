@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface_service import ManagementInterfaceManagementInterfaceService
+from scm.device_settings.models.management_interface_management_interface_service import ManagementInterfaceManagementInterfaceService
 
 class TestManagementInterfaceManagementInterfaceService(unittest.TestCase):
     """ManagementInterfaceManagementInterfaceService unit test stubs"""

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_certificate_criteria_certificate_attributes_inner import HipObjectsCertificateCriteriaCertificateAttributesInner
+from scm.objects.models.hip_objects_certificate_criteria_certificate_attributes_inner import HipObjectsCertificateCriteriaCertificateAttributesInner
 from typing import Optional, Set
 from typing_extensions import Self
 

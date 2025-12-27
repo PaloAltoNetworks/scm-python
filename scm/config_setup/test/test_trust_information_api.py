@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.trust_information_api import TrustInformationApi
+from scm.config_setup.api.trust_information_api import TrustInformationApi
 
 
 class TestTrustInformationApi(unittest.TestCase):

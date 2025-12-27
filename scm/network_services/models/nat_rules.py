@@ -21,9 +21,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.nat_rules_destination_translation import NatRulesDestinationTranslation
-from scm_network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
-from scm_network_services.models.nat_rules_source_translation import NatRulesSourceTranslation
+from scm.network_services.models.nat_rules_destination_translation import NatRulesDestinationTranslation
+from scm.network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
+from scm.network_services.models.nat_rules_source_translation import NatRulesSourceTranslation
 from typing import Optional, Set
 from typing_extensions import Self
 

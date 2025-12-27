@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_exclusions_list_response import DecryptionExclusionsListResponse
+from scm.security_services.models.decryption_exclusions_list_response import DecryptionExclusionsListResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_policy_rules import QosPolicyRules
+from scm.network_services.models.qos_policy_rules import QosPolicyRules
 
 class TestQosPolicyRules(unittest.TestCase):
     """QosPolicyRules unit test stubs"""
@@ -36,24 +36,24 @@ class TestQosPolicyRules(unittest.TestCase):
         model = QosPolicyRules()
         if include_optional:
             return QosPolicyRules(
-                action = scm_network_services.models.qos_policy_rules_action.qos_policy_rules_action(
+                action = scm.network_services.models.qos_policy_rules_action.qos_policy_rules_action(
                     class = '', ),
                 description = '',
                 device = 'My Device',
-                dscp_tos = scm_network_services.models.qos_policy_rules_dscp_tos.qos_policy_rules_dscp_tos(
+                dscp_tos = scm.network_services.models.qos_policy_rules_dscp_tos.qos_policy_rules_dscp_tos(
                     codepoints = [
-                        scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner.qos_policy_rules_dscp_tos_codepoints_inner(
+                        scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner.qos_policy_rules_dscp_tos_codepoints_inner(
                             name = '', 
-                            type = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type.qos_policy_rules_dscp_tos_codepoints_inner_type(
-                                af = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
+                            type = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type.qos_policy_rules_dscp_tos_codepoints_inner_type(
+                                af = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
                                     codepoint = '', ), 
-                                cs = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
+                                cs = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
                                     codepoint = '', ), 
-                                custom = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom.qos_policy_rules_dscp_tos_codepoints_inner_type_custom(
-                                    codepoint = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint(
+                                custom = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom.qos_policy_rules_dscp_tos_codepoints_inner_type_custom(
+                                    codepoint = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint(
                                         binary_value = '', 
                                         codepoint_name = '', ), ), 
-                                ef = scm_network_services.models.ef.ef(), 
+                                ef = scm.network_services.models.ef.ef(), 
                                 tos = , ), )
                         ], ),
                 folder = 'My Folder',
@@ -64,7 +64,7 @@ class TestQosPolicyRules(unittest.TestCase):
             )
         else:
             return QosPolicyRules(
-                action = scm_network_services.models.qos_policy_rules_action.qos_policy_rules_action(
+                action = scm.network_services.models.qos_policy_rules_action.qos_policy_rules_action(
                     class = '', ),
                 name = '',
         )

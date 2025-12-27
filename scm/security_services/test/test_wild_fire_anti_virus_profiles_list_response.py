@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.wild_fire_anti_virus_profiles_list_response import WildFireAntiVirusProfilesListResponse
+from scm.security_services.models.wild_fire_anti_virus_profiles_list_response import WildFireAntiVirusProfilesListResponse
 
 class TestWildFireAntiVirusProfilesListResponse(unittest.TestCase):
     """WildFireAntiVirusProfilesListResponse unit test stubs"""

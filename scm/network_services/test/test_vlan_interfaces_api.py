@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.vlan_interfaces_api import VLANInterfacesApi
+from scm.network_services.api.vlan_interfaces_api import VLANInterfacesApi
 
 
 class TestVLANInterfacesApi(unittest.TestCase):

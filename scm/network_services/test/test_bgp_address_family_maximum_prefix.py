@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_maximum_prefix import BgpAddressFamilyMaximumPrefix
+from scm.network_services.models.bgp_address_family_maximum_prefix import BgpAddressFamilyMaximumPrefix
 
 class TestBgpAddressFamilyMaximumPrefix(unittest.TestCase):
     """BgpAddressFamilyMaximumPrefix unit test stubs"""
@@ -36,10 +36,10 @@ class TestBgpAddressFamilyMaximumPrefix(unittest.TestCase):
         model = BgpAddressFamilyMaximumPrefix()
         if include_optional:
             return BgpAddressFamilyMaximumPrefix(
-                action = scm_network_services.models.bgp_address_family_maximum_prefix_action.bgp_address_family_maximum_prefix_action(
-                    restart = scm_network_services.models.bgp_address_family_maximum_prefix_action_restart.bgp_address_family_maximum_prefix_action_restart(
+                action = scm.network_services.models.bgp_address_family_maximum_prefix_action.bgp_address_family_maximum_prefix_action(
+                    restart = scm.network_services.models.bgp_address_family_maximum_prefix_action_restart.bgp_address_family_maximum_prefix_action_restart(
                         interval = 1, ), 
-                    warning_only = scm_network_services.models.warning_only.warning_only(), ),
+                    warning_only = scm.network_services.models.warning_only.warning_only(), ),
                 num_prefixes = 1,
                 threshold = 1
             )

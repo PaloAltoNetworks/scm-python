@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.mfa_servers import MfaServers
+from scm.identity_services.models.mfa_servers import MfaServers
 
 # TODO update the JSON string below
 json = "{}"

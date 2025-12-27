@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
+from scm.deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
 from typing import Optional, Set
 from typing_extensions import Self
 

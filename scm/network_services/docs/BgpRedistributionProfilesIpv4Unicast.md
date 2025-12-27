@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast import BgpRedistributionProfilesIpv4Unicast
+from scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast import BgpRedistributionProfilesIpv4Unicast
 
 # TODO update the JSON string below
 json = "{}"

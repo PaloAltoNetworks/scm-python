@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tacacs_server_profiles import TacacsServerProfiles
+from scm.identity_services.models.tacacs_server_profiles import TacacsServerProfiles
 
 class TestTacacsServerProfiles(unittest.TestCase):
     """TacacsServerProfiles unit test stubs"""
@@ -42,7 +42,7 @@ class TestTacacsServerProfiles(unittest.TestCase):
                 name = '',
                 protocol = 'CHAP',
                 server = [
-                    scm_identity_services.models.tacacs_server_profiles_server_inner.tacacs_server_profiles_server_inner(
+                    scm.identity_services.models.tacacs_server_profiles_server_inner.tacacs_server_profiles_server_inner(
                         address = '', 
                         name = '', 
                         port = 1, 
@@ -58,7 +58,7 @@ class TestTacacsServerProfiles(unittest.TestCase):
                 name = '',
                 protocol = 'CHAP',
                 server = [
-                    scm_identity_services.models.tacacs_server_profiles_server_inner.tacacs_server_profiles_server_inner(
+                    scm.identity_services.models.tacacs_server_profiles_server_inner.tacacs_server_profiles_server_inner(
                         address = '', 
                         name = '', 
                         port = 1, 

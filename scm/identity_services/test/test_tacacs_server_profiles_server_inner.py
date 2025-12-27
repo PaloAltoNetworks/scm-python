@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tacacs_server_profiles_server_inner import TacacsServerProfilesServerInner
+from scm.identity_services.models.tacacs_server_profiles_server_inner import TacacsServerProfilesServerInner
 
 class TestTacacsServerProfilesServerInner(unittest.TestCase):
     """TacacsServerProfilesServerInner unit test stubs"""

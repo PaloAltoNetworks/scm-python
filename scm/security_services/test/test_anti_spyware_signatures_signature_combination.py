@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
+from scm.security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
 
 class TestAntiSpywareSignaturesSignatureCombination(unittest.TestCase):
     """AntiSpywareSignaturesSignatureCombination unit test stubs"""
@@ -37,16 +37,16 @@ class TestAntiSpywareSignaturesSignatureCombination(unittest.TestCase):
         if include_optional:
             return AntiSpywareSignaturesSignatureCombination(
                 and_condition = [
-                    scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
+                    scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
                         name = '', 
                         or_condition = [
-                            scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
+                            scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
                                 name = '', 
                                 threat_id = '', )
                             ], )
                     ],
                 order_free = True,
-                time_attribute = scm_security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
+                time_attribute = scm.security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
                     interval = 1, 
                     threshold = 1, 
                     track_by = 'source-and-destination', )

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
+from scm.identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
 
 # TODO update the JSON string below
 json = "{}"

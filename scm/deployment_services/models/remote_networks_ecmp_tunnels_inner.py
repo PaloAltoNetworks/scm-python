@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List
-from scm_deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol import RemoteNetworksEcmpTunnelsInnerProtocol
+from scm.deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol import RemoteNetworksEcmpTunnelsInnerProtocol
 from typing import Optional, Set
 from typing_extensions import Self
 

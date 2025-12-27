@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.list_ha_devices200_response import ListHADevices200Response
+from scm.device_settings.models.list_ha_devices200_response import ListHADevices200Response
 
 class TestListHADevices200Response(unittest.TestCase):
     """ListHADevices200Response unit test stubs"""
@@ -37,11 +37,11 @@ class TestListHADevices200Response(unittest.TestCase):
         if include_optional:
             return ListHADevices200Response(
                 data = [
-                    scm_device_settings.models.ha_devices.ha-devices(
+                    scm.device_settings.models.ha_devices.ha-devices(
                         device = 'My Device', 
                         folder = 'My Folder', 
                         ha_devices = [
-                            scm_device_settings.models.ha_devices_ha_devices_inner.ha_devices_ha_devices_inner(
+                            scm.device_settings.models.ha_devices_ha_devices_inner.ha_devices_ha_devices_inner(
                                 primary_device_name = '', 
                                 primary_serial_number = '', 
                                 secondary_device_name = '', 

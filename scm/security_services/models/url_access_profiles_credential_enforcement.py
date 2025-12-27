@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.url_access_profiles_credential_enforcement_mode import UrlAccessProfilesCredentialEnforcementMode
+from scm.security_services.models.url_access_profiles_credential_enforcement_mode import UrlAccessProfilesCredentialEnforcementMode
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_profiles import AntiSpywareProfiles
+from scm.security_services.models.anti_spyware_profiles import AntiSpywareProfiles
 
 class TestAntiSpywareProfiles(unittest.TestCase):
     """AntiSpywareProfiles unit test stubs"""
@@ -48,23 +48,23 @@ class TestAntiSpywareProfiles(unittest.TestCase):
                     ''
                     ],
                 mica_engine_spyware_enabled = [
-                    scm_security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner.anti_spyware_profiles_mica_engine_spyware_enabled_inner(
+                    scm.security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner.anti_spyware_profiles_mica_engine_spyware_enabled_inner(
                         inline_policy_action = 'alert', 
                         name = '', )
                     ],
                 name = '',
                 rules = [
-                    scm_security_services.models.anti_spyware_profiles_rules_inner.anti_spyware_profiles_rules_inner(
-                        action = scm_security_services.models.anti_spyware_profiles_rules_inner_action.anti_spyware_profiles_rules_inner_action(
-                            alert = scm_security_services.models.alert.alert(), 
-                            allow = scm_security_services.models.allow.allow(), 
-                            block_ip = scm_security_services.models.anti_spyware_profiles_rules_inner_action_block_ip.anti_spyware_profiles_rules_inner_action_block_ip(
+                    scm.security_services.models.anti_spyware_profiles_rules_inner.anti_spyware_profiles_rules_inner(
+                        action = scm.security_services.models.anti_spyware_profiles_rules_inner_action.anti_spyware_profiles_rules_inner_action(
+                            alert = scm.security_services.models.alert.alert(), 
+                            allow = scm.security_services.models.allow.allow(), 
+                            block_ip = scm.security_services.models.anti_spyware_profiles_rules_inner_action_block_ip.anti_spyware_profiles_rules_inner_action_block_ip(
                                 duration = 1, 
                                 track_by = 'source-and-destination', ), 
-                            drop = scm_security_services.models.drop.drop(), 
-                            reset_both = scm_security_services.models.reset_both.reset_both(), 
-                            reset_client = scm_security_services.models.reset_client.reset_client(), 
-                            reset_server = scm_security_services.models.reset_server.reset_server(), ), 
+                            drop = scm.security_services.models.drop.drop(), 
+                            reset_both = scm.security_services.models.reset_both.reset_both(), 
+                            reset_client = scm.security_services.models.reset_client.reset_client(), 
+                            reset_server = scm.security_services.models.reset_server.reset_server(), ), 
                         category = 'adns-adtracking', 
                         name = '', 
                         packet_capture = 'disable', 
@@ -75,20 +75,20 @@ class TestAntiSpywareProfiles(unittest.TestCase):
                     ],
                 snippet = 'My Snippet',
                 threat_exception = [
-                    scm_security_services.models.anti_spyware_profiles_threat_exception_inner.anti_spyware_profiles_threat_exception_inner(
-                        action = scm_security_services.models.anti_spyware_profiles_threat_exception_inner_action.anti_spyware_profiles_threat_exception_inner_action(
-                            alert = scm_security_services.models.alert.alert(), 
-                            allow = scm_security_services.models.allow.allow(), 
-                            block_ip = scm_security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip.anti_spyware_profiles_threat_exception_inner_action_block_ip(
+                    scm.security_services.models.anti_spyware_profiles_threat_exception_inner.anti_spyware_profiles_threat_exception_inner(
+                        action = scm.security_services.models.anti_spyware_profiles_threat_exception_inner_action.anti_spyware_profiles_threat_exception_inner_action(
+                            alert = scm.security_services.models.alert.alert(), 
+                            allow = scm.security_services.models.allow.allow(), 
+                            block_ip = scm.security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip.anti_spyware_profiles_threat_exception_inner_action_block_ip(
                                 duration = 1, 
                                 track_by = 'source-and-destination', ), 
-                            default = scm_security_services.models.default.default(), 
-                            drop = scm_security_services.models.drop.drop(), 
-                            reset_both = scm_security_services.models.reset_both.reset_both(), 
-                            reset_client = scm_security_services.models.reset_client.reset_client(), 
-                            reset_server = scm_security_services.models.reset_server.reset_server(), ), 
+                            default = scm.security_services.models.default.default(), 
+                            drop = scm.security_services.models.drop.drop(), 
+                            reset_both = scm.security_services.models.reset_both.reset_both(), 
+                            reset_client = scm.security_services.models.reset_client.reset_client(), 
+                            reset_server = scm.security_services.models.reset_server.reset_server(), ), 
                         exempt_ip = [
-                            scm_security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner(
+                            scm.security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner(
                                 name = '', )
                             ], 
                         name = '', 

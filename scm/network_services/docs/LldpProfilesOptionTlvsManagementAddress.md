@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress
+from scm.network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.trust_validations_api import TrustValidationsApi
+from scm.config_setup.api.trust_validations_api import TrustValidationsApi
 
 
 class TestTrustValidationsApi(unittest.TestCase):

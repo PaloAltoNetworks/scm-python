@@ -1,4 +1,4 @@
-# scm_identity_services.CertificatesApi
+# scm.identity_services.CertificatesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/identity/v1*
 
@@ -23,15 +23,15 @@ Generate a new certificate.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.certificates_get import CertificatesGet
-from scm_identity_services.models.certificates_post import CertificatesPost
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.models.certificates_post import CertificatesPost
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -41,15 +41,15 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.CertificatesApi(api_client)
-    certificates_post = scm_identity_services.CertificatesPost() # CertificatesPost | Created (optional)
+    api_instance = scm.identity_services.CertificatesApi(api_client)
+    certificates_post = scm.identity_services.CertificatesPost() # CertificatesPost | Created (optional)
 
     try:
         # Generate a certificate
@@ -107,13 +107,13 @@ Delete a certificate.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -123,14 +123,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.CertificatesApi(api_client)
+    api_instance = scm.identity_services.CertificatesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -188,15 +188,15 @@ Export a certificate.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.export_certificate_payload import ExportCertificatePayload
-from scm_identity_services.models.export_certificate_response import ExportCertificateResponse
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.export_certificate_payload import ExportCertificatePayload
+from scm.identity_services.models.export_certificate_response import ExportCertificateResponse
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -206,16 +206,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.CertificatesApi(api_client)
+    api_instance = scm.identity_services.CertificatesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    export_certificate_payload = scm_identity_services.ExportCertificatePayload() # ExportCertificatePayload | Export a Certificate (optional)
+    export_certificate_payload = scm.identity_services.ExportCertificatePayload() # ExportCertificatePayload | Export a Certificate (optional)
 
     try:
         # Export a certificate
@@ -274,14 +274,14 @@ Get an existing certificate.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.certificates_get import CertificatesGet
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -291,14 +291,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.CertificatesApi(api_client)
+    api_instance = scm.identity_services.CertificatesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -358,14 +358,14 @@ Retrieve a list of certificates.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.certificates_list_response import CertificatesListResponse
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.certificates_list_response import CertificatesListResponse
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -375,14 +375,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.CertificatesApi(api_client)
+    api_instance = scm.identity_services.CertificatesApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)

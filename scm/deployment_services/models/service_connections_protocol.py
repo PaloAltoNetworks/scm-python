@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
+from scm.deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
 from typing import Optional, Set
 from typing_extensions import Self
 

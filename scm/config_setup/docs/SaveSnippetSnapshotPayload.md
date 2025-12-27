@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
+from scm.config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
 
 # TODO update the JSON string below
 json = "{}"

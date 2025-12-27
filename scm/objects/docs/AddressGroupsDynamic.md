@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.address_groups_dynamic import AddressGroupsDynamic
+from scm.objects.models.address_groups_dynamic import AddressGroupsDynamic
 
 # TODO update the JSON string below
 json = "{}"

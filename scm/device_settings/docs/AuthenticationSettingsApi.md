@@ -1,4 +1,4 @@
-# scm_device_settings.AuthenticationSettingsApi
+# scm.device_settings.AuthenticationSettingsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/device/v1*
 
@@ -23,14 +23,14 @@ Create new device authentication settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_device_settings
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
-from scm_device_settings.rest import ApiException
+import scm.device_settings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/device/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/device/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_device_settings.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_device_settings.ApiClient(configuration) as api_client:
+with scm.device_settings.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_device_settings.AuthenticationSettingsApi(api_client)
-    authentication_settings = scm_device_settings.AuthenticationSettings() # AuthenticationSettings |  (optional)
+    api_instance = scm.device_settings.AuthenticationSettingsApi(api_client)
+    authentication_settings = scm.device_settings.AuthenticationSettings() # AuthenticationSettings |  (optional)
 
     try:
         # Create authentication settings
@@ -107,13 +107,13 @@ Delete the device authentication settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_device_settings
-from scm_device_settings.rest import ApiException
+import scm.device_settings
+from scm.device_settings.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/device/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/device/v1"
 )
 
@@ -123,14 +123,14 @@ configuration = scm_device_settings.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_device_settings.ApiClient(configuration) as api_client:
+with scm.device_settings.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_device_settings.AuthenticationSettingsApi(api_client)
+    api_instance = scm.device_settings.AuthenticationSettingsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -188,14 +188,14 @@ Retrieve existing device authentication settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_device_settings
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
-from scm_device_settings.rest import ApiException
+import scm.device_settings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/device/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/device/v1"
 )
 
@@ -205,14 +205,14 @@ configuration = scm_device_settings.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_device_settings.ApiClient(configuration) as api_client:
+with scm.device_settings.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_device_settings.AuthenticationSettingsApi(api_client)
+    api_instance = scm.device_settings.AuthenticationSettingsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -271,14 +271,14 @@ Retrieve a list of device authentication settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_device_settings
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
-from scm_device_settings.rest import ApiException
+import scm.device_settings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/device/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/device/v1"
 )
 
@@ -288,14 +288,14 @@ configuration = scm_device_settings.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_device_settings.ApiClient(configuration) as api_client:
+with scm.device_settings.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_device_settings.AuthenticationSettingsApi(api_client)
+    api_instance = scm.device_settings.AuthenticationSettingsApi(api_client)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
     device = 'device_example' # str | The device in which the resource is defined  (optional)
@@ -358,14 +358,14 @@ Update the device authentication settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_device_settings
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
-from scm_device_settings.rest import ApiException
+import scm.device_settings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/device/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/device/v1"
 )
 
@@ -375,16 +375,16 @@ configuration = scm_device_settings.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_device_settings.Configuration(
+configuration = scm.device_settings.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_device_settings.ApiClient(configuration) as api_client:
+with scm.device_settings.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_device_settings.AuthenticationSettingsApi(api_client)
+    api_instance = scm.device_settings.AuthenticationSettingsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    authentication_settings = scm_device_settings.AuthenticationSettings() # AuthenticationSettings |  (optional)
+    authentication_settings = scm.device_settings.AuthenticationSettings() # AuthenticationSettings |  (optional)
 
     try:
         # Update authentication settings

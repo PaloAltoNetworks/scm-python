@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.get_remote_networks_license_info500_response import GetRemoteNetworksLicenseInfo500Response
+from scm.network_services.models.get_remote_networks_license_info500_response import GetRemoteNetworksLicenseInfo500Response
 
 class TestGetRemoteNetworksLicenseInfo500Response(unittest.TestCase):
     """GetRemoteNetworksLicenseInfo500Response unit test stubs"""

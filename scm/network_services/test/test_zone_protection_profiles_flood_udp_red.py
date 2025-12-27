@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_udp_red import ZoneProtectionProfilesFloodUdpRed
+from scm.network_services.models.zone_protection_profiles_flood_udp_red import ZoneProtectionProfilesFloodUdpRed
 
 class TestZoneProtectionProfilesFloodUdpRed(unittest.TestCase):
     """ZoneProtectionProfilesFloodUdpRed unit test stubs"""

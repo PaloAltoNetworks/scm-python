@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.layer2_subinterfaces_list_response import Layer2SubinterfacesListResponse
+from scm.network_services.models.layer2_subinterfaces_list_response import Layer2SubinterfacesListResponse
 
 class TestLayer2SubinterfacesListResponse(unittest.TestCase):
     """Layer2SubinterfacesListResponse unit test stubs"""

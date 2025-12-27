@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.layer2_subinterfaces import Layer2Subinterfaces
+from scm.network_services.models.layer2_subinterfaces import Layer2Subinterfaces
 
 class TestLayer2Subinterfaces(unittest.TestCase):
     """Layer2Subinterfaces unit test stubs"""

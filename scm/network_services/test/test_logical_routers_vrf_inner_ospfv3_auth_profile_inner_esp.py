@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp import LogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp import LogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp
 
 class TestLogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp unit test stubs"""
@@ -36,16 +36,16 @@ class TestLogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp()
         if include_optional:
             return LogicalRoutersVrfInnerOspfv3AuthProfileInnerEsp(
-                authentication = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication(
-                    md5 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                authentication = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication(
+                    md5 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                         key = '', ), 
-                    none = scm_network_services.models.none.none(), 
-                    sha1 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                    none = scm.network_services.models.none.none(), 
+                    sha1 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                         key = '', ), 
                     sha256 = , 
                     sha384 = , 
                     sha512 = , ),
-                encryption = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_encryption.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_encryption(
+                encryption = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_encryption.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_encryption(
                     algorithm = '3des', 
                     key = '', )
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_option import DhcpInterfacesServerOption
+from scm.network_services.models.dhcp_interfaces_server_option import DhcpInterfacesServerOption
 
 class TestDhcpInterfacesServerOption(unittest.TestCase):
     """DhcpInterfacesServerOption unit test stubs"""
@@ -36,27 +36,27 @@ class TestDhcpInterfacesServerOption(unittest.TestCase):
         model = DhcpInterfacesServerOption()
         if include_optional:
             return DhcpInterfacesServerOption(
-                dns = scm_network_services.models.dhcp_interfaces_server_option_dns.dhcp_interfaces_server_option_dns(
+                dns = scm.network_services.models.dhcp_interfaces_server_option_dns.dhcp_interfaces_server_option_dns(
                     primary = 'inherited', 
                     secondary = 'inherited', ),
                 dns_suffix = 'inherited',
                 gateway = '',
-                inheritance = scm_network_services.models.dhcp_interfaces_server_option_inheritance.dhcp_interfaces_server_option_inheritance(
+                inheritance = scm.network_services.models.dhcp_interfaces_server_option_inheritance.dhcp_interfaces_server_option_inheritance(
                     source = '', ),
-                lease = scm_network_services.models.dhcp_interfaces_server_option_lease.dhcp_interfaces_server_option_lease(
+                lease = scm.network_services.models.dhcp_interfaces_server_option_lease.dhcp_interfaces_server_option_lease(
                     timeout = 0, 
-                    unlimited = scm_network_services.models.unlimited.unlimited(), ),
-                nis = scm_network_services.models.dhcp_interfaces_server_option_nis.dhcp_interfaces_server_option_nis(
+                    unlimited = scm.network_services.models.unlimited.unlimited(), ),
+                nis = scm.network_services.models.dhcp_interfaces_server_option_nis.dhcp_interfaces_server_option_nis(
                     primary = 'inherited', 
                     secondary = 'inherited', ),
-                ntp = scm_network_services.models.dhcp_interfaces_server_option_ntp.dhcp_interfaces_server_option_ntp(
+                ntp = scm.network_services.models.dhcp_interfaces_server_option_ntp.dhcp_interfaces_server_option_ntp(
                     primary = 'inherited', 
                     secondary = 'inherited', ),
                 pop3_server = 'inherited',
                 smtp_server = 'inherited',
                 subnet_mask = '',
                 user_defined = [
-                    scm_network_services.models.dhcp_interfaces_server_option_user_defined_inner.dhcp_interfaces_server_option_user_defined_inner(
+                    scm.network_services.models.dhcp_interfaces_server_option_user_defined_inner.dhcp_interfaces_server_option_user_defined_inner(
                         ascii = [
                             ''
                             ], 
@@ -70,7 +70,7 @@ class TestDhcpInterfacesServerOption(unittest.TestCase):
                             ], 
                         name = '', )
                     ],
-                wins = scm_network_services.models.dhcp_interfaces_server_option_wins.dhcp_interfaces_server_option_wins(
+                wins = scm.network_services.models.dhcp_interfaces_server_option_wins.dhcp_interfaces_server_option_wins(
                     primary = 'inherited', 
                     secondary = 'inherited', )
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
+from scm.security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
 
 class TestDecryptionProfilesSslNoProxy(unittest.TestCase):
     """DecryptionProfilesSslNoProxy unit test stubs"""

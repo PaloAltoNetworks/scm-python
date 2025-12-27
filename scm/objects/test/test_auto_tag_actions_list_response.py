@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.auto_tag_actions_list_response import AutoTagActionsListResponse
+from scm.objects.models.auto_tag_actions_list_response import AutoTagActionsListResponse
 
 class TestAutoTagActionsListResponse(unittest.TestCase):
     """AutoTagActionsListResponse unit test stubs"""

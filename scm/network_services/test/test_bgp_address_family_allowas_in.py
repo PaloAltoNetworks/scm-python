@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_allowas_in import BgpAddressFamilyAllowasIn
+from scm.network_services.models.bgp_address_family_allowas_in import BgpAddressFamilyAllowasIn
 
 class TestBgpAddressFamilyAllowasIn(unittest.TestCase):
     """BgpAddressFamilyAllowasIn unit test stubs"""
@@ -37,7 +37,7 @@ class TestBgpAddressFamilyAllowasIn(unittest.TestCase):
         if include_optional:
             return BgpAddressFamilyAllowasIn(
                 occurrence = 1,
-                origin = scm_network_services.models.origin.origin()
+                origin = scm.network_services.models.origin.origin()
             )
         else:
             return BgpAddressFamilyAllowasIn(

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.network_locations_api import NetworkLocationsApi
+from scm.deployment_services.api.network_locations_api import NetworkLocationsApi
 
 
 class TestNetworkLocationsApi(unittest.TestCase):

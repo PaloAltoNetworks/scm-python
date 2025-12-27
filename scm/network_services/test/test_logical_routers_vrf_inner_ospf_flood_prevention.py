@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention import LogicalRoutersVrfInnerOspfFloodPrevention
+from scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention import LogicalRoutersVrfInnerOspfFloodPrevention
 
 class TestLogicalRoutersVrfInnerOspfFloodPrevention(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfFloodPrevention unit test stubs"""
@@ -36,10 +36,10 @@ class TestLogicalRoutersVrfInnerOspfFloodPrevention(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfFloodPrevention()
         if include_optional:
             return LogicalRoutersVrfInnerOspfFloodPrevention(
-                hello = scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
+                hello = scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
                     enable = True, 
                     max_packet = 56, ),
-                lsa = scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
+                lsa = scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
                     enable = True, 
                     max_packet = 56, )
             )

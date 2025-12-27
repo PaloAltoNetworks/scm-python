@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.profile_groups_list_response import ProfileGroupsListResponse
+from scm.security_services.models.profile_groups_list_response import ProfileGroupsListResponse
 
 class TestProfileGroupsListResponse(unittest.TestCase):
     """ProfileGroupsListResponse unit test stubs"""

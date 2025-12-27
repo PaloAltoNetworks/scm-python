@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.trusts import Trusts
+from scm.config_setup.models.trusts import Trusts
 
 class TestTrusts(unittest.TestCase):
     """Trusts unit test stubs"""

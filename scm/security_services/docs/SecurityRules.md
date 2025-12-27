@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.security_rules import SecurityRules
+from scm.security_services.models.security_rules import SecurityRules
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qo_s_profiles_list_response import QoSProfilesListResponse
+from scm.network_services.models.qo_s_profiles_list_response import QoSProfilesListResponse
 
 class TestQoSProfilesListResponse(unittest.TestCase):
     """QoSProfilesListResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_disk_backup_criteria import HipObjectsDiskBackupCriteria
+from scm.objects.models.hip_objects_disk_backup_criteria import HipObjectsDiskBackupCriteria
 
 class TestHipObjectsDiskBackupCriteria(unittest.TestCase):
     """HipObjectsDiskBackupCriteria unit test stubs"""
@@ -37,12 +37,12 @@ class TestHipObjectsDiskBackupCriteria(unittest.TestCase):
         if include_optional:
             return HipObjectsDiskBackupCriteria(
                 is_installed = True,
-                last_backup_time = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
-                    not_available = scm_objects.models.not_available.not_available(), 
-                    not_within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                last_backup_time = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
+                    not_available = scm.objects.models.not_available.not_available(), 
+                    not_within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                         days = 1, 
                         hours = 1, ), 
-                    within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                    within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                         days = 1, 
                         hours = 1, ), )
             )

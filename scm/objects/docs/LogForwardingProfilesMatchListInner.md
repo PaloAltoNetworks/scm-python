@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.log_forwarding_profiles_match_list_inner import LogForwardingProfilesMatchListInner
+from scm.objects.models.log_forwarding_profiles_match_list_inner import LogForwardingProfilesMatchListInner
 
 # TODO update the JSON string below
 json = "{}"

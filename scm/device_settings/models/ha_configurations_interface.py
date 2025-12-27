@@ -20,10 +20,10 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.ha_configurations_interface_ha1 import HaConfigurationsInterfaceHa1
-from scm_device_settings.models.ha_configurations_interface_ha1_backup import HaConfigurationsInterfaceHa1Backup
-from scm_device_settings.models.ha_configurations_interface_ha2 import HaConfigurationsInterfaceHa2
-from scm_device_settings.models.ha_configurations_interface_ha2_backup import HaConfigurationsInterfaceHa2Backup
+from scm.device_settings.models.ha_configurations_interface_ha1 import HaConfigurationsInterfaceHa1
+from scm.device_settings.models.ha_configurations_interface_ha1_backup import HaConfigurationsInterfaceHa1Backup
+from scm.device_settings.models.ha_configurations_interface_ha2 import HaConfigurationsInterfaceHa2
+from scm.device_settings.models.ha_configurations_interface_ha2_backup import HaConfigurationsInterfaceHa2Backup
 from typing import Optional, Set
 from typing_extensions import Self
 

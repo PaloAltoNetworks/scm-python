@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.bandwidth_allocations_qos import BandwidthAllocationsQos
+from scm.deployment_services.models.bandwidth_allocations_qos import BandwidthAllocationsQos
 from typing import Optional, Set
 from typing_extensions import Self
 

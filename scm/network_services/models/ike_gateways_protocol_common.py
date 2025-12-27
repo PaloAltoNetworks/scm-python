@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ike_gateways_protocol_common_fragmentation import IkeGatewaysProtocolCommonFragmentation
-from scm_network_services.models.ike_gateways_protocol_common_nat_traversal import IkeGatewaysProtocolCommonNatTraversal
+from scm.network_services.models.ike_gateways_protocol_common_fragmentation import IkeGatewaysProtocolCommonFragmentation
+from scm.network_services.models.ike_gateways_protocol_common_nat_traversal import IkeGatewaysProtocolCommonNatTraversal
 from typing import Optional, Set
 from typing_extensions import Self
 

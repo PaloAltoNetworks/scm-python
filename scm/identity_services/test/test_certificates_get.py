@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.models.certificates_get import CertificatesGet
 
 class TestCertificatesGet(unittest.TestCase):
     """CertificatesGet unit test stubs"""

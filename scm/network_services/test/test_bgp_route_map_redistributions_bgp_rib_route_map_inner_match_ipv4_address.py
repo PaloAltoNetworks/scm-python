@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4Address
+from scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4Address
 
 class TestBgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4Address(unittest.TestCase):
     """BgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4Address unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group import HaConfigurationsGroupMonitoringPathMonitoringPathGroup
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group import HaConfigurationsGroupMonitoringPathMonitoringPathGroup
 
 class TestHaConfigurationsGroupMonitoringPathMonitoringPathGroup(unittest.TestCase):
     """HaConfigurationsGroupMonitoringPathMonitoringPathGroup unit test stubs"""
@@ -37,9 +37,9 @@ class TestHaConfigurationsGroupMonitoringPathMonitoringPathGroup(unittest.TestCa
         if include_optional:
             return HaConfigurationsGroupMonitoringPathMonitoringPathGroup(
                 logical_router = [
-                    scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
+                    scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
                         destination_ip_group = [
-                            scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
+                            scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
                                 destination_ip = [
                                     ''
                                     ], 

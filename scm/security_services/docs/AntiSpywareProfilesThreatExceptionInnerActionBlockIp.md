@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip import AntiSpywareProfilesThreatExceptionInnerActionBlockIp
+from scm.security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip import AntiSpywareProfilesThreatExceptionInnerActionBlockIp
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_address_family_profiles_api import BGPAddressFamilyProfilesApi
+from scm.network_services.api.bgp_address_family_profiles_api import BGPAddressFamilyProfilesApi
 
 
 class TestBGPAddressFamilyProfilesApi(unittest.TestCase):

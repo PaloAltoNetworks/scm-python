@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks import RemoteNetworks
+from scm.deployment_services.models.remote_networks import RemoteNetworks
 
 class TestRemoteNetworks(unittest.TestCase):
     """RemoteNetworks unit test stubs"""
@@ -38,11 +38,11 @@ class TestRemoteNetworks(unittest.TestCase):
             return RemoteNetworks(
                 ecmp_load_balancing = 'disable',
                 ecmp_tunnels = [
-                    scm_deployment_services.models.remote_networks_ecmp_tunnels_inner.remote_networks_ecmp_tunnels_inner(
+                    scm.deployment_services.models.remote_networks_ecmp_tunnels_inner.remote_networks_ecmp_tunnels_inner(
                         ipsec_tunnel = '', 
                         name = '', 
-                        protocol = scm_deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
-                            bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                        protocol = scm.deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
+                            bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                                 do_not_export_routes = True, 
                                 enable = True, 
                                 local_ip_address = '', 
@@ -58,8 +58,8 @@ class TestRemoteNetworks(unittest.TestCase):
                 ipsec_tunnel = '',
                 license_type = 'FWAAS-AGGREGATE',
                 name = '',
-                protocol = scm_deployment_services.models.remote_networks_protocol.remote_networks_protocol(
-                    bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                protocol = scm.deployment_services.models.remote_networks_protocol.remote_networks_protocol(
+                    bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                         do_not_export_routes = True, 
                         enable = True, 
                         local_ip_address = '', 
@@ -69,7 +69,7 @@ class TestRemoteNetworks(unittest.TestCase):
                         peering_type = 'exchange-v4-over-v4', 
                         secret = '', 
                         summarize_mobile_user_routes = True, ), 
-                    bgp_peer = scm_deployment_services.models.remote_networks_protocol_bgp_peer.remote_networks_protocol_bgp_peer(
+                    bgp_peer = scm.deployment_services.models.remote_networks_protocol_bgp_peer.remote_networks_protocol_bgp_peer(
                         local_ip_address = '', 
                         peer_ip_address = '', 
                         secret = '', ), ),

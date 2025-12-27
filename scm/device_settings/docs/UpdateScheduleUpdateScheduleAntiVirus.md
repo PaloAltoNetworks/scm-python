@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
+from scm.device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
 
 # TODO update the JSON string below
 json = "{}"

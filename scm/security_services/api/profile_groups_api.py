@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_security_services.models.profile_groups import ProfileGroups
-from scm_security_services.models.profile_groups_list_response import ProfileGroupsListResponse
+from scm.security_services.models.profile_groups import ProfileGroups
+from scm.security_services.models.profile_groups_list_response import ProfileGroupsListResponse
 
-from scm_security_services.api_client import ApiClient, RequestSerialized
-from scm_security_services.api_response import ApiResponse
-from scm_security_services.rest import RESTResponseType
+from scm.security_services.api_client import ApiClient, RequestSerialized
+from scm.security_services.api_response import ApiResponse
+from scm.security_services.rest import RESTResponseType
 
 
 class ProfileGroupsApi:

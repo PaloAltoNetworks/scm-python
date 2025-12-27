@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
+from scm.objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
 
 # TODO update the JSON string below
 json = "{}"

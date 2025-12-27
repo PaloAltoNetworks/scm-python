@@ -21,10 +21,10 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client import Layer3SubInterfacesDhcpClientDhcpClient
-from scm_network_services.models.layer3_subinterfaces_arp_inner import Layer3SubinterfacesArpInner
-from scm_network_services.models.layer3_subinterfaces_ddns_config import Layer3SubinterfacesDdnsConfig
-from scm_network_services.models.layer3_subinterfaces_ip_inner import Layer3SubinterfacesIpInner
+from scm.network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client import Layer3SubInterfacesDhcpClientDhcpClient
+from scm.network_services.models.layer3_subinterfaces_arp_inner import Layer3SubinterfacesArpInner
+from scm.network_services.models.layer3_subinterfaces_ddns_config import Layer3SubinterfacesDdnsConfig
+from scm.network_services.models.layer3_subinterfaces_ip_inner import Layer3SubinterfacesIpInner
 from typing import Optional, Set
 from typing_extensions import Self
 

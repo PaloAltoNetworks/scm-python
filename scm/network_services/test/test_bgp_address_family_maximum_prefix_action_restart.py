@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
+from scm.network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
 
 class TestBgpAddressFamilyMaximumPrefixActionRestart(unittest.TestCase):
     """BgpAddressFamilyMaximumPrefixActionRestart unit test stubs"""

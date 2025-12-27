@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
+from scm.network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
 
 class TestEthernetInterfacesArpInner(unittest.TestCase):
     """EthernetInterfacesArpInner unit test stubs"""

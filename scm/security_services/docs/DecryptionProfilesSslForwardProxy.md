@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
+from scm.security_services.models.decryption_profiles_ssl_forward_proxy import DecryptionProfilesSslForwardProxy
 
 # TODO update the JSON string below
 json = "{}"

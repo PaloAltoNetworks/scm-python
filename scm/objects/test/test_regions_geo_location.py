@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.regions_geo_location import RegionsGeoLocation
+from scm.objects.models.regions_geo_location import RegionsGeoLocation
 
 class TestRegionsGeoLocation(unittest.TestCase):
     """RegionsGeoLocation unit test stubs"""

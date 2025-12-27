@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.authentication_portals import AuthenticationPortals
+from scm.identity_services.models.authentication_portals import AuthenticationPortals
 
 # TODO update the JSON string below
 json = "{}"

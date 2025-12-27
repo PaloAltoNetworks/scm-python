@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.url_access_profiles_credential_enforcement import UrlAccessProfilesCredentialEnforcement
+from scm.security_services.models.url_access_profiles_credential_enforcement import UrlAccessProfilesCredentialEnforcement
 
 # TODO update the JSON string below
 json = "{}"

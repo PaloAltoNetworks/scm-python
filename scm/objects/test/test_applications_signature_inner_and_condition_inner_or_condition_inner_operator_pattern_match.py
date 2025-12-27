@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match import ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorPatternMatch
+from scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match import ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorPatternMatch
 
 class TestApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorPatternMatch(unittest.TestCase):
     """ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorPatternMatch unit test stubs"""
@@ -39,7 +39,7 @@ class TestApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorPat
                 context = '',
                 pattern = '',
                 qualifier = [
-                    scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
+                    scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
                         name = '', 
                         value = '', )
                     ]

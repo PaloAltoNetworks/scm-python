@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.url_access_profiles import UrlAccessProfiles
+from scm.security_services.models.url_access_profiles import UrlAccessProfiles
 
 # TODO update the JSON string below
 json = "{}"

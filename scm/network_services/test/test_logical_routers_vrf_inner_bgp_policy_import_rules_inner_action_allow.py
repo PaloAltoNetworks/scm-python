@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_policy_import_rules_inner_action_allow import LogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow
+from scm.network_services.models.logical_routers_vrf_inner_bgp_policy_import_rules_inner_action_allow import LogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow
 
 class TestLogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow unit test stubs"""
@@ -37,26 +37,26 @@ class TestLogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow(unittest.Te
         if include_optional:
             return LogicalRoutersVrfInnerBgpPolicyImportRulesInnerActionAllow(
                 dampening = '',
-                update = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
-                    as_path = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_as_path(
-                        none = scm_network_services.models.none.none(), 
+                update = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
+                    as_path = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_as_path(
+                        none = scm.network_services.models.none.none(), 
                         prepend = 56, 
-                        remove = scm_network_services.models.remove.remove(), 
+                        remove = scm.network_services.models.remove.remove(), 
                         remove_and_prepend = 56, ), 
                     as_path_limit = 56, 
-                    community = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community(
+                    community = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community(
                         append = [
                             ''
                             ], 
-                        none = scm_network_services.models.none.none(), 
+                        none = scm.network_services.models.none.none(), 
                         overwrite = [
                             ''
                             ], 
-                        remove_all = scm_network_services.models.remove_all.remove_all(), 
+                        remove_all = scm.network_services.models.remove_all.remove_all(), 
                         remove_regex = '', ), 
-                    extended_community = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community(
-                        none = scm_network_services.models.none.none(), 
-                        remove_all = scm_network_services.models.remove_all.remove_all(), 
+                    extended_community = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes_community(
+                        none = scm.network_services.models.none.none(), 
+                        remove_all = scm.network_services.models.remove_all.remove_all(), 
                         remove_regex = '', ), 
                     local_preference = 56, 
                     med = 56, 

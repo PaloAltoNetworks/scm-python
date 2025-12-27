@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.base_rule_properties import BaseRuleProperties
+from scm.security_services.models.base_rule_properties import BaseRuleProperties
 
 # TODO update the JSON string below
 json = "{}"

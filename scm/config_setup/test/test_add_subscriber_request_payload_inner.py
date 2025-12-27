@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
+from scm.config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
 
 class TestAddSubscriberRequestPayloadInner(unittest.TestCase):
     """AddSubscriberRequestPayloadInner unit test stubs"""

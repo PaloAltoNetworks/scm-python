@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.syslog_server_profiles_api import SyslogServerProfilesApi
+from scm.objects.api.syslog_server_profiles_api import SyslogServerProfilesApi
 
 
 class TestSyslogServerProfilesApi(unittest.TestCase):

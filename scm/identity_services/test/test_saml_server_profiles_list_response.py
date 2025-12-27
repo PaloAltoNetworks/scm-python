@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.saml_server_profiles_list_response import SAMLServerProfilesListResponse
+from scm.identity_services.models.saml_server_profiles_list_response import SAMLServerProfilesListResponse
 
 class TestSAMLServerProfilesListResponse(unittest.TestCase):
     """SAMLServerProfilesListResponse unit test stubs"""

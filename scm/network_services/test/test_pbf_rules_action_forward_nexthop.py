@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
+from scm.network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
 
 class TestPbfRulesActionForwardNexthop(unittest.TestCase):
     """PbfRulesActionForwardNexthop unit test stubs"""

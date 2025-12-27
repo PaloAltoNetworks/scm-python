@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_objects.models.service_groups import ServiceGroups
+from scm.objects.models.service_groups import ServiceGroups
 from typing import Optional, Set
 from typing_extensions import Self
 

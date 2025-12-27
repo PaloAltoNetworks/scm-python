@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_profiles_list_response import AntiSpywareProfilesListResponse
+from scm.security_services.models.anti_spyware_profiles_list_response import AntiSpywareProfilesListResponse
 
 class TestAntiSpywareProfilesListResponse(unittest.TestCase):
     """AntiSpywareProfilesListResponse unit test stubs"""

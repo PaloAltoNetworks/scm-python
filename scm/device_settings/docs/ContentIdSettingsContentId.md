@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.content_id_settings_content_id import ContentIdSettingsContentId
+from scm.device_settings.models.content_id_settings_content_id import ContentIdSettingsContentId
 
 # TODO update the JSON string below
 json = "{}"

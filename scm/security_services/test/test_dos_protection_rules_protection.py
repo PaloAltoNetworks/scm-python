@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_rules_protection import DosProtectionRulesProtection
+from scm.security_services.models.dos_protection_rules_protection import DosProtectionRulesProtection
 
 class TestDosProtectionRulesProtection(unittest.TestCase):
     """DosProtectionRulesProtection unit test stubs"""
@@ -36,10 +36,10 @@ class TestDosProtectionRulesProtection(unittest.TestCase):
         model = DosProtectionRulesProtection()
         if include_optional:
             return DosProtectionRulesProtection(
-                aggregate = scm_security_services.models.dos_protection_rules_protection_aggregate.dos_protection_rules_protection_aggregate(
+                aggregate = scm.security_services.models.dos_protection_rules_protection_aggregate.dos_protection_rules_protection_aggregate(
                     profile = '', ),
-                classified = scm_security_services.models.dos_protection_rules_protection_classified.dos_protection_rules_protection_classified(
-                    classification_criteria = scm_security_services.models.dos_protection_rules_protection_classified_classification_criteria.dos_protection_rules_protection_classified_classification_criteria(
+                classified = scm.security_services.models.dos_protection_rules_protection_classified.dos_protection_rules_protection_classified(
+                    classification_criteria = scm.security_services.models.dos_protection_rules_protection_classified_classification_criteria.dos_protection_rules_protection_classified_classification_criteria(
                         address = 'source-ip-only', ), 
                     profile = '', )
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.service_settings_api import ServiceSettingsApi
+from scm.device_settings.api.service_settings_api import ServiceSettingsApi
 
 
 class TestServiceSettingsApi(unittest.TestCase):

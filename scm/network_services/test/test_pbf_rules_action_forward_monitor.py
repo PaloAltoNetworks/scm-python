@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
+from scm.network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
 
 class TestPbfRulesActionForwardMonitor(unittest.TestCase):
     """PbfRulesActionForwardMonitor unit test stubs"""

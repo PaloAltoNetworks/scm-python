@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_profiles import HipProfiles
+from scm.objects.models.hip_profiles import HipProfiles
 
 class TestHipProfiles(unittest.TestCase):
     """HipProfiles unit test stubs"""

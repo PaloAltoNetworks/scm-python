@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
+from scm.config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
 
 class TestDevicesInstalledLicensesInner(unittest.TestCase):
     """DevicesInstalledLicensesInner unit test stubs"""

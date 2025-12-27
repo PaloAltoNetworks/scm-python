@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
+from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
 
 # TODO update the JSON string below
 json = "{}"

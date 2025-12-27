@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric import BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric
+from scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric import BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric
 
 class TestBgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric(unittest.TestCase):
     """BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric unit test stubs"""

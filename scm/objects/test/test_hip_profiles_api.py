@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.hip_profiles_api import HIPProfilesApi
+from scm.objects.api.hip_profiles_api import HIPProfilesApi
 
 
 class TestHIPProfilesApi(unittest.TestCase):

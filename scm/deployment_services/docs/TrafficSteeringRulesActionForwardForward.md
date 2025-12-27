@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
+from scm.deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
 
 # TODO update the JSON string below
 json = "{}"

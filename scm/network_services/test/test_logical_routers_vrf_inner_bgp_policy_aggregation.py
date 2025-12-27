@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation import LogicalRoutersVrfInnerBgpPolicyAggregation
+from scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation import LogicalRoutersVrfInnerBgpPolicyAggregation
 
 class TestLogicalRoutersVrfInnerBgpPolicyAggregation(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPolicyAggregation unit test stubs"""
@@ -37,20 +37,20 @@ class TestLogicalRoutersVrfInnerBgpPolicyAggregation(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerBgpPolicyAggregation(
                 address = [
-                    scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner(
                         advertise_filters = [
-                            scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
                                 enable = True, 
-                                match = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match(
+                                match = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match(
                                     address_prefix = [
-                                        scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner(
                                             exact = True, 
                                             name = '', )
                                         ], 
                                     afi = 'ip', 
-                                    as_path = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
+                                    as_path = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
                                         regex = '', ), 
-                                    community = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
+                                    community = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
                                         regex = '', ), 
                                     extended_community = , 
                                     from_peer = [
@@ -64,7 +64,7 @@ class TestLogicalRoutersVrfInnerBgpPolicyAggregation(unittest.TestCase):
                                     safi = 'ip', ), 
                                 name = '', )
                             ], 
-                        aggregate_route_attributes = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
+                        aggregate_route_attributes = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
                             as_path_limit = 56, 
                             local_preference = 56, 
                             med = 56, 
@@ -76,7 +76,7 @@ class TestLogicalRoutersVrfInnerBgpPolicyAggregation(unittest.TestCase):
                         prefix = '', 
                         summary = True, 
                         suppress_filters = [
-                            scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
                                 enable = True, 
                                 name = '', )
                             ], )

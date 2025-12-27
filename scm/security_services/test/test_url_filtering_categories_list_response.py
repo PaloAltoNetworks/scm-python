@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.url_filtering_categories_list_response import URLFilteringCategoriesListResponse
+from scm.security_services.models.url_filtering_categories_list_response import URLFilteringCategoriesListResponse
 
 class TestURLFilteringCategoriesListResponse(unittest.TestCase):
     """URLFilteringCategoriesListResponse unit test stubs"""

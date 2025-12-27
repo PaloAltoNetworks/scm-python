@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.mfa_servers_mfa_vendor_type import MfaServersMfaVendorType
+from scm.identity_services.models.mfa_servers_mfa_vendor_type import MfaServersMfaVendorType
 
 class TestMfaServersMfaVendorType(unittest.TestCase):
     """MfaServersMfaVendorType unit test stubs"""
@@ -36,26 +36,26 @@ class TestMfaServersMfaVendorType(unittest.TestCase):
         model = MfaServersMfaVendorType()
         if include_optional:
             return MfaServersMfaVendorType(
-                duo_security_v2 = scm_identity_services.models.mfa_servers_mfa_vendor_type_duo_security_v2.mfa_servers_mfa_vendor_type_duo_security_v2(
+                duo_security_v2 = scm.identity_services.models.mfa_servers_mfa_vendor_type_duo_security_v2.mfa_servers_mfa_vendor_type_duo_security_v2(
                     duo_api_host = '0123456789101112131415', 
                     duo_baseuri = '/auth/v2', 
                     duo_integration_key = '0123456789101112131415', 
                     duo_secret_key = '0123456789101112131415', 
                     duo_timeout = 5, ),
-                okta_adaptive_v1 = scm_identity_services.models.mfa_servers_mfa_vendor_type_okta_adaptive_v1.mfa_servers_mfa_vendor_type_okta_adaptive_v1(
+                okta_adaptive_v1 = scm.identity_services.models.mfa_servers_mfa_vendor_type_okta_adaptive_v1.mfa_servers_mfa_vendor_type_okta_adaptive_v1(
                     okta_api_host = '0123456789', 
                     okta_baseuri = '/api/v1', 
                     okta_org = '', 
                     okta_timeout = 5, 
                     okta_token = '01234567', ),
-                ping_identity_v1 = scm_identity_services.models.mfa_servers_mfa_vendor_type_ping_identity_v1.mfa_servers_mfa_vendor_type_ping_identity_v1(
+                ping_identity_v1 = scm.identity_services.models.mfa_servers_mfa_vendor_type_ping_identity_v1.mfa_servers_mfa_vendor_type_ping_identity_v1(
                     ping_api_host = 'idpxny3lm.pingidentity.com', 
                     ping_baseuri = '/pingid/rest/4', 
                     ping_org_alias = '01234567', 
                     ping_timeout = 5, 
                     ping_token = '01234567', 
                     ping_use_base64_key = '01234567', ),
-                rsa_securid_access_v1 = scm_identity_services.models.mfa_servers_mfa_vendor_type_rsa_securid_access_v1.mfa_servers_mfa_vendor_type_rsa_securid_access_v1(
+                rsa_securid_access_v1 = scm.identity_services.models.mfa_servers_mfa_vendor_type_rsa_securid_access_v1.mfa_servers_mfa_vendor_type_rsa_securid_access_v1(
                     rsa_accessid = '01234567', 
                     rsa_accesskey = '01234567', 
                     rsa_api_host = '0123456789', 

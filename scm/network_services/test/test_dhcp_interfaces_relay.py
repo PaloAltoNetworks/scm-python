@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_relay import DhcpInterfacesRelay
+from scm.network_services.models.dhcp_interfaces_relay import DhcpInterfacesRelay
 
 class TestDhcpInterfacesRelay(unittest.TestCase):
     """DhcpInterfacesRelay unit test stubs"""
@@ -36,7 +36,7 @@ class TestDhcpInterfacesRelay(unittest.TestCase):
         model = DhcpInterfacesRelay()
         if include_optional:
             return DhcpInterfacesRelay(
-                ip = scm_network_services.models.dhcp_interfaces_relay_ip.dhcp_interfaces_relay_ip(
+                ip = scm.network_services.models.dhcp_interfaces_relay_ip.dhcp_interfaces_relay_ip(
                     enabled = True, 
                     server = [
                         ''
@@ -44,7 +44,7 @@ class TestDhcpInterfacesRelay(unittest.TestCase):
             )
         else:
             return DhcpInterfacesRelay(
-                ip = scm_network_services.models.dhcp_interfaces_relay_ip.dhcp_interfaces_relay_ip(
+                ip = scm.network_services.models.dhcp_interfaces_relay_ip.dhcp_interfaces_relay_ip(
                     enabled = True, 
                     server = [
                         ''

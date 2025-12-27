@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.vlan_interfaces_arp_inner import VlanInterfacesArpInner
+from scm.network_services.models.vlan_interfaces_arp_inner import VlanInterfacesArpInner
 
 class TestVlanInterfacesArpInner(unittest.TestCase):
     """VlanInterfacesArpInner unit test stubs"""

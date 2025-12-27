@@ -1,4 +1,4 @@
-# scm_config_setup.TrustValidationsApi
+# scm.config_setup.TrustValidationsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -19,15 +19,15 @@ Validate trust.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
-from scm_config_setup.models.trusts_validation_payload import TrustsValidationPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.models.trusts_validation_payload import TrustsValidationPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -37,15 +37,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.TrustValidationsApi(api_client)
-    trusts_validation_payload = scm_config_setup.TrustsValidationPayload() # TrustsValidationPayload | The `trust validation` resource definition (optional)
+    api_instance = scm.config_setup.TrustValidationsApi(api_client)
+    trusts_validation_payload = scm.config_setup.TrustsValidationPayload() # TrustsValidationPayload | The `trust validation` resource definition (optional)
 
     try:
         # Validates Trust

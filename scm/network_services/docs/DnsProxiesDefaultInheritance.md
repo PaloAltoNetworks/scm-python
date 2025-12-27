@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_default_inheritance import DnsProxiesDefaultInheritance
+from scm.network_services.models.dns_proxies_default_inheritance import DnsProxiesDefaultInheritance
 
 # TODO update the JSON string below
 json = "{}"

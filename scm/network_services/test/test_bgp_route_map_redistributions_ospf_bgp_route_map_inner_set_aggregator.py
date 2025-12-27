@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetAggregator
+from scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetAggregator
 
 class TestBgpRouteMapRedistributionsOspfBgpRouteMapInnerSetAggregator(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetAggregator unit test stubs"""

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner import IpsecTunnelsAutoKeyProxyIdV6Inner
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner import IpsecTunnelsAutoKeyProxyIdV6Inner
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_cache_max_ttl import DnsProxiesCacheMaxTtl
+from scm.network_services.models.dns_proxies_cache_max_ttl import DnsProxiesCacheMaxTtl
 
 # TODO update the JSON string below
 json = "{}"

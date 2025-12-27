@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.generic_error import GenericError
+from scm.security_services.models.generic_error import GenericError
 
 # TODO update the JSON string below
 json = "{}"

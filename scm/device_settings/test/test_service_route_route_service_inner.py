@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_route_route_service_inner import ServiceRouteRouteServiceInner
+from scm.device_settings.models.service_route_route_service_inner import ServiceRouteRouteServiceInner
 
 class TestServiceRouteRouteServiceInner(unittest.TestCase):
     """ServiceRouteRouteServiceInner unit test stubs"""
@@ -37,10 +37,10 @@ class TestServiceRouteRouteServiceInner(unittest.TestCase):
         if include_optional:
             return ServiceRouteRouteServiceInner(
                 name = 'autofocus',
-                source = scm_device_settings.models.service_route_route_service_inner_source.service_route_route_service_inner_source(
+                source = scm.device_settings.models.service_route_route_service_inner_source.service_route_route_service_inner_source(
                     address = '', 
                     interface = '', ),
-                source_v6 = scm_device_settings.models.service_route_route_service_inner_source_v6.service_route_route_service_inner_source_v6(
+                source_v6 = scm.device_settings.models.service_route_route_service_inner_source_v6.service_route_route_service_inner_source_v6(
                     address = '', 
                     interface = '', )
             )

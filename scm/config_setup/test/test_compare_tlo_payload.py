@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.compare_tlo_payload import CompareTloPayload
+from scm.config_setup.models.compare_tlo_payload import CompareTloPayload
 
 class TestCompareTloPayload(unittest.TestCase):
     """CompareTloPayload unit test stubs"""

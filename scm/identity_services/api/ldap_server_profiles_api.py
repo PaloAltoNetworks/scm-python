@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.ldap_server_profiles_list_response import LDAPServerProfilesListResponse
-from scm_identity_services.models.ldap_server_profiles import LdapServerProfiles
+from scm.identity_services.models.ldap_server_profiles_list_response import LDAPServerProfilesListResponse
+from scm.identity_services.models.ldap_server_profiles import LdapServerProfiles
 
-from scm_identity_services.api_client import ApiClient, RequestSerialized
-from scm_identity_services.api_response import ApiResponse
-from scm_identity_services.rest import RESTResponseType
+from scm.identity_services.api_client import ApiClient, RequestSerialized
+from scm.identity_services.api_response import ApiResponse
+from scm.identity_services.rest import RESTResponseType
 
 
 class LDAPServerProfilesApi:

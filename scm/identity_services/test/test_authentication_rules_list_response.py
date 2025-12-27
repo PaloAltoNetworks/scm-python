@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
+from scm.identity_services.models.authentication_rules_list_response import AuthenticationRulesListResponse
 
 class TestAuthenticationRulesListResponse(unittest.TestCase):
     """AuthenticationRulesListResponse unit test stubs"""

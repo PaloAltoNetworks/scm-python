@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.property_item import PropertyItem
+from scm.config_setup.models.property_item import PropertyItem
 
 # TODO update the JSON string below
 json = "{}"

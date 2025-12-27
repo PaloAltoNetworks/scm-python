@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.session_timeouts_settings_api import SessionTimeoutsSettingsApi
+from scm.device_settings.api.session_timeouts_settings_api import SessionTimeoutsSettingsApi
 
 
 class TestSessionTimeoutsSettingsApi(unittest.TestCase):

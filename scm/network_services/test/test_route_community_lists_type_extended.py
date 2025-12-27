@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type_extended import RouteCommunityListsTypeExtended
+from scm.network_services.models.route_community_lists_type_extended import RouteCommunityListsTypeExtended
 
 class TestRouteCommunityListsTypeExtended(unittest.TestCase):
     """RouteCommunityListsTypeExtended unit test stubs"""
@@ -37,7 +37,7 @@ class TestRouteCommunityListsTypeExtended(unittest.TestCase):
         if include_optional:
             return RouteCommunityListsTypeExtended(
                 extended_entry = [
-                    scm_network_services.models.route_community_lists_type_extended_extended_entry_inner.route_community_lists_type_extended_extended_entry_inner(
+                    scm.network_services.models.route_community_lists_type_extended_extended_entry_inner.route_community_lists_type_extended_extended_entry_inner(
                         action = 'deny', 
                         lc_regex = [
                             ''

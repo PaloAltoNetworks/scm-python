@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_vr_admin_dists import LogicalRoutersVrfInnerVrAdminDists
+from scm.network_services.models.logical_routers_vrf_inner_vr_admin_dists import LogicalRoutersVrfInnerVrAdminDists
 
 class TestLogicalRoutersVrfInnerVrAdminDists(unittest.TestCase):
     """LogicalRoutersVrfInnerVrAdminDists unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.application_filters_tagging import ApplicationFiltersTagging
+from scm.objects.models.application_filters_tagging import ApplicationFiltersTagging
 
 class TestApplicationFiltersTagging(unittest.TestCase):
     """ApplicationFiltersTagging unit test stubs"""

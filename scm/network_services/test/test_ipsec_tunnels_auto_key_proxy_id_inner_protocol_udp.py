@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp import IpsecTunnelsAutoKeyProxyIdInnerProtocolUdp
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp import IpsecTunnelsAutoKeyProxyIdInnerProtocolUdp
 
 class TestIpsecTunnelsAutoKeyProxyIdInnerProtocolUdp(unittest.TestCase):
     """IpsecTunnelsAutoKeyProxyIdInnerProtocolUdp unit test stubs"""

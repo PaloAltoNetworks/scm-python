@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.get_saas_tenant_restrictions_list_response import GetSaasTenantRestrictionsListResponse
+from scm.security_services.models.get_saas_tenant_restrictions_list_response import GetSaasTenantRestrictionsListResponse
 
 class TestGetSaasTenantRestrictionsListResponse(unittest.TestCase):
     """GetSaasTenantRestrictionsListResponse unit test stubs"""

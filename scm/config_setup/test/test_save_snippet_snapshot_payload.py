@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
+from scm.config_setup.models.save_snippet_snapshot_payload import SaveSnippetSnapshotPayload
 
 class TestSaveSnippetSnapshotPayload(unittest.TestCase):
     """SaveSnippetSnapshotPayload unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_botnet_domains import DnsSecurityProfilesBotnetDomains
+from scm.security_services.models.dns_security_profiles_botnet_domains import DnsSecurityProfilesBotnetDomains
 
 class TestDnsSecurityProfilesBotnetDomains(unittest.TestCase):
     """DnsSecurityProfilesBotnetDomains unit test stubs"""
@@ -37,27 +37,27 @@ class TestDnsSecurityProfilesBotnetDomains(unittest.TestCase):
         if include_optional:
             return DnsSecurityProfilesBotnetDomains(
                 dns_security_categories = [
-                    scm_security_services.models.dns_security_profiles_botnet_domains_dns_security_categories_inner.dns_security_profiles_botnet_domains_dns_security_categories_inner(
+                    scm.security_services.models.dns_security_profiles_botnet_domains_dns_security_categories_inner.dns_security_profiles_botnet_domains_dns_security_categories_inner(
                         action = 'default', 
                         log_level = 'default', 
                         name = '', 
                         packet_capture = 'disable', )
                     ],
                 lists = [
-                    scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner.dns_security_profiles_botnet_domains_lists_inner(
-                        action = scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner_action.dns_security_profiles_botnet_domains_lists_inner_action(
-                            alert = scm_security_services.models.alert.alert(), 
-                            allow = scm_security_services.models.allow.allow(), 
-                            block = scm_security_services.models.block.block(), 
-                            sinkhole = scm_security_services.models.sinkhole.sinkhole(), ), 
+                    scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner.dns_security_profiles_botnet_domains_lists_inner(
+                        action = scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner_action.dns_security_profiles_botnet_domains_lists_inner_action(
+                            alert = scm.security_services.models.alert.alert(), 
+                            allow = scm.security_services.models.allow.allow(), 
+                            block = scm.security_services.models.block.block(), 
+                            sinkhole = scm.security_services.models.sinkhole.sinkhole(), ), 
                         name = '', 
                         packet_capture = 'disable', )
                     ],
-                sinkhole = scm_security_services.models.dns_security_profiles_botnet_domains_sinkhole.dns_security_profiles_botnet_domains_sinkhole(
+                sinkhole = scm.security_services.models.dns_security_profiles_botnet_domains_sinkhole.dns_security_profiles_botnet_domains_sinkhole(
                     ipv4_address = '127.0.0.1', 
                     ipv6_address = '::1', ),
                 whitelist = [
-                    scm_security_services.models.dns_security_profiles_botnet_domains_whitelist_inner.dns_security_profiles_botnet_domains_whitelist_inner(
+                    scm.security_services.models.dns_security_profiles_botnet_domains_whitelist_inner.dns_security_profiles_botnet_domains_whitelist_inner(
                         description = '', 
                         name = '', )
                     ]

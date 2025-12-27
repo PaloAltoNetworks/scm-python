@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.trust_info_with_shared_snippets import TrustInfoWithSharedSnippets
+from scm.config_setup.models.trust_info_with_shared_snippets import TrustInfoWithSharedSnippets
 
 # TODO update the JSON string below
 json = "{}"

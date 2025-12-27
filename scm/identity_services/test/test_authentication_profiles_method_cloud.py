@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_method_cloud import AuthenticationProfilesMethodCloud
+from scm.identity_services.models.authentication_profiles_method_cloud import AuthenticationProfilesMethodCloud
 
 class TestAuthenticationProfilesMethodCloud(unittest.TestCase):
     """AuthenticationProfilesMethodCloud unit test stubs"""

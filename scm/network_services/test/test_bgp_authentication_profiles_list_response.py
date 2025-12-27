@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_authentication_profiles_list_response import BGPAuthenticationProfilesListResponse
+from scm.network_services.models.bgp_authentication_profiles_list_response import BGPAuthenticationProfilesListResponse
 
 class TestBGPAuthenticationProfilesListResponse(unittest.TestCase):
     """BGPAuthenticationProfilesListResponse unit test stubs"""

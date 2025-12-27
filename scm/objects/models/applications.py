@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.applications_default import ApplicationsDefault
-from scm_objects.models.applications_signature_inner import ApplicationsSignatureInner
+from scm.objects.models.applications_default import ApplicationsDefault
+from scm.objects.models.applications_signature_inner import ApplicationsSignatureInner
 from typing import Optional, Set
 from typing_extensions import Self
 

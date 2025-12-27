@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.scep_profiles import ScepProfiles
+from scm.identity_services.models.scep_profiles import ScepProfiles
 
 # TODO update the JSON string below
 json = "{}"

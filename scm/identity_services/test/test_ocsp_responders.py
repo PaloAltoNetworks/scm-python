@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.ocsp_responders import OcspResponders
+from scm.identity_services.models.ocsp_responders import OcspResponders
 
 class TestOcspResponders(unittest.TestCase):
     """OcspResponders unit test stubs"""

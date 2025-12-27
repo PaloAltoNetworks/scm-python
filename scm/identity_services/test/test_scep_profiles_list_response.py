@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles_list_response import SCEPProfilesListResponse
+from scm.identity_services.models.scep_profiles_list_response import SCEPProfilesListResponse
 
 class TestSCEPProfilesListResponse(unittest.TestCase):
     """SCEPProfilesListResponse unit test stubs"""

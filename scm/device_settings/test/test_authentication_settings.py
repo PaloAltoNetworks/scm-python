@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
 
 class TestAuthenticationSettings(unittest.TestCase):
     """AuthenticationSettings unit test stubs"""
@@ -36,7 +36,7 @@ class TestAuthenticationSettings(unittest.TestCase):
         model = AuthenticationSettings()
         if include_optional:
             return AuthenticationSettings(
-                authentication = scm_device_settings.models.authentication_settings_authentication.authentication_settings_authentication(
+                authentication = scm.device_settings.models.authentication_settings_authentication.authentication_settings_authentication(
                     accounting_server_profile = '', 
                     authentication_profile = '', 
                     certificate_profile = '', ),

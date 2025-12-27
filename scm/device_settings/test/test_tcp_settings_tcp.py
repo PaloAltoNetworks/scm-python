@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.tcp_settings_tcp import TcpSettingsTcp
+from scm.device_settings.models.tcp_settings_tcp import TcpSettingsTcp
 
 class TestTcpSettingsTcp(unittest.TestCase):
     """TcpSettingsTcp unit test stubs"""

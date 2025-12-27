@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_deployment_services.models.sites_members_inner import SitesMembersInner
-from scm_deployment_services.models.sites_qos import SitesQos
+from scm.deployment_services.models.sites_members_inner import SitesMembersInner
+from scm.deployment_services.models.sites_qos import SitesQos
 from typing import Optional, Set
 from typing_extensions import Self
 

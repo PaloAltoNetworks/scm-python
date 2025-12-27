@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_security_services.models.url_access_profiles_list_response import URLAccessProfilesListResponse
-from scm_security_services.models.url_access_profiles import UrlAccessProfiles
+from scm.security_services.models.url_access_profiles_list_response import URLAccessProfilesListResponse
+from scm.security_services.models.url_access_profiles import UrlAccessProfiles
 
-from scm_security_services.api_client import ApiClient, RequestSerialized
-from scm_security_services.api_response import ApiResponse
-from scm_security_services.rest import RESTResponseType
+from scm.security_services.api_client import ApiClient, RequestSerialized
+from scm.security_services.api_response import ApiResponse
+from scm.security_services.rest import RESTResponseType
 
 
 class URLAccessProfilesApi:

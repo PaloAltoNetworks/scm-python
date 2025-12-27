@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
+from scm.deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
 
 class TestRemoteNetworksProtocolBgp(unittest.TestCase):
     """RemoteNetworksProtocolBgp unit test stubs"""

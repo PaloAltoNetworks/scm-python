@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_profiles import DecryptionProfiles
+from scm.security_services.models.decryption_profiles import DecryptionProfiles
 
 # TODO update the JSON string below
 json = "{}"

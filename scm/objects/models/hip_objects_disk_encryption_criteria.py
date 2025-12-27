@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner import HipObjectsDiskEncryptionCriteriaEncryptedLocationsInner
+from scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner import HipObjectsDiskEncryptionCriteriaEncryptedLocationsInner
 from typing import Optional, Set
 from typing_extensions import Self
 

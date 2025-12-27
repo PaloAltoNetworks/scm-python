@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
+from scm.identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
 
 class TestTlsServiceProfilesProtocolSettings(unittest.TestCase):
     """TlsServiceProfilesProtocolSettings unit test stubs"""

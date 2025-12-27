@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.vlan_interfaces_list_response import VLANInterfacesListResponse
+from scm.network_services.models.vlan_interfaces_list_response import VLANInterfacesListResponse
 
 class TestVLANInterfacesListResponse(unittest.TestCase):
     """VLANInterfacesListResponse unit test stubs"""

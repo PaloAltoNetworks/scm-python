@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_security_settings import InternetRuleTypeSecuritySettings
+from scm.security_services.models.internet_rule_type_security_settings import InternetRuleTypeSecuritySettings
 
 class TestInternetRuleTypeSecuritySettings(unittest.TestCase):
     """InternetRuleTypeSecuritySettings unit test stubs"""

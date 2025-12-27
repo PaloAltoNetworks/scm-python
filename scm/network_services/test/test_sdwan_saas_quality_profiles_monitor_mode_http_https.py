@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https import SdwanSaasQualityProfilesMonitorModeHttpHttps
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https import SdwanSaasQualityProfilesMonitorModeHttpHttps
 
 class TestSdwanSaasQualityProfilesMonitorModeHttpHttps(unittest.TestCase):
     """SdwanSaasQualityProfilesMonitorModeHttpHttps unit test stubs"""

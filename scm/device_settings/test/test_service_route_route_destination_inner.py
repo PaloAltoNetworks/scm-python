@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_route_route_destination_inner import ServiceRouteRouteDestinationInner
+from scm.device_settings.models.service_route_route_destination_inner import ServiceRouteRouteDestinationInner
 
 class TestServiceRouteRouteDestinationInner(unittest.TestCase):
     """ServiceRouteRouteDestinationInner unit test stubs"""
@@ -37,7 +37,7 @@ class TestServiceRouteRouteDestinationInner(unittest.TestCase):
         if include_optional:
             return ServiceRouteRouteDestinationInner(
                 name = '',
-                source = scm_device_settings.models.service_route_route_destination_inner_source.service_route_route_destination_inner_source(
+                source = scm.device_settings.models.service_route_route_destination_inner_source.service_route_route_destination_inner_source(
                     address = '', 
                     interface = '', )
             )

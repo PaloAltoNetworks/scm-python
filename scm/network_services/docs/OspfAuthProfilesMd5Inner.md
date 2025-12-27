@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
+from scm.network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
 
 # TODO update the JSON string below
 json = "{}"

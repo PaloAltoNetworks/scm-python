@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
+from scm.deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
 
 class TestServiceConnectionsProtocolBgp(unittest.TestCase):
     """ServiceConnectionsProtocolBgp unit test stubs"""

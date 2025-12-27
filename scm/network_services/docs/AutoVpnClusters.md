@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.auto_vpn_clusters import AutoVpnClusters
+from scm.network_services.models.auto_vpn_clusters import AutoVpnClusters
 
 # TODO update the JSON string below
 json = "{}"

@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.radius_server_profiles_protocol import RadiusServerProfilesProtocol
-from scm_identity_services.models.radius_server_profiles_server_inner import RadiusServerProfilesServerInner
+from scm.identity_services.models.radius_server_profiles_protocol import RadiusServerProfilesProtocol
+from scm.identity_services.models.radius_server_profiles_server_inner import RadiusServerProfilesServerInner
 from typing import Optional, Set
 from typing_extensions import Self
 

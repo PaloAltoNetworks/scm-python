@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_filter_filter_list import BgpFilterFilterList
+from scm.network_services.models.bgp_filter_filter_list import BgpFilterFilterList
 
 class TestBgpFilterFilterList(unittest.TestCase):
     """BgpFilterFilterList unit test stubs"""

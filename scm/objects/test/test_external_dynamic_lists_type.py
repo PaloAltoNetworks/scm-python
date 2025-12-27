@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type import ExternalDynamicListsType
+from scm.objects.models.external_dynamic_lists_type import ExternalDynamicListsType
 
 class TestExternalDynamicListsType(unittest.TestCase):
     """ExternalDynamicListsType unit test stubs"""
@@ -36,8 +36,8 @@ class TestExternalDynamicListsType(unittest.TestCase):
         model = ExternalDynamicListsType()
         if include_optional:
             return ExternalDynamicListsType(
-                domain = scm_objects.models.external_dynamic_lists_type_domain.external_dynamic_lists_type_domain(
-                    auth = scm_objects.models.external_dynamic_lists_type_domain_auth.external_dynamic_lists_type_domain_auth(
+                domain = scm.objects.models.external_dynamic_lists_type_domain.external_dynamic_lists_type_domain(
+                    auth = scm.objects.models.external_dynamic_lists_type_domain_auth.external_dynamic_lists_type_domain_auth(
                         password = '', 
                         username = '0', ), 
                     certificate_profile = 'None', 
@@ -46,20 +46,20 @@ class TestExternalDynamicListsType(unittest.TestCase):
                         ''
                         ], 
                     expand_domain = True, 
-                    recurring = scm_objects.models.external_dynamic_lists_type_domain_recurring.external_dynamic_lists_type_domain_recurring(
-                        daily = scm_objects.models.external_dynamic_lists_type_domain_recurring_daily.external_dynamic_lists_type_domain_recurring_daily(
+                    recurring = scm.objects.models.external_dynamic_lists_type_domain_recurring.external_dynamic_lists_type_domain_recurring(
+                        daily = scm.objects.models.external_dynamic_lists_type_domain_recurring_daily.external_dynamic_lists_type_domain_recurring_daily(
                             at = '00', ), 
-                        five_minute = scm_objects.models.five_minute.five_minute(), 
-                        hourly = scm_objects.models.hourly.hourly(), 
-                        monthly = scm_objects.models.external_dynamic_lists_type_domain_recurring_monthly.external_dynamic_lists_type_domain_recurring_monthly(
+                        five_minute = scm.objects.models.five_minute.five_minute(), 
+                        hourly = scm.objects.models.hourly.hourly(), 
+                        monthly = scm.objects.models.external_dynamic_lists_type_domain_recurring_monthly.external_dynamic_lists_type_domain_recurring_monthly(
                             at = '00', 
                             day_of_month = 1, ), 
-                        weekly = scm_objects.models.external_dynamic_lists_type_domain_recurring_weekly.external_dynamic_lists_type_domain_recurring_weekly(
+                        weekly = scm.objects.models.external_dynamic_lists_type_domain_recurring_weekly.external_dynamic_lists_type_domain_recurring_weekly(
                             at = '00', 
                             day_of_week = 'sunday', ), ), 
                     url = 'http://', ),
-                imei = scm_objects.models.external_dynamic_lists_type_imei.external_dynamic_lists_type_imei(
-                    auth = scm_objects.models.external_dynamic_lists_type_imei_auth.external_dynamic_lists_type_imei_auth(
+                imei = scm.objects.models.external_dynamic_lists_type_imei.external_dynamic_lists_type_imei(
+                    auth = scm.objects.models.external_dynamic_lists_type_imei_auth.external_dynamic_lists_type_imei_auth(
                         password = '', 
                         username = '0', ), 
                     certificate_profile = 'None', 
@@ -67,20 +67,20 @@ class TestExternalDynamicListsType(unittest.TestCase):
                     exception_list = [
                         ''
                         ], 
-                    recurring = scm_objects.models.external_dynamic_lists_type_imei_recurring.external_dynamic_lists_type_imei_recurring(
-                        daily = scm_objects.models.external_dynamic_lists_type_imei_recurring_daily.external_dynamic_lists_type_imei_recurring_daily(
+                    recurring = scm.objects.models.external_dynamic_lists_type_imei_recurring.external_dynamic_lists_type_imei_recurring(
+                        daily = scm.objects.models.external_dynamic_lists_type_imei_recurring_daily.external_dynamic_lists_type_imei_recurring_daily(
                             at = '00', ), 
-                        five_minute = scm_objects.models.five_minute.five_minute(), 
-                        hourly = scm_objects.models.hourly.hourly(), 
-                        monthly = scm_objects.models.external_dynamic_lists_type_imei_recurring_monthly.external_dynamic_lists_type_imei_recurring_monthly(
+                        five_minute = scm.objects.models.five_minute.five_minute(), 
+                        hourly = scm.objects.models.hourly.hourly(), 
+                        monthly = scm.objects.models.external_dynamic_lists_type_imei_recurring_monthly.external_dynamic_lists_type_imei_recurring_monthly(
                             at = '00', 
                             day_of_month = 1, ), 
-                        weekly = scm_objects.models.external_dynamic_lists_type_imei_recurring_weekly.external_dynamic_lists_type_imei_recurring_weekly(
+                        weekly = scm.objects.models.external_dynamic_lists_type_imei_recurring_weekly.external_dynamic_lists_type_imei_recurring_weekly(
                             at = '00', 
                             day_of_week = 'sunday', ), ), 
                     url = 'http://', ),
-                imsi = scm_objects.models.external_dynamic_lists_type_imsi.external_dynamic_lists_type_imsi(
-                    auth = scm_objects.models.external_dynamic_lists_type_imsi_auth.external_dynamic_lists_type_imsi_auth(
+                imsi = scm.objects.models.external_dynamic_lists_type_imsi.external_dynamic_lists_type_imsi(
+                    auth = scm.objects.models.external_dynamic_lists_type_imsi_auth.external_dynamic_lists_type_imsi_auth(
                         password = '', 
                         username = '0', ), 
                     certificate_profile = 'None', 
@@ -88,20 +88,20 @@ class TestExternalDynamicListsType(unittest.TestCase):
                     exception_list = [
                         ''
                         ], 
-                    recurring = scm_objects.models.external_dynamic_lists_type_imsi_recurring.external_dynamic_lists_type_imsi_recurring(
-                        daily = scm_objects.models.external_dynamic_lists_type_imsi_recurring_daily.external_dynamic_lists_type_imsi_recurring_daily(
+                    recurring = scm.objects.models.external_dynamic_lists_type_imsi_recurring.external_dynamic_lists_type_imsi_recurring(
+                        daily = scm.objects.models.external_dynamic_lists_type_imsi_recurring_daily.external_dynamic_lists_type_imsi_recurring_daily(
                             at = '00', ), 
-                        five_minute = scm_objects.models.five_minute.five_minute(), 
-                        hourly = scm_objects.models.hourly.hourly(), 
-                        monthly = scm_objects.models.external_dynamic_lists_type_imsi_recurring_monthly.external_dynamic_lists_type_imsi_recurring_monthly(
+                        five_minute = scm.objects.models.five_minute.five_minute(), 
+                        hourly = scm.objects.models.hourly.hourly(), 
+                        monthly = scm.objects.models.external_dynamic_lists_type_imsi_recurring_monthly.external_dynamic_lists_type_imsi_recurring_monthly(
                             at = '00', 
                             day_of_month = 1, ), 
-                        weekly = scm_objects.models.external_dynamic_lists_type_imsi_recurring_weekly.external_dynamic_lists_type_imsi_recurring_weekly(
+                        weekly = scm.objects.models.external_dynamic_lists_type_imsi_recurring_weekly.external_dynamic_lists_type_imsi_recurring_weekly(
                             at = '00', 
                             day_of_week = 'sunday', ), ), 
                     url = 'http://', ),
-                ip = scm_objects.models.external_dynamic_lists_type_ip.external_dynamic_lists_type_ip(
-                    auth = scm_objects.models.external_dynamic_lists_type_ip_auth.external_dynamic_lists_type_ip_auth(
+                ip = scm.objects.models.external_dynamic_lists_type_ip.external_dynamic_lists_type_ip(
+                    auth = scm.objects.models.external_dynamic_lists_type_ip_auth.external_dynamic_lists_type_ip_auth(
                         password = '', 
                         username = '0', ), 
                     certificate_profile = 'None', 
@@ -109,32 +109,32 @@ class TestExternalDynamicListsType(unittest.TestCase):
                     exception_list = [
                         ''
                         ], 
-                    recurring = scm_objects.models.external_dynamic_lists_type_ip_recurring.external_dynamic_lists_type_ip_recurring(
-                        daily = scm_objects.models.external_dynamic_lists_type_ip_recurring_daily.external_dynamic_lists_type_ip_recurring_daily(
+                    recurring = scm.objects.models.external_dynamic_lists_type_ip_recurring.external_dynamic_lists_type_ip_recurring(
+                        daily = scm.objects.models.external_dynamic_lists_type_ip_recurring_daily.external_dynamic_lists_type_ip_recurring_daily(
                             at = '00', ), 
-                        five_minute = scm_objects.models.five_minute.five_minute(), 
-                        hourly = scm_objects.models.hourly.hourly(), 
-                        monthly = scm_objects.models.external_dynamic_lists_type_ip_recurring_monthly.external_dynamic_lists_type_ip_recurring_monthly(
+                        five_minute = scm.objects.models.five_minute.five_minute(), 
+                        hourly = scm.objects.models.hourly.hourly(), 
+                        monthly = scm.objects.models.external_dynamic_lists_type_ip_recurring_monthly.external_dynamic_lists_type_ip_recurring_monthly(
                             at = '00', 
                             day_of_month = 1, ), 
-                        weekly = scm_objects.models.external_dynamic_lists_type_ip_recurring_weekly.external_dynamic_lists_type_ip_recurring_weekly(
+                        weekly = scm.objects.models.external_dynamic_lists_type_ip_recurring_weekly.external_dynamic_lists_type_ip_recurring_weekly(
                             at = '00', 
                             day_of_week = 'sunday', ), ), 
                     url = 'http://', ),
-                predefined_ip = scm_objects.models.external_dynamic_lists_type_predefined_ip.external_dynamic_lists_type_predefined_ip(
+                predefined_ip = scm.objects.models.external_dynamic_lists_type_predefined_ip.external_dynamic_lists_type_predefined_ip(
                     description = '', 
                     exception_list = [
                         ''
                         ], 
                     url = '', ),
-                predefined_url = scm_objects.models.external_dynamic_lists_type_predefined_url.external_dynamic_lists_type_predefined_url(
+                predefined_url = scm.objects.models.external_dynamic_lists_type_predefined_url.external_dynamic_lists_type_predefined_url(
                     description = '', 
                     exception_list = [
                         ''
                         ], 
                     url = '', ),
-                url = scm_objects.models.external_dynamic_lists_type_url.external_dynamic_lists_type_url(
-                    auth = scm_objects.models.external_dynamic_lists_type_url_auth.external_dynamic_lists_type_url_auth(
+                url = scm.objects.models.external_dynamic_lists_type_url.external_dynamic_lists_type_url(
+                    auth = scm.objects.models.external_dynamic_lists_type_url_auth.external_dynamic_lists_type_url_auth(
                         password = '', 
                         username = '0', ), 
                     certificate_profile = 'None', 
@@ -142,15 +142,15 @@ class TestExternalDynamicListsType(unittest.TestCase):
                     exception_list = [
                         ''
                         ], 
-                    recurring = scm_objects.models.external_dynamic_lists_type_url_recurring.external_dynamic_lists_type_url_recurring(
-                        daily = scm_objects.models.external_dynamic_lists_type_url_recurring_daily.external_dynamic_lists_type_url_recurring_daily(
+                    recurring = scm.objects.models.external_dynamic_lists_type_url_recurring.external_dynamic_lists_type_url_recurring(
+                        daily = scm.objects.models.external_dynamic_lists_type_url_recurring_daily.external_dynamic_lists_type_url_recurring_daily(
                             at = '00', ), 
-                        five_minute = scm_objects.models.five_minute.five_minute(), 
-                        hourly = scm_objects.models.hourly.hourly(), 
-                        monthly = scm_objects.models.external_dynamic_lists_type_url_recurring_monthly.external_dynamic_lists_type_url_recurring_monthly(
+                        five_minute = scm.objects.models.five_minute.five_minute(), 
+                        hourly = scm.objects.models.hourly.hourly(), 
+                        monthly = scm.objects.models.external_dynamic_lists_type_url_recurring_monthly.external_dynamic_lists_type_url_recurring_monthly(
                             at = '00', 
                             day_of_month = 1, ), 
-                        weekly = scm_objects.models.external_dynamic_lists_type_url_recurring_weekly.external_dynamic_lists_type_url_recurring_weekly(
+                        weekly = scm.objects.models.external_dynamic_lists_type_url_recurring_weekly.external_dynamic_lists_type_url_recurring_weekly(
                             at = '00', 
                             day_of_week = 'sunday', ), ), 
                     url = 'http://', )

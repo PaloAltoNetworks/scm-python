@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname import AggEthernetDhcpClientDhcpClientSendHostname
+from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname import AggEthernetDhcpClientDhcpClientSendHostname
 from typing import Optional, Set
 from typing_extensions import Self
 

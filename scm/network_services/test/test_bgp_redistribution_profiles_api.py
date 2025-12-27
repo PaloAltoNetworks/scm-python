@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_redistribution_profiles_api import BGPRedistributionProfilesApi
+from scm.network_services.api.bgp_redistribution_profiles_api import BGPRedistributionProfilesApi
 
 
 class TestBGPRedistributionProfilesApi(unittest.TestCase):

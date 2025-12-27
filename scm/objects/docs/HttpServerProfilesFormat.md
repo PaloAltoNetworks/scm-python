@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.http_server_profiles_format import HttpServerProfilesFormat
+from scm.objects.models.http_server_profiles_format import HttpServerProfilesFormat
 
 # TODO update the JSON string below
 json = "{}"

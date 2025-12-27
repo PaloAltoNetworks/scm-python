@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_source_translation_static_ip import NatRulesSourceTranslationStaticIp
+from scm.network_services.models.nat_rules_source_translation_static_ip import NatRulesSourceTranslationStaticIp
 
 class TestNatRulesSourceTranslationStaticIp(unittest.TestCase):
     """NatRulesSourceTranslationStaticIp unit test stubs"""

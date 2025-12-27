@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ipsec_tunnels import IpsecTunnels
+from scm.network_services.models.ipsec_tunnels import IpsecTunnels
 
 # TODO update the JSON string below
 json = "{}"

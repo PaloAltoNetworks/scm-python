@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
+from scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
 
 # TODO update the JSON string below
 json = "{}"

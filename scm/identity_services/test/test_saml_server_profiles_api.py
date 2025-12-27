@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.saml_server_profiles_api import SAMLServerProfilesApi
+from scm.identity_services.api.saml_server_profiles_api import SAMLServerProfilesApi
 
 
 class TestSAMLServerProfilesApi(unittest.TestCase):

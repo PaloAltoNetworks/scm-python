@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.layer3_subinterfaces_ddns_config import Layer3SubinterfacesDdnsConfig
+from scm.network_services.models.layer3_subinterfaces_ddns_config import Layer3SubinterfacesDdnsConfig
 
 # TODO update the JSON string below
 json = "{}"

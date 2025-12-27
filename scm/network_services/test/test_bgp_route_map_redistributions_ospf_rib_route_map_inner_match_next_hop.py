@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop import BgpRouteMapRedistributionsOspfRibRouteMapInnerMatchNextHop
+from scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop import BgpRouteMapRedistributionsOspfRibRouteMapInnerMatchNextHop
 
 class TestBgpRouteMapRedistributionsOspfRibRouteMapInnerMatchNextHop(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfRibRouteMapInnerMatchNextHop unit test stubs"""

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_allow_web_application_inner_tenant_control import InternetRuleTypeAllowWebApplicationInnerTenantControl
+from scm.security_services.models.internet_rule_type_allow_web_application_inner_tenant_control import InternetRuleTypeAllowWebApplicationInnerTenantControl
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificates_post import CertificatesPost
+from scm.identity_services.models.certificates_post import CertificatesPost
 
 class TestCertificatesPost(unittest.TestCase):
     """CertificatesPost unit test stubs"""
@@ -36,7 +36,7 @@ class TestCertificatesPost(unittest.TestCase):
         model = CertificatesPost()
         if include_optional:
             return CertificatesPost(
-                algorithm = scm_identity_services.models.certificates_post_algorithm.certificates_post_algorithm(
+                algorithm = scm.identity_services.models.certificates_post_algorithm.certificates_post_algorithm(
                     ecdsa_number_of_bits = 245, 
                     rsa_number_of_bits = 512, ),
                 alternate_email = [
@@ -69,7 +69,7 @@ class TestCertificatesPost(unittest.TestCase):
             )
         else:
             return CertificatesPost(
-                algorithm = scm_identity_services.models.certificates_post_algorithm.certificates_post_algorithm(
+                algorithm = scm.identity_services.models.certificates_post_algorithm.certificates_post_algorithm(
                     ecdsa_number_of_bits = 245, 
                     rsa_number_of_bits = 512, ),
                 certificate_name = '0',

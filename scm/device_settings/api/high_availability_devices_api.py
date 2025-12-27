@@ -20,11 +20,11 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.list_ha_devices200_response import ListHADevices200Response
+from scm.device_settings.models.list_ha_devices200_response import ListHADevices200Response
 
-from scm_device_settings.api_client import ApiClient, RequestSerialized
-from scm_device_settings.api_response import ApiResponse
-from scm_device_settings.rest import RESTResponseType
+from scm.device_settings.api_client import ApiClient, RequestSerialized
+from scm.device_settings.api_response import ApiResponse
+from scm.device_settings.rest import RESTResponseType
 
 
 class HighAvailabilityDevicesApi:

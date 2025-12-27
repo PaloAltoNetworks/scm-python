@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_rules_type import DecryptionRulesType
+from scm.security_services.models.decryption_rules_type import DecryptionRulesType
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# scm_objects.TagsApi
+# scm.objects.TagsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/objects/v1*
 
@@ -23,14 +23,14 @@ Create a new tag.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.tags import Tags
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.tags import Tags
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.TagsApi(api_client)
-    tags = scm_objects.Tags() # Tags | Created (optional)
+    api_instance = scm.objects.TagsApi(api_client)
+    tags = scm.objects.Tags() # Tags | Created (optional)
 
     try:
         # Create a tag
@@ -106,13 +106,13 @@ Delete a tag.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.TagsApi(api_client)
+    api_instance = scm.objects.TagsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing tag.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.tags import Tags
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.tags import Tags
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.TagsApi(api_client)
+    api_instance = scm.objects.TagsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of tags.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.tags_list_response import TagsListResponse
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.tags_list_response import TagsListResponse
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.TagsApi(api_client)
+    api_instance = scm.objects.TagsApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
@@ -363,14 +363,14 @@ Update an existing tag.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.tags import Tags
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.tags import Tags
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.TagsApi(api_client)
+    api_instance = scm.objects.TagsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    tags = scm_objects.Tags() # Tags | OK (optional)
+    tags = scm.objects.Tags() # Tags | OK (optional)
 
     try:
         # Update a tag

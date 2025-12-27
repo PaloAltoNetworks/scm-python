@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.route_path_access_lists_api import RoutePathAccessListsApi
+from scm.network_services.api.route_path_access_lists_api import RoutePathAccessListsApi
 
 
 class TestRoutePathAccessListsApi(unittest.TestCase):

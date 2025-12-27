@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.get_remote_networks_license_info500_response import GetRemoteNetworksLicenseInfo500Response
+from scm.network_services.models.get_remote_networks_license_info500_response import GetRemoteNetworksLicenseInfo500Response
 
 # TODO update the JSON string below
 json = "{}"

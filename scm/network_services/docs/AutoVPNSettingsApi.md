@@ -1,4 +1,4 @@
-# scm_network_services.AutoVPNSettingsApi
+# scm.network_services.AutoVPNSettingsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -20,14 +20,14 @@ Retrieve the Auto VPN settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.auto_vpn_settings import AutoVpnSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.auto_vpn_settings import AutoVpnSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -37,14 +37,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.AutoVPNSettingsApi(api_client)
+    api_instance = scm.network_services.AutoVPNSettingsApi(api_client)
 
     try:
         # Get Auto VPN settings
@@ -99,14 +99,14 @@ Update Auto VPN settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.auto_vpn_settings import AutoVpnSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.auto_vpn_settings import AutoVpnSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -116,15 +116,15 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.AutoVPNSettingsApi(api_client)
-    auto_vpn_settings = scm_network_services.AutoVpnSettings() # AutoVpnSettings | OK (optional)
+    api_instance = scm.network_services.AutoVPNSettingsApi(api_client)
+    auto_vpn_settings = scm.network_services.AutoVpnSettings() # AutoVpnSettings | OK (optional)
 
     try:
         # Update Auto VPN settings

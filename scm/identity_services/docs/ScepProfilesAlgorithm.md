@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
+from scm.identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
 
 # TODO update the JSON string below
 json = "{}"

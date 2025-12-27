@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
+from scm.deployment_services.models.traffic_steering_rules_action_forward_forward import TrafficSteeringRulesActionForwardForward
 
 class TestTrafficSteeringRulesActionForwardForward(unittest.TestCase):
     """TrafficSteeringRulesActionForwardForward unit test stubs"""

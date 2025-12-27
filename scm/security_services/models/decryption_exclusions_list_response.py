@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_security_services.models.decryption_exclusions import DecryptionExclusions
+from scm.security_services.models.decryption_exclusions import DecryptionExclusions
 from typing import Optional, Set
 from typing_extensions import Self
 

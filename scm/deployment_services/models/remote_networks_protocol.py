@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
-from scm_deployment_services.models.remote_networks_protocol_bgp_peer import RemoteNetworksProtocolBgpPeer
+from scm.deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
+from scm.deployment_services.models.remote_networks_protocol_bgp_peer import RemoteNetworksProtocolBgpPeer
 from typing import Optional, Set
 from typing_extensions import Self
 

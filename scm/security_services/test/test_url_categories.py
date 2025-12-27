@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.url_categories import UrlCategories
+from scm.security_services.models.url_categories import UrlCategories
 
 class TestUrlCategories(unittest.TestCase):
     """UrlCategories unit test stubs"""

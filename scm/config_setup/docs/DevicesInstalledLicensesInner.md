@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
+from scm.config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
 
 # TODO update the JSON string below
 json = "{}"

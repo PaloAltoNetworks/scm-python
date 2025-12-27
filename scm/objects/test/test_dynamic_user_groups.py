@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.dynamic_user_groups import DynamicUserGroups
+from scm.objects.models.dynamic_user_groups import DynamicUserGroups
 
 class TestDynamicUserGroups(unittest.TestCase):
     """DynamicUserGroups unit test stubs"""

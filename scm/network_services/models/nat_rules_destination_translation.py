@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.nat_rules_destination_translation_dns_rewrite import NatRulesDestinationTranslationDnsRewrite
+from scm.network_services.models.nat_rules_destination_translation_dns_rewrite import NatRulesDestinationTranslationDnsRewrite
 from typing import Optional, Set
 from typing_extensions import Self
 

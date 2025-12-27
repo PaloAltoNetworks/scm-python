@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.remote_networks_license_api import RemoteNetworksLicenseApi
+from scm.network_services.api.remote_networks_license_api import RemoteNetworksLicenseApi
 
 
 class TestRemoteNetworksLicenseApi(unittest.TestCase):

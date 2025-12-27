@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_rules import DosProtectionRules
+from scm.security_services.models.dos_protection_rules import DosProtectionRules
 
 class TestDosProtectionRules(unittest.TestCase):
     """DosProtectionRules unit test stubs"""
@@ -36,10 +36,10 @@ class TestDosProtectionRules(unittest.TestCase):
         model = DosProtectionRules()
         if include_optional:
             return DosProtectionRules(
-                action = scm_security_services.models.dos_protection_rules_action.dos_protection_rules_action(
-                    allow = scm_security_services.models.allow.allow(), 
-                    deny = scm_security_services.models.deny.deny(), 
-                    protect = scm_security_services.models.protect.protect(), ),
+                action = scm.security_services.models.dos_protection_rules_action.dos_protection_rules_action(
+                    allow = scm.security_services.models.allow.allow(), 
+                    deny = scm.security_services.models.deny.deny(), 
+                    protect = scm.security_services.models.protect.protect(), ),
                 description = '',
                 destination = [
                     'any'
@@ -54,11 +54,11 @@ class TestDosProtectionRules(unittest.TestCase):
                 log_setting = 'Cortex Data Lake',
                 name = '',
                 position = 'pre',
-                protection = scm_security_services.models.dos_protection_rules_protection.dos_protection_rules_protection(
-                    aggregate = scm_security_services.models.dos_protection_rules_protection_aggregate.dos_protection_rules_protection_aggregate(
+                protection = scm.security_services.models.dos_protection_rules_protection.dos_protection_rules_protection(
+                    aggregate = scm.security_services.models.dos_protection_rules_protection_aggregate.dos_protection_rules_protection_aggregate(
                         profile = '', ), 
-                    classified = scm_security_services.models.dos_protection_rules_protection_classified.dos_protection_rules_protection_classified(
-                        classification_criteria = scm_security_services.models.dos_protection_rules_protection_classified_classification_criteria.dos_protection_rules_protection_classified_classification_criteria(
+                    classified = scm.security_services.models.dos_protection_rules_protection_classified.dos_protection_rules_protection_classified(
+                        classification_criteria = scm.security_services.models.dos_protection_rules_protection_classified_classification_criteria.dos_protection_rules_protection_classified_classification_criteria(
                             address = 'source-ip-only', ), 
                         profile = '', ), ),
                 schedule = '',

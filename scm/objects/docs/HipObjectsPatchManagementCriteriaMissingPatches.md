@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
+from scm.objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
 
 # TODO update the JSON string below
 json = "{}"

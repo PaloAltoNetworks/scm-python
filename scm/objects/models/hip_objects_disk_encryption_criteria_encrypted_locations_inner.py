@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state import HipObjectsDiskEncryptionCriteriaEncryptedLocationsInnerEncryptionState
+from scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state import HipObjectsDiskEncryptionCriteriaEncryptedLocationsInnerEncryptionState
 from typing import Optional, Set
 from typing_extensions import Self
 

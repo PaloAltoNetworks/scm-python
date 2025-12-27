@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificate_profiles_list_response import CertificateProfilesListResponse
+from scm.identity_services.models.certificate_profiles_list_response import CertificateProfilesListResponse
 
 class TestCertificateProfilesListResponse(unittest.TestCase):
     """CertificateProfilesListResponse unit test stubs"""

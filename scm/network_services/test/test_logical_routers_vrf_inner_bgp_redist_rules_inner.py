@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner import LogicalRoutersVrfInnerBgpRedistRulesInner
+from scm.network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner import LogicalRoutersVrfInnerBgpRedistRulesInner
 
 class TestLogicalRoutersVrfInnerBgpRedistRulesInner(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpRedistRulesInner unit test stubs"""

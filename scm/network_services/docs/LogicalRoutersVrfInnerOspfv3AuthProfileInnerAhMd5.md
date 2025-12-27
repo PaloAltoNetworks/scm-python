@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5 import LogicalRoutersVrfInnerOspfv3AuthProfileInnerAhMd5
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5 import LogicalRoutersVrfInnerOspfv3AuthProfileInnerAhMd5
 
 # TODO update the JSON string below
 json = "{}"

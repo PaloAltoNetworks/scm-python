@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.syslog_server_profiles_format_escaping import SyslogServerProfilesFormatEscaping
+from scm.objects.models.syslog_server_profiles_format_escaping import SyslogServerProfilesFormatEscaping
 
 class TestSyslogServerProfilesFormatEscaping(unittest.TestCase):
     """SyslogServerProfilesFormatEscaping unit test stubs"""

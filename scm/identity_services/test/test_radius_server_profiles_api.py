@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.radius_server_profiles_api import RADIUSServerProfilesApi
+from scm.identity_services.api.radius_server_profiles_api import RADIUSServerProfilesApi
 
 
 class TestRADIUSServerProfilesApi(unittest.TestCase):

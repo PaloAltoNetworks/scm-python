@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from scm_objects.models.auto_tag_actions_actions_inner_type_tagging import AutoTagActionsActionsInnerTypeTagging
+from scm.objects.models.auto_tag_actions_actions_inner_type_tagging import AutoTagActionsActionsInnerTypeTagging
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.labels import Labels
+from scm.config_setup.models.labels import Labels
 
 class TestLabels(unittest.TestCase):
     """Labels unit test stubs"""

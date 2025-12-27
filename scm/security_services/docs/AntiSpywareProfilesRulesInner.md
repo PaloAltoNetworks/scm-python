@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_profiles_rules_inner import AntiSpywareProfilesRulesInner
+from scm.security_services.models.anti_spyware_profiles_rules_inner import AntiSpywareProfilesRulesInner
 
 # TODO update the JSON string below
 json = "{}"

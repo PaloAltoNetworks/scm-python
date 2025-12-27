@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_list_response import ExternalDynamicListsListResponse
+from scm.objects.models.external_dynamic_lists_list_response import ExternalDynamicListsListResponse
 
 class TestExternalDynamicListsListResponse(unittest.TestCase):
     """ExternalDynamicListsListResponse unit test stubs"""

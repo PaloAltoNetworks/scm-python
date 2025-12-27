@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_scan_inner_action import ZoneProtectionProfilesScanInnerAction
+from scm.network_services.models.zone_protection_profiles_scan_inner_action import ZoneProtectionProfilesScanInnerAction
 
 class TestZoneProtectionProfilesScanInnerAction(unittest.TestCase):
     """ZoneProtectionProfilesScanInnerAction unit test stubs"""
@@ -36,10 +36,10 @@ class TestZoneProtectionProfilesScanInnerAction(unittest.TestCase):
         model = ZoneProtectionProfilesScanInnerAction()
         if include_optional:
             return ZoneProtectionProfilesScanInnerAction(
-                alert = scm_network_services.models.alert.alert(),
-                allow = scm_network_services.models.allow.allow(),
-                block = scm_network_services.models.block.block(),
-                block_ip = scm_network_services.models.zone_protection_profiles_scan_inner_action_block_ip.zone_protection_profiles_scan_inner_action_block_ip(
+                alert = scm.network_services.models.alert.alert(),
+                allow = scm.network_services.models.allow.allow(),
+                block = scm.network_services.models.block.block(),
+                block_ip = scm.network_services.models.zone_protection_profiles_scan_inner_action_block_ip.zone_protection_profiles_scan_inner_action_block_ip(
                     duration = 1, 
                     track_by = 'source-and-destination', )
             )

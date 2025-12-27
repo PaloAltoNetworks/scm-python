@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
+from scm.device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
 
 class TestGeneralSettingsGeneralGeoLocation(unittest.TestCase):
     """GeneralSettingsGeneralGeoLocation unit test stubs"""

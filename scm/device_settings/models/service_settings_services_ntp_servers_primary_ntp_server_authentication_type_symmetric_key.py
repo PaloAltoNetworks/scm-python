@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithm
+from scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithm
 from typing import Optional, Set
 from typing_extensions import Self
 

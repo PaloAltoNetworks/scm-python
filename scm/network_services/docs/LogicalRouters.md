@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers import LogicalRouters
+from scm.network_services.models.logical_routers import LogicalRouters
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
+from scm.network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
 
 class TestBgpFilterConditionalAdvertisementNonExist(unittest.TestCase):
     """BgpFilterConditionalAdvertisementNonExist unit test stubs"""

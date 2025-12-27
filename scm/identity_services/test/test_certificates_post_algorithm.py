@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
+from scm.identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
 
 class TestCertificatesPostAlgorithm(unittest.TestCase):
     """CertificatesPostAlgorithm unit test stubs"""

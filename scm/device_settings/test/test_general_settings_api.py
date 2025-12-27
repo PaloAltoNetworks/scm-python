@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.general_settings_api import GeneralSettingsApi
+from scm.device_settings.api.general_settings_api import GeneralSettingsApi
 
 
 class TestGeneralSettingsApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_host_info_criteria_os import HipObjectsHostInfoCriteriaOs
+from scm.objects.models.hip_objects_host_info_criteria_os import HipObjectsHostInfoCriteriaOs
 
 class TestHipObjectsHostInfoCriteriaOs(unittest.TestCase):
     """HipObjectsHostInfoCriteriaOs unit test stubs"""
@@ -36,7 +36,7 @@ class TestHipObjectsHostInfoCriteriaOs(unittest.TestCase):
         model = HipObjectsHostInfoCriteriaOs()
         if include_optional:
             return HipObjectsHostInfoCriteriaOs(
-                contains = scm_objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
+                contains = scm.objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
                     apple = 'All', 
                     google = 'All', 
                     linux = 'All', 

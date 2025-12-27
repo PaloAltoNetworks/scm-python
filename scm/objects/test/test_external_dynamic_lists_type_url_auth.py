@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_url_auth import ExternalDynamicListsTypeUrlAuth
+from scm.objects.models.external_dynamic_lists_type_url_auth import ExternalDynamicListsTypeUrlAuth
 
 class TestExternalDynamicListsTypeUrlAuth(unittest.TestCase):
     """ExternalDynamicListsTypeUrlAuth unit test stubs"""

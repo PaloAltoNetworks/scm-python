@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_categories import SnippetCategories
+from scm.config_setup.models.snippet_categories import SnippetCategories
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.auto_vpn_clusters_branches_inner import AutoVpnClustersBranchesInner
-from scm_network_services.models.auto_vpn_clusters_gateways_inner import AutoVpnClustersGatewaysInner
+from scm.network_services.models.auto_vpn_clusters_branches_inner import AutoVpnClustersBranchesInner
+from scm.network_services.models.auto_vpn_clusters_gateways_inner import AutoVpnClustersGatewaysInner
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname import AggEthernetDhcpClientDhcpClientSendHostname
+from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname import AggEthernetDhcpClientDhcpClientSendHostname
 
 class TestAggEthernetDhcpClientDhcpClientSendHostname(unittest.TestCase):
     """AggEthernetDhcpClientDhcpClientSendHostname unit test stubs"""

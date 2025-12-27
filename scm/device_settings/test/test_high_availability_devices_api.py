@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.high_availability_devices_api import HighAvailabilityDevicesApi
+from scm.device_settings.api.high_availability_devices_api import HighAvailabilityDevicesApi
 
 
 class TestHighAvailabilityDevicesApi(unittest.TestCase):

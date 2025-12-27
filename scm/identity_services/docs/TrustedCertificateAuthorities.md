@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.trusted_certificate_authorities import TrustedCertificateAuthorities
+from scm.identity_services.models.trusted_certificate_authorities import TrustedCertificateAuthorities
 
 # TODO update the JSON string below
 json = "{}"

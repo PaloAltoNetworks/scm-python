@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.layer2_subinterfaces_api import Layer2SubinterfacesApi
+from scm.network_services.api.layer2_subinterfaces_api import Layer2SubinterfacesApi
 
 
 class TestLayer2SubinterfacesApi(unittest.TestCase):

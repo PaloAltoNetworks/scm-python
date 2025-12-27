@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp import LogicalRoutersVrfInnerMulticastRpLocalRp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp import LogicalRoutersVrfInnerMulticastRpLocalRp
 
 class TestLogicalRoutersVrfInnerMulticastRpLocalRp(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastRpLocalRp unit test stubs"""
@@ -36,7 +36,7 @@ class TestLogicalRoutersVrfInnerMulticastRpLocalRp(unittest.TestCase):
         model = LogicalRoutersVrfInnerMulticastRpLocalRp()
         if include_optional:
             return LogicalRoutersVrfInnerMulticastRpLocalRp(
-                candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
+                candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
                     address = '', 
                     advertisement_interval = 56, 
                     group_addresses = [
@@ -44,7 +44,7 @@ class TestLogicalRoutersVrfInnerMulticastRpLocalRp(unittest.TestCase):
                         ], 
                     interface = '', 
                     priority = 56, ),
-                static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
+                static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
                     address = '', 
                     group_addresses = [
                         ''

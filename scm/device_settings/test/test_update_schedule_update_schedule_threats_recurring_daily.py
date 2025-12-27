@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_threats_recurring_daily import UpdateScheduleUpdateScheduleThreatsRecurringDaily
+from scm.device_settings.models.update_schedule_update_schedule_threats_recurring_daily import UpdateScheduleUpdateScheduleThreatsRecurringDaily
 
 class TestUpdateScheduleUpdateScheduleThreatsRecurringDaily(unittest.TestCase):
     """UpdateScheduleUpdateScheduleThreatsRecurringDaily unit test stubs"""

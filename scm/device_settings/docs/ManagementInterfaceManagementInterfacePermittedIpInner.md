@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.management_interface_management_interface_permitted_ip_inner import ManagementInterfaceManagementInterfacePermittedIpInner
+from scm.device_settings.models.management_interface_management_interface_permitted_ip_inner import ManagementInterfaceManagementInterfacePermittedIpInner
 
 # TODO update the JSON string below
 json = "{}"

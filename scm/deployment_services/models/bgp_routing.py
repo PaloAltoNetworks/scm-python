@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_deployment_services.models.bgp_routing_routing_preference import BgpRoutingRoutingPreference
+from scm.deployment_services.models.bgp_routing_routing_preference import BgpRoutingRoutingPreference
 from typing import Optional, Set
 from typing_extensions import Self
 

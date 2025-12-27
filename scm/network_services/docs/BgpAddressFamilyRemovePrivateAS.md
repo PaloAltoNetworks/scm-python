@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_address_family_remove_private_as import BgpAddressFamilyRemovePrivateAS
+from scm.network_services.models.bgp_address_family_remove_private_as import BgpAddressFamilyRemovePrivateAS
 
 # TODO update the JSON string below
 json = "{}"

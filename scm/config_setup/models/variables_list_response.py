@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_config_setup.models.variables import Variables
+from scm.config_setup.models.variables import Variables
 from typing import Optional, Set
 from typing_extensions import Self
 

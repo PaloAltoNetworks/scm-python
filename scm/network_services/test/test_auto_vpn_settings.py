@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_settings import AutoVpnSettings
+from scm.network_services.models.auto_vpn_settings import AutoVpnSettings
 
 class TestAutoVpnSettings(unittest.TestCase):
     """AutoVpnSettings unit test stubs"""
@@ -36,7 +36,7 @@ class TestAutoVpnSettings(unittest.TestCase):
         model = AutoVpnSettings()
         if include_optional:
             return AutoVpnSettings(
-                as_range = scm_network_services.models.auto_vpn_settings_as_range.auto_vpn_settings_as_range(
+                as_range = scm.network_services.models.auto_vpn_settings_as_range.auto_vpn_settings_as_range(
                     end = 1, 
                     start = 1, ),
                 enable_mesh_between_hubs = True,
@@ -46,7 +46,7 @@ class TestAutoVpnSettings(unittest.TestCase):
             )
         else:
             return AutoVpnSettings(
-                as_range = scm_network_services.models.auto_vpn_settings_as_range.auto_vpn_settings_as_range(
+                as_range = scm.network_services.models.auto_vpn_settings_as_range.auto_vpn_settings_as_range(
                     end = 1, 
                     start = 1, ),
                 vpn_address_pool = [

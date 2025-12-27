@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_profiles import QosProfiles
+from scm.network_services.models.qos_profiles import QosProfiles
 
 class TestQosProfiles(unittest.TestCase):
     """QosProfiles unit test stubs"""
@@ -36,20 +36,20 @@ class TestQosProfiles(unittest.TestCase):
         model = QosProfiles()
         if include_optional:
             return QosProfiles(
-                aggregate_bandwidth = scm_network_services.models.qos_profiles_aggregate_bandwidth.qos_profiles_aggregate_bandwidth(
+                aggregate_bandwidth = scm.network_services.models.qos_profiles_aggregate_bandwidth.qos_profiles_aggregate_bandwidth(
                     egress_guaranteed = 0, 
                     egress_max = 0, ),
-                class_bandwidth_type = scm_network_services.models.qos_profiles_class_bandwidth_type.qos_profiles_class_bandwidth_type(
-                    mbps = scm_network_services.models.qos_profiles_class_bandwidth_type_mbps.qos_profiles_class_bandwidth_type_mbps(
+                class_bandwidth_type = scm.network_services.models.qos_profiles_class_bandwidth_type.qos_profiles_class_bandwidth_type(
+                    mbps = scm.network_services.models.qos_profiles_class_bandwidth_type_mbps.qos_profiles_class_bandwidth_type_mbps(
                         class = [
-                            scm_network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner.qos_profiles_class_bandwidth_type_mbps_class_inner(
-                                class_bandwidth = scm_network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth(
+                            scm.network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner.qos_profiles_class_bandwidth_type_mbps_class_inner(
+                                class_bandwidth = scm.network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth(
                                     egress_guaranteed = 0, 
                                     egress_max = 0, ), 
                                 name = '', 
                                 priority = 'medium', )
                             ], ), 
-                    percentage = scm_network_services.models.qos_profiles_class_bandwidth_type_percentage.qos_profiles_class_bandwidth_type_percentage(), ),
+                    percentage = scm.network_services.models.qos_profiles_class_bandwidth_type_percentage.qos_profiles_class_bandwidth_type_percentage(), ),
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner import ZoneProtectionProfilesNonIpProtocolProtocolInner
+from scm.network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner import ZoneProtectionProfilesNonIpProtocolProtocolInner
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
+from scm.device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
 
 # TODO update the JSON string below
 json = "{}"

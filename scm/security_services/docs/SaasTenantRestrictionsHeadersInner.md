@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.saas_tenant_restrictions_headers_inner import SaasTenantRestrictionsHeadersInner
+from scm.security_services.models.saas_tenant_restrictions_headers_inner import SaasTenantRestrictionsHeadersInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission
+from scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission
 
 class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission unit test stubs"""
@@ -37,13 +37,13 @@ class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission(unit
         if include_optional:
             return LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission(
                 any_source_multicast = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                         group_address = '', 
                         included = True, 
                         name = '', )
                     ],
                 source_specific_multicast = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
                         group_address = '', 
                         included = True, 
                         name = '', 

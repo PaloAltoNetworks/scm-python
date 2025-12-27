@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_tunnels_tunnel_monitor import IpsecTunnelsTunnelMonitor
+from scm.network_services.models.ipsec_tunnels_tunnel_monitor import IpsecTunnelsTunnelMonitor
 
 class TestIpsecTunnelsTunnelMonitor(unittest.TestCase):
     """IpsecTunnelsTunnelMonitor unit test stubs"""

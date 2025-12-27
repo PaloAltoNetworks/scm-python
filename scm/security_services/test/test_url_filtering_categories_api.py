@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.url_filtering_categories_api import URLFilteringCategoriesApi
+from scm.security_services.api.url_filtering_categories_api import URLFilteringCategoriesApi
 
 
 class TestURLFilteringCategoriesApi(unittest.TestCase):

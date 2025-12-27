@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.regions import Regions
+from scm.objects.models.regions import Regions
 
 class TestRegions(unittest.TestCase):
     """Regions unit test stubs"""
@@ -41,7 +41,7 @@ class TestRegions(unittest.TestCase):
                     ],
                 device = 'My Device',
                 folder = 'My Folder',
-                geo_location = scm_objects.models.regions_geo_location.regions_geo_location(
+                geo_location = scm.objects.models.regions_geo_location.regions_geo_location(
                     latitude = -90, 
                     longitude = -180, ),
                 id = '123e4567-e89b-12d3-a456-426655440000',

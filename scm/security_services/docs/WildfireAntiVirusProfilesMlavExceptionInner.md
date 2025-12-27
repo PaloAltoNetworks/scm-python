@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner import WildfireAntiVirusProfilesMlavExceptionInner
+from scm.security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner import WildfireAntiVirusProfilesMlavExceptionInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.scep_profiles_scep_challenge_dynamic import ScepProfilesScepChallengeDynamic
+from scm.identity_services.models.scep_profiles_scep_challenge_dynamic import ScepProfilesScepChallengeDynamic
 
 # TODO update the JSON string below
 json = "{}"

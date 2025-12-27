@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_share_property import SnippetShareProperty
+from scm.config_setup.models.snippet_share_property import SnippetShareProperty
 
 class TestSnippetShareProperty(unittest.TestCase):
     """SnippetShareProperty unit test stubs"""

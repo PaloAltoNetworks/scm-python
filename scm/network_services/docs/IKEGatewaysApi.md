@@ -1,4 +1,4 @@
-# scm_network_services.IKEGatewaysApi
+# scm.network_services.IKEGatewaysApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -23,14 +23,14 @@ Create a new IKE gateway.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ike_gateways import IkeGateways
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ike_gateways import IkeGateways
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.IKEGatewaysApi(api_client)
-    ike_gateways = scm_network_services.IkeGateways() # IkeGateways | Created (optional)
+    api_instance = scm.network_services.IKEGatewaysApi(api_client)
+    ike_gateways = scm.network_services.IkeGateways() # IkeGateways | Created (optional)
 
     try:
         # Create an IKE gateway
@@ -106,13 +106,13 @@ Delete an IKE gateway.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.IKEGatewaysApi(api_client)
+    api_instance = scm.network_services.IKEGatewaysApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing IKE gateway.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ike_gateways import IkeGateways
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ike_gateways import IkeGateways
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.IKEGatewaysApi(api_client)
+    api_instance = scm.network_services.IKEGatewaysApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of IKE gateways.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ike_gateways_list_response import IKEGatewaysListResponse
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ike_gateways_list_response import IKEGatewaysListResponse
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.IKEGatewaysApi(api_client)
+    api_instance = scm.network_services.IKEGatewaysApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
@@ -363,14 +363,14 @@ Update an IKE gateway.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ike_gateways import IkeGateways
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ike_gateways import IkeGateways
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.IKEGatewaysApi(api_client)
+    api_instance = scm.network_services.IKEGatewaysApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    ike_gateways = scm_network_services.IkeGateways() # IkeGateways | OK (optional)
+    ike_gateways = scm.network_services.IkeGateways() # IkeGateways | OK (optional)
 
     try:
         # Update an IKE gateway

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.tags_list_response import TagsListResponse
+from scm.objects.models.tags_list_response import TagsListResponse
 
 class TestTagsListResponse(unittest.TestCase):
     """TagsListResponse unit test stubs"""

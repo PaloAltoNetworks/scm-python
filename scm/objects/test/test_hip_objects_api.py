@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.hip_objects_api import HIPObjectsApi
+from scm.objects.api.hip_objects_api import HIPObjectsApi
 
 
 class TestHIPObjectsApi(unittest.TestCase):

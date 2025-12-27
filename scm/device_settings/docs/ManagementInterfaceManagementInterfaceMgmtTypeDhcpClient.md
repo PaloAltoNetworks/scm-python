@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client import ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient
+from scm.device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client import ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
+from scm.network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
 
 # TODO update the JSON string below
 json = "{}"

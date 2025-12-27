@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.application_filters_tagging import ApplicationFiltersTagging
+from scm.objects.models.application_filters_tagging import ApplicationFiltersTagging
 
 # TODO update the JSON string below
 json = "{}"

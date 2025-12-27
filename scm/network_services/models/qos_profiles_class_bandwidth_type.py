@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
-from scm_network_services.models.qos_profiles_class_bandwidth_type_percentage import QosProfilesClassBandwidthTypePercentage
+from scm.network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
+from scm.network_services.models.qos_profiles_class_bandwidth_type_percentage import QosProfilesClassBandwidthTypePercentage
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry
+from scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry
 
 # TODO update the JSON string below
 json = "{}"

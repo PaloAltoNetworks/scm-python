@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_protocol import IkeGatewaysProtocol
+from scm.network_services.models.ike_gateways_protocol import IkeGatewaysProtocol
 
 class TestIkeGatewaysProtocol(unittest.TestCase):
     """IkeGatewaysProtocol unit test stubs"""
@@ -36,12 +36,12 @@ class TestIkeGatewaysProtocol(unittest.TestCase):
         model = IkeGatewaysProtocol()
         if include_optional:
             return IkeGatewaysProtocol(
-                ikev1 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
-                    dpd = scm_network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
+                ikev1 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                    dpd = scm.network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
                         enable = True, ), 
                     ike_crypto_profile = '', ),
-                ikev2 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
-                    dpd = scm_network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
+                ikev2 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                    dpd = scm.network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
                         enable = True, ), 
                     ike_crypto_profile = '', ),
                 version = 'ikev2-preferred'

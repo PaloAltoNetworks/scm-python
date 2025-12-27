@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks import HipObjectsCustomChecks
+from scm.objects.models.hip_objects_custom_checks import HipObjectsCustomChecks
 
 class TestHipObjectsCustomChecks(unittest.TestCase):
     """HipObjectsCustomChecks unit test stubs"""
@@ -36,11 +36,11 @@ class TestHipObjectsCustomChecks(unittest.TestCase):
         model = HipObjectsCustomChecks()
         if include_optional:
             return HipObjectsCustomChecks(
-                criteria = scm_objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
+                criteria = scm.objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
                     plist = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
                             key = [
-                                scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
+                                scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
                                     name = '', 
                                     negate = True, 
                                     value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
@@ -49,17 +49,17 @@ class TestHipObjectsCustomChecks(unittest.TestCase):
                             negate = True, )
                         ], 
                     process_list = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
                             name = '', 
                             running = True, )
                         ], 
                     registry_key = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
                             default_value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                             name = '', 
                             negate = True, 
                             registry_value = [
-                                scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
+                                scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
                                     name = '', 
                                     negate = True, 
                                     value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
@@ -68,11 +68,11 @@ class TestHipObjectsCustomChecks(unittest.TestCase):
             )
         else:
             return HipObjectsCustomChecks(
-                criteria = scm_objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
+                criteria = scm.objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
                     plist = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
                             key = [
-                                scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
+                                scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
                                     name = '', 
                                     negate = True, 
                                     value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
@@ -81,17 +81,17 @@ class TestHipObjectsCustomChecks(unittest.TestCase):
                             negate = True, )
                         ], 
                     process_list = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
                             name = '', 
                             running = True, )
                         ], 
                     registry_key = [
-                        scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
+                        scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
                             default_value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                             name = '', 
                             negate = True, 
                             registry_value = [
-                                scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
+                                scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
                                     name = '', 
                                     negate = True, 
                                     value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.log_forwarding_profiles_list_response import LogForwardingProfilesListResponse
+from scm.objects.models.log_forwarding_profiles_list_response import LogForwardingProfilesListResponse
 
 class TestLogForwardingProfilesListResponse(unittest.TestCase):
     """LogForwardingProfilesListResponse unit test stubs"""

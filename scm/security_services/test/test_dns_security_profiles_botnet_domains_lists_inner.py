@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner import DnsSecurityProfilesBotnetDomainsListsInner
+from scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner import DnsSecurityProfilesBotnetDomainsListsInner
 
 class TestDnsSecurityProfilesBotnetDomainsListsInner(unittest.TestCase):
     """DnsSecurityProfilesBotnetDomainsListsInner unit test stubs"""
@@ -36,11 +36,11 @@ class TestDnsSecurityProfilesBotnetDomainsListsInner(unittest.TestCase):
         model = DnsSecurityProfilesBotnetDomainsListsInner()
         if include_optional:
             return DnsSecurityProfilesBotnetDomainsListsInner(
-                action = scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner_action.dns_security_profiles_botnet_domains_lists_inner_action(
-                    alert = scm_security_services.models.alert.alert(), 
-                    allow = scm_security_services.models.allow.allow(), 
-                    block = scm_security_services.models.block.block(), 
-                    sinkhole = scm_security_services.models.sinkhole.sinkhole(), ),
+                action = scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner_action.dns_security_profiles_botnet_domains_lists_inner_action(
+                    alert = scm.security_services.models.alert.alert(), 
+                    allow = scm.security_services.models.allow.allow(), 
+                    block = scm.security_services.models.block.block(), 
+                    sinkhole = scm.security_services.models.sinkhole.sinkhole(), ),
                 name = '',
                 packet_capture = 'disable'
             )

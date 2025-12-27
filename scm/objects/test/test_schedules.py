@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.schedules import Schedules
+from scm.objects.models.schedules import Schedules
 
 class TestSchedules(unittest.TestCase):
     """Schedules unit test stubs"""
@@ -40,15 +40,15 @@ class TestSchedules(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '.',
-                schedule_type = scm_objects.models.schedules_schedule_type.schedules_schedule_type(
+                schedule_type = scm.objects.models.schedules_schedule_type.schedules_schedule_type(
                     non_recurring = [
                         '0480/04/20@05:08-0217/10/02@21:0001234567891011121314151617181920212223242526272829303132'
                         ], 
-                    recurring = scm_objects.models.schedules_schedule_type_recurring.schedules_schedule_type_recurring(
+                    recurring = scm.objects.models.schedules_schedule_type_recurring.schedules_schedule_type_recurring(
                         daily = [
                             '20:07-08:20012345678910'
                             ], 
-                        weekly = scm_objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
+                        weekly = scm.objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
                             friday = [
                                 '20:07-08:20012345678910'
                                 ], 
@@ -76,15 +76,15 @@ class TestSchedules(unittest.TestCase):
             return Schedules(
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '.',
-                schedule_type = scm_objects.models.schedules_schedule_type.schedules_schedule_type(
+                schedule_type = scm.objects.models.schedules_schedule_type.schedules_schedule_type(
                     non_recurring = [
                         '0480/04/20@05:08-0217/10/02@21:0001234567891011121314151617181920212223242526272829303132'
                         ], 
-                    recurring = scm_objects.models.schedules_schedule_type_recurring.schedules_schedule_type_recurring(
+                    recurring = scm.objects.models.schedules_schedule_type_recurring.schedules_schedule_type_recurring(
                         daily = [
                             '20:07-08:20012345678910'
                             ], 
-                        weekly = scm_objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
+                        weekly = scm.objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
                             friday = [
                                 '20:07-08:20012345678910'
                                 ], 

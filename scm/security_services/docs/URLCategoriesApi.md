@@ -1,4 +1,4 @@
-# scm_security_services.URLCategoriesApi
+# scm.security_services.URLCategoriesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/security/v1*
 
@@ -23,14 +23,14 @@ Create a new custom URL category.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.url_categories import UrlCategories
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.url_categories import UrlCategories
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLCategoriesApi(api_client)
-    url_categories = scm_security_services.UrlCategories() # UrlCategories | Created (optional)
+    api_instance = scm.security_services.URLCategoriesApi(api_client)
+    url_categories = scm.security_services.UrlCategories() # UrlCategories | Created (optional)
 
     try:
         # Create a custom URL category
@@ -106,13 +106,13 @@ Delete a custom URL Category.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLCategoriesApi(api_client)
+    api_instance = scm.security_services.URLCategoriesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing custom URL category.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.url_categories import UrlCategories
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.url_categories import UrlCategories
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLCategoriesApi(api_client)
+    api_instance = scm.security_services.URLCategoriesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of custom URL categories.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.url_categories_list_response import URLCategoriesListResponse
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.url_categories_list_response import URLCategoriesListResponse
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLCategoriesApi(api_client)
+    api_instance = scm.security_services.URLCategoriesApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
@@ -363,14 +363,14 @@ Update an existing custom URL category.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.url_categories import UrlCategories
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.url_categories import UrlCategories
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLCategoriesApi(api_client)
+    api_instance = scm.security_services.URLCategoriesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    url_categories = scm_security_services.UrlCategories() # UrlCategories | OK (optional)
+    url_categories = scm.security_services.UrlCategories() # UrlCategories | OK (optional)
 
     try:
         # Update a custom URL category

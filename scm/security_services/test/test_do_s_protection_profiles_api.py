@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.do_s_protection_profiles_api import DoSProtectionProfilesApi
+from scm.security_services.api.do_s_protection_profiles_api import DoSProtectionProfilesApi
 
 
 class TestDoSProtectionProfilesApi(unittest.TestCase):

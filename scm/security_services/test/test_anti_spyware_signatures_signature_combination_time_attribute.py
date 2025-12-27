@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature_combination_time_attribute import AntiSpywareSignaturesSignatureCombinationTimeAttribute
+from scm.security_services.models.anti_spyware_signatures_signature_combination_time_attribute import AntiSpywareSignaturesSignatureCombinationTimeAttribute
 
 class TestAntiSpywareSignaturesSignatureCombinationTimeAttribute(unittest.TestCase):
     """AntiSpywareSignaturesSignatureCombinationTimeAttribute unit test stubs"""

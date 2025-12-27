@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry import RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefixEntry
+from scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry import RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefixEntry
 
 class TestRoutePrefixListsTypeIpv4Ipv4EntryInnerPrefixEntry(unittest.TestCase):
     """RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefixEntry unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.trusted_certificate_authorities_api import TrustedCertificateAuthoritiesApi
+from scm.identity_services.api.trusted_certificate_authorities_api import TrustedCertificateAuthoritiesApi
 
 
 class TestTrustedCertificateAuthoritiesApi(unittest.TestCase):

@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.schedules_schedule_type import SchedulesScheduleType
+from scm.objects.models.schedules_schedule_type import SchedulesScheduleType
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner unit test stubs"""
@@ -36,9 +36,9 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner(unittest.
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner(
-                advertise = scm_network_services.models.advertise.advertise(),
+                advertise = scm.network_services.models.advertise.advertise(),
                 name = '',
-                suppress = scm_network_services.models.suppress.suppress()
+                suppress = scm.network_services.models.suppress.suppress()
             )
         else:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeNssaNssaExtRangeInner(

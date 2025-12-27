@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
+from scm.network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
 
 # TODO update the JSON string below
 json = "{}"

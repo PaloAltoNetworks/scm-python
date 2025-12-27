@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.i_psec_crypto_profiles_list_response import IPsecCryptoProfilesListResponse
+from scm.network_services.models.i_psec_crypto_profiles_list_response import IPsecCryptoProfilesListResponse
 
 class TestIPsecCryptoProfilesListResponse(unittest.TestCase):
     """IPsecCryptoProfilesListResponse unit test stubs"""

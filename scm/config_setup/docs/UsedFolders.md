@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.used_folders import UsedFolders
+from scm.config_setup.models.used_folders import UsedFolders
 
 # TODO update the JSON string below
 json = "{}"

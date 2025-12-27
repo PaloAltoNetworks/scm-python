@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_filtering_profiles_ipv4_multicast import BgpFilteringProfilesIpv4Multicast
+from scm.network_services.models.bgp_filtering_profiles_ipv4_multicast import BgpFilteringProfilesIpv4Multicast
 
 class TestBgpFilteringProfilesIpv4Multicast(unittest.TestCase):
     """BgpFilteringProfilesIpv4Multicast unit test stubs"""
@@ -36,24 +36,24 @@ class TestBgpFilteringProfilesIpv4Multicast(unittest.TestCase):
         model = BgpFilteringProfilesIpv4Multicast()
         if include_optional:
             return BgpFilteringProfilesIpv4Multicast(
-                conditional_advertisement = scm_network_services.models.bgp_filter_conditional_advertisement.bgp_filter_conditional_advertisement(
-                    exist = scm_network_services.models.bgp_filter_conditional_advertisement_exist.bgp_filter_conditional_advertisement_exist(
+                conditional_advertisement = scm.network_services.models.bgp_filter_conditional_advertisement.bgp_filter_conditional_advertisement(
+                    exist = scm.network_services.models.bgp_filter_conditional_advertisement_exist.bgp_filter_conditional_advertisement_exist(
                         advertise_map = '', 
                         exist_map = '', ), 
-                    non_exist = scm_network_services.models.bgp_filter_conditional_advertisement_non_exist.bgp_filter_conditional_advertisement_non_exist(
+                    non_exist = scm.network_services.models.bgp_filter_conditional_advertisement_non_exist.bgp_filter_conditional_advertisement_non_exist(
                         advertise_map = '', 
                         non_exist_map = '', ), ),
-                filter_list = scm_network_services.models.bgp_filter_filter_list.bgp_filter_filter_list(
+                filter_list = scm.network_services.models.bgp_filter_filter_list.bgp_filter_filter_list(
                     inbound = '', 
                     outbound = '', ),
-                inbound_network_filters = scm_network_services.models.bgp_filter_inbound_network_filters.bgp_filter_inbound_network_filters(
+                inbound_network_filters = scm.network_services.models.bgp_filter_inbound_network_filters.bgp_filter_inbound_network_filters(
                     distribute_list = '', 
                     prefix_list = '', ),
                 inherit = True,
-                outbound_network_filters = scm_network_services.models.bgp_filter_inbound_network_filters.bgp_filter_inbound_network_filters(
+                outbound_network_filters = scm.network_services.models.bgp_filter_inbound_network_filters.bgp_filter_inbound_network_filters(
                     distribute_list = '', 
                     prefix_list = '', ),
-                route_maps = scm_network_services.models.bgp_filter_filter_list.bgp_filter_filter_list(
+                route_maps = scm.network_services.models.bgp_filter_filter_list.bgp_filter_filter_list(
                     inbound = '', 
                     outbound = '', ),
                 unsuppress_map = ''

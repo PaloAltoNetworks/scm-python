@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_network_info_criteria_network import HipObjectsNetworkInfoCriteriaNetwork
+from scm.objects.models.hip_objects_network_info_criteria_network import HipObjectsNetworkInfoCriteriaNetwork
 
 # TODO update the JSON string below
 json = "{}"

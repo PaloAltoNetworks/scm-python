@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.get_auto_vpn_monitor200_response import GetAutoVPNMonitor200Response
+from scm.network_services.models.get_auto_vpn_monitor200_response import GetAutoVPNMonitor200Response
 
 class TestGetAutoVPNMonitor200Response(unittest.TestCase):
     """GetAutoVPNMonitor200Response unit test stubs"""

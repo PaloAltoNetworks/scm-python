@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_portals import AuthenticationPortals
+from scm.identity_services.models.authentication_portals import AuthenticationPortals
 
 class TestAuthenticationPortals(unittest.TestCase):
     """AuthenticationPortals unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_list_response import DHCPInterfacesListResponse
+from scm.network_services.models.dhcp_interfaces_list_response import DHCPInterfacesListResponse
 
 class TestDHCPInterfacesListResponse(unittest.TestCase):
     """DHCPInterfacesListResponse unit test stubs"""

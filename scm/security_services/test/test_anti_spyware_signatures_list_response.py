@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_list_response import AntiSpywareSignaturesListResponse
+from scm.security_services.models.anti_spyware_signatures_list_response import AntiSpywareSignaturesListResponse
 
 class TestAntiSpywareSignaturesListResponse(unittest.TestCase):
     """AntiSpywareSignaturesListResponse unit test stubs"""

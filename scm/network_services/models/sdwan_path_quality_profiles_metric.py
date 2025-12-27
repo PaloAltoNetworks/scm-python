@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.sdwan_path_quality_profiles_metric_jitter import SdwanPathQualityProfilesMetricJitter
-from scm_network_services.models.sdwan_path_quality_profiles_metric_latency import SdwanPathQualityProfilesMetricLatency
-from scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
+from scm.network_services.models.sdwan_path_quality_profiles_metric_jitter import SdwanPathQualityProfilesMetricJitter
+from scm.network_services.models.sdwan_path_quality_profiles_metric_latency import SdwanPathQualityProfilesMetricLatency
+from scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
 from typing import Optional, Set
 from typing_extensions import Self
 

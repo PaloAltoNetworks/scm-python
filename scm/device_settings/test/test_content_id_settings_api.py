@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.content_id_settings_api import ContentIDSettingsApi
+from scm.device_settings.api.content_id_settings_api import ContentIDSettingsApi
 
 
 class TestContentIDSettingsApi(unittest.TestCase):

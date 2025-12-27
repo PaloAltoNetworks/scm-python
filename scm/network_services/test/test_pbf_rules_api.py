@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.pbf_rules_api import PBFRulesApi
+from scm.network_services.api.pbf_rules_api import PBFRulesApi
 
 
 class TestPBFRulesApi(unittest.TestCase):

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.trusts import Trusts
+from scm.config_setup.models.trusts import Trusts
 
 # TODO update the JSON string below
 json = "{}"

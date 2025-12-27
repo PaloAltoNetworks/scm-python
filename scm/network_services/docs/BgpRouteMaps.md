@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_route_maps import BgpRouteMaps
+from scm.network_services.models.bgp_route_maps import BgpRouteMaps
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.compare_tlo_payload import CompareTloPayload
+from scm.config_setup.models.compare_tlo_payload import CompareTloPayload
 
 # TODO update the JSON string below
 json = "{}"

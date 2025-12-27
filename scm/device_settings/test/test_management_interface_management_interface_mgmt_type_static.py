@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface_mgmt_type_static import ManagementInterfaceManagementInterfaceMgmtTypeStatic
+from scm.device_settings.models.management_interface_management_interface_mgmt_type_static import ManagementInterfaceManagementInterfaceMgmtTypeStatic
 
 class TestManagementInterfaceManagementInterfaceMgmtTypeStatic(unittest.TestCase):
     """ManagementInterfaceManagementInterfaceMgmtTypeStatic unit test stubs"""

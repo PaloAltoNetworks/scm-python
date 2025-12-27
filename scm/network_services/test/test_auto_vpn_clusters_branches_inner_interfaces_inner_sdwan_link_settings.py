@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings
+from scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings
 
 class TestAutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings(unittest.TestCase):
     """AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings unit test stubs"""
@@ -38,9 +38,9 @@ class TestAutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings(unittest.
             return AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettings(
                 sdwan_gateway = '',
                 sdwan_interface_profile = '',
-                upstream_nat = scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
+                upstream_nat = scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
                     enable = True, 
-                    static_ip = scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
+                    static_ip = scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
                         fqdn = '', 
                         ip_address = '', ), )
             )

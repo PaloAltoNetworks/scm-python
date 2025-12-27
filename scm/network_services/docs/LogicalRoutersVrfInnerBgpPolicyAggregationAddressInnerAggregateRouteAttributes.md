@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes import LogicalRoutersVrfInnerBgpPolicyAggregationAddressInnerAggregateRouteAttributes
+from scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes import LogicalRoutersVrfInnerBgpPolicyAggregationAddressInnerAggregateRouteAttributes
 
 # TODO update the JSON string below
 json = "{}"

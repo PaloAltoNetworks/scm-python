@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey
+from scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey
 
 # TODO update the JSON string below
 json = "{}"

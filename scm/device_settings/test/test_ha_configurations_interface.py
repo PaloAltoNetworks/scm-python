@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_interface import HaConfigurationsInterface
+from scm.device_settings.models.ha_configurations_interface import HaConfigurationsInterface
 
 class TestHaConfigurationsInterface(unittest.TestCase):
     """HaConfigurationsInterface unit test stubs"""
@@ -36,23 +36,23 @@ class TestHaConfigurationsInterface(unittest.TestCase):
         model = HaConfigurationsInterface()
         if include_optional:
             return HaConfigurationsInterface(
-                ha1 = scm_device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
+                ha1 = scm.device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
                     gateway = '', 
                     ip_address = '', 
                     monitor_hold_time = 1000, 
                     netmask = '', 
                     port = 'management', ),
-                ha1_backup = scm_device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
+                ha1_backup = scm.device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
                     gateway = '', 
                     ip_address = '', 
                     netmask = '', 
                     port = '', ),
-                ha2 = scm_device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
+                ha2 = scm.device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
                     gateway = '', 
                     ip_address = '', 
                     netmask = '', 
                     port = '', ),
-                ha2_backup = scm_device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
+                ha2_backup = scm.device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
                     gateway = '', 
                     ip_address = '', 
                     netmask = '', 
@@ -60,13 +60,13 @@ class TestHaConfigurationsInterface(unittest.TestCase):
             )
         else:
             return HaConfigurationsInterface(
-                ha1 = scm_device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
+                ha1 = scm.device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
                     gateway = '', 
                     ip_address = '', 
                     monitor_hold_time = 1000, 
                     netmask = '', 
                     port = 'management', ),
-                ha2 = scm_device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
+                ha2 = scm.device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
                     gateway = '', 
                     ip_address = '', 
                     netmask = '', 

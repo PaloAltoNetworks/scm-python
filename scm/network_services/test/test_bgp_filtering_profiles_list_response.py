@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_filtering_profiles_list_response import BGPFilteringProfilesListResponse
+from scm.network_services.models.bgp_filtering_profiles_list_response import BGPFilteringProfilesListResponse
 
 class TestBGPFilteringProfilesListResponse(unittest.TestCase):
     """BGPFilteringProfilesListResponse unit test stubs"""

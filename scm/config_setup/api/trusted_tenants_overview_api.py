@@ -17,11 +17,11 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from scm_config_setup.models.trusted_tenant_overview import TrustedTenantOverview
+from scm.config_setup.models.trusted_tenant_overview import TrustedTenantOverview
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class TrustedTenantsOverviewApi:

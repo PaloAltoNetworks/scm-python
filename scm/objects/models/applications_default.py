@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
+from scm.objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
 from typing import Optional, Set
 from typing_extensions import Self
 

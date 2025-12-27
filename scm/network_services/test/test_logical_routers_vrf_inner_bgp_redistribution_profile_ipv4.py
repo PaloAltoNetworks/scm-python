@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4 import LogicalRoutersVrfInnerBgpRedistributionProfileIpv4
+from scm.network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4 import LogicalRoutersVrfInnerBgpRedistributionProfileIpv4
 
 class TestLogicalRoutersVrfInnerBgpRedistributionProfileIpv4(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpRedistributionProfileIpv4 unit test stubs"""

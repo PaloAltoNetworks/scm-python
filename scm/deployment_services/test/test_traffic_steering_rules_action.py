@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.traffic_steering_rules_action import TrafficSteeringRulesAction
+from scm.deployment_services.models.traffic_steering_rules_action import TrafficSteeringRulesAction
 
 class TestTrafficSteeringRulesAction(unittest.TestCase):
     """TrafficSteeringRulesAction unit test stubs"""
@@ -36,8 +36,8 @@ class TestTrafficSteeringRulesAction(unittest.TestCase):
         model = TrafficSteeringRulesAction()
         if include_optional:
             return TrafficSteeringRulesAction(
-                forward = scm_deployment_services.models.traffic_steering_rules_action_forward.traffic_steering_rules_action_forward(
-                    no_pbf = scm_deployment_services.models.no_pbf.no-pbf(), )
+                forward = scm.deployment_services.models.traffic_steering_rules_action_forward.traffic_steering_rules_action_forward(
+                    no_pbf = scm.deployment_services.models.no_pbf.no-pbf(), )
             )
         else:
             return TrafficSteeringRulesAction(

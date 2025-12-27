@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.file_blocking_profiles import FileBlockingProfiles
+from scm.security_services.models.file_blocking_profiles import FileBlockingProfiles
 
 class TestFileBlockingProfiles(unittest.TestCase):
     """FileBlockingProfiles unit test stubs"""
@@ -42,7 +42,7 @@ class TestFileBlockingProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 rules = [
-                    scm_security_services.models.file_blocking_profiles_rules_inner.file_blocking_profiles_rules_inner(
+                    scm.security_services.models.file_blocking_profiles_rules_inner.file_blocking_profiles_rules_inner(
                         action = 'alert', 
                         application = [
                             'any'

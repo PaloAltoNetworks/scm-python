@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
 
 class TestSnippetShareInfo(unittest.TestCase):
     """SnippetShareInfo unit test stubs"""
@@ -48,7 +48,7 @@ class TestSnippetShareInfo(unittest.TestCase):
                 last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 msg_uuid = '',
                 properties = [
-                    scm_config_setup.models.snippet_share_property.snippet_share_property(
+                    scm.config_setup.models.snippet_share_property.snippet_share_property(
                         created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         created_by = '', 
                         donor_tenant = '', 

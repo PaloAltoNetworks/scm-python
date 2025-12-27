@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.tunnel_interfaces_ip_inner import TunnelInterfacesIpInner
+from scm.network_services.models.tunnel_interfaces_ip_inner import TunnelInterfacesIpInner
 
 class TestTunnelInterfacesIpInner(unittest.TestCase):
     """TunnelInterfacesIpInner unit test stubs"""

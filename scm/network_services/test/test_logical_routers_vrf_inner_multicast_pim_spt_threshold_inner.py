@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner import LogicalRoutersVrfInnerMulticastPimSptThresholdInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner import LogicalRoutersVrfInnerMulticastPimSptThresholdInner
 
 class TestLogicalRoutersVrfInnerMulticastPimSptThresholdInner(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastPimSptThresholdInner unit test stubs"""

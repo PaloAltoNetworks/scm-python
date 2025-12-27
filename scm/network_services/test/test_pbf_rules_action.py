@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_action import PbfRulesAction
+from scm.network_services.models.pbf_rules_action import PbfRulesAction
 
 class TestPbfRulesAction(unittest.TestCase):
     """PbfRulesAction unit test stubs"""
@@ -36,17 +36,17 @@ class TestPbfRulesAction(unittest.TestCase):
         model = PbfRulesAction()
         if include_optional:
             return PbfRulesAction(
-                discard = scm_network_services.models.discard.discard(),
-                forward = scm_network_services.models.pbf_rules_action_forward.pbf_rules_action_forward(
+                discard = scm.network_services.models.discard.discard(),
+                forward = scm.network_services.models.pbf_rules_action_forward.pbf_rules_action_forward(
                     egress_interface = '', 
-                    monitor = scm_network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
+                    monitor = scm.network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
                         disable_if_unreachable = True, 
                         ip_address = '', 
                         profile = '', ), 
-                    nexthop = scm_network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
+                    nexthop = scm.network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
                         fqdn = '', 
                         ip_address = '', ), ),
-                no_pbf = scm_network_services.models.no_pbf.no_pbf()
+                no_pbf = scm.network_services.models.no_pbf.no_pbf()
             )
         else:
             return PbfRulesAction(

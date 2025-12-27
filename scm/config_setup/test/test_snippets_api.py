@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.snippets_api import SnippetsApi
+from scm.config_setup.api.snippets_api import SnippetsApi
 
 
 class TestSnippetsApi(unittest.TestCase):

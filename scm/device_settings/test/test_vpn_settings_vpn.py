@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.vpn_settings_vpn import VpnSettingsVpn
+from scm.device_settings.models.vpn_settings_vpn import VpnSettingsVpn
 
 class TestVpnSettingsVpn(unittest.TestCase):
     """VpnSettingsVpn unit test stubs"""
@@ -36,7 +36,7 @@ class TestVpnSettingsVpn(unittest.TestCase):
         model = VpnSettingsVpn()
         if include_optional:
             return VpnSettingsVpn(
-                ikev2 = scm_device_settings.models.vpn_settings_vpn_ikev2.vpn_settings_vpn_ikev2(
+                ikev2 = scm.device_settings.models.vpn_settings_vpn_ikev2.vpn_settings_vpn_ikev2(
                     certificate_cache_size = 0, 
                     cookie_threshold = 0, 
                     max_half_opened_sa = 1, )

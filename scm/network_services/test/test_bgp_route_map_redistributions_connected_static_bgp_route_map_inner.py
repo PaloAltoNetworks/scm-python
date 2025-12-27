@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner import BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner
+from scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner import BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner
 
 class TestBgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner(unittest.TestCase):
     """BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner unit test stubs"""
@@ -38,33 +38,33 @@ class TestBgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner(unittest.Tes
             return BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner(
                 action = 'permit',
                 description = '',
-                match = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match(
+                match = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match(
                     interface = '', 
-                    ipv4 = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4(
-                        address = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_address(
+                    ipv4 = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4(
+                        address = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_address(
                             access_list = '', 
                             prefix_list = '', ), 
-                        next_hop = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_next_hop(
+                        next_hop = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_match_ipv4_next_hop(
                             access_list = '', 
                             prefix_list = '', ), ), 
                     metric = 0, ),
                 name = 1,
-                set = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set(
-                    aggregator = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_aggregator.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_aggregator(
+                set = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set(
+                    aggregator = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_aggregator.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_aggregator(
                         as = 1, 
                         router_id = '', ), 
                     aspath_prepend = [
                         1
                         ], 
                     atomic_aggregate = True, 
-                    ipv4 = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_ipv4.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_ipv4(
+                    ipv4 = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_ipv4.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_ipv4(
                         next_hop = '', 
                         source_address = '', ), 
                     large_community = [
                         ''
                         ], 
                     local_preference = 0, 
-                    metric = scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_metric.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_metric(
+                    metric = scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_metric.bgp_route_map_redistributions_connected_static_bgp_route_map_inner_set_metric(
                         action = 'set', 
                         value = 0, ), 
                     origin = 'none', 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.general_settings_general_setting_management import GeneralSettingsGeneralSettingManagement
+from scm.device_settings.models.general_settings_general_setting_management import GeneralSettingsGeneralSettingManagement
 from typing import Optional, Set
 from typing_extensions import Self
 

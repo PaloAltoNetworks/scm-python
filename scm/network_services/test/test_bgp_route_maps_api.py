@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_route_maps_api import BGPRouteMapsApi
+from scm.network_services.api.bgp_route_maps_api import BGPRouteMapsApi
 
 
 class TestBGPRouteMapsApi(unittest.TestCase):

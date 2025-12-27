@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.address_groups import AddressGroups
+from scm.objects.models.address_groups import AddressGroups
 
 class TestAddressGroups(unittest.TestCase):
     """AddressGroups unit test stubs"""
@@ -38,7 +38,7 @@ class TestAddressGroups(unittest.TestCase):
             return AddressGroups(
                 description = '',
                 device = 'My Device',
-                dynamic = scm_objects.models.address_groups_dynamic.address_groups_dynamic(
+                dynamic = scm.objects.models.address_groups_dynamic.address_groups_dynamic(
                     filter = 'tag1 AND tag2 OR tag3', ),
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',

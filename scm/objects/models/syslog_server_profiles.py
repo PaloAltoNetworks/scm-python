@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.syslog_server_profiles_format import SyslogServerProfilesFormat
-from scm_objects.models.syslog_server_profiles_server_inner import SyslogServerProfilesServerInner
+from scm.objects.models.syslog_server_profiles_format import SyslogServerProfilesFormat
+from scm.objects.models.syslog_server_profiles_server_inner import SyslogServerProfilesServerInner
 from typing import Optional, Set
 from typing_extensions import Self
 

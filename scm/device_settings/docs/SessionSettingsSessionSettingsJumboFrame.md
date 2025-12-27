@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.session_settings_session_settings_jumbo_frame import SessionSettingsSessionSettingsJumboFrame
+from scm.device_settings.models.session_settings_session_settings_jumbo_frame import SessionSettingsSessionSettingsJumboFrame
 
 # TODO update the JSON string below
 json = "{}"

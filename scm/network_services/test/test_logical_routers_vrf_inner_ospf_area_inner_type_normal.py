@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal import LogicalRoutersVrfInnerOspfAreaInnerTypeNormal
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal import LogicalRoutersVrfInnerOspfAreaInnerTypeNormal
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNormal(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeNormal unit test stubs"""
@@ -36,7 +36,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNormal(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeNormal()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeNormal(
-                abr = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
+                abr = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
                     export_list = '', 
                     import_list = '', 
                     inbound_filter_list = '', 

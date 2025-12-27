@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
+from scm.network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
 
 # TODO update the JSON string below
 json = "{}"

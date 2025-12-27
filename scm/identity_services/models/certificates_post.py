@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
+from scm.identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
 from typing import Optional, Set
 from typing_extensions import Self
 

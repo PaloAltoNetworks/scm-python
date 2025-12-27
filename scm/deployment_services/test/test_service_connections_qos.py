@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connections_qos import ServiceConnectionsQos
+from scm.deployment_services.models.service_connections_qos import ServiceConnectionsQos
 
 class TestServiceConnectionsQos(unittest.TestCase):
     """ServiceConnectionsQos unit test stubs"""

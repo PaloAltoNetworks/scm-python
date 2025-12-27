@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.agg_ethernet_dhcp_client import AggEthernetDhcpClient
+from scm.network_services.models.agg_ethernet_dhcp_client import AggEthernetDhcpClient
 
 class TestAggEthernetDhcpClient(unittest.TestCase):
     """AggEthernetDhcpClient unit test stubs"""
@@ -36,11 +36,11 @@ class TestAggEthernetDhcpClient(unittest.TestCase):
         model = AggEthernetDhcpClient()
         if include_optional:
             return AggEthernetDhcpClient(
-                dhcp_client = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
+                dhcp_client = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
                     create_default_route = True, 
                     default_route_metric = 1, 
                     enable = True, 
-                    send_hostname = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
+                    send_hostname = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
                         enable = True, 
                         hostname = 'system-hostname', ), )
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules import NatRules
+from scm.network_services.models.nat_rules import NatRules
 
 class TestNatRules(unittest.TestCase):
     """NatRules unit test stubs"""
@@ -39,14 +39,14 @@ class TestNatRules(unittest.TestCase):
                 active_active_device_binding = 'primary',
                 description = '',
                 destination = [any],
-                destination_translation = scm_network_services.models.nat_rules_destination_translation.nat_rules_destination_translation(
-                    dns_rewrite = scm_network_services.models.nat_rules_destination_translation_dns_rewrite.nat_rules_destination_translation_dns_rewrite(
+                destination_translation = scm.network_services.models.nat_rules_destination_translation.nat_rules_destination_translation(
+                    dns_rewrite = scm.network_services.models.nat_rules_destination_translation_dns_rewrite.nat_rules_destination_translation_dns_rewrite(
                         direction = 'reverse', ), 
                     translated_address = '', 
                     translated_port = 1, ),
                 device = 'My Device',
                 disabled = True,
-                dynamic_destination_translation = scm_network_services.models.nat_rules_dynamic_destination_translation.nat_rules_dynamic_destination_translation(
+                dynamic_destination_translation = scm.network_services.models.nat_rules_dynamic_destination_translation.nat_rules_dynamic_destination_translation(
                     distribution = 'round-robin', 
                     translated_address = '', 
                     translated_port = 1, ),
@@ -58,10 +58,10 @@ class TestNatRules(unittest.TestCase):
                 service = 'any',
                 snippet = 'My Snippet',
                 source = [any],
-                source_translation = scm_network_services.models.nat_rules_source_translation.nat_rules_source_translation(
-                    dynamic_ip = scm_network_services.models.nat_rules_source_translation_dynamic_ip.nat_rules_source_translation_dynamic_ip(
-                        fallback = scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback.nat_rules_source_translation_dynamic_ip_fallback(
-                            interface_address = scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address.nat_rules_source_translation_dynamic_ip_fallback_interface_address(
+                source_translation = scm.network_services.models.nat_rules_source_translation.nat_rules_source_translation(
+                    dynamic_ip = scm.network_services.models.nat_rules_source_translation_dynamic_ip.nat_rules_source_translation_dynamic_ip(
+                        fallback = scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback.nat_rules_source_translation_dynamic_ip_fallback(
+                            interface_address = scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address.nat_rules_source_translation_dynamic_ip_fallback_interface_address(
                                 floating_ip = '', 
                                 interface = '', 
                                 ip = '', ), 
@@ -71,8 +71,8 @@ class TestNatRules(unittest.TestCase):
                         translated_address = [
                             ''
                             ], ), 
-                    dynamic_ip_and_port = scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port.nat_rules_source_translation_dynamic_ip_and_port(), 
-                    static_ip = scm_network_services.models.nat_rules_source_translation_static_ip.nat_rules_source_translation_static_ip(
+                    dynamic_ip_and_port = scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port.nat_rules_source_translation_dynamic_ip_and_port(), 
+                    static_ip = scm.network_services.models.nat_rules_source_translation_static_ip.nat_rules_source_translation_static_ip(
                         bi_directional = '', ), ),
                 tag = [
                     ''

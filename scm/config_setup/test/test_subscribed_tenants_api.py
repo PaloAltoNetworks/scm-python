@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.subscribed_tenants_api import SubscribedTenantsApi
+from scm.config_setup.api.subscribed_tenants_api import SubscribedTenantsApi
 
 
 class TestSubscribedTenantsApi(unittest.TestCase):

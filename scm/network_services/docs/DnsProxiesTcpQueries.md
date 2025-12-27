@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
+from scm.network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
 
 # TODO update the JSON string below
 json = "{}"

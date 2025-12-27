@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zones_network import ZonesNetwork
+from scm.network_services.models.zones_network import ZonesNetwork
 
 class TestZonesNetwork(unittest.TestCase):
     """ZonesNetwork unit test stubs"""
@@ -50,7 +50,7 @@ class TestZonesNetwork(unittest.TestCase):
                 tap = [
                     ''
                     ],
-                tunnel = scm_network_services.models.tunnel.tunnel(),
+                tunnel = scm.network_services.models.tunnel.tunnel(),
                 virtual_wire = [
                     ''
                     ],

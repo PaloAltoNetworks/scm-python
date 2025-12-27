@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dns_security_profiles import DnsSecurityProfiles
+from scm.security_services.models.dns_security_profiles import DnsSecurityProfiles
 
 # TODO update the JSON string below
 json = "{}"

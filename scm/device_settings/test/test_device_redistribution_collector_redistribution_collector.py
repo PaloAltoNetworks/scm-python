@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
+from scm.device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
 
 class TestDeviceRedistributionCollectorRedistributionCollector(unittest.TestCase):
     """DeviceRedistributionCollectorRedistributionCollector unit test stubs"""

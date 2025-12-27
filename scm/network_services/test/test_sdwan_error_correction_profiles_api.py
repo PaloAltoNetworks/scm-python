@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.sdwan_error_correction_profiles_api import SDWANErrorCorrectionProfilesApi
+from scm.network_services.api.sdwan_error_correction_profiles_api import SDWANErrorCorrectionProfilesApi
 
 
 class TestSDWANErrorCorrectionProfilesApi(unittest.TestCase):

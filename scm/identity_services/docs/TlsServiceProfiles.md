@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.tls_service_profiles import TlsServiceProfiles
+from scm.identity_services.models.tls_service_profiles import TlsServiceProfiles
 
 # TODO update the JSON string below
 json = "{}"

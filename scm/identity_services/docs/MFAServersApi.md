@@ -1,4 +1,4 @@
-# scm_identity_services.MFAServersApi
+# scm.identity_services.MFAServersApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/identity/v1*
 
@@ -23,14 +23,14 @@ Create a new MFA server.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.mfa_servers import MfaServers
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.mfa_servers import MfaServers
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.MFAServersApi(api_client)
-    mfa_servers = scm_identity_services.MfaServers() # MfaServers | Created (optional)
+    api_instance = scm.identity_services.MFAServersApi(api_client)
+    mfa_servers = scm.identity_services.MfaServers() # MfaServers | Created (optional)
 
     try:
         # Create an MFA server
@@ -106,13 +106,13 @@ Delete an MFA server.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.MFAServersApi(api_client)
+    api_instance = scm.identity_services.MFAServersApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing MFA server.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.mfa_servers import MfaServers
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.mfa_servers import MfaServers
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.MFAServersApi(api_client)
+    api_instance = scm.identity_services.MFAServersApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,13 +270,13 @@ Retrieve a list of MFA servers.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -286,14 +286,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.MFAServersApi(api_client)
+    api_instance = scm.identity_services.MFAServersApi(api_client)
     position = pre # str | The relative position of the rule  (default to pre)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
@@ -364,14 +364,14 @@ Update an existing MFA server.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.mfa_servers import MfaServers
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.mfa_servers import MfaServers
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -381,16 +381,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.MFAServersApi(api_client)
+    api_instance = scm.identity_services.MFAServersApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    mfa_servers = scm_identity_services.MfaServers() # MfaServers | OK (optional)
+    mfa_servers = scm.identity_services.MfaServers() # MfaServers | OK (optional)
 
     try:
         # Update an MFA server

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_clusters_list_response import AutoVPNClustersListResponse
+from scm.network_services.models.auto_vpn_clusters_list_response import AutoVPNClustersListResponse
 
 class TestAutoVPNClustersListResponse(unittest.TestCase):
     """AutoVPNClustersListResponse unit test stubs"""

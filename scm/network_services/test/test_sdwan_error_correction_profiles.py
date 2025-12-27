@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_error_correction_profiles import SdwanErrorCorrectionProfiles
+from scm.network_services.models.sdwan_error_correction_profiles import SdwanErrorCorrectionProfiles
 
 class TestSdwanErrorCorrectionProfiles(unittest.TestCase):
     """SdwanErrorCorrectionProfiles unit test stubs"""
@@ -40,11 +40,11 @@ class TestSdwanErrorCorrectionProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                mode = scm_network_services.models.sdwan_error_correction_profiles_mode.sdwan_error_correction_profiles_mode(
-                    forward_error_correction = scm_network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
+                mode = scm.network_services.models.sdwan_error_correction_profiles_mode.sdwan_error_correction_profiles_mode(
+                    forward_error_correction = scm.network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
                         ratio = '', 
                         recovery_duration = 56, ), 
-                    packet_duplication = scm_network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
+                    packet_duplication = scm.network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
                         recovery_duration_pd = 56, ), ),
                 name = '',
                 snippet = 'My Snippet'
@@ -52,11 +52,11 @@ class TestSdwanErrorCorrectionProfiles(unittest.TestCase):
         else:
             return SdwanErrorCorrectionProfiles(
                 activation_threshold = 1,
-                mode = scm_network_services.models.sdwan_error_correction_profiles_mode.sdwan_error_correction_profiles_mode(
-                    forward_error_correction = scm_network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
+                mode = scm.network_services.models.sdwan_error_correction_profiles_mode.sdwan_error_correction_profiles_mode(
+                    forward_error_correction = scm.network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
                         ratio = '', 
                         recovery_duration = 56, ), 
-                    packet_duplication = scm_network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
+                    packet_duplication = scm.network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
                         recovery_duration_pd = 56, ), ),
                 name = '',
         )

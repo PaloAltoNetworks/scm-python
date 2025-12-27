@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
+from scm.objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
 
 class TestHipObjectsPatchManagementCriteriaMissingPatches(unittest.TestCase):
     """HipObjectsPatchManagementCriteriaMissingPatches unit test stubs"""
@@ -40,7 +40,7 @@ class TestHipObjectsPatchManagementCriteriaMissingPatches(unittest.TestCase):
                 patches = [
                     'jUR,rZ#UM/?R,Fp^l6$ARj'
                     ],
-                severity = scm_objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
+                severity = scm.objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
                     greater_equal = 0, 
                     greater_than = 0, 
                     is = 0, 

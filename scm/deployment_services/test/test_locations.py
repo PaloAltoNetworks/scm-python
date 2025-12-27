@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.locations import Locations
+from scm.deployment_services.models.locations import Locations
 
 class TestLocations(unittest.TestCase):
     """Locations unit test stubs"""

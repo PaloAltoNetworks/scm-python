@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_monitoring import HaConfigurationsGroupMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring import HaConfigurationsGroupMonitoring
 
 class TestHaConfigurationsGroupMonitoring(unittest.TestCase):
     """HaConfigurationsGroupMonitoring unit test stubs"""
@@ -36,11 +36,11 @@ class TestHaConfigurationsGroupMonitoring(unittest.TestCase):
         model = HaConfigurationsGroupMonitoring()
         if include_optional:
             return HaConfigurationsGroupMonitoring(
-                link_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
+                link_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
                     enabled = True, 
                     failure_condition = 'any', 
                     link_group = [
-                        scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
+                        scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
                             enabled = True, 
                             failure_condition = 'any', 
                             interface = [
@@ -48,14 +48,14 @@ class TestHaConfigurationsGroupMonitoring(unittest.TestCase):
                                 ], 
                             name = '', )
                         ], ),
-                path_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
+                path_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
                     enabled = True, 
                     failure_condition = 'any', 
-                    path_group = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
+                    path_group = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
                         logical_router = [
-                            scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
+                            scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
                                 destination_ip_group = [
-                                    scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
+                                    scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
                                         destination_ip = [
                                             ''
                                             ], 

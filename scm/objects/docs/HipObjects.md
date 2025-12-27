@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects import HipObjects
+from scm.objects.models.hip_objects import HipObjects
 
 # TODO update the JSON string below
 json = "{}"

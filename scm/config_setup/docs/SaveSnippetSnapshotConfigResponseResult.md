@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.save_snippet_snapshot_config_response_result import SaveSnippetSnapshotConfigResponseResult
+from scm.config_setup.models.save_snippet_snapshot_config_response_result import SaveSnippetSnapshotConfigResponseResult
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ike_gateways_authentication_certificate import IkeGatewaysAuthenticationCertificate
-from scm_network_services.models.ike_gateways_authentication_pre_shared_key import IkeGatewaysAuthenticationPreSharedKey
+from scm.network_services.models.ike_gateways_authentication_certificate import IkeGatewaysAuthenticationCertificate
+from scm.network_services.models.ike_gateways_authentication_pre_shared_key import IkeGatewaysAuthenticationPreSharedKey
 from typing import Optional, Set
 from typing_extensions import Self
 

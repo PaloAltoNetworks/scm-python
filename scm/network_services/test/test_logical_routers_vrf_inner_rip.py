@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_rip import LogicalRoutersVrfInnerRip
+from scm.network_services.models.logical_routers_vrf_inner_rip import LogicalRoutersVrfInnerRip
 
 class TestLogicalRoutersVrfInnerRip(unittest.TestCase):
     """LogicalRoutersVrfInnerRip unit test stubs"""
@@ -39,23 +39,23 @@ class TestLogicalRoutersVrfInnerRip(unittest.TestCase):
                 auth_profile = '',
                 default_information_originate = True,
                 enable = True,
-                global_bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                global_bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                     profile = '', ),
-                global_inbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
+                global_inbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
                     access_list = '', ),
-                global_outbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
+                global_outbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
                     access_list = '', ),
                 global_timer = '',
                 interface = [
-                    scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner.logical_routers_vrf_inner_rip_interface_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner.logical_routers_vrf_inner_rip_interface_inner(
                         authentication = '', 
-                        bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                        bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                             profile = '', ), 
                         enable = True, 
-                        interface_inbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
+                        interface_inbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
                             access_list = '', 
                             metric = 56, ), 
-                        interface_outbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
+                        interface_outbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
                             access_list = '', 
                             metric = 56, ), 
                         mode = 'active', 

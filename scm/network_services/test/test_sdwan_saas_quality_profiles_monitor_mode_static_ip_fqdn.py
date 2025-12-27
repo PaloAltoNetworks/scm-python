@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn import SdwanSaasQualityProfilesMonitorModeStaticIpFqdn
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn import SdwanSaasQualityProfilesMonitorModeStaticIpFqdn
 
 class TestSdwanSaasQualityProfilesMonitorModeStaticIpFqdn(unittest.TestCase):
     """SdwanSaasQualityProfilesMonitorModeStaticIpFqdn unit test stubs"""

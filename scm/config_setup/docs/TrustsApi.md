@@ -1,4 +1,4 @@
-# scm_config_setup.TrustsApi
+# scm.config_setup.TrustsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -20,15 +20,15 @@ Create a new trust.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
-from scm_config_setup.models.trusts import Trusts
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.models.trusts import Trusts
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -38,15 +38,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.TrustsApi(api_client)
-    trusts = scm_config_setup.Trusts() # Trusts | The `trusts` resource definition (optional)
+    api_instance = scm.config_setup.TrustsApi(api_client)
+    trusts = scm.config_setup.Trusts() # Trusts | The `trusts` resource definition (optional)
 
     try:
         # Create a trust
@@ -104,13 +104,13 @@ Delete an existing Trust.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -120,14 +120,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.TrustsApi(api_client)
+    api_instance = scm.config_setup.TrustsApi(api_client)
     trustids = 'trustids_example' # str | Comma-separated list of trust IDs 
     type = 'type_example' # str | Specifies the type of the tenant that is trusted, either 'subscriber' or 'publisher'. 
 

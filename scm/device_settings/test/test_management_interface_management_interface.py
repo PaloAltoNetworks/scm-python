@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface import ManagementInterfaceManagementInterface
+from scm.device_settings.models.management_interface_management_interface import ManagementInterfaceManagementInterface
 
 class TestManagementInterfaceManagementInterface(unittest.TestCase):
     """ManagementInterfaceManagementInterface unit test stubs"""
@@ -36,23 +36,23 @@ class TestManagementInterfaceManagementInterface(unittest.TestCase):
         model = ManagementInterfaceManagementInterface()
         if include_optional:
             return ManagementInterfaceManagementInterface(
-                mgmt_type = scm_device_settings.models.management_interface_management_interface_mgmt_type.management_interface_management_interface_mgmt_type(
-                    dhcp_client = scm_device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client.management_interface_management_interface_mgmt_type_dhcp_client(
+                mgmt_type = scm.device_settings.models.management_interface_management_interface_mgmt_type.management_interface_management_interface_mgmt_type(
+                    dhcp_client = scm.device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client.management_interface_management_interface_mgmt_type_dhcp_client(
                         accept_dhcp_domain = True, 
                         accept_dhcp_hostname = True, 
                         send_client_id = True, 
                         send_hostname = True, ), 
-                    static = scm_device_settings.models.management_interface_management_interface_mgmt_type_static.management_interface_management_interface_mgmt_type_static(
+                    static = scm.device_settings.models.management_interface_management_interface_mgmt_type_static.management_interface_management_interface_mgmt_type_static(
                         default_gateway = '', 
                         ip_address = '', 
                         netmask = '', ), ),
                 mtu = 56,
                 permitted_ip = [
-                    scm_device_settings.models.management_interface_management_interface_permitted_ip_inner.management_interface_management_interface_permitted_ip_inner(
+                    scm.device_settings.models.management_interface_management_interface_permitted_ip_inner.management_interface_management_interface_permitted_ip_inner(
                         description = '', 
                         name = '', )
                     ],
-                service = scm_device_settings.models.management_interface_management_interface_service.management_interface_management_interface_service(
+                service = scm.device_settings.models.management_interface_management_interface_service.management_interface_management_interface_service(
                     disable_http = True, 
                     disable_http_ocsp = True, 
                     disable_https = True, 

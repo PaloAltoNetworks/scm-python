@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.application_override_rules_api import ApplicationOverrideRulesApi
+from scm.security_services.api.application_override_rules_api import ApplicationOverrideRulesApi
 
 
 class TestApplicationOverrideRulesApi(unittest.TestCase):

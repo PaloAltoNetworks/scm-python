@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
+from scm.identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
 
 class TestCertificateProfilesCaCertificatesInner(unittest.TestCase):
     """CertificateProfilesCaCertificatesInner unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.interface_management_profiles_list_response import InterfaceManagementProfilesListResponse
+from scm.network_services.models.interface_management_profiles_list_response import InterfaceManagementProfilesListResponse
 
 class TestInterfaceManagementProfilesListResponse(unittest.TestCase):
     """InterfaceManagementProfilesListResponse unit test stubs"""

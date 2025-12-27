@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_flood import DosProtectionProfilesFlood
+from scm.security_services.models.dos_protection_profiles_flood import DosProtectionProfilesFlood
 
 class TestDosProtectionProfilesFlood(unittest.TestCase):
     """DosProtectionProfilesFlood unit test stubs"""
@@ -36,48 +36,48 @@ class TestDosProtectionProfilesFlood(unittest.TestCase):
         model = DosProtectionProfilesFlood()
         if include_optional:
             return DosProtectionProfilesFlood(
-                icmp = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                icmp = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                     enable = True, 
-                    red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                    red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                         activate_rate = 1, 
                         alarm_rate = 0, 
-                        block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                        block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                             duration = 1, ), 
                         maximal_rate = 1, ), ),
-                icmpv6 = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                icmpv6 = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                     enable = True, 
-                    red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                    red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                         activate_rate = 1, 
                         alarm_rate = 0, 
-                        block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                        block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                             duration = 1, ), 
                         maximal_rate = 1, ), ),
-                other_ip = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                other_ip = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                     enable = True, 
-                    red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                    red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                         activate_rate = 1, 
                         alarm_rate = 0, 
-                        block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                        block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                             duration = 1, ), 
                         maximal_rate = 1, ), ),
-                tcp_syn = scm_security_services.models.dos_protection_profiles_flood_tcp_syn.dos_protection_profiles_flood_tcp_syn(
+                tcp_syn = scm.security_services.models.dos_protection_profiles_flood_tcp_syn.dos_protection_profiles_flood_tcp_syn(
                     enable = True, 
-                    red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                    red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                         activate_rate = 1, 
                         alarm_rate = 0, 
-                        block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                        block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                             duration = 1, ), 
                         maximal_rate = 1, ), 
-                    syn_cookies = scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
+                    syn_cookies = scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
                         activate_rate = 0, 
                         alarm_rate = 0, 
                         maximal_rate = 1, ), ),
-                udp = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                udp = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                     enable = True, 
-                    red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                    red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                         activate_rate = 1, 
                         alarm_rate = 0, 
-                        block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                        block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                             duration = 1, ), 
                         maximal_rate = 1, ), )
             )

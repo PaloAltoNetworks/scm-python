@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_protocol_common_nat_traversal import IkeGatewaysProtocolCommonNatTraversal
+from scm.network_services.models.ike_gateways_protocol_common_nat_traversal import IkeGatewaysProtocolCommonNatTraversal
 
 class TestIkeGatewaysProtocolCommonNatTraversal(unittest.TestCase):
     """IkeGatewaysProtocolCommonNatTraversal unit test stubs"""

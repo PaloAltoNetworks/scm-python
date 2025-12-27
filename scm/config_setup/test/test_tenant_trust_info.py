@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
 
 class TestTenantTrustInfo(unittest.TestCase):
     """TenantTrustInfo unit test stubs"""

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner import HaConfigurationsGroupMonitoringPathMonitoringPathGroupLogicalRouterInner
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner import HaConfigurationsGroupMonitoringPathMonitoringPathGroupLogicalRouterInner
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_path_quality_profiles import SdwanPathQualityProfiles
+from scm.network_services.models.sdwan_path_quality_profiles import SdwanPathQualityProfiles
 
 class TestSdwanPathQualityProfiles(unittest.TestCase):
     """SdwanPathQualityProfiles unit test stubs"""
@@ -39,14 +39,14 @@ class TestSdwanPathQualityProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                metric = scm_network_services.models.sdwan_path_quality_profiles_metric.sdwan_path_quality_profiles_metric(
-                    jitter = scm_network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
+                metric = scm.network_services.models.sdwan_path_quality_profiles_metric.sdwan_path_quality_profiles_metric(
+                    jitter = scm.network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
                         sensitivity = 'medium', 
                         threshold = 10, ), 
-                    latency = scm_network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
+                    latency = scm.network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
                         sensitivity = 'medium', 
                         threshold = 10, ), 
-                    pkt_loss = scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
+                    pkt_loss = scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
                         sensitivity = 'medium', 
                         threshold = 1, ), ),
                 name = '',
@@ -54,14 +54,14 @@ class TestSdwanPathQualityProfiles(unittest.TestCase):
             )
         else:
             return SdwanPathQualityProfiles(
-                metric = scm_network_services.models.sdwan_path_quality_profiles_metric.sdwan_path_quality_profiles_metric(
-                    jitter = scm_network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
+                metric = scm.network_services.models.sdwan_path_quality_profiles_metric.sdwan_path_quality_profiles_metric(
+                    jitter = scm.network_services.models.sdwan_path_quality_profiles_metric_jitter.sdwan_path_quality_profiles_metric_jitter(
                         sensitivity = 'medium', 
                         threshold = 10, ), 
-                    latency = scm_network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
+                    latency = scm.network_services.models.sdwan_path_quality_profiles_metric_latency.sdwan_path_quality_profiles_metric_latency(
                         sensitivity = 'medium', 
                         threshold = 10, ), 
-                    pkt_loss = scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
+                    pkt_loss = scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss.sdwan_path_quality_profiles_metric_pkt_loss(
                         sensitivity = 'medium', 
                         threshold = 1, ), ),
                 name = '',

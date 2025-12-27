@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.regions_api import RegionsApi
+from scm.objects.api.regions_api import RegionsApi
 
 
 class TestRegionsApi(unittest.TestCase):

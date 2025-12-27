@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf import BgpRedistributionProfilesIpv4UnicastOspf
+from scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf import BgpRedistributionProfilesIpv4UnicastOspf
 
 class TestBgpRedistributionProfilesIpv4UnicastOspf(unittest.TestCase):
     """BgpRedistributionProfilesIpv4UnicastOspf unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
+from scm.identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
 
 class TestRadiusServerProfilesProtocolPEAPMSCHAPv2(unittest.TestCase):
     """RadiusServerProfilesProtocolPEAPMSCHAPv2 unit test stubs"""

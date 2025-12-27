@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers import LogicalRouters
+from scm.network_services.models.logical_routers import LogicalRouters
 
 class TestLogicalRouters(unittest.TestCase):
     """LogicalRouters unit test stubs"""
@@ -43,8 +43,8 @@ class TestLogicalRouters(unittest.TestCase):
                 routing_stack = 'legacy',
                 snippet = 'My Snippet',
                 vrf = [
-                    scm_network_services.models.logical_routers_vrf_inner.logical_routers_vrf_inner(
-                        admin_dists = scm_network_services.models.logical_routers_vrf_inner_admin_dists.logical_routers_vrf_inner_admin_dists(
+                    scm.network_services.models.logical_routers_vrf_inner.logical_routers_vrf_inner(
+                        admin_dists = scm.network_services.models.logical_routers_vrf_inner_admin_dists.logical_routers_vrf_inner_admin_dists(
                             bgp_external = 56, 
                             bgp_internal = 56, 
                             bgp_local = 56, 
@@ -57,28 +57,28 @@ class TestLogicalRouters(unittest.TestCase):
                             rip = 56, 
                             static = 56, 
                             static_ipv6 = 56, ), 
-                        bgp = scm_network_services.models.logical_routers_vrf_inner_bgp.logical_routers_vrf_inner_bgp(
-                            advertise_network = scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network.logical_routers_vrf_inner_bgp_advertise_network(
-                                ipv4 = scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4.logical_routers_vrf_inner_bgp_advertise_network_ipv4(
+                        bgp = scm.network_services.models.logical_routers_vrf_inner_bgp.logical_routers_vrf_inner_bgp(
+                            advertise_network = scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network.logical_routers_vrf_inner_bgp_advertise_network(
+                                ipv4 = scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4.logical_routers_vrf_inner_bgp_advertise_network_ipv4(
                                     network = [
-                                        scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv4_network_inner(
                                             backdoor = True, 
                                             multicast = True, 
                                             name = '', 
                                             unicast = True, )
                                         ], ), 
-                                ipv6 = scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6.logical_routers_vrf_inner_bgp_advertise_network_ipv6(), ), 
-                            aggregate = scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate.logical_routers_vrf_inner_bgp_aggregate(
+                                ipv6 = scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6.logical_routers_vrf_inner_bgp_advertise_network_ipv6(), ), 
+                            aggregate = scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate.logical_routers_vrf_inner_bgp_aggregate(
                                 aggregate_med = True, ), 
                             aggregate_routes = [
-                                scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner.logical_routers_vrf_inner_bgp_aggregate_routes_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner.logical_routers_vrf_inner_bgp_aggregate_routes_inner(
                                     as_set = True, 
                                     description = '', 
                                     enable = True, 
                                     name = '', 
                                     same_med = True, 
                                     summary_only = True, 
-                                    type = scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type(), )
+                                    type = scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type(), )
                                 ], 
                             allow_redist_default_route = True, 
                             always_advertise_network_route = True, 
@@ -89,9 +89,9 @@ class TestLogicalRouters(unittest.TestCase):
                             enable = True, 
                             enforce_first_as = True, 
                             fast_external_failover = True, 
-                            global_bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                            global_bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                                 profile = '', ), 
-                            graceful_restart = scm_network_services.models.logical_routers_vrf_inner_bgp_graceful_restart.logical_routers_vrf_inner_bgp_graceful_restart(
+                            graceful_restart = scm.network_services.models.logical_routers_vrf_inner_bgp_graceful_restart.logical_routers_vrf_inner_bgp_graceful_restart(
                                 enable = True, 
                                 local_restart_time = 56, 
                                 max_peer_restart_time = 56, 
@@ -99,67 +99,67 @@ class TestLogicalRouters(unittest.TestCase):
                             graceful_shutdown = True, 
                             install_route = True, 
                             local_as = '', 
-                            med = scm_network_services.models.logical_routers_vrf_inner_bgp_med.logical_routers_vrf_inner_bgp_med(
+                            med = scm.network_services.models.logical_routers_vrf_inner_bgp_med.logical_routers_vrf_inner_bgp_med(
                                 always_compare_med = True, 
                                 deterministic_med_comparison = True, ), 
                             peer_group = [
-                                scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner.logical_routers_vrf_inner_bgp_peer_group_inner(
-                                    address_family = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(), 
+                                scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner.logical_routers_vrf_inner_bgp_peer_group_inner(
+                                    address_family = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(), 
                                     aggregated_confed_as_path = True, 
-                                    connection_options = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options(
+                                    connection_options = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options(
                                         authentication = '', 
                                         dampening = '', 
                                         multihop = 56, 
                                         timers = '', ), 
                                     enable = True, 
-                                    filtering_profile = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(), 
+                                    filtering_profile = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(), 
                                     name = '', 
                                     peer = [
-                                        scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner(
-                                            bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd(
-                                                multihop = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
+                                        scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner(
+                                            bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd(
+                                                multihop = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
                                                     min_received_ttl = 56, ), 
                                                 profile = '', ), 
                                             enable = True, 
                                             enable_mp_bgp = True, 
                                             enable_sender_side_loop_detection = True, 
-                                            inherit = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit(
-                                                no = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(), 
-                                                yes = scm_network_services.models.yes.yes(), ), 
-                                            local_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                                            inherit = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit(
+                                                no = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(), 
+                                                yes = scm.network_services.models.yes.yes(), ), 
+                                            local_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                                                 interface = '', 
                                                 ip = '', ), 
                                             name = '', 
                                             passive = True, 
-                                            peer_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
+                                            peer_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
                                                 fqdn = '', 
                                                 ip = '', ), 
                                             peer_as = '', 
                                             peering_type = '', 
                                             reflector_client = '', 
-                                            subsequent_address_family_identifier = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier(
+                                            subsequent_address_family_identifier = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier(
                                                 multicast = True, 
                                                 unicast = True, ), )
                                         ], 
                                     soft_reset_with_stored_info = True, )
                                 ], 
-                            policy = scm_network_services.models.logical_routers_vrf_inner_bgp_policy.logical_routers_vrf_inner_bgp_policy(
-                                aggregation = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation.logical_routers_vrf_inner_bgp_policy_aggregation(
+                            policy = scm.network_services.models.logical_routers_vrf_inner_bgp_policy.logical_routers_vrf_inner_bgp_policy(
+                                aggregation = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation.logical_routers_vrf_inner_bgp_policy_aggregation(
                                     address = [
-                                        scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner(
                                             advertise_filters = [
-                                                scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
+                                                scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
                                                     enable = True, 
-                                                    match = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match(
+                                                    match = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match(
                                                         address_prefix = [
-                                                            scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner(
+                                                            scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_address_prefix_inner(
                                                                 exact = True, 
                                                                 name = '', )
                                                             ], 
                                                         afi = 'ip', 
-                                                        as_path = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
+                                                        as_path = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
                                                             regex = '', ), 
-                                                        community = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
+                                                        community = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner_match_as_path(
                                                             regex = '', ), 
                                                         extended_community = , 
                                                         from_peer = [
@@ -172,7 +172,7 @@ class TestLogicalRouters(unittest.TestCase):
                                                         safi = 'ip', ), 
                                                     name = '', )
                                                 ], 
-                                            aggregate_route_attributes = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
+                                            aggregate_route_attributes = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_aggregate_route_attributes(
                                                 as_path_limit = 56, 
                                                 local_preference = 56, 
                                                 origin = 'igp', 
@@ -183,31 +183,31 @@ class TestLogicalRouters(unittest.TestCase):
                                             prefix = '', 
                                             summary = True, 
                                             suppress_filters = [
-                                                scm_network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
+                                                scm.network_services.models.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner.logical_routers_vrf_inner_bgp_policy_aggregation_address_inner_advertise_filters_inner(
                                                     enable = True, 
                                                     name = '', )
                                                 ], )
                                         ], ), 
-                                conditional_advertisement = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_conditional_advertisement.logical_routers_vrf_inner_bgp_policy_conditional_advertisement(), 
-                                export = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export.logical_routers_vrf_inner_bgp_policy_export(
+                                conditional_advertisement = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_conditional_advertisement.logical_routers_vrf_inner_bgp_policy_conditional_advertisement(), 
+                                export = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export.logical_routers_vrf_inner_bgp_policy_export(
                                     rules = [
-                                        scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner.logical_routers_vrf_inner_bgp_policy_export_rules_inner(
-                                            action = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action(
-                                                allow = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow(
-                                                    update = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update(
+                                        scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner.logical_routers_vrf_inner_bgp_policy_export_rules_inner(
+                                            action = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action(
+                                                allow = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow(
+                                                    update = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update(
                                                         as_path_limit = 56, 
                                                         local_preference = 56, 
                                                         origin = 'igp', ), ), 
-                                                deny = scm_network_services.models.deny.deny(), ), 
+                                                deny = scm.network_services.models.deny.deny(), ), 
                                             enable = True, 
                                             name = '', 
                                             used_by = [
                                                 ''
                                                 ], )
                                         ], ), 
-                                import = scm_network_services.models.logical_routers_vrf_inner_bgp_policy_import.logical_routers_vrf_inner_bgp_policy_import(), ), 
+                                import = scm.network_services.models.logical_routers_vrf_inner_bgp_policy_import.logical_routers_vrf_inner_bgp_policy_import(), ), 
                             redist_rules = [
-                                scm_network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner.logical_routers_vrf_inner_bgp_redist_rules_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_bgp_redist_rules_inner.logical_routers_vrf_inner_bgp_redist_rules_inner(
                                     address_family_identifier = 'ipv4', 
                                     enable = True, 
                                     metric = 56, 
@@ -224,20 +224,20 @@ class TestLogicalRouters(unittest.TestCase):
                                     set_med = 56, 
                                     set_origin = 'igp', )
                                 ], 
-                            redistribution_profile = scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile.logical_routers_vrf_inner_bgp_redistribution_profile(), 
+                            redistribution_profile = scm.network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile.logical_routers_vrf_inner_bgp_redistribution_profile(), 
                             reject_default_route = True, 
                             router_id = '', ), 
-                        ecmp = scm_network_services.models.logical_routers_vrf_inner_ecmp.logical_routers_vrf_inner_ecmp(
-                            algorithm = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm.logical_routers_vrf_inner_ecmp_algorithm(
-                                balanced_round_robin = scm_network_services.models.balanced_round_robin.balanced_round_robin(), 
-                                ip_hash = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash.logical_routers_vrf_inner_ecmp_algorithm_ip_hash(
+                        ecmp = scm.network_services.models.logical_routers_vrf_inner_ecmp.logical_routers_vrf_inner_ecmp(
+                            algorithm = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm.logical_routers_vrf_inner_ecmp_algorithm(
+                                balanced_round_robin = scm.network_services.models.balanced_round_robin.balanced_round_robin(), 
+                                ip_hash = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash.logical_routers_vrf_inner_ecmp_algorithm_ip_hash(
                                     hash_seed = 56, 
                                     src_only = True, 
                                     use_port = True, ), 
-                                ip_modulo = scm_network_services.models.ip_modulo.ip_modulo(), 
-                                weighted_round_robin = scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin(
+                                ip_modulo = scm.network_services.models.ip_modulo.ip_modulo(), 
+                                weighted_round_robin = scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin(
                                     interface = [
-                                        scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
                                             name = '', 
                                             weight = 56, )
                                         ], ), ), 
@@ -249,39 +249,39 @@ class TestLogicalRouters(unittest.TestCase):
                         interface = [
                             ''
                             ], 
-                        multicast = scm_network_services.models.logical_routers_vrf_inner_multicast.logical_routers_vrf_inner_multicast(
+                        multicast = scm.network_services.models.logical_routers_vrf_inner_multicast.logical_routers_vrf_inner_multicast(
                             enable = True, 
                             enable_v6 = True, 
-                            igmp = scm_network_services.models.logical_routers_vrf_inner_multicast_igmp.logical_routers_vrf_inner_multicast_igmp(
-                                dynamic = scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(), 
+                            igmp = scm.network_services.models.logical_routers_vrf_inner_multicast_igmp.logical_routers_vrf_inner_multicast_igmp(
+                                dynamic = scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(), 
                                 enable = True, 
                                 static = [
-                                    scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
+                                    scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
                                         group_address = '', 
                                         name = '', 
                                         source_address = '', )
                                     ], ), 
                             interface_group = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner.logical_routers_vrf_inner_multicast_interface_group_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner.logical_routers_vrf_inner_multicast_interface_group_inner(
                                     description = '', 
-                                    group_permission = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
+                                    group_permission = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
                                         any_source_multicast = [
-                                            scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                                            scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                                                 group_address = '', 
                                                 included = True, 
                                                 name = '', )
                                             ], 
                                         source_specific_multicast = [
-                                            scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
+                                            scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
                                                 group_address = '', 
                                                 included = True, 
                                                 name = '', 
                                                 source_address = '', )
                                             ], ), 
                                     name = '', 
-                                    pim = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
+                                    pim = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
                                         allowed_neighbors = [
-                                            scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
+                                            scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
                                                 name = '', )
                                             ], 
                                         assert_interval = 56, 
@@ -292,73 +292,73 @@ class TestLogicalRouters(unittest.TestCase):
                                         join_prune_interval = 56, ), )
                                 ], 
                             mode = 'PIM-SM', 
-                            msdp = scm_network_services.models.logical_routers_vrf_inner_multicast_msdp.logical_routers_vrf_inner_multicast_msdp(
+                            msdp = scm.network_services.models.logical_routers_vrf_inner_multicast_msdp.logical_routers_vrf_inner_multicast_msdp(
                                 enable = True, 
                                 global_authentication = '', 
                                 global_timer = '', 
-                                originator_id = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                                originator_id = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                                     ip = '', ), ), 
-                            pim = scm_network_services.models.logical_routers_vrf_inner_multicast_pim.logical_routers_vrf_inner_multicast_pim(
+                            pim = scm.network_services.models.logical_routers_vrf_inner_multicast_pim.logical_routers_vrf_inner_multicast_pim(
                                 enable = True, 
                                 if_timer_global = '', 
                                 route_ageout_time = 56, 
-                                rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
+                                rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
                                     external_rp = [
-                                        scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
                                             group_list = '', 
                                             name = '', 
                                             override = True, )
                                         ], 
-                                    local_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
-                                        candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
+                                    local_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
+                                        candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
                                             advertisement_interval = 56, 
                                             group_list = '', 
                                             priority = 56, ), 
-                                        static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
+                                        static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
                                             group_list = '', 
                                             override = True, ), ), ), 
                                 rpf_lookup_mode = 'mrib-then-urib', 
                                 spt_threshold = [
-                                    scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
+                                    scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
                                         name = '', 
                                         threshold = '', )
                                     ], 
-                                ssm_address_space = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
+                                ssm_address_space = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
                                     group_list = '', ), ), 
                             route_ageout_time = 56, 
-                            rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp.logical_routers_vrf_inner_multicast_rp(), 
+                            rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp.logical_routers_vrf_inner_multicast_rp(), 
                             spt_threshold = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
                                     name = '', 
                                     threshold = '', )
                                 ], 
                             ssm_address_space = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                                     group_address = '', 
                                     included = True, 
                                     name = '', )
                                 ], 
                             static_route = [
-                                scm_network_services.models.logical_routers_vrf_inner_multicast_static_route_inner.logical_routers_vrf_inner_multicast_static_route_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_multicast_static_route_inner.logical_routers_vrf_inner_multicast_static_route_inner(
                                     destination = '', 
                                     name = '', 
                                     preference = 56, )
                                 ], ), 
                         name = '', 
-                        ospf = scm_network_services.models.logical_routers_vrf_inner_ospf.logical_routers_vrf_inner_ospf(
+                        ospf = scm.network_services.models.logical_routers_vrf_inner_ospf.logical_routers_vrf_inner_ospf(
                             allow_redist_default_route = True, 
                             area = [
-                                scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner.logical_routers_vrf_inner_ospf_area_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner.logical_routers_vrf_inner_ospf_area_inner(
                                     authentication = '', 
                                     name = '', 
                                     range = [
-                                        scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_range_inner.logical_routers_vrf_inner_ospf_area_inner_range_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_range_inner.logical_routers_vrf_inner_ospf_area_inner_range_inner(
                                             advertise = True, 
                                             name = '', 
                                             substitute = '', )
                                         ], 
                                     virtual_link = [
-                                        scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner(
                                             authentication = '', 
                                             enable = True, 
                                             instance_id = 56, 
@@ -368,23 +368,23 @@ class TestLogicalRouters(unittest.TestCase):
                                             passive = True, 
                                             timing = '', 
                                             transit_area_id = '', 
-                                            vr_timing = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing(
+                                            vr_timing = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing(
                                                 dead_counts = 56, 
                                                 hello_interval = 56, 
                                                 retransmit_interval = 56, 
                                                 transit_delay = 56, ), )
                                         ], 
                                     vr_range = [
-                                        scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner(
-                                            advertise = scm_network_services.models.advertise.advertise(), 
+                                        scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner(
+                                            advertise = scm.network_services.models.advertise.advertise(), 
                                             name = '', 
-                                            suppress = scm_network_services.models.suppress.suppress(), )
+                                            suppress = scm.network_services.models.suppress.suppress(), )
                                         ], )
                                 ], 
                             auth_profile = [
-                                scm_network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner.logical_routers_vrf_inner_ospf_auth_profile_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner.logical_routers_vrf_inner_ospf_auth_profile_inner(
                                     md5 = [
-                                        scm_network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner(
+                                        scm.network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner(
                                             key = '', 
                                             name = 1.337, 
                                             preferred = True, )
@@ -394,17 +394,17 @@ class TestLogicalRouters(unittest.TestCase):
                                 ], 
                             enable = True, 
                             export_rules = [
-                                scm_network_services.models.logical_routers_vrf_inner_ospf_export_rules_inner.logical_routers_vrf_inner_ospf_export_rules_inner(
+                                scm.network_services.models.logical_routers_vrf_inner_ospf_export_rules_inner.logical_routers_vrf_inner_ospf_export_rules_inner(
                                     metric = 56, 
                                     name = '', 
                                     new_path_type = 'ext-1', 
                                     new_tag = '', )
                                 ], 
-                            flood_prevention = scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention.logical_routers_vrf_inner_ospf_flood_prevention(
-                                hello = scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
+                            flood_prevention = scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention.logical_routers_vrf_inner_ospf_flood_prevention(
+                                hello = scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
                                     enable = True, 
                                     max_packet = 56, ), 
-                                lsa = scm_network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
+                                lsa = scm.network_services.models.logical_routers_vrf_inner_ospf_flood_prevention_hello.logical_routers_vrf_inner_ospf_flood_prevention_hello(
                                     enable = True, 
                                     max_packet = 56, ), ), 
                             global_if_timer = '', 
@@ -412,10 +412,10 @@ class TestLogicalRouters(unittest.TestCase):
                             rfc1583 = True, 
                             router_id = '', 
                             spf_timer = '', 
-                            vr_timers = scm_network_services.models.logical_routers_vrf_inner_ospf_vr_timers.logical_routers_vrf_inner_ospf_vr_timers(
+                            vr_timers = scm.network_services.models.logical_routers_vrf_inner_ospf_vr_timers.logical_routers_vrf_inner_ospf_vr_timers(
                                 lsa_interval = 56, 
                                 spf_calculation_delay = 56, ), ), 
-                        ospfv3 = scm_network_services.models.logical_routers_vrf_inner_ospfv3.logical_routers_vrf_inner_ospfv3(
+                        ospfv3 = scm.network_services.models.logical_routers_vrf_inner_ospfv3.logical_routers_vrf_inner_ospfv3(
                             allow_redist_default_route = True, 
                             disable_transit_traffic = True, 
                             enable = True, 
@@ -423,19 +423,19 @@ class TestLogicalRouters(unittest.TestCase):
                             reject_default_route = True, 
                             router_id = '', 
                             spf_timer = '', ), 
-                        rib_filter = scm_network_services.models.logical_routers_vrf_inner_rib_filter.logical_routers_vrf_inner_rib_filter(), 
-                        rip = scm_network_services.models.logical_routers_vrf_inner_rip.logical_routers_vrf_inner_rip(
+                        rib_filter = scm.network_services.models.logical_routers_vrf_inner_rib_filter.logical_routers_vrf_inner_rib_filter(), 
+                        rip = scm.network_services.models.logical_routers_vrf_inner_rip.logical_routers_vrf_inner_rip(
                             default_information_originate = True, 
                             enable = True, 
-                            global_inbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
+                            global_inbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
                                 access_list = '', ), 
-                            global_outbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
+                            global_outbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_global_inbound_distribute_list.logical_routers_vrf_inner_rip_global_inbound_distribute_list(
                                 access_list = '', ), 
                             global_timer = '', ), 
-                        routing_table = scm_network_services.models.logical_routers_vrf_inner_routing_table.logical_routers_vrf_inner_routing_table(
-                            ip = scm_network_services.models.logical_routers_vrf_inner_routing_table_ip.logical_routers_vrf_inner_routing_table_ip(), ), 
+                        routing_table = scm.network_services.models.logical_routers_vrf_inner_routing_table.logical_routers_vrf_inner_routing_table(
+                            ip = scm.network_services.models.logical_routers_vrf_inner_routing_table_ip.logical_routers_vrf_inner_routing_table_ip(), ), 
                         sdwan_type = '', 
-                        vr_admin_dists = scm_network_services.models.logical_routers_vrf_inner_vr_admin_dists.logical_routers_vrf_inner_vr_admin_dists(
+                        vr_admin_dists = scm.network_services.models.logical_routers_vrf_inner_vr_admin_dists.logical_routers_vrf_inner_vr_admin_dists(
                             ebgp = 56, 
                             ibgp = 56, 
                             ospf_ext = 56, 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_profiles import BgpAddressFamilyProfiles
+from scm.network_services.models.bgp_address_family_profiles import BgpAddressFamilyProfiles
 
 class TestBgpAddressFamilyProfiles(unittest.TestCase):
     """BgpAddressFamilyProfiles unit test stubs"""
@@ -39,42 +39,42 @@ class TestBgpAddressFamilyProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                ipv4 = scm_network_services.models.bgp_address_family_profiles_ipv4.bgp_address_family_profiles_ipv4(
-                    multicast = scm_network_services.models.bgp_address_family.bgp-address-family(
-                        add_path = scm_network_services.models.bgp_address_family_add_path.bgp_address_family_add_path(
+                ipv4 = scm.network_services.models.bgp_address_family_profiles_ipv4.bgp_address_family_profiles_ipv4(
+                    multicast = scm.network_services.models.bgp_address_family.bgp-address-family(
+                        add_path = scm.network_services.models.bgp_address_family_add_path.bgp_address_family_add_path(
                             tx_all_paths = True, 
                             tx_bestpath_per_as = True, ), 
-                        allowas_in = scm_network_services.models.bgp_address_family_allowas_in.bgp_address_family_allowas_in(
+                        allowas_in = scm.network_services.models.bgp_address_family_allowas_in.bgp_address_family_allowas_in(
                             occurrence = 1, 
-                            origin = scm_network_services.models.origin.origin(), ), 
+                            origin = scm.network_services.models.origin.origin(), ), 
                         as_override = True, 
                         default_originate = True, 
                         default_originate_map = '', 
                         enable = True, 
-                        maximum_prefix = scm_network_services.models.bgp_address_family_maximum_prefix.bgp_address_family_maximum_prefix(
-                            action = scm_network_services.models.bgp_address_family_maximum_prefix_action.bgp_address_family_maximum_prefix_action(
-                                restart = scm_network_services.models.bgp_address_family_maximum_prefix_action_restart.bgp_address_family_maximum_prefix_action_restart(
+                        maximum_prefix = scm.network_services.models.bgp_address_family_maximum_prefix.bgp_address_family_maximum_prefix(
+                            action = scm.network_services.models.bgp_address_family_maximum_prefix_action.bgp_address_family_maximum_prefix_action(
+                                restart = scm.network_services.models.bgp_address_family_maximum_prefix_action_restart.bgp_address_family_maximum_prefix_action_restart(
                                     interval = 1, ), 
-                                warning_only = scm_network_services.models.warning_only.warning_only(), ), 
+                                warning_only = scm.network_services.models.warning_only.warning_only(), ), 
                             num_prefixes = 1, 
                             threshold = 1, ), 
-                        next_hop = scm_network_services.models.bgp_address_family_next_hop.bgp_address_family_next_hop(
-                            self = scm_network_services.models.self.self(), 
-                            self_force = scm_network_services.models.self_force.self_force(), ), 
-                        orf = scm_network_services.models.bgp_address_family_orf.bgp_address_family_orf(
+                        next_hop = scm.network_services.models.bgp_address_family_next_hop.bgp_address_family_next_hop(
+                            self = scm.network_services.models.self.self(), 
+                            self_force = scm.network_services.models.self_force.self_force(), ), 
+                        orf = scm.network_services.models.bgp_address_family_orf.bgp_address_family_orf(
                             orf_prefix_list = 'none', ), 
-                        remove_private_as = scm_network_services.models.bgp_address_family_remove_private_as.bgp_address_family_remove_private_AS(
-                            all = scm_network_services.models.all.all(), 
-                            replace_as = scm_network_services.models.replace_as.replace_AS(), ), 
+                        remove_private_as = scm.network_services.models.bgp_address_family_remove_private_as.bgp_address_family_remove_private_AS(
+                            all = scm.network_services.models.all.all(), 
+                            replace_as = scm.network_services.models.replace_as.replace_AS(), ), 
                         route_reflector_client = True, 
-                        send_community = scm_network_services.models.bgp_address_family_send_community.bgp_address_family_send_community(
-                            all = scm_network_services.models.all.all(), 
-                            both = scm_network_services.models.both.both(), 
-                            extended = scm_network_services.models.extended.extended(), 
-                            large = scm_network_services.models.large.large(), 
-                            standard = scm_network_services.models.standard.standard(), ), 
+                        send_community = scm.network_services.models.bgp_address_family_send_community.bgp_address_family_send_community(
+                            all = scm.network_services.models.all.all(), 
+                            both = scm.network_services.models.both.both(), 
+                            extended = scm.network_services.models.extended.extended(), 
+                            large = scm.network_services.models.large.large(), 
+                            standard = scm.network_services.models.standard.standard(), ), 
                         soft_reconfig_with_stored_info = True, ), 
-                    unicast = scm_network_services.models.bgp_address_family.bgp-address-family(
+                    unicast = scm.network_services.models.bgp_address_family.bgp-address-family(
                         as_override = True, 
                         default_originate = True, 
                         default_originate_map = '', 

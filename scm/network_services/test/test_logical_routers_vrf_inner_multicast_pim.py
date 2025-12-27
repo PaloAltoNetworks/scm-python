@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_pim import LogicalRoutersVrfInnerMulticastPim
+from scm.network_services.models.logical_routers_vrf_inner_multicast_pim import LogicalRoutersVrfInnerMulticastPim
 
 class TestLogicalRoutersVrfInnerMulticastPim(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastPim unit test stubs"""
@@ -40,7 +40,7 @@ class TestLogicalRoutersVrfInnerMulticastPim(unittest.TestCase):
                 group_permission = '',
                 if_timer_global = '',
                 interface = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner.logical_routers_vrf_inner_multicast_pim_interface_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner.logical_routers_vrf_inner_multicast_pim_interface_inner(
                         description = '', 
                         dr_priority = 56, 
                         if_timer = '', 
@@ -49,32 +49,32 @@ class TestLogicalRoutersVrfInnerMulticastPim(unittest.TestCase):
                         send_bsm = True, )
                     ],
                 route_ageout_time = 56,
-                rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
+                rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp.logical_routers_vrf_inner_multicast_pim_rp(
                     external_rp = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner.logical_routers_vrf_inner_multicast_pim_rp_external_rp_inner(
                             group_list = '', 
                             name = '', 
                             override = True, )
                         ], 
-                    local_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
-                        candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
+                    local_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp(
+                        candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_candidate_rp(
                             address = '', 
                             advertisement_interval = 56, 
                             group_list = '', 
                             interface = '', 
                             priority = 56, ), 
-                        static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
+                        static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_pim_rp_local_rp_static_rp(
                             address = '', 
                             group_list = '', 
                             interface = '', 
                             override = True, ), ), ),
                 rpf_lookup_mode = 'mrib-then-urib',
                 spt_threshold = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner.logical_routers_vrf_inner_multicast_pim_spt_threshold_inner(
                         name = '', 
                         threshold = '', )
                     ],
-                ssm_address_space = scm_network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
+                ssm_address_space = scm.network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space.logical_routers_vrf_inner_multicast_pim_ssm_address_space(
                     group_list = '', )
             )
         else:

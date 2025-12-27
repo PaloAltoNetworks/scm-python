@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_remove_private_as import BgpAddressFamilyRemovePrivateAS
+from scm.network_services.models.bgp_address_family_remove_private_as import BgpAddressFamilyRemovePrivateAS
 
 class TestBgpAddressFamilyRemovePrivateAS(unittest.TestCase):
     """BgpAddressFamilyRemovePrivateAS unit test stubs"""
@@ -36,8 +36,8 @@ class TestBgpAddressFamilyRemovePrivateAS(unittest.TestCase):
         model = BgpAddressFamilyRemovePrivateAS()
         if include_optional:
             return BgpAddressFamilyRemovePrivateAS(
-                all = scm_network_services.models.all.all(),
-                replace_as = scm_network_services.models.replace_as.replace_AS()
+                all = scm.network_services.models.all.all(),
+                replace_as = scm.network_services.models.replace_as.replace_AS()
             )
         else:
             return BgpAddressFamilyRemovePrivateAS(

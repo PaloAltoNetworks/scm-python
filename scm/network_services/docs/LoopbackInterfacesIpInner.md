@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
+from scm.network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
 
 # TODO update the JSON string below
 json = "{}"

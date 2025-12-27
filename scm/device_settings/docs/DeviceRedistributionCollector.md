@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.device_redistribution_collector import DeviceRedistributionCollector
+from scm.device_settings.models.device_redistribution_collector import DeviceRedistributionCollector
 
 # TODO update the JSON string below
 json = "{}"

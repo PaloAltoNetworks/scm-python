@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_authentication_pre_shared_key import IkeGatewaysAuthenticationPreSharedKey
+from scm.network_services.models.ike_gateways_authentication_pre_shared_key import IkeGatewaysAuthenticationPreSharedKey
 
 class TestIkeGatewaysAuthenticationPreSharedKey(unittest.TestCase):
     """IkeGatewaysAuthenticationPreSharedKey unit test stubs"""

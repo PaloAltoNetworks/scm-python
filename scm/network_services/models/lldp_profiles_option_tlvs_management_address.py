@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
+from scm.network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
 from typing import Optional, Set
 from typing_extensions import Self
 

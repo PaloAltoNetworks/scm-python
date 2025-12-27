@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
+from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
 
 class TestEthernetInterfacesLayer3DhcpClientSendHostname(unittest.TestCase):
     """EthernetInterfacesLayer3DhcpClientSendHostname unit test stubs"""

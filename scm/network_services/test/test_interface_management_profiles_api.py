@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.interface_management_profiles_api import InterfaceManagementProfilesApi
+from scm.network_services.api.interface_management_profiles_api import InterfaceManagementProfilesApi
 
 
 class TestInterfaceManagementProfilesApi(unittest.TestCase):

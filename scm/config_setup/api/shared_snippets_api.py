@@ -20,13 +20,13 @@ from typing_extensions import Annotated
 from pydantic import Field
 from typing import List, Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
-from scm_config_setup.models.snippet_share_load_payload import SnippetShareLoadPayload
-from scm_config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.snippet_share_load_payload import SnippetShareLoadPayload
+from scm.config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class SharedSnippetsApi:

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.http_header_profiles_list_response import HTTPHeaderProfilesListResponse
+from scm.security_services.models.http_header_profiles_list_response import HTTPHeaderProfilesListResponse
 
 # TODO update the JSON string below
 json = "{}"

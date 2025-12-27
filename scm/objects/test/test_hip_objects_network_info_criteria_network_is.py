@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_network_info_criteria_network_is import HipObjectsNetworkInfoCriteriaNetworkIs
+from scm.objects.models.hip_objects_network_info_criteria_network_is import HipObjectsNetworkInfoCriteriaNetworkIs
 
 class TestHipObjectsNetworkInfoCriteriaNetworkIs(unittest.TestCase):
     """HipObjectsNetworkInfoCriteriaNetworkIs unit test stubs"""
@@ -36,10 +36,10 @@ class TestHipObjectsNetworkInfoCriteriaNetworkIs(unittest.TestCase):
         model = HipObjectsNetworkInfoCriteriaNetworkIs()
         if include_optional:
             return HipObjectsNetworkInfoCriteriaNetworkIs(
-                mobile = scm_objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
+                mobile = scm.objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
                     carrier = 'jUR,rZ#UM/?R,Fp^l6$ARj', ),
-                unknown = scm_objects.models.unknown.unknown(),
-                wifi = scm_objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
+                unknown = scm.objects.models.unknown.unknown(),
+                wifi = scm.objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
                     ssid = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
             )
         else:

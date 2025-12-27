@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_option_ntp import DhcpInterfacesServerOptionNtp
+from scm.network_services.models.dhcp_interfaces_server_option_ntp import DhcpInterfacesServerOptionNtp
 
 class TestDhcpInterfacesServerOptionNtp(unittest.TestCase):
     """DhcpInterfacesServerOptionNtp unit test stubs"""

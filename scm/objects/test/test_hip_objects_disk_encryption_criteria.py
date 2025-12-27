@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_disk_encryption_criteria import HipObjectsDiskEncryptionCriteria
+from scm.objects.models.hip_objects_disk_encryption_criteria import HipObjectsDiskEncryptionCriteria
 
 class TestHipObjectsDiskEncryptionCriteria(unittest.TestCase):
     """HipObjectsDiskEncryptionCriteria unit test stubs"""
@@ -37,8 +37,8 @@ class TestHipObjectsDiskEncryptionCriteria(unittest.TestCase):
         if include_optional:
             return HipObjectsDiskEncryptionCriteria(
                 encrypted_locations = [
-                    scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
-                        encryption_state = scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
+                    scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
+                        encryption_state = scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
                             is = 'encrypted', 
                             is_not = 'encrypted', ), 
                         name = '', )

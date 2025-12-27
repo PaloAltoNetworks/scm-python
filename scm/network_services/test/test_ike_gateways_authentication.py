@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
+from scm.network_services.models.ike_gateways_authentication import IkeGatewaysAuthentication
 
 class TestIkeGatewaysAuthentication(unittest.TestCase):
     """IkeGatewaysAuthentication unit test stubs"""
@@ -36,14 +36,14 @@ class TestIkeGatewaysAuthentication(unittest.TestCase):
         model = IkeGatewaysAuthentication()
         if include_optional:
             return IkeGatewaysAuthentication(
-                certificate = scm_network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
+                certificate = scm.network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
                     allow_id_payload_mismatch = True, 
                     certificate_profile = '', 
-                    local_certificate = scm_network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
+                    local_certificate = scm.network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
                         local_certificate_name = '', ), 
                     strict_validation_revocation = True, 
                     use_management_as_source = True, ),
-                pre_shared_key = scm_network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
+                pre_shared_key = scm.network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
                     key = '', )
             )
         else:

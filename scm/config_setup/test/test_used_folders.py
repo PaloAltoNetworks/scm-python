@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.used_folders import UsedFolders
+from scm.config_setup.models.used_folders import UsedFolders
 
 class TestUsedFolders(unittest.TestCase):
     """UsedFolders unit test stubs"""

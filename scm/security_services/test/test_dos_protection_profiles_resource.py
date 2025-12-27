@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_resource import DosProtectionProfilesResource
+from scm.security_services.models.dos_protection_profiles_resource import DosProtectionProfilesResource
 
 class TestDosProtectionProfilesResource(unittest.TestCase):
     """DosProtectionProfilesResource unit test stubs"""
@@ -36,7 +36,7 @@ class TestDosProtectionProfilesResource(unittest.TestCase):
         model = DosProtectionProfilesResource()
         if include_optional:
             return DosProtectionProfilesResource(
-                sessions = scm_security_services.models.dos_protection_profiles_resource_sessions.dos_protection_profiles_resource_sessions(
+                sessions = scm.security_services.models.dos_protection_profiles_resource_sessions.dos_protection_profiles_resource_sessions(
                     enabled = True, 
                     max_concurrent_limit = 1, )
             )

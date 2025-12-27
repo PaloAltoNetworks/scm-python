@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ike_gateways_protocol_ikev1_dpd import IkeGatewaysProtocolIkev1Dpd
+from scm.network_services.models.ike_gateways_protocol_ikev1_dpd import IkeGatewaysProtocolIkev1Dpd
 from typing import Optional, Set
 from typing_extensions import Self
 

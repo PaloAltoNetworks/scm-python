@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.http_header_profiles_api import HTTPHeaderProfilesApi
+from scm.security_services.api.http_header_profiles_api import HTTPHeaderProfilesApi
 
 
 class TestHTTPHeaderProfilesApi(unittest.TestCase):

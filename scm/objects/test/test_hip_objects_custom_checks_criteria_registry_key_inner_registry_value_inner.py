@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner import HipObjectsCustomChecksCriteriaRegistryKeyInnerRegistryValueInner
+from scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner import HipObjectsCustomChecksCriteriaRegistryKeyInnerRegistryValueInner
 
 class TestHipObjectsCustomChecksCriteriaRegistryKeyInnerRegistryValueInner(unittest.TestCase):
     """HipObjectsCustomChecksCriteriaRegistryKeyInnerRegistryValueInner unit test stubs"""

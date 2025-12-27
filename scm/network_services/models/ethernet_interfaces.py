@@ -21,9 +21,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
-from scm_network_services.models.ethernet_interfaces_layer3 import EthernetInterfacesLayer3
-from scm_network_services.models.poe import Poe
+from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
+from scm.network_services.models.ethernet_interfaces_layer3 import EthernetInterfacesLayer3
+from scm.network_services.models.poe import Poe
 from typing import Optional, Set
 from typing_extensions import Self
 

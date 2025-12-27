@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.qo_s_profiles_api import QoSProfilesApi
+from scm.network_services.api.qo_s_profiles_api import QoSProfilesApi
 
 
 class TestQoSProfilesApi(unittest.TestCase):

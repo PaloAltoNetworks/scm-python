@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator
 from typing import Optional, Set
 from typing_extensions import Self
 

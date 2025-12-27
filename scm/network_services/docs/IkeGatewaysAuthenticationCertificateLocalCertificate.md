@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
+from scm.network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
 
 # TODO update the JSON string below
 json = "{}"

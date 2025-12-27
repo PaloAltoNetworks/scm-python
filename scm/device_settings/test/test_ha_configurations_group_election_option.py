@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_election_option import HaConfigurationsGroupElectionOption
+from scm.device_settings.models.ha_configurations_group_election_option import HaConfigurationsGroupElectionOption
 
 class TestHaConfigurationsGroupElectionOption(unittest.TestCase):
     """HaConfigurationsGroupElectionOption unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_profiles_class_bandwidth_type_percentage_class_inner import QosProfilesClassBandwidthTypePercentageClassInner
+from scm.network_services.models.qos_profiles_class_bandwidth_type_percentage_class_inner import QosProfilesClassBandwidthTypePercentageClassInner
 
 class TestQosProfilesClassBandwidthTypePercentageClassInner(unittest.TestCase):
     """QosProfilesClassBandwidthTypePercentageClassInner unit test stubs"""
@@ -36,7 +36,7 @@ class TestQosProfilesClassBandwidthTypePercentageClassInner(unittest.TestCase):
         model = QosProfilesClassBandwidthTypePercentageClassInner()
         if include_optional:
             return QosProfilesClassBandwidthTypePercentageClassInner(
-                class_bandwidth = scm_network_services.models.qos_profiles_class_bandwidth_type_percentage_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_percentage_class_inner_class_bandwidth(
+                class_bandwidth = scm.network_services.models.qos_profiles_class_bandwidth_type_percentage_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_percentage_class_inner_class_bandwidth(
                     egress_guaranteed = 0, 
                     egress_max = 0, ),
                 name = '',

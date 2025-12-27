@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.deleted_subscriber import DeletedSubscriber
+from scm.config_setup.models.deleted_subscriber import DeletedSubscriber
 
 class TestDeletedSubscriber(unittest.TestCase):
     """DeletedSubscriber unit test stubs"""
@@ -37,7 +37,7 @@ class TestDeletedSubscriber(unittest.TestCase):
         if include_optional:
             return DeletedSubscriber(
                 details = '',
-                info = scm_config_setup.models.snippet_share_info.snippet_share_info(
+                info = scm.config_setup.models.snippet_share_info.snippet_share_info(
                     created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     donor_created = 56, 
                     donor_snippet_file_id = 56, 
@@ -50,7 +50,7 @@ class TestDeletedSubscriber(unittest.TestCase):
                     last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     msg_uuid = '', 
                     properties = [
-                        scm_config_setup.models.snippet_share_property.snippet_share_property(
+                        scm.config_setup.models.snippet_share_property.snippet_share_property(
                             created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             created_by = '', 
                             donor_tenant = '', 

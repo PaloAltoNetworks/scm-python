@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_log_settings import InternetRuleTypeLogSettings
+from scm.security_services.models.internet_rule_type_log_settings import InternetRuleTypeLogSettings
 
 # TODO update the JSON string below
 json = "{}"

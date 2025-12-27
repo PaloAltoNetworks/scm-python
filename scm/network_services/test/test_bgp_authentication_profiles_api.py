@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_authentication_profiles_api import BGPAuthenticationProfilesApi
+from scm.network_services.api.bgp_authentication_profiles_api import BGPAuthenticationProfilesApi
 
 
 class TestBGPAuthenticationProfilesApi(unittest.TestCase):

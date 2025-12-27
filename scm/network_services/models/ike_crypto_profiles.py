@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.ike_crypto_profiles_lifetime import IkeCryptoProfilesLifetime
+from scm.network_services.models.ike_crypto_profiles_lifetime import IkeCryptoProfilesLifetime
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_auth_profiles import BgpAuthProfiles
+from scm.network_services.models.bgp_auth_profiles import BgpAuthProfiles
 
 class TestBgpAuthProfiles(unittest.TestCase):
     """BgpAuthProfiles unit test stubs"""

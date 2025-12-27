@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_allow_url_category_inner import InternetRuleTypeAllowUrlCategoryInner
+from scm.security_services.models.internet_rule_type_allow_url_category_inner import InternetRuleTypeAllowUrlCategoryInner
 
 class TestInternetRuleTypeAllowUrlCategoryInner(unittest.TestCase):
     """InternetRuleTypeAllowUrlCategoryInner unit test stubs"""
@@ -40,7 +40,7 @@ class TestInternetRuleTypeAllowUrlCategoryInner(unittest.TestCase):
                 credential_enforcement = 'enabled',
                 decryption = 'enabled',
                 dlp = '',
-                file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                     download = 'allow-all-file-types', 
                     upload = 'allow-all-file-types', ),
                 isolation_profiles = 'none',

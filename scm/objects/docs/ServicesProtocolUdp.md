@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.services_protocol_udp import ServicesProtocolUdp
+from scm.objects.models.services_protocol_udp import ServicesProtocolUdp
 
 # TODO update the JSON string below
 json = "{}"

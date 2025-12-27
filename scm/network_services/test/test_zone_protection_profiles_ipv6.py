@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_ipv6 import ZoneProtectionProfilesIpv6
+from scm.network_services.models.zone_protection_profiles_ipv6 import ZoneProtectionProfilesIpv6
 
 class TestZoneProtectionProfilesIpv6(unittest.TestCase):
     """ZoneProtectionProfilesIpv6 unit test stubs"""
@@ -37,12 +37,12 @@ class TestZoneProtectionProfilesIpv6(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesIpv6(
                 anycast_source = True,
-                filter_ext_hdr = scm_network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr.zone_protection_profiles_ipv6_filter_ext_hdr(
+                filter_ext_hdr = scm.network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr.zone_protection_profiles_ipv6_filter_ext_hdr(
                     dest_option_hdr = True, 
                     hop_by_hop_hdr = True, 
                     routing_hdr = True, ),
                 icmpv6_too_big_small_mtu_discard = True,
-                ignore_inv_pkt = scm_network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt.zone_protection_profiles_ipv6_ignore_inv_pkt(
+                ignore_inv_pkt = scm.network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt.zone_protection_profiles_ipv6_ignore_inv_pkt(
                     dest_unreach = True, 
                     param_problem = True, 
                     pkt_too_big = True, 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.get_auto_vpn_monitor200_response import GetAutoVPNMonitor200Response
+from scm.network_services.models.get_auto_vpn_monitor200_response import GetAutoVPNMonitor200Response
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.schedules_schedule_type_recurring_weekly import SchedulesScheduleTypeRecurringWeekly
+from scm.objects.models.schedules_schedule_type_recurring_weekly import SchedulesScheduleTypeRecurringWeekly
 
 class TestSchedulesScheduleTypeRecurringWeekly(unittest.TestCase):
     """SchedulesScheduleTypeRecurringWeekly unit test stubs"""

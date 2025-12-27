@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.nat_rules_api import NATRulesApi
+from scm.network_services.api.nat_rules_api import NATRulesApi
 
 
 class TestNATRulesApi(unittest.TestCase):

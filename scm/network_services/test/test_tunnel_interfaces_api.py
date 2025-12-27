@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.tunnel_interfaces_api import TunnelInterfacesApi
+from scm.network_services.api.tunnel_interfaces_api import TunnelInterfacesApi
 
 
 class TestTunnelInterfacesApi(unittest.TestCase):

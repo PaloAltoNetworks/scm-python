@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner import LogicalRoutersVrfInnerMulticastInterfaceGroupInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner import LogicalRoutersVrfInnerMulticastInterfaceGroupInner
 
 # TODO update the JSON string below
 json = "{}"

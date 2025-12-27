@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_error_correction_profiles_mode import SdwanErrorCorrectionProfilesMode
+from scm.network_services.models.sdwan_error_correction_profiles_mode import SdwanErrorCorrectionProfilesMode
 
 class TestSdwanErrorCorrectionProfilesMode(unittest.TestCase):
     """SdwanErrorCorrectionProfilesMode unit test stubs"""
@@ -36,10 +36,10 @@ class TestSdwanErrorCorrectionProfilesMode(unittest.TestCase):
         model = SdwanErrorCorrectionProfilesMode()
         if include_optional:
             return SdwanErrorCorrectionProfilesMode(
-                forward_error_correction = scm_network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
+                forward_error_correction = scm.network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction.sdwan_error_correction_profiles_mode_forward_error_correction(
                     ratio = '', 
                     recovery_duration = 56, ),
-                packet_duplication = scm_network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
+                packet_duplication = scm.network_services.models.sdwan_error_correction_profiles_mode_packet_duplication.sdwan_error_correction_profiles_mode_packet_duplication(
                     recovery_duration_pd = 56, )
             )
         else:

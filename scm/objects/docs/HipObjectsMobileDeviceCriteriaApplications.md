@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_mobile_device_criteria_applications import HipObjectsMobileDeviceCriteriaApplications
+from scm.objects.models.hip_objects_mobile_device_criteria_applications import HipObjectsMobileDeviceCriteriaApplications
 
 # TODO update the JSON string below
 json = "{}"

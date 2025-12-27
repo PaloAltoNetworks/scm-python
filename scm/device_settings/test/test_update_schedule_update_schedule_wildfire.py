@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_wildfire import UpdateScheduleUpdateScheduleWildfire
+from scm.device_settings.models.update_schedule_update_schedule_wildfire import UpdateScheduleUpdateScheduleWildfire
 
 class TestUpdateScheduleUpdateScheduleWildfire(unittest.TestCase):
     """UpdateScheduleUpdateScheduleWildfire unit test stubs"""
@@ -36,45 +36,45 @@ class TestUpdateScheduleUpdateScheduleWildfire(unittest.TestCase):
         model = UpdateScheduleUpdateScheduleWildfire()
         if include_optional:
             return UpdateScheduleUpdateScheduleWildfire(
-                recurring = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring.update_schedule_update_schedule_wildfire_recurring(
-                    every_15_mins = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_15_mins.update_schedule_update_schedule_wildfire_recurring_every_15_mins(
+                recurring = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring.update_schedule_update_schedule_wildfire_recurring(
+                    every_15_mins = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_15_mins.update_schedule_update_schedule_wildfire_recurring_every_15_mins(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_30_mins = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_30_mins.update_schedule_update_schedule_wildfire_recurring_every_30_mins(
+                    every_30_mins = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_30_mins.update_schedule_update_schedule_wildfire_recurring_every_30_mins(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_hour = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_hour.update_schedule_update_schedule_wildfire_recurring_every_hour(
+                    every_hour = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_hour.update_schedule_update_schedule_wildfire_recurring_every_hour(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_min = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min.update_schedule_update_schedule_wildfire_recurring_every_min(
+                    every_min = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min.update_schedule_update_schedule_wildfire_recurring_every_min(
                         action = 'download-only', 
                         sync_to_peer = True, ), 
-                    none = scm_device_settings.models.none.none(), 
-                    real_time = scm_device_settings.models.real_time.real_time(), )
+                    none = scm.device_settings.models.none.none(), 
+                    real_time = scm.device_settings.models.real_time.real_time(), )
             )
         else:
             return UpdateScheduleUpdateScheduleWildfire(
-                recurring = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring.update_schedule_update_schedule_wildfire_recurring(
-                    every_15_mins = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_15_mins.update_schedule_update_schedule_wildfire_recurring_every_15_mins(
+                recurring = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring.update_schedule_update_schedule_wildfire_recurring(
+                    every_15_mins = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_15_mins.update_schedule_update_schedule_wildfire_recurring_every_15_mins(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_30_mins = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_30_mins.update_schedule_update_schedule_wildfire_recurring_every_30_mins(
+                    every_30_mins = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_30_mins.update_schedule_update_schedule_wildfire_recurring_every_30_mins(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_hour = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_hour.update_schedule_update_schedule_wildfire_recurring_every_hour(
+                    every_hour = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_hour.update_schedule_update_schedule_wildfire_recurring_every_hour(
                         action = 'download-only', 
                         at = 0, 
                         sync_to_peer = True, ), 
-                    every_min = scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min.update_schedule_update_schedule_wildfire_recurring_every_min(
+                    every_min = scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min.update_schedule_update_schedule_wildfire_recurring_every_min(
                         action = 'download-only', 
                         sync_to_peer = True, ), 
-                    none = scm_device_settings.models.none.none(), 
-                    real_time = scm_device_settings.models.real_time.real_time(), ),
+                    none = scm.device_settings.models.none.none(), 
+                    real_time = scm.device_settings.models.real_time.real_time(), ),
         )
         """
 

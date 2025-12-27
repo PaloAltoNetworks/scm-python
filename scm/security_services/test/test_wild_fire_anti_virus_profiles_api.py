@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.wild_fire_anti_virus_profiles_api import WildFireAntiVirusProfilesApi
+from scm.security_services.api.wild_fire_anti_virus_profiles_api import WildFireAntiVirusProfilesApi
 
 
 class TestWildFireAntiVirusProfilesApi(unittest.TestCase):

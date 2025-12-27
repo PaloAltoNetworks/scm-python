@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min import UpdateScheduleUpdateScheduleWildfireRecurringEveryMin
+from scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every_min import UpdateScheduleUpdateScheduleWildfireRecurringEveryMin
 
 class TestUpdateScheduleUpdateScheduleWildfireRecurringEveryMin(unittest.TestCase):
     """UpdateScheduleUpdateScheduleWildfireRecurringEveryMin unit test stubs"""

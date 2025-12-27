@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_match_address import BgpRouteMapRedistributionsOspfBgpRouteMapInnerMatchAddress
+from scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_match_address import BgpRouteMapRedistributionsOspfBgpRouteMapInnerMatchAddress
 
 class TestBgpRouteMapRedistributionsOspfBgpRouteMapInnerMatchAddress(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfBgpRouteMapInnerMatchAddress unit test stubs"""

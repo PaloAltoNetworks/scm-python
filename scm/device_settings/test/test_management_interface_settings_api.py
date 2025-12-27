@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.management_interface_settings_api import ManagementInterfaceSettingsApi
+from scm.device_settings.api.management_interface_settings_api import ManagementInterfaceSettingsApi
 
 
 class TestManagementInterfaceSettingsApi(unittest.TestCase):

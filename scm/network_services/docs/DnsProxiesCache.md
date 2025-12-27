@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_cache import DnsProxiesCache
+from scm.network_services.models.dns_proxies_cache import DnsProxiesCache
 
 # TODO update the JSON string below
 json = "{}"

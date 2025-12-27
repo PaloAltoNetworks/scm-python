@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.authentication_settings import AuthenticationSettings
+from scm.device_settings.models.authentication_settings import AuthenticationSettings
 
 # TODO update the JSON string below
 json = "{}"

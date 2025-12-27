@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.base_rule_properties import BaseRuleProperties
+from scm.security_services.models.base_rule_properties import BaseRuleProperties
 
 class TestBaseRuleProperties(unittest.TestCase):
     """BaseRuleProperties unit test stubs"""

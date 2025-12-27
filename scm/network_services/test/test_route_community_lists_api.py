@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.route_community_lists_api import RouteCommunityListsApi
+from scm.network_services.api.route_community_lists_api import RouteCommunityListsApi
 
 
 class TestRouteCommunityListsApi(unittest.TestCase):

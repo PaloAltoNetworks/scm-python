@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_traffic_distribution_profiles import SdwanTrafficDistributionProfiles
+from scm.network_services.models.sdwan_traffic_distribution_profiles import SdwanTrafficDistributionProfiles
 
 class TestSdwanTrafficDistributionProfiles(unittest.TestCase):
     """SdwanTrafficDistributionProfiles unit test stubs"""
@@ -40,7 +40,7 @@ class TestSdwanTrafficDistributionProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 link_tags = [
-                    scm_network_services.models.sdwan_traffic_distribution_profiles_link_tags_inner.sdwan_traffic_distribution_profiles_link_tags_inner(
+                    scm.network_services.models.sdwan_traffic_distribution_profiles_link_tags_inner.sdwan_traffic_distribution_profiles_link_tags_inner(
                         name = '', 
                         weight = 0, )
                     ],

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within import HipObjectsMobileDeviceCriteriaLastCheckinTimeNotWithin
+from scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within import HipObjectsMobileDeviceCriteriaLastCheckinTimeNotWithin
 
 class TestHipObjectsMobileDeviceCriteriaLastCheckinTimeNotWithin(unittest.TestCase):
     """HipObjectsMobileDeviceCriteriaLastCheckinTimeNotWithin unit test stubs"""

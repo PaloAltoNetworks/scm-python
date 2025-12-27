@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface_permitted_ip_inner import ManagementInterfaceManagementInterfacePermittedIpInner
+from scm.device_settings.models.management_interface_management_interface_permitted_ip_inner import ManagementInterfaceManagementInterfacePermittedIpInner
 
 class TestManagementInterfaceManagementInterfacePermittedIpInner(unittest.TestCase):
     """ManagementInterfaceManagementInterfacePermittedIpInner unit test stubs"""

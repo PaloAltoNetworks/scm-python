@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
+from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
 
 class TestEthernetInterfacesLayer3DhcpClient(unittest.TestCase):
     """EthernetInterfacesLayer3DhcpClient unit test stubs"""
@@ -39,7 +39,7 @@ class TestEthernetInterfacesLayer3DhcpClient(unittest.TestCase):
                 create_default_route = True,
                 default_route_metric = 1,
                 enable = True,
-                send_hostname = scm_network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname.ethernet_interfaces_layer3_dhcp_client_send_hostname(
+                send_hostname = scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname.ethernet_interfaces_layer3_dhcp_client_send_hostname(
                     enable = True, 
                     hostname = 'system-hostname', )
             )

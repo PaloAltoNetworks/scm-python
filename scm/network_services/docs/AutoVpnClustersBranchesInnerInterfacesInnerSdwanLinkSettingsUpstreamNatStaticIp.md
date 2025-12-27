@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip import AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettingsUpstreamNatStaticIp
+from scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip import AutoVpnClustersBranchesInnerInterfacesInnerSdwanLinkSettingsUpstreamNatStaticIp
 
 # TODO update the JSON string below
 json = "{}"

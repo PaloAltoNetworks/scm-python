@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.local_users import LocalUsers
+from scm.identity_services.models.local_users import LocalUsers
 
 class TestLocalUsers(unittest.TestCase):
     """LocalUsers unit test stubs"""

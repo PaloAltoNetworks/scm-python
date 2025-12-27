@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules import PbfRules
+from scm.network_services.models.pbf_rules import PbfRules
 
 class TestPbfRules(unittest.TestCase):
     """PbfRules unit test stubs"""
@@ -36,18 +36,18 @@ class TestPbfRules(unittest.TestCase):
         model = PbfRules()
         if include_optional:
             return PbfRules(
-                action = scm_network_services.models.pbf_rules_action.pbf_rules_action(
-                    discard = scm_network_services.models.discard.discard(), 
-                    forward = scm_network_services.models.pbf_rules_action_forward.pbf_rules_action_forward(
+                action = scm.network_services.models.pbf_rules_action.pbf_rules_action(
+                    discard = scm.network_services.models.discard.discard(), 
+                    forward = scm.network_services.models.pbf_rules_action_forward.pbf_rules_action_forward(
                         egress_interface = '', 
-                        monitor = scm_network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
+                        monitor = scm.network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
                             disable_if_unreachable = True, 
                             ip_address = '', 
                             profile = '', ), 
-                        nexthop = scm_network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
+                        nexthop = scm.network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
                             fqdn = '', 
                             ip_address = '', ), ), 
-                    no_pbf = scm_network_services.models.no_pbf.no_pbf(), ),
+                    no_pbf = scm.network_services.models.no_pbf.no_pbf(), ),
                 application = [
                     ''
                     ],
@@ -56,14 +56,14 @@ class TestPbfRules(unittest.TestCase):
                     ''
                     ],
                 device = 'My Device',
-                enforce_symmetric_return = scm_network_services.models.pbf_rules_enforce_symmetric_return.pbf_rules_enforce_symmetric_return(
+                enforce_symmetric_return = scm.network_services.models.pbf_rules_enforce_symmetric_return.pbf_rules_enforce_symmetric_return(
                     enabled = True, 
                     nexthop_address_list = [
-                        scm_network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner(
+                        scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner(
                             name = '', )
                         ], ),
                 folder = 'My Folder',
-                var_from = scm_network_services.models.pbf_rules_from.pbf_rules_from(
+                var_from = scm.network_services.models.pbf_rules_from.pbf_rules_from(
                     interface = [
                         ''
                         ], 

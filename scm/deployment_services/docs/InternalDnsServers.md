@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.internal_dns_servers import InternalDnsServers
+from scm.deployment_services.models.internal_dns_servers import InternalDnsServers
 
 # TODO update the JSON string below
 json = "{}"

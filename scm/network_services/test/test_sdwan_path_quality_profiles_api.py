@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.sdwan_path_quality_profiles_api import SDWANPathQualityProfilesApi
+from scm.network_services.api.sdwan_path_quality_profiles_api import SDWANPathQualityProfilesApi
 
 
 class TestSDWANPathQualityProfilesApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_rules_action import DosProtectionRulesAction
+from scm.security_services.models.dos_protection_rules_action import DosProtectionRulesAction
 
 class TestDosProtectionRulesAction(unittest.TestCase):
     """DosProtectionRulesAction unit test stubs"""
@@ -36,9 +36,9 @@ class TestDosProtectionRulesAction(unittest.TestCase):
         model = DosProtectionRulesAction()
         if include_optional:
             return DosProtectionRulesAction(
-                allow = scm_security_services.models.allow.allow(),
-                deny = scm_security_services.models.deny.deny(),
-                protect = scm_security_services.models.protect.protect()
+                allow = scm.security_services.models.allow.allow(),
+                deny = scm.security_services.models.deny.deny(),
+                protect = scm.security_services.models.protect.protect()
             )
         else:
             return DosProtectionRulesAction(

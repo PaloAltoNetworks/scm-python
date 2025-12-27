@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces_list_response import AggregateInterfacesListResponse
+from scm.network_services.models.aggregate_interfaces_list_response import AggregateInterfacesListResponse
 
 class TestAggregateInterfacesListResponse(unittest.TestCase):
     """AggregateInterfacesListResponse unit test stubs"""

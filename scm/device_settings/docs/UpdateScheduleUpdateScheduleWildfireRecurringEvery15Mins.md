@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring_every15_mins import UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins
+from scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring_every15_mins import UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins
 
 # TODO update the JSON string below
 json = "{}"

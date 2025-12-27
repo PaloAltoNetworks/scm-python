@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_timeouts import SessionTimeouts
+from scm.device_settings.models.session_timeouts import SessionTimeouts
 
 class TestSessionTimeouts(unittest.TestCase):
     """SessionTimeouts unit test stubs"""
@@ -39,7 +39,7 @@ class TestSessionTimeouts(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                session_timeouts = scm_device_settings.models.session_timeouts_session_timeouts.session_timeouts_session_timeouts(
+                session_timeouts = scm.device_settings.models.session_timeouts_session_timeouts.session_timeouts_session_timeouts(
                     timeout_captive_portal = 1, 
                     timeout_default = 1, 
                     timeout_discard_default = 1, 

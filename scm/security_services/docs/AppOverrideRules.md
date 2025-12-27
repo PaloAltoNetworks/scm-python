@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.app_override_rules import AppOverrideRules
+from scm.security_services.models.app_override_rules import AppOverrideRules
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.trusts_api import TrustsApi
+from scm.config_setup.api.trusts_api import TrustsApi
 
 
 class TestTrustsApi(unittest.TestCase):

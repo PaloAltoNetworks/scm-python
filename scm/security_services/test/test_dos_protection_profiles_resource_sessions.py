@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_resource_sessions import DosProtectionProfilesResourceSessions
+from scm.security_services.models.dos_protection_profiles_resource_sessions import DosProtectionProfilesResourceSessions
 
 class TestDosProtectionProfilesResourceSessions(unittest.TestCase):
     """DosProtectionProfilesResourceSessions unit test stubs"""

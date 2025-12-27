@@ -20,14 +20,14 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
-from scm_config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class SubscribedTenantsApi:

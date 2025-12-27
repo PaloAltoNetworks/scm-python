@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles import AuthenticationProfiles
+from scm.identity_services.models.authentication_profiles import AuthenticationProfiles
 
 class TestAuthenticationProfiles(unittest.TestCase):
     """AuthenticationProfiles unit test stubs"""
@@ -42,40 +42,40 @@ class TestAuthenticationProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                lockout = scm_identity_services.models.authentication_profiles_lockout.authentication_profiles_lockout(
+                lockout = scm.identity_services.models.authentication_profiles_lockout.authentication_profiles_lockout(
                     failed_attempts = 0, 
                     lockout_time = 0, ),
-                method = scm_identity_services.models.authentication_profiles_method.authentication_profiles_method(
-                    cloud = scm_identity_services.models.authentication_profiles_method_cloud.authentication_profiles_method_cloud(
+                method = scm.identity_services.models.authentication_profiles_method.authentication_profiles_method(
+                    cloud = scm.identity_services.models.authentication_profiles_method_cloud.authentication_profiles_method_cloud(
                         profile_name = '', ), 
-                    kerberos = scm_identity_services.models.authentication_profiles_method_kerberos.authentication_profiles_method_kerberos(
+                    kerberos = scm.identity_services.models.authentication_profiles_method_kerberos.authentication_profiles_method_kerberos(
                         realm = '', 
                         server_profile = '', ), 
-                    ldap = scm_identity_services.models.authentication_profiles_method_ldap.authentication_profiles_method_ldap(
+                    ldap = scm.identity_services.models.authentication_profiles_method_ldap.authentication_profiles_method_ldap(
                         login_attribute = '', 
                         passwd_exp_days = 56, 
                         server_profile = '', ), 
-                    local_database = scm_identity_services.models.local_database.local_database(), 
-                    radius = scm_identity_services.models.authentication_profiles_method_radius.authentication_profiles_method_radius(
+                    local_database = scm.identity_services.models.local_database.local_database(), 
+                    radius = scm.identity_services.models.authentication_profiles_method_radius.authentication_profiles_method_radius(
                         checkgroup = True, 
                         server_profile = '', ), 
-                    saml_idp = scm_identity_services.models.authentication_profiles_method_saml_idp.authentication_profiles_method_saml_idp(
+                    saml_idp = scm.identity_services.models.authentication_profiles_method_saml_idp.authentication_profiles_method_saml_idp(
                         attribute_name_usergroup = '0', 
                         attribute_name_username = '0', 
                         certificate_profile = '', 
                         enable_single_logout = True, 
                         request_signing_certificate = '', 
                         server_profile = '', ), 
-                    tacplus = scm_identity_services.models.authentication_profiles_method_tacplus.authentication_profiles_method_tacplus(
+                    tacplus = scm.identity_services.models.authentication_profiles_method_tacplus.authentication_profiles_method_tacplus(
                         checkgroup = True, 
                         server_profile = '', ), ),
-                multi_factor_auth = scm_identity_services.models.authentication_profiles_multi_factor_auth.authentication_profiles_multi_factor_auth(
+                multi_factor_auth = scm.identity_services.models.authentication_profiles_multi_factor_auth.authentication_profiles_multi_factor_auth(
                     factors = [
                         ''
                         ], 
                     mfa_enable = True, ),
                 name = '',
-                single_sign_on = scm_identity_services.models.authentication_profiles_single_sign_on.authentication_profiles_single_sign_on(
+                single_sign_on = scm.identity_services.models.authentication_profiles_single_sign_on.authentication_profiles_single_sign_on(
                     kerberos_keytab = '', 
                     realm = '', ),
                 snippet = 'My Snippet',

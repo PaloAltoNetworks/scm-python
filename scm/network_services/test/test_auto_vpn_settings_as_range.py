@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_settings_as_range import AutoVpnSettingsAsRange
+from scm.network_services.models.auto_vpn_settings_as_range import AutoVpnSettingsAsRange
 
 class TestAutoVpnSettingsAsRange(unittest.TestCase):
     """AutoVpnSettingsAsRange unit test stubs"""

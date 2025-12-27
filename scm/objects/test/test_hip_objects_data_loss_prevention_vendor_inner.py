@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_data_loss_prevention_vendor_inner import HipObjectsDataLossPreventionVendorInner
+from scm.objects.models.hip_objects_data_loss_prevention_vendor_inner import HipObjectsDataLossPreventionVendorInner
 
 class TestHipObjectsDataLossPreventionVendorInner(unittest.TestCase):
     """HipObjectsDataLossPreventionVendorInner unit test stubs"""

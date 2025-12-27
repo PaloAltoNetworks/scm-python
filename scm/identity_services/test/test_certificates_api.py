@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.certificates_api import CertificatesApi
+from scm.identity_services.api.certificates_api import CertificatesApi
 
 
 class TestCertificatesApi(unittest.TestCase):

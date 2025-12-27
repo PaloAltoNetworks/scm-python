@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set import BgpRouteMapRedistributionsBgpOspfRouteMapInnerSet
+from scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set import BgpRouteMapRedistributionsBgpOspfRouteMapInnerSet
 
 class TestBgpRouteMapRedistributionsBgpOspfRouteMapInnerSet(unittest.TestCase):
     """BgpRouteMapRedistributionsBgpOspfRouteMapInnerSet unit test stubs"""
@@ -36,7 +36,7 @@ class TestBgpRouteMapRedistributionsBgpOspfRouteMapInnerSet(unittest.TestCase):
         model = BgpRouteMapRedistributionsBgpOspfRouteMapInnerSet()
         if include_optional:
             return BgpRouteMapRedistributionsBgpOspfRouteMapInnerSet(
-                metric = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric(
+                metric = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric(
                     action = 'set', 
                     value = 0, ),
                 metric_type = 'type-1',

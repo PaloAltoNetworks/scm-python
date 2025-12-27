@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
+from scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
 
 # TODO update the JSON string below
 json = "{}"

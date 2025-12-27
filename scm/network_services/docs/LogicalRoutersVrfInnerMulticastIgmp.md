@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_multicast_igmp import LogicalRoutersVrfInnerMulticastIgmp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_igmp import LogicalRoutersVrfInnerMulticastIgmp
 
 # TODO update the JSON string below
 json = "{}"

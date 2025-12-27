@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.lldp_profiles_list_response import LLDPProfilesListResponse
+from scm.network_services.models.lldp_profiles_list_response import LLDPProfilesListResponse
 
 class TestLLDPProfilesListResponse(unittest.TestCase):
     """LLDPProfilesListResponse unit test stubs"""

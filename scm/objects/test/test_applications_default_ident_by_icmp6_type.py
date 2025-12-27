@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
+from scm.objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
 
 class TestApplicationsDefaultIdentByIcmp6Type(unittest.TestCase):
     """ApplicationsDefaultIdentByIcmp6Type unit test stubs"""

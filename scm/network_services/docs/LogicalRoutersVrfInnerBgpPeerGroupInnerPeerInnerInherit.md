@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit
 
 # TODO update the JSON string below
 json = "{}"

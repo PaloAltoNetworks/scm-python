@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.application_filters import ApplicationFilters
+from scm.objects.models.application_filters import ApplicationFilters
 
 class TestApplicationFilters(unittest.TestCase):
     """ApplicationFilters unit test stubs"""
@@ -66,7 +66,7 @@ class TestApplicationFilters(unittest.TestCase):
                 subcategory = [
                     ''
                     ],
-                tagging = scm_objects.models.application_filters_tagging.application_filters_tagging(
+                tagging = scm.objects.models.application_filters_tagging.application_filters_tagging(
                     no_tag = True, 
                     tag = [
                         ''

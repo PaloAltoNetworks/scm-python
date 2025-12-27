@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
+from scm.network_services.models.sdwan_path_quality_profiles_metric_pkt_loss import SdwanPathQualityProfilesMetricPktLoss
 
 class TestSdwanPathQualityProfilesMetricPktLoss(unittest.TestCase):
     """SdwanPathQualityProfilesMetricPktLoss unit test stubs"""

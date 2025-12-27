@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_signatures_signature_combination_time_attribute import AntiSpywareSignaturesSignatureCombinationTimeAttribute
+from scm.security_services.models.anti_spyware_signatures_signature_combination_time_attribute import AntiSpywareSignaturesSignatureCombinationTimeAttribute
 
 # TODO update the JSON string below
 json = "{}"

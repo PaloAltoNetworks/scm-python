@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.session_settings_session_settings_icmpv6_rate_limit import SessionSettingsSessionSettingsIcmpv6RateLimit
+from scm.device_settings.models.session_settings_session_settings_icmpv6_rate_limit import SessionSettingsSessionSettingsIcmpv6RateLimit
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner import ZoneProtectionProfilesL2SecGroupTagProtectionTagsInner
+from scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner import ZoneProtectionProfilesL2SecGroupTagProtectionTagsInner
 
 # TODO update the JSON string below
 json = "{}"

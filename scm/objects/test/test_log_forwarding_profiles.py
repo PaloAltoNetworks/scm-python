@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.log_forwarding_profiles import LogForwardingProfiles
+from scm.objects.models.log_forwarding_profiles import LogForwardingProfiles
 
 class TestLogForwardingProfiles(unittest.TestCase):
     """LogForwardingProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestLogForwardingProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 match_list = [
-                    scm_objects.models.log_forwarding_profiles_match_list_inner.log_forwarding_profiles_match_list_inner(
+                    scm.objects.models.log_forwarding_profiles_match_list_inner.log_forwarding_profiles_match_list_inner(
                         action_desc = '', 
                         filter = '', 
                         log_type = 'traffic', 

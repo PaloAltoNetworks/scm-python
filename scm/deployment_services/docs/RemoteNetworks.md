@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.remote_networks import RemoteNetworks
+from scm.deployment_services.models.remote_networks import RemoteNetworks
 
 # TODO update the JSON string below
 json = "{}"

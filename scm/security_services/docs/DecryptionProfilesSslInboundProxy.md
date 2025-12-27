@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
+from scm.security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
 
 # TODO update the JSON string below
 json = "{}"

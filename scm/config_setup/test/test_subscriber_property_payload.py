@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
+from scm.config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
 
 class TestSubscriberPropertyPayload(unittest.TestCase):
     """SubscriberPropertyPayload unit test stubs"""
@@ -37,7 +37,7 @@ class TestSubscriberPropertyPayload(unittest.TestCase):
         if include_optional:
             return SubscriberPropertyPayload(
                 var_property = [
-                    scm_config_setup.models.property_item.property_item(
+                    scm.config_setup.models.property_item.property_item(
                         id = 56, 
                         name = '', 
                         value = '', )

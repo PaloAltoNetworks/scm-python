@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
+from scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
 
 class TestEthernetInterfacesLayer3PppoeStaticAddress(unittest.TestCase):
     """EthernetInterfacesLayer3PppoeStaticAddress unit test stubs"""

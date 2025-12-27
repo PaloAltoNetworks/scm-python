@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner import LogicalRoutersVrfInnerOspfAuthProfileInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner import LogicalRoutersVrfInnerOspfAuthProfileInner
 
 class TestLogicalRoutersVrfInnerOspfAuthProfileInner(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAuthProfileInner unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerOspfAuthProfileInner(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerOspfAuthProfileInner(
                 md5 = [
-                    scm_network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner.logical_routers_vrf_inner_ospf_auth_profile_inner_md5_inner(
                         key = '', 
                         name = 1.337, 
                         preferred = True, )

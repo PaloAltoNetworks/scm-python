@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
+from scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
 
 # TODO update the JSON string below
 json = "{}"

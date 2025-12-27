@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_default_inheritance import DnsProxiesDefaultInheritance
+from scm.network_services.models.dns_proxies_default_inheritance import DnsProxiesDefaultInheritance
 
 class TestDnsProxiesDefaultInheritance(unittest.TestCase):
     """DnsProxiesDefaultInheritance unit test stubs"""

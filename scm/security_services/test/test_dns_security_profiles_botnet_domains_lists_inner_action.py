@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_botnet_domains_lists_inner_action import DnsSecurityProfilesBotnetDomainsListsInnerAction
+from scm.security_services.models.dns_security_profiles_botnet_domains_lists_inner_action import DnsSecurityProfilesBotnetDomainsListsInnerAction
 
 class TestDnsSecurityProfilesBotnetDomainsListsInnerAction(unittest.TestCase):
     """DnsSecurityProfilesBotnetDomainsListsInnerAction unit test stubs"""
@@ -36,10 +36,10 @@ class TestDnsSecurityProfilesBotnetDomainsListsInnerAction(unittest.TestCase):
         model = DnsSecurityProfilesBotnetDomainsListsInnerAction()
         if include_optional:
             return DnsSecurityProfilesBotnetDomainsListsInnerAction(
-                alert = scm_security_services.models.alert.alert(),
-                allow = scm_security_services.models.allow.allow(),
-                block = scm_security_services.models.block.block(),
-                sinkhole = scm_security_services.models.sinkhole.sinkhole()
+                alert = scm.security_services.models.alert.alert(),
+                allow = scm.security_services.models.allow.allow(),
+                block = scm.security_services.models.block.block(),
+                sinkhole = scm.security_services.models.sinkhole.sinkhole()
             )
         else:
             return DnsSecurityProfilesBotnetDomainsListsInnerAction(

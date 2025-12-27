@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.radius_server_profiles_protocol import RadiusServerProfilesProtocol
+from scm.identity_services.models.radius_server_profiles_protocol import RadiusServerProfilesProtocol
 
 class TestRadiusServerProfilesProtocol(unittest.TestCase):
     """RadiusServerProfilesProtocol unit test stubs"""
@@ -36,16 +36,16 @@ class TestRadiusServerProfilesProtocol(unittest.TestCase):
         model = RadiusServerProfilesProtocol()
         if include_optional:
             return RadiusServerProfilesProtocol(
-                chap = scm_identity_services.models.chap.CHAP(),
-                eap_ttls_with_pap = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                chap = scm.identity_services.models.chap.CHAP(),
+                eap_ttls_with_pap = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                     anon_outer_id = True, 
                     radius_cert_profile = '', ),
-                pap = scm_identity_services.models.pap.PAP(),
-                peap_mschapv2 = scm_identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
+                pap = scm.identity_services.models.pap.PAP(),
+                peap_mschapv2 = scm.identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
                     allow_pwd_change = True, 
                     anon_outer_id = True, 
                     radius_cert_profile = '', ),
-                peap_with_gtc = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                peap_with_gtc = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                     anon_outer_id = True, 
                     radius_cert_profile = '', )
             )

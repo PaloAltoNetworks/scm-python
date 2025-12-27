@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.trusts_validation_payload import TrustsValidationPayload
+from scm.config_setup.models.trusts_validation_payload import TrustsValidationPayload
 
 class TestTrustsValidationPayload(unittest.TestCase):
     """TrustsValidationPayload unit test stubs"""

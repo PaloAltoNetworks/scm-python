@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type_regular import RouteCommunityListsTypeRegular
+from scm.network_services.models.route_community_lists_type_regular import RouteCommunityListsTypeRegular
 
 class TestRouteCommunityListsTypeRegular(unittest.TestCase):
     """RouteCommunityListsTypeRegular unit test stubs"""
@@ -37,7 +37,7 @@ class TestRouteCommunityListsTypeRegular(unittest.TestCase):
         if include_optional:
             return RouteCommunityListsTypeRegular(
                 regular_entry = [
-                    scm_network_services.models.route_community_lists_type_regular_regular_entry_inner.route_community_lists_type_regular_regular_entry_inner(
+                    scm.network_services.models.route_community_lists_type_regular_regular_entry_inner.route_community_lists_type_regular_regular_entry_inner(
                         action = 'deny', 
                         community = [
                             'blackhole'

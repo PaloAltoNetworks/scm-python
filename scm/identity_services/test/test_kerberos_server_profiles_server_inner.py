@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.kerberos_server_profiles_server_inner import KerberosServerProfilesServerInner
+from scm.identity_services.models.kerberos_server_profiles_server_inner import KerberosServerProfilesServerInner
 
 class TestKerberosServerProfilesServerInner(unittest.TestCase):
     """KerberosServerProfilesServerInner unit test stubs"""

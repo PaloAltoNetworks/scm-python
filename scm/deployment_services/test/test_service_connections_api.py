@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.service_connections_api import ServiceConnectionsApi
+from scm.deployment_services.api.service_connections_api import ServiceConnectionsApi
 
 
 class TestServiceConnectionsApi(unittest.TestCase):

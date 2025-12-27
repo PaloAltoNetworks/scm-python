@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.session_settings_session_settings_nat64 import SessionSettingsSessionSettingsNat64
+from scm.device_settings.models.session_settings_session_settings_nat64 import SessionSettingsSessionSettingsNat64
 
 # TODO update the JSON string below
 json = "{}"

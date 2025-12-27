@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
+from scm.device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
 
 class TestSessionTimeoutsSessionTimeouts(unittest.TestCase):
     """SessionTimeoutsSessionTimeouts unit test stubs"""

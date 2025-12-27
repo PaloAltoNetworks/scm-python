@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner import LogicalRoutersVrfInnerMulticastPimInterfaceInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_pim_interface_inner import LogicalRoutersVrfInnerMulticastPimInterfaceInner
 
 class TestLogicalRoutersVrfInnerMulticastPimInterfaceInner(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastPimInterfaceInner unit test stubs"""

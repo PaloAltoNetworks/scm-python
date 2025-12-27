@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_crypto_profiles_lifetime import IkeCryptoProfilesLifetime
+from scm.network_services.models.ike_crypto_profiles_lifetime import IkeCryptoProfilesLifetime
 
 class TestIkeCryptoProfilesLifetime(unittest.TestCase):
     """IkeCryptoProfilesLifetime unit test stubs"""

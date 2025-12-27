@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.schedules_api import SchedulesApi
+from scm.objects.api.schedules_api import SchedulesApi
 
 
 class TestSchedulesApi(unittest.TestCase):

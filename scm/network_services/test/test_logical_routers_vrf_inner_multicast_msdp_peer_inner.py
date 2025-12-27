@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner import LogicalRoutersVrfInnerMulticastMsdpPeerInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner import LogicalRoutersVrfInnerMulticastMsdpPeerInner
 
 class TestLogicalRoutersVrfInnerMulticastMsdpPeerInner(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastMsdpPeerInner unit test stubs"""
@@ -39,13 +39,13 @@ class TestLogicalRoutersVrfInnerMulticastMsdpPeerInner(unittest.TestCase):
                 authentication = '',
                 enable = True,
                 inbound_sa_filter = '',
-                local_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                local_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                     interface = '', 
                     ip = '', ),
                 max_sa = 56,
                 name = '',
                 outbound_sa_filter = '',
-                peer_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
+                peer_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
                     fqdn = '', 
                     ip = '', ),
                 peer_as = ''

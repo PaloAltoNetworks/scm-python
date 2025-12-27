@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_imsi_recurring_daily import ExternalDynamicListsTypeImsiRecurringDaily
+from scm.objects.models.external_dynamic_lists_type_imsi_recurring_daily import ExternalDynamicListsTypeImsiRecurringDaily
 
 class TestExternalDynamicListsTypeImsiRecurringDaily(unittest.TestCase):
     """ExternalDynamicListsTypeImsiRecurringDaily unit test stubs"""

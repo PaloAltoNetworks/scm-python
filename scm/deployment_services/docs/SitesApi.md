@@ -1,4 +1,4 @@
-# scm_deployment_services.SitesApi
+# scm.deployment_services.SitesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -23,14 +23,14 @@ Create a new sites.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.sites import Sites
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.sites import Sites
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SitesApi(api_client)
-    sites = scm_deployment_services.Sites() # Sites | The site you want to create (optional)
+    api_instance = scm.deployment_services.SitesApi(api_client)
+    sites = scm.deployment_services.Sites() # Sites | The site you want to create (optional)
 
     try:
         # Create a site
@@ -106,13 +106,13 @@ Delete a site.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SitesApi(api_client)
+    api_instance = scm.deployment_services.SitesApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing site.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.sites import Sites
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.sites import Sites
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SitesApi(api_client)
+    api_instance = scm.deployment_services.SitesApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of sites.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.sites_list_response import SitesListResponse
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.sites_list_response import SitesListResponse
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SitesApi(api_client)
+    api_instance = scm.deployment_services.SitesApi(api_client)
     folder = Remote Networks # str | The folder in which the resource is defined  (default to Remote Networks)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
@@ -359,14 +359,14 @@ Update an existing site.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.sites import Sites
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.sites import Sites
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -376,16 +376,16 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SitesApi(api_client)
+    api_instance = scm.deployment_services.SitesApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
-    sites = scm_deployment_services.Sites() # Sites | The site you want to edit (optional)
+    sites = scm.deployment_services.Sites() # Sites | The site you want to edit (optional)
 
     try:
         # Update a site

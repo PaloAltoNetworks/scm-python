@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing import LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInnerVrTiming
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing import LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInnerVrTiming
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInnerVrTiming(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInnerVrTiming unit test stubs"""

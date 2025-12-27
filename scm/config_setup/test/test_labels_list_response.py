@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.labels_list_response import LabelsListResponse
+from scm.config_setup.models.labels_list_response import LabelsListResponse
 
 class TestLabelsListResponse(unittest.TestCase):
     """LabelsListResponse unit test stubs"""

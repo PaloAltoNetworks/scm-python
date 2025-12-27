@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily import UpdateScheduleUpdateScheduleAntiVirusRecurringDaily
+from scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily import UpdateScheduleUpdateScheduleAntiVirusRecurringDaily
 
 class TestUpdateScheduleUpdateScheduleAntiVirusRecurringDaily(unittest.TestCase):
     """UpdateScheduleUpdateScheduleAntiVirusRecurringDaily unit test stubs"""

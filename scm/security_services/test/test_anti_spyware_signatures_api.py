@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.anti_spyware_signatures_api import AntiSpywareSignaturesApi
+from scm.security_services.api.anti_spyware_signatures_api import AntiSpywareSignaturesApi
 
 
 class TestAntiSpywareSignaturesApi(unittest.TestCase):

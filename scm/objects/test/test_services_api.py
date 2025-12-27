@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.services_api import ServicesApi
+from scm.objects.api.services_api import ServicesApi
 
 
 class TestServicesApi(unittest.TestCase):

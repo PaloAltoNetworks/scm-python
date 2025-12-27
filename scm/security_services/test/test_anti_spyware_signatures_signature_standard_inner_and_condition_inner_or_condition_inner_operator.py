@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator
 
 class TestAntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator(unittest.TestCase):
     """AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator unit test stubs"""
@@ -36,37 +36,37 @@ class TestAntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditio
         model = AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator()
         if include_optional:
             return AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperator(
-                equal_to = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to(
+                equal_to = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to(
                     context = '', 
                     negate = True, 
                     qualifier = [
-                        scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                             name = '', 
                             value = '', )
                         ], 
                     value = 0, ),
-                greater_than = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                greater_than = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                     context = '', 
                     qualifier = [
-                        scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                             name = '', 
                             value = '', )
                         ], 
                     value = 0, ),
-                less_than = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                less_than = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                     context = '', 
                     qualifier = [
-                        scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                             name = '', 
                             value = '', )
                         ], 
                     value = 0, ),
-                pattern_match = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
+                pattern_match = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
                     context = '', 
                     negate = True, 
                     pattern = '', 
                     qualifier = [
-                        scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                             name = '', 
                             value = '', )
                         ], )

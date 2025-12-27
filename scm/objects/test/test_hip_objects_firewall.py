@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_firewall import HipObjectsFirewall
+from scm.objects.models.hip_objects_firewall import HipObjectsFirewall
 
 class TestHipObjectsFirewall(unittest.TestCase):
     """HipObjectsFirewall unit test stubs"""
@@ -36,12 +36,12 @@ class TestHipObjectsFirewall(unittest.TestCase):
         model = HipObjectsFirewall()
         if include_optional:
             return HipObjectsFirewall(
-                criteria = scm_objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
+                criteria = scm.objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
                     is_enabled = 'no', 
                     is_installed = True, ),
                 exclude_vendor = True,
                 vendor = [
-                    scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                    scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                         name = '', 
                         product = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'

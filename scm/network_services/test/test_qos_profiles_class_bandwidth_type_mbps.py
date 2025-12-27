@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
+from scm.network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
 
 class TestQosProfilesClassBandwidthTypeMbps(unittest.TestCase):
     """QosProfilesClassBandwidthTypeMbps unit test stubs"""
@@ -37,8 +37,8 @@ class TestQosProfilesClassBandwidthTypeMbps(unittest.TestCase):
         if include_optional:
             return QosProfilesClassBandwidthTypeMbps(
                 var_class = [
-                    scm_network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner.qos_profiles_class_bandwidth_type_mbps_class_inner(
-                        class_bandwidth = scm_network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth(
+                    scm.network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner.qos_profiles_class_bandwidth_type_mbps_class_inner(
+                        class_bandwidth = scm.network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth.qos_profiles_class_bandwidth_type_mbps_class_inner_class_bandwidth(
                             egress_guaranteed = 0, 
                             egress_max = 0, ), 
                         name = '', 

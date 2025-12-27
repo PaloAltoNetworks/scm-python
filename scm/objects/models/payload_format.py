@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
-from scm_objects.models.payload_format_params_inner import PayloadFormatParamsInner
+from scm.objects.models.payload_format_headers_inner import PayloadFormatHeadersInner
+from scm.objects.models.payload_format_params_inner import PayloadFormatParamsInner
 from typing import Optional, Set
 from typing_extensions import Self
 

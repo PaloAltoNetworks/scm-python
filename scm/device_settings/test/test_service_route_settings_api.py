@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.service_route_settings_api import ServiceRouteSettingsApi
+from scm.device_settings.api.service_route_settings_api import ServiceRouteSettingsApi
 
 
 class TestServiceRouteSettingsApi(unittest.TestCase):

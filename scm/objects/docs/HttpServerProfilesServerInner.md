@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
+from scm.objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
 
 # TODO update the JSON string below
 json = "{}"

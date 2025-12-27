@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space import LogicalRoutersVrfInnerMulticastPimSsmAddressSpace
+from scm.network_services.models.logical_routers_vrf_inner_multicast_pim_ssm_address_space import LogicalRoutersVrfInnerMulticastPimSsmAddressSpace
 
 class TestLogicalRoutersVrfInnerMulticastPimSsmAddressSpace(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastPimSsmAddressSpace unit test stubs"""

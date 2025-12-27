@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.do_s_protection_rules_list_response import DoSProtectionRulesListResponse
+from scm.security_services.models.do_s_protection_rules_list_response import DoSProtectionRulesListResponse
 
 class TestDoSProtectionRulesListResponse(unittest.TestCase):
     """DoSProtectionRulesListResponse unit test stubs"""

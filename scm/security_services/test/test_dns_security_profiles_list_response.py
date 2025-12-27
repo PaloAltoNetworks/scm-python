@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_list_response import DNSSecurityProfilesListResponse
+from scm.security_services.models.dns_security_profiles_list_response import DNSSecurityProfilesListResponse
 
 class TestDNSSecurityProfilesListResponse(unittest.TestCase):
     """DNSSecurityProfilesListResponse unit test stubs"""

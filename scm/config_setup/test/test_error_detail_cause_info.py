@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.error_detail_cause_info import ErrorDetailCauseInfo
+from scm.config_setup.models.error_detail_cause_info import ErrorDetailCauseInfo
 
 class TestErrorDetailCauseInfo(unittest.TestCase):
     """ErrorDetailCauseInfo unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbrNssaExtRangeInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbrNssaExtRangeInner
 
 # TODO update the JSON string below
 json = "{}"

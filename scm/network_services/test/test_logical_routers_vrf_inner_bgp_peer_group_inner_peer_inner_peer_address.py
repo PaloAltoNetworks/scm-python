@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerPeerAddress
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerPeerAddress
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerPeerAddress(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerPeerAddress unit test stubs"""

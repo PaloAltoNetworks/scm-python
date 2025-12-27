@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type import RouteCommunityListsType
+from scm.network_services.models.route_community_lists_type import RouteCommunityListsType
 
 class TestRouteCommunityListsType(unittest.TestCase):
     """RouteCommunityListsType unit test stubs"""
@@ -36,27 +36,27 @@ class TestRouteCommunityListsType(unittest.TestCase):
         model = RouteCommunityListsType()
         if include_optional:
             return RouteCommunityListsType(
-                extended = scm_network_services.models.route_community_lists_type_extended.route_community_lists_type_extended(
+                extended = scm.network_services.models.route_community_lists_type_extended.route_community_lists_type_extended(
                     extended_entry = [
-                        scm_network_services.models.route_community_lists_type_extended_extended_entry_inner.route_community_lists_type_extended_extended_entry_inner(
+                        scm.network_services.models.route_community_lists_type_extended_extended_entry_inner.route_community_lists_type_extended_extended_entry_inner(
                             action = 'deny', 
                             lc_regex = [
                                 ''
                                 ], 
                             name = 1, )
                         ], ),
-                large = scm_network_services.models.route_community_lists_type_large.route_community_lists_type_large(
+                large = scm.network_services.models.route_community_lists_type_large.route_community_lists_type_large(
                     large_entry = [
-                        scm_network_services.models.route_community_lists_type_large_large_entry_inner.route_community_lists_type_large_large_entry_inner(
+                        scm.network_services.models.route_community_lists_type_large_large_entry_inner.route_community_lists_type_large_large_entry_inner(
                             action = 'deny', 
                             lc_regex = [
                                 ''
                                 ], 
                             name = 1, )
                         ], ),
-                regular = scm_network_services.models.route_community_lists_type_regular.route_community_lists_type_regular(
+                regular = scm.network_services.models.route_community_lists_type_regular.route_community_lists_type_regular(
                     regular_entry = [
-                        scm_network_services.models.route_community_lists_type_regular_regular_entry_inner.route_community_lists_type_regular_regular_entry_inner(
+                        scm.network_services.models.route_community_lists_type_regular_regular_entry_inner.route_community_lists_type_regular_regular_entry_inner(
                             action = 'deny', 
                             community = [
                                 'blackhole'

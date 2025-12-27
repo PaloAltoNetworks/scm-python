@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback import NatRulesSourceTranslationDynamicIpFallback
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback import NatRulesSourceTranslationDynamicIpFallback
 
 # TODO update the JSON string below
 json = "{}"

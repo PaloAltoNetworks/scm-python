@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
+from scm.network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
 
 class TestEthernetInterfacesLayer3Pppoe(unittest.TestCase):
     """EthernetInterfacesLayer3Pppoe unit test stubs"""
@@ -40,11 +40,11 @@ class TestEthernetInterfacesLayer3Pppoe(unittest.TestCase):
                 authentication = 'CHAP',
                 default_route_metric = 1,
                 enable = True,
-                passive = scm_network_services.models.ethernet_interfaces_layer3_pppoe_passive.ethernet_interfaces_layer3_pppoe_passive(
+                passive = scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive.ethernet_interfaces_layer3_pppoe_passive(
                     enable = True, ),
                 password = '',
                 service = '0',
-                static_address = scm_network_services.models.ethernet_interfaces_layer3_pppoe_static_address.ethernet_interfaces_layer3_pppoe_static_address(
+                static_address = scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address.ethernet_interfaces_layer3_pppoe_static_address(
                     ip = '', ),
                 username = '0'
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_rules_protection_classified_classification_criteria import DosProtectionRulesProtectionClassifiedClassificationCriteria
+from scm.security_services.models.dos_protection_rules_protection_classified_classification_criteria import DosProtectionRulesProtectionClassifiedClassificationCriteria
 
 class TestDosProtectionRulesProtectionClassifiedClassificationCriteria(unittest.TestCase):
     """DosProtectionRulesProtectionClassifiedClassificationCriteria unit test stubs"""

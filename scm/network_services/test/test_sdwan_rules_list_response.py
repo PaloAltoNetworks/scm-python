@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_rules_list_response import SDWANRulesListResponse
+from scm.network_services.models.sdwan_rules_list_response import SDWANRulesListResponse
 
 class TestSDWANRulesListResponse(unittest.TestCase):
     """SDWANRulesListResponse unit test stubs"""

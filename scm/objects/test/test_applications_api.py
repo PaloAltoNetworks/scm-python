@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.applications_api import ApplicationsApi
+from scm.objects.api.applications_api import ApplicationsApi
 
 
 class TestApplicationsApi(unittest.TestCase):

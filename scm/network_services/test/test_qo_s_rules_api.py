@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.qo_s_rules_api import QoSRulesApi
+from scm.network_services.api.qo_s_rules_api import QoSRulesApi
 
 
 class TestQoSRulesApi(unittest.TestCase):

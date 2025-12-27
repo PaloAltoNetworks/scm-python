@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_method_saml_idp import AuthenticationProfilesMethodSamlIdp
+from scm.identity_services.models.authentication_profiles_method_saml_idp import AuthenticationProfilesMethodSamlIdp
 
 class TestAuthenticationProfilesMethodSamlIdp(unittest.TestCase):
     """AuthenticationProfilesMethodSamlIdp unit test stubs"""

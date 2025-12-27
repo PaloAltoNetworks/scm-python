@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.mfa_servers_mfa_vendor_type_okta_adaptive_v1 import MfaServersMfaVendorTypeOktaAdaptiveV1
+from scm.identity_services.models.mfa_servers_mfa_vendor_type_okta_adaptive_v1 import MfaServersMfaVendorTypeOktaAdaptiveV1
 
 class TestMfaServersMfaVendorTypeOktaAdaptiveV1(unittest.TestCase):
     """MfaServersMfaVendorTypeOktaAdaptiveV1 unit test stubs"""

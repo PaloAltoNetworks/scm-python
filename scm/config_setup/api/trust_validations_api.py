@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field
 from typing import Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
-from scm_config_setup.models.trusts_validation_payload import TrustsValidationPayload
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.models.trusts_validation_payload import TrustsValidationPayload
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class TrustValidationsApi:

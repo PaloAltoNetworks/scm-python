@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.motd_banner_settings import MotdBannerSettings
+from scm.device_settings.models.motd_banner_settings import MotdBannerSettings
 
 # TODO update the JSON string below
 json = "{}"

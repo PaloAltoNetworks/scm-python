@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictBool, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_network_services.models.logical_routers import LogicalRouters
-from scm_network_services.models.logical_routers_list_response import LogicalRoutersListResponse
+from scm.network_services.models.logical_routers import LogicalRouters
+from scm.network_services.models.logical_routers_list_response import LogicalRoutersListResponse
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class LogicalRoutersApi:

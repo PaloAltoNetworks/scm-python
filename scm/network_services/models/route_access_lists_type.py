@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.route_access_lists_type_ipv4 import RouteAccessListsTypeIpv4
+from scm.network_services.models.route_access_lists_type_ipv4 import RouteAccessListsTypeIpv4
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection import ZoneProtectionProfilesL2SecGroupTagProtection
+from scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection import ZoneProtectionProfilesL2SecGroupTagProtection
 
 class TestZoneProtectionProfilesL2SecGroupTagProtection(unittest.TestCase):
     """ZoneProtectionProfilesL2SecGroupTagProtection unit test stubs"""
@@ -37,7 +37,7 @@ class TestZoneProtectionProfilesL2SecGroupTagProtection(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesL2SecGroupTagProtection(
                 tags = [
-                    scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner(
+                    scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner(
                         enable = True, 
                         name = '', 
                         tag = '', )

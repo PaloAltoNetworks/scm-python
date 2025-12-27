@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.vlan_interfaces_dhcp_client_send_hostname import VlanInterfacesDhcpClientSendHostname
+from scm.network_services.models.vlan_interfaces_dhcp_client_send_hostname import VlanInterfacesDhcpClientSendHostname
 
 class TestVlanInterfacesDhcpClientSendHostname(unittest.TestCase):
     """VlanInterfacesDhcpClientSendHostname unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.http_server_profiles_list_response import HTTPServerProfilesListResponse
+from scm.objects.models.http_server_profiles_list_response import HTTPServerProfilesListResponse
 
 class TestHTTPServerProfilesListResponse(unittest.TestCase):
     """HTTPServerProfilesListResponse unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_community_lists_type_regular_regular_entry_inner import RouteCommunityListsTypeRegularRegularEntryInner
+from scm.network_services.models.route_community_lists_type_regular_regular_entry_inner import RouteCommunityListsTypeRegularRegularEntryInner
 
 # TODO update the JSON string below
 json = "{}"

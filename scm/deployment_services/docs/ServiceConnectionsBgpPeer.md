@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
+from scm.deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
 
 # TODO update the JSON string below
 json = "{}"

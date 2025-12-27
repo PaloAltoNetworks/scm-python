@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip import SdwanSaasQualityProfilesMonitorModeStaticIp
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip import SdwanSaasQualityProfilesMonitorModeStaticIp
 
 class TestSdwanSaasQualityProfilesMonitorModeStaticIp(unittest.TestCase):
     """SdwanSaasQualityProfilesMonitorModeStaticIp unit test stubs"""
@@ -36,11 +36,11 @@ class TestSdwanSaasQualityProfilesMonitorModeStaticIp(unittest.TestCase):
         model = SdwanSaasQualityProfilesMonitorModeStaticIp()
         if include_optional:
             return SdwanSaasQualityProfilesMonitorModeStaticIp(
-                fqdn = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
+                fqdn = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
                     fqdn_name = '', 
                     probe_interval = 1, ),
                 ip_address = [
-                    scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
+                    scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
                         name = '', 
                         probe_interval = 1, )
                     ]

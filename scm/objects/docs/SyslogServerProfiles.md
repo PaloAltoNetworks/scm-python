@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.syslog_server_profiles import SyslogServerProfiles
+from scm.objects.models.syslog_server_profiles import SyslogServerProfiles
 
 # TODO update the JSON string below
 json = "{}"

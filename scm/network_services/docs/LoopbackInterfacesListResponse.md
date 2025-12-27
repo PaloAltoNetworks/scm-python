@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.loopback_interfaces_list_response import LoopbackInterfacesListResponse
+from scm.network_services.models.loopback_interfaces_list_response import LoopbackInterfacesListResponse
 
 # TODO update the JSON string below
 json = "{}"

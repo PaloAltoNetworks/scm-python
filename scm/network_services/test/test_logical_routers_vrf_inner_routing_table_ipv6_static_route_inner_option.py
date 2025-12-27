@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInnerOption
+from scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInnerOption
 
 class TestLogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInnerOption(unittest.TestCase):
     """LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInnerOption unit test stubs"""

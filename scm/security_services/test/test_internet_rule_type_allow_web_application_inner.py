@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_allow_web_application_inner import InternetRuleTypeAllowWebApplicationInner
+from scm.security_services.models.internet_rule_type_allow_web_application_inner import InternetRuleTypeAllowWebApplicationInner
 
 class TestInternetRuleTypeAllowWebApplicationInner(unittest.TestCase):
     """InternetRuleTypeAllowWebApplicationInner unit test stubs"""
@@ -40,14 +40,14 @@ class TestInternetRuleTypeAllowWebApplicationInner(unittest.TestCase):
                     ''
                     ],
                 dlp = '',
-                file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                     download = 'allow-all-file-types', 
                     upload = 'allow-all-file-types', ),
                 name = '',
-                saas_enterprise_control = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control.internet_rule_type_allow_web_application_inner_saas_enterprise_control(
-                    consumer_access = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access(
+                saas_enterprise_control = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control.internet_rule_type_allow_web_application_inner_saas_enterprise_control(
+                    consumer_access = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access(
                         enable = 'yes', ), 
-                    enterprise_access = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access(
+                    enterprise_access = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access(
                         enable = 'yes', 
                         tenant_restrictions = [
                             ''
@@ -58,7 +58,7 @@ class TestInternetRuleTypeAllowWebApplicationInner(unittest.TestCase):
                 saas_user_list = [
                     ''
                     ],
-                tenant_control = scm_security_services.models.internet_rule_type_allow_web_application_inner_tenant_control.internet_rule_type_allow_web_application_inner_tenant_control(
+                tenant_control = scm.security_services.models.internet_rule_type_allow_web_application_inner_tenant_control.internet_rule_type_allow_web_application_inner_tenant_control(
                     allowed_activities = [
                         ''
                         ], 

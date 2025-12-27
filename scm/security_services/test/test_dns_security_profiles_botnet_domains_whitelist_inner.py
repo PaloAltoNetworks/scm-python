@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_botnet_domains_whitelist_inner import DnsSecurityProfilesBotnetDomainsWhitelistInner
+from scm.security_services.models.dns_security_profiles_botnet_domains_whitelist_inner import DnsSecurityProfilesBotnetDomainsWhitelistInner
 
 class TestDnsSecurityProfilesBotnetDomainsWhitelistInner(unittest.TestCase):
     """DnsSecurityProfilesBotnetDomainsWhitelistInner unit test stubs"""

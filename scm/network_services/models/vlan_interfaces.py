@@ -21,10 +21,10 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.vlan_interfaces_arp_inner import VlanInterfacesArpInner
-from scm_network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
-from scm_network_services.models.vlan_interfaces_dhcp_client import VlanInterfacesDhcpClient
-from scm_network_services.models.vlan_interfaces_ip_inner import VlanInterfacesIpInner
+from scm.network_services.models.vlan_interfaces_arp_inner import VlanInterfacesArpInner
+from scm.network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
+from scm.network_services.models.vlan_interfaces_dhcp_client import VlanInterfacesDhcpClient
+from scm.network_services.models.vlan_interfaces_ip_inner import VlanInterfacesIpInner
 from typing import Optional, Set
 from typing_extensions import Self
 

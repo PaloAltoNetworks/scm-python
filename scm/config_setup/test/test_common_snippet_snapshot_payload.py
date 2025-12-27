@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.common_snippet_snapshot_payload import CommonSnippetSnapshotPayload
+from scm.config_setup.models.common_snippet_snapshot_payload import CommonSnippetSnapshotPayload
 
 class TestCommonSnippetSnapshotPayload(unittest.TestCase):
     """CommonSnippetSnapshotPayload unit test stubs"""

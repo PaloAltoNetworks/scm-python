@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4 import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv4
+from scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv4 import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv4
 
 # TODO update the JSON string below
 json = "{}"

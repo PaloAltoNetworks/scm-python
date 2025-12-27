@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.license_result import LicenseResult
+from scm.network_services.models.license_result import LicenseResult
 
 class TestLicenseResult(unittest.TestCase):
     """LicenseResult unit test stubs"""
@@ -37,14 +37,14 @@ class TestLicenseResult(unittest.TestCase):
         if include_optional:
             return LicenseResult(
                 configured_licenses = [
-                    scm_network_services.models.license_info.LicenseInfo(
+                    scm.network_services.models.license_info.LicenseInfo(
                         count = 1, 
                         license_type = 'FWAAS-SITE-1000Mbps', )
                     ],
                 license_model = [agg-bandwidth, site],
                 operational_license = 'site',
                 purchased_licenses = [
-                    scm_network_services.models.license_info.LicenseInfo(
+                    scm.network_services.models.license_info.LicenseInfo(
                         count = 1, 
                         license_type = 'FWAAS-SITE-1000Mbps', )
                     ]

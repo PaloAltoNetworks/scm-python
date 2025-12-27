@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute unit test stubs"""
@@ -36,7 +36,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute(unittest.TestC
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeNssaDefaultRoute(
-                advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
+                advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
                     metric = 56, 
                     type = 'ext-1', ),
                 disable = None

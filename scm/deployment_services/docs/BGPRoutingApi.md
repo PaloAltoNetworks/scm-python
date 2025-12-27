@@ -1,4 +1,4 @@
-# scm_deployment_services.BGPRoutingApi
+# scm.deployment_services.BGPRoutingApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -20,14 +20,14 @@ Get Service Connection BGP routing settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.bgp_routing import BgpRouting
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.bgp_routing import BgpRouting
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -37,14 +37,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BGPRoutingApi(api_client)
+    api_instance = scm.deployment_services.BGPRoutingApi(api_client)
 
     try:
         # Get BGP routing settings
@@ -99,14 +99,14 @@ Update Service Connection BGP routing settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.bgp_routing import BgpRouting
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.bgp_routing import BgpRouting
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -116,15 +116,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BGPRoutingApi(api_client)
-    bgp_routing = scm_deployment_services.BgpRouting() # BgpRouting | OK (optional)
+    api_instance = scm.deployment_services.BGPRoutingApi(api_client)
+    bgp_routing = scm.deployment_services.BgpRouting() # BgpRouting | OK (optional)
 
     try:
         # Update BGP routing settings

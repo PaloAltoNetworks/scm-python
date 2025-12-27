@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.services_protocol_tcp import ServicesProtocolTcp
+from scm.objects.models.services_protocol_tcp import ServicesProtocolTcp
 
 # TODO update the JSON string below
 json = "{}"

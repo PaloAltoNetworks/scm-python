@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dhcp_interfaces_server_option_inheritance import DhcpInterfacesServerOptionInheritance
+from scm.network_services.models.dhcp_interfaces_server_option_inheritance import DhcpInterfacesServerOptionInheritance
 
 # TODO update the JSON string below
 json = "{}"

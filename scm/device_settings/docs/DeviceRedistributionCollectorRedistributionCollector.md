@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
+from scm.device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.folders_list_response import FoldersListResponse
+from scm.config_setup.models.folders_list_response import FoldersListResponse
 
 class TestFoldersListResponse(unittest.TestCase):
     """FoldersListResponse unit test stubs"""

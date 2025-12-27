@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_option_dns import DhcpInterfacesServerOptionDns
+from scm.network_services.models.dhcp_interfaces_server_option_dns import DhcpInterfacesServerOptionDns
 
 class TestDhcpInterfacesServerOptionDns(unittest.TestCase):
     """DhcpInterfacesServerOptionDns unit test stubs"""

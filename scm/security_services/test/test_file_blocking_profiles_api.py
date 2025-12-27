@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.file_blocking_profiles_api import FileBlockingProfilesApi
+from scm.security_services.api.file_blocking_profiles_api import FileBlockingProfilesApi
 
 
 class TestFileBlockingProfilesApi(unittest.TestCase):

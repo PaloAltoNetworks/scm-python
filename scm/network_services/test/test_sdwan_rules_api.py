@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.sdwan_rules_api import SDWANRulesApi
+from scm.network_services.api.sdwan_rules_api import SDWANRulesApi
 
 
 class TestSDWANRulesApi(unittest.TestCase):

@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.content_id_settings_content_id_application import ContentIdSettingsContentIdApplication
+from scm.device_settings.models.content_id_settings_content_id_application import ContentIdSettingsContentIdApplication
 from typing import Optional, Set
 from typing_extensions import Self
 

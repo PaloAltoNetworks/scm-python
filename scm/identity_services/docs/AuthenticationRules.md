@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.authentication_rules import AuthenticationRules
+from scm.identity_services.models.authentication_rules import AuthenticationRules
 
 # TODO update the JSON string below
 json = "{}"

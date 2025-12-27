@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
 
 class TestNatRulesSourceTranslationDynamicIpAndPort(unittest.TestCase):
     """NatRulesSourceTranslationDynamicIpAndPort unit test stubs"""
@@ -36,7 +36,7 @@ class TestNatRulesSourceTranslationDynamicIpAndPort(unittest.TestCase):
         model = NatRulesSourceTranslationDynamicIpAndPort()
         if include_optional:
             return NatRulesSourceTranslationDynamicIpAndPort(
-                interface_address = scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port_interface_address.nat_rules_source_translation_dynamic_ip_and_port_interface_address(
+                interface_address = scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port_interface_address.nat_rules_source_translation_dynamic_ip_and_port_interface_address(
                     floating_ip = '', 
                     interface = '', 
                     ip = '', ),

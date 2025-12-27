@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_cache_max_ttl import DnsProxiesCacheMaxTtl
+from scm.network_services.models.dns_proxies_cache_max_ttl import DnsProxiesCacheMaxTtl
 
 class TestDnsProxiesCacheMaxTtl(unittest.TestCase):
     """DnsProxiesCacheMaxTtl unit test stubs"""

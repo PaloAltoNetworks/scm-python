@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type import QosPolicyRulesDscpTosCodepointsInnerType
+from scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type import QosPolicyRulesDscpTosCodepointsInnerType
 from typing import Optional, Set
 from typing_extensions import Self
 

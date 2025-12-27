@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.external_dynamic_lists_type_url_recurring_monthly import ExternalDynamicListsTypeUrlRecurringMonthly
+from scm.objects.models.external_dynamic_lists_type_url_recurring_monthly import ExternalDynamicListsTypeUrlRecurringMonthly
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
+from scm.objects.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
 
 class TestAutoTagActionsActionsInner(unittest.TestCase):
     """AutoTagActionsActionsInner unit test stubs"""
@@ -37,8 +37,8 @@ class TestAutoTagActionsActionsInner(unittest.TestCase):
         if include_optional:
             return AutoTagActionsActionsInner(
                 name = '',
-                type = scm_objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
-                    tagging = scm_objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
+                type = scm.objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
+                    tagging = scm.objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
                         action = 'add-tag', 
                         tags = [
                             ''
@@ -49,8 +49,8 @@ class TestAutoTagActionsActionsInner(unittest.TestCase):
         else:
             return AutoTagActionsActionsInner(
                 name = '',
-                type = scm_objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
-                    tagging = scm_objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
+                type = scm.objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
+                    tagging = scm.objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
                         action = 'add-tag', 
                         tags = [
                             ''

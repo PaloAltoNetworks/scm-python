@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
+from scm.config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
 
 class TestSnippetShareUploadPayload(unittest.TestCase):
     """SnippetShareUploadPayload unit test stubs"""

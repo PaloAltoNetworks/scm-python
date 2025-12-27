@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_bgp import BgpRouteMapRedistributionsBgp
+from scm.network_services.models.bgp_route_map_redistributions_bgp import BgpRouteMapRedistributionsBgp
 
 class TestBgpRouteMapRedistributionsBgp(unittest.TestCase):
     """BgpRouteMapRedistributionsBgp unit test stubs"""
@@ -36,23 +36,23 @@ class TestBgpRouteMapRedistributionsBgp(unittest.TestCase):
         model = BgpRouteMapRedistributionsBgp()
         if include_optional:
             return BgpRouteMapRedistributionsBgp(
-                ospf = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf.bgp_route_map_redistributions_bgp_ospf(
+                ospf = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf.bgp_route_map_redistributions_bgp_ospf(
                     route_map = [
-                        scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner.bgp_route_map_redistributions_bgp_ospf_route_map_inner(
+                        scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner.bgp_route_map_redistributions_bgp_ospf_route_map_inner(
                             action = 'permit', 
                             description = '', 
-                            match = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match(
+                            match = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match(
                                 as_path_access_list = '', 
                                 extended_community = '', 
                                 interface = '', 
-                                ipv4 = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4(
-                                    address = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address(
+                                ipv4 = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4(
+                                    address = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address(
                                         access_list = '', 
                                         prefix_list = '', ), 
-                                    next_hop = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop(
+                                    next_hop = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop(
                                         access_list = '', 
                                         prefix_list = '', ), 
-                                    route_source = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source(
+                                    route_source = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source(
                                         access_list = '', 
                                         prefix_list = '', ), ), 
                                 large_community = '', 
@@ -63,30 +63,30 @@ class TestBgpRouteMapRedistributionsBgp(unittest.TestCase):
                                 regular_community = '', 
                                 tag = 1, ), 
                             name = 1, 
-                            set = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set(
-                                metric = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric(
+                            set = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set(
+                                metric = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric(
                                     action = 'set', 
                                     value = 0, ), 
                                 metric_type = 'type-1', 
                                 tag = 1, ), )
                         ], ),
-                rib = scm_network_services.models.bgp_route_map_redistributions_bgp_rib.bgp_route_map_redistributions_bgp_rib(
+                rib = scm.network_services.models.bgp_route_map_redistributions_bgp_rib.bgp_route_map_redistributions_bgp_rib(
                     route_map = [
-                        scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner.bgp_route_map_redistributions_bgp_rib_route_map_inner(
+                        scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner.bgp_route_map_redistributions_bgp_rib_route_map_inner(
                             action = 'permit', 
                             description = '', 
-                            match = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match.bgp_route_map_redistributions_bgp_rib_route_map_inner_match(
+                            match = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match.bgp_route_map_redistributions_bgp_rib_route_map_inner_match(
                                 as_path_access_list = '', 
                                 extended_community = '', 
                                 interface = '', 
-                                ipv4 = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4(
-                                    address = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address(
+                                ipv4 = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4(
+                                    address = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_address(
                                         access_list = '', 
                                         prefix_list = '', ), 
-                                    next_hop = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop(
+                                    next_hop = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop(
                                         access_list = '', 
                                         prefix_list = '', ), 
-                                    route_source = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_route_source(
+                                    route_source = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_route_source(
                                         access_list = '', 
                                         prefix_list = '', ), ), 
                                 large_community = '', 
@@ -97,7 +97,7 @@ class TestBgpRouteMapRedistributionsBgp(unittest.TestCase):
                                 regular_community = '', 
                                 tag = 1, ), 
                             name = 1, 
-                            set = scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_set.bgp_route_map_redistributions_bgp_rib_route_map_inner_set(
+                            set = scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_set.bgp_route_map_redistributions_bgp_rib_route_map_inner_set(
                                 source_address = '', ), )
                         ], )
             )

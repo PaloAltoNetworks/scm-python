@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zones import Zones
+from scm.network_services.models.zones import Zones
 
 class TestZones(unittest.TestCase):
     """Zones unit test stubs"""
@@ -37,7 +37,7 @@ class TestZones(unittest.TestCase):
         if include_optional:
             return Zones(
                 device = 'My Device',
-                device_acl = scm_network_services.models.zones_device_acl.zones_device_acl(
+                device_acl = scm.network_services.models.zones_device_acl.zones_device_acl(
                     exclude_list = [
                         ''
                         ], 
@@ -51,7 +51,7 @@ class TestZones(unittest.TestCase):
                 folder = '',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
-                network = scm_network_services.models.zones_network.zones_network(
+                network = scm.network_services.models.zones_network.zones_network(
                     enable_packet_buffer_protection = True, 
                     external = [
                         ''
@@ -66,13 +66,13 @@ class TestZones(unittest.TestCase):
                     tap = [
                         ''
                         ], 
-                    tunnel = scm_network_services.models.tunnel.tunnel(), 
+                    tunnel = scm.network_services.models.tunnel.tunnel(), 
                     virtual_wire = [
                         ''
                         ], 
                     zone_protection_profile = '', ),
                 snippet = 'My Snippet',
-                user_acl = scm_network_services.models.zones_device_acl.zones_device_acl(
+                user_acl = scm.network_services.models.zones_device_acl.zones_device_acl(
                     exclude_list = [
                         ''
                         ], 

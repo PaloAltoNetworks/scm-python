@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_host_info_criteria_client_version import HipObjectsHostInfoCriteriaClientVersion
+from scm.objects.models.hip_objects_host_info_criteria_client_version import HipObjectsHostInfoCriteriaClientVersion
 
 # TODO update the JSON string below
 json = "{}"

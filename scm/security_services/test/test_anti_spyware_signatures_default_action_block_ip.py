@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_default_action_block_ip import AntiSpywareSignaturesDefaultActionBlockIp
+from scm.security_services.models.anti_spyware_signatures_default_action_block_ip import AntiSpywareSignaturesDefaultActionBlockIp
 
 class TestAntiSpywareSignaturesDefaultActionBlockIp(unittest.TestCase):
     """AntiSpywareSignaturesDefaultActionBlockIp unit test stubs"""

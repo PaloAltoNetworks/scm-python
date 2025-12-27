@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.wildfire_anti_virus_profiles import WildfireAntiVirusProfiles
+from scm.security_services.models.wildfire_anti_virus_profiles import WildfireAntiVirusProfiles
 
 class TestWildfireAntiVirusProfiles(unittest.TestCase):
     """WildfireAntiVirusProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestWildfireAntiVirusProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 mlav_exception = [
-                    scm_security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner.wildfire_anti_virus_profiles_mlav_exception_inner(
+                    scm.security_services.models.wildfire_anti_virus_profiles_mlav_exception_inner.wildfire_anti_virus_profiles_mlav_exception_inner(
                         description = '', 
                         filename = '', 
                         name = '', )
@@ -49,7 +49,7 @@ class TestWildfireAntiVirusProfiles(unittest.TestCase):
                 name = '2',
                 packet_capture = True,
                 rules = [
-                    scm_security_services.models.wildfire_anti_virus_profiles_rules_inner.wildfire_anti_virus_profiles_rules_inner(
+                    scm.security_services.models.wildfire_anti_virus_profiles_rules_inner.wildfire_anti_virus_profiles_rules_inner(
                         analysis = 'public-cloud', 
                         application = [
                             ''
@@ -62,7 +62,7 @@ class TestWildfireAntiVirusProfiles(unittest.TestCase):
                     ],
                 snippet = 'My Snippet',
                 threat_exception = [
-                    scm_security_services.models.wildfire_anti_virus_profiles_threat_exception_inner.wildfire_anti_virus_profiles_threat_exception_inner(
+                    scm.security_services.models.wildfire_anti_virus_profiles_threat_exception_inner.wildfire_anti_virus_profiles_threat_exception_inner(
                         name = '', 
                         notes = '', )
                     ]

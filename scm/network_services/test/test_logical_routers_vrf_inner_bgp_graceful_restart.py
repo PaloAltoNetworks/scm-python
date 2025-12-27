@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_graceful_restart import LogicalRoutersVrfInnerBgpGracefulRestart
+from scm.network_services.models.logical_routers_vrf_inner_bgp_graceful_restart import LogicalRoutersVrfInnerBgpGracefulRestart
 
 class TestLogicalRoutersVrfInnerBgpGracefulRestart(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpGracefulRestart unit test stubs"""

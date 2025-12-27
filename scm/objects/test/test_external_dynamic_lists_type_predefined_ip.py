@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_predefined_ip import ExternalDynamicListsTypePredefinedIp
+from scm.objects.models.external_dynamic_lists_type_predefined_ip import ExternalDynamicListsTypePredefinedIp
 
 class TestExternalDynamicListsTypePredefinedIp(unittest.TestCase):
     """ExternalDynamicListsTypePredefinedIp unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
+from scm.device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
 
 class TestHaConfigurationsGroupMode(unittest.TestCase):
     """HaConfigurationsGroupMode unit test stubs"""
@@ -36,7 +36,7 @@ class TestHaConfigurationsGroupMode(unittest.TestCase):
         model = HaConfigurationsGroupMode()
         if include_optional:
             return HaConfigurationsGroupMode(
-                active_passive = scm_device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
+                active_passive = scm.device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
                     monitor_fail_hold_down_time = 1000, 
                     passive_link_state = 'shutdown', )
             )

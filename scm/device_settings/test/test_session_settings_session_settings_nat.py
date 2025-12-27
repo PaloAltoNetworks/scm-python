@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_settings_session_settings_nat import SessionSettingsSessionSettingsNat
+from scm.device_settings.models.session_settings_session_settings_nat import SessionSettingsSessionSettingsNat
 
 class TestSessionSettingsSessionSettingsNat(unittest.TestCase):
     """SessionSettingsSessionSettingsNat unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.http_server_profiles import HttpServerProfiles
+from scm.objects.models.http_server_profiles import HttpServerProfiles
 
 class TestHttpServerProfiles(unittest.TestCase):
     """HttpServerProfiles unit test stubs"""
@@ -38,22 +38,22 @@ class TestHttpServerProfiles(unittest.TestCase):
             return HttpServerProfiles(
                 device = 'My Device',
                 folder = 'My Folder',
-                format = scm_objects.models.http_server_profiles_format.http_server_profiles_format(
-                    auth = scm_objects.models.payload_format.payload-format(
+                format = scm.objects.models.http_server_profiles_format.http_server_profiles_format(
+                    auth = scm.objects.models.payload_format.payload-format(
                         headers = [
-                            scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                            scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                                 name = '', 
                                 value = '', )
                             ], 
                         name = 'Default', 
                         params = [
-                            scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                            scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                                 name = '', 
                                 value = '', )
                             ], 
                         payload = '', 
                         url_format = '', ), 
-                    config = scm_objects.models.payload_format.payload-format(
+                    config = scm.objects.models.payload_format.payload-format(
                         name = 'Default', 
                         payload = '', 
                         url_format = '', ), 
@@ -75,7 +75,7 @@ class TestHttpServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_objects.models.http_server_profiles_server_inner.http_server_profiles_server_inner(
+                    scm.objects.models.http_server_profiles_server_inner.http_server_profiles_server_inner(
                         address = '', 
                         certificate_profile = 'None', 
                         http_method = 'GET', 

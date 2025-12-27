@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.property_item import PropertyItem
+from scm.config_setup.models.property_item import PropertyItem
 
 class TestPropertyItem(unittest.TestCase):
     """PropertyItem unit test stubs"""

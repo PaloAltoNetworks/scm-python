@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_scan_inner_action_block_ip import ZoneProtectionProfilesScanInnerActionBlockIp
+from scm.network_services.models.zone_protection_profiles_scan_inner_action_block_ip import ZoneProtectionProfilesScanInnerActionBlockIp
 
 class TestZoneProtectionProfilesScanInnerActionBlockIp(unittest.TestCase):
     """ZoneProtectionProfilesScanInnerActionBlockIp unit test stubs"""

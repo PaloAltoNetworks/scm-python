@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
+from scm.network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
 
 class TestIkeGatewaysPeerAddress(unittest.TestCase):
     """IkeGatewaysPeerAddress unit test stubs"""
@@ -36,7 +36,7 @@ class TestIkeGatewaysPeerAddress(unittest.TestCase):
         model = IkeGatewaysPeerAddress()
         if include_optional:
             return IkeGatewaysPeerAddress(
-                dynamic = scm_network_services.models.dynamic.dynamic(),
+                dynamic = scm.network_services.models.dynamic.dynamic(),
                 fqdn = '',
                 ip = ''
             )

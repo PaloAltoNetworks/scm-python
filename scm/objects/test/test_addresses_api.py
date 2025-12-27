@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.addresses_api import AddressesApi
+from scm.objects.api.addresses_api import AddressesApi
 
 
 class TestAddressesApi(unittest.TestCase):

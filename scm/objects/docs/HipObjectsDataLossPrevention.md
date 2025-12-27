@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
+from scm.objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
 
 # TODO update the JSON string below
 json = "{}"

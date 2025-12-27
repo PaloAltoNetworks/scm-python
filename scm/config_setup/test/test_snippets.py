@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippets import Snippets
+from scm.config_setup.models.snippets import Snippets
 
 class TestSnippets(unittest.TestCase):
     """Snippets unit test stubs"""

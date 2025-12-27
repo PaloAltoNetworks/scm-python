@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.kerberos_server_profiles_api import KerberosServerProfilesApi
+from scm.identity_services.api.kerberos_server_profiles_api import KerberosServerProfilesApi
 
 
 class TestKerberosServerProfilesApi(unittest.TestCase):

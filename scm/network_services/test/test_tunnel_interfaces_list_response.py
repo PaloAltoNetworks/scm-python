@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.tunnel_interfaces_list_response import TunnelInterfacesListResponse
+from scm.network_services.models.tunnel_interfaces_list_response import TunnelInterfacesListResponse
 
 class TestTunnelInterfacesListResponse(unittest.TestCase):
     """TunnelInterfacesListResponse unit test stubs"""

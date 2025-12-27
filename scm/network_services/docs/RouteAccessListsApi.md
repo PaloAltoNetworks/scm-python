@@ -1,4 +1,4 @@
-# scm_network_services.RouteAccessListsApi
+# scm.network_services.RouteAccessListsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -23,14 +23,14 @@ Create a new PBF rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.route_access_lists import RouteAccessLists
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.route_access_lists import RouteAccessLists
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.RouteAccessListsApi(api_client)
-    route_access_lists = scm_network_services.RouteAccessLists() # RouteAccessLists | Created (optional)
+    api_instance = scm.network_services.RouteAccessListsApi(api_client)
+    route_access_lists = scm.network_services.RouteAccessLists() # RouteAccessLists | Created (optional)
 
     try:
         # Create a route access list
@@ -106,13 +106,13 @@ Delete a route access list.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.RouteAccessListsApi(api_client)
+    api_instance = scm.network_services.RouteAccessListsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing route access list.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.route_access_lists import RouteAccessLists
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.route_access_lists import RouteAccessLists
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.RouteAccessListsApi(api_client)
+    api_instance = scm.network_services.RouteAccessListsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of route access lists.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.route_access_lists_list_response import RouteAccessListsListResponse
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.route_access_lists_list_response import RouteAccessListsListResponse
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.RouteAccessListsApi(api_client)
+    api_instance = scm.network_services.RouteAccessListsApi(api_client)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
     name = 'name_example' # str | The name of the configuration resource (optional)
@@ -363,14 +363,14 @@ Update an existing route access list.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.route_access_lists import RouteAccessLists
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.route_access_lists import RouteAccessLists
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.RouteAccessListsApi(api_client)
+    api_instance = scm.network_services.RouteAccessListsApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    route_access_lists = scm_network_services.RouteAccessLists() # RouteAccessLists | OK (optional)
+    route_access_lists = scm.network_services.RouteAccessLists() # RouteAccessLists | OK (optional)
 
     try:
         # Update a route access list

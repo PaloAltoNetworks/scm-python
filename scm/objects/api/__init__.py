@@ -1,23 +1,23 @@
 # flake8: noqa
 
 # import apis into api package
-from scm_objects.api.address_groups_api import AddressGroupsApi
-from scm_objects.api.addresses_api import AddressesApi
-from scm_objects.api.application_filters_api import ApplicationFiltersApi
-from scm_objects.api.application_groups_api import ApplicationGroupsApi
-from scm_objects.api.applications_api import ApplicationsApi
-from scm_objects.api.auto_tag_actions_api import AutoTagActionsApi
-from scm_objects.api.dynamic_user_groups_api import DynamicUserGroupsApi
-from scm_objects.api.external_dynamic_lists_api import ExternalDynamicListsApi
-from scm_objects.api.hip_objects_api import HIPObjectsApi
-from scm_objects.api.hip_profiles_api import HIPProfilesApi
-from scm_objects.api.http_server_profiles_api import HTTPServerProfilesApi
-from scm_objects.api.log_forwarding_profiles_api import LogForwardingProfilesApi
-from scm_objects.api.quarantined_devices_api import QuarantinedDevicesApi
-from scm_objects.api.regions_api import RegionsApi
-from scm_objects.api.schedules_api import SchedulesApi
-from scm_objects.api.service_groups_api import ServiceGroupsApi
-from scm_objects.api.services_api import ServicesApi
-from scm_objects.api.syslog_server_profiles_api import SyslogServerProfilesApi
-from scm_objects.api.tags_api import TagsApi
+from scm.objects.api.address_groups_api import AddressGroupsApi
+from scm.objects.api.addresses_api import AddressesApi
+from scm.objects.api.application_filters_api import ApplicationFiltersApi
+from scm.objects.api.application_groups_api import ApplicationGroupsApi
+from scm.objects.api.applications_api import ApplicationsApi
+from scm.objects.api.auto_tag_actions_api import AutoTagActionsApi
+from scm.objects.api.dynamic_user_groups_api import DynamicUserGroupsApi
+from scm.objects.api.external_dynamic_lists_api import ExternalDynamicListsApi
+from scm.objects.api.hip_objects_api import HIPObjectsApi
+from scm.objects.api.hip_profiles_api import HIPProfilesApi
+from scm.objects.api.http_server_profiles_api import HTTPServerProfilesApi
+from scm.objects.api.log_forwarding_profiles_api import LogForwardingProfilesApi
+from scm.objects.api.quarantined_devices_api import QuarantinedDevicesApi
+from scm.objects.api.regions_api import RegionsApi
+from scm.objects.api.schedules_api import SchedulesApi
+from scm.objects.api.service_groups_api import ServiceGroupsApi
+from scm.objects.api.services_api import ServicesApi
+from scm.objects.api.syslog_server_profiles_api import SyslogServerProfilesApi
+from scm.objects.api.tags_api import TagsApi
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_patch_management import HipObjectsPatchManagement
+from scm.objects.models.hip_objects_patch_management import HipObjectsPatchManagement
 
 class TestHipObjectsPatchManagement(unittest.TestCase):
     """HipObjectsPatchManagement unit test stubs"""
@@ -36,15 +36,15 @@ class TestHipObjectsPatchManagement(unittest.TestCase):
         model = HipObjectsPatchManagement()
         if include_optional:
             return HipObjectsPatchManagement(
-                criteria = scm_objects.models.hip_objects_patch_management_criteria.hip_objects_patch_management_criteria(
+                criteria = scm.objects.models.hip_objects_patch_management_criteria.hip_objects_patch_management_criteria(
                     is_enabled = 'no', 
                     is_installed = True, 
-                    missing_patches = scm_objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
+                    missing_patches = scm.objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
                         check = 'has-any', 
                         patches = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'
                             ], 
-                        severity = scm_objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
+                        severity = scm.objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
                             greater_equal = 0, 
                             greater_than = 0, 
                             is = 0, 
@@ -53,7 +53,7 @@ class TestHipObjectsPatchManagement(unittest.TestCase):
                             less_than = 0, ), ), ),
                 exclude_vendor = True,
                 vendor = [
-                    scm_objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
+                    scm.objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
                         name = '', 
                         product = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'

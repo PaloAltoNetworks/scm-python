@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.ospf_authentication_profiles_api import OSPFAuthenticationProfilesApi
+from scm.network_services.api.ospf_authentication_profiles_api import OSPFAuthenticationProfilesApi
 
 
 class TestOSPFAuthenticationProfilesApi(unittest.TestCase):

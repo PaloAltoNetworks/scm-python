@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_profiles_list_response import BGPAddressFamilyProfilesListResponse
+from scm.network_services.models.bgp_address_family_profiles_list_response import BGPAddressFamilyProfilesListResponse
 
 class TestBGPAddressFamilyProfilesListResponse(unittest.TestCase):
     """BGPAddressFamilyProfilesListResponse unit test stubs"""

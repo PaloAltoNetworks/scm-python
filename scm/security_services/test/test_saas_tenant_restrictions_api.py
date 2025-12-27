@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.saas_tenant_restrictions_api import SaasTenantRestrictionsApi
+from scm.security_services.api.saas_tenant_restrictions_api import SaasTenantRestrictionsApi
 
 
 class TestSaasTenantRestrictionsApi(unittest.TestCase):

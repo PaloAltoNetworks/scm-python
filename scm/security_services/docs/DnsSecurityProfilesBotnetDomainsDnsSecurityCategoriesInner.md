@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dns_security_profiles_botnet_domains_dns_security_categories_inner import DnsSecurityProfilesBotnetDomainsDnsSecurityCategoriesInner
+from scm.security_services.models.dns_security_profiles_botnet_domains_dns_security_categories_inner import DnsSecurityProfilesBotnetDomainsDnsSecurityCategoriesInner
 
 # TODO update the JSON string below
 json = "{}"

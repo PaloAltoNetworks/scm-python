@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner import HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner
+from scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner import HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner
 
 class TestHttpHeaderProfilesHttpHeaderInsertionInnerTypeInner(unittest.TestCase):
     """HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner unit test stubs"""
@@ -38,7 +38,7 @@ class TestHttpHeaderProfilesHttpHeaderInsertionInnerTypeInner(unittest.TestCase)
             return HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner(
                 domains = ["*.google.com","gmail.com"],
                 headers = [
-                    scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
+                    scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
                         header = 'X-MyCustomHeader', 
                         log = True, 
                         name = '', 
@@ -50,7 +50,7 @@ class TestHttpHeaderProfilesHttpHeaderInsertionInnerTypeInner(unittest.TestCase)
             return HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner(
                 domains = ["*.google.com","gmail.com"],
                 headers = [
-                    scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
+                    scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
                         header = 'X-MyCustomHeader', 
                         log = True, 
                         name = '', 

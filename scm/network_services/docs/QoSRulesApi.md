@@ -1,4 +1,4 @@
-# scm_network_services.QoSRulesApi
+# scm.network_services.QoSRulesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -24,14 +24,14 @@ Create a new QoS policy rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.qos_policy_rules import QosPolicyRules
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.qos_policy_rules import QosPolicyRules
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -41,16 +41,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     position = pre # str | The relative position of the rule (default to pre)
-    qos_policy_rules = scm_network_services.QosPolicyRules() # QosPolicyRules | Created (optional)
+    qos_policy_rules = scm.network_services.QosPolicyRules() # QosPolicyRules | Created (optional)
 
     try:
         # Create a QoS policy rule
@@ -109,13 +109,13 @@ Delete a Qos policy rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -125,14 +125,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -190,14 +190,14 @@ Get an existing QoS policy rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.qos_policy_rules import QosPolicyRules
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.qos_policy_rules import QosPolicyRules
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -207,14 +207,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -273,14 +273,14 @@ Retrieve a list of QoS policy rules.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -290,14 +290,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     position = pre # str | The relative position of the rule (default to pre)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
@@ -368,14 +368,14 @@ Move a QoS policy rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.rule_based_move import RuleBasedMove
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.rule_based_move import RuleBasedMove
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -385,16 +385,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    rule_based_move = scm_network_services.RuleBasedMove() # RuleBasedMove | OK (optional)
+    rule_based_move = scm.network_services.RuleBasedMove() # RuleBasedMove | OK (optional)
 
     try:
         # Move a QoS policy rule
@@ -451,14 +451,14 @@ Update an existing QoS policy rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.qos_policy_rules import QosPolicyRules
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.qos_policy_rules import QosPolicyRules
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -468,16 +468,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.QoSRulesApi(api_client)
+    api_instance = scm.network_services.QoSRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    qos_policy_rules = scm_network_services.QosPolicyRules() # QosPolicyRules | OK (optional)
+    qos_policy_rules = scm.network_services.QosPolicyRules() # QosPolicyRules | OK (optional)
 
     try:
         # Update a QoS policy rule

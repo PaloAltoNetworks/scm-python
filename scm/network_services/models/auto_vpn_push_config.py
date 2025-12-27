@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.auto_vpn_push_config_auto_vpn_devices_inner import AutoVpnPushConfigAutoVpnDevicesInner
+from scm.network_services.models.auto_vpn_push_config_auto_vpn_devices_inner import AutoVpnPushConfigAutoVpnDevicesInner
 from typing import Optional, Set
 from typing_extensions import Self
 

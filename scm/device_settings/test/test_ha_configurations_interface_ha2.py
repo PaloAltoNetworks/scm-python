@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_interface_ha2 import HaConfigurationsInterfaceHa2
+from scm.device_settings.models.ha_configurations_interface_ha2 import HaConfigurationsInterfaceHa2
 
 class TestHaConfigurationsInterfaceHa2(unittest.TestCase):
     """HaConfigurationsInterfaceHa2 unit test stubs"""

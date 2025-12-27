@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_list_response import DNSProxiesListResponse
+from scm.network_services.models.dns_proxies_list_response import DNSProxiesListResponse
 
 class TestDNSProxiesListResponse(unittest.TestCase):
     """DNSProxiesListResponse unit test stubs"""

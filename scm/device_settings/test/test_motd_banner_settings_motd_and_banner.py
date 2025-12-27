@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.motd_banner_settings_motd_and_banner import MotdBannerSettingsMotdAndBanner
+from scm.device_settings.models.motd_banner_settings_motd_and_banner import MotdBannerSettingsMotdAndBanner
 
 class TestMotdBannerSettingsMotdAndBanner(unittest.TestCase):
     """MotdBannerSettingsMotdAndBanner unit test stubs"""

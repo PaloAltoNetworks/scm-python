@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.ha_devices_ha_devices_inner import HaDevicesHaDevicesInner
+from scm.device_settings.models.ha_devices_ha_devices_inner import HaDevicesHaDevicesInner
 from typing import Optional, Set
 from typing_extensions import Self
 

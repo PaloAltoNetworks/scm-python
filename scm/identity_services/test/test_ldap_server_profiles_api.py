@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.ldap_server_profiles_api import LDAPServerProfilesApi
+from scm.identity_services.api.ldap_server_profiles_api import LDAPServerProfilesApi
 
 
 class TestLDAPServerProfilesApi(unittest.TestCase):

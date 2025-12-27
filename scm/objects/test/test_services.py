@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services import Services
+from scm.objects.models.services import Services
 
 class TestServices(unittest.TestCase):
     """Services unit test stubs"""
@@ -41,15 +41,15 @@ class TestServices(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '.',
-                protocol = scm_objects.models.services_protocol.services_protocol(
-                    tcp = scm_objects.models.services_protocol_tcp.services_protocol_tcp(
-                        override = scm_objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
+                protocol = scm.objects.models.services_protocol.services_protocol(
+                    tcp = scm.objects.models.services_protocol_tcp.services_protocol_tcp(
+                        override = scm.objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
                             halfclose_timeout = 1, 
                             timeout = 1, 
                             timewait_timeout = 1, ), 
                         port = '0', 
                         source_port = '0', ), 
-                    udp = scm_objects.models.services_protocol_udp.services_protocol_udp(
+                    udp = scm.objects.models.services_protocol_udp.services_protocol_udp(
                         port = '0', 
                         source_port = '0', ), ),
                 snippet = 'My Snippet',

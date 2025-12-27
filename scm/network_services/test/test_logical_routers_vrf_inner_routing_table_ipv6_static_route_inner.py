@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
+from scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner import LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner
 
 class TestLogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner(unittest.TestCase):
     """LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner unit test stubs"""
@@ -37,28 +37,28 @@ class TestLogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner(unittest.TestCa
         if include_optional:
             return LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner(
                 admin_dist = 56,
-                bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                     profile = '', ),
                 destination = '',
                 interface = '',
                 metric = 56,
                 name = '',
-                nexthop = scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_nexthop.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_nexthop(
-                    discard = scm_network_services.models.discard.discard(), 
+                nexthop = scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_nexthop.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_nexthop(
+                    discard = scm.network_services.models.discard.discard(), 
                     fqdn = '', 
                     ipv6_address = '', 
                     next_lr = '', 
                     next_vr = '', 
-                    receive = scm_network_services.models.receive.receive(), 
+                    receive = scm.network_services.models.receive.receive(), 
                     tunnel = '', ),
-                option = scm_network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option(
-                    passive = scm_network_services.models.passive.passive(), ),
-                path_monitor = scm_network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor(
+                option = scm.network_services.models.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option.logical_routers_vrf_inner_routing_table_ipv6_static_route_inner_option(
+                    passive = scm.network_services.models.passive.passive(), ),
+                path_monitor = scm.network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor(
                     enable = True, 
                     failure_condition = 'any', 
                     hold_time = 56, 
                     monitor_destinations = [
-                        scm_network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner(
                             count = 56, 
                             destination = '', 
                             destination_fqdn = '', 
@@ -67,11 +67,11 @@ class TestLogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner(unittest.TestCa
                             name = '', 
                             source = '', )
                         ], ),
-                route_table = scm_network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_route_table.logical_routers_vrf_inner_routing_table_ip_static_route_inner_route_table(
-                    both = scm_network_services.models.both.both(), 
-                    multicast = scm_network_services.models.multicast.multicast(), 
-                    no_install = scm_network_services.models.no_install.no_install(), 
-                    unicast = scm_network_services.models.unicast.unicast(), )
+                route_table = scm.network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_route_table.logical_routers_vrf_inner_routing_table_ip_static_route_inner_route_table(
+                    both = scm.network_services.models.both.both(), 
+                    multicast = scm.network_services.models.multicast.multicast(), 
+                    no_install = scm.network_services.models.no_install.no_install(), 
+                    unicast = scm.network_services.models.unicast.unicast(), )
             )
         else:
             return LogicalRoutersVrfInnerRoutingTableIpv6StaticRouteInner(

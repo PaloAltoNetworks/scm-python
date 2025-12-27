@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
 
 class TestHaConfigurationsGroupMonitoringPathMonitoring(unittest.TestCase):
     """HaConfigurationsGroupMonitoringPathMonitoring unit test stubs"""
@@ -38,11 +38,11 @@ class TestHaConfigurationsGroupMonitoringPathMonitoring(unittest.TestCase):
             return HaConfigurationsGroupMonitoringPathMonitoring(
                 enabled = True,
                 failure_condition = 'any',
-                path_group = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
+                path_group = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
                     logical_router = [
-                        scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
+                        scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
                             destination_ip_group = [
-                                scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
+                                scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
                                     destination_ip = [
                                         ''
                                         ], 

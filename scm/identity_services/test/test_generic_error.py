@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.generic_error import GenericError
+from scm.identity_services.models.generic_error import GenericError
 
 class TestGenericError(unittest.TestCase):
     """GenericError unit test stubs"""
@@ -37,7 +37,7 @@ class TestGenericError(unittest.TestCase):
         if include_optional:
             return GenericError(
                 errors = [
-                    scm_identity_services.models.cause_info.Cause Info(
+                    scm.identity_services.models.cause_info.Cause Info(
                         code = '', 
                         details = null, 
                         help = '', 

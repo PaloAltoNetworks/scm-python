@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner import ZoneProtectionProfilesL2SecGroupTagProtectionTagsInner
+from scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner import ZoneProtectionProfilesL2SecGroupTagProtectionTagsInner
 from typing import Optional, Set
 from typing_extensions import Self
 

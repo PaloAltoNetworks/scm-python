@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
+from scm.network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
 
 # TODO update the JSON string below
 json = "{}"

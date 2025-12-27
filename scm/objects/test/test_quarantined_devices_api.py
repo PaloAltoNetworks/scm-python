@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.quarantined_devices_api import QuarantinedDevicesApi
+from scm.objects.api.quarantined_devices_api import QuarantinedDevicesApi
 
 
 class TestQuarantinedDevicesApi(unittest.TestCase):

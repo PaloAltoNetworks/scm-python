@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.variables import Variables
+from scm.config_setup.models.variables import Variables
 
 class TestVariables(unittest.TestCase):
     """Variables unit test stubs"""

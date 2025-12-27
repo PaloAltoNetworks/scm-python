@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
 
 class TestDosProtectionProfilesFloodTcpSyn(unittest.TestCase):
     """DosProtectionProfilesFloodTcpSyn unit test stubs"""
@@ -37,16 +37,16 @@ class TestDosProtectionProfilesFloodTcpSyn(unittest.TestCase):
         if include_optional:
             return DosProtectionProfilesFloodTcpSyn(
                 enable = True,
-                red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                     activate_rate = 1, 
                     alarm_rate = 0, 
-                    block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                    block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                         duration = 1, ), 
                     maximal_rate = 1, ),
-                syn_cookies = scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
+                syn_cookies = scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
                     activate_rate = 0, 
                     alarm_rate = 0, 
-                    block = scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block.dos_protection_profiles_flood_tcp_syn_syn_cookies_block(
+                    block = scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block.dos_protection_profiles_flood_tcp_syn_syn_cookies_block(
                         duration = 1, ), 
                     maximal_rate = 1, )
             )

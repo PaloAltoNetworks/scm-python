@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit unit test stubs"""
@@ -36,14 +36,14 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit(unittest.TestC
         model = LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit()
         if include_optional:
             return LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit(
-                no = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(
-                    address_family = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                no = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(
+                    address_family = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                         ipv4 = '', 
                         ipv6 = '', ), 
-                    filtering_profile = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                    filtering_profile = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                         ipv4 = '', 
                         ipv6 = '', ), ),
-                yes = scm_network_services.models.yes.yes()
+                yes = scm.network_services.models.yes.yes()
             )
         else:
             return LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerInherit(

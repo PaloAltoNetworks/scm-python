@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.trusted_certificate_authorities_list_response import TrustedCertificateAuthoritiesListResponse
+from scm.identity_services.models.trusted_certificate_authorities_list_response import TrustedCertificateAuthoritiesListResponse
 
 class TestTrustedCertificateAuthoritiesListResponse(unittest.TestCase):
     """TrustedCertificateAuthoritiesListResponse unit test stubs"""

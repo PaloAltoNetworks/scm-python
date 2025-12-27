@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update import LogicalRoutersVrfInnerBgpPolicyExportRulesInnerActionAllowUpdate
+from scm.network_services.models.logical_routers_vrf_inner_bgp_policy_export_rules_inner_action_allow_update import LogicalRoutersVrfInnerBgpPolicyExportRulesInnerActionAllowUpdate
 from typing import Optional, Set
 from typing_extensions import Self
 

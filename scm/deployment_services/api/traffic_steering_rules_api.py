@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_deployment_services.models.traffic_steering_rules import TrafficSteeringRules
-from scm_deployment_services.models.traffic_steering_rules_list_response import TrafficSteeringRulesListResponse
+from scm.deployment_services.models.traffic_steering_rules import TrafficSteeringRules
+from scm.deployment_services.models.traffic_steering_rules_list_response import TrafficSteeringRulesListResponse
 
-from scm_deployment_services.api_client import ApiClient, RequestSerialized
-from scm_deployment_services.api_response import ApiResponse
-from scm_deployment_services.rest import RESTResponseType
+from scm.deployment_services.api_client import ApiClient, RequestSerialized
+from scm.deployment_services.api_response import ApiResponse
+from scm.deployment_services.rest import RESTResponseType
 
 
 class TrafficSteeringRulesApi:

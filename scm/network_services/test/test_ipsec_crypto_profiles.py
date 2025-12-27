@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_crypto_profiles import IpsecCryptoProfiles
+from scm.network_services.models.ipsec_crypto_profiles import IpsecCryptoProfiles
 
 class TestIpsecCryptoProfiles(unittest.TestCase):
     """IpsecCryptoProfiles unit test stubs"""
@@ -36,13 +36,13 @@ class TestIpsecCryptoProfiles(unittest.TestCase):
         model = IpsecCryptoProfiles()
         if include_optional:
             return IpsecCryptoProfiles(
-                ah = scm_network_services.models.ipsec_crypto_profiles_ah.ipsec_crypto_profiles_ah(
+                ah = scm.network_services.models.ipsec_crypto_profiles_ah.ipsec_crypto_profiles_ah(
                     authentication = [
                         'md5'
                         ], ),
                 device = 'My Device',
                 dh_group = 'group2',
-                esp = scm_network_services.models.ipsec_crypto_profiles_esp.ipsec_crypto_profiles_esp(
+                esp = scm.network_services.models.ipsec_crypto_profiles_esp.ipsec_crypto_profiles_esp(
                     authentication = [
                         'sha1'
                         ], 
@@ -51,12 +51,12 @@ class TestIpsecCryptoProfiles(unittest.TestCase):
                         ], ),
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                lifesize = scm_network_services.models.ipsec_crypto_profiles_lifesize.ipsec_crypto_profiles_lifesize(
+                lifesize = scm.network_services.models.ipsec_crypto_profiles_lifesize.ipsec_crypto_profiles_lifesize(
                     gb = 1, 
                     kb = 1, 
                     mb = 1, 
                     tb = 1, ),
-                lifetime = scm_network_services.models.ipsec_crypto_profiles_lifetime.ipsec_crypto_profiles_lifetime(
+                lifetime = scm.network_services.models.ipsec_crypto_profiles_lifetime.ipsec_crypto_profiles_lifetime(
                     days = 1, 
                     hours = 1, 
                     minutes = 3, 
@@ -66,7 +66,7 @@ class TestIpsecCryptoProfiles(unittest.TestCase):
             )
         else:
             return IpsecCryptoProfiles(
-                lifetime = scm_network_services.models.ipsec_crypto_profiles_lifetime.ipsec_crypto_profiles_lifetime(
+                lifetime = scm.network_services.models.ipsec_crypto_profiles_lifetime.ipsec_crypto_profiles_lifetime(
                     days = 1, 
                     hours = 1, 
                     minutes = 3, 

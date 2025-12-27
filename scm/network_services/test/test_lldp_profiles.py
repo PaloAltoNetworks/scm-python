@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.lldp_profiles import LldpProfiles
+from scm.network_services.models.lldp_profiles import LldpProfiles
 
 class TestLldpProfiles(unittest.TestCase):
     """LldpProfiles unit test stubs"""
@@ -41,11 +41,11 @@ class TestLldpProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 mode = '',
                 name = '',
-                option_tlvs = scm_network_services.models.lldp_profiles_option_tlvs.lldp_profiles_option_tlvs(
-                    management_address = scm_network_services.models.lldp_profiles_option_tlvs_management_address.lldp_profiles_option_tlvs_management_address(
+                option_tlvs = scm.network_services.models.lldp_profiles_option_tlvs.lldp_profiles_option_tlvs(
+                    management_address = scm.network_services.models.lldp_profiles_option_tlvs_management_address.lldp_profiles_option_tlvs_management_address(
                         enabled = True, 
                         iplist = [
-                            scm_network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner.lldp_profiles_option_tlvs_management_address_iplist_inner(
+                            scm.network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner.lldp_profiles_option_tlvs_management_address_iplist_inner(
                                 interface = '', 
                                 ipv4 = '', 
                                 ipv6 = '', 

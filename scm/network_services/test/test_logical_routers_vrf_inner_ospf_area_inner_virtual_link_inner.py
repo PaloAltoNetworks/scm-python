@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner import LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner import LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner(unittest.TestCase)
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner(
                 authentication = '',
-                bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                     profile = '', ),
                 enable = True,
                 instance_id = 56,
@@ -47,7 +47,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerVirtualLinkInner(unittest.TestCase)
                 passive = True,
                 timing = '',
                 transit_area_id = '',
-                vr_timing = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing(
+                vr_timing = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_virtual_link_inner_vr_timing(
                     dead_counts = 56, 
                     hello_interval = 56, 
                     retransmit_interval = 56, 

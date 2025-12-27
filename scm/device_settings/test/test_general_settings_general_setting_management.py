@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.general_settings_general_setting_management import GeneralSettingsGeneralSettingManagement
+from scm.device_settings.models.general_settings_general_setting_management import GeneralSettingsGeneralSettingManagement
 
 class TestGeneralSettingsGeneralSettingManagement(unittest.TestCase):
     """GeneralSettingsGeneralSettingManagement unit test stubs"""

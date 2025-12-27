@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner import IpsecTunnelsAutoKeyIkeGatewayInner
+from scm.network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner import IpsecTunnelsAutoKeyIkeGatewayInner
 
 class TestIpsecTunnelsAutoKeyIkeGatewayInner(unittest.TestCase):
     """IpsecTunnelsAutoKeyIkeGatewayInner unit test stubs"""

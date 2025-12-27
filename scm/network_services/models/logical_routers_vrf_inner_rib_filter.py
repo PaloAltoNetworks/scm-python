@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv4 import LogicalRoutersVrfInnerRibFilterIpv4
-from scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv6 import LogicalRoutersVrfInnerRibFilterIpv6
+from scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv4 import LogicalRoutersVrfInnerRibFilterIpv4
+from scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv6 import LogicalRoutersVrfInnerRibFilterIpv6
 from typing import Optional, Set
 from typing_extensions import Self
 

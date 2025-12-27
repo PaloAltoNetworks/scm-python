@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.link_tags_api import LinkTagsApi
+from scm.network_services.api.link_tags_api import LinkTagsApi
 
 
 class TestLinkTagsApi(unittest.TestCase):

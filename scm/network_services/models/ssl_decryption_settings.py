@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
-from scm_network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
+from scm.network_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
+from scm.network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
 from typing import Optional, Set
 from typing_extensions import Self
 

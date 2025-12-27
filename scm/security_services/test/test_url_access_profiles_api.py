@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.url_access_profiles_api import URLAccessProfilesApi
+from scm.security_services.api.url_access_profiles_api import URLAccessProfilesApi
 
 
 class TestURLAccessProfilesApi(unittest.TestCase):

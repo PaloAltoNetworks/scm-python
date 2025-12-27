@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
+from scm.device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
 
 # TODO update the JSON string below
 json = "{}"

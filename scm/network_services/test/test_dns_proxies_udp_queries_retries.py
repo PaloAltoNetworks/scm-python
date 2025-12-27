@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_udp_queries_retries import DnsProxiesUdpQueriesRetries
+from scm.network_services.models.dns_proxies_udp_queries_retries import DnsProxiesUdpQueriesRetries
 
 class TestDnsProxiesUdpQueriesRetries(unittest.TestCase):
     """DnsProxiesUdpQueriesRetries unit test stubs"""

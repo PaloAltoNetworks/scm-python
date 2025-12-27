@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles_certificate_attributes import ScepProfilesCertificateAttributes
+from scm.identity_services.models.scep_profiles_certificate_attributes import ScepProfilesCertificateAttributes
 
 class TestScepProfilesCertificateAttributes(unittest.TestCase):
     """ScepProfilesCertificateAttributes unit test stubs"""

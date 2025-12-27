@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
+from scm.security_services.models.decryption_profiles_ssl_protocol_settings import DecryptionProfilesSslProtocolSettings
 
 class TestDecryptionProfilesSslProtocolSettings(unittest.TestCase):
     """DecryptionProfilesSslProtocolSettings unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd unit test stubs"""
@@ -36,7 +36,7 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd(unittest.TestCase)
         model = LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd()
         if include_optional:
             return LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerBfd(
-                multihop = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
+                multihop = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
                     min_received_ttl = 56, ),
                 profile = ''
             )

@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
+from scm.network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
 from typing import Optional, Set
 from typing_extensions import Self
 

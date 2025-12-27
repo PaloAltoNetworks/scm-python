@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_filter import BgpFilter
+from scm.network_services.models.bgp_filter import BgpFilter
 
 # TODO update the JSON string below
 json = "{}"

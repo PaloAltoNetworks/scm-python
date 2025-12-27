@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
+from scm.network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
 
 class TestLldpProfilesOptionTlvsManagementAddressIplistInner(unittest.TestCase):
     """LldpProfilesOptionTlvsManagementAddressIplistInner unit test stubs"""

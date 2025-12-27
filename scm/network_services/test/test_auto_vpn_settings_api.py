@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.auto_vpn_settings_api import AutoVPNSettingsApi
+from scm.network_services.api.auto_vpn_settings_api import AutoVPNSettingsApi
 
 
 class TestAutoVPNSettingsApi(unittest.TestCase):

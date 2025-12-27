@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_udp_queries import DnsProxiesUdpQueries
+from scm.network_services.models.dns_proxies_udp_queries import DnsProxiesUdpQueries
 
 # TODO update the JSON string below
 json = "{}"

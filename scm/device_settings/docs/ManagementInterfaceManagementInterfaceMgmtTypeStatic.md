@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.management_interface_management_interface_mgmt_type_static import ManagementInterfaceManagementInterfaceMgmtTypeStatic
+from scm.device_settings.models.management_interface_management_interface_mgmt_type_static import ManagementInterfaceManagementInterfaceMgmtTypeStatic
 
 # TODO update the JSON string below
 json = "{}"

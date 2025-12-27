@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_maps import BgpRouteMaps
+from scm.network_services.models.bgp_route_maps import BgpRouteMaps
 
 class TestBgpRouteMaps(unittest.TestCase):
     """BgpRouteMaps unit test stubs"""
@@ -42,18 +42,18 @@ class TestBgpRouteMaps(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 route_map = [
-                    scm_network_services.models.bgp_route_maps_route_map_inner.bgp_route_maps_route_map_inner(
+                    scm.network_services.models.bgp_route_maps_route_map_inner.bgp_route_maps_route_map_inner(
                         action = 'permit', 
                         description = '', 
-                        match = scm_network_services.models.bgp_route_maps_route_map_inner_match.bgp_route_maps_route_map_inner_match(
+                        match = scm.network_services.models.bgp_route_maps_route_map_inner_match.bgp_route_maps_route_map_inner_match(
                             as_path_access_list = '', 
                             extended_community = '', 
                             interface = '', 
-                            ipv4 = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4.bgp_route_maps_route_map_inner_match_ipv4(
-                                address = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
+                            ipv4 = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4.bgp_route_maps_route_map_inner_match_ipv4(
+                                address = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
                                     access_list = '', 
                                     prefix_list = '', ), 
-                                next_hop = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
+                                next_hop = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
                                     access_list = '', 
                                     prefix_list = '', ), 
                                 route_source = , ), 
@@ -65,8 +65,8 @@ class TestBgpRouteMaps(unittest.TestCase):
                             regular_community = '', 
                             tag = 1, ), 
                         name = 1, 
-                        set = scm_network_services.models.bgp_route_maps_route_map_inner_set.bgp_route_maps_route_map_inner_set(
-                            aggregator = scm_network_services.models.bgp_route_maps_route_map_inner_set_aggregator.bgp_route_maps_route_map_inner_set_aggregator(
+                        set = scm.network_services.models.bgp_route_maps_route_map_inner_set.bgp_route_maps_route_map_inner_set(
+                            aggregator = scm.network_services.models.bgp_route_maps_route_map_inner_set_aggregator.bgp_route_maps_route_map_inner_set_aggregator(
                                 as = 1, 
                                 router_id = '', ), 
                             aspath_exclude = [
@@ -80,7 +80,7 @@ class TestBgpRouteMaps(unittest.TestCase):
                                 ''
                                 ], 
                             local_preference = 0, 
-                            metric = scm_network_services.models.bgp_route_maps_route_map_inner_set_metric.bgp_route_maps_route_map_inner_set_metric(
+                            metric = scm.network_services.models.bgp_route_maps_route_map_inner_set_metric.bgp_route_maps_route_map_inner_set_metric(
                                 action = 'set', 
                                 value = 0, ), 
                             origin = 'none', 

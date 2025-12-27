@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.pbf_rules import PbfRules
+from scm.network_services.models.pbf_rules import PbfRules
 
 # TODO update the JSON string below
 json = "{}"

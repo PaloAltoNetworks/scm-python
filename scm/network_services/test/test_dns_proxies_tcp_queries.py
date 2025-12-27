@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
+from scm.network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
 
 class TestDnsProxiesTcpQueries(unittest.TestCase):
     """DnsProxiesTcpQueries unit test stubs"""

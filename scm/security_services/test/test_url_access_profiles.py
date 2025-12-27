@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.url_access_profiles import UrlAccessProfiles
+from scm.security_services.models.url_access_profiles import UrlAccessProfiles
 
 class TestUrlAccessProfiles(unittest.TestCase):
     """UrlAccessProfiles unit test stubs"""
@@ -49,7 +49,7 @@ class TestUrlAccessProfiles(unittest.TestCase):
                 var_continue = [
                     ''
                     ],
-                credential_enforcement = scm_security_services.models.url_access_profiles_credential_enforcement.url_access_profiles_credential_enforcement(
+                credential_enforcement = scm.security_services.models.url_access_profiles_credential_enforcement.url_access_profiles_credential_enforcement(
                     alert = [
                         ''
                         ], 
@@ -63,11 +63,11 @@ class TestUrlAccessProfiles(unittest.TestCase):
                         ''
                         ], 
                     log_severity = 'medium', 
-                    mode = scm_security_services.models.url_access_profiles_credential_enforcement_mode.url_access_profiles_credential_enforcement_mode(
-                        disabled = scm_security_services.models.disabled.disabled(), 
-                        domain_credentials = scm_security_services.models.domain_credentials.domain_credentials(), 
+                    mode = scm.security_services.models.url_access_profiles_credential_enforcement_mode.url_access_profiles_credential_enforcement_mode(
+                        disabled = scm.security_services.models.disabled.disabled(), 
+                        domain_credentials = scm.security_services.models.domain_credentials.domain_credentials(), 
                         group_mapping = '', 
-                        ip_user = scm_security_services.models.ip_user.ip_user(), ), ),
+                        ip_user = scm.security_services.models.ip_user.ip_user(), ), ),
                 description = '',
                 device = 'My Device',
                 folder = 'My Folder',

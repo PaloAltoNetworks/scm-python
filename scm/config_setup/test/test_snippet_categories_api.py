@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.snippet_categories_api import SnippetCategoriesApi
+from scm.config_setup.api.snippet_categories_api import SnippetCategoriesApi
 
 
 class TestSnippetCategoriesApi(unittest.TestCase):

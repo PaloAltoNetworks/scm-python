@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.local_user_groups import LocalUserGroups
+from scm.identity_services.models.local_user_groups import LocalUserGroups
 
 # TODO update the JSON string below
 json = "{}"

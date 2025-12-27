@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ospf_authentication_profiles_list_response import OSPFAuthenticationProfilesListResponse
+from scm.network_services.models.ospf_authentication_profiles_list_response import OSPFAuthenticationProfilesListResponse
 
 class TestOSPFAuthenticationProfilesListResponse(unittest.TestCase):
     """OSPFAuthenticationProfilesListResponse unit test stubs"""

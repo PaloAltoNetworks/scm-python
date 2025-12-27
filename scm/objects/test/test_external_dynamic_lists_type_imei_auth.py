@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_imei_auth import ExternalDynamicListsTypeImeiAuth
+from scm.objects.models.external_dynamic_lists_type_imei_auth import ExternalDynamicListsTypeImeiAuth
 
 class TestExternalDynamicListsTypeImeiAuth(unittest.TestCase):
     """ExternalDynamicListsTypeImeiAuth unit test stubs"""

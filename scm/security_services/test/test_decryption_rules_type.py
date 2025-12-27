@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_rules_type import DecryptionRulesType
+from scm.security_services.models.decryption_rules_type import DecryptionRulesType
 
 class TestDecryptionRulesType(unittest.TestCase):
     """DecryptionRulesType unit test stubs"""
@@ -36,7 +36,7 @@ class TestDecryptionRulesType(unittest.TestCase):
         model = DecryptionRulesType()
         if include_optional:
             return DecryptionRulesType(
-                ssl_forward_proxy = scm_security_services.models.ssl_forward_proxy.ssl_forward_proxy(),
+                ssl_forward_proxy = scm.security_services.models.ssl_forward_proxy.ssl_forward_proxy(),
                 ssl_inbound_inspection = ''
             )
         else:

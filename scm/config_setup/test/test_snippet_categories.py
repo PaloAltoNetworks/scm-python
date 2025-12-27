@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_categories import SnippetCategories
+from scm.config_setup.models.snippet_categories import SnippetCategories
 
 class TestSnippetCategories(unittest.TestCase):
     """SnippetCategories unit test stubs"""
@@ -48,7 +48,7 @@ class TestSnippetCategories(unittest.TestCase):
                 enable_prefix = True,
                 error = '',
                 folders = [
-                    scm_config_setup.models.used_folders.used_folders(
+                    scm.config_setup.models.used_folders.used_folders(
                         id = '', 
                         name = '', )
                     ],

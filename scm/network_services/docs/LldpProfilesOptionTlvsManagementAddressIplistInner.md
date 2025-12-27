@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
+from scm.network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner import LldpProfilesOptionTlvsManagementAddressIplistInner
 
 # TODO update the JSON string below
 json = "{}"

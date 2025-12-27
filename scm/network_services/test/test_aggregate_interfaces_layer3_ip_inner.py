@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
+from scm.network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
 
 class TestAggregateInterfacesLayer3IpInner(unittest.TestCase):
     """AggregateInterfacesLayer3IpInner unit test stubs"""

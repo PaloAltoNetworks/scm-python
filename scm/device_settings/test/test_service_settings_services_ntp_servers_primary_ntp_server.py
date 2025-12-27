@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server import ServiceSettingsServicesNtpServersPrimaryNtpServer
+from scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server import ServiceSettingsServicesNtpServersPrimaryNtpServer
 
 class TestServiceSettingsServicesNtpServersPrimaryNtpServer(unittest.TestCase):
     """ServiceSettingsServicesNtpServersPrimaryNtpServer unit test stubs"""
@@ -36,14 +36,14 @@ class TestServiceSettingsServicesNtpServersPrimaryNtpServer(unittest.TestCase):
         model = ServiceSettingsServicesNtpServersPrimaryNtpServer()
         if include_optional:
             return ServiceSettingsServicesNtpServersPrimaryNtpServer(
-                authentication_type = scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type.service_settings_services_ntp_servers_primary_ntp_server_authentication_type(
-                    autokey = scm_device_settings.models.autokey.autokey(), 
-                    none = scm_device_settings.models.none.none(), 
-                    symmetric_key = scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key(
-                        algorithm = scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm(
-                            md5 = scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5(
+                authentication_type = scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type.service_settings_services_ntp_servers_primary_ntp_server_authentication_type(
+                    autokey = scm.device_settings.models.autokey.autokey(), 
+                    none = scm.device_settings.models.none.none(), 
+                    symmetric_key = scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key(
+                        algorithm = scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm(
+                            md5 = scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5(
                                 authentication_key = '', ), 
-                            sha1 = scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5(
+                            sha1 = scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5.service_settings_services_ntp_servers_primary_ntp_server_authentication_type_symmetric_key_algorithm_md5(
                                 authentication_key = '', ), ), 
                         key_id = 1.337, ), ),
                 ntp_server_address = ''

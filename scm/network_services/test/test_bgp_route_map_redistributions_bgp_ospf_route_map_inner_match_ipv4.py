@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4 import BgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4
+from scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4 import BgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4
 
 class TestBgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4(unittest.TestCase):
     """BgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4 unit test stubs"""
@@ -36,13 +36,13 @@ class TestBgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4(unittest.TestC
         model = BgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4()
         if include_optional:
             return BgpRouteMapRedistributionsBgpOspfRouteMapInnerMatchIpv4(
-                address = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address(
+                address = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_address(
                     access_list = '', 
                     prefix_list = '', ),
-                next_hop = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop(
+                next_hop = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_next_hop(
                     access_list = '', 
                     prefix_list = '', ),
-                route_source = scm_network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source(
+                route_source = scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source.bgp_route_map_redistributions_bgp_ospf_route_map_inner_match_ipv4_route_source(
                     access_list = '', 
                     prefix_list = '', )
             )

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
 
 # TODO update the JSON string below
 json = "{}"

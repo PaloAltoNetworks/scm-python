@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_msdp import LogicalRoutersVrfInnerMulticastMsdp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_msdp import LogicalRoutersVrfInnerMulticastMsdp
 
 class TestLogicalRoutersVrfInnerMulticastMsdp(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastMsdp unit test stubs"""
@@ -39,21 +39,21 @@ class TestLogicalRoutersVrfInnerMulticastMsdp(unittest.TestCase):
                 enable = True,
                 global_authentication = '',
                 global_timer = '',
-                originator_id = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                originator_id = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                     interface = '', 
                     ip = '', ),
                 peer = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner.logical_routers_vrf_inner_multicast_msdp_peer_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_msdp_peer_inner.logical_routers_vrf_inner_multicast_msdp_peer_inner(
                         authentication = '', 
                         enable = True, 
                         inbound_sa_filter = '', 
-                        local_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                        local_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                             interface = '', 
                             ip = '', ), 
                         max_sa = 56, 
                         name = '', 
                         outbound_sa_filter = '', 
-                        peer_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
+                        peer_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
                             fqdn = '', 
                             ip = '', ), 
                         peer_as = '', )

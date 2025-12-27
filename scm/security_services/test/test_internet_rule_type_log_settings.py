@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_log_settings import InternetRuleTypeLogSettings
+from scm.security_services.models.internet_rule_type_log_settings import InternetRuleTypeLogSettings
 
 class TestInternetRuleTypeLogSettings(unittest.TestCase):
     """InternetRuleTypeLogSettings unit test stubs"""

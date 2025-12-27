@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.external_dynamic_lists_api import ExternalDynamicListsApi
+from scm.objects.api.external_dynamic_lists_api import ExternalDynamicListsApi
 
 
 class TestExternalDynamicListsApi(unittest.TestCase):

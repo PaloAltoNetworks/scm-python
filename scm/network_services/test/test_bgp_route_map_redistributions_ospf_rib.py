@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_rib import BgpRouteMapRedistributionsOspfRib
+from scm.network_services.models.bgp_route_map_redistributions_ospf_rib import BgpRouteMapRedistributionsOspfRib
 
 class TestBgpRouteMapRedistributionsOspfRib(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfRib unit test stubs"""
@@ -37,21 +37,21 @@ class TestBgpRouteMapRedistributionsOspfRib(unittest.TestCase):
         if include_optional:
             return BgpRouteMapRedistributionsOspfRib(
                 route_map = [
-                    scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner.bgp_route_map_redistributions_ospf_rib_route_map_inner(
+                    scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner.bgp_route_map_redistributions_ospf_rib_route_map_inner(
                         action = 'permit', 
                         description = '', 
-                        match = scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match.bgp_route_map_redistributions_ospf_rib_route_map_inner_match(
-                            address = scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_address.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_address(
+                        match = scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match.bgp_route_map_redistributions_ospf_rib_route_map_inner_match(
+                            address = scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_address.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_address(
                                 access_list = '', 
                                 prefix_list = '', ), 
                             interface = '', 
                             metric = 0, 
-                            next_hop = scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop(
+                            next_hop = scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop.bgp_route_map_redistributions_ospf_rib_route_map_inner_match_next_hop(
                                 access_list = '', 
                                 prefix_list = '', ), 
                             tag = 1, ), 
                         name = 1, 
-                        set = scm_network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_set.bgp_route_map_redistributions_ospf_rib_route_map_inner_set(
+                        set = scm.network_services.models.bgp_route_map_redistributions_ospf_rib_route_map_inner_set.bgp_route_map_redistributions_ospf_rib_route_map_inner_set(
                             source_address = '', ), )
                     ]
             )

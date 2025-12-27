@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_security_services.models.app_override_rules import AppOverrideRules
+from scm.security_services.models.app_override_rules import AppOverrideRules
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
 from typing import Optional, Set
 from typing_extensions import Self
 

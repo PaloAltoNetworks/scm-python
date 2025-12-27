@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_mobile_device import HipObjectsMobileDevice
+from scm.objects.models.hip_objects_mobile_device import HipObjectsMobileDevice
 
 class TestHipObjectsMobileDevice(unittest.TestCase):
     """HipObjectsMobileDevice unit test stubs"""
@@ -36,36 +36,36 @@ class TestHipObjectsMobileDevice(unittest.TestCase):
         model = HipObjectsMobileDevice()
         if include_optional:
             return HipObjectsMobileDevice(
-                criteria = scm_objects.models.hip_objects_mobile_device_criteria.hip_objects_mobile_device_criteria(
-                    applications = scm_objects.models.hip_objects_mobile_device_criteria_applications.hip_objects_mobile_device_criteria_applications(
-                        has_malware = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
-                            no = scm_objects.models.no.no(), 
-                            yes = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
+                criteria = scm.objects.models.hip_objects_mobile_device_criteria.hip_objects_mobile_device_criteria(
+                    applications = scm.objects.models.hip_objects_mobile_device_criteria_applications.hip_objects_mobile_device_criteria_applications(
+                        has_malware = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
+                            no = scm.objects.models.no.no(), 
+                            yes = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
                                 excludes = [
-                                    scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                                    scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                                         hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                         name = '', 
                                         package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                                     ], ), ), 
                         has_unmanaged_app = True, 
                         includes = [
-                            scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                            scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                                 hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                 name = '', 
                                 package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                             ], ), 
                     disk_encrypted = True, 
-                    imei = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                    imei = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 
                     jailbroken = True, 
-                    last_checkin_time = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time.hip_objects_mobile_device_criteria_last_checkin_time(
-                        not_within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                    last_checkin_time = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time.hip_objects_mobile_device_criteria_last_checkin_time(
+                        not_within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                             days = 1, ), 
-                        within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                        within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                             days = 1, ), ), 
-                    model = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                    model = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 

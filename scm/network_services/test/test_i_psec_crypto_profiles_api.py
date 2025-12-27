@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.i_psec_crypto_profiles_api import IPsecCryptoProfilesApi
+from scm.network_services.api.i_psec_crypto_profiles_api import IPsecCryptoProfilesApi
 
 
 class TestIPsecCryptoProfilesApi(unittest.TestCase):

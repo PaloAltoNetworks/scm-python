@@ -1,4 +1,4 @@
-# scm_deployment_services.ServiceConnectionGroupsApi
+# scm.deployment_services.ServiceConnectionGroupsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -23,14 +23,14 @@ Create a new service connection group.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.service_connection_groups import ServiceConnectionGroups
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.service_connection_groups import ServiceConnectionGroups
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.ServiceConnectionGroupsApi(api_client)
-    service_connection_groups = scm_deployment_services.ServiceConnectionGroups() # ServiceConnectionGroups | Created (optional)
+    api_instance = scm.deployment_services.ServiceConnectionGroupsApi(api_client)
+    service_connection_groups = scm.deployment_services.ServiceConnectionGroups() # ServiceConnectionGroups | Created (optional)
 
     try:
         # Create a service connection group
@@ -106,13 +106,13 @@ Delete a service connection group.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.ServiceConnectionGroupsApi(api_client)
+    api_instance = scm.deployment_services.ServiceConnectionGroupsApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing service connection group.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.service_connection_groups import ServiceConnectionGroups
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.service_connection_groups import ServiceConnectionGroups
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.ServiceConnectionGroupsApi(api_client)
+    api_instance = scm.deployment_services.ServiceConnectionGroupsApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of service connection groups.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.ServiceConnectionGroupsApi(api_client)
+    api_instance = scm.deployment_services.ServiceConnectionGroupsApi(api_client)
     folder = Service Connections # str | The folder in which the resource is defined  (default to Service Connections)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
@@ -359,14 +359,14 @@ Update an existing service connection group.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.service_connection_groups import ServiceConnectionGroups
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.service_connection_groups import ServiceConnectionGroups
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -376,16 +376,16 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.ServiceConnectionGroupsApi(api_client)
+    api_instance = scm.deployment_services.ServiceConnectionGroupsApi(api_client)
     id = 'id_example' # str | The UUID of the configuration resource
-    service_connection_groups = scm_deployment_services.ServiceConnectionGroups() # ServiceConnectionGroups | OK (optional)
+    service_connection_groups = scm.deployment_services.ServiceConnectionGroups() # ServiceConnectionGroups | OK (optional)
 
     try:
         # Update a service connection group

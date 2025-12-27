@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.update_schedule_settings_api import UpdateScheduleSettingsApi
+from scm.device_settings.api.update_schedule_settings_api import UpdateScheduleSettingsApi
 
 
 class TestUpdateScheduleSettingsApi(unittest.TestCase):

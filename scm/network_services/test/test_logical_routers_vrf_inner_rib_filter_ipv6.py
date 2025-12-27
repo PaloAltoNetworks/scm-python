@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv6 import LogicalRoutersVrfInnerRibFilterIpv6
+from scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv6 import LogicalRoutersVrfInnerRibFilterIpv6
 
 class TestLogicalRoutersVrfInnerRibFilterIpv6(unittest.TestCase):
     """LogicalRoutersVrfInnerRibFilterIpv6 unit test stubs"""
@@ -36,11 +36,11 @@ class TestLogicalRoutersVrfInnerRibFilterIpv6(unittest.TestCase):
         model = LogicalRoutersVrfInnerRibFilterIpv6()
         if include_optional:
             return LogicalRoutersVrfInnerRibFilterIpv6(
-                bgp = scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
+                bgp = scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
                     route_map = '', ),
-                ospfv3 = scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
+                ospfv3 = scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
                     route_map = '', ),
-                static = scm_network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
+                static = scm.network_services.models.logical_routers_vrf_inner_rib_filter_ipv4_bgp.logical_routers_vrf_inner_rib_filter_ipv4_bgp(
                     route_map = '', )
             )
         else:

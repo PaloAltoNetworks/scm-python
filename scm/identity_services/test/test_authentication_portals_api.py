@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.authentication_portals_api import AuthenticationPortalsApi
+from scm.identity_services.api.authentication_portals_api import AuthenticationPortalsApi
 
 
 class TestAuthenticationPortalsApi(unittest.TestCase):

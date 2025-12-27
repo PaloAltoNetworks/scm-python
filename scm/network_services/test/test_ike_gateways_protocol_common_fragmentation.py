@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_protocol_common_fragmentation import IkeGatewaysProtocolCommonFragmentation
+from scm.network_services.models.ike_gateways_protocol_common_fragmentation import IkeGatewaysProtocolCommonFragmentation
 
 class TestIkeGatewaysProtocolCommonFragmentation(unittest.TestCase):
     """IkeGatewaysProtocolCommonFragmentation unit test stubs"""

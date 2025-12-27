@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_rules import SdwanRules
+from scm.network_services.models.sdwan_rules import SdwanRules
 
 class TestSdwanRules(unittest.TestCase):
     """SdwanRules unit test stubs"""
@@ -36,7 +36,7 @@ class TestSdwanRules(unittest.TestCase):
         model = SdwanRules()
         if include_optional:
             return SdwanRules(
-                action = scm_network_services.models.sdwan_rules_action.sdwan_rules_action(
+                action = scm.network_services.models.sdwan_rules_action.sdwan_rules_action(
                     traffic_distribution_profile = '', ),
                 application = [
                     'any'
@@ -78,7 +78,7 @@ class TestSdwanRules(unittest.TestCase):
             )
         else:
             return SdwanRules(
-                action = scm_network_services.models.sdwan_rules_action.sdwan_rules_action(
+                action = scm.network_services.models.sdwan_rules_action.sdwan_rules_action(
                     traffic_distribution_profile = '', ),
                 application = [
                     'any'

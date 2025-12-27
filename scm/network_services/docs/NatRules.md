@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.nat_rules import NatRules
+from scm.network_services.models.nat_rules import NatRules
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.sites import Sites
+from scm.deployment_services.models.sites import Sites
 
 class TestSites(unittest.TestCase):
     """Sites unit test stubs"""
@@ -45,14 +45,14 @@ class TestSites(unittest.TestCase):
                 license_type = 'FWAAS-SITE-25Mbps',
                 longitude = '77.665340',
                 members = [
-                    scm_deployment_services.models.sites_members_inner.sites_members_inner(
+                    scm.deployment_services.models.sites_members_inner.sites_members_inner(
                         id = 'e51fa715-3da5-4f98-bb78-eb56757e7719', 
                         mode = 'active', 
                         name = 'Connection A', 
                         remote_network = 'Connection A', )
                     ],
                 name = 'Bengaluru',
-                qos = scm_deployment_services.models.sites_qos.sites_qos(
+                qos = scm.deployment_services.models.sites_qos.sites_qos(
                     backup_cir = 10, 
                     cir = 10, 
                     profile = 'VoIP', ),

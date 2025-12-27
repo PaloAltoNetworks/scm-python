@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner import HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner
+from scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner import HttpHeaderProfilesHttpHeaderInsertionInnerTypeInner
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt import ZoneProtectionProfilesIpv6IgnoreInvPkt
+from scm.network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt import ZoneProtectionProfilesIpv6IgnoreInvPkt
 
 # TODO update the JSON string below
 json = "{}"

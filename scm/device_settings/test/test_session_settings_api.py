@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.session_settings_api import SessionSettingsApi
+from scm.device_settings.api.session_settings_api import SessionSettingsApi
 
 
 class TestSessionSettingsApi(unittest.TestCase):

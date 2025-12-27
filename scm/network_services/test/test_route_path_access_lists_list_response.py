@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_path_access_lists_list_response import RoutePathAccessListsListResponse
+from scm.network_services.models.route_path_access_lists_list_response import RoutePathAccessListsListResponse
 
 class TestRoutePathAccessListsListResponse(unittest.TestCase):
     """RoutePathAccessListsListResponse unit test stubs"""

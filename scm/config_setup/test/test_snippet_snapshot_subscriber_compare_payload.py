@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
 
 class TestSnippetSnapshotSubscriberComparePayload(unittest.TestCase):
     """SnippetSnapshotSubscriberComparePayload unit test stubs"""

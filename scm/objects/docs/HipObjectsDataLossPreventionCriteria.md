@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_data_loss_prevention_criteria import HipObjectsDataLossPreventionCriteria
+from scm.objects.models.hip_objects_data_loss_prevention_criteria import HipObjectsDataLossPreventionCriteria
 
 # TODO update the JSON string below
 json = "{}"

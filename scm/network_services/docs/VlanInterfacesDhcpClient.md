@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.vlan_interfaces_dhcp_client import VlanInterfacesDhcpClient
+from scm.network_services.models.vlan_interfaces_dhcp_client import VlanInterfacesDhcpClient
 
 # TODO update the JSON string below
 json = "{}"

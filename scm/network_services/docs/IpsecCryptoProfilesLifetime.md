@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ipsec_crypto_profiles_lifetime import IpsecCryptoProfilesLifetime
+from scm.network_services.models.ipsec_crypto_profiles_lifetime import IpsecCryptoProfilesLifetime
 
 # TODO update the JSON string below
 json = "{}"

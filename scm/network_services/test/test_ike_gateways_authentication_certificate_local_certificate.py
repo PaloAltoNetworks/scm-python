@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
+from scm.network_services.models.ike_gateways_authentication_certificate_local_certificate import IkeGatewaysAuthenticationCertificateLocalCertificate
 
 class TestIkeGatewaysAuthenticationCertificateLocalCertificate(unittest.TestCase):
     """IkeGatewaysAuthenticationCertificateLocalCertificate unit test stubs"""

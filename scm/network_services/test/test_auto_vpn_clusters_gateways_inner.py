@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_clusters_gateways_inner import AutoVpnClustersGatewaysInner
+from scm.network_services.models.auto_vpn_clusters_gateways_inner import AutoVpnClustersGatewaysInner
 
 class TestAutoVpnClustersGatewaysInner(unittest.TestCase):
     """AutoVpnClustersGatewaysInner unit test stubs"""
@@ -39,15 +39,15 @@ class TestAutoVpnClustersGatewaysInner(unittest.TestCase):
                 allow_dia_vpn_failover = True,
                 bgp_redistribution_profile = '',
                 interfaces = [
-                    scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner.auto_vpn_clusters_gateways_inner_interfaces_inner(
+                    scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner.auto_vpn_clusters_gateways_inner_interfaces_inner(
                         dhcp_ip = '', 
                         name = '', 
-                        sdwan_link_settings = scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings(
+                        sdwan_link_settings = scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings(
                             sdwan_gateway = '', 
                             sdwan_interface_profile = '', 
-                            upstream_nat = scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
+                            upstream_nat = scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
                                 enable = True, 
-                                static_ip = scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
+                                static_ip = scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
                                     fqdn = '', 
                                     ip_address = '', ), ), ), )
                     ],
@@ -55,14 +55,14 @@ class TestAutoVpnClustersGatewaysInner(unittest.TestCase):
                 name = '',
                 priority = '1',
                 private_interfaces = [
-                    scm_network_services.models.auto_vpn_clusters_gateways_inner_private_interfaces_inner.auto_vpn_clusters_gateways_inner_private_interfaces_inner(
+                    scm.network_services.models.auto_vpn_clusters_gateways_inner_private_interfaces_inner.auto_vpn_clusters_gateways_inner_private_interfaces_inner(
                         name = '', 
-                        sdwan_link_settings = scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings(
+                        sdwan_link_settings = scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings(
                             sdwan_gateway = '', 
                             sdwan_interface_profile = '', 
-                            upstream_nat = scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
+                            upstream_nat = scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings_upstream_nat(
                                 enable = True, 
-                                static_ip = scm_network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
+                                static_ip = scm.network_services.models.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip.auto_vpn_clusters_branches_inner_interfaces_inner_sdwan_link_settings_upstream_nat_static_ip(
                                     fqdn = '', 
                                     ip_address = '', ), ), ), )
                     ],

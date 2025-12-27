@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress
+from scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress
 
 class TestRouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress(unittest.TestCase):
     """RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress unit test stubs"""
@@ -37,7 +37,7 @@ class TestRouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress(unittest.TestCase)
         if include_optional:
             return RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddress(
                 address = '',
-                entry = scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry(
+                entry = scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry(
                     address = '', 
                     wildcard = '', )
             )

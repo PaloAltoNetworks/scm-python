@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_profiles_aggregate_bandwidth import QosProfilesAggregateBandwidth
+from scm.network_services.models.qos_profiles_aggregate_bandwidth import QosProfilesAggregateBandwidth
 
 class TestQosProfilesAggregateBandwidth(unittest.TestCase):
     """QosProfilesAggregateBandwidth unit test stubs"""

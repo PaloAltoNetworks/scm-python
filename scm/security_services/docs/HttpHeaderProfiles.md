@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.http_header_profiles import HttpHeaderProfiles
+from scm.security_services.models.http_header_profiles import HttpHeaderProfiles
 
 # TODO update the JSON string below
 json = "{}"

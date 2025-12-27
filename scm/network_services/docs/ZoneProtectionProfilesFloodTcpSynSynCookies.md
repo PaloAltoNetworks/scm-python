@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
+from scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
 
 # TODO update the JSON string below
 json = "{}"

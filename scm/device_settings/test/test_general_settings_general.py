@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.general_settings_general import GeneralSettingsGeneral
+from scm.device_settings.models.general_settings_general import GeneralSettingsGeneral
 
 class TestGeneralSettingsGeneral(unittest.TestCase):
     """GeneralSettingsGeneral unit test stubs"""
@@ -38,15 +38,15 @@ class TestGeneralSettingsGeneral(unittest.TestCase):
             return GeneralSettingsGeneral(
                 ack_login_banner = True,
                 domain = 'foo.com',
-                geo_location = scm_device_settings.models.general_settings_general_geo_location.general_settings_general_geo_location(
+                geo_location = scm.device_settings.models.general_settings_general_geo_location.general_settings_general_geo_location(
                     latitude = '37.383140', 
                     longitude = '-121.983060', ),
                 locale = 'en',
                 login_banner = '',
-                setting = scm_device_settings.models.general_settings_general_setting.general_settings_general_setting(
+                setting = scm.device_settings.models.general_settings_general_setting.general_settings_general_setting(
                     auto_mac_detect = True, 
                     fail_open = True, 
-                    management = scm_device_settings.models.general_settings_general_setting_management.general_settings_general_setting_management(
+                    management = scm.device_settings.models.general_settings_general_setting_management.general_settings_general_setting_management(
                         auto_acquire_commit_lock = True, 
                         enable_certificate_expiration_check = True, ), 
                     tunnel_acceleration = True, ),

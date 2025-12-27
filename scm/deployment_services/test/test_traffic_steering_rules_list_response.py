@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.traffic_steering_rules_list_response import TrafficSteeringRulesListResponse
+from scm.deployment_services.models.traffic_steering_rules_list_response import TrafficSteeringRulesListResponse
 
 class TestTrafficSteeringRulesListResponse(unittest.TestCase):
     """TrafficSteeringRulesListResponse unit test stubs"""

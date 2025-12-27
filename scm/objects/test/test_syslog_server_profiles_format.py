@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.syslog_server_profiles_format import SyslogServerProfilesFormat
+from scm.objects.models.syslog_server_profiles_format import SyslogServerProfilesFormat
 
 class TestSyslogServerProfilesFormat(unittest.TestCase):
     """SyslogServerProfilesFormat unit test stubs"""
@@ -41,7 +41,7 @@ class TestSyslogServerProfilesFormat(unittest.TestCase):
                 correlation = '',
                 data = '',
                 decryption = '',
-                escaping = scm_objects.models.syslog_server_profiles_format_escaping.syslog_server_profiles_format_escaping(
+                escaping = scm.objects.models.syslog_server_profiles_format_escaping.syslog_server_profiles_format_escaping(
                     escape_character = '', 
                     escaped_characters = '', ),
                 globalprotect = '',

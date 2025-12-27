@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication import LogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_esp_authentication import LogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication
 
 class TestLogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication unit test stubs"""
@@ -36,16 +36,16 @@ class TestLogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication(unittest
         model = LogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication()
         if include_optional:
             return LogicalRoutersVrfInnerOspfv3AuthProfileInnerEspAuthentication(
-                md5 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                md5 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                     key = '', ),
                 var_none = None,
-                sha1 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                sha1 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                     key = '', ),
-                sha256 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                sha256 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                     key = '', ),
-                sha384 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                sha384 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                     key = '', ),
-                sha512 = scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
+                sha512 = scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5(
                     key = '', )
             )
         else:

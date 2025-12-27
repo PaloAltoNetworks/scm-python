@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options import LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions unit test stubs"""
@@ -40,7 +40,7 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions(unit
                 dampening = '',
                 hold_time = '',
                 idle_hold_time = 56,
-                incoming_bgp_connection = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection(
+                incoming_bgp_connection = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection(
                     allow = True, 
                     remote_port = 56, ),
                 keep_alive_interval = '',
@@ -48,7 +48,7 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInnerPeerInnerConnectionOptions(unit
                 min_route_adv_interval = 56,
                 multihop = '',
                 open_delay_time = 56,
-                outgoing_bgp_connection = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection(
+                outgoing_bgp_connection = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection(
                     allow = True, 
                     local_port = 56, ),
                 timers = ''

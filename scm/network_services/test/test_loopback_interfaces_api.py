@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.loopback_interfaces_api import LoopbackInterfacesApi
+from scm.network_services.api.loopback_interfaces_api import LoopbackInterfacesApi
 
 
 class TestLoopbackInterfacesApi(unittest.TestCase):

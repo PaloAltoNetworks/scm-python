@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.sdwan_rules_action import SdwanRulesAction
+from scm.network_services.models.sdwan_rules_action import SdwanRulesAction
 from typing import Optional, Set
 from typing_extensions import Self
 

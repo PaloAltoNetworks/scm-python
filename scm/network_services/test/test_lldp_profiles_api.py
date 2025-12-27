@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.lldp_profiles_api import LLDPProfilesApi
+from scm.network_services.api.lldp_profiles_api import LLDPProfilesApi
 
 
 class TestLLDPProfilesApi(unittest.TestCase):

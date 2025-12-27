@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options import LogicalRoutersVrfInnerBgpPeerGroupInnerConnectionOptions
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options import LogicalRoutersVrfInnerBgpPeerGroupInnerConnectionOptions
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerConnectionOptions(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerConnectionOptions unit test stubs"""

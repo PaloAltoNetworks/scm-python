@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.trusted_tenant_overview import TrustedTenantOverview
+from scm.config_setup.models.trusted_tenant_overview import TrustedTenantOverview
 
 # TODO update the JSON string below
 json = "{}"

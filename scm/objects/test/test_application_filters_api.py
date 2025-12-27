@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.application_filters_api import ApplicationFiltersApi
+from scm.objects.api.application_filters_api import ApplicationFiltersApi
 
 
 class TestApplicationFiltersApi(unittest.TestCase):

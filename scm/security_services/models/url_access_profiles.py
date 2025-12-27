@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.url_access_profiles_credential_enforcement import UrlAccessProfilesCredentialEnforcement
+from scm.security_services.models.url_access_profiles_credential_enforcement import UrlAccessProfilesCredentialEnforcement
 from typing import Optional, Set
 from typing_extensions import Self
 

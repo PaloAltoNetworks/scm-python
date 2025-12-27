@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
+from scm.deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
 
 class TestBandwidthAllocationsListResponse(unittest.TestCase):
     """BandwidthAllocationsListResponse unit test stubs"""

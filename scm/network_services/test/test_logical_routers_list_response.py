@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_list_response import LogicalRoutersListResponse
+from scm.network_services.models.logical_routers_list_response import LogicalRoutersListResponse
 
 class TestLogicalRoutersListResponse(unittest.TestCase):
     """LogicalRoutersListResponse unit test stubs"""

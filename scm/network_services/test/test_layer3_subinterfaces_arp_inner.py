@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.layer3_subinterfaces_arp_inner import Layer3SubinterfacesArpInner
+from scm.network_services.models.layer3_subinterfaces_arp_inner import Layer3SubinterfacesArpInner
 
 class TestLayer3SubinterfacesArpInner(unittest.TestCase):
     """Layer3SubinterfacesArpInner unit test stubs"""

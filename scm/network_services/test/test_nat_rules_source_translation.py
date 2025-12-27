@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_source_translation import NatRulesSourceTranslation
+from scm.network_services.models.nat_rules_source_translation import NatRulesSourceTranslation
 
 class TestNatRulesSourceTranslation(unittest.TestCase):
     """NatRulesSourceTranslation unit test stubs"""
@@ -36,9 +36,9 @@ class TestNatRulesSourceTranslation(unittest.TestCase):
         model = NatRulesSourceTranslation()
         if include_optional:
             return NatRulesSourceTranslation(
-                dynamic_ip = scm_network_services.models.nat_rules_source_translation_dynamic_ip.nat_rules_source_translation_dynamic_ip(
-                    fallback = scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback.nat_rules_source_translation_dynamic_ip_fallback(
-                        interface_address = scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address.nat_rules_source_translation_dynamic_ip_fallback_interface_address(
+                dynamic_ip = scm.network_services.models.nat_rules_source_translation_dynamic_ip.nat_rules_source_translation_dynamic_ip(
+                    fallback = scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback.nat_rules_source_translation_dynamic_ip_fallback(
+                        interface_address = scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address.nat_rules_source_translation_dynamic_ip_fallback_interface_address(
                             floating_ip = '', 
                             interface = '', 
                             ip = '', ), 
@@ -48,15 +48,15 @@ class TestNatRulesSourceTranslation(unittest.TestCase):
                     translated_address = [
                         ''
                         ], ),
-                dynamic_ip_and_port = scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port.nat_rules_source_translation_dynamic_ip_and_port(
-                    interface_address = scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port_interface_address.nat_rules_source_translation_dynamic_ip_and_port_interface_address(
+                dynamic_ip_and_port = scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port.nat_rules_source_translation_dynamic_ip_and_port(
+                    interface_address = scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port_interface_address.nat_rules_source_translation_dynamic_ip_and_port_interface_address(
                         floating_ip = '', 
                         interface = '', 
                         ip = '', ), 
                     translated_address = [
                         ''
                         ], ),
-                static_ip = scm_network_services.models.nat_rules_source_translation_static_ip.nat_rules_source_translation_static_ip(
+                static_ip = scm.network_services.models.nat_rules_source_translation_static_ip.nat_rules_source_translation_static_ip(
                     bi_directional = '', 
                     translated_address = '', )
             )

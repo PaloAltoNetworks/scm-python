@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.http_server_profiles_format import HttpServerProfilesFormat
-from scm_objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
+from scm.objects.models.http_server_profiles_format import HttpServerProfilesFormat
+from scm.objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
 from typing import Optional, Set
 from typing_extensions import Self
 

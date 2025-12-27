@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.quarantined_devices import QuarantinedDevices
+from scm.objects.models.quarantined_devices import QuarantinedDevices
 
 class TestQuarantinedDevices(unittest.TestCase):
     """QuarantinedDevices unit test stubs"""

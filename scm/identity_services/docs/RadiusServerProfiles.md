@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.radius_server_profiles import RadiusServerProfiles
+from scm.identity_services.models.radius_server_profiles import RadiusServerProfiles
 
 # TODO update the JSON string below
 json = "{}"

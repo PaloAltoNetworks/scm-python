@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_payload import SnippetSnapshotSubscriberComparePayload
 
 # TODO update the JSON string below
 json = "{}"

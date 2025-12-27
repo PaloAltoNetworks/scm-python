@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_option_lease import DhcpInterfacesServerOptionLease
+from scm.network_services.models.dhcp_interfaces_server_option_lease import DhcpInterfacesServerOptionLease
 
 class TestDhcpInterfacesServerOptionLease(unittest.TestCase):
     """DhcpInterfacesServerOptionLease unit test stubs"""
@@ -37,7 +37,7 @@ class TestDhcpInterfacesServerOptionLease(unittest.TestCase):
         if include_optional:
             return DhcpInterfacesServerOptionLease(
                 timeout = 0,
-                unlimited = scm_network_services.models.unlimited.unlimited()
+                unlimited = scm.network_services.models.unlimited.unlimited()
             )
         else:
             return DhcpInterfacesServerOptionLease(

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
+from scm.network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
 
 # TODO update the JSON string below
 json = "{}"

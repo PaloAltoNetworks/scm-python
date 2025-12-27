@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_host_info import HipObjectsHostInfo
+from scm.objects.models.hip_objects_host_info import HipObjectsHostInfo
 
 # TODO update the JSON string below
 json = "{}"

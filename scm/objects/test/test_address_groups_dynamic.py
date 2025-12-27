@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.address_groups_dynamic import AddressGroupsDynamic
+from scm.objects.models.address_groups_dynamic import AddressGroupsDynamic
 
 class TestAddressGroupsDynamic(unittest.TestCase):
     """AddressGroupsDynamic unit test stubs"""

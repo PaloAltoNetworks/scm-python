@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_access_lists_list_response import RouteAccessListsListResponse
+from scm.network_services.models.route_access_lists_list_response import RouteAccessListsListResponse
 
 # TODO update the JSON string below
 json = "{}"

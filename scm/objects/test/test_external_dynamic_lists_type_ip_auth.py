@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_ip_auth import ExternalDynamicListsTypeIpAuth
+from scm.objects.models.external_dynamic_lists_type_ip_auth import ExternalDynamicListsTypeIpAuth
 
 class TestExternalDynamicListsTypeIpAuth(unittest.TestCase):
     """ExternalDynamicListsTypeIpAuth unit test stubs"""

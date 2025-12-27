@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.scep_profiles_scep_challenge_dynamic import ScepProfilesScepChallengeDynamic
+from scm.identity_services.models.scep_profiles_scep_challenge_dynamic import ScepProfilesScepChallengeDynamic
 from typing import Optional, Set
 from typing_extensions import Self
 

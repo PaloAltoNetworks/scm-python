@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ike_gateways import IkeGateways
+from scm.network_services.models.ike_gateways import IkeGateways
 
 # TODO update the JSON string below
 json = "{}"

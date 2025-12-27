@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
+from scm.network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
 
 class TestAggregateInterfacesLayer3(unittest.TestCase):
     """AggregateInterfacesLayer3 unit test stubs"""
@@ -37,11 +37,11 @@ class TestAggregateInterfacesLayer3(unittest.TestCase):
         if include_optional:
             return AggregateInterfacesLayer3(
                 arp = [
-                    scm_network_services.models.agg_ethernet_arp_inner.agg_ethernet_arp_inner(
+                    scm.network_services.models.agg_ethernet_arp_inner.agg_ethernet_arp_inner(
                         hw_address = '', 
                         name = '', )
                     ],
-                ddns_config = scm_network_services.models.aggregate_interfaces_layer3_ddns_config.aggregate_interfaces_layer3_ddns_config(
+                ddns_config = scm.network_services.models.aggregate_interfaces_layer3_ddns_config.aggregate_interfaces_layer3_ddns_config(
                     ddns_cert_profile = '', 
                     ddns_enabled = True, 
                     ddns_hostname = '2', 
@@ -49,19 +49,19 @@ class TestAggregateInterfacesLayer3(unittest.TestCase):
                     ddns_update_interval = 1, 
                     ddns_vendor = '', 
                     ddns_vendor_config = '', ),
-                dhcp_client = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
+                dhcp_client = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
                     create_default_route = True, 
                     default_route_metric = 1, 
                     enable = True, 
-                    send_hostname = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
+                    send_hostname = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
                         enable = True, 
                         hostname = 'system-hostname', ), ),
                 interface_management_profile = '',
                 ip = [
-                    scm_network_services.models.aggregate_interfaces_layer3_ip_inner.aggregate_interfaces_layer3_ip_inner(
+                    scm.network_services.models.aggregate_interfaces_layer3_ip_inner.aggregate_interfaces_layer3_ip_inner(
                         name = '', )
                     ],
-                lacp = scm_network_services.models.lacp.lacp(
+                lacp = scm.network_services.models.lacp.lacp(
                     enable = True, 
                     fast_failover = True, 
                     max_ports = 1, 

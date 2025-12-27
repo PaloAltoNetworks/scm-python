@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface_mgmt_type import ManagementInterfaceManagementInterfaceMgmtType
+from scm.device_settings.models.management_interface_management_interface_mgmt_type import ManagementInterfaceManagementInterfaceMgmtType
 
 class TestManagementInterfaceManagementInterfaceMgmtType(unittest.TestCase):
     """ManagementInterfaceManagementInterfaceMgmtType unit test stubs"""
@@ -36,12 +36,12 @@ class TestManagementInterfaceManagementInterfaceMgmtType(unittest.TestCase):
         model = ManagementInterfaceManagementInterfaceMgmtType()
         if include_optional:
             return ManagementInterfaceManagementInterfaceMgmtType(
-                dhcp_client = scm_device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client.management_interface_management_interface_mgmt_type_dhcp_client(
+                dhcp_client = scm.device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client.management_interface_management_interface_mgmt_type_dhcp_client(
                     accept_dhcp_domain = True, 
                     accept_dhcp_hostname = True, 
                     send_client_id = True, 
                     send_hostname = True, ),
-                static = scm_device_settings.models.management_interface_management_interface_mgmt_type_static.management_interface_management_interface_mgmt_type_static(
+                static = scm.device_settings.models.management_interface_management_interface_mgmt_type_static.management_interface_management_interface_mgmt_type_static(
                     default_gateway = '', 
                     ip_address = '', 
                     netmask = '', )

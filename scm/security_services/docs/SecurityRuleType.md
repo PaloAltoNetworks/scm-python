@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.security_rule_type import SecurityRuleType
+from scm.security_services.models.security_rule_type import SecurityRuleType
 
 # TODO update the JSON string below
 json = "{}"

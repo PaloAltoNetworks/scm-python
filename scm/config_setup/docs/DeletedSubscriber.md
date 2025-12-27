@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.deleted_subscriber import DeletedSubscriber
+from scm.config_setup.models.deleted_subscriber import DeletedSubscriber
 
 # TODO update the JSON string below
 json = "{}"

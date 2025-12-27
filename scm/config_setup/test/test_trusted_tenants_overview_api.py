@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.trusted_tenants_overview_api import TrustedTenantsOverviewApi
+from scm.config_setup.api.trusted_tenants_overview_api import TrustedTenantsOverviewApi
 
 
 class TestTrustedTenantsOverviewApi(unittest.TestCase):

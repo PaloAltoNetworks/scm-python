@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_devices_ha_devices_inner import HaDevicesHaDevicesInner
+from scm.device_settings.models.ha_devices_ha_devices_inner import HaDevicesHaDevicesInner
 
 class TestHaDevicesHaDevicesInner(unittest.TestCase):
     """HaDevicesHaDevicesInner unit test stubs"""

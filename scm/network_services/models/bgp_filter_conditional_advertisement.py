@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_filter_conditional_advertisement_exist import BgpFilterConditionalAdvertisementExist
-from scm_network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
+from scm.network_services.models.bgp_filter_conditional_advertisement_exist import BgpFilterConditionalAdvertisementExist
+from scm.network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
 from typing import Optional, Set
 from typing_extensions import Self
 

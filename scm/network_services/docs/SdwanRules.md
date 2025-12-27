@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.sdwan_rules import SdwanRules
+from scm.network_services.models.sdwan_rules import SdwanRules
 
 # TODO update the JSON string below
 json = "{}"

@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
+from scm.device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_path_access_lists import RoutePathAccessLists
+from scm.network_services.models.route_path_access_lists import RoutePathAccessLists
 
 class TestRoutePathAccessLists(unittest.TestCase):
     """RoutePathAccessLists unit test stubs"""
@@ -37,7 +37,7 @@ class TestRoutePathAccessLists(unittest.TestCase):
         if include_optional:
             return RoutePathAccessLists(
                 aspath_entry = [
-                    scm_network_services.models.route_path_access_lists_aspath_entry_inner.route_path_access_lists_aspath_entry_inner(
+                    scm.network_services.models.route_path_access_lists_aspath_entry_inner.route_path_access_lists_aspath_entry_inner(
                         action = 'deny', 
                         aspath_regex = '', 
                         name = 1, )

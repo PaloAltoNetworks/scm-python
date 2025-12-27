@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_path_quality_profiles_metric_latency import SdwanPathQualityProfilesMetricLatency
+from scm.network_services.models.sdwan_path_quality_profiles_metric_latency import SdwanPathQualityProfilesMetricLatency
 
 class TestSdwanPathQualityProfilesMetricLatency(unittest.TestCase):
     """SdwanPathQualityProfilesMetricLatency unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner import LogicalRoutersVrfInnerRipInterfaceInner
+from scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner import LogicalRoutersVrfInnerRipInterfaceInner
 
 class TestLogicalRoutersVrfInnerRipInterfaceInner(unittest.TestCase):
     """LogicalRoutersVrfInnerRipInterfaceInner unit test stubs"""
@@ -37,13 +37,13 @@ class TestLogicalRoutersVrfInnerRipInterfaceInner(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerRipInterfaceInner(
                 authentication = '',
-                bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                     profile = '', ),
                 enable = True,
-                interface_inbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
+                interface_inbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
                     access_list = '', 
                     metric = 56, ),
-                interface_outbound_distribute_list = scm_network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
+                interface_outbound_distribute_list = scm.network_services.models.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list.logical_routers_vrf_inner_rip_interface_inner_interface_inbound_distribute_list(
                     access_list = '', 
                     metric = 56, ),
                 mode = 'active',

@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_network_services.models.i_psec_tunnels_list_response import IPsecTunnelsListResponse
-from scm_network_services.models.ipsec_tunnels import IpsecTunnels
+from scm.network_services.models.i_psec_tunnels_list_response import IPsecTunnelsListResponse
+from scm.network_services.models.ipsec_tunnels import IpsecTunnels
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class IPsecTunnelsApi:

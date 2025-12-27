@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.wildfire_anti_virus_profiles_threat_exception_inner import WildfireAntiVirusProfilesThreatExceptionInner
+from scm.security_services.models.wildfire_anti_virus_profiles_threat_exception_inner import WildfireAntiVirusProfilesThreatExceptionInner
 
 # TODO update the JSON string below
 json = "{}"

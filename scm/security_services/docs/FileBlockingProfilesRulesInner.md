@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.file_blocking_profiles_rules_inner import FileBlockingProfilesRulesInner
+from scm.security_services.models.file_blocking_profiles_rules_inner import FileBlockingProfilesRulesInner
 
 # TODO update the JSON string below
 json = "{}"

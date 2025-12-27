@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner import QosProfilesClassBandwidthTypeMbpsClassInner
+from scm.network_services.models.qos_profiles_class_bandwidth_type_mbps_class_inner import QosProfilesClassBandwidthTypeMbpsClassInner
 from typing import Optional, Set
 from typing_extensions import Self
 

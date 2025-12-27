@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_authentication_certificate import IkeGatewaysAuthenticationCertificate
+from scm.network_services.models.ike_gateways_authentication_certificate import IkeGatewaysAuthenticationCertificate
 
 class TestIkeGatewaysAuthenticationCertificate(unittest.TestCase):
     """IkeGatewaysAuthenticationCertificate unit test stubs"""
@@ -38,7 +38,7 @@ class TestIkeGatewaysAuthenticationCertificate(unittest.TestCase):
             return IkeGatewaysAuthenticationCertificate(
                 allow_id_payload_mismatch = True,
                 certificate_profile = '',
-                local_certificate = scm_network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
+                local_certificate = scm.network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
                     local_certificate_name = '', ),
                 strict_validation_revocation = True,
                 use_management_as_source = True

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner import IpsecTunnelsAutoKeyProxyIdInner
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner import IpsecTunnelsAutoKeyProxyIdInner
 
 class TestIpsecTunnelsAutoKeyProxyIdInner(unittest.TestCase):
     """IpsecTunnelsAutoKeyProxyIdInner unit test stubs"""
@@ -38,12 +38,12 @@ class TestIpsecTunnelsAutoKeyProxyIdInner(unittest.TestCase):
             return IpsecTunnelsAutoKeyProxyIdInner(
                 local = '',
                 name = '',
-                protocol = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
+                protocol = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
                     number = 1, 
-                    tcp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
+                    tcp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
                         local_port = 0, 
                         remote_port = 0, ), 
-                    udp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
+                    udp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
                         local_port = 0, 
                         remote_port = 0, ), ),
                 remote = ''

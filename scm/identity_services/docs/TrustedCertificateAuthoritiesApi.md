@@ -1,4 +1,4 @@
-# scm_identity_services.TrustedCertificateAuthoritiesApi
+# scm.identity_services.TrustedCertificateAuthoritiesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/identity/v1*
 
@@ -19,14 +19,14 @@ Retrieve a list of trusted certificate authorities.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.trusted_certificate_authorities_list_response import TrustedCertificateAuthoritiesListResponse
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.trusted_certificate_authorities_list_response import TrustedCertificateAuthoritiesListResponse
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -36,14 +36,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.TrustedCertificateAuthoritiesApi(api_client)
+    api_instance = scm.identity_services.TrustedCertificateAuthoritiesApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)

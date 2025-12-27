@@ -18,9 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 
-from scm_deployment_services.api_client import ApiClient, RequestSerialized
-from scm_deployment_services.api_response import ApiResponse
-from scm_deployment_services.rest import RESTResponseType
+from scm.deployment_services.api_client import ApiClient, RequestSerialized
+from scm.deployment_services.api_response import ApiResponse
+from scm.deployment_services.rest import RESTResponseType
 
 
 class ApplicationDefaultsApi:

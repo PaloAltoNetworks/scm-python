@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.anti_spyware_profiles_api import AntiSpywareProfilesApi
+from scm.security_services.api.anti_spyware_profiles_api import AntiSpywareProfilesApi
 
 
 class TestAntiSpywareProfilesApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.interface_management_profiles import InterfaceManagementProfiles
+from scm.network_services.models.interface_management_profiles import InterfaceManagementProfiles
 
 class TestInterfaceManagementProfiles(unittest.TestCase):
     """InterfaceManagementProfiles unit test stubs"""
@@ -44,7 +44,7 @@ class TestInterfaceManagementProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 permitted_ip = [
-                    scm_network_services.models.interface_management_profiles_permitted_ip_inner.interface_management_profiles_permitted_ip_inner(
+                    scm.network_services.models.interface_management_profiles_permitted_ip_inner.interface_management_profiles_permitted_ip_inner(
                         name = '', )
                     ],
                 ping = True,

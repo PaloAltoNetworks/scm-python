@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.route_community_lists_type_large_large_entry_inner import RouteCommunityListsTypeLargeLargeEntryInner
+from scm.network_services.models.route_community_lists_type_large_large_entry_inner import RouteCommunityListsTypeLargeLargeEntryInner
 from typing import Optional, Set
 from typing_extensions import Self
 

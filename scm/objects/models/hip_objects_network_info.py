@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_network_info_criteria import HipObjectsNetworkInfoCriteria
+from scm.objects.models.hip_objects_network_info_criteria import HipObjectsNetworkInfoCriteria
 from typing import Optional, Set
 from typing_extensions import Self
 

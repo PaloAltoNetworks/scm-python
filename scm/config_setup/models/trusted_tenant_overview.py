@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.trusted_tenant_overview_publisher import TrustedTenantOverviewPublisher
+from scm.config_setup.models.trusted_tenant_overview_publisher import TrustedTenantOverviewPublisher
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring import HaConfigurationsGroupMonitoringLinkMonitoring
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring import HaConfigurationsGroupMonitoringLinkMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
 from typing import Optional, Set
 from typing_extensions import Self
 

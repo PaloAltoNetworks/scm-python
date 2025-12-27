@@ -1,4 +1,4 @@
-# scm_identity_services.KerberosServerProfilesApi
+# scm.identity_services.KerberosServerProfilesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/identity/v1*
 
@@ -23,14 +23,14 @@ Create a new Kerberos server profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.kerberos_server_profiles import KerberosServerProfiles
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.kerberos_server_profiles import KerberosServerProfiles
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.KerberosServerProfilesApi(api_client)
-    kerberos_server_profiles = scm_identity_services.KerberosServerProfiles() # KerberosServerProfiles | Created (optional)
+    api_instance = scm.identity_services.KerberosServerProfilesApi(api_client)
+    kerberos_server_profiles = scm.identity_services.KerberosServerProfiles() # KerberosServerProfiles | Created (optional)
 
     try:
         # Create a Kerberos server profile
@@ -106,13 +106,13 @@ Delete a Kerberos server profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.KerberosServerProfilesApi(api_client)
+    api_instance = scm.identity_services.KerberosServerProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing Kerberos server profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.kerberos_server_profiles import KerberosServerProfiles
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.kerberos_server_profiles import KerberosServerProfiles
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.KerberosServerProfilesApi(api_client)
+    api_instance = scm.identity_services.KerberosServerProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of Kerberos server profiles.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.kerberos_server_profiles_list_response import KerberosServerProfilesListResponse
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.kerberos_server_profiles_list_response import KerberosServerProfilesListResponse
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.KerberosServerProfilesApi(api_client)
+    api_instance = scm.identity_services.KerberosServerProfilesApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
@@ -363,14 +363,14 @@ Update an existing Kerberos server profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_identity_services
-from scm_identity_services.models.kerberos_server_profiles import KerberosServerProfiles
-from scm_identity_services.rest import ApiException
+import scm.identity_services
+from scm.identity_services.models.kerberos_server_profiles import KerberosServerProfiles
+from scm.identity_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/identity/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/identity/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_identity_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_identity_services.Configuration(
+configuration = scm.identity_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_identity_services.ApiClient(configuration) as api_client:
+with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_identity_services.KerberosServerProfilesApi(api_client)
+    api_instance = scm.identity_services.KerberosServerProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    kerberos_server_profiles = scm_identity_services.KerberosServerProfiles() # KerberosServerProfiles | OK (optional)
+    kerberos_server_profiles = scm.identity_services.KerberosServerProfiles() # KerberosServerProfiles | OK (optional)
 
     try:
         # Update a Kerberos server profile

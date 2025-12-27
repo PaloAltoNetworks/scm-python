@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_push_config_auto_vpn_devices_inner import AutoVpnPushConfigAutoVpnDevicesInner
+from scm.network_services.models.auto_vpn_push_config_auto_vpn_devices_inner import AutoVpnPushConfigAutoVpnDevicesInner
 
 class TestAutoVpnPushConfigAutoVpnDevicesInner(unittest.TestCase):
     """AutoVpnPushConfigAutoVpnDevicesInner unit test stubs"""

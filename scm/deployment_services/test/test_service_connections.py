@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connections import ServiceConnections
+from scm.deployment_services.models.service_connections import ServiceConnections
 
 class TestServiceConnections(unittest.TestCase):
     """ServiceConnections unit test stubs"""
@@ -37,7 +37,7 @@ class TestServiceConnections(unittest.TestCase):
         if include_optional:
             return ServiceConnections(
                 backup_sc = '',
-                bgp_peer = scm_deployment_services.models.service_connections_bgp_peer.service_connections_bgp_peer(
+                bgp_peer = scm.deployment_services.models.service_connections_bgp_peer.service_connections_bgp_peer(
                     local_ip_address = '', 
                     local_ipv6_address = '', 
                     peer_ip_address = '', 
@@ -49,8 +49,8 @@ class TestServiceConnections(unittest.TestCase):
                 nat_pool = '',
                 no_export_community = 'Disabled',
                 onboarding_type = 'classic',
-                protocol = scm_deployment_services.models.service_connections_protocol.service_connections_protocol(
-                    bgp = scm_deployment_services.models.service_connections_protocol_bgp.service_connections_protocol_bgp(
+                protocol = scm.deployment_services.models.service_connections_protocol.service_connections_protocol(
+                    bgp = scm.deployment_services.models.service_connections_protocol_bgp.service_connections_protocol_bgp(
                         do_not_export_routes = True, 
                         enable = True, 
                         fast_failover = True, 
@@ -60,7 +60,7 @@ class TestServiceConnections(unittest.TestCase):
                         peer_ip_address = '', 
                         secret = '', 
                         summarize_mobile_user_routes = True, ), ),
-                qos = scm_deployment_services.models.service_connections_qos.service_connections_qos(
+                qos = scm.deployment_services.models.service_connections_qos.service_connections_qos(
                     enable = True, 
                     qos_profile = '', ),
                 region = '',

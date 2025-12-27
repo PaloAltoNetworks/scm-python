@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
+from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
 from typing import Optional, Set
 from typing_extensions import Self
 

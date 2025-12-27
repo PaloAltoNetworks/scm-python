@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_network_info_criteria import HipObjectsNetworkInfoCriteria
+from scm.objects.models.hip_objects_network_info_criteria import HipObjectsNetworkInfoCriteria
 
 class TestHipObjectsNetworkInfoCriteria(unittest.TestCase):
     """HipObjectsNetworkInfoCriteria unit test stubs"""
@@ -36,16 +36,16 @@ class TestHipObjectsNetworkInfoCriteria(unittest.TestCase):
         model = HipObjectsNetworkInfoCriteria()
         if include_optional:
             return HipObjectsNetworkInfoCriteria(
-                network = scm_objects.models.hip_objects_network_info_criteria_network.hip_objects_network_info_criteria_network(
-                    is = scm_objects.models.hip_objects_network_info_criteria_network_is.hip_objects_network_info_criteria_network_is(
-                        mobile = scm_objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
+                network = scm.objects.models.hip_objects_network_info_criteria_network.hip_objects_network_info_criteria_network(
+                    is = scm.objects.models.hip_objects_network_info_criteria_network_is.hip_objects_network_info_criteria_network_is(
+                        mobile = scm.objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
                             carrier = 'jUR,rZ#UM/?R,Fp^l6$ARj', ), 
-                        unknown = scm_objects.models.unknown.unknown(), 
-                        wifi = scm_objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
+                        unknown = scm.objects.models.unknown.unknown(), 
+                        wifi = scm.objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
                             ssid = 'jUR,rZ#UM/?R,Fp^l6$ARj', ), ), 
-                    is_not = scm_objects.models.hip_objects_network_info_criteria_network_is_not.hip_objects_network_info_criteria_network_is_not(
-                        ethernet = scm_objects.models.ethernet.ethernet(), 
-                        unknown = scm_objects.models.unknown.unknown(), ), )
+                    is_not = scm.objects.models.hip_objects_network_info_criteria_network_is_not.hip_objects_network_info_criteria_network_is_not(
+                        ethernet = scm.objects.models.ethernet.ethernet(), 
+                        unknown = scm.objects.models.unknown.unknown(), ), )
             )
         else:
             return HipObjectsNetworkInfoCriteria(

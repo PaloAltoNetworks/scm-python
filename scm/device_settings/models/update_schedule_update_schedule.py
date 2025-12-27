@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from scm_device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
-from scm_device_settings.models.update_schedule_update_schedule_threats import UpdateScheduleUpdateScheduleThreats
-from scm_device_settings.models.update_schedule_update_schedule_wildfire import UpdateScheduleUpdateScheduleWildfire
+from scm.device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
+from scm.device_settings.models.update_schedule_update_schedule_threats import UpdateScheduleUpdateScheduleThreats
+from scm.device_settings.models.update_schedule_update_schedule_wildfire import UpdateScheduleUpdateScheduleWildfire
 from typing import Optional, Set
 from typing_extensions import Self
 

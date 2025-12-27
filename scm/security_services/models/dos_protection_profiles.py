@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.dos_protection_profiles_flood import DosProtectionProfilesFlood
-from scm_security_services.models.dos_protection_profiles_resource import DosProtectionProfilesResource
+from scm.security_services.models.dos_protection_profiles_flood import DosProtectionProfilesFlood
+from scm.security_services.models.dos_protection_profiles_resource import DosProtectionProfilesResource
 from typing import Optional, Set
 from typing_extensions import Self
 

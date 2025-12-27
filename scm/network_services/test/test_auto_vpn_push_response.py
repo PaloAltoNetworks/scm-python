@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_push_response import AutoVpnPushResponse
+from scm.network_services.models.auto_vpn_push_response import AutoVpnPushResponse
 
 class TestAutoVpnPushResponse(unittest.TestCase):
     """AutoVpnPushResponse unit test stubs"""

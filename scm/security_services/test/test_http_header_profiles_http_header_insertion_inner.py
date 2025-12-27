@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.http_header_profiles_http_header_insertion_inner import HttpHeaderProfilesHttpHeaderInsertionInner
+from scm.security_services.models.http_header_profiles_http_header_insertion_inner import HttpHeaderProfilesHttpHeaderInsertionInner
 
 class TestHttpHeaderProfilesHttpHeaderInsertionInner(unittest.TestCase):
     """HttpHeaderProfilesHttpHeaderInsertionInner unit test stubs"""
@@ -38,10 +38,10 @@ class TestHttpHeaderProfilesHttpHeaderInsertionInner(unittest.TestCase):
             return HttpHeaderProfilesHttpHeaderInsertionInner(
                 name = '',
                 type = [
-                    scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
+                    scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
                         domains = ["*.google.com","gmail.com"], 
                         headers = [
-                            scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
+                            scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
                                 header = 'X-MyCustomHeader', 
                                 log = True, 
                                 name = '', 
@@ -54,10 +54,10 @@ class TestHttpHeaderProfilesHttpHeaderInsertionInner(unittest.TestCase):
             return HttpHeaderProfilesHttpHeaderInsertionInner(
                 name = '',
                 type = [
-                    scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
+                    scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
                         domains = ["*.google.com","gmail.com"], 
                         headers = [
-                            scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
+                            scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
                                 header = 'X-MyCustomHeader', 
                                 log = True, 
                                 name = '', 

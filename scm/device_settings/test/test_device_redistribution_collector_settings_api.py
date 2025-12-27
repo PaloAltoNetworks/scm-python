@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.device_redistribution_collector_settings_api import DeviceRedistributionCollectorSettingsApi
+from scm.device_settings.api.device_redistribution_collector_settings_api import DeviceRedistributionCollectorSettingsApi
 
 
 class TestDeviceRedistributionCollectorSettingsApi(unittest.TestCase):

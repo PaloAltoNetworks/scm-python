@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.schedules_schedule_type_recurring import SchedulesScheduleTypeRecurring
+from scm.objects.models.schedules_schedule_type_recurring import SchedulesScheduleTypeRecurring
 
 class TestSchedulesScheduleTypeRecurring(unittest.TestCase):
     """SchedulesScheduleTypeRecurring unit test stubs"""
@@ -39,7 +39,7 @@ class TestSchedulesScheduleTypeRecurring(unittest.TestCase):
                 daily = [
                     '20:07-08:20012345678910'
                     ],
-                weekly = scm_objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
+                weekly = scm.objects.models.schedules_schedule_type_recurring_weekly.schedules_schedule_type_recurring_weekly(
                     friday = [
                         '20:07-08:20012345678910'
                         ], 

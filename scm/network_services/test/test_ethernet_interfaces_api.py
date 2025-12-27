@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.ethernet_interfaces_api import EthernetInterfacesApi
+from scm.network_services.api.ethernet_interfaces_api import EthernetInterfacesApi
 
 
 class TestEthernetInterfacesApi(unittest.TestCase):

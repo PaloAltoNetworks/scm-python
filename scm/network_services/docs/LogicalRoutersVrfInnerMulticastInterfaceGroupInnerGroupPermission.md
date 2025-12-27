@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission
+from scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerGroupPermission
 
 # TODO update the JSON string below
 json = "{}"

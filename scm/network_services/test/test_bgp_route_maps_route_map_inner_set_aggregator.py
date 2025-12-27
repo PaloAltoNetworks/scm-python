@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_maps_route_map_inner_set_aggregator import BgpRouteMapsRouteMapInnerSetAggregator
+from scm.network_services.models.bgp_route_maps_route_map_inner_set_aggregator import BgpRouteMapsRouteMapInnerSetAggregator
 
 class TestBgpRouteMapsRouteMapInnerSetAggregator(unittest.TestCase):
     """BgpRouteMapsRouteMapInnerSetAggregator unit test stubs"""

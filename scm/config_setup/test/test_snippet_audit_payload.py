@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_audit_payload import SnippetAuditPayload
+from scm.config_setup.models.snippet_audit_payload import SnippetAuditPayload
 
 class TestSnippetAuditPayload(unittest.TestCase):
     """SnippetAuditPayload unit test stubs"""

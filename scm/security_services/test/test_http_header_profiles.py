@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.http_header_profiles import HttpHeaderProfiles
+from scm.security_services.models.http_header_profiles import HttpHeaderProfiles
 
 class TestHttpHeaderProfiles(unittest.TestCase):
     """HttpHeaderProfiles unit test stubs"""
@@ -40,13 +40,13 @@ class TestHttpHeaderProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 http_header_insertion = [
-                    scm_security_services.models.http_header_profiles_http_header_insertion_inner.http_header_profiles_http_header_insertion_inner(
+                    scm.security_services.models.http_header_profiles_http_header_insertion_inner.http_header_profiles_http_header_insertion_inner(
                         name = '', 
                         type = [
-                            scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
+                            scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner.http_header_profiles_http_header_insertion_inner_type_inner(
                                 domains = ["*.google.com","gmail.com"], 
                                 headers = [
-                                    scm_security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
+                                    scm.security_services.models.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner.http_header_profiles_http_header_insertion_inner_type_inner_headers_inner(
                                         header = 'X-MyCustomHeader', 
                                         log = True, 
                                         name = '', 

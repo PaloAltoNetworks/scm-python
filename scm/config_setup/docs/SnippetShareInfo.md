@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
 
 # TODO update the JSON string below
 json = "{}"

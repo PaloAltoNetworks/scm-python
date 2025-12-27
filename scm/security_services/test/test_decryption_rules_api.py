@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.decryption_rules_api import DecryptionRulesApi
+from scm.security_services.api.decryption_rules_api import DecryptionRulesApi
 
 
 class TestDecryptionRulesApi(unittest.TestCase):

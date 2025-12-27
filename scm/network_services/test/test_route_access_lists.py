@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_access_lists import RouteAccessLists
+from scm.network_services.models.route_access_lists import RouteAccessLists
 
 class TestRouteAccessLists(unittest.TestCase):
     """RouteAccessLists unit test stubs"""
@@ -42,18 +42,18 @@ class TestRouteAccessLists(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 snippet = 'My Snippet',
-                type = scm_network_services.models.route_access_lists_type.route_access_lists_type(
-                    ipv4 = scm_network_services.models.route_access_lists_type_ipv4.route_access_lists_type_ipv4(
+                type = scm.network_services.models.route_access_lists_type.route_access_lists_type(
+                    ipv4 = scm.network_services.models.route_access_lists_type_ipv4.route_access_lists_type_ipv4(
                         ipv4_entry = [
-                            scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner.route_access_lists_type_ipv4_ipv4_entry_inner(
+                            scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner.route_access_lists_type_ipv4_ipv4_entry_inner(
                                 action = 'deny', 
-                                destination_address = scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address(
+                                destination_address = scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address(
                                     address = '', 
-                                    entry = scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address_entry.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address_entry(
+                                    entry = scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address_entry.route_access_lists_type_ipv4_ipv4_entry_inner_destination_address_entry(
                                         address = '', 
                                         wildcard = '', ), ), 
                                 name = 1, 
-                                source_address = scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address.route_access_lists_type_ipv4_ipv4_entry_inner_source_address(
+                                source_address = scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address.route_access_lists_type_ipv4_ipv4_entry_inner_source_address(
                                     address = '', ), )
                             ], ), )
             )

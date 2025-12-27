@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_auth_profiles import BgpAuthProfiles
+from scm.network_services.models.bgp_auth_profiles import BgpAuthProfiles
 
 # TODO update the JSON string below
 json = "{}"

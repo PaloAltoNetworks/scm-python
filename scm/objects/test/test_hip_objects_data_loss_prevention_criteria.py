@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_data_loss_prevention_criteria import HipObjectsDataLossPreventionCriteria
+from scm.objects.models.hip_objects_data_loss_prevention_criteria import HipObjectsDataLossPreventionCriteria
 
 class TestHipObjectsDataLossPreventionCriteria(unittest.TestCase):
     """HipObjectsDataLossPreventionCriteria unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn import DosProtectionProfilesFloodTcpSyn
 
 # TODO update the JSON string below
 json = "{}"

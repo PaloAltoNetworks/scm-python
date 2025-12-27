@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.interface_management_profiles_permitted_ip_inner import InterfaceManagementProfilesPermittedIpInner
+from scm.network_services.models.interface_management_profiles_permitted_ip_inner import InterfaceManagementProfilesPermittedIpInner
 
 class TestInterfaceManagementProfilesPermittedIpInner(unittest.TestCase):
     """InterfaceManagementProfilesPermittedIpInner unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles import DosProtectionProfiles
+from scm.security_services.models.dos_protection_profiles import DosProtectionProfiles
 
 class TestDosProtectionProfiles(unittest.TestCase):
     """DosProtectionProfiles unit test stubs"""
@@ -38,21 +38,21 @@ class TestDosProtectionProfiles(unittest.TestCase):
             return DosProtectionProfiles(
                 description = '',
                 device = 'My Device',
-                flood = scm_security_services.models.dos_protection_profiles_flood.dos_protection_profiles_flood(
-                    icmp = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                flood = scm.security_services.models.dos_protection_profiles_flood.dos_protection_profiles_flood(
+                    icmp = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                         enable = True, 
-                        red = scm_security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
+                        red = scm.security_services.models.dos_protection_profiles_flood_icmp_red.dos_protection_profiles_flood_icmp_red(
                             activate_rate = 1, 
                             alarm_rate = 0, 
-                            block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                            block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                                 duration = 1, ), 
                             maximal_rate = 1, ), ), 
-                    icmpv6 = scm_security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
+                    icmpv6 = scm.security_services.models.dos_protection_profiles_flood_icmp.dos_protection_profiles_flood_icmp(
                         enable = True, ), 
                     other_ip = , 
-                    tcp_syn = scm_security_services.models.dos_protection_profiles_flood_tcp_syn.dos_protection_profiles_flood_tcp_syn(
+                    tcp_syn = scm.security_services.models.dos_protection_profiles_flood_tcp_syn.dos_protection_profiles_flood_tcp_syn(
                         enable = True, 
-                        syn_cookies = scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
+                        syn_cookies = scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies.dos_protection_profiles_flood_tcp_syn_syn_cookies(
                             activate_rate = 0, 
                             alarm_rate = 0, 
                             maximal_rate = 1, ), ), 
@@ -60,8 +60,8 @@ class TestDosProtectionProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
-                resource = scm_security_services.models.dos_protection_profiles_resource.dos_protection_profiles_resource(
-                    sessions = scm_security_services.models.dos_protection_profiles_resource_sessions.dos_protection_profiles_resource_sessions(
+                resource = scm.security_services.models.dos_protection_profiles_resource.dos_protection_profiles_resource(
+                    sessions = scm.security_services.models.dos_protection_profiles_resource_sessions.dos_protection_profiles_resource_sessions(
                         enabled = True, 
                         max_concurrent_limit = 1, ), ),
                 snippet = 'My Snippet',

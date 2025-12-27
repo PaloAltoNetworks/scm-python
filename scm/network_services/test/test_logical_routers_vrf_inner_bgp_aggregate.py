@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate import LogicalRoutersVrfInnerBgpAggregate
+from scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate import LogicalRoutersVrfInnerBgpAggregate
 
 class TestLogicalRoutersVrfInnerBgpAggregate(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAggregate unit test stubs"""

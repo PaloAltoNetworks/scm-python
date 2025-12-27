@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.auto_tag_actions import AutoTagActions
+from scm.objects.models.auto_tag_actions import AutoTagActions
 
 class TestAutoTagActions(unittest.TestCase):
     """AutoTagActions unit test stubs"""
@@ -37,10 +37,10 @@ class TestAutoTagActions(unittest.TestCase):
         if include_optional:
             return AutoTagActions(
                 actions = [
-                    scm_objects.models.auto_tag_actions_actions_inner.auto_tag_actions_actions_inner(
+                    scm.objects.models.auto_tag_actions_actions_inner.auto_tag_actions_actions_inner(
                         name = '', 
-                        type = scm_objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
-                            tagging = scm_objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
+                        type = scm.objects.models.auto_tag_actions_actions_inner_type.auto_tag_actions_actions_inner_type(
+                            tagging = scm.objects.models.auto_tag_actions_actions_inner_type_tagging.auto_tag_actions_actions_inner_type_tagging(
                                 action = 'add-tag', 
                                 tags = [
                                     ''

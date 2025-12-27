@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
+from scm.deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
 
 class TestServiceConnectionsBgpPeer(unittest.TestCase):
     """ServiceConnectionsBgpPeer unit test stubs"""

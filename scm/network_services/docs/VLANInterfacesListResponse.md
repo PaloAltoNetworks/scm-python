@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.vlan_interfaces_list_response import VLANInterfacesListResponse
+from scm.network_services.models.vlan_interfaces_list_response import VLANInterfacesListResponse
 
 # TODO update the JSON string below
 json = "{}"

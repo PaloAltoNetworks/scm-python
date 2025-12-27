@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_push_config import AutoVpnPushConfig
+from scm.network_services.models.auto_vpn_push_config import AutoVpnPushConfig
 
 class TestAutoVpnPushConfig(unittest.TestCase):
     """AutoVpnPushConfig unit test stubs"""
@@ -37,7 +37,7 @@ class TestAutoVpnPushConfig(unittest.TestCase):
         if include_optional:
             return AutoVpnPushConfig(
                 auto_vpn_devices = [
-                    scm_network_services.models.auto_vpn_push_config_auto_vpn_devices_inner.auto_vpn_push_config_auto_vpn_devices_inner(
+                    scm.network_services.models.auto_vpn_push_config_auto_vpn_devices_inner.auto_vpn_push_config_auto_vpn_devices_inner(
                         name = '', 
                         refresh_psk = True, )
                     ]

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_profiles import DecryptionProfiles
+from scm.security_services.models.decryption_profiles import DecryptionProfiles
 
 class TestDecryptionProfiles(unittest.TestCase):
     """DecryptionProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestDecryptionProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = 'gt9Yoq8NBY08qY UboV 2Ow7qrz 0',
                 snippet = 'My Snippet',
-                ssl_forward_proxy = scm_security_services.models.decryption_profiles_ssl_forward_proxy.decryption_profiles_ssl_forward_proxy(
+                ssl_forward_proxy = scm.security_services.models.decryption_profiles_ssl_forward_proxy.decryption_profiles_ssl_forward_proxy(
                     auto_include_altname = True, 
                     block_client_cert = True, 
                     block_expired_certificate = True, 
@@ -53,15 +53,15 @@ class TestDecryptionProfiles(unittest.TestCase):
                     block_untrusted_issuer = True, 
                     restrict_cert_exts = True, 
                     strip_alpn = True, ),
-                ssl_inbound_proxy = scm_security_services.models.decryption_profiles_ssl_inbound_proxy.decryption_profiles_ssl_inbound_proxy(
+                ssl_inbound_proxy = scm.security_services.models.decryption_profiles_ssl_inbound_proxy.decryption_profiles_ssl_inbound_proxy(
                     block_if_hsm_unavailable = True, 
                     block_if_no_resource = True, 
                     block_unsupported_cipher = True, 
                     block_unsupported_version = True, ),
-                ssl_no_proxy = scm_security_services.models.decryption_profiles_ssl_no_proxy.decryption_profiles_ssl_no_proxy(
+                ssl_no_proxy = scm.security_services.models.decryption_profiles_ssl_no_proxy.decryption_profiles_ssl_no_proxy(
                     block_expired_certificate = True, 
                     block_untrusted_issuer = True, ),
-                ssl_protocol_settings = scm_security_services.models.decryption_profiles_ssl_protocol_settings.decryption_profiles_ssl_protocol_settings(
+                ssl_protocol_settings = scm.security_services.models.decryption_profiles_ssl_protocol_settings.decryption_profiles_ssl_protocol_settings(
                     auth_algo_md5 = True, 
                     auth_algo_sha1 = True, 
                     auth_algo_sha256 = True, 

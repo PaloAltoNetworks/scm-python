@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.tacacs_server_profiles_api import TACACSServerProfilesApi
+from scm.identity_services.api.tacacs_server_profiles_api import TACACSServerProfilesApi
 
 
 class TestTACACSServerProfilesApi(unittest.TestCase):

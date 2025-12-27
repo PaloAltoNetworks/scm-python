@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_path_access_lists_aspath_entry_inner import RoutePathAccessListsAspathEntryInner
+from scm.network_services.models.route_path_access_lists_aspath_entry_inner import RoutePathAccessListsAspathEntryInner
 
 class TestRoutePathAccessListsAspathEntryInner(unittest.TestCase):
     """RoutePathAccessListsAspathEntryInner unit test stubs"""

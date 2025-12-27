@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise import LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRouteAdvertise
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise import LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRouteAdvertise
 
 # TODO update the JSON string below
 json = "{}"

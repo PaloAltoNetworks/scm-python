@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.error_detail_cause_info import ErrorDetailCauseInfo
+from scm.identity_services.models.error_detail_cause_info import ErrorDetailCauseInfo
 
 class TestErrorDetailCauseInfo(unittest.TestCase):
     """ErrorDetailCauseInfo unit test stubs"""

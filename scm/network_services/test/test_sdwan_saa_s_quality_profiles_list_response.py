@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saa_s_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
+from scm.network_services.models.sdwan_saa_s_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
 
 class TestSDWANSaaSQualityProfilesListResponse(unittest.TestCase):
     """SDWANSaaSQualityProfilesListResponse unit test stubs"""

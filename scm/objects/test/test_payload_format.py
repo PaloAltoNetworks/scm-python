@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.payload_format import PayloadFormat
+from scm.objects.models.payload_format import PayloadFormat
 
 class TestPayloadFormat(unittest.TestCase):
     """PayloadFormat unit test stubs"""
@@ -37,13 +37,13 @@ class TestPayloadFormat(unittest.TestCase):
         if include_optional:
             return PayloadFormat(
                 headers = [
-                    scm_objects.models.payload_format_headers_inner.payload_format_headers_inner(
+                    scm.objects.models.payload_format_headers_inner.payload_format_headers_inner(
                         name = '', 
                         value = '', )
                     ],
                 name = 'Default',
                 params = [
-                    scm_objects.models.payload_format_params_inner.payload_format_params_inner(
+                    scm.objects.models.payload_format_params_inner.payload_format_params_inner(
                         name = '', 
                         value = '', )
                     ],

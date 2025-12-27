@@ -21,9 +21,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.pbf_rules_action import PbfRulesAction
-from scm_network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
-from scm_network_services.models.pbf_rules_from import PbfRulesFrom
+from scm.network_services.models.pbf_rules_action import PbfRulesAction
+from scm.network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
+from scm.network_services.models.pbf_rules_from import PbfRulesFrom
 from typing import Optional, Set
 from typing_extensions import Self
 

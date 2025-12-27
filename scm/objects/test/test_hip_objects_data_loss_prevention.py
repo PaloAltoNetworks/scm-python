@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
+from scm.objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
 
 class TestHipObjectsDataLossPrevention(unittest.TestCase):
     """HipObjectsDataLossPrevention unit test stubs"""
@@ -36,12 +36,12 @@ class TestHipObjectsDataLossPrevention(unittest.TestCase):
         model = HipObjectsDataLossPrevention()
         if include_optional:
             return HipObjectsDataLossPrevention(
-                criteria = scm_objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
+                criteria = scm.objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
                     is_enabled = 'no', 
                     is_installed = True, ),
                 exclude_vendor = True,
                 vendor = [
-                    scm_objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
+                    scm.objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
                         name = '', 
                         product = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'

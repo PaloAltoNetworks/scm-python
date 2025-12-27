@@ -1,4 +1,4 @@
-# scm_config_setup.SubscribedTenantsApi
+# scm.config_setup.SubscribedTenantsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -22,15 +22,15 @@ Create Subscribed Tenant.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
-from scm_config_setup.models.tenant_trust_info import TenantTrustInfo
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
+from scm.config_setup.models.tenant_trust_info import TenantTrustInfo
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SubscribedTenantsApi(api_client)
-    add_subscriber_request_payload_inner = [scm_config_setup.AddSubscriberRequestPayloadInner()] # List[AddSubscriberRequestPayloadInner] | The `Subscribed Tenant` resource definition (optional)
+    api_instance = scm.config_setup.SubscribedTenantsApi(api_client)
+    add_subscriber_request_payload_inner = [scm.config_setup.AddSubscriberRequestPayloadInner()] # List[AddSubscriberRequestPayloadInner] | The `Subscribed Tenant` resource definition (optional)
 
     try:
         # Create Subscribed Tenant
@@ -106,13 +106,13 @@ Delete an existing subscribed tenant.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SubscribedTenantsApi(api_client)
+    api_instance = scm.config_setup.SubscribedTenantsApi(api_client)
     snippet_id = 'snippet_id_example' # str | The ID of the snippet 
     tsgs = 'tsgs_example' # str | Comma-separated list of recipient TSG IDs 
 
@@ -189,14 +189,14 @@ Retrieve a list of subscribed tenants.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -206,14 +206,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SubscribedTenantsApi(api_client)
+    api_instance = scm.config_setup.SubscribedTenantsApi(api_client)
     id = 'id_example' # str | The UUID of the resource
 
     try:
@@ -272,14 +272,14 @@ Update an existing subscribed tenant.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.subscriber_property_payload import SubscriberPropertyPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -289,15 +289,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SubscribedTenantsApi(api_client)
-    subscriber_property_payload = scm_config_setup.SubscriberPropertyPayload() # SubscriberPropertyPayload | The `subscribed tenant` resource definition. (optional)
+    api_instance = scm.config_setup.SubscribedTenantsApi(api_client)
+    subscriber_property_payload = scm.config_setup.SubscriberPropertyPayload() # SubscriberPropertyPayload | The `subscribed tenant` resource definition. (optional)
 
     try:
         # Update a subscribed tenant

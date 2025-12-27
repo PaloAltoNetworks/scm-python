@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_add_path import BgpAddressFamilyAddPath
+from scm.network_services.models.bgp_address_family_add_path import BgpAddressFamilyAddPath
 
 class TestBgpAddressFamilyAddPath(unittest.TestCase):
     """BgpAddressFamilyAddPath unit test stubs"""

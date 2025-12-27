@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control import InternetRuleTypeAllowUrlCategoryInnerFileControl
+from scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control import InternetRuleTypeAllowUrlCategoryInnerFileControl
 from typing import Optional, Set
 from typing_extensions import Self
 

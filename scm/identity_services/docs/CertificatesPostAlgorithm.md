@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
+from scm.identity_services.models.certificates_post_algorithm import CertificatesPostAlgorithm
 
 # TODO update the JSON string below
 json = "{}"

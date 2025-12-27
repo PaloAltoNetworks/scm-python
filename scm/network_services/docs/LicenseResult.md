@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.license_result import LicenseResult
+from scm.network_services.models.license_result import LicenseResult
 
 # TODO update the JSON string below
 json = "{}"

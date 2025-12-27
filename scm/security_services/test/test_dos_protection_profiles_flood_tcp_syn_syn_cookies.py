@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies import DosProtectionProfilesFloodTcpSynSynCookies
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies import DosProtectionProfilesFloodTcpSynSynCookies
 
 class TestDosProtectionProfilesFloodTcpSynSynCookies(unittest.TestCase):
     """DosProtectionProfilesFloodTcpSynSynCookies unit test stubs"""
@@ -38,7 +38,7 @@ class TestDosProtectionProfilesFloodTcpSynSynCookies(unittest.TestCase):
             return DosProtectionProfilesFloodTcpSynSynCookies(
                 activate_rate = 0,
                 alarm_rate = 0,
-                block = scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block.dos_protection_profiles_flood_tcp_syn_syn_cookies_block(
+                block = scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block.dos_protection_profiles_flood_tcp_syn_syn_cookies_block(
                     duration = 1, ),
                 maximal_rate = 1
             )

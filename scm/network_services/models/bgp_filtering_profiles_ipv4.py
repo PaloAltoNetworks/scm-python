@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_filter import BgpFilter
-from scm_network_services.models.bgp_filtering_profiles_ipv4_multicast import BgpFilteringProfilesIpv4Multicast
+from scm.network_services.models.bgp_filter import BgpFilter
+from scm.network_services.models.bgp_filtering_profiles_ipv4_multicast import BgpFilteringProfilesIpv4Multicast
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.service_route_route_destination_inner_source import ServiceRouteRouteDestinationInnerSource
+from scm.device_settings.models.service_route_route_destination_inner_source import ServiceRouteRouteDestinationInnerSource
 from typing import Optional, Set
 from typing_extensions import Self
 

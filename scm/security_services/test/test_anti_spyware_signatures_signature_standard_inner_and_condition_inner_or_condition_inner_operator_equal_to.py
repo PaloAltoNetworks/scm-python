@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorEqualTo
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorEqualTo
 
 class TestAntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorEqualTo(unittest.TestCase):
     """AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorEqualTo unit test stubs"""
@@ -39,7 +39,7 @@ class TestAntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditio
                 context = '',
                 negate = True,
                 qualifier = [
-                    scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                    scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                         name = '', 
                         value = '', )
                     ],

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_response_publisher import SnippetSnapshotSubscriberCompareResponsePublisher
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_response_publisher import SnippetSnapshotSubscriberCompareResponsePublisher
 
 class TestSnippetSnapshotSubscriberCompareResponsePublisher(unittest.TestCase):
     """SnippetSnapshotSubscriberCompareResponsePublisher unit test stubs"""
@@ -37,7 +37,7 @@ class TestSnippetSnapshotSubscriberCompareResponsePublisher(unittest.TestCase):
         if include_optional:
             return SnippetSnapshotSubscriberCompareResponsePublisher(
                 entry = [
-                    scm_config_setup.models.dynamic_entry.dynamic_entry()
+                    scm.config_setup.models.dynamic_entry.dynamic_entry()
                     ]
             )
         else:

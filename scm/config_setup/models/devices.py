@@ -21,8 +21,8 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.devices_available_licensess_inner import DevicesAvailableLicensessInner
-from scm_config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
+from scm.config_setup.models.devices_available_licensess_inner import DevicesAvailableLicensessInner
+from scm.config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
 from typing import Optional, Set
 from typing_extensions import Self
 

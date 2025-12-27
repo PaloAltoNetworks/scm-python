@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.security_rule_type import SecurityRuleType
+from scm.security_services.models.security_rule_type import SecurityRuleType
 
 class TestSecurityRuleType(unittest.TestCase):
     """SecurityRuleType unit test stubs"""
@@ -62,7 +62,7 @@ class TestSecurityRuleType(unittest.TestCase):
                 negate_destination = True,
                 negate_source = True,
                 policy_type = 'Security',
-                profile_setting = scm_security_services.models.security_rule_type_profile_setting.security_rule_type_profile_setting(
+                profile_setting = scm.security_services.models.security_rule_type_profile_setting.security_rule_type_profile_setting(
                     group = [
                         'best-practice'
                         ], ),

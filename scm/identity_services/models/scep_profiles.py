@@ -21,9 +21,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
-from scm_identity_services.models.scep_profiles_certificate_attributes import ScepProfilesCertificateAttributes
-from scm_identity_services.models.scep_profiles_scep_challenge import ScepProfilesScepChallenge
+from scm.identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
+from scm.identity_services.models.scep_profiles_certificate_attributes import ScepProfilesCertificateAttributes
+from scm.identity_services.models.scep_profiles_scep_challenge import ScepProfilesScepChallenge
 from typing import Optional, Set
 from typing_extensions import Self
 

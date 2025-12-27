@@ -21,7 +21,7 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.snippet_share_property import SnippetShareProperty
+from scm.config_setup.models.snippet_share_property import SnippetShareProperty
 from typing import Optional, Set
 from typing_extensions import Self
 

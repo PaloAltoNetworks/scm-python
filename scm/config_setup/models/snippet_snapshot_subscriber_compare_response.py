@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_response_publisher import SnippetSnapshotSubscriberCompareResponsePublisher
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_response_publisher import SnippetSnapshotSubscriberCompareResponsePublisher
 from typing import Optional, Set
 from typing_extensions import Self
 

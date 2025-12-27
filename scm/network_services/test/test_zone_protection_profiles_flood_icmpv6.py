@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_icmpv6 import ZoneProtectionProfilesFloodIcmpv6
+from scm.network_services.models.zone_protection_profiles_flood_icmpv6 import ZoneProtectionProfilesFloodIcmpv6
 
 class TestZoneProtectionProfilesFloodIcmpv6(unittest.TestCase):
     """ZoneProtectionProfilesFloodIcmpv6 unit test stubs"""
@@ -37,7 +37,7 @@ class TestZoneProtectionProfilesFloodIcmpv6(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesFloodIcmpv6(
                 enable = True,
-                red = scm_network_services.models.zone_protection_profiles_flood_icmpv6_red.zone_protection_profiles_flood_icmpv6_red(
+                red = scm.network_services.models.zone_protection_profiles_flood_icmpv6_red.zone_protection_profiles_flood_icmpv6_red(
                     activate_rate = 10000, 
                     alarm_rate = 10000, 
                     maximal_rate = 40000, )

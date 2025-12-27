@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.bgp_routing_routing_preference import BgpRoutingRoutingPreference
+from scm.deployment_services.models.bgp_routing_routing_preference import BgpRoutingRoutingPreference
 
 class TestBgpRoutingRoutingPreference(unittest.TestCase):
     """BgpRoutingRoutingPreference unit test stubs"""
@@ -36,8 +36,8 @@ class TestBgpRoutingRoutingPreference(unittest.TestCase):
         model = BgpRoutingRoutingPreference()
         if include_optional:
             return BgpRoutingRoutingPreference(
-                default = scm_deployment_services.models.default.default(),
-                hot_potato_routing = scm_deployment_services.models.hot_potato_routing.hot_potato_routing()
+                default = scm.deployment_services.models.default.default(),
+                hot_potato_routing = scm.deployment_services.models.hot_potato_routing.hot_potato_routing()
             )
         else:
             return BgpRoutingRoutingPreference(

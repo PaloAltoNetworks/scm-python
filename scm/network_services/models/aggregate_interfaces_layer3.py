@@ -21,11 +21,11 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
-from scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
-from scm_network_services.models.aggregate_interfaces_layer3_ddns_config import AggregateInterfacesLayer3DdnsConfig
-from scm_network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
-from scm_network_services.models.lacp import Lacp
+from scm.network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
+from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
+from scm.network_services.models.aggregate_interfaces_layer3_ddns_config import AggregateInterfacesLayer3DdnsConfig
+from scm.network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
+from scm.network_services.models.lacp import Lacp
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.loopback_interfaces_ipv6_address_inner import LoopbackInterfacesIpv6AddressInner
+from scm.network_services.models.loopback_interfaces_ipv6_address_inner import LoopbackInterfacesIpv6AddressInner
 
 class TestLoopbackInterfacesIpv6AddressInner(unittest.TestCase):
     """LoopbackInterfacesIpv6AddressInner unit test stubs"""

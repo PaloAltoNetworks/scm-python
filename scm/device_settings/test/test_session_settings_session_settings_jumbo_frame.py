@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_settings_session_settings_jumbo_frame import SessionSettingsSessionSettingsJumboFrame
+from scm.device_settings.models.session_settings_session_settings_jumbo_frame import SessionSettingsSessionSettingsJumboFrame
 
 class TestSessionSettingsSessionSettingsJumboFrame(unittest.TestCase):
     """SessionSettingsSessionSettingsJumboFrame unit test stubs"""

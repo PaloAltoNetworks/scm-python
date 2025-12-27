@@ -1,4 +1,4 @@
-# scm_objects.QuarantinedDevicesApi
+# scm.objects.QuarantinedDevicesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/objects/v1*
 
@@ -21,14 +21,14 @@ Create a new quarantined device.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.quarantined_devices import QuarantinedDevices
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.quarantined_devices import QuarantinedDevices
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -38,15 +38,15 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.QuarantinedDevicesApi(api_client)
-    quarantined_devices = scm_objects.QuarantinedDevices() # QuarantinedDevices | Created (optional)
+    api_instance = scm.objects.QuarantinedDevicesApi(api_client)
+    quarantined_devices = scm.objects.QuarantinedDevices() # QuarantinedDevices | Created (optional)
 
     try:
         # Create a quarantined device
@@ -104,13 +104,13 @@ Delete a quarantined device.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -120,14 +120,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.QuarantinedDevicesApi(api_client)
+    api_instance = scm.objects.QuarantinedDevicesApi(api_client)
     host_id = 'host_id_example' # str | Device host ID 
 
     try:
@@ -185,13 +185,13 @@ Retrieve a list of quarantined devices
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -201,14 +201,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.QuarantinedDevicesApi(api_client)
+    api_instance = scm.objects.QuarantinedDevicesApi(api_client)
     host_id = 'host_id_example' # str | Device host ID  (optional)
     serial_number = 'serial_number_example' # str | Device serial number  (optional)
 

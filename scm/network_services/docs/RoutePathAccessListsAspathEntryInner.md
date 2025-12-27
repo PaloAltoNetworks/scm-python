@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_path_access_lists_aspath_entry_inner import RoutePathAccessListsAspathEntryInner
+from scm.network_services.models.route_path_access_lists_aspath_entry_inner import RoutePathAccessListsAspathEntryInner
 
 # TODO update the JSON string below
 json = "{}"

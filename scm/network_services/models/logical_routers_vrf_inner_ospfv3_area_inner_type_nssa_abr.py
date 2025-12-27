@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfv3AreaInnerTypeNssaAbrNssaExtRangeInner
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner import LogicalRoutersVrfInnerOspfv3AreaInnerTypeNssaAbrNssaExtRangeInner
 from typing import Optional, Set
 from typing_extensions import Self
 

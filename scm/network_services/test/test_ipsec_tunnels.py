@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_tunnels import IpsecTunnels
+from scm.network_services.models.ipsec_tunnels import IpsecTunnels
 
 class TestIpsecTunnels(unittest.TestCase):
     """IpsecTunnels unit test stubs"""
@@ -37,28 +37,28 @@ class TestIpsecTunnels(unittest.TestCase):
         if include_optional:
             return IpsecTunnels(
                 anti_replay = True,
-                auto_key = scm_network_services.models.ipsec_tunnels_auto_key.ipsec_tunnels_auto_key(
+                auto_key = scm.network_services.models.ipsec_tunnels_auto_key.ipsec_tunnels_auto_key(
                     ike_gateway = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner.ipsec_tunnels_auto_key_ike_gateway_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner.ipsec_tunnels_auto_key_ike_gateway_inner(
                             name = '', )
                         ], 
                     ipsec_crypto_profile = '', 
                     proxy_id = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner.ipsec_tunnels_auto_key_proxy_id_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner.ipsec_tunnels_auto_key_proxy_id_inner(
                             local = '', 
                             name = '', 
-                            protocol = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
+                            protocol = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
                                 number = 1, 
-                                tcp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
+                                tcp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
                                     local_port = 0, 
                                     remote_port = 0, ), 
-                                udp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
+                                udp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
                                     local_port = 0, 
                                     remote_port = 0, ), ), 
                             remote = '', )
                         ], 
                     proxy_id_v6 = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner.ipsec_tunnels_auto_key_proxy_id_v6_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner.ipsec_tunnels_auto_key_proxy_id_v6_inner(
                             local = '', 
                             name = '', 
                             remote = '', )
@@ -71,35 +71,35 @@ class TestIpsecTunnels(unittest.TestCase):
                 name = '',
                 snippet = 'My Snippet',
                 tunnel_interface = 'tunnel',
-                tunnel_monitor = scm_network_services.models.ipsec_tunnels_tunnel_monitor.ipsec_tunnels_tunnel_monitor(
+                tunnel_monitor = scm.network_services.models.ipsec_tunnels_tunnel_monitor.ipsec_tunnels_tunnel_monitor(
                     destination_ip = '', 
                     enable = True, 
                     proxy_id = '', )
             )
         else:
             return IpsecTunnels(
-                auto_key = scm_network_services.models.ipsec_tunnels_auto_key.ipsec_tunnels_auto_key(
+                auto_key = scm.network_services.models.ipsec_tunnels_auto_key.ipsec_tunnels_auto_key(
                     ike_gateway = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner.ipsec_tunnels_auto_key_ike_gateway_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner.ipsec_tunnels_auto_key_ike_gateway_inner(
                             name = '', )
                         ], 
                     ipsec_crypto_profile = '', 
                     proxy_id = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner.ipsec_tunnels_auto_key_proxy_id_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner.ipsec_tunnels_auto_key_proxy_id_inner(
                             local = '', 
                             name = '', 
-                            protocol = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
+                            protocol = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol.ipsec_tunnels_auto_key_proxy_id_inner_protocol(
                                 number = 1, 
-                                tcp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
+                                tcp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_tcp(
                                     local_port = 0, 
                                     remote_port = 0, ), 
-                                udp = scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
+                                udp = scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp(
                                     local_port = 0, 
                                     remote_port = 0, ), ), 
                             remote = '', )
                         ], 
                     proxy_id_v6 = [
-                        scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner.ipsec_tunnels_auto_key_proxy_id_v6_inner(
+                        scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner.ipsec_tunnels_auto_key_proxy_id_v6_inner(
                             local = '', 
                             name = '', 
                             remote = '', )

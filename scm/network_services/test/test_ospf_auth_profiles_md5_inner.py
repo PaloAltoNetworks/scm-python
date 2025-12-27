@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
+from scm.network_services.models.ospf_auth_profiles_md5_inner import OspfAuthProfilesMd5Inner
 
 class TestOspfAuthProfilesMd5Inner(unittest.TestCase):
     """OspfAuthProfilesMd5Inner unit test stubs"""

@@ -1,4 +1,4 @@
-# scm_objects.AutoTagActionsApi
+# scm.objects.AutoTagActionsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/objects/v1*
 
@@ -22,14 +22,14 @@ Create a new auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.auto_tag_actions import AutoTagActions
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions import AutoTagActions
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -39,15 +39,15 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.AutoTagActionsApi(api_client)
-    auto_tag_actions = scm_objects.AutoTagActions() # AutoTagActions | Created (optional)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
+    auto_tag_actions = scm.objects.AutoTagActions() # AutoTagActions | Created (optional)
 
     try:
         # Create an auto-tag action
@@ -105,13 +105,13 @@ Delete an auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -121,14 +121,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.AutoTagActionsApi(api_client)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
     name = 'name_example' # str | The name of the configuration resource
 
     try:
@@ -186,14 +186,14 @@ Retrieve a list of auto-tag actions
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.auto_tag_actions_list_response import AutoTagActionsListResponse
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions_list_response import AutoTagActionsListResponse
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -203,14 +203,14 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.AutoTagActionsApi(api_client)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
@@ -273,14 +273,14 @@ Update an existing auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_objects
-from scm_objects.models.auto_tag_actions import AutoTagActions
-from scm_objects.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions import AutoTagActions
+from scm.objects.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
@@ -290,15 +290,15 @@ configuration = scm_objects.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_objects.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_objects.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_objects.AutoTagActionsApi(api_client)
-    auto_tag_actions = scm_objects.AutoTagActions() # AutoTagActions | OK (optional)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
+    auto_tag_actions = scm.objects.AutoTagActions() # AutoTagActions | OK (optional)
 
     try:
         # Update an auto-tag action

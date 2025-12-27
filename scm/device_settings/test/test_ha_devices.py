@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_devices import HaDevices
+from scm.device_settings.models.ha_devices import HaDevices
 
 class TestHaDevices(unittest.TestCase):
     """HaDevices unit test stubs"""
@@ -39,7 +39,7 @@ class TestHaDevices(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 ha_devices = [
-                    scm_device_settings.models.ha_devices_ha_devices_inner.ha_devices_ha_devices_inner(
+                    scm.device_settings.models.ha_devices_ha_devices_inner.ha_devices_ha_devices_inner(
                         primary_device_name = '', 
                         primary_serial_number = '', 
                         secondary_device_name = '', 

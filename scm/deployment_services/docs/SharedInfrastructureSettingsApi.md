@@ -1,4 +1,4 @@
-# scm_deployment_services.SharedInfrastructureSettingsApi
+# scm.deployment_services.SharedInfrastructureSettingsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -20,14 +20,14 @@ Get the Prisma Access shared infrastructure settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.shared_infrastructure_settings import SharedInfrastructureSettings
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.shared_infrastructure_settings import SharedInfrastructureSettings
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -37,14 +37,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SharedInfrastructureSettingsApi(api_client)
+    api_instance = scm.deployment_services.SharedInfrastructureSettingsApi(api_client)
 
     try:
         # Get shared infrastructure settings
@@ -99,15 +99,15 @@ Update the Prisma Access shared infrastructure settings.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
-from scm_deployment_services.models.shared_infrastructure_settings import SharedInfrastructureSettings
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
+from scm.deployment_services.models.shared_infrastructure_settings import SharedInfrastructureSettings
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -117,15 +117,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.SharedInfrastructureSettingsApi(api_client)
-    edit_shared_infrastructure_settings = scm_deployment_services.EditSharedInfrastructureSettings() # EditSharedInfrastructureSettings | OK (optional)
+    api_instance = scm.deployment_services.SharedInfrastructureSettingsApi(api_client)
+    edit_shared_infrastructure_settings = scm.deployment_services.EditSharedInfrastructureSettings() # EditSharedInfrastructureSettings | OK (optional)
 
     try:
         # Update infrastructure settings

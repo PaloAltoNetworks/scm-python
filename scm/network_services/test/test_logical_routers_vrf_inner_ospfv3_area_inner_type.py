@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type import LogicalRoutersVrfInnerOspfv3AreaInnerType
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type import LogicalRoutersVrfInnerOspfv3AreaInnerType
 
 class TestLogicalRoutersVrfInnerOspfv3AreaInnerType(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfv3AreaInnerType unit test stubs"""
@@ -36,52 +36,52 @@ class TestLogicalRoutersVrfInnerOspfv3AreaInnerType(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfv3AreaInnerType()
         if include_optional:
             return LogicalRoutersVrfInnerOspfv3AreaInnerType(
-                normal = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal.logical_routers_vrf_inner_ospf_area_inner_type_normal(
-                    abr = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
+                normal = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal.logical_routers_vrf_inner_ospf_area_inner_type_normal(
+                    abr = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
                         export_list = '', 
                         import_list = '', 
                         inbound_filter_list = '', 
                         outbound_filter_list = '', ), ),
-                nssa = scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa(
-                    abr = scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr(
+                nssa = scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa(
+                    abr = scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr(
                         export_list = '', 
                         import_list = '', 
                         inbound_filter_list = '', 
                         nssa_ext_range = [
-                            scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner(
-                                advertise = scm_network_services.models.advertise.advertise(), 
+                            scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner(
+                                advertise = scm.network_services.models.advertise.advertise(), 
                                 name = '', 
                                 route_tag = 56, 
-                                suppress = scm_network_services.models.suppress.suppress(), )
+                                suppress = scm.network_services.models.suppress.suppress(), )
                             ], 
                         outbound_filter_list = '', ), 
                     accept_summary = True, 
-                    default_information_originate = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate(
+                    default_information_originate = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate(
                         metric = 56, 
                         metric_type = 'type-1', ), 
-                    default_route = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route(
-                        advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
+                    default_route = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route(
+                        advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
                             metric = 56, 
                             type = 'ext-1', ), 
-                        disable = scm_network_services.models.disable.disable(), ), 
+                        disable = scm.network_services.models.disable.disable(), ), 
                     no_summary = True, 
                     nssa_ext_range = [
-                        scm_network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospfv3_area_inner_type_nssa_abr_nssa_ext_range_inner(
                             name = '', 
                             route_tag = 56, 
-                            suppress = scm_network_services.models.suppress.suppress(), )
+                            suppress = scm.network_services.models.suppress.suppress(), )
                         ], ),
-                stub = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub.logical_routers_vrf_inner_ospf_area_inner_type_stub(
-                    abr = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
+                stub = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub.logical_routers_vrf_inner_ospf_area_inner_type_stub(
+                    abr = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr.logical_routers_vrf_inner_ospf_area_inner_type_normal_abr(
                         export_list = '', 
                         import_list = '', 
                         inbound_filter_list = '', 
                         outbound_filter_list = '', ), 
                     accept_summary = True, 
-                    default_route = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route(
-                        advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
+                    default_route = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route(
+                        advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
                             metric = 56, ), 
-                        disable = scm_network_services.models.disable.disable(), ), 
+                        disable = scm.network_services.models.disable.disable(), ), 
                     default_route_metric = 56, 
                     no_summary = True, )
             )

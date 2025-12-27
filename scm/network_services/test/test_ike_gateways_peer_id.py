@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_peer_id import IkeGatewaysPeerId
+from scm.network_services.models.ike_gateways_peer_id import IkeGatewaysPeerId
 
 class TestIkeGatewaysPeerId(unittest.TestCase):
     """IkeGatewaysPeerId unit test stubs"""

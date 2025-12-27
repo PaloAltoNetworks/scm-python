@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
+from scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
 
 # TODO update the JSON string below
 json = "{}"

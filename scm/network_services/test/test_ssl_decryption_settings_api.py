@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.ssl_decryption_settings_api import SslDecryptionSettingsApi
+from scm.network_services.api.ssl_decryption_settings_api import SslDecryptionSettingsApi
 
 
 class TestSslDecryptionSettingsApi(unittest.TestCase):

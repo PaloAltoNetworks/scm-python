@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_prefix_lists_list_response import RoutePrefixListsListResponse
+from scm.network_services.models.route_prefix_lists_list_response import RoutePrefixListsListResponse
 
 class TestRoutePrefixListsListResponse(unittest.TestCase):
     """RoutePrefixListsListResponse unit test stubs"""

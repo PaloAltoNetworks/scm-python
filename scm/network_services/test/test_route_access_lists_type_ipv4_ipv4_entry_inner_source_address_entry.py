@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry
+from scm.network_services.models.route_access_lists_type_ipv4_ipv4_entry_inner_source_address_entry import RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry
 
 class TestRouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry(unittest.TestCase):
     """RouteAccessListsTypeIpv4Ipv4EntryInnerSourceAddressEntry unit test stubs"""

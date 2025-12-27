@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_default_profile_settings import InternetRuleTypeDefaultProfileSettings
+from scm.security_services.models.internet_rule_type_default_profile_settings import InternetRuleTypeDefaultProfileSettings
 
 # TODO update the JSON string below
 json = "{}"

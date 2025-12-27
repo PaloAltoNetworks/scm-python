@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_certificate import HipObjectsCertificate
+from scm.objects.models.hip_objects_certificate import HipObjectsCertificate
 
 class TestHipObjectsCertificate(unittest.TestCase):
     """HipObjectsCertificate unit test stubs"""
@@ -36,9 +36,9 @@ class TestHipObjectsCertificate(unittest.TestCase):
         model = HipObjectsCertificate()
         if include_optional:
             return HipObjectsCertificate(
-                criteria = scm_objects.models.hip_objects_certificate_criteria.hip_objects_certificate_criteria(
+                criteria = scm.objects.models.hip_objects_certificate_criteria.hip_objects_certificate_criteria(
                     certificate_attributes = [
-                        scm_objects.models.hip_objects_certificate_criteria_certificate_attributes_inner.hip_objects_certificate_criteria_certificate_attributes_inner(
+                        scm.objects.models.hip_objects_certificate_criteria_certificate_attributes_inner.hip_objects_certificate_criteria_certificate_attributes_inner(
                             name = '', 
                             value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                         ], 

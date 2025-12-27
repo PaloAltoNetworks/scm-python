@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.service_groups_list_response import ServiceGroupsListResponse
+from scm.objects.models.service_groups_list_response import ServiceGroupsListResponse
 
 class TestServiceGroupsListResponse(unittest.TestCase):
     """ServiceGroupsListResponse unit test stubs"""

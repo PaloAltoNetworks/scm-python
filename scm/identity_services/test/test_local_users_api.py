@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.local_users_api import LocalUsersApi
+from scm.identity_services.api.local_users_api import LocalUsersApi
 
 
 class TestLocalUsersApi(unittest.TestCase):

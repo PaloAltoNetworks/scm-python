@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner import LogicalRoutersVrfInnerBgpPeerGroupInner
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner import LogicalRoutersVrfInnerBgpPeerGroupInner
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInner(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInner unit test stubs"""
@@ -36,78 +36,78 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInner(unittest.TestCase):
         model = LogicalRoutersVrfInnerBgpPeerGroupInner()
         if include_optional:
             return LogicalRoutersVrfInnerBgpPeerGroupInner(
-                address_family = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                address_family = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                     ipv4 = '', 
                     ipv6 = '', ),
                 aggregated_confed_as_path = True,
-                connection_options = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options(
+                connection_options = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_connection_options(
                     authentication = '', 
                     dampening = '', 
                     multihop = 56, 
                     timers = '', ),
                 enable = True,
-                filtering_profile = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                filtering_profile = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                     ipv4 = '', 
                     ipv6 = '', ),
                 name = '',
                 peer = [
-                    scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner(
-                        bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd(
-                            multihop = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
+                    scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner(
+                        bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd(
+                            multihop = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_bfd_multihop(
                                 min_received_ttl = 56, ), 
                             profile = '', ), 
-                        connection_options = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options(
+                        connection_options = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options(
                             authentication = '', 
                             dampening = '', 
                             hold_time = '', 
                             idle_hold_time = 56, 
-                            incoming_bgp_connection = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection(
+                            incoming_bgp_connection = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_incoming_bgp_connection(
                                 allow = True, 
                                 remote_port = 56, ), 
                             keep_alive_interval = '', 
                             max_prefixes = '', 
                             min_route_adv_interval = 56, 
                             open_delay_time = 56, 
-                            outgoing_bgp_connection = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection(
+                            outgoing_bgp_connection = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_connection_options_outgoing_bgp_connection(
                                 allow = True, 
                                 local_port = 56, ), 
                             timers = '', ), 
                         enable = True, 
                         enable_mp_bgp = True, 
                         enable_sender_side_loop_detection = True, 
-                        inherit = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit(
-                            no = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(
-                                address_family = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                        inherit = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit(
+                            no = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_inherit_no(
+                                address_family = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                                     ipv4 = '', 
                                     ipv6 = '', ), 
-                                filtering_profile = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
+                                filtering_profile = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_address_family.logical_routers_vrf_inner_bgp_peer_group_inner_address_family(
                                     ipv4 = '', 
                                     ipv6 = '', ), ), 
-                            yes = scm_network_services.models.yes.yes(), ), 
-                        local_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
+                            yes = scm.network_services.models.yes.yes(), ), 
+                        local_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_local_address(
                             interface = '', 
                             ip = '', ), 
                         name = '', 
                         passive = True, 
-                        peer_address = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
+                        peer_address = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_peer_address(
                             fqdn = '', 
                             ip = '', ), 
                         peer_as = '', 
                         peering_type = '', 
                         reflector_client = '', 
-                        subsequent_address_family_identifier = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier(
+                        subsequent_address_family_identifier = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier.logical_routers_vrf_inner_bgp_peer_group_inner_peer_inner_subsequent_address_family_identifier(
                             multicast = True, 
                             unicast = True, ), )
                     ],
                 soft_reset_with_stored_info = True,
-                type = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type.logical_routers_vrf_inner_bgp_peer_group_inner_type(
-                    ebgp = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp(
+                type = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type.logical_routers_vrf_inner_bgp_peer_group_inner_type(
+                    ebgp = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp(
                         export_nexthop = '', 
                         import_nexthop = '', 
                         remove_private_as = True, ), 
-                    ebgp_confed = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
+                    ebgp_confed = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
                         export_nexthop = '', ), 
-                    ibgp = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
+                    ibgp = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
                         export_nexthop = '', ), 
                     ibgp_confed = , )
             )

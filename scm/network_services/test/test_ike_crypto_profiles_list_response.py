@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_crypto_profiles_list_response import IKECryptoProfilesListResponse
+from scm.network_services.models.ike_crypto_profiles_list_response import IKECryptoProfilesListResponse
 
 class TestIKECryptoProfilesListResponse(unittest.TestCase):
     """IKECryptoProfilesListResponse unit test stubs"""

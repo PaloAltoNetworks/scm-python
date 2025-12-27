@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zones_list_response import ZonesListResponse
+from scm.network_services.models.zones_list_response import ZonesListResponse
 
 class TestZonesListResponse(unittest.TestCase):
     """ZonesListResponse unit test stubs"""

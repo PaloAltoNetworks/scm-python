@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_identity_services.models.radius_server_profiles_protocol_eapttls_with_pap import RadiusServerProfilesProtocolEAPTTLSWithPAP
-from scm_identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
+from scm.identity_services.models.radius_server_profiles_protocol_eapttls_with_pap import RadiusServerProfilesProtocolEAPTTLSWithPAP
+from scm.identity_services.models.radius_server_profiles_protocol_peapmschapv2 import RadiusServerProfilesProtocolPEAPMSCHAPv2
 from typing import Optional, Set
 from typing_extensions import Self
 

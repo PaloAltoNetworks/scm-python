@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_route_map_redistributions_api import BGPRouteMapRedistributionsApi
+from scm.network_services.api.bgp_route_map_redistributions_api import BGPRouteMapRedistributionsApi
 
 
 class TestBGPRouteMapRedistributionsApi(unittest.TestCase):

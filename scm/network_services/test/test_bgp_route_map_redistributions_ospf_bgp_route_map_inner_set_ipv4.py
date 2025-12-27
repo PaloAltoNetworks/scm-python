@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4 import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetIpv4
+from scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4 import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetIpv4
 
 class TestBgpRouteMapRedistributionsOspfBgpRouteMapInnerSetIpv4(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfBgpRouteMapInnerSetIpv4 unit test stubs"""

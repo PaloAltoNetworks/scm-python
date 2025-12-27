@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.auto_tag_actions_api import AutoTagActionsApi
+from scm.objects.api.auto_tag_actions_api import AutoTagActionsApi
 
 
 class TestAutoTagActionsApi(unittest.TestCase):

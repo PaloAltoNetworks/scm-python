@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol import IpsecTunnelsAutoKeyProxyIdInnerProtocol
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol import IpsecTunnelsAutoKeyProxyIdInnerProtocol
 from typing import Optional, Set
 from typing_extensions import Self
 

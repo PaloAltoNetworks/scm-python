@@ -50,7 +50,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.devices import Devices
+from scm.config_setup.models.devices import Devices
 
 # TODO update the JSON string below
 json = "{}"

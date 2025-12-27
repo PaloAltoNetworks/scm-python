@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.certificate_profiles_username_field import CertificateProfilesUsernameField
+from scm.identity_services.models.certificate_profiles_username_field import CertificateProfilesUsernameField
 
 class TestCertificateProfilesUsernameField(unittest.TestCase):
     """CertificateProfilesUsernameField unit test stubs"""

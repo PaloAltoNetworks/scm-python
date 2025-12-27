@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner import AntiSpywareSignaturesSignatureStandardInner
+from scm.security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner import AntiSpywareSignaturesSignatureStandardInner
 from typing import Optional, Set
 from typing_extensions import Self
 

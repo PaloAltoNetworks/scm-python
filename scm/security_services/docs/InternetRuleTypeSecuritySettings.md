@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_security_settings import InternetRuleTypeSecuritySettings
+from scm.security_services.models.internet_rule_type_security_settings import InternetRuleTypeSecuritySettings
 
 # TODO update the JSON string below
 json = "{}"

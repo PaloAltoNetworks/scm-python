@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5 import LogicalRoutersVrfInnerOspfv3AuthProfileInnerAhMd5
+from scm.network_services.models.logical_routers_vrf_inner_ospfv3_auth_profile_inner_ah_md5 import LogicalRoutersVrfInnerOspfv3AuthProfileInnerAhMd5
 from typing import Optional, Set
 from typing_extensions import Self
 

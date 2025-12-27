@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.services_protocol_udp_override import ServicesProtocolUdpOverride
+from scm.objects.models.services_protocol_udp_override import ServicesProtocolUdpOverride
 from typing import Optional, Set
 from typing_extensions import Self
 

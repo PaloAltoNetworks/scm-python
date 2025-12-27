@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.dynamic_user_groups_api import DynamicUserGroupsApi
+from scm.objects.api.dynamic_user_groups_api import DynamicUserGroupsApi
 
 
 class TestDynamicUserGroupsApi(unittest.TestCase):

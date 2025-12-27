@@ -1,4 +1,4 @@
-# scm_deployment_services.NetworkLocationsApi
+# scm.deployment_services.NetworkLocationsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -19,13 +19,13 @@ Retrieve a list of Prisma Access locations.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -35,14 +35,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.NetworkLocationsApi(api_client)
+    api_instance = scm.deployment_services.NetworkLocationsApi(api_client)
 
     try:
         # List locations

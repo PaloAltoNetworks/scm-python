@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_non_ip_protocol import ZoneProtectionProfilesNonIpProtocol
+from scm.network_services.models.zone_protection_profiles_non_ip_protocol import ZoneProtectionProfilesNonIpProtocol
 
 class TestZoneProtectionProfilesNonIpProtocol(unittest.TestCase):
     """ZoneProtectionProfilesNonIpProtocol unit test stubs"""
@@ -38,7 +38,7 @@ class TestZoneProtectionProfilesNonIpProtocol(unittest.TestCase):
             return ZoneProtectionProfilesNonIpProtocol(
                 list_type = 'exclude',
                 protocol = [
-                    scm_network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner.zone_protection_profiles_non_ip_protocol_protocol_inner(
+                    scm.network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner.zone_protection_profiles_non_ip_protocol_protocol_inner(
                         enable = True, 
                         ether_type = '', 
                         name = '', )

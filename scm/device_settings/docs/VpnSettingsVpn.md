@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.vpn_settings_vpn import VpnSettingsVpn
+from scm.device_settings.models.vpn_settings_vpn import VpnSettingsVpn
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.local_user_groups import LocalUserGroups
+from scm.identity_services.models.local_user_groups import LocalUserGroups
 
 class TestLocalUserGroups(unittest.TestCase):
     """LocalUserGroups unit test stubs"""

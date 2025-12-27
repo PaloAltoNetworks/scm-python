@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_address_family_orf import BgpAddressFamilyOrf
+from scm.network_services.models.bgp_address_family_orf import BgpAddressFamilyOrf
 
 class TestBgpAddressFamilyOrf(unittest.TestCase):
     """BgpAddressFamilyOrf unit test stubs"""

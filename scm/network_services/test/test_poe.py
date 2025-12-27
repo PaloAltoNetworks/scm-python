@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.poe import Poe
+from scm.network_services.models.poe import Poe
 
 class TestPoe(unittest.TestCase):
     """Poe unit test stubs"""

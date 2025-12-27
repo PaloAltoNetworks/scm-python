@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
+from scm.network_services.models.bgp_filter_conditional_advertisement_non_exist import BgpFilterConditionalAdvertisementNonExist
 
 # TODO update the JSON string below
 json = "{}"

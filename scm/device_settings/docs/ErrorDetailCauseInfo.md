@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.error_detail_cause_info import ErrorDetailCauseInfo
+from scm.device_settings.models.error_detail_cause_info import ErrorDetailCauseInfo
 
 # TODO update the JSON string below
 json = "{}"

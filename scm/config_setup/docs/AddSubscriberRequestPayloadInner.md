@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
+from scm.config_setup.models.add_subscriber_request_payload_inner import AddSubscriberRequestPayloadInner
 
 # TODO update the JSON string below
 json = "{}"

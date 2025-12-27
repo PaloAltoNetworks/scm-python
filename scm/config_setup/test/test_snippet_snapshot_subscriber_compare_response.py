@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_snapshot_subscriber_compare_response import SnippetSnapshotSubscriberCompareResponse
+from scm.config_setup.models.snippet_snapshot_subscriber_compare_response import SnippetSnapshotSubscriberCompareResponse
 
 class TestSnippetSnapshotSubscriberCompareResponse(unittest.TestCase):
     """SnippetSnapshotSubscriberCompareResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestSnippetSnapshotSubscriberCompareResponse(unittest.TestCase):
         model = SnippetSnapshotSubscriberCompareResponse()
         if include_optional:
             return SnippetSnapshotSubscriberCompareResponse(
-                publisher = scm_config_setup.models.snippet_snapshot_subscriber_compare_response_publisher.snippet_snapshot_subscriber_compare_response_publisher(
+                publisher = scm.config_setup.models.snippet_snapshot_subscriber_compare_response_publisher.snippet_snapshot_subscriber_compare_response_publisher(
                     entry = [
-                        scm_config_setup.models.dynamic_entry.dynamic_entry()
+                        scm.config_setup.models.dynamic_entry.dynamic_entry()
                         ], ),
-                subscriber = scm_config_setup.models.snippet_snapshot_subscriber_compare_response_publisher.snippet_snapshot_subscriber_compare_response_publisher(
+                subscriber = scm.config_setup.models.snippet_snapshot_subscriber_compare_response_publisher.snippet_snapshot_subscriber_compare_response_publisher(
                     entry = [
-                        scm_config_setup.models.dynamic_entry.dynamic_entry()
+                        scm.config_setup.models.dynamic_entry.dynamic_entry()
                         ], )
             )
         else:

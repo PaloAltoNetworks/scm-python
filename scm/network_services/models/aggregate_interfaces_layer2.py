@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.lacp import Lacp
+from scm.network_services.models.lacp import Lacp
 from typing import Optional, Set
 from typing_extensions import Self
 

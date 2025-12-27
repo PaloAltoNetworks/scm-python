@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.wildfire_anti_virus_profiles import WildfireAntiVirusProfiles
+from scm.security_services.models.wildfire_anti_virus_profiles import WildfireAntiVirusProfiles
 
 # TODO update the JSON string below
 json = "{}"

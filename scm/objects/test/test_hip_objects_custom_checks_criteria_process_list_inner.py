@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks_criteria_process_list_inner import HipObjectsCustomChecksCriteriaProcessListInner
+from scm.objects.models.hip_objects_custom_checks_criteria_process_list_inner import HipObjectsCustomChecksCriteriaProcessListInner
 
 class TestHipObjectsCustomChecksCriteriaProcessListInner(unittest.TestCase):
     """HipObjectsCustomChecksCriteriaProcessListInner unit test stubs"""

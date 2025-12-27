@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_pppoe_passive import EthernetInterfacesLayer3PppoePassive
+from scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive import EthernetInterfacesLayer3PppoePassive
 
 class TestEthernetInterfacesLayer3PppoePassive(unittest.TestCase):
     """EthernetInterfacesLayer3PppoePassive unit test stubs"""

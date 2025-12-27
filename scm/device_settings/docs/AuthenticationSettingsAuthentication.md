@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.authentication_settings_authentication import AuthenticationSettingsAuthentication
+from scm.device_settings.models.authentication_settings_authentication import AuthenticationSettingsAuthentication
 
 # TODO update the JSON string below
 json = "{}"

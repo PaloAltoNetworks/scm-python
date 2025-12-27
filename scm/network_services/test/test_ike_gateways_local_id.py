@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_local_id import IkeGatewaysLocalId
+from scm.network_services.models.ike_gateways_local_id import IkeGatewaysLocalId
 
 class TestIkeGatewaysLocalId(unittest.TestCase):
     """IkeGatewaysLocalId unit test stubs"""

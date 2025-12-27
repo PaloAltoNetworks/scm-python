@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_network_info_criteria_network_is_mobile import HipObjectsNetworkInfoCriteriaNetworkIsMobile
+from scm.objects.models.hip_objects_network_info_criteria_network_is_mobile import HipObjectsNetworkInfoCriteriaNetworkIsMobile
 
 class TestHipObjectsNetworkInfoCriteriaNetworkIsMobile(unittest.TestCase):
     """HipObjectsNetworkInfoCriteriaNetworkIsMobile unit test stubs"""

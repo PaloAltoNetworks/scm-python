@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction import SdwanErrorCorrectionProfilesModeForwardErrorCorrection
+from scm.network_services.models.sdwan_error_correction_profiles_mode_forward_error_correction import SdwanErrorCorrectionProfilesModeForwardErrorCorrection
 
 class TestSdwanErrorCorrectionProfilesModeForwardErrorCorrection(unittest.TestCase):
     """SdwanErrorCorrectionProfilesModeForwardErrorCorrection unit test stubs"""

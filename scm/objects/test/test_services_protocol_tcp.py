@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services_protocol_tcp import ServicesProtocolTcp
+from scm.objects.models.services_protocol_tcp import ServicesProtocolTcp
 
 class TestServicesProtocolTcp(unittest.TestCase):
     """ServicesProtocolTcp unit test stubs"""
@@ -36,7 +36,7 @@ class TestServicesProtocolTcp(unittest.TestCase):
         model = ServicesProtocolTcp()
         if include_optional:
             return ServicesProtocolTcp(
-                override = scm_objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
+                override = scm.objects.models.services_protocol_tcp_override.services_protocol_tcp_override(
                     halfclose_timeout = 1, 
                     timeout = 1, 
                     timewait_timeout = 1, ),

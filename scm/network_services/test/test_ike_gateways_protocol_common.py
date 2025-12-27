@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways_protocol_common import IkeGatewaysProtocolCommon
+from scm.network_services.models.ike_gateways_protocol_common import IkeGatewaysProtocolCommon
 
 class TestIkeGatewaysProtocolCommon(unittest.TestCase):
     """IkeGatewaysProtocolCommon unit test stubs"""
@@ -36,9 +36,9 @@ class TestIkeGatewaysProtocolCommon(unittest.TestCase):
         model = IkeGatewaysProtocolCommon()
         if include_optional:
             return IkeGatewaysProtocolCommon(
-                fragmentation = scm_network_services.models.ike_gateways_protocol_common_fragmentation.ike_gateways_protocol_common_fragmentation(
+                fragmentation = scm.network_services.models.ike_gateways_protocol_common_fragmentation.ike_gateways_protocol_common_fragmentation(
                     enable = false, ),
-                nat_traversal = scm_network_services.models.ike_gateways_protocol_common_nat_traversal.ike_gateways_protocol_common_nat_traversal(
+                nat_traversal = scm.network_services.models.ike_gateways_protocol_common_nat_traversal.ike_gateways_protocol_common_nat_traversal(
                     enable = True, ),
                 passive_mode = True
             )

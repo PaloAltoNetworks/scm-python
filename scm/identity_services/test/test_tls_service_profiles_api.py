@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.tls_service_profiles_api import TLSServiceProfilesApi
+from scm.identity_services.api.tls_service_profiles_api import TLSServiceProfilesApi
 
 
 class TestTLSServiceProfilesApi(unittest.TestCase):

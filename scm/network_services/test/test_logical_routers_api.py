@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.logical_routers_api import LogicalRoutersApi
+from scm.network_services.api.logical_routers_api import LogicalRoutersApi
 
 
 class TestLogicalRoutersApi(unittest.TestCase):

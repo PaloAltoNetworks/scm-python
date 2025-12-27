@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tacacs_server_profiles_list_response import TACACSServerProfilesListResponse
+from scm.identity_services.models.tacacs_server_profiles_list_response import TACACSServerProfilesListResponse
 
 class TestTACACSServerProfilesListResponse(unittest.TestCase):
     """TACACSServerProfilesListResponse unit test stubs"""

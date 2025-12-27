@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_scan_white_list_inner import ZoneProtectionProfilesScanWhiteListInner
+from scm.network_services.models.zone_protection_profiles_scan_white_list_inner import ZoneProtectionProfilesScanWhiteListInner
 
 class TestZoneProtectionProfilesScanWhiteListInner(unittest.TestCase):
     """ZoneProtectionProfilesScanWhiteListInner unit test stubs"""

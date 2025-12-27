@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_config_setup.models.snippets import Snippets
-from scm_config_setup.models.snippets_list_response import SnippetsListResponse
+from scm.config_setup.models.snippets import Snippets
+from scm.config_setup.models.snippets_list_response import SnippetsListResponse
 
-from scm_config_setup.api_client import ApiClient, RequestSerialized
-from scm_config_setup.api_response import ApiResponse
-from scm_config_setup.rest import RESTResponseType
+from scm.config_setup.api_client import ApiClient, RequestSerialized
+from scm.config_setup.api_response import ApiResponse
+from scm.config_setup.rest import RESTResponseType
 
 
 class SnippetsApi:

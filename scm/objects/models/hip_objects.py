@@ -21,17 +21,17 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.hip_objects_anti_malware import HipObjectsAntiMalware
-from scm_objects.models.hip_objects_certificate import HipObjectsCertificate
-from scm_objects.models.hip_objects_custom_checks import HipObjectsCustomChecks
-from scm_objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
-from scm_objects.models.hip_objects_disk_backup import HipObjectsDiskBackup
-from scm_objects.models.hip_objects_disk_encryption import HipObjectsDiskEncryption
-from scm_objects.models.hip_objects_firewall import HipObjectsFirewall
-from scm_objects.models.hip_objects_host_info import HipObjectsHostInfo
-from scm_objects.models.hip_objects_mobile_device import HipObjectsMobileDevice
-from scm_objects.models.hip_objects_network_info import HipObjectsNetworkInfo
-from scm_objects.models.hip_objects_patch_management import HipObjectsPatchManagement
+from scm.objects.models.hip_objects_anti_malware import HipObjectsAntiMalware
+from scm.objects.models.hip_objects_certificate import HipObjectsCertificate
+from scm.objects.models.hip_objects_custom_checks import HipObjectsCustomChecks
+from scm.objects.models.hip_objects_data_loss_prevention import HipObjectsDataLossPrevention
+from scm.objects.models.hip_objects_disk_backup import HipObjectsDiskBackup
+from scm.objects.models.hip_objects_disk_encryption import HipObjectsDiskEncryption
+from scm.objects.models.hip_objects_firewall import HipObjectsFirewall
+from scm.objects.models.hip_objects_host_info import HipObjectsHostInfo
+from scm.objects.models.hip_objects_mobile_device import HipObjectsMobileDevice
+from scm.objects.models.hip_objects_network_info import HipObjectsNetworkInfo
+from scm.objects.models.hip_objects_patch_management import HipObjectsPatchManagement
 from typing import Optional, Set
 from typing_extensions import Self
 

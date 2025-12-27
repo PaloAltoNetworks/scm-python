@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.motd_color import MotdColor
+from scm.device_settings.models.motd_color import MotdColor
 from typing import Optional, Set
 from typing_extensions import Self
 

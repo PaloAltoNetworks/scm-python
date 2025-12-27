@@ -21,10 +21,10 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.authentication_profiles_lockout import AuthenticationProfilesLockout
-from scm_identity_services.models.authentication_profiles_method import AuthenticationProfilesMethod
-from scm_identity_services.models.authentication_profiles_multi_factor_auth import AuthenticationProfilesMultiFactorAuth
-from scm_identity_services.models.authentication_profiles_single_sign_on import AuthenticationProfilesSingleSignOn
+from scm.identity_services.models.authentication_profiles_lockout import AuthenticationProfilesLockout
+from scm.identity_services.models.authentication_profiles_method import AuthenticationProfilesMethod
+from scm.identity_services.models.authentication_profiles_multi_factor_auth import AuthenticationProfilesMultiFactorAuth
+from scm.identity_services.models.authentication_profiles_single_sign_on import AuthenticationProfilesSingleSignOn
 from typing import Optional, Set
 from typing_extensions import Self
 

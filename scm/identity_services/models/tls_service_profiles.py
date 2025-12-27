@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
+from scm.identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
 from typing import Optional, Set
 from typing_extensions import Self
 

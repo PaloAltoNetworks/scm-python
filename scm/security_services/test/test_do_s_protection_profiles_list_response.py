@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.do_s_protection_profiles_list_response import DoSProtectionProfilesListResponse
+from scm.security_services.models.do_s_protection_profiles_list_response import DoSProtectionProfilesListResponse
 
 class TestDoSProtectionProfilesListResponse(unittest.TestCase):
     """DoSProtectionProfilesListResponse unit test stubs"""

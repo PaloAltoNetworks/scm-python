@@ -1,4 +1,4 @@
-# scm_network_services.SDWANSaaSQualityProfilesApi
+# scm.network_services.SDWANSaaSQualityProfilesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -23,14 +23,14 @@ Create a new SD-WAN SaaS quality profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -40,15 +40,15 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SDWANSaaSQualityProfilesApi(api_client)
-    sdwan_saas_quality_profiles = scm_network_services.SdwanSaasQualityProfiles() # SdwanSaasQualityProfiles | Created (optional)
+    api_instance = scm.network_services.SDWANSaaSQualityProfilesApi(api_client)
+    sdwan_saas_quality_profiles = scm.network_services.SdwanSaasQualityProfiles() # SdwanSaasQualityProfiles | Created (optional)
 
     try:
         # Create an SD-WAN SaaS quality profile
@@ -106,13 +106,13 @@ Delete an SD-WAN SaaS quality profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SDWANSaaSQualityProfilesApi(api_client)
+    api_instance = scm.network_services.SDWANSaaSQualityProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -187,14 +187,14 @@ Get an existing SD-WAN SaaS quality profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -204,14 +204,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SDWANSaaSQualityProfilesApi(api_client)
+    api_instance = scm.network_services.SDWANSaaSQualityProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -270,14 +270,14 @@ Retrieve a list of SD-WAN SaaS quality profiles.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.sdwan_saa_s_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.sdwan_saa_s_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -287,14 +287,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SDWANSaaSQualityProfilesApi(api_client)
+    api_instance = scm.network_services.SDWANSaaSQualityProfilesApi(api_client)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
     name = 'name_example' # str | The name of the configuration resource (optional)
@@ -363,14 +363,14 @@ Update an existing SD-WAN SaaS quality profile.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -380,16 +380,16 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SDWANSaaSQualityProfilesApi(api_client)
+    api_instance = scm.network_services.SDWANSaaSQualityProfilesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    sdwan_saas_quality_profiles = scm_network_services.SdwanSaasQualityProfiles() # SdwanSaasQualityProfiles | OK (optional)
+    sdwan_saas_quality_profiles = scm.network_services.SdwanSaasQualityProfiles() # SdwanSaasQualityProfiles | OK (optional)
 
     try:
         # Update an SD-WAN SaaS quality profile

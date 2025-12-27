@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
+from scm.network_services.models.pbf_rules_enforce_symmetric_return import PbfRulesEnforceSymmetricReturn
 
 class TestPbfRulesEnforceSymmetricReturn(unittest.TestCase):
     """PbfRulesEnforceSymmetricReturn unit test stubs"""
@@ -38,7 +38,7 @@ class TestPbfRulesEnforceSymmetricReturn(unittest.TestCase):
             return PbfRulesEnforceSymmetricReturn(
                 enabled = True,
                 nexthop_address_list = [
-                    scm_network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner(
+                    scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner(
                         name = '', )
                     ]
             )

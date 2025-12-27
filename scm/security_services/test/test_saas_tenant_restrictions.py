@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.saas_tenant_restrictions import SaasTenantRestrictions
+from scm.security_services.models.saas_tenant_restrictions import SaasTenantRestrictions
 
 class TestSaasTenantRestrictions(unittest.TestCase):
     """SaasTenantRestrictions unit test stubs"""
@@ -41,7 +41,7 @@ class TestSaasTenantRestrictions(unittest.TestCase):
                     ''
                     ],
                 headers = [
-                    scm_security_services.models.saas_tenant_restrictions_headers_inner.saas_tenant_restrictions_headers_inner(
+                    scm.security_services.models.saas_tenant_restrictions_headers_inner.saas_tenant_restrictions_headers_inner(
                         header = '', 
                         name = '', 
                         value = '', )

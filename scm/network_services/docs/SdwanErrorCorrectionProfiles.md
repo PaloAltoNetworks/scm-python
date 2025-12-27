@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.sdwan_error_correction_profiles import SdwanErrorCorrectionProfiles
+from scm.network_services.models.sdwan_error_correction_profiles import SdwanErrorCorrectionProfiles
 
 # TODO update the JSON string below
 json = "{}"

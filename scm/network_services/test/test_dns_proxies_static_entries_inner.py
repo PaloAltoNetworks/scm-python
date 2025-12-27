@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
+from scm.network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
 
 class TestDnsProxiesStaticEntriesInner(unittest.TestCase):
     """DnsProxiesStaticEntriesInner unit test stubs"""

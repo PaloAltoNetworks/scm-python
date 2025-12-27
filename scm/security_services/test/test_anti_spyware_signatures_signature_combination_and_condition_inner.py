@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner import AntiSpywareSignaturesSignatureCombinationAndConditionInner
+from scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner import AntiSpywareSignaturesSignatureCombinationAndConditionInner
 
 class TestAntiSpywareSignaturesSignatureCombinationAndConditionInner(unittest.TestCase):
     """AntiSpywareSignaturesSignatureCombinationAndConditionInner unit test stubs"""
@@ -38,7 +38,7 @@ class TestAntiSpywareSignaturesSignatureCombinationAndConditionInner(unittest.Te
             return AntiSpywareSignaturesSignatureCombinationAndConditionInner(
                 name = '',
                 or_condition = [
-                    scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
+                    scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
                         name = '', 
                         threat_id = '', )
                     ]

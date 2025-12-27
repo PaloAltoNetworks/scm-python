@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.i_psec_tunnels_api import IPsecTunnelsApi
+from scm.network_services.api.i_psec_tunnels_api import IPsecTunnelsApi
 
 
 class TestIPsecTunnelsApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces_layer2 import AggregateInterfacesLayer2
+from scm.network_services.models.aggregate_interfaces_layer2 import AggregateInterfacesLayer2
 
 class TestAggregateInterfacesLayer2(unittest.TestCase):
     """AggregateInterfacesLayer2 unit test stubs"""
@@ -36,7 +36,7 @@ class TestAggregateInterfacesLayer2(unittest.TestCase):
         model = AggregateInterfacesLayer2()
         if include_optional:
             return AggregateInterfacesLayer2(
-                lacp = scm_network_services.models.lacp.lacp(
+                lacp = scm.network_services.models.lacp.lacp(
                     enable = True, 
                     fast_failover = True, 
                     max_ports = 1, 

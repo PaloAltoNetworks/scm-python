@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
+from scm.device_settings.models.update_schedule_update_schedule_anti_virus import UpdateScheduleUpdateScheduleAntiVirus
 
 class TestUpdateScheduleUpdateScheduleAntiVirus(unittest.TestCase):
     """UpdateScheduleUpdateScheduleAntiVirus unit test stubs"""
@@ -36,34 +36,34 @@ class TestUpdateScheduleUpdateScheduleAntiVirus(unittest.TestCase):
         model = UpdateScheduleUpdateScheduleAntiVirus()
         if include_optional:
             return UpdateScheduleUpdateScheduleAntiVirus(
-                recurring = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring.update_schedule_update_schedule_anti_virus_recurring(
-                    daily = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
+                recurring = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring.update_schedule_update_schedule_anti_virus_recurring(
+                    daily = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
                         action = 'download-only', 
                         at = '23:20', ), 
-                    hourly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
+                    hourly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
                         action = 'download-only', 
                         at = 0, ), 
-                    none = scm_device_settings.models.none.none(), 
+                    none = scm.device_settings.models.none.none(), 
                     sync_to_peer = True, 
                     threshold = 1, 
-                    weekly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
+                    weekly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
                         action = 'download-only', 
                         at = '23:20', 
                         day_of_week = 'sunday', ), )
             )
         else:
             return UpdateScheduleUpdateScheduleAntiVirus(
-                recurring = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring.update_schedule_update_schedule_anti_virus_recurring(
-                    daily = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
+                recurring = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring.update_schedule_update_schedule_anti_virus_recurring(
+                    daily = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_daily.update_schedule_update_schedule_anti_virus_recurring_daily(
                         action = 'download-only', 
                         at = '23:20', ), 
-                    hourly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
+                    hourly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_hourly.update_schedule_update_schedule_anti_virus_recurring_hourly(
                         action = 'download-only', 
                         at = 0, ), 
-                    none = scm_device_settings.models.none.none(), 
+                    none = scm.device_settings.models.none.none(), 
                     sync_to_peer = True, 
                     threshold = 1, 
-                    weekly = scm_device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
+                    weekly = scm.device_settings.models.update_schedule_update_schedule_anti_virus_recurring_weekly.update_schedule_update_schedule_anti_virus_recurring_weekly(
                         action = 'download-only', 
                         at = '23:20', 
                         day_of_week = 'sunday', ), ),

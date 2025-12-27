@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_network_services.models.route_prefix_lists import RoutePrefixLists
-from scm_network_services.models.route_prefix_lists_list_response import RoutePrefixListsListResponse
+from scm.network_services.models.route_prefix_lists import RoutePrefixLists
+from scm.network_services.models.route_prefix_lists_list_response import RoutePrefixListsListResponse
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class RoutePrefixListsApi:

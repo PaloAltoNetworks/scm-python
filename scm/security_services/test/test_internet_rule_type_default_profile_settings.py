@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_default_profile_settings import InternetRuleTypeDefaultProfileSettings
+from scm.security_services.models.internet_rule_type_default_profile_settings import InternetRuleTypeDefaultProfileSettings
 
 class TestInternetRuleTypeDefaultProfileSettings(unittest.TestCase):
     """InternetRuleTypeDefaultProfileSettings unit test stubs"""
@@ -37,7 +37,7 @@ class TestInternetRuleTypeDefaultProfileSettings(unittest.TestCase):
         if include_optional:
             return InternetRuleTypeDefaultProfileSettings(
                 dlp = '',
-                file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                     download = 'allow-all-file-types', 
                     upload = 'allow-all-file-types', )
             )

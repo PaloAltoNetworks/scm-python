@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ospf_auth_profiles import OspfAuthProfiles
+from scm.network_services.models.ospf_auth_profiles import OspfAuthProfiles
 
 # TODO update the JSON string below
 json = "{}"

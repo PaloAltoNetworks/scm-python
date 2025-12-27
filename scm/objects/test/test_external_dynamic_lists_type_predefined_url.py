@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.external_dynamic_lists_type_predefined_url import ExternalDynamicListsTypePredefinedUrl
+from scm.objects.models.external_dynamic_lists_type_predefined_url import ExternalDynamicListsTypePredefinedUrl
 
 class TestExternalDynamicListsTypePredefinedUrl(unittest.TestCase):
     """ExternalDynamicListsTypePredefinedUrl unit test stubs"""

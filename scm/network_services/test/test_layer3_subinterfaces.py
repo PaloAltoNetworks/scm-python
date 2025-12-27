@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.layer3_subinterfaces import Layer3Subinterfaces
+from scm.network_services.models.layer3_subinterfaces import Layer3Subinterfaces
 
 class TestLayer3Subinterfaces(unittest.TestCase):
     """Layer3Subinterfaces unit test stubs"""
@@ -37,12 +37,12 @@ class TestLayer3Subinterfaces(unittest.TestCase):
         if include_optional:
             return Layer3Subinterfaces(
                 arp = [
-                    scm_network_services.models.layer3_subinterfaces_arp_inner.layer3_subinterfaces_arp_inner(
+                    scm.network_services.models.layer3_subinterfaces_arp_inner.layer3_subinterfaces_arp_inner(
                         hw_address = '', 
                         name = '', )
                     ],
                 comment = '',
-                ddns_config = scm_network_services.models.layer3_subinterfaces_ddns_config.layer3_subinterfaces_ddns_config(
+                ddns_config = scm.network_services.models.layer3_subinterfaces_ddns_config.layer3_subinterfaces_ddns_config(
                     ddns_cert_profile = '', 
                     ddns_enabled = True, 
                     ddns_hostname = '2', 
@@ -51,18 +51,18 @@ class TestLayer3Subinterfaces(unittest.TestCase):
                     ddns_vendor = '', 
                     ddns_vendor_config = '', ),
                 device = 'My Device',
-                dhcp_client = scm_network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client.layer3_sub_interfaces_dhcp_client_dhcp_client(
+                dhcp_client = scm.network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client.layer3_sub_interfaces_dhcp_client_dhcp_client(
                     create_default_route = True, 
                     default_route_metric = 1, 
                     enable = True, 
-                    send_hostname = scm_network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client_send_hostname.layer3_sub_interfaces_dhcp_client_dhcp_client_send_hostname(
+                    send_hostname = scm.network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client_send_hostname.layer3_sub_interfaces_dhcp_client_dhcp_client_send_hostname(
                         enable = True, 
                         hostname = 'system-hostname', ), ),
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 interface_management_profile = 'string',
                 ip = [
-                    scm_network_services.models.layer3_subinterfaces_ip_inner.layer3_subinterfaces_ip_inner(
+                    scm.network_services.models.layer3_subinterfaces_ip_inner.layer3_subinterfaces_ip_inner(
                         name = '', )
                     ],
                 mtu = 576,

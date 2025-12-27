@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https import SdwanSaasQualityProfilesMonitorModeHttpHttps
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip import SdwanSaasQualityProfilesMonitorModeStaticIp
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https import SdwanSaasQualityProfilesMonitorModeHttpHttps
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip import SdwanSaasQualityProfilesMonitorModeStaticIp
 from typing import Optional, Set
 from typing_extensions import Self
 

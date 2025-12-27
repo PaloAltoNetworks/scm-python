@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_list_response import NatRulesListResponse
+from scm.network_services.models.nat_rules_list_response import NatRulesListResponse
 
 class TestNatRulesListResponse(unittest.TestCase):
     """NatRulesListResponse unit test stubs"""

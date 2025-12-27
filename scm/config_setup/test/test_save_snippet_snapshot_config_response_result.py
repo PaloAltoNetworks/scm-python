@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.save_snippet_snapshot_config_response_result import SaveSnippetSnapshotConfigResponseResult
+from scm.config_setup.models.save_snippet_snapshot_config_response_result import SaveSnippetSnapshotConfigResponseResult
 
 class TestSaveSnippetSnapshotConfigResponseResult(unittest.TestCase):
     """SaveSnippetSnapshotConfigResponseResult unit test stubs"""

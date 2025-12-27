@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_settings import SessionSettings
+from scm.device_settings.models.session_settings import SessionSettings
 
 class TestSessionSettings(unittest.TestCase):
     """SessionSettings unit test stubs"""
@@ -39,26 +39,26 @@ class TestSessionSettings(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                session_settings = scm_device_settings.models.session_settings_session_settings.session_settings_session_settings(
+                session_settings = scm.device_settings.models.session_settings_session_settings.session_settings_session_settings(
                     accelerated_aging_enable = True, 
                     accelerated_aging_scaling_factor = 2, 
                     accelerated_aging_threshold = 50, 
-                    config = scm_device_settings.models.session_settings_session_settings_config.session_settings_session_settings_config(
+                    config = scm.device_settings.models.session_settings_session_settings_config.session_settings_session_settings_config(
                         rematch = True, ), 
                     dhcp_bcast_session_on = True, 
                     erspan = True, 
                     icmp_unreachable_rate = 1, 
-                    icmpv6_rate_limit = scm_device_settings.models.session_settings_session_settings_icmpv6_rate_limit.session_settings_session_settings_icmpv6_rate_limit(
+                    icmpv6_rate_limit = scm.device_settings.models.session_settings_session_settings_icmpv6_rate_limit.session_settings_session_settings_icmpv6_rate_limit(
                         bucket_size = 10, 
                         packet_rate = 1, ), 
                     ipv6_firewalling = True, 
-                    jumbo_frame = scm_device_settings.models.session_settings_session_settings_jumbo_frame.session_settings_session_settings_jumbo_frame(
+                    jumbo_frame = scm.device_settings.models.session_settings_session_settings_jumbo_frame.session_settings_session_settings_jumbo_frame(
                         mtu = 512, ), 
                     max_pending_mcast_pkts_per_session = 1, 
                     multicast_route_setup_buffering = True, 
-                    nat = scm_device_settings.models.session_settings_session_settings_nat.session_settings_session_settings_nat(
+                    nat = scm.device_settings.models.session_settings_session_settings_nat.session_settings_session_settings_nat(
                         dipp_oversub = '1x', ), 
-                    nat64 = scm_device_settings.models.session_settings_session_settings_nat64.session_settings_session_settings_nat64(
+                    nat64 = scm.device_settings.models.session_settings_session_settings_nat64.session_settings_session_settings_nat64(
                         ipv6_min_network_mtu = 1280, ), 
                     packet_buffer_protection_activate = 0, 
                     packet_buffer_protection_alert = 0, 

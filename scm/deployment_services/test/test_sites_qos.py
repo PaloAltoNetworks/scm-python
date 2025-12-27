@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.sites_qos import SitesQos
+from scm.deployment_services.models.sites_qos import SitesQos
 
 class TestSitesQos(unittest.TestCase):
     """SitesQos unit test stubs"""

@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_filter_conditional_advertisement import BgpFilterConditionalAdvertisement
-from scm_network_services.models.bgp_filter_filter_list import BgpFilterFilterList
-from scm_network_services.models.bgp_filter_inbound_network_filters import BgpFilterInboundNetworkFilters
+from scm.network_services.models.bgp_filter_conditional_advertisement import BgpFilterConditionalAdvertisement
+from scm.network_services.models.bgp_filter_filter_list import BgpFilterFilterList
+from scm.network_services.models.bgp_filter_inbound_network_filters import BgpFilterInboundNetworkFilters
 from typing import Optional, Set
 from typing_extensions import Self
 

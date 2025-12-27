@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner import AntiSpywareProfilesMicaEngineSpywareEnabledInner
+from scm.security_services.models.anti_spyware_profiles_mica_engine_spyware_enabled_inner import AntiSpywareProfilesMicaEngineSpywareEnabledInner
 
 class TestAntiSpywareProfilesMicaEngineSpywareEnabledInner(unittest.TestCase):
     """AntiSpywareProfilesMicaEngineSpywareEnabledInner unit test stubs"""

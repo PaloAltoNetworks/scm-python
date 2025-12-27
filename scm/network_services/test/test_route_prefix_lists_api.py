@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.route_prefix_lists_api import RoutePrefixListsApi
+from scm.network_services.api.route_prefix_lists_api import RoutePrefixListsApi
 
 
 class TestRoutePrefixListsApi(unittest.TestCase):

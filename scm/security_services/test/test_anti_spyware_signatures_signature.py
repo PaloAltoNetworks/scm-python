@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures_signature import AntiSpywareSignaturesSignature
+from scm.security_services.models.anti_spyware_signatures_signature import AntiSpywareSignaturesSignature
 
 class TestAntiSpywareSignaturesSignature(unittest.TestCase):
     """AntiSpywareSignaturesSignature unit test stubs"""
@@ -36,46 +36,46 @@ class TestAntiSpywareSignaturesSignature(unittest.TestCase):
         model = AntiSpywareSignaturesSignature()
         if include_optional:
             return AntiSpywareSignaturesSignature(
-                combination = scm_security_services.models.anti_spyware_signatures_signature_combination.anti_spyware_signatures_signature_combination(
+                combination = scm.security_services.models.anti_spyware_signatures_signature_combination.anti_spyware_signatures_signature_combination(
                     and_condition = [
-                        scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
                             name = '', 
                             or_condition = [
-                                scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
+                                scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
                                     name = '', 
                                     threat_id = '', )
                                 ], )
                         ], 
                     order_free = True, 
-                    time_attribute = scm_security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
+                    time_attribute = scm.security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
                         interval = 1, 
                         threshold = 1, 
                         track_by = 'source-and-destination', ), ),
                 standard = [
-                    scm_security_services.models.anti_spyware_signatures_signature_standard_inner.anti_spyware_signatures_signature_standard_inner(
+                    scm.security_services.models.anti_spyware_signatures_signature_standard_inner.anti_spyware_signatures_signature_standard_inner(
                         and_condition = [
-                            scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner(
+                            scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner(
                                 name = '', 
                                 or_condition = [
-                                    scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner(
+                                    scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner(
                                         name = '', 
-                                        operator = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator(
-                                            equal_to = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to(
+                                        operator = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator(
+                                            equal_to = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to(
                                                 context = '', 
                                                 negate = True, 
                                                 qualifier = [
-                                                    scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
+                                                    scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_equal_to_qualifier_inner(
                                                         name = '', 
                                                         value = '', )
                                                     ], 
                                                 value = 0, ), 
-                                            greater_than = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                                            greater_than = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                                                 context = '', 
                                                 value = 0, ), 
-                                            less_than = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                                            less_than = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                                                 context = '', 
                                                 value = 0, ), 
-                                            pattern_match = scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
+                                            pattern_match = scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
                                                 context = '', 
                                                 negate = True, 
                                                 pattern = '', ), ), )

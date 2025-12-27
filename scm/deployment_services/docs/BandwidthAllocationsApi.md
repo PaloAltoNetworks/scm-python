@@ -1,4 +1,4 @@
-# scm_deployment_services.BandwidthAllocationsApi
+# scm.deployment_services.BandwidthAllocationsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/deployment/v1*
 
@@ -22,14 +22,14 @@ Create a new bandwidth allocation.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.bandwidth_allocations import BandwidthAllocations
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.bandwidth_allocations import BandwidthAllocations
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -39,15 +39,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BandwidthAllocationsApi(api_client)
-    bandwidth_allocations = scm_deployment_services.BandwidthAllocations() # BandwidthAllocations | The `bandwidth-allocations` resource definition. (optional)
+    api_instance = scm.deployment_services.BandwidthAllocationsApi(api_client)
+    bandwidth_allocations = scm.deployment_services.BandwidthAllocations() # BandwidthAllocations | The `bandwidth-allocations` resource definition. (optional)
 
     try:
         # Create a bandwidth allocation
@@ -105,13 +105,13 @@ Delete a bandwidth allocation.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -121,14 +121,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BandwidthAllocationsApi(api_client)
+    api_instance = scm.deployment_services.BandwidthAllocationsApi(api_client)
     name = 'name_example' # str | The name of the aggregated bandwidth region
     spn_name_list = 'spn_name_list_example' # str | Comma separated of the spn_name_list name per region
 
@@ -188,14 +188,14 @@ Retrieve a list of bandwidth regions.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -205,14 +205,14 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BandwidthAllocationsApi(api_client)
+    api_instance = scm.deployment_services.BandwidthAllocationsApi(api_client)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
 
@@ -273,14 +273,14 @@ Update an existing bandwidth allocation.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_deployment_services
-from scm_deployment_services.models.bandwidth_allocations import BandwidthAllocations
-from scm_deployment_services.rest import ApiException
+import scm.deployment_services
+from scm.deployment_services.models.bandwidth_allocations import BandwidthAllocations
+from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/deployment/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/deployment/v1"
 )
 
@@ -290,15 +290,15 @@ configuration = scm_deployment_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_deployment_services.Configuration(
+configuration = scm.deployment_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_deployment_services.ApiClient(configuration) as api_client:
+with scm.deployment_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_deployment_services.BandwidthAllocationsApi(api_client)
-    bandwidth_allocations = scm_deployment_services.BandwidthAllocations() # BandwidthAllocations | OK (optional)
+    api_instance = scm.deployment_services.BandwidthAllocationsApi(api_client)
+    bandwidth_allocations = scm.deployment_services.BandwidthAllocations() # BandwidthAllocations | OK (optional)
 
     try:
         # Update a bandwidth allocation

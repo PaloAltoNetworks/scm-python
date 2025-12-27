@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile import LogicalRoutersVrfInnerBgpRedistributionProfile
+from scm.network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile import LogicalRoutersVrfInnerBgpRedistributionProfile
 
 class TestLogicalRoutersVrfInnerBgpRedistributionProfile(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpRedistributionProfile unit test stubs"""
@@ -36,9 +36,9 @@ class TestLogicalRoutersVrfInnerBgpRedistributionProfile(unittest.TestCase):
         model = LogicalRoutersVrfInnerBgpRedistributionProfile()
         if include_optional:
             return LogicalRoutersVrfInnerBgpRedistributionProfile(
-                ipv4 = scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4(
+                ipv4 = scm.network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4(
                     unicast = '', ),
-                ipv6 = scm_network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4(
+                ipv6 = scm.network_services.models.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4.logical_routers_vrf_inner_bgp_redistribution_profile_ipv4(
                     unicast = '', )
             )
         else:

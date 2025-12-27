@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
+from scm.device_settings.models.session_timeouts_session_timeouts import SessionTimeoutsSessionTimeouts
 from typing import Optional, Set
 from typing_extensions import Self
 

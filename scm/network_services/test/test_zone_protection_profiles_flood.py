@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood import ZoneProtectionProfilesFlood
+from scm.network_services.models.zone_protection_profiles_flood import ZoneProtectionProfilesFlood
 
 class TestZoneProtectionProfilesFlood(unittest.TestCase):
     """ZoneProtectionProfilesFlood unit test stubs"""
@@ -36,43 +36,43 @@ class TestZoneProtectionProfilesFlood(unittest.TestCase):
         model = ZoneProtectionProfilesFlood()
         if include_optional:
             return ZoneProtectionProfilesFlood(
-                icmp = scm_network_services.models.zone_protection_profiles_flood_icmp.zone_protection_profiles_flood_icmp(
+                icmp = scm.network_services.models.zone_protection_profiles_flood_icmp.zone_protection_profiles_flood_icmp(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_icmp_red.zone_protection_profiles_flood_icmp_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_icmp_red.zone_protection_profiles_flood_icmp_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 40000, ), ),
-                icmpv6 = scm_network_services.models.zone_protection_profiles_flood_icmpv6.zone_protection_profiles_flood_icmpv6(
+                icmpv6 = scm.network_services.models.zone_protection_profiles_flood_icmpv6.zone_protection_profiles_flood_icmpv6(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_icmpv6_red.zone_protection_profiles_flood_icmpv6_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_icmpv6_red.zone_protection_profiles_flood_icmpv6_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 40000, ), ),
-                other_ip = scm_network_services.models.zone_protection_profiles_flood_other_ip.zone_protection_profiles_flood_other_ip(
+                other_ip = scm.network_services.models.zone_protection_profiles_flood_other_ip.zone_protection_profiles_flood_other_ip(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_other_ip_red.zone_protection_profiles_flood_other_ip_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_other_ip_red.zone_protection_profiles_flood_other_ip_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 40000, ), ),
-                sctp_init = scm_network_services.models.zone_protection_profiles_flood_sctp_init.zone_protection_profiles_flood_sctp_init(
+                sctp_init = scm.network_services.models.zone_protection_profiles_flood_sctp_init.zone_protection_profiles_flood_sctp_init(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_sctp_init_red.zone_protection_profiles_flood_sctp_init_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_sctp_init_red.zone_protection_profiles_flood_sctp_init_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 10000, ), ),
-                tcp_syn = scm_network_services.models.zone_protection_profiles_flood_tcp_syn.zone_protection_profiles_flood_tcp_syn(
+                tcp_syn = scm.network_services.models.zone_protection_profiles_flood_tcp_syn.zone_protection_profiles_flood_tcp_syn(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_tcp_syn_red.zone_protection_profiles_flood_tcp_syn_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_tcp_syn_red.zone_protection_profiles_flood_tcp_syn_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 40000, ), 
-                    syn_cookies = scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
+                    syn_cookies = scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
                         activate_rate = 0, 
                         alarm_rate = 10000, 
                         maximal_rate = 1000000, ), ),
-                udp = scm_network_services.models.zone_protection_profiles_flood_udp.zone_protection_profiles_flood_udp(
+                udp = scm.network_services.models.zone_protection_profiles_flood_udp.zone_protection_profiles_flood_udp(
                     enable = True, 
-                    red = scm_network_services.models.zone_protection_profiles_flood_udp_red.zone_protection_profiles_flood_udp_red(
+                    red = scm.network_services.models.zone_protection_profiles_flood_udp_red.zone_protection_profiles_flood_udp_red(
                         activate_rate = 10000, 
                         alarm_rate = 10000, 
                         maximal_rate = 40000, ), )

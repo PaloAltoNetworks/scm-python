@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.addresses import Addresses
+from scm.objects.models.addresses import Addresses
 
 class TestAddresses(unittest.TestCase):
     """Addresses unit test stubs"""

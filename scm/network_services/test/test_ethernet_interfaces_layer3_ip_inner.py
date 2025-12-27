@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer3_ip_inner import EthernetInterfacesLayer3IpInner
+from scm.network_services.models.ethernet_interfaces_layer3_ip_inner import EthernetInterfacesLayer3IpInner
 
 class TestEthernetInterfacesLayer3IpInner(unittest.TestCase):
     """EthernetInterfacesLayer3IpInner unit test stubs"""

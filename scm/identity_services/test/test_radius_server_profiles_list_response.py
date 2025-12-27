@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.radius_server_profiles_list_response import RADIUSServerProfilesListResponse
+from scm.identity_services.models.radius_server_profiles_list_response import RADIUSServerProfilesListResponse
 
 class TestRADIUSServerProfilesListResponse(unittest.TestCase):
     """RADIUSServerProfilesListResponse unit test stubs"""

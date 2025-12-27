@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_network_info_criteria_network_is_wifi import HipObjectsNetworkInfoCriteriaNetworkIsWifi
+from scm.objects.models.hip_objects_network_info_criteria_network_is_wifi import HipObjectsNetworkInfoCriteriaNetworkIsWifi
 
 # TODO update the JSON string below
 json = "{}"

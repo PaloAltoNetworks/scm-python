@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_error_correction_profiles_mode_packet_duplication import SdwanErrorCorrectionProfilesModePacketDuplication
+from scm.network_services.models.sdwan_error_correction_profiles_mode_packet_duplication import SdwanErrorCorrectionProfilesModePacketDuplication
 
 class TestSdwanErrorCorrectionProfilesModePacketDuplication(unittest.TestCase):
     """SdwanErrorCorrectionProfilesModePacketDuplication unit test stubs"""

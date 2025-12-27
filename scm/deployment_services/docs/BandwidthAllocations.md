@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.bandwidth_allocations import BandwidthAllocations
+from scm.deployment_services.models.bandwidth_allocations import BandwidthAllocations
 
 # TODO update the JSON string below
 json = "{}"

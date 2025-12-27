@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbr
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr import LogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbr
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbr(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbr unit test stubs"""
@@ -40,7 +40,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssaAbr(unittest.TestCase):
                 import_list = '',
                 inbound_filter_list = '',
                 nssa_ext_range = [
-                    scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner(
                         advertise = True, 
                         name = '', 
                         route_tag = 56, )

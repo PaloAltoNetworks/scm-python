@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp import IpsecTunnelsAutoKeyProxyIdInnerProtocolUdp
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner_protocol_tcp import IpsecTunnelsAutoKeyProxyIdV6InnerProtocolTcp
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner_protocol_udp import IpsecTunnelsAutoKeyProxyIdInnerProtocolUdp
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner_protocol_tcp import IpsecTunnelsAutoKeyProxyIdV6InnerProtocolTcp
 from typing import Optional, Set
 from typing_extensions import Self
 

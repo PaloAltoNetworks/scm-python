@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route import LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route import LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute unit test stubs"""
@@ -36,7 +36,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute(unittest.TestC
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeStubDefaultRoute(
-                advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
+                advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_stub_default_route_advertise(
                     metric = 56, ),
                 disable = None
             )

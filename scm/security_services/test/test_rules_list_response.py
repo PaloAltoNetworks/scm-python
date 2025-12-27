@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.rules_list_response import RulesListResponse
+from scm.security_services.models.rules_list_response import RulesListResponse
 
 class TestRulesListResponse(unittest.TestCase):
     """RulesListResponse unit test stubs"""

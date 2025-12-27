@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_address_family_orf import BgpAddressFamilyOrf
+from scm.network_services.models.bgp_address_family_orf import BgpAddressFamilyOrf
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6 import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6
+from scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6 import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6
 
 class TestLogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6 unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6(
                 network = [
-                    scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner(
                         name = '', 
                         unicast = True, )
                     ]

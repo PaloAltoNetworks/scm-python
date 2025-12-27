@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
+from scm.device_settings.models.device_redistribution_collector_redistribution_collector import DeviceRedistributionCollectorRedistributionCollector
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access import InternetRuleTypeAllowWebApplicationInnerSaasEnterpriseControlEnterpriseAccess
+from scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access import InternetRuleTypeAllowWebApplicationInnerSaasEnterpriseControlEnterpriseAccess
 
 # TODO update the JSON string below
 json = "{}"

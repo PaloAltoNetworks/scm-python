@@ -21,10 +21,10 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.ha_configurations_group_election_option import HaConfigurationsGroupElectionOption
-from scm_device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
-from scm_device_settings.models.ha_configurations_group_monitoring import HaConfigurationsGroupMonitoring
-from scm_device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
+from scm.device_settings.models.ha_configurations_group_election_option import HaConfigurationsGroupElectionOption
+from scm.device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
+from scm.device_settings.models.ha_configurations_group_monitoring import HaConfigurationsGroupMonitoring
+from scm.device_settings.models.ha_configurations_group_state_synchronization import HaConfigurationsGroupStateSynchronization
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
+from scm.security_services.models.anti_spyware_signatures_signature_combination import AntiSpywareSignaturesSignatureCombination
 
 # TODO update the JSON string below
 json = "{}"

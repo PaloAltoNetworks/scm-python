@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.vpn_settings_vpn_ikev2 import VpnSettingsVpnIkev2
+from scm.device_settings.models.vpn_settings_vpn_ikev2 import VpnSettingsVpnIkev2
 
 class TestVpnSettingsVpnIkev2(unittest.TestCase):
     """VpnSettingsVpnIkev2 unit test stubs"""

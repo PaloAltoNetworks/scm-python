@@ -1,4 +1,4 @@
-# scm_network_services.SslDecryptionSettingsApi
+# scm.network_services.SslDecryptionSettingsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
 
@@ -22,14 +22,14 @@ DELETE Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -39,14 +39,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
 
     try:
         # DELETE Ssl Decryption Settings
@@ -102,14 +102,14 @@ GET Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -119,14 +119,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
     device = 'device_example' # str | The device in which the resource is defined  (optional)
@@ -193,14 +193,14 @@ POST Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -210,15 +210,15 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SslDecryptionSettingsApi(api_client)
-    ssl_decryption_settings = scm_network_services.SslDecryptionSettings() # SslDecryptionSettings | 
+    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
+    ssl_decryption_settings = scm.network_services.SslDecryptionSettings() # SslDecryptionSettings | 
 
     try:
         # POST Ssl Decryption Settings
@@ -276,14 +276,14 @@ PUT Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_network_services
-from scm_network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm_network_services.rest import ApiException
+import scm.network_services
+from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.network_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/network/v1"
 )
 
@@ -293,14 +293,14 @@ configuration = scm_network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_network_services.Configuration(
+configuration = scm.network_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_network_services.ApiClient(configuration) as api_client:
+with scm.network_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
 
     try:
         # PUT Ssl Decryption Settings

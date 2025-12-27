@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_path_quality_profiles_metric_jitter import SdwanPathQualityProfilesMetricJitter
+from scm.network_services.models.sdwan_path_quality_profiles_metric_jitter import SdwanPathQualityProfilesMetricJitter
 
 class TestSdwanPathQualityProfilesMetricJitter(unittest.TestCase):
     """SdwanPathQualityProfilesMetricJitter unit test stubs"""

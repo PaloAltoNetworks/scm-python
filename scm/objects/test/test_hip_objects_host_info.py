@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_host_info import HipObjectsHostInfo
+from scm.objects.models.hip_objects_host_info import HipObjectsHostInfo
 
 class TestHipObjectsHostInfo(unittest.TestCase):
     """HipObjectsHostInfo unit test stubs"""
@@ -36,20 +36,20 @@ class TestHipObjectsHostInfo(unittest.TestCase):
         model = HipObjectsHostInfo()
         if include_optional:
             return HipObjectsHostInfo(
-                criteria = scm_objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
-                    client_version = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                criteria = scm.objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
+                    client_version = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 
-                    domain = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                    domain = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 
                     host_id = , 
                     host_name = , 
                     managed = True, 
-                    os = scm_objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
-                        contains = scm_objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
+                    os = scm.objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
+                        contains = scm.objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
                             apple = 'All', 
                             google = 'All', 
                             linux = 'All', 
@@ -59,20 +59,20 @@ class TestHipObjectsHostInfo(unittest.TestCase):
             )
         else:
             return HipObjectsHostInfo(
-                criteria = scm_objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
-                    client_version = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                criteria = scm.objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
+                    client_version = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 
-                    domain = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                    domain = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                         contains = '', 
                         is = '', 
                         is_not = '', ), 
                     host_id = , 
                     host_name = , 
                     managed = True, 
-                    os = scm_objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
-                        contains = scm_objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
+                    os = scm.objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
+                        contains = scm.objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
                             apple = 'All', 
                             google = 'All', 
                             linux = 'All', 

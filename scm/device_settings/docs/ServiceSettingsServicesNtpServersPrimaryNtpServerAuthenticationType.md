@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationType
+from scm.device_settings.models.service_settings_services_ntp_servers_primary_ntp_server_authentication_type import ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationType
 
 # TODO update the JSON string below
 json = "{}"

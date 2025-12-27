@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.devices_put import DevicesPut
+from scm.config_setup.models.devices_put import DevicesPut
 
 class TestDevicesPut(unittest.TestCase):
     """DevicesPut unit test stubs"""

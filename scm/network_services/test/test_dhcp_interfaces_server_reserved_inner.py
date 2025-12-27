@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_server_reserved_inner import DhcpInterfacesServerReservedInner
+from scm.network_services.models.dhcp_interfaces_server_reserved_inner import DhcpInterfacesServerReservedInner
 
 class TestDhcpInterfacesServerReservedInner(unittest.TestCase):
     """DhcpInterfacesServerReservedInner unit test stubs"""

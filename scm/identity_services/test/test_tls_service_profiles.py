@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.tls_service_profiles import TlsServiceProfiles
+from scm.identity_services.models.tls_service_profiles import TlsServiceProfiles
 
 class TestTlsServiceProfiles(unittest.TestCase):
     """TlsServiceProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestTlsServiceProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '2',
-                protocol_settings = scm_identity_services.models.tls_service_profiles_protocol_settings.tls_service_profiles_protocol_settings(
+                protocol_settings = scm.identity_services.models.tls_service_profiles_protocol_settings.tls_service_profiles_protocol_settings(
                     auth_algo_sha1 = True, 
                     auth_algo_sha256 = True, 
                     auth_algo_sha384 = True, 
@@ -61,7 +61,7 @@ class TestTlsServiceProfiles(unittest.TestCase):
                 certificate = '',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '2',
-                protocol_settings = scm_identity_services.models.tls_service_profiles_protocol_settings.tls_service_profiles_protocol_settings(
+                protocol_settings = scm.identity_services.models.tls_service_profiles_protocol_settings.tls_service_profiles_protocol_settings(
                     auth_algo_sha1 = True, 
                     auth_algo_sha256 = True, 
                     auth_algo_sha384 = True, 

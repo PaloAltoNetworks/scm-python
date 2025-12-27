@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control import InternetRuleTypeAllowUrlCategoryInnerFileControl
+from scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control import InternetRuleTypeAllowUrlCategoryInnerFileControl
 
 class TestInternetRuleTypeAllowUrlCategoryInnerFileControl(unittest.TestCase):
     """InternetRuleTypeAllowUrlCategoryInnerFileControl unit test stubs"""

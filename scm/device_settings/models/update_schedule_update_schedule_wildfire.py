@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from scm_device_settings.models.update_schedule_update_schedule_wildfire_recurring import UpdateScheduleUpdateScheduleWildfireRecurring
+from scm.device_settings.models.update_schedule_update_schedule_wildfire_recurring import UpdateScheduleUpdateScheduleWildfireRecurring
 from typing import Optional, Set
 from typing_extensions import Self
 

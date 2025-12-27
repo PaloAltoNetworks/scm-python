@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
+from scm.device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
 
 # TODO update the JSON string below
 json = "{}"

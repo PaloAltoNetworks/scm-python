@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_range_inner import LogicalRoutersVrfInnerOspfAreaInnerRangeInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_range_inner import LogicalRoutersVrfInnerOspfAreaInnerRangeInner
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerRangeInner(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerRangeInner unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_crypto_profiles import IkeCryptoProfiles
+from scm.network_services.models.ike_crypto_profiles import IkeCryptoProfiles
 
 class TestIkeCryptoProfiles(unittest.TestCase):
     """IkeCryptoProfiles unit test stubs"""
@@ -49,7 +49,7 @@ class TestIkeCryptoProfiles(unittest.TestCase):
                     'sha1'
                     ],
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                lifetime = scm_network_services.models.ike_crypto_profiles_lifetime.ike_crypto_profiles_lifetime(
+                lifetime = scm.network_services.models.ike_crypto_profiles_lifetime.ike_crypto_profiles_lifetime(
                     days = 1, 
                     hours = 1, 
                     minutes = 3, 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.remote_networks_ecmp_tunnels_inner import RemoteNetworksEcmpTunnelsInner
+from scm.deployment_services.models.remote_networks_ecmp_tunnels_inner import RemoteNetworksEcmpTunnelsInner
 
 class TestRemoteNetworksEcmpTunnelsInner(unittest.TestCase):
     """RemoteNetworksEcmpTunnelsInner unit test stubs"""
@@ -38,8 +38,8 @@ class TestRemoteNetworksEcmpTunnelsInner(unittest.TestCase):
             return RemoteNetworksEcmpTunnelsInner(
                 ipsec_tunnel = '',
                 name = '',
-                protocol = scm_deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
-                    bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                protocol = scm.deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
+                    bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                         do_not_export_routes = True, 
                         enable = True, 
                         local_ip_address = '', 
@@ -54,8 +54,8 @@ class TestRemoteNetworksEcmpTunnelsInner(unittest.TestCase):
             return RemoteNetworksEcmpTunnelsInner(
                 ipsec_tunnel = '',
                 name = '',
-                protocol = scm_deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
-                    bgp = scm_deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
+                protocol = scm.deployment_services.models.remote_networks_ecmp_tunnels_inner_protocol.remote_networks_ecmp_tunnels_inner_protocol(
+                    bgp = scm.deployment_services.models.remote_networks_protocol_bgp.remote-networks-protocol-bgp(
                         do_not_export_routes = True, 
                         enable = True, 
                         local_ip_address = '', 

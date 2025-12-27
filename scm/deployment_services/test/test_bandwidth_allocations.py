@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.bandwidth_allocations import BandwidthAllocations
+from scm.deployment_services.models.bandwidth_allocations import BandwidthAllocations
 
 class TestBandwidthAllocations(unittest.TestCase):
     """BandwidthAllocations unit test stubs"""
@@ -38,7 +38,7 @@ class TestBandwidthAllocations(unittest.TestCase):
             return BandwidthAllocations(
                 allocated_bandwidth = 56,
                 name = '',
-                qos = scm_deployment_services.models.bandwidth_allocations_qos.bandwidth_allocations_qos(
+                qos = scm.deployment_services.models.bandwidth_allocations_qos.bandwidth_allocations_qos(
                     customized = True, 
                     enabled = True, 
                     guaranteed_ratio = 1.337, 

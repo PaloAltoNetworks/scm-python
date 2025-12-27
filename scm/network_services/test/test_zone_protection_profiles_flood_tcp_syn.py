@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_tcp_syn import ZoneProtectionProfilesFloodTcpSyn
+from scm.network_services.models.zone_protection_profiles_flood_tcp_syn import ZoneProtectionProfilesFloodTcpSyn
 
 class TestZoneProtectionProfilesFloodTcpSyn(unittest.TestCase):
     """ZoneProtectionProfilesFloodTcpSyn unit test stubs"""
@@ -37,11 +37,11 @@ class TestZoneProtectionProfilesFloodTcpSyn(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesFloodTcpSyn(
                 enable = True,
-                red = scm_network_services.models.zone_protection_profiles_flood_tcp_syn_red.zone_protection_profiles_flood_tcp_syn_red(
+                red = scm.network_services.models.zone_protection_profiles_flood_tcp_syn_red.zone_protection_profiles_flood_tcp_syn_red(
                     activate_rate = 10000, 
                     alarm_rate = 10000, 
                     maximal_rate = 40000, ),
-                syn_cookies = scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
+                syn_cookies = scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
                     activate_rate = 0, 
                     alarm_rate = 10000, 
                     maximal_rate = 1000000, )

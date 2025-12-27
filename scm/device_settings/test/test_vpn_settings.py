@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.vpn_settings import VpnSettings
+from scm.device_settings.models.vpn_settings import VpnSettings
 
 class TestVpnSettings(unittest.TestCase):
     """VpnSettings unit test stubs"""
@@ -40,8 +40,8 @@ class TestVpnSettings(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 snippet = 'My Snippet',
-                vpn = scm_device_settings.models.vpn_settings_vpn.vpn_settings_vpn(
-                    ikev2 = scm_device_settings.models.vpn_settings_vpn_ikev2.vpn_settings_vpn_ikev2(
+                vpn = scm.device_settings.models.vpn_settings_vpn.vpn_settings_vpn(
+                    ikev2 = scm.device_settings.models.vpn_settings_vpn_ikev2.vpn_settings_vpn_ikev2(
                         certificate_cache_size = 0, 
                         cookie_threshold = 0, 
                         max_half_opened_sa = 1, ), )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner import HipObjectsCustomChecksCriteriaRegistryKeyInner
+from scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner import HipObjectsCustomChecksCriteriaRegistryKeyInner
 
 class TestHipObjectsCustomChecksCriteriaRegistryKeyInner(unittest.TestCase):
     """HipObjectsCustomChecksCriteriaRegistryKeyInner unit test stubs"""
@@ -40,7 +40,7 @@ class TestHipObjectsCustomChecksCriteriaRegistryKeyInner(unittest.TestCase):
                 name = '',
                 negate = True,
                 registry_value = [
-                    scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
+                    scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
                         name = '', 
                         negate = True, 
                         value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', )

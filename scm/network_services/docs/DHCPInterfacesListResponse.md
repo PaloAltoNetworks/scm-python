@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dhcp_interfaces_list_response import DHCPInterfacesListResponse
+from scm.network_services.models.dhcp_interfaces_list_response import DHCPInterfacesListResponse
 
 # TODO update the JSON string below
 json = "{}"

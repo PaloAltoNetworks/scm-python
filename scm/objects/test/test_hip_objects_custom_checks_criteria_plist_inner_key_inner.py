@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
+from scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
 
 class TestHipObjectsCustomChecksCriteriaPlistInnerKeyInner(unittest.TestCase):
     """HipObjectsCustomChecksCriteriaPlistInnerKeyInner unit test stubs"""

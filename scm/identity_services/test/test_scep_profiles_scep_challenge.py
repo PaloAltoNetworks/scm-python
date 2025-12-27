@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles_scep_challenge import ScepProfilesScepChallenge
+from scm.identity_services.models.scep_profiles_scep_challenge import ScepProfilesScepChallenge
 
 class TestScepProfilesScepChallenge(unittest.TestCase):
     """ScepProfilesScepChallenge unit test stubs"""
@@ -36,7 +36,7 @@ class TestScepProfilesScepChallenge(unittest.TestCase):
         model = ScepProfilesScepChallenge()
         if include_optional:
             return ScepProfilesScepChallenge(
-                dynamic = scm_identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
+                dynamic = scm.identity_services.models.scep_profiles_scep_challenge_dynamic.scep_profiles_scep_challenge_dynamic(
                     otp_server_url = '', 
                     password = '', 
                     username = '', ),

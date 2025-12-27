@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode import SdwanSaasQualityProfilesMonitorMode
+from scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode import SdwanSaasQualityProfilesMonitorMode
 
 class TestSdwanSaasQualityProfilesMonitorMode(unittest.TestCase):
     """SdwanSaasQualityProfilesMonitorMode unit test stubs"""
@@ -36,16 +36,16 @@ class TestSdwanSaasQualityProfilesMonitorMode(unittest.TestCase):
         model = SdwanSaasQualityProfilesMonitorMode()
         if include_optional:
             return SdwanSaasQualityProfilesMonitorMode(
-                adaptive = scm_network_services.models.adaptive.adaptive(),
-                http_https = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
+                adaptive = scm.network_services.models.adaptive.adaptive(),
+                http_https = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
                     monitored_url = '', 
                     probe_interval = 1, ),
-                static_ip = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
-                    fqdn = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
+                static_ip = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
+                    fqdn = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
                         fqdn_name = '', 
                         probe_interval = 1, ), 
                     ip_address = [
-                        scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
+                        scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
                             name = '', 
                             probe_interval = 1, )
                         ], )

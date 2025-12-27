@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.service_settings_services_dns_setting_servers import ServiceSettingsServicesDnsSettingServers
+from scm.device_settings.models.service_settings_services_dns_setting_servers import ServiceSettingsServicesDnsSettingServers
 from typing import Optional, Set
 from typing_extensions import Self
 

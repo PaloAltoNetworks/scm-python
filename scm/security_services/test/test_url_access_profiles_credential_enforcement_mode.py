@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.url_access_profiles_credential_enforcement_mode import UrlAccessProfilesCredentialEnforcementMode
+from scm.security_services.models.url_access_profiles_credential_enforcement_mode import UrlAccessProfilesCredentialEnforcementMode
 
 class TestUrlAccessProfilesCredentialEnforcementMode(unittest.TestCase):
     """UrlAccessProfilesCredentialEnforcementMode unit test stubs"""
@@ -36,10 +36,10 @@ class TestUrlAccessProfilesCredentialEnforcementMode(unittest.TestCase):
         model = UrlAccessProfilesCredentialEnforcementMode()
         if include_optional:
             return UrlAccessProfilesCredentialEnforcementMode(
-                disabled = scm_security_services.models.disabled.disabled(),
-                domain_credentials = scm_security_services.models.domain_credentials.domain_credentials(),
+                disabled = scm.security_services.models.disabled.disabled(),
+                domain_credentials = scm.security_services.models.domain_credentials.domain_credentials(),
                 group_mapping = '',
-                ip_user = scm_security_services.models.ip_user.ip_user()
+                ip_user = scm.security_services.models.ip_user.ip_user()
             )
         else:
             return UrlAccessProfilesCredentialEnforcementMode(

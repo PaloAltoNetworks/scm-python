@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin import LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin
+from scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin import LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin
 
 class TestLogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin(unittest.TestCase):
     """LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin(unittest.TestCas
         if include_optional:
             return LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin(
                 interface = [
-                    scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin_interface_inner(
                         name = '', 
                         weight = 56, )
                     ]

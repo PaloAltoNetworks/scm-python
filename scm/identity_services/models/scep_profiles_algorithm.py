@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_identity_services.models.scep_profiles_algorithm_rsa import ScepProfilesAlgorithmRsa
+from scm.identity_services.models.scep_profiles_algorithm_rsa import ScepProfilesAlgorithmRsa
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.ike_gateways_api import IKEGatewaysApi
+from scm.network_services.api.ike_gateways_api import IKEGatewaysApi
 
 
 class TestIKEGatewaysApi(unittest.TestCase):

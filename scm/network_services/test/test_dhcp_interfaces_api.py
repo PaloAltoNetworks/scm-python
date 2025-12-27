@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.dhcp_interfaces_api import DHCPInterfacesApi
+from scm.network_services.api.dhcp_interfaces_api import DHCPInterfacesApi
 
 
 class TestDHCPInterfacesApi(unittest.TestCase):

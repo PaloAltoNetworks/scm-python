@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.login_banner_settings_api import LoginBannerSettingsApi
+from scm.device_settings.api.login_banner_settings_api import LoginBannerSettingsApi
 
 
 class TestLoginBannerSettingsApi(unittest.TestCase):

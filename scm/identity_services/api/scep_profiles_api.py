@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.scep_profiles_list_response import SCEPProfilesListResponse
-from scm_identity_services.models.scep_profiles import ScepProfiles
+from scm.identity_services.models.scep_profiles_list_response import SCEPProfilesListResponse
+from scm.identity_services.models.scep_profiles import ScepProfiles
 
-from scm_identity_services.api_client import ApiClient, RequestSerialized
-from scm_identity_services.api_response import ApiResponse
-from scm_identity_services.rest import RESTResponseType
+from scm.identity_services.api_client import ApiClient, RequestSerialized
+from scm.identity_services.api_response import ApiResponse
+from scm.identity_services.rest import RESTResponseType
 
 
 class SCEPProfilesApi:

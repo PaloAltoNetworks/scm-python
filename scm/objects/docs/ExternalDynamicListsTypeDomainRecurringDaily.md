@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.external_dynamic_lists_type_domain_recurring_daily import ExternalDynamicListsTypeDomainRecurringDaily
+from scm.objects.models.external_dynamic_lists_type_domain_recurring_daily import ExternalDynamicListsTypeDomainRecurringDaily
 
 # TODO update the JSON string below
 json = "{}"

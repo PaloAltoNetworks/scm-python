@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.shared_infrastructure_settings_api import SharedInfrastructureSettingsApi
+from scm.deployment_services.api.shared_infrastructure_settings_api import SharedInfrastructureSettingsApi
 
 
 class TestSharedInfrastructureSettingsApi(unittest.TestCase):

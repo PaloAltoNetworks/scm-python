@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.loopback_interfaces import LoopbackInterfaces
+from scm.network_services.models.loopback_interfaces import LoopbackInterfaces
 
 class TestLoopbackInterfaces(unittest.TestCase):
     """LoopbackInterfaces unit test stubs"""
@@ -43,12 +43,12 @@ class TestLoopbackInterfaces(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 interface_management_profile = 'string',
                 ip = [
-                    scm_network_services.models.loopback_interfaces_ip_inner.loopback_interfaces_ip_inner(
+                    scm.network_services.models.loopback_interfaces_ip_inner.loopback_interfaces_ip_inner(
                         name = '', )
                     ],
-                ipv6 = scm_network_services.models.loopback_interfaces_ipv6.loopback_interfaces_ipv6(
+                ipv6 = scm.network_services.models.loopback_interfaces_ipv6.loopback_interfaces_ipv6(
                     address = [
-                        scm_network_services.models.loopback_interfaces_ipv6_address_inner.loopback_interfaces_ipv6_address_inner(
+                        scm.network_services.models.loopback_interfaces_ipv6_address_inner.loopback_interfaces_ipv6_address_inner(
                             enable_on_interface = True, 
                             interface_id = 'EUI-64', 
                             name = '2001:DB8::1/128', )

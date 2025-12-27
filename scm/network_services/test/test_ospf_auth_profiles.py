@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ospf_auth_profiles import OspfAuthProfiles
+from scm.network_services.models.ospf_auth_profiles import OspfAuthProfiles
 
 class TestOspfAuthProfiles(unittest.TestCase):
     """OspfAuthProfiles unit test stubs"""
@@ -40,7 +40,7 @@ class TestOspfAuthProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 md5 = [
-                    scm_network_services.models.ospf_auth_profiles_md5_inner.ospf_auth_profiles_md5_inner(
+                    scm.network_services.models.ospf_auth_profiles_md5_inner.ospf_auth_profiles_md5_inner(
                         key = '', 
                         name = 1, 
                         preferred = True, )

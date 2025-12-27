@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client import ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient
+from scm.device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client import ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient
 
 class TestManagementInterfaceManagementInterfaceMgmtTypeDhcpClient(unittest.TestCase):
     """ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient unit test stubs"""

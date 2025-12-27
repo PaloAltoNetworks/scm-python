@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.internet_rule_type_allow_url_category_inner import InternetRuleTypeAllowUrlCategoryInner
+from scm.security_services.models.internet_rule_type_allow_url_category_inner import InternetRuleTypeAllowUrlCategoryInner
 
 # TODO update the JSON string below
 json = "{}"

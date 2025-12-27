@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
+from scm.network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
 
 # TODO update the JSON string below
 json = "{}"

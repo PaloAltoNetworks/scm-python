@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
-from scm_network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
+from scm.network_services.models.pbf_rules_action_forward_monitor import PbfRulesActionForwardMonitor
+from scm.network_services.models.pbf_rules_action_forward_nexthop import PbfRulesActionForwardNexthop
 from typing import Optional, Set
 from typing_extensions import Self
 

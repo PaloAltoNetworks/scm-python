@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.authentication_settings_authentication import AuthenticationSettingsAuthentication
+from scm.device_settings.models.authentication_settings_authentication import AuthenticationSettingsAuthentication
 
 class TestAuthenticationSettingsAuthentication(unittest.TestCase):
     """AuthenticationSettingsAuthentication unit test stubs"""

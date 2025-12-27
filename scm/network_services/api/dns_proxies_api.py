@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_network_services.models.dns_proxies_list_response import DNSProxiesListResponse
-from scm_network_services.models.dns_proxies import DnsProxies
+from scm.network_services.models.dns_proxies_list_response import DNSProxiesListResponse
+from scm.network_services.models.dns_proxies import DnsProxies
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class DNSProxiesApi:

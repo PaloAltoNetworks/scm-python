@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connection_groups import ServiceConnectionGroups
+from scm.deployment_services.models.service_connection_groups import ServiceConnectionGroups
 
 class TestServiceConnectionGroups(unittest.TestCase):
     """ServiceConnectionGroups unit test stubs"""

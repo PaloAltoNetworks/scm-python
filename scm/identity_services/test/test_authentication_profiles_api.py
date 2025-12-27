@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.authentication_profiles_api import AuthenticationProfilesApi
+from scm.identity_services.api.authentication_profiles_api import AuthenticationProfilesApi
 
 
 class TestAuthenticationProfilesApi(unittest.TestCase):

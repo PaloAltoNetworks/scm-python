@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.motd_banner_settings import MotdBannerSettings
+from scm.device_settings.models.motd_banner_settings import MotdBannerSettings
 
 class TestMotdBannerSettings(unittest.TestCase):
     """MotdBannerSettings unit test stubs"""
@@ -39,7 +39,7 @@ class TestMotdBannerSettings(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                motd_and_banner = scm_device_settings.models.motd_banner_settings_motd_and_banner.motd_banner_settings_motd_and_banner(
+                motd_and_banner = scm.device_settings.models.motd_banner_settings_motd_and_banner.motd_banner_settings_motd_and_banner(
                     banner_footer = '', 
                     banner_footer_color = 'color1', 
                     banner_footer_text_color = 'color1', 

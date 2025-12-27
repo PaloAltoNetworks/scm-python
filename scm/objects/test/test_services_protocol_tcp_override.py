@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services_protocol_tcp_override import ServicesProtocolTcpOverride
+from scm.objects.models.services_protocol_tcp_override import ServicesProtocolTcpOverride
 
 class TestServicesProtocolTcpOverride(unittest.TestCase):
     """ServicesProtocolTcpOverride unit test stubs"""

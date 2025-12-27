@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block import DosProtectionProfilesFloodTcpSynSynCookiesBlock
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block import DosProtectionProfilesFloodTcpSynSynCookiesBlock
 from typing import Optional, Set
 from typing_extensions import Self
 

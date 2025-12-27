@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_sequences import AuthenticationSequences
+from scm.identity_services.models.authentication_sequences import AuthenticationSequences
 
 class TestAuthenticationSequences(unittest.TestCase):
     """AuthenticationSequences unit test stubs"""

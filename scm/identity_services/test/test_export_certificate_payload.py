@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.export_certificate_payload import ExportCertificatePayload
+from scm.identity_services.models.export_certificate_payload import ExportCertificatePayload
 
 class TestExportCertificatePayload(unittest.TestCase):
     """ExportCertificatePayload unit test stubs"""

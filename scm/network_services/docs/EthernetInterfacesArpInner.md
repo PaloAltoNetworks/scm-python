@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
+from scm.network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time import HipObjectsMobileDeviceCriteriaLastCheckinTime
+from scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time import HipObjectsMobileDeviceCriteriaLastCheckinTime
 
 class TestHipObjectsMobileDeviceCriteriaLastCheckinTime(unittest.TestCase):
     """HipObjectsMobileDeviceCriteriaLastCheckinTime unit test stubs"""
@@ -36,9 +36,9 @@ class TestHipObjectsMobileDeviceCriteriaLastCheckinTime(unittest.TestCase):
         model = HipObjectsMobileDeviceCriteriaLastCheckinTime()
         if include_optional:
             return HipObjectsMobileDeviceCriteriaLastCheckinTime(
-                not_within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                not_within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                     days = 1, ),
-                within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                     days = 1, )
             )
         else:

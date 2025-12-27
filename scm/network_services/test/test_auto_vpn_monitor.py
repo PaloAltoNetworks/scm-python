@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.auto_vpn_monitor import AutoVpnMonitor
+from scm.network_services.models.auto_vpn_monitor import AutoVpnMonitor
 
 class TestAutoVpnMonitor(unittest.TestCase):
     """AutoVpnMonitor unit test stubs"""

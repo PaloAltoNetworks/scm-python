@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ddns_config import DdnsConfig
+from scm.network_services.models.ddns_config import DdnsConfig
 
 # TODO update the JSON string below
 json = "{}"

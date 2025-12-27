@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
+from scm.deployment_services.models.remote_networks_protocol_bgp import RemoteNetworksProtocolBgp
 
 # TODO update the JSON string below
 json = "{}"

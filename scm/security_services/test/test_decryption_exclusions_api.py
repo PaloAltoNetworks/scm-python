@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.decryption_exclusions_api import DecryptionExclusionsApi
+from scm.security_services.api.decryption_exclusions_api import DecryptionExclusionsApi
 
 
 class TestDecryptionExclusionsApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces import EthernetInterfaces
+from scm.network_services.models.ethernet_interfaces import EthernetInterfaces
 
 class TestEthernetInterfaces(unittest.TestCase):
     """EthernetInterfaces unit test stubs"""
@@ -42,17 +42,17 @@ class TestEthernetInterfaces(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                layer2 = scm_network_services.models.ethernet_interfaces_layer2.ethernet_interfaces_layer2(
-                    lldp = scm_network_services.models.ethernet_interfaces_layer2_lldp.ethernet_interfaces_layer2_lldp(
+                layer2 = scm.network_services.models.ethernet_interfaces_layer2.ethernet_interfaces_layer2(
+                    lldp = scm.network_services.models.ethernet_interfaces_layer2_lldp.ethernet_interfaces_layer2_lldp(
                         enable = True, ), 
                     vlan_tag = '4088', ),
-                layer3 = scm_network_services.models.ethernet_interfaces_layer3.ethernet_interfaces_layer3(
+                layer3 = scm.network_services.models.ethernet_interfaces_layer3.ethernet_interfaces_layer3(
                     arp = [
-                        scm_network_services.models.ethernet_interfaces_arp_inner.ethernet_interfaces_arp_inner(
+                        scm.network_services.models.ethernet_interfaces_arp_inner.ethernet_interfaces_arp_inner(
                             hw_address = '', 
                             name = '', )
                         ], 
-                    ddns_config = scm_network_services.models.ethernet_interfaces_layer3_ddns_config.ethernet_interfaces_layer3_ddns_config(
+                    ddns_config = scm.network_services.models.ethernet_interfaces_layer3_ddns_config.ethernet_interfaces_layer3_ddns_config(
                         ddns_cert_profile = '', 
                         ddns_enabled = True, 
                         ddns_hostname = '2', 
@@ -60,36 +60,36 @@ class TestEthernetInterfaces(unittest.TestCase):
                         ddns_update_interval = 1, 
                         ddns_vendor = '', 
                         ddns_vendor_config = '', ), 
-                    dhcp_client = scm_network_services.models.ethernet_interfaces_layer3_dhcp_client.ethernet_interfaces_layer3_dhcp_client(
+                    dhcp_client = scm.network_services.models.ethernet_interfaces_layer3_dhcp_client.ethernet_interfaces_layer3_dhcp_client(
                         create_default_route = True, 
                         default_route_metric = 1, 
                         enable = True, 
-                        send_hostname = scm_network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname.ethernet_interfaces_layer3_dhcp_client_send_hostname(
+                        send_hostname = scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname.ethernet_interfaces_layer3_dhcp_client_send_hostname(
                             enable = True, 
                             hostname = 'system-hostname', ), ), 
                     interface_management_profile = '', 
                     ip = [
-                        scm_network_services.models.ethernet_interfaces_layer3_ip_inner.ethernet_interfaces_layer3_ip_inner(
+                        scm.network_services.models.ethernet_interfaces_layer3_ip_inner.ethernet_interfaces_layer3_ip_inner(
                             name = '', )
                         ], 
                     mtu = 576, 
-                    pppoe = scm_network_services.models.ethernet_interfaces_layer3_pppoe.ethernet_interfaces_layer3_pppoe(
+                    pppoe = scm.network_services.models.ethernet_interfaces_layer3_pppoe.ethernet_interfaces_layer3_pppoe(
                         access_concentrator = '0', 
                         authentication = 'CHAP', 
                         default_route_metric = 1, 
                         enable = True, 
-                        passive = scm_network_services.models.ethernet_interfaces_layer3_pppoe_passive.ethernet_interfaces_layer3_pppoe_passive(
+                        passive = scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive.ethernet_interfaces_layer3_pppoe_passive(
                             enable = True, ), 
                         password = '', 
                         service = '0', 
-                        static_address = scm_network_services.models.ethernet_interfaces_layer3_pppoe_static_address.ethernet_interfaces_layer3_pppoe_static_address(
+                        static_address = scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address.ethernet_interfaces_layer3_pppoe_static_address(
                             ip = '', ), 
                         username = '0', ), ),
                 link_duplex = 'auto',
                 link_speed = 'auto',
                 link_state = 'auto',
                 name = '',
-                poe = scm_network_services.models.poe.poe(
+                poe = scm.network_services.models.poe.poe(
                     poe_enabled = True, 
                     poe_rsvd_pwr = 0, ),
                 snippet = 'My Snippet',

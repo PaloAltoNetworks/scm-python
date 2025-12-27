@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring import HaConfigurationsGroupMonitoringPathMonitoring
 
 # TODO update the JSON string below
 json = "{}"

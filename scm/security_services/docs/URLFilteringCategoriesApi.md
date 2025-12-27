@@ -1,4 +1,4 @@
-# scm_security_services.URLFilteringCategoriesApi
+# scm.security_services.URLFilteringCategoriesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/security/v1*
 
@@ -19,14 +19,14 @@ Retrieve a list of custom URL categories.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.url_filtering_categories_list_response import URLFilteringCategoriesListResponse
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.url_filtering_categories_list_response import URLFilteringCategoriesListResponse
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -36,14 +36,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.URLFilteringCategoriesApi(api_client)
+    api_instance = scm.security_services.URLFilteringCategoriesApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)

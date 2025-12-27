@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.url_access_profiles_list_response import URLAccessProfilesListResponse
+from scm.security_services.models.url_access_profiles_list_response import URLAccessProfilesListResponse
 
 class TestURLAccessProfilesListResponse(unittest.TestCase):
     """URLAccessProfilesListResponse unit test stubs"""

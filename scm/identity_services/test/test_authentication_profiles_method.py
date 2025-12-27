@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_method import AuthenticationProfilesMethod
+from scm.identity_services.models.authentication_profiles_method import AuthenticationProfilesMethod
 
 class TestAuthenticationProfilesMethod(unittest.TestCase):
     """AuthenticationProfilesMethod unit test stubs"""
@@ -36,27 +36,27 @@ class TestAuthenticationProfilesMethod(unittest.TestCase):
         model = AuthenticationProfilesMethod()
         if include_optional:
             return AuthenticationProfilesMethod(
-                cloud = scm_identity_services.models.authentication_profiles_method_cloud.authentication_profiles_method_cloud(
+                cloud = scm.identity_services.models.authentication_profiles_method_cloud.authentication_profiles_method_cloud(
                     profile_name = '', ),
-                kerberos = scm_identity_services.models.authentication_profiles_method_kerberos.authentication_profiles_method_kerberos(
+                kerberos = scm.identity_services.models.authentication_profiles_method_kerberos.authentication_profiles_method_kerberos(
                     realm = '', 
                     server_profile = '', ),
-                ldap = scm_identity_services.models.authentication_profiles_method_ldap.authentication_profiles_method_ldap(
+                ldap = scm.identity_services.models.authentication_profiles_method_ldap.authentication_profiles_method_ldap(
                     login_attribute = '', 
                     passwd_exp_days = 56, 
                     server_profile = '', ),
-                local_database = scm_identity_services.models.local_database.local_database(),
-                radius = scm_identity_services.models.authentication_profiles_method_radius.authentication_profiles_method_radius(
+                local_database = scm.identity_services.models.local_database.local_database(),
+                radius = scm.identity_services.models.authentication_profiles_method_radius.authentication_profiles_method_radius(
                     checkgroup = True, 
                     server_profile = '', ),
-                saml_idp = scm_identity_services.models.authentication_profiles_method_saml_idp.authentication_profiles_method_saml_idp(
+                saml_idp = scm.identity_services.models.authentication_profiles_method_saml_idp.authentication_profiles_method_saml_idp(
                     attribute_name_usergroup = '0', 
                     attribute_name_username = '0', 
                     certificate_profile = '', 
                     enable_single_logout = True, 
                     request_signing_certificate = '', 
                     server_profile = '', ),
-                tacplus = scm_identity_services.models.authentication_profiles_method_tacplus.authentication_profiles_method_tacplus(
+                tacplus = scm.identity_services.models.authentication_profiles_method_tacplus.authentication_profiles_method_tacplus(
                     checkgroup = True, 
                     server_profile = '', )
             )

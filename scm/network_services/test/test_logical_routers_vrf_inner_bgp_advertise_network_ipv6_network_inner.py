@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6NetworkInner
+from scm.network_services.models.logical_routers_vrf_inner_bgp_advertise_network_ipv6_network_inner import LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6NetworkInner
 
 class TestLogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6NetworkInner(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAdvertiseNetworkIpv6NetworkInner unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_method_radius import AuthenticationProfilesMethodRadius
+from scm.identity_services.models.authentication_profiles_method_radius import AuthenticationProfilesMethodRadius
 
 class TestAuthenticationProfilesMethodRadius(unittest.TestCase):
     """AuthenticationProfilesMethodRadius unit test stubs"""

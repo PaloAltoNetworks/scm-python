@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_exclusions_list_response import DecryptionExclusionsListResponse
+from scm.security_services.models.decryption_exclusions_list_response import DecryptionExclusionsListResponse
 
 class TestDecryptionExclusionsListResponse(unittest.TestCase):
     """DecryptionExclusionsListResponse unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
+from scm.config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services_protocol_udp import ServicesProtocolUdp
+from scm.objects.models.services_protocol_udp import ServicesProtocolUdp
 
 class TestServicesProtocolUdp(unittest.TestCase):
     """ServicesProtocolUdp unit test stubs"""
@@ -36,7 +36,7 @@ class TestServicesProtocolUdp(unittest.TestCase):
         model = ServicesProtocolUdp()
         if include_optional:
             return ServicesProtocolUdp(
-                override = scm_objects.models.services_protocol_udp_override.services_protocol_udp_override(
+                override = scm.objects.models.services_protocol_udp_override.services_protocol_udp_override(
                     timeout = 1, ),
                 port = '0',
                 source_port = '0'

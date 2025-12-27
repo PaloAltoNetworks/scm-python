@@ -20,13 +20,13 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
-from scm_network_services.models.qos_policy_rules import QosPolicyRules
-from scm_network_services.models.rule_based_move import RuleBasedMove
+from scm.network_services.models.qo_s_policy_rules_list_response import QoSPolicyRulesListResponse
+from scm.network_services.models.qos_policy_rules import QosPolicyRules
+from scm.network_services.models.rule_based_move import RuleBasedMove
 
-from scm_network_services.api_client import ApiClient, RequestSerialized
-from scm_network_services.api_response import ApiResponse
-from scm_network_services.rest import RESTResponseType
+from scm.network_services.api_client import ApiClient, RequestSerialized
+from scm.network_services.api_response import ApiResponse
+from scm.network_services.rest import RESTResponseType
 
 
 class QoSRulesApi:

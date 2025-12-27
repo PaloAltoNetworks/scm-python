@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_list_response import PBFRulesListResponse
+from scm.network_services.models.pbf_rules_list_response import PBFRulesListResponse
 
 class TestPBFRulesListResponse(unittest.TestCase):
     """PBFRulesListResponse unit test stubs"""

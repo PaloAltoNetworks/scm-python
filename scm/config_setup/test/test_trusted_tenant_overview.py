@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.trusted_tenant_overview import TrustedTenantOverview
+from scm.config_setup.models.trusted_tenant_overview import TrustedTenantOverview
 
 class TestTrustedTenantOverview(unittest.TestCase):
     """TrustedTenantOverview unit test stubs"""
@@ -36,10 +36,10 @@ class TestTrustedTenantOverview(unittest.TestCase):
         model = TrustedTenantOverview()
         if include_optional:
             return TrustedTenantOverview(
-                publisher = scm_config_setup.models.trusted_tenant_overview_publisher.trusted_tenant_overview_publisher(
+                publisher = scm.config_setup.models.trusted_tenant_overview_publisher.trusted_tenant_overview_publisher(
                     pending = 56, 
                     total = 56, ),
-                subscriber = scm_config_setup.models.trusted_tenant_overview_publisher.trusted_tenant_overview_publisher(
+                subscriber = scm.config_setup.models.trusted_tenant_overview_publisher.trusted_tenant_overview_publisher(
                     pending = 56, 
                     total = 56, )
             )

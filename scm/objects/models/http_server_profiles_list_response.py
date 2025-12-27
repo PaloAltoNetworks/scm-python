@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_objects.models.http_server_profiles import HttpServerProfiles
+from scm.objects.models.http_server_profiles import HttpServerProfiles
 from typing import Optional, Set
 from typing_extensions import Self
 

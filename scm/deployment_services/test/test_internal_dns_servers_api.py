@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.internal_dns_servers_api import InternalDNSServersApi
+from scm.deployment_services.api.internal_dns_servers_api import InternalDNSServersApi
 
 
 class TestInternalDNSServersApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.ocsp_responders_list_response import OCSPRespondersListResponse
+from scm.identity_services.models.ocsp_responders_list_response import OCSPRespondersListResponse
 
 class TestOCSPRespondersListResponse(unittest.TestCase):
     """OCSPRespondersListResponse unit test stubs"""

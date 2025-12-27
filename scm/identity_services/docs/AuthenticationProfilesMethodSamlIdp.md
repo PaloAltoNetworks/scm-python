@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.authentication_profiles_method_saml_idp import AuthenticationProfilesMethodSamlIdp
+from scm.identity_services.models.authentication_profiles_method_saml_idp import AuthenticationProfilesMethodSamlIdp
 
 # TODO update the JSON string below
 json = "{}"

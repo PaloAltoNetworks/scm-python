@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.lacp import Lacp
+from scm.network_services.models.lacp import Lacp
 
 # TODO update the JSON string below
 json = "{}"

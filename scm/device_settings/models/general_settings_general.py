@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
-from scm_device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
+from scm.device_settings.models.general_settings_general_geo_location import GeneralSettingsGeneralGeoLocation
+from scm.device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
 from typing import Optional, Set
 from typing_extensions import Self
 

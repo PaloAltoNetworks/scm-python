@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than import ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGreaterThan
+from scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than import ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGreaterThan
 
 class TestApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGreaterThan(unittest.TestCase):
     """ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGreaterThan unit test stubs"""
@@ -38,7 +38,7 @@ class TestApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGre
             return ApplicationsSignatureInnerAndConditionInnerOrConditionInnerOperatorGreaterThan(
                 context = '',
                 qualifier = [
-                    scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
+                    scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
                         name = '', 
                         value = '', )
                     ],

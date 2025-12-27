@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.ike_crypto_profiles_api import IKECryptoProfilesApi
+from scm.network_services.api.ike_crypto_profiles_api import IKECryptoProfilesApi
 
 
 class TestIKECryptoProfilesApi(unittest.TestCase):

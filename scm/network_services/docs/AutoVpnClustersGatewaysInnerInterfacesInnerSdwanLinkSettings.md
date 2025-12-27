@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersGatewaysInnerInterfacesInnerSdwanLinkSettings
+from scm.network_services.models.auto_vpn_clusters_gateways_inner_interfaces_inner_sdwan_link_settings import AutoVpnClustersGatewaysInnerInterfacesInnerSdwanLinkSettings
 
 # TODO update the JSON string below
 json = "{}"

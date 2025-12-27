@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ipsec_crypto_profiles_ah import IpsecCryptoProfilesAh
+from scm.network_services.models.ipsec_crypto_profiles_ah import IpsecCryptoProfilesAh
 
 class TestIpsecCryptoProfilesAh(unittest.TestCase):
     """IpsecCryptoProfilesAh unit test stubs"""

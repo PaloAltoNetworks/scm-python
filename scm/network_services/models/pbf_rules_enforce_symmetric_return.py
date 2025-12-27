@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
+from scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_destination_translation_dns_rewrite import NatRulesDestinationTranslationDnsRewrite
+from scm.network_services.models.nat_rules_destination_translation_dns_rewrite import NatRulesDestinationTranslationDnsRewrite
 
 class TestNatRulesDestinationTranslationDnsRewrite(unittest.TestCase):
     """NatRulesDestinationTranslationDnsRewrite unit test stubs"""

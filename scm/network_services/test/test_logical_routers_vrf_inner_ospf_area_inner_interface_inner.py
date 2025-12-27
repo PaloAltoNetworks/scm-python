@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner import LogicalRoutersVrfInnerOspfAreaInnerInterfaceInner
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner import LogicalRoutersVrfInnerOspfAreaInnerInterfaceInner
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerInterfaceInner(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerInterfaceInner unit test stubs"""
@@ -37,25 +37,25 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerInterfaceInner(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerInterfaceInner(
                 authentication = '',
-                bfd = scm_network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
+                bfd = scm.network_services.models.logical_routers_vrf_inner_bgp_global_bfd.logical_routers_vrf_inner_bgp_global_bfd(
                     profile = '', ),
                 enable = True,
-                link_type = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type(
-                    broadcast = scm_network_services.models.broadcast.broadcast(), 
-                    p2mp = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp(
+                link_type = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type(
+                    broadcast = scm.network_services.models.broadcast.broadcast(), 
+                    p2mp = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp(
                         neighbor = [
-                            scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner(
+                            scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner(
                                 name = '', 
                                 priority = 56, )
                             ], ), 
-                    p2p = scm_network_services.models.p2p.p2p(), ),
+                    p2p = scm.network_services.models.p2p.p2p(), ),
                 metric = 56,
                 mtu_ignore = True,
                 name = '',
                 passive = True,
                 priority = 56,
                 timing = '',
-                vr_timing = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_interface_inner_vr_timing(
+                vr_timing = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_vr_timing.logical_routers_vrf_inner_ospf_area_inner_interface_inner_vr_timing(
                     dead_counts = 56, 
                     gr_delay = 56, 
                     hello_interval = 56, 

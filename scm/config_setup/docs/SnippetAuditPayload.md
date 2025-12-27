@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_audit_payload import SnippetAuditPayload
+from scm.config_setup.models.snippet_audit_payload import SnippetAuditPayload
 
 # TODO update the JSON string below
 json = "{}"

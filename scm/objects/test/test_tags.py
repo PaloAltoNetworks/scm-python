@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.tags import Tags
+from scm.objects.models.tags import Tags
 
 class TestTags(unittest.TestCase):
     """Tags unit test stubs"""

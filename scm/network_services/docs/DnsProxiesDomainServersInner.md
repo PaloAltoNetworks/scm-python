@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dns_proxies_domain_servers_inner import DnsProxiesDomainServersInner
+from scm.network_services.models.dns_proxies_domain_servers_inner import DnsProxiesDomainServersInner
 
 # TODO update the JSON string below
 json = "{}"

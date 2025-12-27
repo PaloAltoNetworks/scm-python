@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.qos_policy_rules_action import QosPolicyRulesAction
-from scm_network_services.models.qos_policy_rules_dscp_tos import QosPolicyRulesDscpTos
+from scm.network_services.models.qos_policy_rules_action import QosPolicyRulesAction
+from scm.network_services.models.qos_policy_rules_dscp_tos import QosPolicyRulesDscpTos
 from typing import Optional, Set
 from typing_extensions import Self
 

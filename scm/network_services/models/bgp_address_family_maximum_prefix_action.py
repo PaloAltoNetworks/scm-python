@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
+from scm.network_services.models.bgp_address_family_maximum_prefix_action_restart import BgpAddressFamilyMaximumPrefixActionRestart
 from typing import Optional, Set
 from typing_extensions import Self
 

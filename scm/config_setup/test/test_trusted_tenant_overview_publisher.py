@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.trusted_tenant_overview_publisher import TrustedTenantOverviewPublisher
+from scm.config_setup.models.trusted_tenant_overview_publisher import TrustedTenantOverviewPublisher
 
 class TestTrustedTenantOverviewPublisher(unittest.TestCase):
     """TrustedTenantOverviewPublisher unit test stubs"""

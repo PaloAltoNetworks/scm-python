@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.sdwan_error_correction_profiles_mode import SdwanErrorCorrectionProfilesMode
+from scm.network_services.models.sdwan_error_correction_profiles_mode import SdwanErrorCorrectionProfilesMode
 from typing import Optional, Set
 from typing_extensions import Self
 

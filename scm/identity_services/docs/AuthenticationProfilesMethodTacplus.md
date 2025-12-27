@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.authentication_profiles_method_tacplus import AuthenticationProfilesMethodTacplus
+from scm.identity_services.models.authentication_profiles_method_tacplus import AuthenticationProfilesMethodTacplus
 
 # TODO update the JSON string below
 json = "{}"

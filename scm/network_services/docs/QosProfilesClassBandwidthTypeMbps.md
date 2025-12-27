@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
+from scm.network_services.models.qos_profiles_class_bandwidth_type_mbps import QosProfilesClassBandwidthTypeMbps
 
 # TODO update the JSON string below
 json = "{}"

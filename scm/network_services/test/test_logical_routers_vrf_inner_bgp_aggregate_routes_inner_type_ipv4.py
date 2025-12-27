@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4 import LogicalRoutersVrfInnerBgpAggregateRoutesInnerTypeIpv4
+from scm.network_services.models.logical_routers_vrf_inner_bgp_aggregate_routes_inner_type_ipv4 import LogicalRoutersVrfInnerBgpAggregateRoutesInnerTypeIpv4
 
 class TestLogicalRoutersVrfInnerBgpAggregateRoutesInnerTypeIpv4(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpAggregateRoutesInnerTypeIpv4 unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zones_device_acl import ZonesDeviceAcl
+from scm.network_services.models.zones_device_acl import ZonesDeviceAcl
 
 class TestZonesDeviceAcl(unittest.TestCase):
     """ZonesDeviceAcl unit test stubs"""

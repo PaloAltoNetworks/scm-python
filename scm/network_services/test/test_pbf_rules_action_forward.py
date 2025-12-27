@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_action_forward import PbfRulesActionForward
+from scm.network_services.models.pbf_rules_action_forward import PbfRulesActionForward
 
 class TestPbfRulesActionForward(unittest.TestCase):
     """PbfRulesActionForward unit test stubs"""
@@ -37,11 +37,11 @@ class TestPbfRulesActionForward(unittest.TestCase):
         if include_optional:
             return PbfRulesActionForward(
                 egress_interface = '',
-                monitor = scm_network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
+                monitor = scm.network_services.models.pbf_rules_action_forward_monitor.pbf_rules_action_forward_monitor(
                     disable_if_unreachable = True, 
                     ip_address = '', 
                     profile = '', ),
-                nexthop = scm_network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
+                nexthop = scm.network_services.models.pbf_rules_action_forward_nexthop.pbf_rules_action_forward_nexthop(
                     fqdn = '', 
                     ip_address = '', )
             )

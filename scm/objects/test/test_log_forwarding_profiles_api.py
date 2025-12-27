@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.log_forwarding_profiles_api import LogForwardingProfilesApi
+from scm.objects.api.log_forwarding_profiles_api import LogForwardingProfilesApi
 
 
 class TestLogForwardingProfilesApi(unittest.TestCase):

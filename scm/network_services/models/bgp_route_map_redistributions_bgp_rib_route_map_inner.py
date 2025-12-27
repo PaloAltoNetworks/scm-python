@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatch
-from scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_set import BgpRouteMapRedistributionsBgpRibRouteMapInnerSet
+from scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatch
+from scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_set import BgpRouteMapRedistributionsBgpRibRouteMapInnerSet
 from typing import Optional, Set
 from typing_extensions import Self
 

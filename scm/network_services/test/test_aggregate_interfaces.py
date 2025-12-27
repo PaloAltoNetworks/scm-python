@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.aggregate_interfaces import AggregateInterfaces
+from scm.network_services.models.aggregate_interfaces import AggregateInterfaces
 
 class TestAggregateInterfaces(unittest.TestCase):
     """AggregateInterfaces unit test stubs"""
@@ -41,8 +41,8 @@ class TestAggregateInterfaces(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                layer2 = scm_network_services.models.aggregate_interfaces_layer2.aggregate_interfaces_layer2(
-                    lacp = scm_network_services.models.lacp.lacp(
+                layer2 = scm.network_services.models.aggregate_interfaces_layer2.aggregate_interfaces_layer2(
+                    lacp = scm.network_services.models.lacp.lacp(
                         enable = True, 
                         fast_failover = True, 
                         max_ports = 1, 
@@ -50,13 +50,13 @@ class TestAggregateInterfaces(unittest.TestCase):
                         system_priority = 1, 
                         transmission_rate = 'slow', ), 
                     vlan_tag = '123', ),
-                layer3 = scm_network_services.models.aggregate_interfaces_layer3.aggregate_interfaces_layer3(
+                layer3 = scm.network_services.models.aggregate_interfaces_layer3.aggregate_interfaces_layer3(
                     arp = [
-                        scm_network_services.models.agg_ethernet_arp_inner.agg_ethernet_arp_inner(
+                        scm.network_services.models.agg_ethernet_arp_inner.agg_ethernet_arp_inner(
                             hw_address = '', 
                             name = '', )
                         ], 
-                    ddns_config = scm_network_services.models.aggregate_interfaces_layer3_ddns_config.aggregate_interfaces_layer3_ddns_config(
+                    ddns_config = scm.network_services.models.aggregate_interfaces_layer3_ddns_config.aggregate_interfaces_layer3_ddns_config(
                         ddns_cert_profile = '', 
                         ddns_enabled = True, 
                         ddns_hostname = '2', 
@@ -64,19 +64,19 @@ class TestAggregateInterfaces(unittest.TestCase):
                         ddns_update_interval = 1, 
                         ddns_vendor = '', 
                         ddns_vendor_config = '', ), 
-                    dhcp_client = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
+                    dhcp_client = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client.agg_ethernet_dhcp_client_dhcp_client(
                         create_default_route = True, 
                         default_route_metric = 1, 
                         enable = True, 
-                        send_hostname = scm_network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
+                        send_hostname = scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client_send_hostname.agg_ethernet_dhcp_client_dhcp_client_send_hostname(
                             enable = True, 
                             hostname = 'system-hostname', ), ), 
                     interface_management_profile = '', 
                     ip = [
-                        scm_network_services.models.aggregate_interfaces_layer3_ip_inner.aggregate_interfaces_layer3_ip_inner(
+                        scm.network_services.models.aggregate_interfaces_layer3_ip_inner.aggregate_interfaces_layer3_ip_inner(
                             name = '', )
                         ], 
-                    lacp = scm_network_services.models.lacp.lacp(
+                    lacp = scm.network_services.models.lacp.lacp(
                         enable = True, 
                         fast_failover = True, 
                         max_ports = 1, 

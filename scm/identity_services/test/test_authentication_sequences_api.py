@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.authentication_sequences_api import AuthenticationSequencesApi
+from scm.identity_services.api.authentication_sequences_api import AuthenticationSequencesApi
 
 
 class TestAuthenticationSequencesApi(unittest.TestCase):

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
+from scm.device_settings.models.ha_configurations_group_mode import HaConfigurationsGroupMode
 
 # TODO update the JSON string below
 json = "{}"

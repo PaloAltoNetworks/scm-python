@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.bandwidth_allocations_api import BandwidthAllocationsApi
+from scm.deployment_services.api.bandwidth_allocations_api import BandwidthAllocationsApi
 
 
 class TestBandwidthAllocationsApi(unittest.TestCase):

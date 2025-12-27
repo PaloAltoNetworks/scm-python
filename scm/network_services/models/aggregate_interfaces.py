@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.aggregate_interfaces_layer2 import AggregateInterfacesLayer2
-from scm_network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
+from scm.network_services.models.aggregate_interfaces_layer2 import AggregateInterfacesLayer2
+from scm.network_services.models.aggregate_interfaces_layer3 import AggregateInterfacesLayer3
 from typing import Optional, Set
 from typing_extensions import Self
 

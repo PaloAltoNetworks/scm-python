@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4 import BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4
+from scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4 import BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4
 
 class TestBgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4(unittest.TestCase):
     """BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4 unit test stubs"""
@@ -36,10 +36,10 @@ class TestBgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4(uni
         model = BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4()
         if include_optional:
             return BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatchIpv4(
-                address = scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address(
+                address = scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address(
                     access_list = '', 
                     prefix_list = '', ),
-                next_hop = scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop(
+                next_hop = scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop(
                     access_list = '', 
                     prefix_list = '', )
             )

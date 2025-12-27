@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type_large import RouteCommunityListsTypeLarge
+from scm.network_services.models.route_community_lists_type_large import RouteCommunityListsTypeLarge
 
 class TestRouteCommunityListsTypeLarge(unittest.TestCase):
     """RouteCommunityListsTypeLarge unit test stubs"""
@@ -37,7 +37,7 @@ class TestRouteCommunityListsTypeLarge(unittest.TestCase):
         if include_optional:
             return RouteCommunityListsTypeLarge(
                 large_entry = [
-                    scm_network_services.models.route_community_lists_type_large_large_entry_inner.route_community_lists_type_large_large_entry_inner(
+                    scm.network_services.models.route_community_lists_type_large_large_entry_inner.route_community_lists_type_large_large_entry_inner(
                         action = 'deny', 
                         lc_regex = [
                             ''

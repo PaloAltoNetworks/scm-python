@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.zone_protection_profiles_flood_icmp import ZoneProtectionProfilesFloodIcmp
+from scm.network_services.models.zone_protection_profiles_flood_icmp import ZoneProtectionProfilesFloodIcmp
 
 # TODO update the JSON string below
 json = "{}"

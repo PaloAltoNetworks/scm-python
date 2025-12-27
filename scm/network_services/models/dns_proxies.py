@@ -21,12 +21,12 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.dns_proxies_cache import DnsProxiesCache
-from scm_network_services.models.dns_proxies_default import DnsProxiesDefault
-from scm_network_services.models.dns_proxies_domain_servers_inner import DnsProxiesDomainServersInner
-from scm_network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
-from scm_network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
-from scm_network_services.models.dns_proxies_udp_queries import DnsProxiesUdpQueries
+from scm.network_services.models.dns_proxies_cache import DnsProxiesCache
+from scm.network_services.models.dns_proxies_default import DnsProxiesDefault
+from scm.network_services.models.dns_proxies_domain_servers_inner import DnsProxiesDomainServersInner
+from scm.network_services.models.dns_proxies_static_entries_inner import DnsProxiesStaticEntriesInner
+from scm.network_services.models.dns_proxies_tcp_queries import DnsProxiesTcpQueries
+from scm.network_services.models.dns_proxies_udp_queries import DnsProxiesUdpQueries
 from typing import Optional, Set
 from typing_extensions import Self
 

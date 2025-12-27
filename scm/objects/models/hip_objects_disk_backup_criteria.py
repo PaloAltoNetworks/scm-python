@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time import HipObjectsAntiMalwareCriteriaLastScanTime
+from scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time import HipObjectsAntiMalwareCriteriaLastScanTime
 from typing import Optional, Set
 from typing_extensions import Self
 

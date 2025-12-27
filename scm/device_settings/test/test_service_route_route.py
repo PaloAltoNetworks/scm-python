@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.service_route_route import ServiceRouteRoute
+from scm.device_settings.models.service_route_route import ServiceRouteRoute
 
 class TestServiceRouteRoute(unittest.TestCase):
     """ServiceRouteRoute unit test stubs"""
@@ -37,19 +37,19 @@ class TestServiceRouteRoute(unittest.TestCase):
         if include_optional:
             return ServiceRouteRoute(
                 destination = [
-                    scm_device_settings.models.service_route_route_destination_inner.service_route_route_destination_inner(
+                    scm.device_settings.models.service_route_route_destination_inner.service_route_route_destination_inner(
                         name = '', 
-                        source = scm_device_settings.models.service_route_route_destination_inner_source.service_route_route_destination_inner_source(
+                        source = scm.device_settings.models.service_route_route_destination_inner_source.service_route_route_destination_inner_source(
                             address = '', 
                             interface = '', ), )
                     ],
                 service = [
-                    scm_device_settings.models.service_route_route_service_inner.service_route_route_service_inner(
+                    scm.device_settings.models.service_route_route_service_inner.service_route_route_service_inner(
                         name = 'autofocus', 
-                        source = scm_device_settings.models.service_route_route_service_inner_source.service_route_route_service_inner_source(
+                        source = scm.device_settings.models.service_route_route_service_inner_source.service_route_route_service_inner_source(
                             address = '', 
                             interface = '', ), 
-                        source_v6 = scm_device_settings.models.service_route_route_service_inner_source_v6.service_route_route_service_inner_source_v6(
+                        source_v6 = scm.device_settings.models.service_route_route_service_inner_source_v6.service_route_route_service_inner_source_v6(
                             address = '', 
                             interface = '', ), )
                     ]

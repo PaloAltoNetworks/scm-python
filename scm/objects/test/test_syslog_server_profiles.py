@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.syslog_server_profiles import SyslogServerProfiles
+from scm.objects.models.syslog_server_profiles import SyslogServerProfiles
 
 class TestSyslogServerProfiles(unittest.TestCase):
     """SyslogServerProfiles unit test stubs"""
@@ -38,13 +38,13 @@ class TestSyslogServerProfiles(unittest.TestCase):
             return SyslogServerProfiles(
                 device = 'My Device',
                 folder = 'My Folder',
-                format = scm_objects.models.syslog_server_profiles_format.syslog_server_profiles_format(
+                format = scm.objects.models.syslog_server_profiles_format.syslog_server_profiles_format(
                     auth = '', 
                     config = '', 
                     correlation = '', 
                     data = '', 
                     decryption = '', 
-                    escaping = scm_objects.models.syslog_server_profiles_format_escaping.syslog_server_profiles_format_escaping(
+                    escaping = scm.objects.models.syslog_server_profiles_format_escaping.syslog_server_profiles_format_escaping(
                         escape_character = '', 
                         escaped_characters = '', ), 
                     globalprotect = '', 
@@ -62,7 +62,7 @@ class TestSyslogServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_objects.models.syslog_server_profiles_server_inner.syslog_server_profiles_server_inner(
+                    scm.objects.models.syslog_server_profiles_server_inner.syslog_server_profiles_server_inner(
                         facility = 'LOG_USER', 
                         format = 'BSD', 
                         name = '', 
@@ -77,7 +77,7 @@ class TestSyslogServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_objects.models.syslog_server_profiles_server_inner.syslog_server_profiles_server_inner(
+                    scm.objects.models.syslog_server_profiles_server_inner.syslog_server_profiles_server_inner(
                         facility = 'LOG_USER', 
                         format = 'BSD', 
                         name = '', 

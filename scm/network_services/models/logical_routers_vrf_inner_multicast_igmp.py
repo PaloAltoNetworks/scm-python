@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic import LogicalRoutersVrfInnerMulticastIgmpDynamic
-from scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner import LogicalRoutersVrfInnerMulticastIgmpStaticInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic import LogicalRoutersVrfInnerMulticastIgmpDynamic
+from scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner import LogicalRoutersVrfInnerMulticastIgmpStaticInner
 from typing import Optional, Set
 from typing_extensions import Self
 

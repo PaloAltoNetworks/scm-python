@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type_extended_extended_entry_inner import RouteCommunityListsTypeExtendedExtendedEntryInner
+from scm.network_services.models.route_community_lists_type_extended_extended_entry_inner import RouteCommunityListsTypeExtendedExtendedEntryInner
 
 class TestRouteCommunityListsTypeExtendedExtendedEntryInner(unittest.TestCase):
     """RouteCommunityListsTypeExtendedExtendedEntryInner unit test stubs"""

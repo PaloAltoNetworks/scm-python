@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.kerberos_server_profiles import KerberosServerProfiles
+from scm.identity_services.models.kerberos_server_profiles import KerberosServerProfiles
 
 # TODO update the JSON string below
 json = "{}"

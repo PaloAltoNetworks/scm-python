@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.auto_vpn_config_push_api import AutoVPNConfigPushApi
+from scm.network_services.api.auto_vpn_config_push_api import AutoVPNConfigPushApi
 
 
 class TestAutoVPNConfigPushApi(unittest.TestCase):

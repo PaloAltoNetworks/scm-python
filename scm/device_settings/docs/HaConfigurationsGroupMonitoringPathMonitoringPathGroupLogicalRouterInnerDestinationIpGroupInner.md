@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner import HaConfigurationsGroupMonitoringPathMonitoringPathGroupLogicalRouterInnerDestinationIpGroupInner
+from scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner import HaConfigurationsGroupMonitoringPathMonitoringPathGroupLogicalRouterInnerDestinationIpGroupInner
 
 # TODO update the JSON string below
 json = "{}"

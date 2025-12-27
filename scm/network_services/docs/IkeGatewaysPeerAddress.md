@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
+from scm.network_services.models.ike_gateways_peer_address import IkeGatewaysPeerAddress
 
 # TODO update the JSON string below
 json = "{}"

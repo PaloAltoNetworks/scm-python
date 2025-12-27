@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.loopback_interfaces_ipv6 import LoopbackInterfacesIpv6
+from scm.network_services.models.loopback_interfaces_ipv6 import LoopbackInterfacesIpv6
 
 class TestLoopbackInterfacesIpv6(unittest.TestCase):
     """LoopbackInterfacesIpv6 unit test stubs"""
@@ -37,7 +37,7 @@ class TestLoopbackInterfacesIpv6(unittest.TestCase):
         if include_optional:
             return LoopbackInterfacesIpv6(
                 address = [
-                    scm_network_services.models.loopback_interfaces_ipv6_address_inner.loopback_interfaces_ipv6_address_inner(
+                    scm.network_services.models.loopback_interfaces_ipv6_address_inner.loopback_interfaces_ipv6_address_inner(
                         enable_on_interface = True, 
                         interface_id = 'EUI-64', 
                         name = '2001:DB8::1/128', )

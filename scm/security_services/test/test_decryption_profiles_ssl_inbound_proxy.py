@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
+from scm.security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
 
 class TestDecryptionProfilesSslInboundProxy(unittest.TestCase):
     """DecryptionProfilesSslInboundProxy unit test stubs"""

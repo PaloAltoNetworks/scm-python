@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.anti_spyware_profiles_rules_inner_action import AntiSpywareProfilesRulesInnerAction
+from scm.security_services.models.anti_spyware_profiles_rules_inner_action import AntiSpywareProfilesRulesInnerAction
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.hip_objects_list_response import HIPObjectsListResponse
+from scm.objects.models.hip_objects_list_response import HIPObjectsListResponse
 
 # TODO update the JSON string below
 json = "{}"

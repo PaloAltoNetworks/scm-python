@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
+from scm.objects.models.hip_objects_patch_management_criteria_missing_patches import HipObjectsPatchManagementCriteriaMissingPatches
 from typing import Optional, Set
 from typing_extensions import Self
 

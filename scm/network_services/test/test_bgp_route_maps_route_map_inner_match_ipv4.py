@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4 import BgpRouteMapsRouteMapInnerMatchIpv4
+from scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4 import BgpRouteMapsRouteMapInnerMatchIpv4
 
 class TestBgpRouteMapsRouteMapInnerMatchIpv4(unittest.TestCase):
     """BgpRouteMapsRouteMapInnerMatchIpv4 unit test stubs"""
@@ -36,13 +36,13 @@ class TestBgpRouteMapsRouteMapInnerMatchIpv4(unittest.TestCase):
         model = BgpRouteMapsRouteMapInnerMatchIpv4()
         if include_optional:
             return BgpRouteMapsRouteMapInnerMatchIpv4(
-                address = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
+                address = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
                     access_list = '', 
                     prefix_list = '', ),
-                next_hop = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
+                next_hop = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
                     access_list = '', 
                     prefix_list = '', ),
-                route_source = scm_network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
+                route_source = scm.network_services.models.bgp_route_maps_route_map_inner_match_ipv4_address.bgp_route_maps_route_map_inner_match_ipv4_address(
                     access_list = '', 
                     prefix_list = '', )
             )

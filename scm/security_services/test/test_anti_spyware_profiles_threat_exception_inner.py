@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_profiles_threat_exception_inner import AntiSpywareProfilesThreatExceptionInner
+from scm.security_services.models.anti_spyware_profiles_threat_exception_inner import AntiSpywareProfilesThreatExceptionInner
 
 class TestAntiSpywareProfilesThreatExceptionInner(unittest.TestCase):
     """AntiSpywareProfilesThreatExceptionInner unit test stubs"""
@@ -36,19 +36,19 @@ class TestAntiSpywareProfilesThreatExceptionInner(unittest.TestCase):
         model = AntiSpywareProfilesThreatExceptionInner()
         if include_optional:
             return AntiSpywareProfilesThreatExceptionInner(
-                action = scm_security_services.models.anti_spyware_profiles_threat_exception_inner_action.anti_spyware_profiles_threat_exception_inner_action(
-                    alert = scm_security_services.models.alert.alert(), 
-                    allow = scm_security_services.models.allow.allow(), 
-                    block_ip = scm_security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip.anti_spyware_profiles_threat_exception_inner_action_block_ip(
+                action = scm.security_services.models.anti_spyware_profiles_threat_exception_inner_action.anti_spyware_profiles_threat_exception_inner_action(
+                    alert = scm.security_services.models.alert.alert(), 
+                    allow = scm.security_services.models.allow.allow(), 
+                    block_ip = scm.security_services.models.anti_spyware_profiles_threat_exception_inner_action_block_ip.anti_spyware_profiles_threat_exception_inner_action_block_ip(
                         duration = 1, 
                         track_by = 'source-and-destination', ), 
-                    default = scm_security_services.models.default.default(), 
-                    drop = scm_security_services.models.drop.drop(), 
-                    reset_both = scm_security_services.models.reset_both.reset_both(), 
-                    reset_client = scm_security_services.models.reset_client.reset_client(), 
-                    reset_server = scm_security_services.models.reset_server.reset_server(), ),
+                    default = scm.security_services.models.default.default(), 
+                    drop = scm.security_services.models.drop.drop(), 
+                    reset_both = scm.security_services.models.reset_both.reset_both(), 
+                    reset_client = scm.security_services.models.reset_client.reset_client(), 
+                    reset_server = scm.security_services.models.reset_server.reset_server(), ),
                 exempt_ip = [
-                    scm_security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner(
+                    scm.security_services.models.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner.anti_spyware_profiles_threat_exception_inner_exempt_ip_inner(
                         name = '', )
                     ],
                 name = '',

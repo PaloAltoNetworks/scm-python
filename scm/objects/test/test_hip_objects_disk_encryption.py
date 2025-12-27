@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_disk_encryption import HipObjectsDiskEncryption
+from scm.objects.models.hip_objects_disk_encryption import HipObjectsDiskEncryption
 
 class TestHipObjectsDiskEncryption(unittest.TestCase):
     """HipObjectsDiskEncryption unit test stubs"""
@@ -36,10 +36,10 @@ class TestHipObjectsDiskEncryption(unittest.TestCase):
         model = HipObjectsDiskEncryption()
         if include_optional:
             return HipObjectsDiskEncryption(
-                criteria = scm_objects.models.hip_objects_disk_encryption_criteria.hip_objects_disk_encryption_criteria(
+                criteria = scm.objects.models.hip_objects_disk_encryption_criteria.hip_objects_disk_encryption_criteria(
                     encrypted_locations = [
-                        scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
-                            encryption_state = scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
+                        scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
+                            encryption_state = scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
                                 is = 'encrypted', 
                                 is_not = 'encrypted', ), 
                             name = '', )
@@ -47,7 +47,7 @@ class TestHipObjectsDiskEncryption(unittest.TestCase):
                     is_installed = True, ),
                 exclude_vendor = True,
                 vendor = [
-                    scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                    scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                         name = '', 
                         product = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'

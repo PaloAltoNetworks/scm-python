@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_igmp import LogicalRoutersVrfInnerMulticastIgmp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_igmp import LogicalRoutersVrfInnerMulticastIgmp
 
 class TestLogicalRoutersVrfInnerMulticastIgmp(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastIgmp unit test stubs"""
@@ -36,9 +36,9 @@ class TestLogicalRoutersVrfInnerMulticastIgmp(unittest.TestCase):
         model = LogicalRoutersVrfInnerMulticastIgmp()
         if include_optional:
             return LogicalRoutersVrfInnerMulticastIgmp(
-                dynamic = scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(
+                dynamic = scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic.logical_routers_vrf_inner_multicast_igmp_dynamic(
                     interface = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner.logical_routers_vrf_inner_multicast_igmp_dynamic_interface_inner(
                             group_filter = '', 
                             max_groups = '', 
                             max_sources = '', 
@@ -50,7 +50,7 @@ class TestLogicalRoutersVrfInnerMulticastIgmp(unittest.TestCase):
                         ], ),
                 enable = True,
                 static = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_igmp_static_inner.logical_routers_vrf_inner_multicast_igmp_static_inner(
                         group_address = '', 
                         interface = '', 
                         name = '', 

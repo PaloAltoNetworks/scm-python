@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.http_server_profiles_api import HTTPServerProfilesApi
+from scm.objects.api.http_server_profiles_api import HTTPServerProfilesApi
 
 
 class TestHTTPServerProfilesApi(unittest.TestCase):

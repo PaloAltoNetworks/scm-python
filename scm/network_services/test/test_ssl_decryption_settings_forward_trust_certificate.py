@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
+from scm.network_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
 
 class TestSslDecryptionSettingsForwardTrustCertificate(unittest.TestCase):
     """SslDecryptionSettingsForwardTrustCertificate unit test stubs"""

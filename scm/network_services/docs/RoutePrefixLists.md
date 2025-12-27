@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_prefix_lists import RoutePrefixLists
+from scm.network_services.models.route_prefix_lists import RoutePrefixLists
 
 # TODO update the JSON string below
 json = "{}"

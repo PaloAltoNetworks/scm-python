@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.device_redistribution_collector import DeviceRedistributionCollector
+from scm.device_settings.models.device_redistribution_collector import DeviceRedistributionCollector
 
 class TestDeviceRedistributionCollector(unittest.TestCase):
     """DeviceRedistributionCollector unit test stubs"""
@@ -39,7 +39,7 @@ class TestDeviceRedistributionCollector(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                redistribution_collector = scm_device_settings.models.device_redistribution_collector_redistribution_collector.device_redistribution_collector_redistribution_collector(
+                redistribution_collector = scm.device_settings.models.device_redistribution_collector_redistribution_collector.device_redistribution_collector_redistribution_collector(
                     interface = '', ),
                 snippet = 'My Snippet'
             )

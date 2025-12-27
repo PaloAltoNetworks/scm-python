@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner import IpsecTunnelsAutoKeyIkeGatewayInner
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_inner import IpsecTunnelsAutoKeyProxyIdInner
-from scm_network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner import IpsecTunnelsAutoKeyProxyIdV6Inner
+from scm.network_services.models.ipsec_tunnels_auto_key_ike_gateway_inner import IpsecTunnelsAutoKeyIkeGatewayInner
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_inner import IpsecTunnelsAutoKeyProxyIdInner
+from scm.network_services.models.ipsec_tunnels_auto_key_proxy_id_v6_inner import IpsecTunnelsAutoKeyProxyIdV6Inner
 from typing import Optional, Set
 from typing_extensions import Self
 

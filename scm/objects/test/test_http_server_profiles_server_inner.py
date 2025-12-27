@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
+from scm.objects.models.http_server_profiles_server_inner import HttpServerProfilesServerInner
 
 class TestHttpServerProfilesServerInner(unittest.TestCase):
     """HttpServerProfilesServerInner unit test stubs"""

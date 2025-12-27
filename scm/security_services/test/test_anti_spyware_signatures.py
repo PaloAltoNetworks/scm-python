@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.anti_spyware_signatures import AntiSpywareSignatures
+from scm.security_services.models.anti_spyware_signatures import AntiSpywareSignatures
 
 class TestAntiSpywareSignatures(unittest.TestCase):
     """AntiSpywareSignatures unit test stubs"""
@@ -43,16 +43,16 @@ class TestAntiSpywareSignatures(unittest.TestCase):
                 cve = [
                     ''
                     ],
-                default_action = scm_security_services.models.anti_spyware_signatures_default_action.anti_spyware_signatures_default_action(
-                    alert = scm_security_services.models.alert.alert(), 
-                    allow = scm_security_services.models.allow.allow(), 
-                    block_ip = scm_security_services.models.anti_spyware_signatures_default_action_block_ip.anti_spyware_signatures_default_action_block_ip(
+                default_action = scm.security_services.models.anti_spyware_signatures_default_action.anti_spyware_signatures_default_action(
+                    alert = scm.security_services.models.alert.alert(), 
+                    allow = scm.security_services.models.allow.allow(), 
+                    block_ip = scm.security_services.models.anti_spyware_signatures_default_action_block_ip.anti_spyware_signatures_default_action_block_ip(
                         duration = 1, 
                         track_by = 'source-and-destination', ), 
-                    drop = scm_security_services.models.drop.drop(), 
-                    reset_both = scm_security_services.models.reset_both.reset_both(), 
-                    reset_client = scm_security_services.models.reset_client.reset_client(), 
-                    reset_server = scm_security_services.models.reset_server.reset_server(), ),
+                    drop = scm.security_services.models.drop.drop(), 
+                    reset_both = scm.security_services.models.reset_both.reset_both(), 
+                    reset_client = scm.security_services.models.reset_client.reset_client(), 
+                    reset_server = scm.security_services.models.reset_server.reset_server(), ),
                 device = 'My Device',
                 direction = 'client2server',
                 folder = 'My Folder',
@@ -61,24 +61,24 @@ class TestAntiSpywareSignatures(unittest.TestCase):
                     ''
                     ],
                 severity = 'critical',
-                signature = scm_security_services.models.anti_spyware_signatures_signature.anti_spyware_signatures_signature(
-                    combination = scm_security_services.models.anti_spyware_signatures_signature_combination.anti_spyware_signatures_signature_combination(
+                signature = scm.security_services.models.anti_spyware_signatures_signature.anti_spyware_signatures_signature(
+                    combination = scm.security_services.models.anti_spyware_signatures_signature_combination.anti_spyware_signatures_signature_combination(
                         and_condition = [
-                            scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
+                            scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner(
                                 name = '', 
                                 or_condition = [
-                                    scm_security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
+                                    scm.security_services.models.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner.anti_spyware_signatures_signature_combination_and_condition_inner_or_condition_inner(
                                         name = '', 
                                         threat_id = '', )
                                     ], )
                             ], 
                         order_free = True, 
-                        time_attribute = scm_security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
+                        time_attribute = scm.security_services.models.anti_spyware_signatures_signature_combination_time_attribute.anti_spyware_signatures_signature_combination_time_attribute(
                             interval = 1, 
                             threshold = 1, 
                             track_by = 'source-and-destination', ), ), 
                     standard = [
-                        scm_security_services.models.anti_spyware_signatures_signature_standard_inner.anti_spyware_signatures_signature_standard_inner(
+                        scm.security_services.models.anti_spyware_signatures_signature_standard_inner.anti_spyware_signatures_signature_standard_inner(
                             comment = '', 
                             name = '', 
                             order_free = True, 

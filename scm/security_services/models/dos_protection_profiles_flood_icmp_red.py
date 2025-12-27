@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.dos_protection_profiles_flood_icmp_red_block import DosProtectionProfilesFloodIcmpRedBlock
+from scm.security_services.models.dos_protection_profiles_flood_icmp_red_block import DosProtectionProfilesFloodIcmpRedBlock
 from typing import Optional, Set
 from typing_extensions import Self
 

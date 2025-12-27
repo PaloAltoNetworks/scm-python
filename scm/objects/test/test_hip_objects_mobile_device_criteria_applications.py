@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_mobile_device_criteria_applications import HipObjectsMobileDeviceCriteriaApplications
+from scm.objects.models.hip_objects_mobile_device_criteria_applications import HipObjectsMobileDeviceCriteriaApplications
 
 class TestHipObjectsMobileDeviceCriteriaApplications(unittest.TestCase):
     """HipObjectsMobileDeviceCriteriaApplications unit test stubs"""
@@ -36,18 +36,18 @@ class TestHipObjectsMobileDeviceCriteriaApplications(unittest.TestCase):
         model = HipObjectsMobileDeviceCriteriaApplications()
         if include_optional:
             return HipObjectsMobileDeviceCriteriaApplications(
-                has_malware = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
-                    no = scm_objects.models.no.no(), 
-                    yes = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
+                has_malware = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
+                    no = scm.objects.models.no.no(), 
+                    yes = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
                         excludes = [
-                            scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                            scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                                 hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                 name = '', 
                                 package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                             ], ), ),
                 has_unmanaged_app = True,
                 includes = [
-                    scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                    scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                         hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                         name = '', 
                         package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )

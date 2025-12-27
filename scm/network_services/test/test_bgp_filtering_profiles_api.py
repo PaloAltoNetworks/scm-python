@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.bgp_filtering_profiles_api import BGPFilteringProfilesApi
+from scm.network_services.api.bgp_filtering_profiles_api import BGPFilteringProfilesApi
 
 
 class TestBGPFilteringProfilesApi(unittest.TestCase):

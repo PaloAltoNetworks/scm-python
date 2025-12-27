@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
+from scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
 
 class TestPbfRulesEnforceSymmetricReturnNexthopAddressListInner(unittest.TestCase):
     """PbfRulesEnforceSymmetricReturnNexthopAddressListInner unit test stubs"""

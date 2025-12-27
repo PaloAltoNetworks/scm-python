@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.kerberos_server_profiles import KerberosServerProfiles
+from scm.identity_services.models.kerberos_server_profiles import KerberosServerProfiles
 
 class TestKerberosServerProfiles(unittest.TestCase):
     """KerberosServerProfiles unit test stubs"""
@@ -41,7 +41,7 @@ class TestKerberosServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_identity_services.models.kerberos_server_profiles_server_inner.kerberos_server_profiles_server_inner(
+                    scm.identity_services.models.kerberos_server_profiles_server_inner.kerberos_server_profiles_server_inner(
                         host = '', 
                         name = '', 
                         port = 1, )
@@ -53,7 +53,7 @@ class TestKerberosServerProfiles(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 server = [
-                    scm_identity_services.models.kerberos_server_profiles_server_inner.kerberos_server_profiles_server_inner(
+                    scm.identity_services.models.kerberos_server_profiles_server_inner.kerberos_server_profiles_server_inner(
                         host = '', 
                         name = '', 
                         port = 1, )

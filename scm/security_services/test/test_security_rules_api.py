@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.security_rules_api import SecurityRulesApi
+from scm.security_services.api.security_rules_api import SecurityRulesApi
 
 
 class TestSecurityRulesApi(unittest.TestCase):

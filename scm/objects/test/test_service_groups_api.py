@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.api.service_groups_api import ServiceGroupsApi
+from scm.objects.api.service_groups_api import ServiceGroupsApi
 
 
 class TestServiceGroupsApi(unittest.TestCase):

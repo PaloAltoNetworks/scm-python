@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.applications import Applications
+from scm.objects.models.applications import Applications
 
 class TestApplications(unittest.TestCase):
     """Applications unit test stubs"""
@@ -41,11 +41,11 @@ class TestApplications(unittest.TestCase):
                 category = '',
                 consume_big_bandwidth = True,
                 data_ident = True,
-                default = scm_objects.models.applications_default.applications_default(
-                    ident_by_icmp6_type = scm_objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
+                default = scm.objects.models.applications_default.applications_default(
+                    ident_by_icmp6_type = scm.objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
                         code = '0,1-255', 
                         type = '0,1-255', ), 
-                    ident_by_icmp_type = scm_objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
+                    ident_by_icmp_type = scm.objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
                         code = '0,1-255', 
                         type = '0,1-255', ), 
                     ident_by_ip_protocol = '0,1-255', 
@@ -66,31 +66,31 @@ class TestApplications(unittest.TestCase):
                 prone_to_misuse = True,
                 risk = None,
                 signature = [
-                    scm_objects.models.applications_signature_inner.applications_signature_inner(
+                    scm.objects.models.applications_signature_inner.applications_signature_inner(
                         and_condition = [
-                            scm_objects.models.applications_signature_inner_and_condition_inner.applications_signature_inner_and_condition_inner(
+                            scm.objects.models.applications_signature_inner_and_condition_inner.applications_signature_inner_and_condition_inner(
                                 name = '', 
                                 or_condition = [
-                                    scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner.applications_signature_inner_and_condition_inner_or_condition_inner(
+                                    scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner.applications_signature_inner_and_condition_inner_or_condition_inner(
                                         name = '', 
-                                        operator = scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator.applications_signature_inner_and_condition_inner_or_condition_inner_operator(
-                                            equal_to = scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_equal_to.applications_signature_inner_and_condition_inner_or_condition_inner_operator_equal_to(
+                                        operator = scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator.applications_signature_inner_and_condition_inner_or_condition_inner_operator(
+                                            equal_to = scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_equal_to.applications_signature_inner_and_condition_inner_or_condition_inner_operator_equal_to(
                                                 context = '', 
                                                 mask = '0xECB02084', 
                                                 position = '', 
                                                 value = '', ), 
-                                            greater_than = scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                                            greater_than = scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                                                 context = '', 
                                                 qualifier = [
-                                                    scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
+                                                    scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than_qualifier_inner(
                                                         name = '', 
                                                         value = '', )
                                                     ], 
                                                 value = 0, ), 
-                                            less_than = scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than(
+                                            less_than = scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than.applications_signature_inner_and_condition_inner_or_condition_inner_operator_greater_than(
                                                 context = '', 
                                                 value = 0, ), 
-                                            pattern_match = scm_objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
+                                            pattern_match = scm.objects.models.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match.applications_signature_inner_and_condition_inner_or_condition_inner_operator_pattern_match(
                                                 context = '', 
                                                 pattern = '', ), ), )
                                     ], )

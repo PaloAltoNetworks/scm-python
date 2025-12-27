@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_host_info_criteria import HipObjectsHostInfoCriteria
+from scm.objects.models.hip_objects_host_info_criteria import HipObjectsHostInfoCriteria
 
 class TestHipObjectsHostInfoCriteria(unittest.TestCase):
     """HipObjectsHostInfoCriteria unit test stubs"""
@@ -36,31 +36,31 @@ class TestHipObjectsHostInfoCriteria(unittest.TestCase):
         model = HipObjectsHostInfoCriteria()
         if include_optional:
             return HipObjectsHostInfoCriteria(
-                client_version = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                client_version = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                     contains = '', 
                     is = '', 
                     is_not = '', ),
-                domain = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                domain = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                     contains = '', 
                     is = '', 
                     is_not = '', ),
-                host_id = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                host_id = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                     contains = '', 
                     is = '', 
                     is_not = '', ),
-                host_name = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                host_name = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                     contains = '', 
                     is = '', 
                     is_not = '', ),
                 managed = True,
-                os = scm_objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
-                    contains = scm_objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
+                os = scm.objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
+                    contains = scm.objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
                         apple = 'All', 
                         google = 'All', 
                         linux = 'All', 
                         microsoft = 'All', 
                         other = '', ), ),
-                serial_number = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                serial_number = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                     contains = '', 
                     is = '', 
                     is_not = '', )

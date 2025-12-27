@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles_algorithm_rsa import ScepProfilesAlgorithmRsa
+from scm.identity_services.models.scep_profiles_algorithm_rsa import ScepProfilesAlgorithmRsa
 
 class TestScepProfilesAlgorithmRsa(unittest.TestCase):
     """ScepProfilesAlgorithmRsa unit test stubs"""

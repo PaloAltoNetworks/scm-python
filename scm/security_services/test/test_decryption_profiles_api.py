@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.decryption_profiles_api import DecryptionProfilesApi
+from scm.security_services.api.decryption_profiles_api import DecryptionProfilesApi
 
 
 class TestDecryptionProfilesApi(unittest.TestCase):

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
+from scm.identity_services.models.tls_service_profiles_protocol_settings import TlsServiceProfilesProtocolSettings
 
 # TODO update the JSON string below
 json = "{}"

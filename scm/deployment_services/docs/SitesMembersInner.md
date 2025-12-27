@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.sites_members_inner import SitesMembersInner
+from scm.deployment_services.models.sites_members_inner import SitesMembersInner
 
 # TODO update the JSON string below
 json = "{}"

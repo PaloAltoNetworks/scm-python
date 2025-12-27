@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.update_schedule_update_schedule_threats_recurring import UpdateScheduleUpdateScheduleThreatsRecurring
+from scm.device_settings.models.update_schedule_update_schedule_threats_recurring import UpdateScheduleUpdateScheduleThreatsRecurring
 
 class TestUpdateScheduleUpdateScheduleThreatsRecurring(unittest.TestCase):
     """UpdateScheduleUpdateScheduleThreatsRecurring unit test stubs"""
@@ -36,23 +36,23 @@ class TestUpdateScheduleUpdateScheduleThreatsRecurring(unittest.TestCase):
         model = UpdateScheduleUpdateScheduleThreatsRecurring()
         if include_optional:
             return UpdateScheduleUpdateScheduleThreatsRecurring(
-                daily = scm_device_settings.models.update_schedule_update_schedule_threats_recurring_daily.update_schedule_update_schedule_threats_recurring_daily(
+                daily = scm.device_settings.models.update_schedule_update_schedule_threats_recurring_daily.update_schedule_update_schedule_threats_recurring_daily(
                     action = 'download-only', 
                     at = '23:20', 
                     disable_new_content = True, ),
-                every_30_mins = scm_device_settings.models.update_schedule_update_schedule_threats_recurring_every_30_mins.update_schedule_update_schedule_threats_recurring_every_30_mins(
+                every_30_mins = scm.device_settings.models.update_schedule_update_schedule_threats_recurring_every_30_mins.update_schedule_update_schedule_threats_recurring_every_30_mins(
                     action = 'download-only', 
                     at = 0, 
                     disable_new_content = True, ),
-                hourly = scm_device_settings.models.update_schedule_update_schedule_threats_recurring_hourly.update_schedule_update_schedule_threats_recurring_hourly(
+                hourly = scm.device_settings.models.update_schedule_update_schedule_threats_recurring_hourly.update_schedule_update_schedule_threats_recurring_hourly(
                     action = 'download-only', 
                     at = 0, 
                     disable_new_content = True, ),
                 new_app_threshold = 1,
-                var_none = scm_device_settings.models.none.none(),
+                var_none = scm.device_settings.models.none.none(),
                 sync_to_peer = True,
                 threshold = 1,
-                weekly = scm_device_settings.models.update_schedule_update_schedule_threats_recurring_weekly.update_schedule_update_schedule_threats_recurring_weekly(
+                weekly = scm.device_settings.models.update_schedule_update_schedule_threats_recurring_weekly.update_schedule_update_schedule_threats_recurring_weekly(
                     action = 'download-only', 
                     at = '23:20', 
                     day_of_week = 'sunday', 

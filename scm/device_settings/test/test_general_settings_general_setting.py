@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
+from scm.device_settings.models.general_settings_general_setting import GeneralSettingsGeneralSetting
 
 class TestGeneralSettingsGeneralSetting(unittest.TestCase):
     """GeneralSettingsGeneralSetting unit test stubs"""
@@ -38,7 +38,7 @@ class TestGeneralSettingsGeneralSetting(unittest.TestCase):
             return GeneralSettingsGeneralSetting(
                 auto_mac_detect = True,
                 fail_open = True,
-                management = scm_device_settings.models.general_settings_general_setting_management.general_settings_general_setting_management(
+                management = scm.device_settings.models.general_settings_general_setting_management.general_settings_general_setting_management(
                     auto_acquire_commit_lock = True, 
                     enable_certificate_expiration_check = True, ),
                 tunnel_acceleration = True

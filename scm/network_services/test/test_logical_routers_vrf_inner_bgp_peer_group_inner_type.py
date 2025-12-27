@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type import LogicalRoutersVrfInnerBgpPeerGroupInnerType
+from scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type import LogicalRoutersVrfInnerBgpPeerGroupInnerType
 
 class TestLogicalRoutersVrfInnerBgpPeerGroupInnerType(unittest.TestCase):
     """LogicalRoutersVrfInnerBgpPeerGroupInnerType unit test stubs"""
@@ -36,15 +36,15 @@ class TestLogicalRoutersVrfInnerBgpPeerGroupInnerType(unittest.TestCase):
         model = LogicalRoutersVrfInnerBgpPeerGroupInnerType()
         if include_optional:
             return LogicalRoutersVrfInnerBgpPeerGroupInnerType(
-                ebgp = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp(
+                ebgp = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp(
                     export_nexthop = '', 
                     import_nexthop = '', 
                     remove_private_as = True, ),
-                ebgp_confed = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
+                ebgp_confed = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
                     export_nexthop = '', ),
-                ibgp = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
+                ibgp = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
                     export_nexthop = '', ),
-                ibgp_confed = scm_network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
+                ibgp_confed = scm.network_services.models.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed.logical_routers_vrf_inner_bgp_peer_group_inner_type_ebgp_confed(
                     export_nexthop = '', )
             )
         else:

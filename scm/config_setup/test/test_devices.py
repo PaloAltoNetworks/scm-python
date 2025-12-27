@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.devices import Devices
+from scm.config_setup.models.devices import Devices
 
 class TestDevices(unittest.TestCase):
     """Devices unit test stubs"""
@@ -41,7 +41,7 @@ class TestDevices(unittest.TestCase):
                 app_version = '',
                 av_release_date = '',
                 available_licensess = [
-                    scm_config_setup.models.devices_available_licensess_inner.devices_available_licensess_inner(
+                    scm.config_setup.models.devices_available_licensess_inner.devices_available_licensess_inner(
                         authcode = '', 
                         expires = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                         feature = '', 
@@ -62,7 +62,7 @@ class TestDevices(unittest.TestCase):
                 hostname = '',
                 id = '',
                 installed_licenses = [
-                    scm_config_setup.models.devices_installed_licenses_inner.devices_installed_licenses_inner(
+                    scm.config_setup.models.devices_installed_licenses_inner.devices_installed_licenses_inner(
                         authcode = '', 
                         expired = '', 
                         expires = '', 

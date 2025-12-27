@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.aggregate_interfaces_api import AggregateInterfacesApi
+from scm.network_services.api.aggregate_interfaces_api import AggregateInterfacesApi
 
 
 class TestAggregateInterfacesApi(unittest.TestCase):

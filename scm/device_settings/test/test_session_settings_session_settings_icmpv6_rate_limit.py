@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.session_settings_session_settings_icmpv6_rate_limit import SessionSettingsSessionSettingsIcmpv6RateLimit
+from scm.device_settings.models.session_settings_session_settings_icmpv6_rate_limit import SessionSettingsSessionSettingsIcmpv6RateLimit
 
 class TestSessionSettingsSessionSettingsIcmpv6RateLimit(unittest.TestCase):
     """SessionSettingsSessionSettingsIcmpv6RateLimit unit test stubs"""

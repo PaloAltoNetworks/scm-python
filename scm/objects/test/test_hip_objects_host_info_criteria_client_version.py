@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_host_info_criteria_client_version import HipObjectsHostInfoCriteriaClientVersion
+from scm.objects.models.hip_objects_host_info_criteria_client_version import HipObjectsHostInfoCriteriaClientVersion
 
 class TestHipObjectsHostInfoCriteriaClientVersion(unittest.TestCase):
     """HipObjectsHostInfoCriteriaClientVersion unit test stubs"""

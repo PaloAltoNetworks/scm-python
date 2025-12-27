@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.edit_shared_infrastructure_settings_connector_application_blocks import EditSharedInfrastructureSettingsConnectorApplicationBlocks
+from scm.deployment_services.models.edit_shared_infrastructure_settings_connector_application_blocks import EditSharedInfrastructureSettingsConnectorApplicationBlocks
 
 class TestEditSharedInfrastructureSettingsConnectorApplicationBlocks(unittest.TestCase):
     """EditSharedInfrastructureSettingsConnectorApplicationBlocks unit test stubs"""

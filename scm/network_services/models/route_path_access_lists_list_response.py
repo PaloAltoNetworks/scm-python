@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_network_services.models.route_path_access_lists import RoutePathAccessLists
+from scm.network_services.models.route_path_access_lists import RoutePathAccessLists
 from typing import Optional, Set
 from typing_extensions import Self
 

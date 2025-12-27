@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
+from scm.identity_services.models.scep_profiles_algorithm import ScepProfilesAlgorithm
 
 class TestScepProfilesAlgorithm(unittest.TestCase):
     """ScepProfilesAlgorithm unit test stubs"""
@@ -36,7 +36,7 @@ class TestScepProfilesAlgorithm(unittest.TestCase):
         model = ScepProfilesAlgorithm()
         if include_optional:
             return ScepProfilesAlgorithm(
-                rsa = scm_identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
+                rsa = scm.identity_services.models.scep_profiles_algorithm_rsa.scep_profiles_algorithm_rsa(
                     rsa_nbits = 1024, )
             )
         else:

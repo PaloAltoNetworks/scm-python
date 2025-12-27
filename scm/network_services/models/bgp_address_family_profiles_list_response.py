@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_network_services.models.bgp_address_family_profiles import BgpAddressFamilyProfiles
+from scm.network_services.models.bgp_address_family_profiles import BgpAddressFamilyProfiles
 from typing import Optional, Set
 from typing_extensions import Self
 

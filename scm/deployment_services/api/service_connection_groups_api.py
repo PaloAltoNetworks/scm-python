@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm_deployment_services.models.service_connection_groups import ServiceConnectionGroups
-from scm_deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
+from scm.deployment_services.models.service_connection_groups import ServiceConnectionGroups
+from scm.deployment_services.models.service_connection_groups_list_response import ServiceConnectionGroupsListResponse
 
-from scm_deployment_services.api_client import ApiClient, RequestSerialized
-from scm_deployment_services.api_response import ApiResponse
-from scm_deployment_services.rest import RESTResponseType
+from scm.deployment_services.api_client import ApiClient, RequestSerialized
+from scm.deployment_services.api_response import ApiResponse
+from scm.deployment_services.rest import RESTResponseType
 
 
 class ServiceConnectionGroupsApi:

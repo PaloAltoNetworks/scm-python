@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.ldap_server_profiles_server_inner import LdapServerProfilesServerInner
+from scm.identity_services.models.ldap_server_profiles_server_inner import LdapServerProfilesServerInner
 
 class TestLdapServerProfilesServerInner(unittest.TestCase):
     """LdapServerProfilesServerInner unit test stubs"""

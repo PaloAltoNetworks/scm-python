@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.internet_rule_type import InternetRuleType
+from scm.security_services.models.internet_rule_type import InternetRuleType
 
 class TestInternetRuleType(unittest.TestCase):
     """InternetRuleType unit test stubs"""
@@ -38,31 +38,31 @@ class TestInternetRuleType(unittest.TestCase):
             return InternetRuleType(
                 action = 'allow',
                 allow_url_category = [
-                    scm_security_services.models.internet_rule_type_allow_url_category_inner.internet_rule_type_allow_url_category_inner(
+                    scm.security_services.models.internet_rule_type_allow_url_category_inner.internet_rule_type_allow_url_category_inner(
                         additional_action = 'none', 
                         credential_enforcement = 'enabled', 
                         decryption = 'enabled', 
                         dlp = '', 
-                        file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                        file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                             download = 'allow-all-file-types', 
                             upload = 'allow-all-file-types', ), 
                         isolation_profiles = 'none', 
                         name = '', )
                     ],
                 allow_web_application = [
-                    scm_security_services.models.internet_rule_type_allow_web_application_inner.internet_rule_type_allow_web_application_inner(
+                    scm.security_services.models.internet_rule_type_allow_web_application_inner.internet_rule_type_allow_web_application_inner(
                         application_function = [
                             ''
                             ], 
                         dlp = '', 
-                        file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                        file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                             download = 'allow-all-file-types', 
                             upload = 'allow-all-file-types', ), 
                         name = '', 
-                        saas_enterprise_control = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control.internet_rule_type_allow_web_application_inner_saas_enterprise_control(
-                            consumer_access = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access(
+                        saas_enterprise_control = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control.internet_rule_type_allow_web_application_inner_saas_enterprise_control(
+                            consumer_access = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_consumer_access(
                                 enable = 'yes', ), 
-                            enterprise_access = scm_security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access(
+                            enterprise_access = scm.security_services.models.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access.internet_rule_type_allow_web_application_inner_saas_enterprise_control_enterprise_access(
                                 enable = 'yes', 
                                 tenant_restrictions = [
                                     ''
@@ -73,7 +73,7 @@ class TestInternetRuleType(unittest.TestCase):
                         saas_user_list = [
                             ''
                             ], 
-                        tenant_control = scm_security_services.models.internet_rule_type_allow_web_application_inner_tenant_control.internet_rule_type_allow_web_application_inner_tenant_control(
+                        tenant_control = scm.security_services.models.internet_rule_type_allow_web_application_inner_tenant_control.internet_rule_type_allow_web_application_inner_tenant_control(
                             allowed_activities = [
                                 ''
                                 ], 
@@ -92,9 +92,9 @@ class TestInternetRuleType(unittest.TestCase):
                 block_web_application = [
                     ''
                     ],
-                default_profile_settings = scm_security_services.models.internet_rule_type_default_profile_settings.internet_rule_type_default_profile_settings(
+                default_profile_settings = scm.security_services.models.internet_rule_type_default_profile_settings.internet_rule_type_default_profile_settings(
                     dlp = '', 
-                    file_control = scm_security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
+                    file_control = scm.security_services.models.internet_rule_type_allow_url_category_inner_file_control.internet_rule_type_allow_url_category_inner_file_control(
                         download = 'allow-all-file-types', 
                         upload = 'allow-all-file-types', ), ),
                 description = '',
@@ -109,14 +109,14 @@ class TestInternetRuleType(unittest.TestCase):
                     'any'
                     ],
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                log_settings = scm_security_services.models.internet_rule_type_log_settings.internet_rule_type_log_settings(
+                log_settings = scm.security_services.models.internet_rule_type_log_settings.internet_rule_type_log_settings(
                     log_sessions = True, ),
                 name = '',
                 negate_source = True,
                 negate_user = True,
                 policy_type = 'Security',
                 schedule = '',
-                security_settings = scm_security_services.models.internet_rule_type_security_settings.internet_rule_type_security_settings(
+                security_settings = scm.security_services.models.internet_rule_type_security_settings.internet_rule_type_security_settings(
                     anti_spyware = 'yes', 
                     virus_and_wildfire_analysis = 'yes', 
                     vulnerability = 'yes', ),

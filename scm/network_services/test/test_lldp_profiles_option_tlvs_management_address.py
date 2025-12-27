@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress
+from scm.network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress
 
 class TestLldpProfilesOptionTlvsManagementAddress(unittest.TestCase):
     """LldpProfilesOptionTlvsManagementAddress unit test stubs"""
@@ -38,7 +38,7 @@ class TestLldpProfilesOptionTlvsManagementAddress(unittest.TestCase):
             return LldpProfilesOptionTlvsManagementAddress(
                 enabled = True,
                 iplist = [
-                    scm_network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner.lldp_profiles_option_tlvs_management_address_iplist_inner(
+                    scm.network_services.models.lldp_profiles_option_tlvs_management_address_iplist_inner.lldp_profiles_option_tlvs_management_address_iplist_inner(
                         interface = '', 
                         ipv4 = '', 
                         ipv6 = '', 

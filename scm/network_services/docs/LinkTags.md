@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.link_tags import LinkTags
+from scm.network_services.models.link_tags import LinkTags
 
 # TODO update the JSON string below
 json = "{}"

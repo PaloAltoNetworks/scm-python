@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.scep_profiles_api import SCEPProfilesApi
+from scm.identity_services.api.scep_profiles_api import SCEPProfilesApi
 
 
 class TestSCEPProfilesApi(unittest.TestCase):

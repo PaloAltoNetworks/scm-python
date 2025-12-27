@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.regions_list_response import RegionsListResponse
+from scm.objects.models.regions_list_response import RegionsListResponse
 
 class TestRegionsListResponse(unittest.TestCase):
     """RegionsListResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles import ZoneProtectionProfiles
+from scm.network_services.models.zone_protection_profiles import ZoneProtectionProfiles
 
 class TestZoneProtectionProfiles(unittest.TestCase):
     """ZoneProtectionProfiles unit test stubs"""
@@ -40,26 +40,26 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                 description = '',
                 device = 'My Device',
                 discard_icmp_embedded_error = True,
-                flood = scm_network_services.models.zone_protection_profiles_flood.zone_protection_profiles_flood(
-                    icmp = scm_network_services.models.zone_protection_profiles_flood_icmp.zone_protection_profiles_flood_icmp(
+                flood = scm.network_services.models.zone_protection_profiles_flood.zone_protection_profiles_flood(
+                    icmp = scm.network_services.models.zone_protection_profiles_flood_icmp.zone_protection_profiles_flood_icmp(
                         enable = True, 
-                        red = scm_network_services.models.zone_protection_profiles_flood_icmp_red.zone_protection_profiles_flood_icmp_red(
+                        red = scm.network_services.models.zone_protection_profiles_flood_icmp_red.zone_protection_profiles_flood_icmp_red(
                             activate_rate = 10000, 
                             alarm_rate = 10000, 
                             maximal_rate = 40000, ), ), 
-                    icmpv6 = scm_network_services.models.zone_protection_profiles_flood_icmpv6.zone_protection_profiles_flood_icmpv6(
+                    icmpv6 = scm.network_services.models.zone_protection_profiles_flood_icmpv6.zone_protection_profiles_flood_icmpv6(
                         enable = True, ), 
-                    other_ip = scm_network_services.models.zone_protection_profiles_flood_other_ip.zone_protection_profiles_flood_other_ip(
+                    other_ip = scm.network_services.models.zone_protection_profiles_flood_other_ip.zone_protection_profiles_flood_other_ip(
                         enable = True, ), 
-                    sctp_init = scm_network_services.models.zone_protection_profiles_flood_sctp_init.zone_protection_profiles_flood_sctp_init(
+                    sctp_init = scm.network_services.models.zone_protection_profiles_flood_sctp_init.zone_protection_profiles_flood_sctp_init(
                         enable = True, ), 
-                    tcp_syn = scm_network_services.models.zone_protection_profiles_flood_tcp_syn.zone_protection_profiles_flood_tcp_syn(
+                    tcp_syn = scm.network_services.models.zone_protection_profiles_flood_tcp_syn.zone_protection_profiles_flood_tcp_syn(
                         enable = True, 
-                        syn_cookies = scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
+                        syn_cookies = scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies.zone_protection_profiles_flood_tcp_syn_syn_cookies(
                             activate_rate = 0, 
                             alarm_rate = 10000, 
                             maximal_rate = 1000000, ), ), 
-                    udp = scm_network_services.models.zone_protection_profiles_flood_udp.zone_protection_profiles_flood_udp(
+                    udp = scm.network_services.models.zone_protection_profiles_flood_udp.zone_protection_profiles_flood_udp(
                         enable = True, ), ),
                 folder = 'My Folder',
                 fragmented_traffic_discard = True,
@@ -67,14 +67,14 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                 icmp_large_packet_discard = True,
                 icmp_ping_zero_id_discard = True,
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                ipv6 = scm_network_services.models.zone_protection_profiles_ipv6.zone_protection_profiles_ipv6(
+                ipv6 = scm.network_services.models.zone_protection_profiles_ipv6.zone_protection_profiles_ipv6(
                     anycast_source = True, 
-                    filter_ext_hdr = scm_network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr.zone_protection_profiles_ipv6_filter_ext_hdr(
+                    filter_ext_hdr = scm.network_services.models.zone_protection_profiles_ipv6_filter_ext_hdr.zone_protection_profiles_ipv6_filter_ext_hdr(
                         dest_option_hdr = True, 
                         hop_by_hop_hdr = True, 
                         routing_hdr = True, ), 
                     icmpv6_too_big_small_mtu_discard = True, 
-                    ignore_inv_pkt = scm_network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt.zone_protection_profiles_ipv6_ignore_inv_pkt(
+                    ignore_inv_pkt = scm.network_services.models.zone_protection_profiles_ipv6_ignore_inv_pkt.zone_protection_profiles_ipv6_ignore_inv_pkt(
                         dest_unreach = True, 
                         param_problem = True, 
                         pkt_too_big = True, 
@@ -91,9 +91,9 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                     routing_header_255 = True, 
                     routing_header_3 = True, 
                     routing_header_4_252 = True, ),
-                l2_sec_group_tag_protection = scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection.zone_protection_profiles_l2_sec_group_tag_protection(
+                l2_sec_group_tag_protection = scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection.zone_protection_profiles_l2_sec_group_tag_protection(
                     tags = [
-                        scm_network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner(
+                        scm.network_services.models.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner.zone_protection_profiles_l2_sec_group_tag_protection_tags_inner(
                             enable = True, 
                             name = '', 
                             tag = '', )
@@ -103,10 +103,10 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                 mismatched_overlapping_tcp_segment_discard = True,
                 mptcp_option_strip = 'global',
                 name = '',
-                non_ip_protocol = scm_network_services.models.zone_protection_profiles_non_ip_protocol.zone_protection_profiles_non_ip_protocol(
+                non_ip_protocol = scm.network_services.models.zone_protection_profiles_non_ip_protocol.zone_protection_profiles_non_ip_protocol(
                     list_type = 'exclude', 
                     protocol = [
-                        scm_network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner.zone_protection_profiles_non_ip_protocol_protocol_inner(
+                        scm.network_services.models.zone_protection_profiles_non_ip_protocol_protocol_inner.zone_protection_profiles_non_ip_protocol_protocol_inner(
                             enable = True, 
                             ether_type = '', 
                             name = '', )
@@ -114,12 +114,12 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                 record_route_discard = True,
                 reject_non_syn_tcp = 'global',
                 scan = [
-                    scm_network_services.models.zone_protection_profiles_scan_inner.zone_protection_profiles_scan_inner(
-                        action = scm_network_services.models.zone_protection_profiles_scan_inner_action.zone_protection_profiles_scan_inner_action(
-                            alert = scm_network_services.models.alert.alert(), 
-                            allow = scm_network_services.models.allow.allow(), 
-                            block = scm_network_services.models.block.block(), 
-                            block_ip = scm_network_services.models.zone_protection_profiles_scan_inner_action_block_ip.zone_protection_profiles_scan_inner_action_block_ip(
+                    scm.network_services.models.zone_protection_profiles_scan_inner.zone_protection_profiles_scan_inner(
+                        action = scm.network_services.models.zone_protection_profiles_scan_inner_action.zone_protection_profiles_scan_inner_action(
+                            alert = scm.network_services.models.alert.alert(), 
+                            allow = scm.network_services.models.allow.allow(), 
+                            block = scm.network_services.models.block.block(), 
+                            block_ip = scm.network_services.models.zone_protection_profiles_scan_inner_action_block_ip.zone_protection_profiles_scan_inner_action_block_ip(
                                 duration = 1, 
                                 track_by = 'source-and-destination', ), ), 
                         interval = 2, 
@@ -127,7 +127,7 @@ class TestZoneProtectionProfiles(unittest.TestCase):
                         threshold = 100, )
                     ],
                 scan_white_list = [
-                    scm_network_services.models.zone_protection_profiles_scan_white_list_inner.zone_protection_profiles_scan_white_list_inner(
+                    scm.network_services.models.zone_protection_profiles_scan_white_list_inner.zone_protection_profiles_scan_white_list_inner(
                         ipv4 = '', 
                         ipv6 = '', 
                         name = '', )

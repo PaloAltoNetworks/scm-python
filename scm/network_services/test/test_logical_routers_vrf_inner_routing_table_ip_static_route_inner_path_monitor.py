@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor import LogicalRoutersVrfInnerRoutingTableIpStaticRouteInnerPathMonitor
+from scm.network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor import LogicalRoutersVrfInnerRoutingTableIpStaticRouteInnerPathMonitor
 
 class TestLogicalRoutersVrfInnerRoutingTableIpStaticRouteInnerPathMonitor(unittest.TestCase):
     """LogicalRoutersVrfInnerRoutingTableIpStaticRouteInnerPathMonitor unit test stubs"""
@@ -40,7 +40,7 @@ class TestLogicalRoutersVrfInnerRoutingTableIpStaticRouteInnerPathMonitor(unitte
                 failure_condition = 'any',
                 hold_time = 56,
                 monitor_destinations = [
-                    scm_network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner.logical_routers_vrf_inner_routing_table_ip_static_route_inner_path_monitor_monitor_destinations_inner(
                         count = 56, 
                         destination = '', 
                         destination_fqdn = '', 

@@ -1,4 +1,4 @@
-# scm_security_services.DecryptionRulesApi
+# scm.security_services.DecryptionRulesApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/security/v1*
 
@@ -24,14 +24,14 @@ Create a new decryption rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.decryption_rules import DecryptionRules
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.decryption_rules import DecryptionRules
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -41,16 +41,16 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     position = pre # str | The position of a security rule  (default to pre)
-    decryption_rules = scm_security_services.DecryptionRules() # DecryptionRules | Created (optional)
+    decryption_rules = scm.security_services.DecryptionRules() # DecryptionRules | Created (optional)
 
     try:
         # Create a decryption rule
@@ -109,13 +109,13 @@ Delete a decryption rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -125,14 +125,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -190,14 +190,14 @@ Get an existing decryption rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.decryption_rules import DecryptionRules
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.decryption_rules import DecryptionRules
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -207,14 +207,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
 
     try:
@@ -273,14 +273,14 @@ Retrieve a list of decryption rules.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.decryption_rules_list_response import DecryptionRulesListResponse
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -290,14 +290,14 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     position = pre # str | The position of a security rule  (default to pre)
     name = 'name_example' # str | The name of the configuration resource (optional)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
@@ -368,14 +368,14 @@ Move an existing decryption rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.rule_based_move import RuleBasedMove
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.rule_based_move import RuleBasedMove
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -385,16 +385,16 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    rule_based_move = scm_security_services.RuleBasedMove() # RuleBasedMove | OK (optional)
+    rule_based_move = scm.security_services.RuleBasedMove() # RuleBasedMove | OK (optional)
 
     try:
         # Move a decryption rule
@@ -451,14 +451,14 @@ Update an existing decryption rule.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_security_services
-from scm_security_services.models.decryption_rules import DecryptionRules
-from scm_security_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.decryption_rules import DecryptionRules
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
@@ -468,16 +468,16 @@ configuration = scm_security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_security_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_security_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_security_services.DecryptionRulesApi(api_client)
+    api_instance = scm.security_services.DecryptionRulesApi(api_client)
     id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
-    decryption_rules = scm_security_services.DecryptionRules() # DecryptionRules | OK (optional)
+    decryption_rules = scm.security_services.DecryptionRules() # DecryptionRules | OK (optional)
 
     try:
         # Update a decryption rule

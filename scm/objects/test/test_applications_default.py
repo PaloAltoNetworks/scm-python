@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.applications_default import ApplicationsDefault
+from scm.objects.models.applications_default import ApplicationsDefault
 
 class TestApplicationsDefault(unittest.TestCase):
     """ApplicationsDefault unit test stubs"""
@@ -36,10 +36,10 @@ class TestApplicationsDefault(unittest.TestCase):
         model = ApplicationsDefault()
         if include_optional:
             return ApplicationsDefault(
-                ident_by_icmp6_type = scm_objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
+                ident_by_icmp6_type = scm.objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
                     code = '0,1-255', 
                     type = '0,1-255', ),
-                ident_by_icmp_type = scm_objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
+                ident_by_icmp_type = scm.objects.models.applications_default_ident_by_icmp6_type.applications_default_ident_by_icmp6_type(
                     code = '0,1-255', 
                     type = '0,1-255', ),
                 ident_by_ip_protocol = '0,1-255',

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match import BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch
+from scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match import BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch
 
 class TestBgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch(unittest.TestCase):
     """BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch unit test stubs"""
@@ -37,11 +37,11 @@ class TestBgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch(unittes
         if include_optional:
             return BgpRouteMapRedistributionsConnectedStaticRibRouteMapInnerMatch(
                 interface = '',
-                ipv4 = scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4(
-                    address = scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address(
+                ipv4 = scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4(
+                    address = scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_address(
                         access_list = '', 
                         prefix_list = '', ), 
-                    next_hop = scm_network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop(
+                    next_hop = scm.network_services.models.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop.bgp_route_map_redistributions_connected_static_rib_route_map_inner_match_ipv4_next_hop(
                         access_list = '', 
                         prefix_list = '', ), ),
                 metric = 0

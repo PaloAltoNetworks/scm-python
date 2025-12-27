@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.api.authentication_rules_api import AuthenticationRulesApi
+from scm.identity_services.api.authentication_rules_api import AuthenticationRulesApi
 
 
 class TestAuthenticationRulesApi(unittest.TestCase):

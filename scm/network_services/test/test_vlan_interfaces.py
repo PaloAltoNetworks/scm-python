@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.vlan_interfaces import VlanInterfaces
+from scm.network_services.models.vlan_interfaces import VlanInterfaces
 
 class TestVlanInterfaces(unittest.TestCase):
     """VlanInterfaces unit test stubs"""
@@ -37,13 +37,13 @@ class TestVlanInterfaces(unittest.TestCase):
         if include_optional:
             return VlanInterfaces(
                 arp = [
-                    scm_network_services.models.vlan_interfaces_arp_inner.vlan_interfaces_arp_inner(
+                    scm.network_services.models.vlan_interfaces_arp_inner.vlan_interfaces_arp_inner(
                         hw_address = '', 
                         interface = '', 
                         name = '', )
                     ],
                 comment = '',
-                ddns_config = scm_network_services.models.vlan_interfaces_ddns_config.vlan_interfaces_ddns_config(
+                ddns_config = scm.network_services.models.vlan_interfaces_ddns_config.vlan_interfaces_ddns_config(
                     ddns_cert_profile = '', 
                     ddns_enabled = True, 
                     ddns_hostname = '2', 
@@ -53,18 +53,18 @@ class TestVlanInterfaces(unittest.TestCase):
                     ddns_vendor_config = '', ),
                 default_value = 'vlan.123',
                 device = 'My Device',
-                dhcp_client = scm_network_services.models.vlan_interfaces_dhcp_client.vlan_interfaces_dhcp_client(
+                dhcp_client = scm.network_services.models.vlan_interfaces_dhcp_client.vlan_interfaces_dhcp_client(
                     create_default_route = True, 
                     default_route_metric = 1, 
                     enable = True, 
-                    send_hostname = scm_network_services.models.vlan_interfaces_dhcp_client_send_hostname.vlan_interfaces_dhcp_client_send_hostname(
+                    send_hostname = scm.network_services.models.vlan_interfaces_dhcp_client_send_hostname.vlan_interfaces_dhcp_client_send_hostname(
                         enable = True, 
                         hostname = 'system-hostname', ), ),
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 interface_management_profile = 'string',
                 ip = [
-                    scm_network_services.models.vlan_interfaces_ip_inner.vlan_interfaces_ip_inner(
+                    scm.network_services.models.vlan_interfaces_ip_inner.vlan_interfaces_ip_inner(
                         name = '', )
                     ],
                 mtu = 576,

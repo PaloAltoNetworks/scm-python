@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_single_sign_on import AuthenticationProfilesSingleSignOn
+from scm.identity_services.models.authentication_profiles_single_sign_on import AuthenticationProfilesSingleSignOn
 
 class TestAuthenticationProfilesSingleSignOn(unittest.TestCase):
     """AuthenticationProfilesSingleSignOn unit test stubs"""

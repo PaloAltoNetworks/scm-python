@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.mfa_servers_mfa_vendor_type import MfaServersMfaVendorType
+from scm.identity_services.models.mfa_servers_mfa_vendor_type import MfaServersMfaVendorType
 from typing import Optional, Set
 from typing_extensions import Self
 

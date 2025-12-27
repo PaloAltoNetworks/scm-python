@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.external_dynamic_lists_type_ip_recurring_daily import ExternalDynamicListsTypeIpRecurringDaily
-from scm_objects.models.external_dynamic_lists_type_ip_recurring_monthly import ExternalDynamicListsTypeIpRecurringMonthly
-from scm_objects.models.external_dynamic_lists_type_ip_recurring_weekly import ExternalDynamicListsTypeIpRecurringWeekly
+from scm.objects.models.external_dynamic_lists_type_ip_recurring_daily import ExternalDynamicListsTypeIpRecurringDaily
+from scm.objects.models.external_dynamic_lists_type_ip_recurring_monthly import ExternalDynamicListsTypeIpRecurringMonthly
+from scm.objects.models.external_dynamic_lists_type_ip_recurring_weekly import ExternalDynamicListsTypeIpRecurringWeekly
 from typing import Optional, Set
 from typing_extensions import Self
 

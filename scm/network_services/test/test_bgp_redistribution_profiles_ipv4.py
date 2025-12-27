@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_redistribution_profiles_ipv4 import BgpRedistributionProfilesIpv4
+from scm.network_services.models.bgp_redistribution_profiles_ipv4 import BgpRedistributionProfilesIpv4
 
 class TestBgpRedistributionProfilesIpv4(unittest.TestCase):
     """BgpRedistributionProfilesIpv4 unit test stubs"""
@@ -36,16 +36,16 @@ class TestBgpRedistributionProfilesIpv4(unittest.TestCase):
         model = BgpRedistributionProfilesIpv4()
         if include_optional:
             return BgpRedistributionProfilesIpv4(
-                unicast = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast.bgp_redistribution_profiles_ipv4_unicast(
-                    connected = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_connected.bgp_redistribution_profiles_ipv4_unicast_connected(
+                unicast = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast.bgp_redistribution_profiles_ipv4_unicast(
+                    connected = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_connected.bgp_redistribution_profiles_ipv4_unicast_connected(
                         enable = True, 
                         metric = 1, 
                         route_map = '', ), 
-                    ospf = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf.bgp_redistribution_profiles_ipv4_unicast_ospf(
+                    ospf = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf.bgp_redistribution_profiles_ipv4_unicast_ospf(
                         enable = True, 
                         metric = 1, 
                         route_map = '', ), 
-                    static = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_static.bgp_redistribution_profiles_ipv4_unicast_static(
+                    static = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_static.bgp_redistribution_profiles_ipv4_unicast_static(
                         enable = True, 
                         metric = 1, 
                         route_map = '', ), )

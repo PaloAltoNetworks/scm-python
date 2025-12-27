@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.external_dynamic_lists_type_imsi_auth import ExternalDynamicListsTypeImsiAuth
-from scm_objects.models.external_dynamic_lists_type_imsi_recurring import ExternalDynamicListsTypeImsiRecurring
+from scm.objects.models.external_dynamic_lists_type_imsi_auth import ExternalDynamicListsTypeImsiAuth
+from scm.objects.models.external_dynamic_lists_type_imsi_recurring import ExternalDynamicListsTypeImsiRecurring
 from typing import Optional, Set
 from typing_extensions import Self
 

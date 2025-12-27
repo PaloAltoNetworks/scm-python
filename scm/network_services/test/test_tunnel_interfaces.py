@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.tunnel_interfaces import TunnelInterfaces
+from scm.network_services.models.tunnel_interfaces import TunnelInterfaces
 
 class TestTunnelInterfaces(unittest.TestCase):
     """TunnelInterfaces unit test stubs"""
@@ -43,7 +43,7 @@ class TestTunnelInterfaces(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 interface_management_profile = 'string',
                 ip = [
-                    scm_network_services.models.tunnel_interfaces_ip_inner.tunnel_interfaces_ip_inner(
+                    scm.network_services.models.tunnel_interfaces_ip_inner.tunnel_interfaces_ip_inner(
                         name = '', )
                     ],
                 mtu = 576,

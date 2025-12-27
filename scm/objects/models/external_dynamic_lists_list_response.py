@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_objects.models.external_dynamic_lists import ExternalDynamicLists
+from scm.objects.models.external_dynamic_lists import ExternalDynamicLists
 from typing import Optional, Set
 from typing_extensions import Self
 

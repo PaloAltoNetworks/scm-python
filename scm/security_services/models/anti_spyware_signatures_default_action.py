@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_security_services.models.anti_spyware_signatures_default_action_block_ip import AntiSpywareSignaturesDefaultActionBlockIp
+from scm.security_services.models.anti_spyware_signatures_default_action_block_ip import AntiSpywareSignaturesDefaultActionBlockIp
 from typing import Optional, Set
 from typing_extensions import Self
 

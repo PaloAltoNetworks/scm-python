@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner import BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner
+from scm.network_services.models.bgp_route_map_redistributions_connected_static_bgp_route_map_inner import BgpRouteMapRedistributionsConnectedStaticBgpRouteMapInner
 from typing import Optional, Set
 from typing_extensions import Self
 

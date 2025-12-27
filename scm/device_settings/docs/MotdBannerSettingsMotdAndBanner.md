@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.motd_banner_settings_motd_and_banner import MotdBannerSettingsMotdAndBanner
+from scm.device_settings.models.motd_banner_settings_motd_and_banner import MotdBannerSettingsMotdAndBanner
 
 # TODO update the JSON string below
 json = "{}"

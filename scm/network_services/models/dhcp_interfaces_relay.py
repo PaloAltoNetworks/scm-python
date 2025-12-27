@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from scm_network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
+from scm.network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_objects.models.applications import Applications
-from scm_objects.models.applications_list_response import ApplicationsListResponse
+from scm.objects.models.applications import Applications
+from scm.objects.models.applications_list_response import ApplicationsListResponse
 
-from scm_objects.api_client import ApiClient, RequestSerialized
-from scm_objects.api_response import ApiResponse
-from scm_objects.rest import RESTResponseType
+from scm.objects.api_client import ApiClient, RequestSerialized
+from scm.objects.api_response import ApiResponse
+from scm.objects.rest import RESTResponseType
 
 
 class ApplicationsApi:

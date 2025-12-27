@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.file_blocking_profiles_list_response import FileBlockingProfilesListResponse
+from scm.security_services.models.file_blocking_profiles_list_response import FileBlockingProfilesListResponse
 
 class TestFileBlockingProfilesListResponse(unittest.TestCase):
     """FileBlockingProfilesListResponse unit test stubs"""

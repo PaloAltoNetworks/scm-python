@@ -20,15 +20,15 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.certificates_get import CertificatesGet
-from scm_identity_services.models.certificates_list_response import CertificatesListResponse
-from scm_identity_services.models.certificates_post import CertificatesPost
-from scm_identity_services.models.export_certificate_payload import ExportCertificatePayload
-from scm_identity_services.models.export_certificate_response import ExportCertificateResponse
+from scm.identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.models.certificates_list_response import CertificatesListResponse
+from scm.identity_services.models.certificates_post import CertificatesPost
+from scm.identity_services.models.export_certificate_payload import ExportCertificatePayload
+from scm.identity_services.models.export_certificate_response import ExportCertificateResponse
 
-from scm_identity_services.api_client import ApiClient, RequestSerialized
-from scm_identity_services.api_response import ApiResponse
-from scm_identity_services.rest import RESTResponseType
+from scm.identity_services.api_client import ApiClient, RequestSerialized
+from scm.identity_services.api_response import ApiResponse
+from scm.identity_services.rest import RESTResponseType
 
 
 class CertificatesApi:

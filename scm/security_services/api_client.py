@@ -27,11 +27,11 @@ from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
-from scm_security_services.configuration import Configuration
-from scm_security_services.api_response import ApiResponse, T as ApiResponseT
-import scm_security_services.models
-from scm_security_services import rest
-from scm_security_services.exceptions import (
+from scm.security_services.configuration import Configuration
+from scm.security_services.api_response import ApiResponse, T as ApiResponseT
+import scm.security_services.models
+from scm.security_services import rest
+from scm.security_services.exceptions import (
     ApiValueError,
     ApiException,
     BadRequestException,
@@ -450,7 +450,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(scm_security_services.models, klass)
+                klass = getattr(scm.security_services.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

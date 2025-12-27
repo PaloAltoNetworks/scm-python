@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.application_groups import ApplicationGroups
+from scm.objects.models.application_groups import ApplicationGroups
 
 class TestApplicationGroups(unittest.TestCase):
     """ApplicationGroups unit test stubs"""

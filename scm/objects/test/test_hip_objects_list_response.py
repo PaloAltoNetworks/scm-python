@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_list_response import HIPObjectsListResponse
+from scm.objects.models.hip_objects_list_response import HIPObjectsListResponse
 
 class TestHIPObjectsListResponse(unittest.TestCase):
     """HIPObjectsListResponse unit test stubs"""

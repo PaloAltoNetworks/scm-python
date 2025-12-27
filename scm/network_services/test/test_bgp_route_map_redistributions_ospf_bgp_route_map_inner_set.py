@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSet
+from scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set import BgpRouteMapRedistributionsOspfBgpRouteMapInnerSet
 
 class TestBgpRouteMapRedistributionsOspfBgpRouteMapInnerSet(unittest.TestCase):
     """BgpRouteMapRedistributionsOspfBgpRouteMapInnerSet unit test stubs"""
@@ -36,21 +36,21 @@ class TestBgpRouteMapRedistributionsOspfBgpRouteMapInnerSet(unittest.TestCase):
         model = BgpRouteMapRedistributionsOspfBgpRouteMapInnerSet()
         if include_optional:
             return BgpRouteMapRedistributionsOspfBgpRouteMapInnerSet(
-                aggregator = scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator(
+                aggregator = scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_aggregator(
                     as = 1, 
                     router_id = '', ),
                 aspath_prepend = [
                     1
                     ],
                 atomic_aggregate = True,
-                ipv4 = scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4(
+                ipv4 = scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_ipv4(
                     next_hop = '', 
                     source_address = '', ),
                 large_community = [
                     ''
                     ],
                 local_preference = 0,
-                metric = scm_network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_metric.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_metric(
+                metric = scm.network_services.models.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_metric.bgp_route_map_redistributions_ospf_bgp_route_map_inner_set_metric(
                     action = 'set', 
                     value = 0, ),
                 origin = 'none',

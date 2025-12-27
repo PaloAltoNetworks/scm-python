@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.content_id_settings_content_id_application import ContentIdSettingsContentIdApplication
+from scm.device_settings.models.content_id_settings_content_id_application import ContentIdSettingsContentIdApplication
 
 class TestContentIdSettingsContentIdApplication(unittest.TestCase):
     """ContentIdSettingsContentIdApplication unit test stubs"""

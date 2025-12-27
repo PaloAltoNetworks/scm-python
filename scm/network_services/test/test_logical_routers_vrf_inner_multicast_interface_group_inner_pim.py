@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim
+from scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim import LogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim
 
 class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim(unittest.TestCas
         if include_optional:
             return LogicalRoutersVrfInnerMulticastInterfaceGroupInnerPim(
                 allowed_neighbors = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
                         name = '', )
                     ],
                 assert_interval = 56,

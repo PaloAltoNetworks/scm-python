@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address import NatRulesSourceTranslationDynamicIpFallbackInterfaceAddress
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip_fallback_interface_address import NatRulesSourceTranslationDynamicIpFallbackInterfaceAddress
 
 # TODO update the JSON string below
 json = "{}"

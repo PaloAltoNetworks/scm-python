@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.sdwan_traffic_distribution_profiles_api import SDWANTrafficDistributionProfilesApi
+from scm.network_services.api.sdwan_traffic_distribution_profiles_api import SDWANTrafficDistributionProfilesApi
 
 
 class TestSDWANTrafficDistributionProfilesApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.auto_vpn_clusters_api import AutoVPNClustersApi
+from scm.network_services.api.auto_vpn_clusters_api import AutoVPNClustersApi
 
 
 class TestAutoVPNClustersApi(unittest.TestCase):

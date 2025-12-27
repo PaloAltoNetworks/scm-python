@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.services_protocol_tcp_override import ServicesProtocolTcpOverride
+from scm.objects.models.services_protocol_tcp_override import ServicesProtocolTcpOverride
 
 # TODO update the JSON string below
 json = "{}"

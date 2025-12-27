@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_config_setup.models.snippet_snapshot_publish_request import SnippetSnapshotPublishRequest
+from scm.config_setup.models.snippet_snapshot_publish_request import SnippetSnapshotPublishRequest
 
 # TODO update the JSON string below
 json = "{}"

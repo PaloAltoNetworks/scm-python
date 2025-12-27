@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_identity_services.models.local_user_groups import LocalUserGroups
-from scm_identity_services.models.local_user_groups_list_response import LocalUserGroupsListResponse
+from scm.identity_services.models.local_user_groups import LocalUserGroups
+from scm.identity_services.models.local_user_groups_list_response import LocalUserGroupsListResponse
 
-from scm_identity_services.api_client import ApiClient, RequestSerialized
-from scm_identity_services.api_response import ApiResponse
-from scm_identity_services.rest import RESTResponseType
+from scm.identity_services.api_client import ApiClient, RequestSerialized
+from scm.identity_services.api_response import ApiResponse
+from scm.identity_services.rest import RESTResponseType
 
 
 class LocalUserGroupsApi:

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_network_services.models.sdwan_path_quality_profiles import SdwanPathQualityProfiles
+from scm.network_services.models.sdwan_path_quality_profiles import SdwanPathQualityProfiles
 from typing import Optional, Set
 from typing_extensions import Self
 

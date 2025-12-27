@@ -4,26 +4,40 @@ from typing import Optional
 
 # Import all sub-clients
 from scm.config_setup import api as config_setup_api
-from scm.config_setup import ApiClient as ConfigSetupApiClient
-from scm.config_setup import Configuration as ConfigSetupConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.config_setup.api_client import ApiClient as ConfigSetupApiClient
+from scm.config_setup.configuration import Configuration as ConfigSetupConfiguration
 from scm.deployment_services import api as deployment_services_api
-from scm.deployment_services import ApiClient as DeploymentServicesApiClient
-from scm.deployment_services import Configuration as DeploymentServicesConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.deployment_services.api_client import ApiClient as DeploymentServicesApiClient
+from scm.deployment_services.configuration import Configuration as DeploymentServicesConfiguration
 from scm.device_settings import api as device_settings_api
-from scm.device_settings import ApiClient as DeviceSettingsApiClient
-from scm.device_settings import Configuration as DeviceSettingsConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.device_settings.api_client import ApiClient as DeviceSettingsApiClient
+from scm.device_settings.configuration import Configuration as DeviceSettingsConfiguration
 from scm.identity_services import api as identity_services_api
-from scm.identity_services import ApiClient as IdentityServicesApiClient
-from scm.identity_services import Configuration as IdentityServicesConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.identity_services.api_client import ApiClient as IdentityServicesApiClient
+from scm.identity_services.configuration import Configuration as IdentityServicesConfiguration
 from scm.network_services import api as network_services_api
-from scm.network_services import ApiClient as NetworkServicesApiClient
-from scm.network_services import Configuration as NetworkServicesConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.network_services.api_client import ApiClient as NetworkServicesApiClient
+from scm.network_services.configuration import Configuration as NetworkServicesConfiguration
 from scm.objects import api as objects_api
-from scm.objects import ApiClient as ObjectsApiClient
-from scm.objects import Configuration as ObjectsConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.objects.api_client import ApiClient as ObjectsApiClient
+from scm.objects.configuration import Configuration as ObjectsConfiguration
 from scm.security_services import api as security_services_api
-from scm.security_services import ApiClient as SecurityServicesApiClient
-from scm.security_services import Configuration as SecurityServicesConfiguration
+# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
+# because the generated __init__.py in sub-packages often does not expose them.
+from scm.security_services.api_client import ApiClient as SecurityServicesApiClient
+from scm.security_services.configuration import Configuration as SecurityServicesConfiguration
 
 class Scm:
     """
@@ -74,13 +88,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = ConfigSetupApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return config_setup_api
     def _init_deployment_services_client(self):
         config = DeploymentServicesConfiguration(
@@ -89,13 +103,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = DeploymentServicesApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return deployment_services_api
     def _init_device_settings_client(self):
         config = DeviceSettingsConfiguration(
@@ -104,13 +118,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = DeviceSettingsApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return device_settings_api
     def _init_identity_services_client(self):
         config = IdentityServicesConfiguration(
@@ -119,13 +133,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = IdentityServicesApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return identity_services_api
     def _init_network_services_client(self):
         config = NetworkServicesConfiguration(
@@ -134,13 +148,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = NetworkServicesApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return network_services_api
     def _init_objects_client(self):
         config = ObjectsConfiguration(
@@ -149,13 +163,13 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = ObjectsApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return objects_api
     def _init_security_services_client(self):
         config = SecurityServicesConfiguration(
@@ -164,11 +178,11 @@ class Scm:
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
+        # Instantiate the client
         client = SecurityServicesApiClient(config)
         
-        # Return a wrapper or the raw API accessor
-        # Since generated code splits APIs by tag (e.g. AddressesApi), we might want to group them.
-        # For simplicity in this v1, we return the module's api package so users do:
-        # client.objects.AddressesApi(client.objects_client).list()
-        # OR better yet, if we want the cdot65 style, we instantiate specific APIs here.
+        # Return the API module. 
+        # Note: Users will still need to instantiate the specific APIs themselves
+        # e.g., client.objects.AddressesApi(client.objects.api_client) 
+        # unless we wrap this further.
         return security_services_api

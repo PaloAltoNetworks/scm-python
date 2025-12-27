@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.authentication_profiles_list_response import AuthenticationProfilesListResponse
+from scm.identity_services.models.authentication_profiles_list_response import AuthenticationProfilesListResponse
 
 class TestAuthenticationProfilesListResponse(unittest.TestCase):
     """AuthenticationProfilesListResponse unit test stubs"""

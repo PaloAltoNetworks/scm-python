@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.list_ha_devices200_response import ListHADevices200Response
+from scm.device_settings.models.list_ha_devices200_response import ListHADevices200Response
 
 # TODO update the JSON string below
 json = "{}"

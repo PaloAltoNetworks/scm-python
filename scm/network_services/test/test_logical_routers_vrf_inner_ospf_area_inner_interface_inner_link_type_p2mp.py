@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp import LogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp import LogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp unit test stubs"""
@@ -37,7 +37,7 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp(unittest
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerInterfaceInnerLinkTypeP2mp(
                 neighbor = [
-                    scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner.logical_routers_vrf_inner_ospf_area_inner_interface_inner_link_type_p2mp_neighbor_inner(
                         name = '', 
                         priority = 56, )
                     ]

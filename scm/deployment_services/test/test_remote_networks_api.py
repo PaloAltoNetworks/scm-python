@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.remote_networks_api import RemoteNetworksApi
+from scm.deployment_services.api.remote_networks_api import RemoteNetworksApi
 
 
 class TestRemoteNetworksApi(unittest.TestCase):

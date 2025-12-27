@@ -20,11 +20,11 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
-from scm_device_settings.models.update_schedule import UpdateSchedule
+from scm.device_settings.models.update_schedule import UpdateSchedule
 
-from scm_device_settings.api_client import ApiClient, RequestSerialized
-from scm_device_settings.api_response import ApiResponse
-from scm_device_settings.rest import RESTResponseType
+from scm.device_settings.api_client import ApiClient, RequestSerialized
+from scm.device_settings.api_response import ApiResponse
+from scm.device_settings.rest import RESTResponseType
 
 
 class UpdateScheduleSettingsApi:

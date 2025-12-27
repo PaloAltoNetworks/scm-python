@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block import DosProtectionProfilesFloodTcpSynSynCookiesBlock
+from scm.security_services.models.dos_protection_profiles_flood_tcp_syn_syn_cookies_block import DosProtectionProfilesFloodTcpSynSynCookiesBlock
 
 class TestDosProtectionProfilesFloodTcpSynSynCookiesBlock(unittest.TestCase):
     """DosProtectionProfilesFloodTcpSynSynCookiesBlock unit test stubs"""

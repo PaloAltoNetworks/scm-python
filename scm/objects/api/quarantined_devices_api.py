@@ -20,11 +20,11 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import Any, Optional
 from typing_extensions import Annotated
-from scm_objects.models.quarantined_devices import QuarantinedDevices
+from scm.objects.models.quarantined_devices import QuarantinedDevices
 
-from scm_objects.api_client import ApiClient, RequestSerialized
-from scm_objects.api_response import ApiResponse
-from scm_objects.rest import RESTResponseType
+from scm.objects.api_client import ApiClient, RequestSerialized
+from scm.objects.api_response import ApiResponse
+from scm.objects.rest import RESTResponseType
 
 
 class QuarantinedDevicesApi:

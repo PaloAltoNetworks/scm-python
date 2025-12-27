@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
+from scm.network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
 
 # TODO update the JSON string below
 json = "{}"

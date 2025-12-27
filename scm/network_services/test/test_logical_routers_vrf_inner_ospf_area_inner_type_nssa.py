@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa import LogicalRoutersVrfInnerOspfAreaInnerTypeNssa
+from scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa import LogicalRoutersVrfInnerOspfAreaInnerTypeNssa
 
 class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssa(unittest.TestCase):
     """LogicalRoutersVrfInnerOspfAreaInnerTypeNssa unit test stubs"""
@@ -36,32 +36,32 @@ class TestLogicalRoutersVrfInnerOspfAreaInnerTypeNssa(unittest.TestCase):
         model = LogicalRoutersVrfInnerOspfAreaInnerTypeNssa()
         if include_optional:
             return LogicalRoutersVrfInnerOspfAreaInnerTypeNssa(
-                abr = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr(
+                abr = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr(
                     export_list = '', 
                     import_list = '', 
                     inbound_filter_list = '', 
                     nssa_ext_range = [
-                        scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_abr_nssa_ext_range_inner(
                             advertise = True, 
                             name = '', 
                             route_tag = 56, )
                         ], 
                     outbound_filter_list = '', ),
                 accept_summary = True,
-                default_information_originate = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate(
+                default_information_originate = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_information_originate(
                     metric = 56, 
                     metric_type = 'type-1', ),
-                default_route = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route(
-                    advertise = scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
+                default_route = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route(
+                    advertise = scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise.logical_routers_vrf_inner_ospf_area_inner_type_nssa_default_route_advertise(
                         metric = 56, 
                         type = 'ext-1', ), 
-                    disable = scm_network_services.models.disable.disable(), ),
+                    disable = scm.network_services.models.disable.disable(), ),
                 no_summary = True,
                 nssa_ext_range = [
-                    scm_network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner(
-                        advertise = scm_network_services.models.advertise.advertise(), 
+                    scm.network_services.models.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner.logical_routers_vrf_inner_ospf_area_inner_type_nssa_nssa_ext_range_inner(
+                        advertise = scm.network_services.models.advertise.advertise(), 
                         name = '', 
-                        suppress = scm_network_services.models.suppress.suppress(), )
+                        suppress = scm.network_services.models.suppress.suppress(), )
                     ]
             )
         else:

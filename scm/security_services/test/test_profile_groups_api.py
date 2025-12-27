@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.profile_groups_api import ProfileGroupsApi
+from scm.security_services.api.profile_groups_api import ProfileGroupsApi
 
 
 class TestProfileGroupsApi(unittest.TestCase):

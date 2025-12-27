@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash import LogicalRoutersVrfInnerEcmpAlgorithmIpHash
+from scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_ip_hash import LogicalRoutersVrfInnerEcmpAlgorithmIpHash
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring import HaConfigurationsGroupMonitoringLinkMonitoring
+from scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring import HaConfigurationsGroupMonitoringLinkMonitoring
 
 class TestHaConfigurationsGroupMonitoringLinkMonitoring(unittest.TestCase):
     """HaConfigurationsGroupMonitoringLinkMonitoring unit test stubs"""
@@ -39,7 +39,7 @@ class TestHaConfigurationsGroupMonitoringLinkMonitoring(unittest.TestCase):
                 enabled = True,
                 failure_condition = 'any',
                 link_group = [
-                    scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
+                    scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
                         enabled = True, 
                         failure_condition = 'any', 
                         interface = [

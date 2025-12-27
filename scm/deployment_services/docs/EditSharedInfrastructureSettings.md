@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
+from scm.deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
 
 # TODO update the JSON string below
 json = "{}"

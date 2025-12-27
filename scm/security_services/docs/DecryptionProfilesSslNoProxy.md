@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
+from scm.security_services.models.decryption_profiles_ssl_no_proxy import DecryptionProfilesSslNoProxy
 
 # TODO update the JSON string below
 json = "{}"

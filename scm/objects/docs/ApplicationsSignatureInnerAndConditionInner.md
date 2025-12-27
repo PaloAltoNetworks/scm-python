@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.applications_signature_inner_and_condition_inner import ApplicationsSignatureInnerAndConditionInner
+from scm.objects.models.applications_signature_inner_and_condition_inner import ApplicationsSignatureInnerAndConditionInner
 
 # TODO update the JSON string below
 json = "{}"

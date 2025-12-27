@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.radius_server_profiles import RadiusServerProfiles
+from scm.identity_services.models.radius_server_profiles import RadiusServerProfiles
 
 class TestRadiusServerProfiles(unittest.TestCase):
     """RadiusServerProfiles unit test stubs"""
@@ -40,22 +40,22 @@ class TestRadiusServerProfiles(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
-                protocol = scm_identity_services.models.radius_server_profiles_protocol.radius_server_profiles_protocol(
-                    chap = scm_identity_services.models.chap.CHAP(), 
-                    eap_ttls_with_pap = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                protocol = scm.identity_services.models.radius_server_profiles_protocol.radius_server_profiles_protocol(
+                    chap = scm.identity_services.models.chap.CHAP(), 
+                    eap_ttls_with_pap = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), 
-                    pap = scm_identity_services.models.pap.PAP(), 
-                    peap_mschapv2 = scm_identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
+                    pap = scm.identity_services.models.pap.PAP(), 
+                    peap_mschapv2 = scm.identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
                         allow_pwd_change = True, 
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), 
-                    peap_with_gtc = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                    peap_with_gtc = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), ),
                 retries = 1,
                 server = [
-                    scm_identity_services.models.radius_server_profiles_server_inner.radius_server_profiles_server_inner(
+                    scm.identity_services.models.radius_server_profiles_server_inner.radius_server_profiles_server_inner(
                         ip_address = '', 
                         name = '', 
                         port = 1, 
@@ -67,21 +67,21 @@ class TestRadiusServerProfiles(unittest.TestCase):
         else:
             return RadiusServerProfiles(
                 name = '',
-                protocol = scm_identity_services.models.radius_server_profiles_protocol.radius_server_profiles_protocol(
-                    chap = scm_identity_services.models.chap.CHAP(), 
-                    eap_ttls_with_pap = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                protocol = scm.identity_services.models.radius_server_profiles_protocol.radius_server_profiles_protocol(
+                    chap = scm.identity_services.models.chap.CHAP(), 
+                    eap_ttls_with_pap = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), 
-                    pap = scm_identity_services.models.pap.PAP(), 
-                    peap_mschapv2 = scm_identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
+                    pap = scm.identity_services.models.pap.PAP(), 
+                    peap_mschapv2 = scm.identity_services.models.radius_server_profiles_protocol_peap_mschapv2.radius_server_profiles_protocol_PEAP_MSCHAPv2(
                         allow_pwd_change = True, 
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), 
-                    peap_with_gtc = scm_identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
+                    peap_with_gtc = scm.identity_services.models.radius_server_profiles_protocol_eap_ttls_with_pap.radius_server_profiles_protocol_EAP_TTLS_with_PAP(
                         anon_outer_id = True, 
                         radius_cert_profile = '', ), ),
                 server = [
-                    scm_identity_services.models.radius_server_profiles_server_inner.radius_server_profiles_server_inner(
+                    scm.identity_services.models.radius_server_profiles_server_inner.radius_server_profiles_server_inner(
                         ip_address = '', 
                         name = '', 
                         port = 1, 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.wildfire_anti_virus_profiles_rules_inner import WildfireAntiVirusProfilesRulesInner
+from scm.security_services.models.wildfire_anti_virus_profiles_rules_inner import WildfireAntiVirusProfilesRulesInner
 
 class TestWildfireAntiVirusProfilesRulesInner(unittest.TestCase):
     """WildfireAntiVirusProfilesRulesInner unit test stubs"""

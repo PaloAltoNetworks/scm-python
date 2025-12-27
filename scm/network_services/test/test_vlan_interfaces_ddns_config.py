@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
+from scm.network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
 
 class TestVlanInterfacesDdnsConfig(unittest.TestCase):
     """VlanInterfacesDdnsConfig unit test stubs"""

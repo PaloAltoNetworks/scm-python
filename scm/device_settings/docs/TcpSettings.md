@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.tcp_settings import TcpSettings
+from scm.device_settings.models.tcp_settings import TcpSettings
 
 # TODO update the JSON string below
 json = "{}"

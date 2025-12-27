@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm_deployment_services.models.bandwidth_allocations import BandwidthAllocations
-from scm_deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
+from scm.deployment_services.models.bandwidth_allocations import BandwidthAllocations
+from scm.deployment_services.models.bandwidth_allocations_list_response import BandwidthAllocationsListResponse
 
-from scm_deployment_services.api_client import ApiClient, RequestSerialized
-from scm_deployment_services.api_response import ApiResponse
-from scm_deployment_services.rest import RESTResponseType
+from scm.deployment_services.api_client import ApiClient, RequestSerialized
+from scm.deployment_services.api_response import ApiResponse
+from scm.deployment_services.rest import RESTResponseType
 
 
 class BandwidthAllocationsApi:

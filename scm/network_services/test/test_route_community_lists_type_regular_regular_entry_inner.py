@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_community_lists_type_regular_regular_entry_inner import RouteCommunityListsTypeRegularRegularEntryInner
+from scm.network_services.models.route_community_lists_type_regular_regular_entry_inner import RouteCommunityListsTypeRegularRegularEntryInner
 
 class TestRouteCommunityListsTypeRegularRegularEntryInner(unittest.TestCase):
     """RouteCommunityListsTypeRegularRegularEntryInner unit test stubs"""

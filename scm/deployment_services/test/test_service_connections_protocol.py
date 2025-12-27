@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
+from scm.deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
 
 class TestServiceConnectionsProtocol(unittest.TestCase):
     """ServiceConnectionsProtocol unit test stubs"""
@@ -36,7 +36,7 @@ class TestServiceConnectionsProtocol(unittest.TestCase):
         model = ServiceConnectionsProtocol()
         if include_optional:
             return ServiceConnectionsProtocol(
-                bgp = scm_deployment_services.models.service_connections_protocol_bgp.service_connections_protocol_bgp(
+                bgp = scm.deployment_services.models.service_connections_protocol_bgp.service_connections_protocol_bgp(
                     do_not_export_routes = True, 
                     enable = True, 
                     fast_failover = True, 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin import LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin
+from scm.network_services.models.logical_routers_vrf_inner_ecmp_algorithm_weighted_round_robin import LogicalRoutersVrfInnerEcmpAlgorithmWeightedRoundRobin
 
 # TODO update the JSON string below
 json = "{}"

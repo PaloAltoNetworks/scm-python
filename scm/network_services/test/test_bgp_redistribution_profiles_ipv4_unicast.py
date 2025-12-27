@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast import BgpRedistributionProfilesIpv4Unicast
+from scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast import BgpRedistributionProfilesIpv4Unicast
 
 class TestBgpRedistributionProfilesIpv4Unicast(unittest.TestCase):
     """BgpRedistributionProfilesIpv4Unicast unit test stubs"""
@@ -36,15 +36,15 @@ class TestBgpRedistributionProfilesIpv4Unicast(unittest.TestCase):
         model = BgpRedistributionProfilesIpv4Unicast()
         if include_optional:
             return BgpRedistributionProfilesIpv4Unicast(
-                connected = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_connected.bgp_redistribution_profiles_ipv4_unicast_connected(
+                connected = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_connected.bgp_redistribution_profiles_ipv4_unicast_connected(
                     enable = True, 
                     metric = 1, 
                     route_map = '', ),
-                ospf = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf.bgp_redistribution_profiles_ipv4_unicast_ospf(
+                ospf = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_ospf.bgp_redistribution_profiles_ipv4_unicast_ospf(
                     enable = True, 
                     metric = 1, 
                     route_map = '', ),
-                static = scm_network_services.models.bgp_redistribution_profiles_ipv4_unicast_static.bgp_redistribution_profiles_ipv4_unicast_static(
+                static = scm.network_services.models.bgp_redistribution_profiles_ipv4_unicast_static.bgp_redistribution_profiles_ipv4_unicast_static(
                     enable = True, 
                     metric = 1, 
                     route_map = '', )

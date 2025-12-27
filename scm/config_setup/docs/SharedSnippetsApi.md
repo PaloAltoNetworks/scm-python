@@ -1,4 +1,4 @@
-# scm_config_setup.SharedSnippetsApi
+# scm.config_setup.SharedSnippetsApi
 
 All URIs are relative to *https://api.strata.paloaltonetworks.com/config/setup/v1*
 
@@ -21,15 +21,15 @@ Update Shared Snippets.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
-from scm_config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.models.snippet_share_upload_payload import SnippetShareUploadPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -39,15 +39,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SharedSnippetsApi(api_client)
-    snippet_share_upload_payload = scm_config_setup.SnippetShareUploadPayload() # SnippetShareUploadPayload | The `Shared Snippets To Update` resource definition (optional)
+    api_instance = scm.config_setup.SharedSnippetsApi(api_client)
+    snippet_share_upload_payload = scm.config_setup.SnippetShareUploadPayload() # SnippetShareUploadPayload | The `Shared Snippets To Update` resource definition (optional)
 
     try:
         # Update Shared Snippets
@@ -105,14 +105,14 @@ Retrieve a list of shared snippets.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_share_info import SnippetShareInfo
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_share_info import SnippetShareInfo
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -122,14 +122,14 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SharedSnippetsApi(api_client)
+    api_instance = scm.config_setup.SharedSnippetsApi(api_client)
 
     try:
         # Get Shared Snippets
@@ -184,14 +184,14 @@ Convert Snippet Snippets.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm_config_setup
-from scm_config_setup.models.snippet_share_load_payload import SnippetShareLoadPayload
-from scm_config_setup.rest import ApiException
+import scm.config_setup
+from scm.config_setup.models.snippet_share_load_payload import SnippetShareLoadPayload
+from scm.config_setup.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/setup/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     host = "https://api.strata.paloaltonetworks.com/config/setup/v1"
 )
 
@@ -201,15 +201,15 @@ configuration = scm_config_setup.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm_config_setup.Configuration(
+configuration = scm.config_setup.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm_config_setup.ApiClient(configuration) as api_client:
+with scm.config_setup.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm_config_setup.SharedSnippetsApi(api_client)
-    snippet_share_load_payload = scm_config_setup.SnippetShareLoadPayload() # SnippetShareLoadPayload | The `Snippet Snapshots To Convert` resource definition (optional)
+    api_instance = scm.config_setup.SharedSnippetsApi(api_client)
+    snippet_share_load_payload = scm.config_setup.SnippetShareLoadPayload() # SnippetShareLoadPayload | The `Snippet Snapshots To Convert` resource definition (optional)
 
     try:
         # Load Shared Snippets

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.services_protocol_udp_override import ServicesProtocolUdpOverride
+from scm.objects.models.services_protocol_udp_override import ServicesProtocolUdpOverride
 
 class TestServicesProtocolUdpOverride(unittest.TestCase):
     """ServicesProtocolUdpOverride unit test stubs"""

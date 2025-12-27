@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.rule_based_move import RuleBasedMove
+from scm.security_services.models.rule_based_move import RuleBasedMove
 
 # TODO update the JSON string below
 json = "{}"

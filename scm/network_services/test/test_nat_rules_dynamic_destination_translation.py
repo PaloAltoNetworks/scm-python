@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
+from scm.network_services.models.nat_rules_dynamic_destination_translation import NatRulesDynamicDestinationTranslation
 
 class TestNatRulesDynamicDestinationTranslation(unittest.TestCase):
     """NatRulesDynamicDestinationTranslation unit test stubs"""

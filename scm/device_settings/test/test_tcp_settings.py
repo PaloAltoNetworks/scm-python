@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.tcp_settings import TcpSettings
+from scm.device_settings.models.tcp_settings import TcpSettings
 
 class TestTcpSettings(unittest.TestCase):
     """TcpSettings unit test stubs"""
@@ -40,7 +40,7 @@ class TestTcpSettings(unittest.TestCase):
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 snippet = 'My Snippet',
-                tcp = scm_device_settings.models.tcp_settings_tcp.tcp_settings_tcp(
+                tcp = scm.device_settings.models.tcp_settings_tcp.tcp_settings_tcp(
                     allow_challenge_ack = True, 
                     asymmetric_path = 'drop', 
                     bypass_exceed_oo_queue = True, 

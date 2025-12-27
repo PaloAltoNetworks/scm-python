@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
+from scm.network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
 
 # TODO update the JSON string below
 json = "{}"

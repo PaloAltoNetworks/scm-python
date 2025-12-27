@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.api.authentication_settings_api import AuthenticationSettingsApi
+from scm.device_settings.api.authentication_settings_api import AuthenticationSettingsApi
 
 
 class TestAuthenticationSettingsApi(unittest.TestCase):

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorGreaterThan
+from scm.security_services.models.anti_spyware_signatures_signature_standard_inner_and_condition_inner_or_condition_inner_operator_greater_than import AntiSpywareSignaturesSignatureStandardInnerAndConditionInnerOrConditionInnerOperatorGreaterThan
 
 # TODO update the JSON string below
 json = "{}"

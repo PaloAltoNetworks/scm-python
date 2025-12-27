@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.saml_server_profiles import SamlServerProfiles
+from scm.identity_services.models.saml_server_profiles import SamlServerProfiles
 
 # TODO update the JSON string below
 json = "{}"

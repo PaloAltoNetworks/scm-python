@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_traffic_distribution_profiles_list_response import SDWANTrafficDistributionProfilesListResponse
+from scm.network_services.models.sdwan_traffic_distribution_profiles_list_response import SDWANTrafficDistributionProfilesListResponse
 
 class TestSDWANTrafficDistributionProfilesListResponse(unittest.TestCase):
     """SDWANTrafficDistributionProfilesListResponse unit test stubs"""

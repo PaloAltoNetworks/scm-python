@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_security_services.models.http_header_profiles_http_header_insertion_inner import HttpHeaderProfilesHttpHeaderInsertionInner
+from scm.security_services.models.http_header_profiles_http_header_insertion_inner import HttpHeaderProfilesHttpHeaderInsertionInner
 from typing import Optional, Set
 from typing_extensions import Self
 

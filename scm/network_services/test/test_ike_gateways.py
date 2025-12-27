@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ike_gateways import IkeGateways
+from scm.network_services.models.ike_gateways import IkeGateways
 
 class TestIkeGateways(unittest.TestCase):
     """IkeGateways unit test stubs"""
@@ -36,71 +36,71 @@ class TestIkeGateways(unittest.TestCase):
         model = IkeGateways()
         if include_optional:
             return IkeGateways(
-                authentication = scm_network_services.models.ike_gateways_authentication.ike_gateways_authentication(
-                    certificate = scm_network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
+                authentication = scm.network_services.models.ike_gateways_authentication.ike_gateways_authentication(
+                    certificate = scm.network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
                         allow_id_payload_mismatch = True, 
                         certificate_profile = '', 
-                        local_certificate = scm_network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
+                        local_certificate = scm.network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
                             local_certificate_name = '', ), 
                         strict_validation_revocation = True, 
                         use_management_as_source = True, ), 
-                    pre_shared_key = scm_network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
+                    pre_shared_key = scm.network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
                         key = '', ), ),
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                local_address = scm_network_services.models.ike_gateways_local_address.ike_gateways_local_address(
+                local_address = scm.network_services.models.ike_gateways_local_address.ike_gateways_local_address(
                     interface = 'vlan', ),
-                local_id = scm_network_services.models.ike_gateways_local_id.ike_gateways_local_id(
+                local_id = scm.network_services.models.ike_gateways_local_id.ike_gateways_local_id(
                     id = 'i]t]x]t]t]i]g]g][][]0', 
                     type = '', ),
                 name = '',
-                peer_address = scm_network_services.models.ike_gateways_peer_address.ike_gateways_peer_address(
-                    dynamic = scm_network_services.models.dynamic.dynamic(), 
+                peer_address = scm.network_services.models.ike_gateways_peer_address.ike_gateways_peer_address(
+                    dynamic = scm.network_services.models.dynamic.dynamic(), 
                     fqdn = '', 
                     ip = '', ),
-                peer_id = scm_network_services.models.ike_gateways_peer_id.ike_gateways_peer_id(
+                peer_id = scm.network_services.models.ike_gateways_peer_id.ike_gateways_peer_id(
                     id = 'i]t]x]t]t]i]g]g][][]0', 
                     type = 'ipaddr', ),
-                protocol = scm_network_services.models.ike_gateways_protocol.ike_gateways_protocol(
-                    ikev1 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
-                        dpd = scm_network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
+                protocol = scm.network_services.models.ike_gateways_protocol.ike_gateways_protocol(
+                    ikev1 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                        dpd = scm.network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
                             enable = True, ), 
                         ike_crypto_profile = '', ), 
-                    ikev2 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                    ikev2 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
                         ike_crypto_profile = '', ), 
                     version = 'ikev2-preferred', ),
-                protocol_common = scm_network_services.models.ike_gateways_protocol_common.ike_gateways_protocol_common(
-                    fragmentation = scm_network_services.models.ike_gateways_protocol_common_fragmentation.ike_gateways_protocol_common_fragmentation(
+                protocol_common = scm.network_services.models.ike_gateways_protocol_common.ike_gateways_protocol_common(
+                    fragmentation = scm.network_services.models.ike_gateways_protocol_common_fragmentation.ike_gateways_protocol_common_fragmentation(
                         enable = false, ), 
-                    nat_traversal = scm_network_services.models.ike_gateways_protocol_common_nat_traversal.ike_gateways_protocol_common_nat_traversal(
+                    nat_traversal = scm.network_services.models.ike_gateways_protocol_common_nat_traversal.ike_gateways_protocol_common_nat_traversal(
                         enable = True, ), 
                     passive_mode = True, ),
                 snippet = 'My Snippet'
             )
         else:
             return IkeGateways(
-                authentication = scm_network_services.models.ike_gateways_authentication.ike_gateways_authentication(
-                    certificate = scm_network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
+                authentication = scm.network_services.models.ike_gateways_authentication.ike_gateways_authentication(
+                    certificate = scm.network_services.models.ike_gateways_authentication_certificate.ike_gateways_authentication_certificate(
                         allow_id_payload_mismatch = True, 
                         certificate_profile = '', 
-                        local_certificate = scm_network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
+                        local_certificate = scm.network_services.models.ike_gateways_authentication_certificate_local_certificate.ike_gateways_authentication_certificate_local_certificate(
                             local_certificate_name = '', ), 
                         strict_validation_revocation = True, 
                         use_management_as_source = True, ), 
-                    pre_shared_key = scm_network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
+                    pre_shared_key = scm.network_services.models.ike_gateways_authentication_pre_shared_key.ike_gateways_authentication_pre_shared_key(
                         key = '', ), ),
                 name = '',
-                peer_address = scm_network_services.models.ike_gateways_peer_address.ike_gateways_peer_address(
-                    dynamic = scm_network_services.models.dynamic.dynamic(), 
+                peer_address = scm.network_services.models.ike_gateways_peer_address.ike_gateways_peer_address(
+                    dynamic = scm.network_services.models.dynamic.dynamic(), 
                     fqdn = '', 
                     ip = '', ),
-                protocol = scm_network_services.models.ike_gateways_protocol.ike_gateways_protocol(
-                    ikev1 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
-                        dpd = scm_network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
+                protocol = scm.network_services.models.ike_gateways_protocol.ike_gateways_protocol(
+                    ikev1 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                        dpd = scm.network_services.models.ike_gateways_protocol_ikev1_dpd.ike_gateways_protocol_ikev1_dpd(
                             enable = True, ), 
                         ike_crypto_profile = '', ), 
-                    ikev2 = scm_network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
+                    ikev2 = scm.network_services.models.ike_gateways_protocol_ikev1.ike_gateways_protocol_ikev1(
                         ike_crypto_profile = '', ), 
                     version = 'ikev2-preferred', ),
         )

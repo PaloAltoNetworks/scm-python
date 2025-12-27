@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_deployment_services.models.edit_shared_infrastructure_settings_connector_connector_blocks import EditSharedInfrastructureSettingsConnectorConnectorBlocks
+from scm.deployment_services.models.edit_shared_infrastructure_settings_connector_connector_blocks import EditSharedInfrastructureSettingsConnectorConnectorBlocks
 
 # TODO update the JSON string below
 json = "{}"

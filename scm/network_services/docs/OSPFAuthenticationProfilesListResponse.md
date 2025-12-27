@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ospf_authentication_profiles_list_response import OSPFAuthenticationProfilesListResponse
+from scm.network_services.models.ospf_authentication_profiles_list_response import OSPFAuthenticationProfilesListResponse
 
 # TODO update the JSON string below
 json = "{}"

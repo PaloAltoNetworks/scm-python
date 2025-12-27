@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
+from scm.objects.models.applications_default_ident_by_icmp6_type import ApplicationsDefaultIdentByIcmp6Type
 
 # TODO update the JSON string below
 json = "{}"

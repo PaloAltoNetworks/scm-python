@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dns_security_profiles_botnet_domains_sinkhole import DnsSecurityProfilesBotnetDomainsSinkhole
+from scm.security_services.models.dns_security_profiles_botnet_domains_sinkhole import DnsSecurityProfilesBotnetDomainsSinkhole
 
 class TestDnsSecurityProfilesBotnetDomainsSinkhole(unittest.TestCase):
     """DnsSecurityProfilesBotnetDomainsSinkhole unit test stubs"""

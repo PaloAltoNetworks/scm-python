@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.syslog_server_profiles_format_escaping import SyslogServerProfilesFormatEscaping
+from scm.objects.models.syslog_server_profiles_format_escaping import SyslogServerProfilesFormatEscaping
 from typing import Optional, Set
 from typing_extensions import Self
 

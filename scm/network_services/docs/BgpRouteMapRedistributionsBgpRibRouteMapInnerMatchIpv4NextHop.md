@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4NextHop
+from scm.network_services.models.bgp_route_map_redistributions_bgp_rib_route_map_inner_match_ipv4_next_hop import BgpRouteMapRedistributionsBgpRibRouteMapInnerMatchIpv4NextHop
 
 # TODO update the JSON string below
 json = "{}"

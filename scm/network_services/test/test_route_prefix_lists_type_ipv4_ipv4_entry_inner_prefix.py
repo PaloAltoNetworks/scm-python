@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix import RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix
+from scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix import RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix
 
 class TestRoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix(unittest.TestCase):
     """RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix unit test stubs"""
@@ -36,7 +36,7 @@ class TestRoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix(unittest.TestCase):
         model = RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix()
         if include_optional:
             return RoutePrefixListsTypeIpv4Ipv4EntryInnerPrefix(
-                entry = scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry(
+                entry = scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry(
                     greater_than_or_equal = 0, 
                     less_than_or_equal = 0, 
                     network = '', ),

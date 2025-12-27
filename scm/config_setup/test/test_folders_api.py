@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.api.folders_api import FoldersApi
+from scm.config_setup.api.folders_api import FoldersApi
 
 
 class TestFoldersApi(unittest.TestCase):

@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.route_community_lists_type_extended import RouteCommunityListsTypeExtended
-from scm_network_services.models.route_community_lists_type_large import RouteCommunityListsTypeLarge
-from scm_network_services.models.route_community_lists_type_regular import RouteCommunityListsTypeRegular
+from scm.network_services.models.route_community_lists_type_extended import RouteCommunityListsTypeExtended
+from scm.network_services.models.route_community_lists_type_large import RouteCommunityListsTypeLarge
+from scm.network_services.models.route_community_lists_type_regular import RouteCommunityListsTypeRegular
 from typing import Optional, Set
 from typing_extensions import Self
 

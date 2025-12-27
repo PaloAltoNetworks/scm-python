@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_list_response import EthernetInterfacesListResponse
+from scm.network_services.models.ethernet_interfaces_list_response import EthernetInterfacesListResponse
 
 class TestEthernetInterfacesListResponse(unittest.TestCase):
     """EthernetInterfacesListResponse unit test stubs"""

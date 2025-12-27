@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
+from scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
 
 class TestZoneProtectionProfilesFloodTcpSynSynCookies(unittest.TestCase):
     """ZoneProtectionProfilesFloodTcpSynSynCookies unit test stubs"""

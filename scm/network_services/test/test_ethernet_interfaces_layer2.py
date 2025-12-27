@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
+from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
 
 class TestEthernetInterfacesLayer2(unittest.TestCase):
     """EthernetInterfacesLayer2 unit test stubs"""
@@ -36,7 +36,7 @@ class TestEthernetInterfacesLayer2(unittest.TestCase):
         model = EthernetInterfacesLayer2()
         if include_optional:
             return EthernetInterfacesLayer2(
-                lldp = scm_network_services.models.ethernet_interfaces_layer2_lldp.ethernet_interfaces_layer2_lldp(
+                lldp = scm.network_services.models.ethernet_interfaces_layer2_lldp.ethernet_interfaces_layer2_lldp(
                     enable = True, ),
                 vlan_tag = '4088'
             )

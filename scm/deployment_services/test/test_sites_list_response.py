@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.sites_list_response import SitesListResponse
+from scm.deployment_services.models.sites_list_response import SitesListResponse
 
 class TestSitesListResponse(unittest.TestCase):
     """SitesListResponse unit test stubs"""

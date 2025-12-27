@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner import HaConfigurationsGroupMonitoringLinkMonitoringLinkGroupInner
+from scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner import HaConfigurationsGroupMonitoringLinkMonitoringLinkGroupInner
 from typing import Optional, Set
 from typing_extensions import Self
 

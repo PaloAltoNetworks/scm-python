@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.license_info import LicenseInfo
+from scm.network_services.models.license_info import LicenseInfo
 
 class TestLicenseInfo(unittest.TestCase):
     """LicenseInfo unit test stubs"""

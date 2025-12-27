@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip import NatRulesSourceTranslationDynamicIp
-from scm_network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
-from scm_network_services.models.nat_rules_source_translation_static_ip import NatRulesSourceTranslationStaticIp
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip import NatRulesSourceTranslationDynamicIp
+from scm.network_services.models.nat_rules_source_translation_dynamic_ip_and_port import NatRulesSourceTranslationDynamicIpAndPort
+from scm.network_services.models.nat_rules_source_translation_static_ip import NatRulesSourceTranslationStaticIp
 from typing import Optional, Set
 from typing_extensions import Self
 

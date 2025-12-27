@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_deployment_services.models.sites import Sites
+from scm.deployment_services.models.sites import Sites
 from typing import Optional, Set
 from typing_extensions import Self
 

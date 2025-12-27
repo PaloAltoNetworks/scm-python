@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
+from scm.network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
 
 # TODO update the JSON string below
 json = "{}"

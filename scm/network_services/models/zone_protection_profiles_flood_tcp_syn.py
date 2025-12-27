@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.zone_protection_profiles_flood_tcp_syn_red import ZoneProtectionProfilesFloodTcpSynRed
-from scm_network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
+from scm.network_services.models.zone_protection_profiles_flood_tcp_syn_red import ZoneProtectionProfilesFloodTcpSynRed
+from scm.network_services.models.zone_protection_profiles_flood_tcp_syn_syn_cookies import ZoneProtectionProfilesFloodTcpSynSynCookies
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.address_groups_list_response import AddressGroupsListResponse
+from scm.objects.models.address_groups_list_response import AddressGroupsListResponse
 
 class TestAddressGroupsListResponse(unittest.TestCase):
     """AddressGroupsListResponse unit test stubs"""

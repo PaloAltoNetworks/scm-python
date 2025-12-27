@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
+from scm.network_services.models.dhcp_interfaces_relay_ip import DhcpInterfacesRelayIp
 
 class TestDhcpInterfacesRelayIp(unittest.TestCase):
     """DhcpInterfacesRelayIp unit test stubs"""

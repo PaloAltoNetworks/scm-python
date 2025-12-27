@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_security_services.models.url_filtering_categories import UrlFilteringCategories
+from scm.security_services.models.url_filtering_categories import UrlFilteringCategories
 
 # TODO update the JSON string below
 json = "{}"

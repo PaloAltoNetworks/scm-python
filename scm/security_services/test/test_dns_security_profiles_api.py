@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.dns_security_profiles_api import DNSSecurityProfilesApi
+from scm.security_services.api.dns_security_profiles_api import DNSSecurityProfilesApi
 
 
 class TestDNSSecurityProfilesApi(unittest.TestCase):

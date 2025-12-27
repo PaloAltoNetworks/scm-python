@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_network_services.models.dhcp_interfaces_server_option import DhcpInterfacesServerOption
-from scm_network_services.models.dhcp_interfaces_server_reserved_inner import DhcpInterfacesServerReservedInner
+from scm.network_services.models.dhcp_interfaces_server_option import DhcpInterfacesServerOption
+from scm.network_services.models.dhcp_interfaces_server_reserved_inner import DhcpInterfacesServerReservedInner
 from typing import Optional, Set
 from typing_extensions import Self
 

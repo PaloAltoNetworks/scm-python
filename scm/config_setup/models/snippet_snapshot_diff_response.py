@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_config_setup.models.snippet_snapshot_diff_response_after import SnippetSnapshotDiffResponseAfter
-from scm_config_setup.models.snippet_snapshot_diff_response_before import SnippetSnapshotDiffResponseBefore
+from scm.config_setup.models.snippet_snapshot_diff_response_after import SnippetSnapshotDiffResponseAfter
+from scm.config_setup.models.snippet_snapshot_diff_response_before import SnippetSnapshotDiffResponseBefore
 from typing import Optional, Set
 from typing_extensions import Self
 

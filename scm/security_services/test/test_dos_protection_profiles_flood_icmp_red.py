@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.models.dos_protection_profiles_flood_icmp_red import DosProtectionProfilesFloodIcmpRed
+from scm.security_services.models.dos_protection_profiles_flood_icmp_red import DosProtectionProfilesFloodIcmpRed
 
 class TestDosProtectionProfilesFloodIcmpRed(unittest.TestCase):
     """DosProtectionProfilesFloodIcmpRed unit test stubs"""
@@ -38,7 +38,7 @@ class TestDosProtectionProfilesFloodIcmpRed(unittest.TestCase):
             return DosProtectionProfilesFloodIcmpRed(
                 activate_rate = 1,
                 alarm_rate = 0,
-                block = scm_security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
+                block = scm.security_services.models.dos_protection_profiles_flood_icmp_red_block.dos_protection_profiles_flood_icmp_red_block(
                     duration = 1, ),
                 maximal_rate = 1
             )

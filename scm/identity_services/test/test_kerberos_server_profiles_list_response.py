@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_identity_services.models.kerberos_server_profiles_list_response import KerberosServerProfilesListResponse
+from scm.identity_services.models.kerberos_server_profiles_list_response import KerberosServerProfilesListResponse
 
 class TestKerberosServerProfilesListResponse(unittest.TestCase):
     """KerberosServerProfilesListResponse unit test stubs"""

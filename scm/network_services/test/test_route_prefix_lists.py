@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.route_prefix_lists import RoutePrefixLists
+from scm.network_services.models.route_prefix_lists import RoutePrefixLists
 
 class TestRoutePrefixLists(unittest.TestCase):
     """RoutePrefixLists unit test stubs"""
@@ -42,14 +42,14 @@ class TestRoutePrefixLists(unittest.TestCase):
                 id = '123e4567-e89b-12d3-a456-426655440000',
                 name = '',
                 snippet = 'My Snippet',
-                type = scm_network_services.models.route_prefix_lists_type.route_prefix_lists_type(
-                    ipv4 = scm_network_services.models.route_prefix_lists_type_ipv4.route_prefix_lists_type_ipv4(
+                type = scm.network_services.models.route_prefix_lists_type.route_prefix_lists_type(
+                    ipv4 = scm.network_services.models.route_prefix_lists_type_ipv4.route_prefix_lists_type_ipv4(
                         ipv4_entry = [
-                            scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner.route_prefix_lists_type_ipv4_ipv4_entry_inner(
+                            scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner.route_prefix_lists_type_ipv4_ipv4_entry_inner(
                                 action = 'deny', 
                                 name = 1, 
-                                prefix = scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix(
-                                    entry = scm_network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry(
+                                prefix = scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix(
+                                    entry = scm.network_services.models.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry.route_prefix_lists_type_ipv4_ipv4_entry_inner_prefix_entry(
                                         greater_than_or_equal = 0, 
                                         less_than_or_equal = 0, 
                                         network = '', ), 

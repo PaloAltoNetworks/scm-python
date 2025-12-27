@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_error_correction_profiles_list_response import SDWANErrorCorrectionProfilesListResponse
+from scm.network_services.models.sdwan_error_correction_profiles_list_response import SDWANErrorCorrectionProfilesListResponse
 
 class TestSDWANErrorCorrectionProfilesListResponse(unittest.TestCase):
     """SDWANErrorCorrectionProfilesListResponse unit test stubs"""

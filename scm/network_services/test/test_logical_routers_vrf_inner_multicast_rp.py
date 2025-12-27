@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_rp import LogicalRoutersVrfInnerMulticastRp
+from scm.network_services.models.logical_routers_vrf_inner_multicast_rp import LogicalRoutersVrfInnerMulticastRp
 
 class TestLogicalRoutersVrfInnerMulticastRp(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastRp unit test stubs"""
@@ -37,15 +37,15 @@ class TestLogicalRoutersVrfInnerMulticastRp(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerMulticastRp(
                 external_rp = [
-                    scm_network_services.models.logical_routers_vrf_inner_multicast_rp_external_rp_inner.logical_routers_vrf_inner_multicast_rp_external_rp_inner(
+                    scm.network_services.models.logical_routers_vrf_inner_multicast_rp_external_rp_inner.logical_routers_vrf_inner_multicast_rp_external_rp_inner(
                         group_addresses = [
                             ''
                             ], 
                         name = '', 
                         override = True, )
                     ],
-                local_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp.logical_routers_vrf_inner_multicast_rp_local_rp(
-                    candidate_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
+                local_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp.logical_routers_vrf_inner_multicast_rp_local_rp(
+                    candidate_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp.logical_routers_vrf_inner_multicast_rp_local_rp_candidate_rp(
                         address = '', 
                         advertisement_interval = 56, 
                         group_addresses = [
@@ -53,7 +53,7 @@ class TestLogicalRoutersVrfInnerMulticastRp(unittest.TestCase):
                             ], 
                         interface = '', 
                         priority = 56, ), 
-                    static_rp = scm_network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
+                    static_rp = scm.network_services.models.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp.logical_routers_vrf_inner_multicast_rp_local_rp_static_rp(
                         address = '', 
                         interface = '', 
                         override = True, ), )

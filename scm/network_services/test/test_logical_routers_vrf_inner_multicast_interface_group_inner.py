@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner import LogicalRoutersVrfInnerMulticastInterfaceGroupInner
+from scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner import LogicalRoutersVrfInnerMulticastInterfaceGroupInner
 
 class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInner(unittest.TestCase):
     """LogicalRoutersVrfInnerMulticastInterfaceGroupInner unit test stubs"""
@@ -37,21 +37,21 @@ class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInner(unittest.TestCase):
         if include_optional:
             return LogicalRoutersVrfInnerMulticastInterfaceGroupInner(
                 description = '',
-                group_permission = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
+                group_permission = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission(
                     any_source_multicast = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_any_source_multicast_inner(
                             group_address = '', 
                             included = True, 
                             name = '', )
                         ], 
                     source_specific_multicast = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner.logical_routers_vrf_inner_multicast_interface_group_inner_group_permission_source_specific_multicast_inner(
                             group_address = '', 
                             included = True, 
                             name = '', 
                             source_address = '', )
                         ], ),
-                igmp = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_igmp.logical_routers_vrf_inner_multicast_interface_group_inner_igmp(
+                igmp = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_igmp.logical_routers_vrf_inner_multicast_interface_group_inner_igmp(
                     enable = True, 
                     immediate_leave = True, 
                     last_member_query_interval = 56, 
@@ -67,9 +67,9 @@ class TestLogicalRoutersVrfInnerMulticastInterfaceGroupInner(unittest.TestCase):
                     ''
                     ],
                 name = '',
-                pim = scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
+                pim = scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim.logical_routers_vrf_inner_multicast_interface_group_inner_pim(
                     allowed_neighbors = [
-                        scm_network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
+                        scm.network_services.models.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner.logical_routers_vrf_inner_multicast_interface_group_inner_pim_allowed_neighbors_inner(
                             name = '', )
                         ], 
                     assert_interval = 56, 

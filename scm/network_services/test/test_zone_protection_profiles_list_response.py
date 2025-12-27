@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_list_response import ZoneProtectionProfilesListResponse
+from scm.network_services.models.zone_protection_profiles_list_response import ZoneProtectionProfilesListResponse
 
 class TestZoneProtectionProfilesListResponse(unittest.TestCase):
     """ZoneProtectionProfilesListResponse unit test stubs"""

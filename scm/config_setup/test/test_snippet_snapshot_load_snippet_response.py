@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.snippet_snapshot_load_snippet_response import SnippetSnapshotLoadSnippetResponse
+from scm.config_setup.models.snippet_snapshot_load_snippet_response import SnippetSnapshotLoadSnippetResponse
 
 class TestSnippetSnapshotLoadSnippetResponse(unittest.TestCase):
     """SnippetSnapshotLoadSnippetResponse unit test stubs"""

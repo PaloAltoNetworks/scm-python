@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_device_settings.models.ha_configurations import HaConfigurations
+from scm.device_settings.models.ha_configurations import HaConfigurations
 
 class TestHaConfigurations(unittest.TestCase):
     """HaConfigurations unit test stubs"""
@@ -39,24 +39,24 @@ class TestHaConfigurations(unittest.TestCase):
                 device = 'My Device',
                 enabled = True,
                 folder = 'My Folder',
-                group = scm_device_settings.models.ha_configurations_group.ha_configurations_group(
+                group = scm.device_settings.models.ha_configurations_group.ha_configurations_group(
                     description = 'N/A', 
-                    election_option = scm_device_settings.models.ha_configurations_group_election_option.ha_configurations_group_election_option(
+                    election_option = scm.device_settings.models.ha_configurations_group_election_option.ha_configurations_group_election_option(
                         device_priority = 1, 
                         ha_role = 'primary', 
                         heartbeat_backup = True, 
                         preemptive = True, ), 
                     group_id = 1, 
-                    mode = scm_device_settings.models.ha_configurations_group_mode.ha_configurations_group_mode(
-                        active_passive = scm_device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
+                    mode = scm.device_settings.models.ha_configurations_group_mode.ha_configurations_group_mode(
+                        active_passive = scm.device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
                             monitor_fail_hold_down_time = 1000, 
                             passive_link_state = 'shutdown', ), ), 
-                    monitoring = scm_device_settings.models.ha_configurations_group_monitoring.ha_configurations_group_monitoring(
-                        link_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
+                    monitoring = scm.device_settings.models.ha_configurations_group_monitoring.ha_configurations_group_monitoring(
+                        link_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
                             enabled = True, 
                             failure_condition = 'any', 
                             link_group = [
-                                scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
+                                scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
                                     enabled = True, 
                                     failure_condition = 'any', 
                                     interface = [
@@ -64,14 +64,14 @@ class TestHaConfigurations(unittest.TestCase):
                                         ], 
                                     name = '', )
                                 ], ), 
-                        path_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
+                        path_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
                             enabled = True, 
                             failure_condition = 'any', 
-                            path_group = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
+                            path_group = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
                                 logical_router = [
-                                    scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
+                                    scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
                                         destination_ip_group = [
-                                            scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
+                                            scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
                                                 destination_ip = [
                                                     ''
                                                     ], 
@@ -88,31 +88,31 @@ class TestHaConfigurations(unittest.TestCase):
                     peer_ip = '', 
                     peer_ip_backup = '', 
                     peer_serial = '', 
-                    state_synchronization = scm_device_settings.models.ha_configurations_group_state_synchronization.ha_configurations_group_state_synchronization(
+                    state_synchronization = scm.device_settings.models.ha_configurations_group_state_synchronization.ha_configurations_group_state_synchronization(
                         enabled = True, 
-                        ha2_keep_alive = scm_device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
+                        ha2_keep_alive = scm.device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
                             action = 'log-only', 
                             enabled = True, 
                             threshold = 5000, ), 
                         transport = 'ethernet', ), ),
-                interface = scm_device_settings.models.ha_configurations_interface.ha_configurations_interface(
-                    ha1 = scm_device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
+                interface = scm.device_settings.models.ha_configurations_interface.ha_configurations_interface(
+                    ha1 = scm.device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
                         gateway = '', 
                         ip_address = '', 
                         monitor_hold_time = 1000, 
                         netmask = '', 
                         port = 'management', ), 
-                    ha1_backup = scm_device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
+                    ha1_backup = scm.device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 
                         port = '', ), 
-                    ha2 = scm_device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
+                    ha2 = scm.device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 
                         port = '', ), 
-                    ha2_backup = scm_device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
+                    ha2_backup = scm.device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 
@@ -121,24 +121,24 @@ class TestHaConfigurations(unittest.TestCase):
             )
         else:
             return HaConfigurations(
-                group = scm_device_settings.models.ha_configurations_group.ha_configurations_group(
+                group = scm.device_settings.models.ha_configurations_group.ha_configurations_group(
                     description = 'N/A', 
-                    election_option = scm_device_settings.models.ha_configurations_group_election_option.ha_configurations_group_election_option(
+                    election_option = scm.device_settings.models.ha_configurations_group_election_option.ha_configurations_group_election_option(
                         device_priority = 1, 
                         ha_role = 'primary', 
                         heartbeat_backup = True, 
                         preemptive = True, ), 
                     group_id = 1, 
-                    mode = scm_device_settings.models.ha_configurations_group_mode.ha_configurations_group_mode(
-                        active_passive = scm_device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
+                    mode = scm.device_settings.models.ha_configurations_group_mode.ha_configurations_group_mode(
+                        active_passive = scm.device_settings.models.ha_configurations_group_mode_active_passive.ha_configurations_group_mode_active_passive(
                             monitor_fail_hold_down_time = 1000, 
                             passive_link_state = 'shutdown', ), ), 
-                    monitoring = scm_device_settings.models.ha_configurations_group_monitoring.ha_configurations_group_monitoring(
-                        link_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
+                    monitoring = scm.device_settings.models.ha_configurations_group_monitoring.ha_configurations_group_monitoring(
+                        link_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring.ha_configurations_group_monitoring_link_monitoring(
                             enabled = True, 
                             failure_condition = 'any', 
                             link_group = [
-                                scm_device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
+                                scm.device_settings.models.ha_configurations_group_monitoring_link_monitoring_link_group_inner.ha_configurations_group_monitoring_link_monitoring_link_group_inner(
                                     enabled = True, 
                                     failure_condition = 'any', 
                                     interface = [
@@ -146,14 +146,14 @@ class TestHaConfigurations(unittest.TestCase):
                                         ], 
                                     name = '', )
                                 ], ), 
-                        path_monitoring = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
+                        path_monitoring = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring.ha_configurations_group_monitoring_path_monitoring(
                             enabled = True, 
                             failure_condition = 'any', 
-                            path_group = scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
+                            path_group = scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group.ha_configurations_group_monitoring_path_monitoring_path_group(
                                 logical_router = [
-                                    scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
+                                    scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner(
                                         destination_ip_group = [
-                                            scm_device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
+                                            scm.device_settings.models.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner.ha_configurations_group_monitoring_path_monitoring_path_group_logical_router_inner_destination_ip_group_inner(
                                                 destination_ip = [
                                                     ''
                                                     ], 
@@ -170,31 +170,31 @@ class TestHaConfigurations(unittest.TestCase):
                     peer_ip = '', 
                     peer_ip_backup = '', 
                     peer_serial = '', 
-                    state_synchronization = scm_device_settings.models.ha_configurations_group_state_synchronization.ha_configurations_group_state_synchronization(
+                    state_synchronization = scm.device_settings.models.ha_configurations_group_state_synchronization.ha_configurations_group_state_synchronization(
                         enabled = True, 
-                        ha2_keep_alive = scm_device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
+                        ha2_keep_alive = scm.device_settings.models.ha_configurations_group_state_synchronization_ha2_keep_alive.ha_configurations_group_state_synchronization_ha2_keep_alive(
                             action = 'log-only', 
                             enabled = True, 
                             threshold = 5000, ), 
                         transport = 'ethernet', ), ),
-                interface = scm_device_settings.models.ha_configurations_interface.ha_configurations_interface(
-                    ha1 = scm_device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
+                interface = scm.device_settings.models.ha_configurations_interface.ha_configurations_interface(
+                    ha1 = scm.device_settings.models.ha_configurations_interface_ha1.ha_configurations_interface_ha1(
                         gateway = '', 
                         ip_address = '', 
                         monitor_hold_time = 1000, 
                         netmask = '', 
                         port = 'management', ), 
-                    ha1_backup = scm_device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
+                    ha1_backup = scm.device_settings.models.ha_configurations_interface_ha1_backup.ha_configurations_interface_ha1_backup(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 
                         port = '', ), 
-                    ha2 = scm_device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
+                    ha2 = scm.device_settings.models.ha_configurations_interface_ha2.ha_configurations_interface_ha2(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 
                         port = '', ), 
-                    ha2_backup = scm_device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
+                    ha2_backup = scm.device_settings.models.ha_configurations_interface_ha2_backup.ha_configurations_interface_ha2_backup(
                         gateway = '', 
                         ip_address = '', 
                         netmask = '', 

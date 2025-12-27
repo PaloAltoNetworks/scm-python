@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from scm_deployment_services.models.remote_networks import RemoteNetworks
+from scm.deployment_services.models.remote_networks import RemoteNetworks
 from typing import Optional, Set
 from typing_extensions import Self
 

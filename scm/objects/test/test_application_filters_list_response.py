@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.application_filters_list_response import ApplicationFiltersListResponse
+from scm.objects.models.application_filters_list_response import ApplicationFiltersListResponse
 
 class TestApplicationFiltersListResponse(unittest.TestCase):
     """ApplicationFiltersListResponse unit test stubs"""

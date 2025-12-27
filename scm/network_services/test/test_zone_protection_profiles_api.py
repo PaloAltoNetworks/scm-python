@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.api.zone_protection_profiles_api import ZoneProtectionProfilesApi
+from scm.network_services.api.zone_protection_profiles_api import ZoneProtectionProfilesApi
 
 
 class TestZoneProtectionProfilesApi(unittest.TestCase):

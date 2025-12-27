@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from scm_objects.models.services_protocol_tcp import ServicesProtocolTcp
-from scm_objects.models.services_protocol_udp import ServicesProtocolUdp
+from scm.objects.models.services_protocol_tcp import ServicesProtocolTcp
+from scm.objects.models.services_protocol_udp import ServicesProtocolUdp
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_device_settings.models.ha_configurations_interface import HaConfigurationsInterface
+from scm.device_settings.models.ha_configurations_interface import HaConfigurationsInterface
 
 # TODO update the JSON string below
 json = "{}"

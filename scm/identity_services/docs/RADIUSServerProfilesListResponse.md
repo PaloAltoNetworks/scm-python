@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.radius_server_profiles_list_response import RADIUSServerProfilesListResponse
+from scm.identity_services.models.radius_server_profiles_list_response import RADIUSServerProfilesListResponse
 
 # TODO update the JSON string below
 json = "{}"

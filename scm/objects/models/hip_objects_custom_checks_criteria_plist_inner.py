@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
+from scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner import HipObjectsCustomChecksCriteriaPlistInnerKeyInner
 from typing import Optional, Set
 from typing_extensions import Self
 

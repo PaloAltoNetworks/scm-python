@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
+from scm.deployment_services.models.edit_shared_infrastructure_settings import EditSharedInfrastructureSettings
 
 class TestEditSharedInfrastructureSettings(unittest.TestCase):
     """EditSharedInfrastructureSettings unit test stubs"""
@@ -36,11 +36,11 @@ class TestEditSharedInfrastructureSettings(unittest.TestCase):
         model = EditSharedInfrastructureSettings()
         if include_optional:
             return EditSharedInfrastructureSettings(
-                connector_application_blocks = scm_deployment_services.models.edit_shared_infrastructure_settings_connector_application_blocks.edit_shared_infrastructure_settings_connector_application_blocks(
+                connector_application_blocks = scm.deployment_services.models.edit_shared_infrastructure_settings_connector_application_blocks.edit_shared_infrastructure_settings_connector_application_blocks(
                     member = [
                         '00.238.0.250/22'
                         ], ),
-                connector_connector_blocks = scm_deployment_services.models.edit_shared_infrastructure_settings_connector_connector_blocks.edit_shared_infrastructure_settings_connector_connector_blocks(
+                connector_connector_blocks = scm.deployment_services.models.edit_shared_infrastructure_settings_connector_connector_blocks.edit_shared_infrastructure_settings_connector_connector_blocks(
                     member = [
                         '00.238.0.250/22'
                         ], ),

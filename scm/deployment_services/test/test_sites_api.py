@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.sites_api import SitesApi
+from scm.deployment_services.api.sites_api import SitesApi
 
 
 class TestSitesApi(unittest.TestCase):

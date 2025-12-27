@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_config_setup.models.variables_list_response import VariablesListResponse
+from scm.config_setup.models.variables_list_response import VariablesListResponse
 
 class TestVariablesListResponse(unittest.TestCase):
     """VariablesListResponse unit test stubs"""

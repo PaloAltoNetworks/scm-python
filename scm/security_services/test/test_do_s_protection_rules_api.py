@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_security_services.api.do_s_protection_rules_api import DoSProtectionRulesApi
+from scm.security_services.api.do_s_protection_rules_api import DoSProtectionRulesApi
 
 
 class TestDoSProtectionRulesApi(unittest.TestCase):

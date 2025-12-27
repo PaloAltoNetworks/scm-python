@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
+from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
 
 # TODO update the JSON string below
 json = "{}"

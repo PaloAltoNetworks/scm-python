@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.route_prefix_lists_type_ipv4 import RoutePrefixListsTypeIpv4
+from scm.network_services.models.route_prefix_lists_type_ipv4 import RoutePrefixListsTypeIpv4
 
 # TODO update the JSON string below
 json = "{}"

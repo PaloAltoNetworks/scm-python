@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects import HipObjects
+from scm.objects.models.hip_objects import HipObjects
 
 class TestHipObjects(unittest.TestCase):
     """HipObjects unit test stubs"""
@@ -36,18 +36,18 @@ class TestHipObjects(unittest.TestCase):
         model = HipObjects()
         if include_optional:
             return HipObjects(
-                anti_malware = scm_objects.models.hip_objects_anti_malware.hip_objects_anti_malware(
-                    criteria = scm_objects.models.hip_objects_anti_malware_criteria.hip_objects_anti_malware_criteria(
+                anti_malware = scm.objects.models.hip_objects_anti_malware.hip_objects_anti_malware(
+                    criteria = scm.objects.models.hip_objects_anti_malware_criteria.hip_objects_anti_malware_criteria(
                         is_installed = True, 
-                        last_scan_time = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
-                            not_available = scm_objects.models.not_available.not_available(), 
-                            not_within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                        last_scan_time = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
+                            not_available = scm.objects.models.not_available.not_available(), 
+                            not_within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                                 days = 1, 
                                 hours = 1, ), 
-                            within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                            within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                                 days = 1, 
                                 hours = 1, ), ), 
-                        product_version = scm_objects.models.hip_objects_anti_malware_criteria_product_version.hip_objects_anti_malware_criteria_product_version(
+                        product_version = scm.objects.models.hip_objects_anti_malware_criteria_product_version.hip_objects_anti_malware_criteria_product_version(
                             contains = '', 
                             greater_equal = '', 
                             greater_than = '', 
@@ -56,29 +56,29 @@ class TestHipObjects(unittest.TestCase):
                             less_equal = '', 
                             less_than = '', ), 
                         real_time_protection = 'no', 
-                        virdef_version = scm_objects.models.hip_objects_anti_malware_criteria_virdef_version.hip_objects_anti_malware_criteria_virdef_version(), ), 
+                        virdef_version = scm.objects.models.hip_objects_anti_malware_criteria_virdef_version.hip_objects_anti_malware_criteria_virdef_version(), ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                        scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
                                 ], )
                         ], ),
-                certificate = scm_objects.models.hip_objects_certificate.hip_objects_certificate(
-                    criteria = scm_objects.models.hip_objects_certificate_criteria.hip_objects_certificate_criteria(
+                certificate = scm.objects.models.hip_objects_certificate.hip_objects_certificate(
+                    criteria = scm.objects.models.hip_objects_certificate_criteria.hip_objects_certificate_criteria(
                         certificate_attributes = [
-                            scm_objects.models.hip_objects_certificate_criteria_certificate_attributes_inner.hip_objects_certificate_criteria_certificate_attributes_inner(
+                            scm.objects.models.hip_objects_certificate_criteria_certificate_attributes_inner.hip_objects_certificate_criteria_certificate_attributes_inner(
                                 name = '', 
                                 value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                             ], 
                         certificate_profile = '', ), ),
-                custom_checks = scm_objects.models.hip_objects_custom_checks.hip_objects_custom_checks(
-                    criteria = scm_objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
+                custom_checks = scm.objects.models.hip_objects_custom_checks.hip_objects_custom_checks(
+                    criteria = scm.objects.models.hip_objects_custom_checks_criteria.hip_objects_custom_checks_criteria(
                         plist = [
-                            scm_objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
+                            scm.objects.models.hip_objects_custom_checks_criteria_plist_inner.hip_objects_custom_checks_criteria_plist_inner(
                                 key = [
-                                    scm_objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
+                                    scm.objects.models.hip_objects_custom_checks_criteria_plist_inner_key_inner.hip_objects_custom_checks_criteria_plist_inner_key_inner(
                                         name = '', 
                                         negate = True, 
                                         value = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
@@ -87,29 +87,29 @@ class TestHipObjects(unittest.TestCase):
                                 negate = True, )
                             ], 
                         process_list = [
-                            scm_objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
+                            scm.objects.models.hip_objects_custom_checks_criteria_process_list_inner.hip_objects_custom_checks_criteria_process_list_inner(
                                 name = '', 
                                 running = True, )
                             ], 
                         registry_key = [
-                            scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
+                            scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner.hip_objects_custom_checks_criteria_registry_key_inner(
                                 default_value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                 name = '', 
                                 negate = True, 
                                 registry_value = [
-                                    scm_objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
+                                    scm.objects.models.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner.hip_objects_custom_checks_criteria_registry_key_inner_registry_value_inner(
                                         name = '', 
                                         negate = True, 
                                         value_data = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                                     ], )
                             ], ), ),
-                data_loss_prevention = scm_objects.models.hip_objects_data_loss_prevention.hip_objects_data_loss_prevention(
-                    criteria = scm_objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
+                data_loss_prevention = scm.objects.models.hip_objects_data_loss_prevention.hip_objects_data_loss_prevention(
+                    criteria = scm.objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
                         is_enabled = 'no', 
                         is_installed = True, ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
+                        scm.objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
@@ -117,30 +117,30 @@ class TestHipObjects(unittest.TestCase):
                         ], ),
                 description = '',
                 device = 'My Device',
-                disk_backup = scm_objects.models.hip_objects_disk_backup.hip_objects_disk_backup(
-                    criteria = scm_objects.models.hip_objects_disk_backup_criteria.hip_objects_disk_backup_criteria(
+                disk_backup = scm.objects.models.hip_objects_disk_backup.hip_objects_disk_backup(
+                    criteria = scm.objects.models.hip_objects_disk_backup_criteria.hip_objects_disk_backup_criteria(
                         is_installed = True, 
-                        last_backup_time = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
-                            not_available = scm_objects.models.not_available.not_available(), 
-                            not_within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                        last_backup_time = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
+                            not_available = scm.objects.models.not_available.not_available(), 
+                            not_within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                                 days = 1, 
                                 hours = 1, ), 
-                            within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                            within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                                 days = 1, 
                                 hours = 1, ), ), ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                        scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
                                 ], )
                         ], ),
-                disk_encryption = scm_objects.models.hip_objects_disk_encryption.hip_objects_disk_encryption(
-                    criteria = scm_objects.models.hip_objects_disk_encryption_criteria.hip_objects_disk_encryption_criteria(
+                disk_encryption = scm.objects.models.hip_objects_disk_encryption.hip_objects_disk_encryption(
+                    criteria = scm.objects.models.hip_objects_disk_encryption_criteria.hip_objects_disk_encryption_criteria(
                         encrypted_locations = [
-                            scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
-                                encryption_state = scm_objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
+                            scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner.hip_objects_disk_encryption_criteria_encrypted_locations_inner(
+                                encryption_state = scm.objects.models.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state.hip_objects_disk_encryption_criteria_encrypted_locations_inner_encryption_state(
                                     is = 'encrypted', 
                                     is_not = 'encrypted', ), 
                                 name = '', )
@@ -148,40 +148,40 @@ class TestHipObjects(unittest.TestCase):
                         is_installed = True, ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                        scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
                                 ], )
                         ], ),
-                firewall = scm_objects.models.hip_objects_firewall.hip_objects_firewall(
-                    criteria = scm_objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
+                firewall = scm.objects.models.hip_objects_firewall.hip_objects_firewall(
+                    criteria = scm.objects.models.hip_objects_data_loss_prevention_criteria.hip_objects_data_loss_prevention_criteria(
                         is_enabled = 'no', 
                         is_installed = True, ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                        scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
                                 ], )
                         ], ),
                 folder = 'My Folder',
-                host_info = scm_objects.models.hip_objects_host_info.hip_objects_host_info(
-                    criteria = scm_objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
-                        client_version = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                host_info = scm.objects.models.hip_objects_host_info.hip_objects_host_info(
+                    criteria = scm.objects.models.hip_objects_host_info_criteria.hip_objects_host_info_criteria(
+                        client_version = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                             contains = '', 
                             is = '', 
                             is_not = '', ), 
-                        domain = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                        domain = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                             contains = '', 
                             is = '', 
                             is_not = '', ), 
                         host_id = , 
                         host_name = , 
                         managed = True, 
-                        os = scm_objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
-                            contains = scm_objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
+                        os = scm.objects.models.hip_objects_host_info_criteria_os.hip_objects_host_info_criteria_os(
+                            contains = scm.objects.models.hip_objects_host_info_criteria_os_contains.hip_objects_host_info_criteria_os_contains(
                                 apple = 'All', 
                                 google = 'All', 
                                 linux = 'All', 
@@ -189,37 +189,37 @@ class TestHipObjects(unittest.TestCase):
                                 other = '', ), ), 
                         serial_number = , ), ),
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                mobile_device = scm_objects.models.hip_objects_mobile_device.hip_objects_mobile_device(
-                    criteria = scm_objects.models.hip_objects_mobile_device_criteria.hip_objects_mobile_device_criteria(
-                        applications = scm_objects.models.hip_objects_mobile_device_criteria_applications.hip_objects_mobile_device_criteria_applications(
-                            has_malware = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
-                                no = scm_objects.models.no.no(), 
-                                yes = scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
+                mobile_device = scm.objects.models.hip_objects_mobile_device.hip_objects_mobile_device(
+                    criteria = scm.objects.models.hip_objects_mobile_device_criteria.hip_objects_mobile_device_criteria(
+                        applications = scm.objects.models.hip_objects_mobile_device_criteria_applications.hip_objects_mobile_device_criteria_applications(
+                            has_malware = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware.hip_objects_mobile_device_criteria_applications_has_malware(
+                                no = scm.objects.models.no.no(), 
+                                yes = scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes.hip_objects_mobile_device_criteria_applications_has_malware_yes(
                                     excludes = [
-                                        scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                                        scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                                             hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                             name = '', 
                                             package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                                         ], ), ), 
                             has_unmanaged_app = True, 
                             includes = [
-                                scm_objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
+                                scm.objects.models.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner.hip_objects_mobile_device_criteria_applications_has_malware_yes_excludes_inner(
                                     hash = 'jUR,rZ#UM/?R,Fp^l6$ARj', 
                                     name = '', 
                                     package = 'jUR,rZ#UM/?R,Fp^l6$ARj', )
                                 ], ), 
                         disk_encrypted = True, 
-                        imei = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                        imei = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                             contains = '', 
                             is = '', 
                             is_not = '', ), 
                         jailbroken = True, 
-                        last_checkin_time = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time.hip_objects_mobile_device_criteria_last_checkin_time(
-                            not_within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                        last_checkin_time = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time.hip_objects_mobile_device_criteria_last_checkin_time(
+                            not_within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                                 days = 1, ), 
-                            within = scm_objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
+                            within = scm.objects.models.hip_objects_mobile_device_criteria_last_checkin_time_not_within.hip_objects_mobile_device_criteria_last_checkin_time_not_within(
                                 days = 1, ), ), 
-                        model = scm_objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
+                        model = scm.objects.models.hip_objects_host_info_criteria_client_version.hip_objects_host_info_criteria_client_version(
                             contains = '', 
                             is = '', 
                             is_not = '', ), 
@@ -227,28 +227,28 @@ class TestHipObjects(unittest.TestCase):
                         phone_number = , 
                         tag = , ), ),
                 name = '.',
-                network_info = scm_objects.models.hip_objects_network_info.hip_objects_network_info(
-                    criteria = scm_objects.models.hip_objects_network_info_criteria.hip_objects_network_info_criteria(
-                        network = scm_objects.models.hip_objects_network_info_criteria_network.hip_objects_network_info_criteria_network(
-                            is = scm_objects.models.hip_objects_network_info_criteria_network_is.hip_objects_network_info_criteria_network_is(
-                                mobile = scm_objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
+                network_info = scm.objects.models.hip_objects_network_info.hip_objects_network_info(
+                    criteria = scm.objects.models.hip_objects_network_info_criteria.hip_objects_network_info_criteria(
+                        network = scm.objects.models.hip_objects_network_info_criteria_network.hip_objects_network_info_criteria_network(
+                            is = scm.objects.models.hip_objects_network_info_criteria_network_is.hip_objects_network_info_criteria_network_is(
+                                mobile = scm.objects.models.hip_objects_network_info_criteria_network_is_mobile.hip_objects_network_info_criteria_network_is_mobile(
                                     carrier = 'jUR,rZ#UM/?R,Fp^l6$ARj', ), 
-                                unknown = scm_objects.models.unknown.unknown(), 
-                                wifi = scm_objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
+                                unknown = scm.objects.models.unknown.unknown(), 
+                                wifi = scm.objects.models.hip_objects_network_info_criteria_network_is_wifi.hip_objects_network_info_criteria_network_is_wifi(
                                     ssid = 'jUR,rZ#UM/?R,Fp^l6$ARj', ), ), 
-                            is_not = scm_objects.models.hip_objects_network_info_criteria_network_is_not.hip_objects_network_info_criteria_network_is_not(
-                                ethernet = scm_objects.models.ethernet.ethernet(), 
-                                unknown = scm_objects.models.unknown.unknown(), ), ), ), ),
-                patch_management = scm_objects.models.hip_objects_patch_management.hip_objects_patch_management(
-                    criteria = scm_objects.models.hip_objects_patch_management_criteria.hip_objects_patch_management_criteria(
+                            is_not = scm.objects.models.hip_objects_network_info_criteria_network_is_not.hip_objects_network_info_criteria_network_is_not(
+                                ethernet = scm.objects.models.ethernet.ethernet(), 
+                                unknown = scm.objects.models.unknown.unknown(), ), ), ), ),
+                patch_management = scm.objects.models.hip_objects_patch_management.hip_objects_patch_management(
+                    criteria = scm.objects.models.hip_objects_patch_management_criteria.hip_objects_patch_management_criteria(
                         is_enabled = 'no', 
                         is_installed = True, 
-                        missing_patches = scm_objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
+                        missing_patches = scm.objects.models.hip_objects_patch_management_criteria_missing_patches.hip_objects_patch_management_criteria_missing_patches(
                             check = 'has-any', 
                             patches = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'
                                 ], 
-                            severity = scm_objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
+                            severity = scm.objects.models.hip_objects_patch_management_criteria_missing_patches_severity.hip_objects_patch_management_criteria_missing_patches_severity(
                                 greater_equal = 0, 
                                 greater_than = 0, 
                                 is = 0, 
@@ -257,7 +257,7 @@ class TestHipObjects(unittest.TestCase):
                                 less_than = 0, ), ), ), 
                     exclude_vendor = True, 
                     vendor = [
-                        scm_objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
+                        scm.objects.models.hip_objects_data_loss_prevention_vendor_inner.hip_objects_data_loss_prevention_vendor_inner(
                             name = '', 
                             product = [
                                 'jUR,rZ#UM/?R,Fp^l6$ARj'

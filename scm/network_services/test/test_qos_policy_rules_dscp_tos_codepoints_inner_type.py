@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type import QosPolicyRulesDscpTosCodepointsInnerType
+from scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type import QosPolicyRulesDscpTosCodepointsInnerType
 
 class TestQosPolicyRulesDscpTosCodepointsInnerType(unittest.TestCase):
     """QosPolicyRulesDscpTosCodepointsInnerType unit test stubs"""
@@ -36,16 +36,16 @@ class TestQosPolicyRulesDscpTosCodepointsInnerType(unittest.TestCase):
         model = QosPolicyRulesDscpTosCodepointsInnerType()
         if include_optional:
             return QosPolicyRulesDscpTosCodepointsInnerType(
-                af = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
+                af = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
                     codepoint = '', ),
-                cs = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
+                cs = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
                     codepoint = '', ),
-                custom = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom.qos_policy_rules_dscp_tos_codepoints_inner_type_custom(
-                    codepoint = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint(
+                custom = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom.qos_policy_rules_dscp_tos_codepoints_inner_type_custom(
+                    codepoint = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint.qos_policy_rules_dscp_tos_codepoints_inner_type_custom_codepoint(
                         binary_value = '', 
                         codepoint_name = '', ), ),
-                ef = scm_network_services.models.ef.ef(),
-                tos = scm_network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
+                ef = scm.network_services.models.ef.ef(),
+                tos = scm.network_services.models.qos_policy_rules_dscp_tos_codepoints_inner_type_af.qos_policy_rules_dscp_tos_codepoints_inner_type_af(
                     codepoint = '', )
             )
         else:

@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_objects.models.hip_objects_disk_backup import HipObjectsDiskBackup
+from scm.objects.models.hip_objects_disk_backup import HipObjectsDiskBackup
 
 class TestHipObjectsDiskBackup(unittest.TestCase):
     """HipObjectsDiskBackup unit test stubs"""
@@ -36,19 +36,19 @@ class TestHipObjectsDiskBackup(unittest.TestCase):
         model = HipObjectsDiskBackup()
         if include_optional:
             return HipObjectsDiskBackup(
-                criteria = scm_objects.models.hip_objects_disk_backup_criteria.hip_objects_disk_backup_criteria(
+                criteria = scm.objects.models.hip_objects_disk_backup_criteria.hip_objects_disk_backup_criteria(
                     is_installed = True, 
-                    last_backup_time = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
-                        not_available = scm_objects.models.not_available.not_available(), 
-                        not_within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                    last_backup_time = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time.hip_objects_anti_malware_criteria_last_scan_time(
+                        not_available = scm.objects.models.not_available.not_available(), 
+                        not_within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                             days = 1, 
                             hours = 1, ), 
-                        within = scm_objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
+                        within = scm.objects.models.hip_objects_anti_malware_criteria_last_scan_time_not_within.hip_objects_anti_malware_criteria_last_scan_time_not_within(
                             days = 1, 
                             hours = 1, ), ), ),
                 exclude_vendor = True,
                 vendor = [
-                    scm_objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
+                    scm.objects.models.hip_objects_anti_malware_vendor_inner.hip_objects_anti_malware_vendor_inner(
                         name = '', 
                         product = [
                             'jUR,rZ#UM/?R,Fp^l6$ARj'

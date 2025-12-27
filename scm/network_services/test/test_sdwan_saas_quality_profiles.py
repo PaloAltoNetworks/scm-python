@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
+from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
 
 class TestSdwanSaasQualityProfiles(unittest.TestCase):
     """SdwanSaasQualityProfiles unit test stubs"""
@@ -39,17 +39,17 @@ class TestSdwanSaasQualityProfiles(unittest.TestCase):
                 device = 'My Device',
                 folder = 'My Folder',
                 id = '123e4567-e89b-12d3-a456-426655440000',
-                monitor_mode = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode.sdwan_saas_quality_profiles_monitor_mode(
-                    adaptive = scm_network_services.models.adaptive.adaptive(), 
-                    http_https = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
+                monitor_mode = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode.sdwan_saas_quality_profiles_monitor_mode(
+                    adaptive = scm.network_services.models.adaptive.adaptive(), 
+                    http_https = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
                         monitored_url = '', 
                         probe_interval = 1, ), 
-                    static_ip = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
-                        fqdn = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
+                    static_ip = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
+                        fqdn = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
                             fqdn_name = '', 
                             probe_interval = 1, ), 
                         ip_address = [
-                            scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
+                            scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
                                 name = '', 
                                 probe_interval = 1, )
                             ], ), ),
@@ -58,17 +58,17 @@ class TestSdwanSaasQualityProfiles(unittest.TestCase):
             )
         else:
             return SdwanSaasQualityProfiles(
-                monitor_mode = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode.sdwan_saas_quality_profiles_monitor_mode(
-                    adaptive = scm_network_services.models.adaptive.adaptive(), 
-                    http_https = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
+                monitor_mode = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode.sdwan_saas_quality_profiles_monitor_mode(
+                    adaptive = scm.network_services.models.adaptive.adaptive(), 
+                    http_https = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_http_https.sdwan_saas_quality_profiles_monitor_mode_http_https(
                         monitored_url = '', 
                         probe_interval = 1, ), 
-                    static_ip = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
-                        fqdn = scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
+                    static_ip = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip.sdwan_saas_quality_profiles_monitor_mode_static_ip(
+                        fqdn = scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn.sdwan_saas_quality_profiles_monitor_mode_static_ip_fqdn(
                             fqdn_name = '', 
                             probe_interval = 1, ), 
                         ip_address = [
-                            scm_network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
+                            scm.network_services.models.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner.sdwan_saas_quality_profiles_monitor_mode_static_ip_ip_address_inner(
                                 name = '', 
                                 probe_interval = 1, )
                             ], ), ),

@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm_network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
+from scm.network_services.models.sdwan_path_quality_profiles_metric import SdwanPathQualityProfilesMetric
 from typing import Optional, Set
 from typing_extensions import Self
 

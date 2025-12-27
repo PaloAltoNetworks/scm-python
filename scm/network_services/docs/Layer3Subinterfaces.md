@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_network_services.models.layer3_subinterfaces import Layer3Subinterfaces
+from scm.network_services.models.layer3_subinterfaces import Layer3Subinterfaces
 
 # TODO update the JSON string below
 json = "{}"

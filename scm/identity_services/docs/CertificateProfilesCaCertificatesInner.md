@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm_identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
+from scm.identity_services.models.certificate_profiles_ca_certificates_inner import CertificateProfilesCaCertificatesInner
 
 # TODO update the JSON string below
 json = "{}"

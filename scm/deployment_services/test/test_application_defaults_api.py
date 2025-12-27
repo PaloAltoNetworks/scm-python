@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_deployment_services.api.application_defaults_api import ApplicationDefaultsApi
+from scm.deployment_services.api.application_defaults_api import ApplicationDefaultsApi
 
 
 class TestApplicationDefaultsApi(unittest.TestCase):

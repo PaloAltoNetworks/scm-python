@@ -15,7 +15,7 @@
 
 import unittest
 
-from scm_network_services.models.zone_protection_profiles_flood_udp import ZoneProtectionProfilesFloodUdp
+from scm.network_services.models.zone_protection_profiles_flood_udp import ZoneProtectionProfilesFloodUdp
 
 class TestZoneProtectionProfilesFloodUdp(unittest.TestCase):
     """ZoneProtectionProfilesFloodUdp unit test stubs"""
@@ -37,7 +37,7 @@ class TestZoneProtectionProfilesFloodUdp(unittest.TestCase):
         if include_optional:
             return ZoneProtectionProfilesFloodUdp(
                 enable = True,
-                red = scm_network_services.models.zone_protection_profiles_flood_udp_red.zone_protection_profiles_flood_udp_red(
+                red = scm.network_services.models.zone_protection_profiles_flood_udp_red.zone_protection_profiles_flood_udp_red(
                     activate_rate = 10000, 
                     alarm_rate = 10000, 
                     maximal_rate = 40000, )
