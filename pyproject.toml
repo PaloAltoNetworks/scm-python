@@ -7,10 +7,10 @@ name = "scm-python"
 version = "0.1.0"
 description = "Palo Alto Networks SCM Python SDK"
 authors = [
-  { name="Palo Alto Networks", email="devrel@paloaltonetworks.com" },
+    { name = "Palo Alto Networks", email = "vnarayanan@paloaltonetworks.com" },
 ]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -19,9 +19,32 @@ classifiers = [
 dependencies = [
     "urllib3 >= 1.25.3, < 2.1.0",
     "python-dateutil",
-    "pydantic >= 2",
+    "pydantic >= 2.0.0",
     "typing-extensions",
+    # Add auth dependencies found in cdot65
+    "oauthlib >= 3.3.0",
+    "requests-oauthlib >= 2.0.0",
 ]
+
+# Define optional dependencies for developers
+[project.optional-dependencies]
+dev = [
+    "pytest >= 7.0",
+    "ruff >= 0.1.0",
+    "mypy >= 1.0",
+]
+
+# Configure Ruff (Linter) - Copying cdot65's style config
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "D"]
+ignore = ["E501", "D203", "D213"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.setuptools.packages.find]
 where = ["."]
