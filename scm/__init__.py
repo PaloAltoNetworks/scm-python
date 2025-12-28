@@ -155,10 +155,9 @@ class Scm:
         logger.debug(f"Scope: {scope}")
 
         # FIX: Tell oauthlib to relax scope validation.
-        # SCM returns extra scopes (email, profile) that strict clients reject otherwise.
         os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
 
-        # 1. Create the standard OAuth2 Client for Client Credentials flow
+        # 1. Create the standard OAuth2 Client
         client = BackendApplicationClient(client_id=self.client_id, scope=scope)
         
         # 2. Create the session
@@ -178,100 +177,93 @@ class Scm:
             logger.error(f"Authentication Failed: {str(e)}")
             raise ValueError(f"Failed to authenticate with SCM via OAuth2: {str(e)}")
     def _init_config_setup_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/setup/v1
         config = ConfigSetupConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/setup/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = ConfigSetupApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         config_setup_api.api_client = client
-        
         return config_setup_api
     def _init_deployment_services_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/deployment/v1
         config = DeploymentServicesConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/deployment/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = DeploymentServicesApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         deployment_services_api.api_client = client
-        
         return deployment_services_api
     def _init_device_settings_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/device/v1
         config = DeviceSettingsConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/device/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = DeviceSettingsApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         device_settings_api.api_client = client
-        
         return device_settings_api
     def _init_identity_services_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/identity/v1
         config = IdentityServicesConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/identity/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = IdentityServicesApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         identity_services_api.api_client = client
-        
         return identity_services_api
     def _init_network_services_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/network/v1
         config = NetworkServicesConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/network/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = NetworkServicesApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         network_services_api.api_client = client
-        
         return network_services_api
     def _init_objects_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/objects/v1
         config = ObjectsConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/objects/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = ObjectsApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         objects_api.api_client = client
-        
         return objects_api
     def _init_security_services_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/security/v1
         config = SecurityServicesConfiguration(
-            host=f"https://{self.host}"
+            host=f"https://{self.host}/config/security/v1"
         )
         config.verify_ssl = self.verify_ssl
         config.access_token = self._access_token
         
-        # Instantiate the client
         client = SecurityServicesApiClient(config)
-        
-        # Attach the authenticated client to the module so it can be accessed
         security_services_api.api_client = client
-        
         return security_services_api
