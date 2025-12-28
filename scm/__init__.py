@@ -1,69 +1,118 @@
 
 import os
-from typing import Optional
+import json
+import logging
+from typing import Optional, Dict, Any
+from pathlib import Path
+from oauthlib.oauth2 import BackendApplicationClient
+from requests_oauthlib import OAuth2Session
 
 # Import all sub-clients
 from scm.config_setup import api as config_setup_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.config_setup.api_client import ApiClient as ConfigSetupApiClient
 from scm.config_setup.configuration import Configuration as ConfigSetupConfiguration
 from scm.deployment_services import api as deployment_services_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.deployment_services.api_client import ApiClient as DeploymentServicesApiClient
 from scm.deployment_services.configuration import Configuration as DeploymentServicesConfiguration
 from scm.device_settings import api as device_settings_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.device_settings.api_client import ApiClient as DeviceSettingsApiClient
 from scm.device_settings.configuration import Configuration as DeviceSettingsConfiguration
 from scm.identity_services import api as identity_services_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.identity_services.api_client import ApiClient as IdentityServicesApiClient
 from scm.identity_services.configuration import Configuration as IdentityServicesConfiguration
 from scm.network_services import api as network_services_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.network_services.api_client import ApiClient as NetworkServicesApiClient
 from scm.network_services.configuration import Configuration as NetworkServicesConfiguration
 from scm.objects import api as objects_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.objects.api_client import ApiClient as ObjectsApiClient
 from scm.objects.configuration import Configuration as ObjectsConfiguration
 from scm.security_services import api as security_services_api
-# CHANGE: Explicitly import ApiClient and Configuration from their specific modules
-# because the generated __init__.py in sub-packages often does not expose them.
 from scm.security_services.api_client import ApiClient as SecurityServicesApiClient
 from scm.security_services.configuration import Configuration as SecurityServicesConfiguration
+
+# Set up logging
+logging.basicConfig(level=logging.ERROR)
+logger = logging.getLogger("scm")
 
 class Scm:
     """
     Unified SCM Client that provides access to all services.
+    
+    Configuration Priority:
+    1. Constructor arguments
+    2. Environment variables
+    3. JSON configuration file (~/.scm/config.json or SCM_CONFIG_FILE)
     """
     def __init__(
         self, 
         client_id: Optional[str] = None, 
         client_secret: Optional[str] = None, 
         tsg_id: Optional[str] = None,
-        host: str = "api.sase.paloaltonetworks.com",
+        host: Optional[str] = None,
+        auth_url: Optional[str] = None,
         verify_ssl: bool = True,
-        log_level: str = "ERROR"
+        log_level: Optional[str] = None
     ):
-        self.client_id = client_id or os.environ.get("SCM_CLIENT_ID")
-        self.client_secret = client_secret or os.environ.get("SCM_CLIENT_SECRET")
-        self.tsg_id = tsg_id or os.environ.get("SCM_TSG_ID")
-        self.host = host
+        # 1. Load File Configuration
+        file_config = self._load_config_from_file()
+
+        # 2. Resolve Configuration (Args > Env > File > Default)
+        self.client_id = (
+            client_id 
+            or os.environ.get("SCM_CLIENT_ID") 
+            or file_config.get("client_id")
+        )
+        self.client_secret = (
+            client_secret 
+            or os.environ.get("SCM_CLIENT_SECRET") 
+            or file_config.get("client_secret")
+        )
+        self.tsg_id = (
+            tsg_id 
+            or os.environ.get("SCM_TSG_ID") 
+            or file_config.get("tsg_id")
+            or file_config.get("scope", "").replace("tsg_id:", "")
+        )
+        self.host = (
+            host 
+            or os.environ.get("SCM_HOST") 
+            or file_config.get("host") 
+            or "api.sase.paloaltonetworks.com"
+        )
+        self.auth_url = (
+            auth_url 
+            or os.environ.get("SCM_AUTH_URL") 
+            or file_config.get("auth_url") 
+            or "https://auth.apps.paloaltonetworks.com"
+        )
+        
+        # Handle log level
+        _log_level_str = (
+            log_level 
+            or os.environ.get("SCM_LOG_LEVEL") 
+            or file_config.get("logging") 
+            or "ERROR"
+        ).upper()
+        
         self.verify_ssl = verify_ssl
 
-        if not self.client_id or not self.client_secret:
-            raise ValueError("client_id and client_secret must be provided or set in environment variables.")
+        # Configure logger
+        try:
+            logger.setLevel(_log_level_str)
+        except ValueError:
+            logger.setLevel(logging.ERROR)
+            logger.warning(f"Invalid log level '{_log_level_str}', defaulting to ERROR")
 
-        # Shared OAuth setup would go here (getting the token once)
-        # For now, we configure each sub-client individually
-        
+        if not self.client_id or not self.client_secret:
+            raise ValueError(
+                "client_id and client_secret must be provided via args, environment variables, or config file."
+            )
+
+        # Remove /oauth2/access_token from auth_url if present
+        if "/oauth2/access_token" in self.auth_url:
+            self.auth_url = self.auth_url.split("/oauth2/access_token")[0]
+
+        # Authenticate immediately
         self._access_token = self._fetch_access_token()
 
         # Initialize sub-clients
@@ -75,12 +124,59 @@ class Scm:
         self.objects = self._init_objects_client()
         self.security_services = self._init_security_services_client()
 
+    def _load_config_from_file(self) -> Dict[str, Any]:
+        """
+        Loads configuration from a JSON file.
+        """
+        config_path = os.environ.get("SCM_CONFIG_FILE", os.path.expanduser("~/.scm/config.json"))
+        path = Path(config_path)
+        
+        if not path.exists():
+            return {}
+            
+        try:
+            with open(path, "r") as f:
+                return json.load(f)
+        except Exception as e:
+            logger.warning(f"Failed to load config file at {config_path}: {e}")
+            return {}
+
     def _fetch_access_token(self) -> str:
-        # TODO: Implement actual OAuth2 flow here using requests
-        # For generated SDKs, we might pass the token directly if the generator supports it,
-        # or configure the ApiClient to handle it.
-        # Placeholder return:
-        return "PLACEHOLDER_TOKEN"
+        """
+        Fetches the OAuth2 access token using requests-oauthlib.
+        """
+        token_url = f"{self.auth_url}/oauth2/access_token"
+        
+        # SCM requires tsg_id in the scope
+        scope = [f"tsg_id:{self.tsg_id}"] if self.tsg_id else None
+
+        logger.debug(f"Attempting Authentication to: {token_url}")
+        logger.debug(f"Client ID: {self.client_id[:4]}...{self.client_id[-4:] if len(self.client_id) > 4 else ''}")
+        logger.debug(f"Scope: {scope}")
+
+        # FIX: Tell oauthlib to relax scope validation.
+        # SCM returns extra scopes (email, profile) that strict clients reject otherwise.
+        os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
+
+        # 1. Create the standard OAuth2 Client for Client Credentials flow
+        client = BackendApplicationClient(client_id=self.client_id, scope=scope)
+        
+        # 2. Create the session
+        oauth = OAuth2Session(client=client)
+        
+        # 3. Fetch the token
+        try:
+            token = oauth.fetch_token(
+                token_url=token_url, 
+                client_id=self.client_id, 
+                client_secret=self.client_secret,
+                verify=self.verify_ssl
+            )
+            logger.info("Authentication successful.")
+            return token["access_token"]
+        except Exception as e:
+            logger.error(f"Authentication Failed: {str(e)}")
+            raise ValueError(f"Failed to authenticate with SCM via OAuth2: {str(e)}")
     def _init_config_setup_client(self):
         config = ConfigSetupConfiguration(
             host=f"https://{self.host}"
@@ -91,10 +187,9 @@ class Scm:
         # Instantiate the client
         client = ConfigSetupApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        config_setup_api.api_client = client
+        
         return config_setup_api
     def _init_deployment_services_client(self):
         config = DeploymentServicesConfiguration(
@@ -106,10 +201,9 @@ class Scm:
         # Instantiate the client
         client = DeploymentServicesApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        deployment_services_api.api_client = client
+        
         return deployment_services_api
     def _init_device_settings_client(self):
         config = DeviceSettingsConfiguration(
@@ -121,10 +215,9 @@ class Scm:
         # Instantiate the client
         client = DeviceSettingsApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        device_settings_api.api_client = client
+        
         return device_settings_api
     def _init_identity_services_client(self):
         config = IdentityServicesConfiguration(
@@ -136,10 +229,9 @@ class Scm:
         # Instantiate the client
         client = IdentityServicesApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        identity_services_api.api_client = client
+        
         return identity_services_api
     def _init_network_services_client(self):
         config = NetworkServicesConfiguration(
@@ -151,10 +243,9 @@ class Scm:
         # Instantiate the client
         client = NetworkServicesApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        network_services_api.api_client = client
+        
         return network_services_api
     def _init_objects_client(self):
         config = ObjectsConfiguration(
@@ -166,10 +257,9 @@ class Scm:
         # Instantiate the client
         client = ObjectsApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        objects_api.api_client = client
+        
         return objects_api
     def _init_security_services_client(self):
         config = SecurityServicesConfiguration(
@@ -181,8 +271,7 @@ class Scm:
         # Instantiate the client
         client = SecurityServicesApiClient(config)
         
-        # Return the API module. 
-        # Note: Users will still need to instantiate the specific APIs themselves
-        # e.g., client.objects.AddressesApi(client.objects.api_client) 
-        # unless we wrap this further.
+        # Attach the authenticated client to the module so it can be accessed
+        security_services_api.api_client = client
+        
         return security_services_api
