@@ -7,6 +7,7 @@ from scm.objects.models.addresses import Addresses
 
 # Configure logging to see details during test execution (use pytest -s)
 logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 # -----------------------------------------------------------------------------
 # CONFIGURATION
@@ -52,7 +53,7 @@ def clean_address(addresses_api):
         description="Created via Automated Pytest Fixture"
     )
     
-    print(f"\n[SETUP] Creating Address: {object_name}")
+    logger.info(f"\n[SETUP] Creating Address: {object_name}")
     created_obj = addresses_api.create_addresses(addresses=payload)
     assert created_obj.id is not None
     
@@ -60,11 +61,11 @@ def clean_address(addresses_api):
     yield created_obj
 
     # 2. TEARDOWN: Delete Address
-    print(f"\n[TEARDOWN] Deleting Address ID: {created_obj.id}")
+    logger.info(f"\n[TEARDOWN] Deleting Address ID: {created_obj.id}")
     try:
         addresses_api.delete_addresses_by_id(id=created_obj.id)
     except Exception as e:
-        print(f"Teardown failed (might have been deleted in test): {e}")
+        logger.info(f"Teardown failed (might have been deleted in test): {e}")
 
 
 def test_create_address(addresses_api):
@@ -146,7 +147,7 @@ def test_list_addresses(addresses_api, clean_address):
     
     assert response is not None
     assert len(response.data) > 0
-    print(f"\n[SUCCESS] List returned {len(response.data)} items.")
+    logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
 def test_delete_address_by_id(addresses_api):
