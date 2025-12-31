@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**egress_guaranteed** | **int** | guaranteed sending bandwidth in percentage | [optional] 
-**egress_max** | **int** | max sending bandwidth in percentage | [optional] 
+**egress_guaranteed** | **int** | guaranteed sending bandwidth in percentage | [optional] [default to 0]
+**egress_max** | **int** | max sending bandwidth in percentage | [optional] [default to 0]
 
 ## Example
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | **str** | The Kerberos server IP address | [optional] 
-**name** | **str** | The Kerberos server name | [optional] 
+**host** | **str** | The Kerberos server IP address | 
+**name** | **str** | The Kerberos server name | 
 **port** | **int** | The Kerberos server port | [optional] 
 
 ## Example

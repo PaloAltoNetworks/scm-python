@@ -28,8 +28,8 @@ class KerberosServerProfilesServerInner(BaseModel):
     """
     KerberosServerProfilesServerInner
     """ # noqa: E501
-    host: Optional[StrictStr] = Field(default=None, description="The Kerberos server IP address")
-    name: Optional[StrictStr] = Field(default=None, description="The Kerberos server name")
+    host: StrictStr = Field(description="The Kerberos server IP address")
+    name: StrictStr = Field(description="The Kerberos server name")
     port: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=None, description="The Kerberos server port")
     __properties: ClassVar[List[str]] = ["host", "name", "port"]
 

@@ -28,8 +28,8 @@ class QosProfilesClassBandwidthTypePercentageClassInnerClassBandwidth(BaseModel)
     """
     QosProfilesClassBandwidthTypePercentageClassInnerClassBandwidth
     """ # noqa: E501
-    egress_guaranteed: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=None, description="guaranteed sending bandwidth in percentage")
-    egress_max: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=None, description="max sending bandwidth in percentage")
+    egress_guaranteed: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=0, description="guaranteed sending bandwidth in percentage")
+    egress_max: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=0, description="max sending bandwidth in percentage")
     __properties: ClassVar[List[str]] = ["egress_guaranteed", "egress_max"]
 
     model_config = ConfigDict(
@@ -83,8 +83,8 @@ class QosProfilesClassBandwidthTypePercentageClassInnerClassBandwidth(BaseModel)
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "egress_guaranteed": obj.get("egress_guaranteed"),
-            "egress_max": obj.get("egress_max")
+            "egress_guaranteed": obj.get("egress_guaranteed") if obj.get("egress_guaranteed") is not None else 0,
+            "egress_max": obj.get("egress_max") if obj.get("egress_max") is not None else 0
         })
         return _obj
 

@@ -20,7 +20,6 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from typing_extensions import Annotated
 from scm.network_services.models.qos_profiles_class_bandwidth_type_percentage_class_inner_class_bandwidth import QosProfilesClassBandwidthTypePercentageClassInnerClassBandwidth
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,9 +29,19 @@ class QosProfilesClassBandwidthTypePercentageClassInner(BaseModel):
     QosProfilesClassBandwidthTypePercentageClassInner
     """ # noqa: E501
     class_bandwidth: Optional[QosProfilesClassBandwidthTypePercentageClassInnerClassBandwidth] = None
-    name: Optional[Annotated[str, Field(strict=True, max_length=31)]] = Field(default=None, description="Traffic class")
+    name: Optional[StrictStr] = Field(default=None, description="Traffic class")
     priority: Optional[StrictStr] = Field(default='medium', description="traffic class priority")
     __properties: ClassVar[List[str]] = ["class_bandwidth", "name", "priority"]
+
+    @field_validator('name')
+    def name_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['class1', 'class2', 'class3', 'class4', 'class5', 'class6', 'class7', 'class8']):
+            raise ValueError("must be one of enum values ('class1', 'class2', 'class3', 'class4', 'class5', 'class6', 'class7', 'class8')")
+        return value
 
     @field_validator('priority')
     def priority_validate_enum(cls, value):

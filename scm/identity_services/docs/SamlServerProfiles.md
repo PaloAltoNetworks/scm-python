@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **max_clock_skew** | **int** | Maxiumum clock skew | [optional] 
 **name** | **str** | The name of the SAML server profile | 
 **slo_bindings** | **str** | SAML HTTP binding for SLO requests to the identity provider | [optional] 
+**slo_url** | **str** | Identity provider SLO URL | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **sso_bindings** | **str** | SAML HTTP binding for SSO requests to the identity provider | 
 **sso_url** | **str** | Identity provider SSO URL | 

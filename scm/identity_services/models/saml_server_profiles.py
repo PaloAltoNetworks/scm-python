@@ -36,12 +36,13 @@ class SamlServerProfiles(BaseModel):
     max_clock_skew: Optional[Annotated[int, Field(le=900, strict=True, ge=1)]] = Field(default=None, description="Maxiumum clock skew")
     name: StrictStr = Field(description="The name of the SAML server profile")
     slo_bindings: Optional[StrictStr] = Field(default=None, description="SAML HTTP binding for SLO requests to the identity provider")
+    slo_url: Optional[Annotated[str, Field(min_length=1, strict=True, max_length=255)]] = Field(default=None, description="Identity provider SLO URL")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     sso_bindings: StrictStr = Field(description="SAML HTTP binding for SSO requests to the identity provider")
     sso_url: Annotated[str, Field(min_length=1, strict=True, max_length=255)] = Field(description="Identity provider SSO URL")
     validate_idp_certificate: Optional[StrictBool] = Field(default=None, description="Validate the identity provider certificate?")
     want_auth_requests_signed: Optional[StrictBool] = Field(default=None, description="Sign SAML message to the identity provider?")
-    __properties: ClassVar[List[str]] = ["certificate", "device", "entity_id", "folder", "id", "max_clock_skew", "name", "slo_bindings", "snippet", "sso_bindings", "sso_url", "validate_idp_certificate", "want_auth_requests_signed"]
+    __properties: ClassVar[List[str]] = ["certificate", "device", "entity_id", "folder", "id", "max_clock_skew", "name", "slo_bindings", "slo_url", "snippet", "sso_bindings", "sso_url", "validate_idp_certificate", "want_auth_requests_signed"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -151,6 +152,7 @@ class SamlServerProfiles(BaseModel):
             "max_clock_skew": obj.get("max_clock_skew"),
             "name": obj.get("name"),
             "slo_bindings": obj.get("slo_bindings"),
+            "slo_url": obj.get("slo_url"),
             "snippet": obj.get("snippet"),
             "sso_bindings": obj.get("sso_bindings"),
             "sso_url": obj.get("sso_url"),
