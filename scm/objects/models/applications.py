@@ -36,7 +36,7 @@ class Applications(BaseModel):
     consume_big_bandwidth: Optional[StrictBool] = None
     data_ident: Optional[StrictBool] = None
     default: Optional[ApplicationsDefault] = None
-    description: Optional[Annotated[str, Field(strict=True, max_length=1023)]] = None
+    description: Optional[Annotated[str, Field(strict=True, max_length=8192)]] = None
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     evasive_behavior: Optional[StrictBool] = None
     file_type_ident: Optional[StrictBool] = None
