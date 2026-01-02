@@ -49,7 +49,7 @@ def hip_objects_api(client):
     """
     Fixture to return the HIP Objects API instance.
     """
-    return client.objects.HipObjectsApi(client.objects.api_client)
+    return client.objects.HIPObjectsApi(client.objects.api_client)
 
 @pytest.fixture
 def clean_hip_object(hip_objects_api):
