@@ -4,7 +4,6 @@ import uuid
 import pytest
 from scm import Scm
 
-# FIX: Import all model classes from the main package 'scm.objects.models'
 from scm.objects.models import (
     Services,
     ServicesProtocol,
