@@ -3,14 +3,15 @@ import logging
 import uuid
 import pytest
 from scm import Scm
-from scm.objects.models.services import (
+
+from scm.objects.models import (
     Services,
     ServicesProtocol,
     ServicesProtocolTcp,
     ServicesProtocolTcpOverride,
     ServicesProtocolUdp,
+    Tags
 )
-from scm.objects.models.tags import Tags
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)

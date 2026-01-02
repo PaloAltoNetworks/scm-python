@@ -3,8 +3,15 @@ import logging
 import uuid
 import pytest
 from scm import Scm
-from scm.objects.models.services import Services, ServicesProtocol, ServicesProtocolTcp, ServicesProtocolUdp
-from scm.objects.models.service_groups import ServiceGroups
+
+# FIX: Import all model classes from the main package 'scm.objects.models'
+from scm.objects.models import (
+    Services,
+    ServicesProtocol,
+    ServicesProtocolTcp,
+    ServicesProtocolUdp,
+    ServiceGroups
+)
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
