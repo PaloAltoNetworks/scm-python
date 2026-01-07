@@ -4,7 +4,6 @@ import uuid
 import pytest
 from scm import Scm
 
-# 1. FIX: Import from the package 'scm.objects.models' to locate all nested classes
 from scm.objects.models import (
     SyslogServerProfiles,
     SyslogServerProfilesServerInner,
@@ -42,20 +41,18 @@ def syslog_profiles_api(client):
 @pytest.fixture
 def clean_syslog_profile(syslog_profiles_api):
     """
-    Fixture to create a temporary Syslog Server Profile for testing and automatically delete it after.
+    Fixture to create a MINIMAL temporary Syslog Server Profile for testing.
+    Matches Go helper 'createTestSyslogProfile'.
     """
-    # 1. SETUP: Create Syslog Profile
+    # 1. SETUP: Create Syslog Profile (Minimal)
     random_id = uuid.uuid4().hex[:6]
     profile_name = f"test-syslog-{random_id}"
     
+    # Minimal server list (No transport/port/facility/format)
     server_list = [
         SyslogServerProfilesServerInner(
             name="TestServer-Fixture",
-            server="192.0.2.1",
-            transport="UDP",
-            port=514,
-            format="BSD",
-            facility="LOG_LOCAL0"
+            server="192.0.2.1"
         )
     ]
 
@@ -83,7 +80,7 @@ def clean_syslog_profile(syslog_profiles_api):
 
 def test_create_syslog_profile(syslog_profiles_api):
     """
-    Test manual creation and deletion of a complex Syslog Server Profile.
+    Test manual creation and deletion of a COMPLEX Syslog Server Profile.
     Equivalent to Go: Test_objects_SyslogServerProfilesAPIService_Create
     """
     random_suffix = uuid.uuid4().hex[:6]
@@ -110,6 +107,7 @@ def test_create_syslog_profile(syslog_profiles_api):
     ]
 
     # 2. Define Format Object
+    # Note: Escaped characters might need raw string r"" in Python
     format_config = SyslogServerProfilesFormat(
         escaping=SyslogServerProfilesFormatEscaping(
             escape_character="*",
@@ -188,7 +186,8 @@ def test_update_syslog_profile(syslog_profiles_api, clean_syslog_profile):
         format="IETF",
         facility="LOG_LOCAL7"
     )
-    # Append to list safely
+    
+    # Initialize list if None (though fixture provides one)
     if update_payload.server is None:
         update_payload.server = []
     update_payload.server.append(new_server)
@@ -247,14 +246,11 @@ def test_delete_syslog_profile_by_id(syslog_profiles_api):
     random_suffix = uuid.uuid4().hex[:6]
     profile_name = f"test-syslog-del-{random_suffix}"
     
+    # Minimal payload for delete test (matches Go helper createTestSyslogProfile)
     server_list = [
         SyslogServerProfilesServerInner(
             name="DeleteMeServer",
-            server="1.1.1.1",
-            transport="UDP",
-            port=514,
-            format="BSD",
-            facility="LOG_LOCAL0"
+            server="1.1.1.1"
         )
     ]
 
