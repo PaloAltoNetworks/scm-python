@@ -8,6 +8,7 @@ from scm import Scm
 from scm.identity_services.models.radius_server_profiles import RadiusServerProfiles
 from scm.identity_services.models.radius_server_profiles_protocol import RadiusServerProfilesProtocol
 from scm.identity_services.models.radius_server_profiles_server_inner import RadiusServerProfilesServerInner
+from scm.test_helpers import perform
 
 # Configure logging to see details during test execution (use pytest -s)
 logging.basicConfig(level=logging.DEBUG)
@@ -18,56 +19,6 @@ logger = logging.getLogger(__name__)
 # -----------------------------------------------------------------------------
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
-
-def perform(func, **kwargs):
-    """
-    Local utility to call an API function and log the request/response details.
-    """
-    func_name = func.__name__
-    logger.info(f"\n>>> API REQUEST [{func_name}]")
-
-    # Prepare arguments for logging (convert Pydantic models to dicts)
-    log_kwargs = {}
-    for k, v in kwargs.items():
-        if hasattr(v, "to_dict"):
-            log_kwargs[k] = v.to_dict()
-        else:
-            log_kwargs[k] = v
-
-    logger.info(json.dumps(log_kwargs, indent=2, default=str))
-
-    # Execute the API call
-    response = func(**kwargs)
-
-    # Log the response
-    logger.info(f"\n<<< API RESPONSE [{func_name}]")
-
-    # Logic to unwrap ApiResponse if present (from _with_http_info calls)
-    final_data = response
-
-    if hasattr(response, 'data') and hasattr(response, 'raw_data'):
-        logger.info(f"status_code={getattr(response, 'status_code', 'N/A')} headers={getattr(response, 'headers', {})} data={response.data} raw_data={response.raw_data}")
-        if response.data is not None:
-            final_data = response.data
-
-    # Handle tuple responses (legacy support)
-    elif isinstance(response, tuple):
-        data, status, _ = response
-        logger.info(f"Status: {status}")
-        if hasattr(data, "to_dict"):
-            logger.info(json.dumps(data.to_dict(), indent=2, default=str))
-        else:
-            logger.info(str(data))
-        return data  # Return just the data object for the test to use
-
-    # Log the final data
-    if hasattr(final_data, "to_dict"):
-        logger.info(json.dumps(final_data.to_dict(), indent=2, default=str))
-    else:
-        logger.info(str(final_data))
-
-    return final_data
-
 
 @pytest.fixture(scope="module")
 def client():
@@ -132,7 +83,6 @@ def clean_radius_profile(radius_profiles_api):
     except Exception as e:
         logger.info(f"Teardown failed (might have been deleted in test): {e}")
 
-
 def test_create_radius_profile(radius_profiles_api):
     """
     Test manual creation and deletion of a RADIUS Server Profile with logging.
@@ -173,7 +123,6 @@ def test_create_radius_profile(radius_profiles_api):
         id=created_obj.id
     )
 
-
 def test_get_radius_profile_by_id(radius_profiles_api, clean_radius_profile):
     """
     Test retrieving a RADIUS Server Profile by ID with logging.
@@ -186,7 +135,6 @@ def test_get_radius_profile_by_id(radius_profiles_api, clean_radius_profile):
     assert fetched_obj.id == clean_radius_profile.id
     assert fetched_obj.name == clean_radius_profile.name
     assert fetched_obj.timeout == clean_radius_profile.timeout
-
 
 def test_update_radius_profile(radius_profiles_api, clean_radius_profile):
     """
@@ -207,7 +155,6 @@ def test_update_radius_profile(radius_profiles_api, clean_radius_profile):
     assert updated_obj.retries == 2
     assert updated_obj.timeout == 60
 
-
 def test_list_radius_profiles(radius_profiles_api, clean_radius_profile):
     """
     Test listing RADIUS Server Profiles with logging.
@@ -219,7 +166,6 @@ def test_list_radius_profiles(radius_profiles_api, clean_radius_profile):
 
     assert response is not None
     assert len(response.data) > 0
-
 
 def test_delete_radius_profile_by_id(radius_profiles_api):
     """
