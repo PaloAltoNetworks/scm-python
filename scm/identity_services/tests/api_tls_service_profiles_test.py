@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     try:
@@ -69,6 +70,7 @@ def clean_tls_profile(tls_profiles_api):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_tls_profile(tls_profiles_api):
     profile_name = f"test-tls-create-{uuid.uuid4().hex[:6]}"
 
@@ -100,6 +102,7 @@ def test_create_tls_profile(tls_profiles_api):
         id=created_obj.id
     )
 
+
 def test_get_tls_profile_by_id(tls_profiles_api, clean_tls_profile):
     fetched_obj = perform(
         tls_profiles_api.get_tls_service_profiles_by_id_with_http_info,
@@ -108,6 +111,7 @@ def test_get_tls_profile_by_id(tls_profiles_api, clean_tls_profile):
 
     assert fetched_obj.id == clean_tls_profile.id
     assert fetched_obj.name == clean_tls_profile.name
+
 
 def test_update_tls_profile(tls_profiles_api, clean_tls_profile):
     update_payload = clean_tls_profile
@@ -124,6 +128,7 @@ def test_update_tls_profile(tls_profiles_api, clean_tls_profile):
     assert updated_obj.protocol_settings.min_version == "tls1-0"
     assert updated_obj.protocol_settings.max_version == "tls1-2"
 
+
 def test_list_tls_profiles(tls_profiles_api, clean_tls_profile):
     response = perform(
         tls_profiles_api.list_tls_service_profiles_with_http_info,
@@ -139,6 +144,7 @@ def test_list_tls_profiles(tls_profiles_api, clean_tls_profile):
             found = True
             break
     assert found is True, f"Created profile {clean_tls_profile.id} not found in list response"
+
 
 def test_delete_tls_profile_by_id(tls_profiles_api):
     profile_name = f"test-tls-del-{uuid.uuid4().hex[:6]}"

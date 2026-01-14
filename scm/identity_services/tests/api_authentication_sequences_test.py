@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     try:
@@ -101,6 +102,7 @@ def clean_auth_sequence(auth_sequences_api, test_auth_profile):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_auth_sequence(auth_sequences_api, test_auth_profile):
     """
     Test manual creation and deletion of an Authentication Sequence with logging.
@@ -132,6 +134,7 @@ def test_create_auth_sequence(auth_sequences_api, test_auth_profile):
         id=created_obj.id
     )
 
+
 def test_get_auth_sequence_by_id(auth_sequences_api, clean_auth_sequence):
     """
     Test retrieving an Authentication Sequence by ID with logging.
@@ -144,6 +147,7 @@ def test_get_auth_sequence_by_id(auth_sequences_api, clean_auth_sequence):
 
     assert fetched_obj.id == clean_auth_sequence.id
     assert fetched_obj.name == clean_auth_sequence.name
+
 
 def test_update_auth_sequence(auth_sequences_api, clean_auth_sequence):
     """
@@ -161,6 +165,7 @@ def test_update_auth_sequence(auth_sequences_api, clean_auth_sequence):
 
     assert updated_obj.id == clean_auth_sequence.id
     assert updated_obj.use_domain_find_profile == True
+
 
 def test_list_auth_sequences(auth_sequences_api, clean_auth_sequence):
     """
@@ -181,6 +186,7 @@ def test_list_auth_sequences(auth_sequences_api, clean_auth_sequence):
             found = True
             break
     assert found is True, f"Created sequence {clean_auth_sequence.id} not found in list response"
+
 
 def test_delete_auth_sequence_by_id(auth_sequences_api, test_auth_profile):
     """

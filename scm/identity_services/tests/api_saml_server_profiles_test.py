@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     try:
@@ -59,6 +60,7 @@ def clean_saml_profile(saml_profiles_api):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_saml_profile(saml_profiles_api):
     profile_name = f"test-saml-create-{uuid.uuid4().hex[:6]}"
 
@@ -92,6 +94,7 @@ def test_create_saml_profile(saml_profiles_api):
         id=created_obj.id
     )
 
+
 def test_get_saml_profile_by_id(saml_profiles_api, clean_saml_profile):
     fetched_obj = perform(
         saml_profiles_api.get_saml_server_profiles_by_id_with_http_info,
@@ -100,6 +103,7 @@ def test_get_saml_profile_by_id(saml_profiles_api, clean_saml_profile):
 
     assert fetched_obj.id == clean_saml_profile.id
     assert fetched_obj.name == clean_saml_profile.name
+
 
 def test_update_saml_profile(saml_profiles_api, clean_saml_profile):
     update_payload = clean_saml_profile
@@ -116,6 +120,7 @@ def test_update_saml_profile(saml_profiles_api, clean_saml_profile):
     assert updated_obj.sso_url == "https://idp.updated.com/sso"
     assert updated_obj.max_clock_skew == 500
 
+
 def test_list_saml_profiles(saml_profiles_api, clean_saml_profile):
     response = perform(
         saml_profiles_api.list_saml_server_profiles_with_http_info,
@@ -131,6 +136,7 @@ def test_list_saml_profiles(saml_profiles_api, clean_saml_profile):
             found = True
             break
     assert found is True, f"Created profile {clean_saml_profile.id} not found in list response"
+
 
 def test_delete_saml_profile_by_id(saml_profiles_api):
     profile_name = f"test-saml-del-{uuid.uuid4().hex[:6]}"

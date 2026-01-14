@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "Prisma Access"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     """
@@ -78,6 +79,7 @@ def clean_address(addresses_api):
     except Exception as e:
         logger.info(f"Teardown failed (might have been deleted in test): {e}")
 
+
 def test_create_address(addresses_api):
     """
     Test manual creation and deletion of an address.
@@ -112,6 +114,7 @@ def test_create_address(addresses_api):
         id=created_obj.id
     )
 
+
 def test_get_address_by_id(addresses_api, clean_address):
     """
     Test retrieving an address by ID.
@@ -130,6 +133,7 @@ def test_get_address_by_id(addresses_api, clean_address):
     assert fetched_obj.name == clean_address.name
     assert fetched_obj.folder == clean_address.folder
     assert fetched_obj.ip_netmask == clean_address.ip_netmask
+
 
 def test_update_address(addresses_api, clean_address):
     """
@@ -157,6 +161,7 @@ def test_update_address(addresses_api, clean_address):
     assert updated_obj.fqdn == "updated.test.example.com"
     assert updated_obj.id == clean_address.id
 
+
 def test_list_addresses(addresses_api, clean_address):
     """
     Test listing addresses with folder filter.
@@ -171,6 +176,7 @@ def test_list_addresses(addresses_api, clean_address):
     assert response is not None
     assert len(response.data) > 0
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
+
 
 def test_delete_address_by_id(addresses_api):
     """

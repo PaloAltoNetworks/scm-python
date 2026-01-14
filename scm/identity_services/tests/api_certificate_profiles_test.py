@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "Shared"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     """
@@ -88,6 +89,7 @@ def clean_cert_profile(cert_profiles_api):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_cert_profile(cert_profiles_api):
     """
     Test manual creation and deletion of a Certificate Profile with logging.
@@ -156,6 +158,7 @@ def test_create_cert_profile(cert_profiles_api):
         id=created_obj.id
     )
 
+
 def test_get_cert_profile_by_id(cert_profiles_api, clean_cert_profile):
     """
     Test retrieving a Certificate Profile by ID with logging.
@@ -168,6 +171,7 @@ def test_get_cert_profile_by_id(cert_profiles_api, clean_cert_profile):
 
     assert fetched_obj.id == clean_cert_profile.id
     assert fetched_obj.name == clean_cert_profile.name
+
 
 def test_update_cert_profile(cert_profiles_api, clean_cert_profile):
     """
@@ -187,6 +191,7 @@ def test_update_cert_profile(cert_profiles_api, clean_cert_profile):
     assert updated_obj.id == clean_cert_profile.id
     assert updated_obj.domain == "updated-domain"
     assert updated_obj.crl_receive_timeout == "10"
+
 
 def test_list_cert_profiles(cert_profiles_api, clean_cert_profile):
     """
@@ -208,6 +213,7 @@ def test_list_cert_profiles(cert_profiles_api, clean_cert_profile):
             found = True
             break
     assert found is True, f"Created profile {clean_cert_profile.id} not found in list response"
+
 
 def test_delete_cert_profile_by_id(cert_profiles_api):
     """

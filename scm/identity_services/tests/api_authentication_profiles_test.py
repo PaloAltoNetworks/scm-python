@@ -19,6 +19,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     """
@@ -88,6 +89,7 @@ def clean_auth_profile(auth_profiles_api):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_auth_profile(auth_profiles_api):
     """
     Test manual creation and deletion of an Authentication Profile with logging.
@@ -145,6 +147,7 @@ def test_create_auth_profile(auth_profiles_api):
         id=created_obj.id
     )
 
+
 def test_get_auth_profile_by_id(auth_profiles_api, clean_auth_profile):
     """
     Test retrieving an Authentication Profile by ID with logging.
@@ -157,6 +160,7 @@ def test_get_auth_profile_by_id(auth_profiles_api, clean_auth_profile):
 
     assert fetched_obj.id == clean_auth_profile.id
     assert fetched_obj.name == clean_auth_profile.name
+
 
 def test_update_auth_profile(auth_profiles_api, clean_auth_profile):
     """
@@ -174,6 +178,7 @@ def test_update_auth_profile(auth_profiles_api, clean_auth_profile):
 
     assert updated_obj.id == clean_auth_profile.id
     assert updated_obj.user_domain == "paloaltonetworks.com"
+
 
 def test_list_auth_profiles(auth_profiles_api, clean_auth_profile):
     """
@@ -194,6 +199,7 @@ def test_list_auth_profiles(auth_profiles_api, clean_auth_profile):
             found = True
             break
     assert found is True, f"Created profile {clean_auth_profile.id} not found in list response"
+
 
 def test_delete_auth_profile_by_id(auth_profiles_api):
     """

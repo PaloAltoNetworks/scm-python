@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "All"
 # -----------------------------------------------------------------------------
 
+
 @pytest.fixture(scope="module")
 def client():
     try:
@@ -106,6 +107,7 @@ def clean_auth_rule(auth_rules_api, test_auth_profile):
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
+
 def test_create_auth_rule(auth_rules_api, test_auth_profile):
     rule_name = f"test-auth-create-{uuid.uuid4().hex[:6]}"
 
@@ -140,6 +142,7 @@ def test_create_auth_rule(auth_rules_api, test_auth_profile):
         id=created_obj.id
     )
 
+
 def test_get_auth_rule_by_id(auth_rules_api, clean_auth_rule):
     fetched_obj = perform(
         auth_rules_api.get_authentication_rules_by_id_with_http_info,
@@ -149,6 +152,7 @@ def test_get_auth_rule_by_id(auth_rules_api, clean_auth_rule):
     assert fetched_obj.id == clean_auth_rule.id
     assert fetched_obj.name == clean_auth_rule.name
     assert fetched_obj.service == ["any"]
+
 
 def test_update_auth_rule(auth_rules_api, clean_auth_rule):
     update_payload = clean_auth_rule
@@ -165,6 +169,7 @@ def test_update_auth_rule(auth_rules_api, clean_auth_rule):
     assert updated_obj.timeout == 900
     assert updated_obj.description == "Updated auth rule description"
 
+
 def test_list_auth_rules(auth_rules_api, clean_auth_rule):
     response = perform(
         auth_rules_api.list_authentication_rules_with_http_info,
@@ -180,6 +185,7 @@ def test_list_auth_rules(auth_rules_api, clean_auth_rule):
             found = True
             break
     assert found is True, f"Created rule {clean_auth_rule.id} not found in list response"
+
 
 def test_delete_auth_rule_by_id(auth_rules_api, test_auth_profile):
     rule_name = f"test-auth-del-{uuid.uuid4().hex[:6]}"
