@@ -4,8 +4,6 @@ import uuid
 import pytest
 from scm import Scm
 
-# 1. FIX: Import only the classes that actually exist.
-# Classes for "Empty" objects (Hourly, FiveMinute) are NOT generated.
 from scm.objects.models import (
     ExternalDynamicLists,
     ExternalDynamicListsType,
@@ -18,12 +16,10 @@ from scm.objects.models import (
     # IP specific models
     ExternalDynamicListsTypeIp,
     ExternalDynamicListsTypeIpRecurring,
-    # ExternalDynamicListsTypeIpRecurringFiveMinute,  <-- DOES NOT EXIST (Empty Object)
     
     # URL specific models
     ExternalDynamicListsTypeUrl,
     ExternalDynamicListsTypeUrlRecurring,
-    # ExternalDynamicListsTypeUrlRecurringHourly,     <-- DOES NOT EXIST (Empty Object)
     ExternalDynamicListsTypeUrlRecurringWeekly,
 )
 
