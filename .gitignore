@@ -144,6 +144,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# SCM environment setup with credentials
+setup_scm_env.sh
+
 # Spyder project settings
 .spyderproject
 .spyproject
