@@ -95,7 +95,7 @@ class AuthenticationProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationProfiles",
+            '201': "AuthenticationProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -166,7 +166,7 @@ class AuthenticationProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationProfiles",
+            '201': "AuthenticationProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -237,7 +237,7 @@ class AuthenticationProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationProfiles",
+            '201': "AuthenticationProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",

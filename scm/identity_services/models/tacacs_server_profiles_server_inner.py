@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -31,7 +31,7 @@ class TacacsServerProfilesServerInner(BaseModel):
     address: Optional[StrictStr] = Field(default=None, description="The IP address of the TACACS+ server")
     name: Optional[StrictStr] = Field(default=None, description="The name of the TACACS+ server")
     port: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=None, description="The TACACS+ server port")
-    secret: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The TACACS+ secret")
+    secret: Optional[SecretStr] = Field(default=None, description="The TACACS+ secret")
     __properties: ClassVar[List[str]] = ["address", "name", "port", "secret"]
 
     model_config = ConfigDict(

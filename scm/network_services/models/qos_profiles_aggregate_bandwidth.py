@@ -28,8 +28,8 @@ class QosProfilesAggregateBandwidth(BaseModel):
     """
     QosProfilesAggregateBandwidth
     """ # noqa: E501
-    egress_guaranteed: Optional[Annotated[int, Field(le=10000, strict=True, ge=0)]] = Field(default=None, description="guaranteed sending bandwidth in mbps")
-    egress_max: Optional[Annotated[int, Field(le=10000, strict=True, ge=0)]] = Field(default=None, description="max sending bandwidth in mbps")
+    egress_guaranteed: Optional[Annotated[int, Field(le=16000, strict=True, ge=0)]] = Field(default=None, description="guaranteed sending bandwidth in mbps")
+    egress_max: Optional[Annotated[int, Field(le=60000, strict=True, ge=0)]] = Field(default=None, description="max sending bandwidth in mbps")
     __properties: ClassVar[List[str]] = ["egress_guaranteed", "egress_max"]
 
     model_config = ConfigDict(

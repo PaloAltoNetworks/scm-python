@@ -31,7 +31,7 @@ class RadiusServerProfilesServerInner(BaseModel):
     ip_address: Optional[StrictStr] = Field(default=None, description="The IP address of the RADIUS server")
     name: Optional[StrictStr] = Field(default=None, description="The name of the RADIUS server")
     port: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=None, description="The RADIUS server port")
-    secret: Optional[Annotated[str, Field(strict=True, max_length=128)]] = Field(default=None, description="The RADIUS secret")
+    secret: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The RADIUS secret")
     __properties: ClassVar[List[str]] = ["ip_address", "name", "port", "secret"]
 
     model_config = ConfigDict(

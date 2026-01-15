@@ -18,8 +18,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
+from scm.security_services.models.decryption_rules_type_ssl_inbound_inspection import DecryptionRulesTypeSslInboundInspection
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +29,7 @@ class DecryptionRulesType(BaseModel):
     The type of decryption
     """ # noqa: E501
     ssl_forward_proxy: Optional[Dict[str, Any]] = None
-    ssl_inbound_inspection: Optional[StrictStr] = Field(default=None, description="add the certificate name for SSL inbound inspection")
+    ssl_inbound_inspection: Optional[DecryptionRulesTypeSslInboundInspection] = None
     __properties: ClassVar[List[str]] = ["ssl_forward_proxy", "ssl_inbound_inspection"]
 
     model_config = ConfigDict(
@@ -70,6 +71,9 @@ class DecryptionRulesType(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of ssl_inbound_inspection
+        if self.ssl_inbound_inspection:
+            _dict['ssl_inbound_inspection'] = self.ssl_inbound_inspection.to_dict()
         return _dict
 
     @classmethod
@@ -83,7 +87,7 @@ class DecryptionRulesType(BaseModel):
 
         _obj = cls.model_validate({
             "ssl_forward_proxy": obj.get("ssl_forward_proxy"),
-            "ssl_inbound_inspection": obj.get("ssl_inbound_inspection")
+            "ssl_inbound_inspection": DecryptionRulesTypeSslInboundInspection.from_dict(obj["ssl_inbound_inspection"]) if obj.get("ssl_inbound_inspection") is not None else None
         })
         return _obj
 

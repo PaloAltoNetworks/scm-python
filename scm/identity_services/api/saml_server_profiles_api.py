@@ -95,7 +95,7 @@ class SAMLServerProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SamlServerProfiles",
+            '201': "SamlServerProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -166,7 +166,7 @@ class SAMLServerProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SamlServerProfiles",
+            '201': "SamlServerProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -237,7 +237,7 @@ class SAMLServerProfilesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SamlServerProfiles",
+            '201': "SamlServerProfiles",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",

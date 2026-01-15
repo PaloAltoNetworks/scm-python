@@ -6,10 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action_desc** | **str** | Match profile description | [optional] 
-**filter** | **str** | Filter match criteria | [optional] 
-**log_type** | **str** | Log type | [optional] 
-**name** | **str** | Name of the match profile | [optional] 
+**filter** | **str** | Filter match criteria | 
+**log_type** | **str** | Log type | 
+**name** | **str** | Name of the match profile | 
+**send_email** | **List[str]** | A list of email server profiles | [optional] 
 **send_http** | **List[str]** | A list of HTTP server profiles | [optional] 
+**send_snmptrap** | **List[str]** | A list of SNMP server profiles | [optional] 
 **send_syslog** | **List[str]** | A list of syslog server profiles | [optional] 
 
 ## Example

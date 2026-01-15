@@ -154,7 +154,7 @@ class SamlServerProfiles(BaseModel):
             "slo_bindings": obj.get("slo_bindings"),
             "slo_url": obj.get("slo_url"),
             "snippet": obj.get("snippet"),
-            "sso_bindings": obj.get("sso_bindings"),
+            "sso_bindings": obj.get("sso_bindings") if obj.get("sso_bindings") is not None else 'post',
             "sso_url": obj.get("sso_url"),
             "validate_idp_certificate": obj.get("validate_idp_certificate"),
             "want_auth_requests_signed": obj.get("want_auth_requests_signed")

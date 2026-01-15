@@ -100,7 +100,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationRules",
+            '201': "AuthenticationRules",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -175,7 +175,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationRules",
+            '201': "AuthenticationRules",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -250,7 +250,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthenticationRules",
+            '201': "AuthenticationRules",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1329,7 +1329,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
+            '201': None,
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1404,7 +1404,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
+            '201': None,
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1479,7 +1479,7 @@ class AuthenticationRulesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
+            '201': None,
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",

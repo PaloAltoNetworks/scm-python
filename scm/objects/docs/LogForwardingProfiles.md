@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **description** | **str** | Log forwarding profile description | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**id** | **str** | The UUID of the log server profile | [readonly] 
-**match_list** | [**List[LogForwardingProfilesMatchListInner]**](LogForwardingProfilesMatchListInner.md) |  | [optional] 
+**id** | **str** | The UUID of the log server profile | [optional] [readonly] 
+**match_list** | [**List[LogForwardingProfilesMatchListInner]**](LogForwardingProfilesMatchListInner.md) |  | 
 **name** | **str** | The name of the log forwarding profile | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 

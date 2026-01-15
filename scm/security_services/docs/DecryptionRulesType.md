@@ -7,7 +7,7 @@ The type of decryption
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ssl_forward_proxy** | **object** |  | [optional] 
-**ssl_inbound_inspection** | **str** | add the certificate name for SSL inbound inspection | [optional] 
+**ssl_inbound_inspection** | [**DecryptionRulesTypeSslInboundInspection**](DecryptionRulesTypeSslInboundInspection.md) |  | [optional] 
 
 ## Example
 

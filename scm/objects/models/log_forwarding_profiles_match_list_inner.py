@@ -29,21 +29,20 @@ class LogForwardingProfilesMatchListInner(BaseModel):
     LogForwardingProfilesMatchListInner
     """ # noqa: E501
     action_desc: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="Match profile description")
-    filter: Optional[Annotated[str, Field(strict=True, max_length=65535)]] = Field(default=None, description="Filter match criteria")
-    log_type: Optional[StrictStr] = Field(default=None, description="Log type")
-    name: Optional[Annotated[str, Field(strict=True, max_length=63)]] = Field(default=None, description="Name of the match profile")
+    filter: Annotated[str, Field(strict=True, max_length=65535)] = Field(description="Filter match criteria")
+    log_type: StrictStr = Field(description="Log type")
+    name: Annotated[str, Field(strict=True, max_length=63)] = Field(description="Name of the match profile")
+    send_email: Optional[List[StrictStr]] = Field(default=None, description="A list of email server profiles")
     send_http: Optional[List[StrictStr]] = Field(default=None, description="A list of HTTP server profiles")
+    send_snmptrap: Optional[List[StrictStr]] = Field(default=None, description="A list of SNMP server profiles")
     send_syslog: Optional[List[StrictStr]] = Field(default=None, description="A list of syslog server profiles")
-    __properties: ClassVar[List[str]] = ["action_desc", "filter", "log_type", "name", "send_http", "send_syslog"]
+    __properties: ClassVar[List[str]] = ["action_desc", "filter", "log_type", "name", "send_email", "send_http", "send_snmptrap", "send_syslog"]
 
     @field_validator('log_type')
     def log_type_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption']):
-            raise ValueError("must be one of enum values ('traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption')")
+        if value not in set(['traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security']):
+            raise ValueError("must be one of enum values ('traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security')")
         return value
 
     model_config = ConfigDict(
@@ -101,7 +100,9 @@ class LogForwardingProfilesMatchListInner(BaseModel):
             "filter": obj.get("filter"),
             "log_type": obj.get("log_type"),
             "name": obj.get("name"),
+            "send_email": obj.get("send_email"),
             "send_http": obj.get("send_http"),
+            "send_snmptrap": obj.get("send_snmptrap"),
             "send_syslog": obj.get("send_syslog")
         })
         return _obj

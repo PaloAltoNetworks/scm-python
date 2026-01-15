@@ -32,8 +32,8 @@ class LogForwardingProfiles(BaseModel):
     description: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Log forwarding profile description")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    id: StrictStr = Field(description="The UUID of the log server profile")
-    match_list: Optional[List[LogForwardingProfilesMatchListInner]] = None
+    id: Optional[StrictStr] = Field(default=None, description="The UUID of the log server profile")
+    match_list: Annotated[List[LogForwardingProfilesMatchListInner], Field(min_length=1)]
     name: Annotated[str, Field(strict=True, max_length=63)] = Field(description="The name of the log forwarding profile")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     __properties: ClassVar[List[str]] = ["description", "device", "folder", "id", "match_list", "name", "snippet"]
