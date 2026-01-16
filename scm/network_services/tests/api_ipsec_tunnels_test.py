@@ -32,15 +32,15 @@ def client():
 
 @pytest.fixture(scope="module")
 def tunnel_api(client):
-    return client.network_services.IpsecTunnelsApi(client.network_services.api_client)
+    return client.network_services.IPsecTunnelsApi(client.network_services.api_client)
 
 @pytest.fixture(scope="module")
 def ike_gw_api(client):
-    return client.network_services.IkeGatewaysApi(client.network_services.api_client)
+    return client.network_services.IKEGatewaysApi(client.network_services.api_client)
 
 @pytest.fixture(scope="module")
 def ike_crypto_api(client):
-    return client.network_services.IkeCryptoProfilesApi(client.network_services.api_client)
+    return client.network_services.IKECryptoProfilesApi(client.network_services.api_client)
 
 @pytest.fixture
 def dependency_ike_gateway(ike_gw_api, ike_crypto_api):

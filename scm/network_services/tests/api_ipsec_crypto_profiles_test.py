@@ -13,7 +13,7 @@ from scm.network_services.models import (
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-TARGET_FOLDER = "Shared"
+TARGET_FOLDER = "Remote Networks"
 
 @pytest.fixture(scope="module")
 def client():
@@ -24,7 +24,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def ipsec_api(client):
-    return client.network_services.IpsecCryptoProfilesApi(client.network_services.api_client)
+    return client.network_services.IPsecCryptoProfilesApi(client.network_services.api_client)
 
 @pytest.fixture
 def clean_ipsec_profile(ipsec_api):

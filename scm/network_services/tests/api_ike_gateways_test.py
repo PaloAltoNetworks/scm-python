@@ -18,7 +18,7 @@ from scm.network_services.models import (
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-TARGET_FOLDER = "Shared"
+TARGET_FOLDER = "Remote Networks"
 
 @pytest.fixture(scope="module")
 def client():
