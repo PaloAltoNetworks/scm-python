@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **id** | **str** | UUID of the resource | [optional] [readonly] 
 **interface_management_profile** | **str** | Interface management profile | [optional] 
 **ip** | [**List[TunnelInterfacesIpInner]**](TunnelInterfacesIpInner.md) | Tunnel Interface IP Parent | [optional] 
+**ipv6** | [**TunnelInterfacesIpv6**](TunnelInterfacesIpv6.md) |  | [optional] 
 **mtu** | **int** | MTU | [optional] 
 **name** | **str** | L3 sub-interface name | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 

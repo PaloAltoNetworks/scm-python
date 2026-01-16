@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rsa** | [**ScepProfilesAlgorithmRsa**](ScepProfilesAlgorithmRsa.md) |  | [optional] 
+**rsa** | [**ScepProfilesAlgorithmRsa**](ScepProfilesAlgorithmRsa.md) |  | 
 
 ## Example
 

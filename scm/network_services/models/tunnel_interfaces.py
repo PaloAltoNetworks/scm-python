@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.tunnel_interfaces_ip_inner import TunnelInterfacesIpInner
+from scm.network_services.models.tunnel_interfaces_ipv6 import TunnelInterfacesIpv6
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -36,10 +37,11 @@ class TunnelInterfaces(BaseModel):
     id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
     interface_management_profile: Optional[StrictStr] = Field(default=None, description="Interface management profile")
     ip: Optional[List[TunnelInterfacesIpInner]] = Field(default=None, description="Tunnel Interface IP Parent")
+    ipv6: Optional[TunnelInterfacesIpv6] = None
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU")
     name: StrictStr = Field(description="L3 sub-interface name")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "snippet"]
+    __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "snippet"]
 
     @field_validator('default_value')
     def default_value_validate_regular_expression(cls, value):
@@ -129,6 +131,9 @@ class TunnelInterfaces(BaseModel):
                 if _item_ip:
                     _items.append(_item_ip.to_dict())
             _dict['ip'] = _items
+        # override the default output from pydantic by calling `to_dict()` of ipv6
+        if self.ipv6:
+            _dict['ipv6'] = self.ipv6.to_dict()
         return _dict
 
     @classmethod
@@ -148,6 +153,7 @@ class TunnelInterfaces(BaseModel):
             "id": obj.get("id"),
             "interface_management_profile": obj.get("interface_management_profile"),
             "ip": [TunnelInterfacesIpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
+            "ipv6": TunnelInterfacesIpv6.from_dict(obj["ipv6"]) if obj.get("ipv6") is not None else None,
             "mtu": obj.get("mtu"),
             "name": obj.get("name"),
             "snippet": obj.get("snippet")

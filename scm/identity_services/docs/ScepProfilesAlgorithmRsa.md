@@ -6,7 +6,7 @@ Key length (bits)
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rsa_nbits** | **int** |  | [optional] 
+**rsa_nbits** | **str** |  | 
 
 ## Example
 

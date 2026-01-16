@@ -1,6 +1,6 @@
 # ScepProfilesScepChallenge
 
-One Time Password challenge
+One Time Password Challenge
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dynamic** | [**ScepProfilesScepChallengeDynamic**](ScepProfilesScepChallengeDynamic.md) |  | [optional] 
 **fixed** | **str** | Challenge to use for SCEP server on mobile clients | [optional] 
-**var_none** | **str** | No OTP | [optional] 
+**var_none** | **object** | No OTP | [optional] 
 
 ## Example
 

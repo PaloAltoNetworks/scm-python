@@ -5,9 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**anycast** | **object** | Anycast | [optional] 
 **enable_on_interface** | **bool** | Enable Address on Interface | [optional] [default to True]
-**interface_id** | **str** | Interface ID | [optional] [default to 'EUI-64']
 **name** | **str** | IPv6 Address | [optional] 
+**prefix** | **object** | Use interface ID as host portion | [optional] 
 
 ## Example
 

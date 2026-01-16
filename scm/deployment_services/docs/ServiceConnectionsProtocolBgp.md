@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **fast_failover** | **bool** |  | [optional] 
 **local_ip_address** | **str** |  | [optional] 
 **originate_default_route** | **bool** |  | [optional] 
-**peer_as** | **str** |  | [optional] 
+**peer_as** | **str** |  | 
 **peer_ip_address** | **str** |  | [optional] 
 **secret** | **str** |  | [optional] 
 **summarize_mobile_user_routes** | **bool** |  | [optional] 

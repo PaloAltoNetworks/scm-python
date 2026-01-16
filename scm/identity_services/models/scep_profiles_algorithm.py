@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from scm.identity_services.models.scep_profiles_algorithm_rsa import ScepProfilesAlgorithmRsa
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,7 +28,7 @@ class ScepProfilesAlgorithm(BaseModel):
     """
     ScepProfilesAlgorithm
     """ # noqa: E501
-    rsa: Optional[ScepProfilesAlgorithmRsa] = None
+    rsa: ScepProfilesAlgorithmRsa
     __properties: ClassVar[List[str]] = ["rsa"]
 
     model_config = ConfigDict(

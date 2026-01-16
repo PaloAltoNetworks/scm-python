@@ -32,7 +32,7 @@ class ServiceConnectionsProtocolBgp(BaseModel):
     fast_failover: Optional[StrictBool] = None
     local_ip_address: Optional[StrictStr] = None
     originate_default_route: Optional[StrictBool] = None
-    peer_as: Optional[StrictStr] = None
+    peer_as: StrictStr
     peer_ip_address: Optional[StrictStr] = None
     secret: Optional[SecretStr] = None
     summarize_mobile_user_routes: Optional[StrictBool] = None

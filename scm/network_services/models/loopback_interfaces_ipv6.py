@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from scm.network_services.models.loopback_interfaces_ipv6_address_inner import LoopbackInterfacesIpv6AddressInner
 from typing import Optional, Set
@@ -30,7 +30,8 @@ class LoopbackInterfacesIpv6(BaseModel):
     """ # noqa: E501
     address: Optional[List[LoopbackInterfacesIpv6AddressInner]] = Field(default=None, description="IPv6 Address Parent")
     enabled: Optional[StrictBool] = Field(default=False, description="Enable IPv6")
-    __properties: ClassVar[List[str]] = ["address", "enabled"]
+    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID")
+    __properties: ClassVar[List[str]] = ["address", "enabled", "interface_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -91,7 +92,8 @@ class LoopbackInterfacesIpv6(BaseModel):
 
         _obj = cls.model_validate({
             "address": [LoopbackInterfacesIpv6AddressInner.from_dict(_item) for _item in obj["address"]] if obj.get("address") is not None else None,
-            "enabled": obj.get("enabled") if obj.get("enabled") is not None else False
+            "enabled": obj.get("enabled") if obj.get("enabled") is not None else False,
+            "interface_id": obj.get("interface_id") if obj.get("interface_id") is not None else 'EUI-64'
         })
         return _obj
 

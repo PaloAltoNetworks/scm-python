@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | [**List[LoopbackInterfacesIpv6AddressInner]**](LoopbackInterfacesIpv6AddressInner.md) | IPv6 Address Parent | [optional] 
 **enabled** | **bool** | Enable IPv6 | [optional] [default to False]
+**interface_id** | **str** | Interface ID | [optional] [default to 'EUI-64']
 
 ## Example
 

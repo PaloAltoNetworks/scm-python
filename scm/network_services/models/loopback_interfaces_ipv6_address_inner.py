@@ -27,10 +27,11 @@ class LoopbackInterfacesIpv6AddressInner(BaseModel):
     """
     LoopbackInterfacesIpv6AddressInner
     """ # noqa: E501
+    anycast: Optional[Dict[str, Any]] = Field(default=None, description="Anycast")
     enable_on_interface: Optional[StrictBool] = Field(default=True, description="Enable Address on Interface")
-    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID")
     name: Optional[StrictStr] = Field(default=None, description="IPv6 Address")
-    __properties: ClassVar[List[str]] = ["enable_on_interface", "interface_id", "name"]
+    prefix: Optional[Dict[str, Any]] = Field(default=None, description="Use interface ID as host portion")
+    __properties: ClassVar[List[str]] = ["anycast", "enable_on_interface", "name", "prefix"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,9 +84,10 @@ class LoopbackInterfacesIpv6AddressInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "anycast": obj.get("anycast"),
             "enable_on_interface": obj.get("enable_on_interface") if obj.get("enable_on_interface") is not None else True,
-            "interface_id": obj.get("interface_id") if obj.get("interface_id") is not None else 'EUI-64',
-            "name": obj.get("name")
+            "name": obj.get("name"),
+            "prefix": obj.get("prefix")
         })
         return _obj
 

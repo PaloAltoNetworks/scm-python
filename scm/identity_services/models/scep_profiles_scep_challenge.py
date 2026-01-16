@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.identity_services.models.scep_profiles_scep_challenge_dynamic import ScepProfilesScepChallengeDynamic
@@ -27,22 +27,12 @@ from typing_extensions import Self
 
 class ScepProfilesScepChallenge(BaseModel):
     """
-    One Time Password challenge
+    One Time Password Challenge
     """ # noqa: E501
     dynamic: Optional[ScepProfilesScepChallengeDynamic] = None
     fixed: Optional[Annotated[str, Field(strict=True, max_length=1024)]] = Field(default=None, description="Challenge to use for SCEP server on mobile clients")
-    var_none: Optional[StrictStr] = Field(default=None, description="No OTP", alias="none")
+    var_none: Optional[Dict[str, Any]] = Field(default=None, description="No OTP", alias="none")
     __properties: ClassVar[List[str]] = ["dynamic", "fixed", "none"]
-
-    @field_validator('var_none')
-    def var_none_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['']):
-            raise ValueError("must be one of enum values ('')")
-        return value
 
     model_config = ConfigDict(
         populate_by_name=True,

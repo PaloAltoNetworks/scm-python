@@ -32,17 +32,17 @@ class ScepProfiles(BaseModel):
     ScepProfiles
     """ # noqa: E501
     algorithm: ScepProfilesAlgorithm
-    ca_identity_name: StrictStr = Field(description="Certificate Authority identity")
+    ca_identity_name: StrictStr = Field(description="Certificate Authority Identity")
     certificate_attributes: Optional[ScepProfilesCertificateAttributes] = None
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     digest: StrictStr = Field(description="Digest for CSR")
-    fingerprint: Optional[StrictStr] = Field(default=None, description="CA certificate fingerprint")
+    fingerprint: Optional[StrictStr] = Field(default=None, description="CA Certificate Fingerprint")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
     id: StrictStr = Field(description="The UUID of the SCEP profile")
     name: Annotated[str, Field(strict=True, max_length=31)] = Field(description="The name of the SCEP profile")
-    scep_ca_cert: Optional[StrictStr] = Field(default=None, description="SCEP server CA certificate")
+    scep_ca_cert: Optional[StrictStr] = Field(default=None, description="SCEP Server CA Certificate")
     scep_challenge: ScepProfilesScepChallenge
-    scep_client_cert: Optional[StrictStr] = Field(default=None, description="SCEP client ceertificate")
+    scep_client_cert: Optional[StrictStr] = Field(default=None, description="SCEP Client Certificate")
     scep_url: StrictStr = Field(description="SCEP server URL")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     subject: StrictStr = Field(description="Subject")
@@ -63,8 +63,8 @@ class ScepProfiles(BaseModel):
     @field_validator('digest')
     def digest_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['sha1', 'sha256', 'sha348', 'sha512']):
-            raise ValueError("must be one of enum values ('sha1', 'sha256', 'sha348', 'sha512')")
+        if value not in set(['sha1', 'sha256', 'sha384', 'sha512']):
+            raise ValueError("must be one of enum values ('sha1', 'sha256', 'sha384', 'sha512')")
         return value
 
     @field_validator('folder')
@@ -75,6 +75,26 @@ class ScepProfiles(BaseModel):
 
         if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
             raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
+        return value
+
+    @field_validator('scep_ca_cert')
+    def scep_ca_cert_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['Authentication Cookie CA', 'Forward-Trust-CA', 'Forward-Trust-CA-ECDSA', 'Forward-UnTrust-CA', 'Forward-UnTrust-CA-ECDSA', 'Global Authentication Cookie CA', 'GlobalSign-Root-CA', 'Root CA']):
+            raise ValueError("must be one of enum values ('Authentication Cookie CA', 'Forward-Trust-CA', 'Forward-Trust-CA-ECDSA', 'Forward-UnTrust-CA', 'Forward-UnTrust-CA-ECDSA', 'Global Authentication Cookie CA', 'GlobalSign-Root-CA', 'Root CA')")
+        return value
+
+    @field_validator('scep_client_cert')
+    def scep_client_cert_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['Authentication Cookie CA', 'Forward-Trust-CA', 'Forward-Trust-CA-ECDSA', 'Forward-UnTrust-CA', 'Forward-UnTrust-CA-ECDSA', 'Global Authentication Cookie CA', 'GlobalSign-Root-CA', 'Root CA']):
+            raise ValueError("must be one of enum values ('Authentication Cookie CA', 'Forward-Trust-CA', 'Forward-Trust-CA-ECDSA', 'Forward-UnTrust-CA', 'Forward-UnTrust-CA-ECDSA', 'Global Authentication Cookie CA', 'GlobalSign-Root-CA', 'Root CA')")
         return value
 
     @field_validator('snippet')

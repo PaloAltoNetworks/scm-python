@@ -18,8 +18,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, field_validator
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,17 +27,14 @@ class ScepProfilesAlgorithmRsa(BaseModel):
     """
     Key length (bits)
     """ # noqa: E501
-    rsa_nbits: Optional[StrictInt] = None
+    rsa_nbits: StrictStr
     __properties: ClassVar[List[str]] = ["rsa_nbits"]
 
     @field_validator('rsa_nbits')
     def rsa_nbits_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set([1024, 2048, 3072]):
-            raise ValueError("must be one of enum values (1024, 2048, 3072)")
+        if value not in set(['1024', '2048', '3072']):
+            raise ValueError("must be one of enum values ('1024', '2048', '3072')")
         return value
 
     model_config = ConfigDict(

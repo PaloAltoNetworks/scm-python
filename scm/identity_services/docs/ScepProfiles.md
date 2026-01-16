@@ -6,17 +6,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **algorithm** | [**ScepProfilesAlgorithm**](ScepProfilesAlgorithm.md) |  | 
-**ca_identity_name** | **str** | Certificate Authority identity | 
+**ca_identity_name** | **str** | Certificate Authority Identity | 
 **certificate_attributes** | [**ScepProfilesCertificateAttributes**](ScepProfilesCertificateAttributes.md) |  | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 
 **digest** | **str** | Digest for CSR | 
-**fingerprint** | **str** | CA certificate fingerprint | [optional] 
+**fingerprint** | **str** | CA Certificate Fingerprint | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
 **id** | **str** | The UUID of the SCEP profile | [readonly] 
 **name** | **str** | The name of the SCEP profile | 
-**scep_ca_cert** | **str** | SCEP server CA certificate | [optional] 
+**scep_ca_cert** | **str** | SCEP Server CA Certificate | [optional] 
 **scep_challenge** | [**ScepProfilesScepChallenge**](ScepProfilesScepChallenge.md) |  | 
-**scep_client_cert** | **str** | SCEP client ceertificate | [optional] 
+**scep_client_cert** | **str** | SCEP Client Certificate | [optional] 
 **scep_url** | **str** | SCEP server URL | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **subject** | **str** | Subject | [default to 'CN=$USERNAME']
