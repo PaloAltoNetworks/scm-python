@@ -95,9 +95,9 @@ def test_update_qos_rule(qos_rules_api, clean_qos_rule):
 
 def test_list_qos_rules(qos_rules_api, clean_qos_rule):
     """Test listing QoS Rules."""
-    response = qos_rules_api.list_qo_s_policy_rules(folder=TARGET_FOLDER, position="pre", limit=50)
+    response = qos_rules_api.list_qo_s_policy_rules(folder=TARGET_FOLDER, position="pre", limit=50, offset=10)
     assert len(response.data) > 0
-    
+
     found = False
     for item in response.data:
         if item.id == clean_qos_rule.id:
@@ -125,12 +125,12 @@ def test_move_qos_rule(qos_rules_api):
     # Create two rules
     rule_a = create_test_qos_rule_payload("move-A-")
     rule_b = create_test_qos_rule_payload("move-B-")
-    
+
     obj_b = qos_rules_api.create_qo_s_policy_rules(qos_policy_rules=rule_b, position="pre") # Anchor
     obj_a = qos_rules_api.create_qo_s_policy_rules(qos_policy_rules=rule_a, position="pre") # Target
 
     # Move A after B
-    move_payload = RuleBasedMove(destination="after", destination_rule=obj_b.id)
+    move_payload = RuleBasedMove(destination="after", destination_rule=obj_b.id, rulebase="pre")
     
     try:
         qos_rules_api.move_qo_s_policy_rules_by_id(id=obj_a.id, rule_based_move=move_payload)
