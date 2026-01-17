@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, field_validator
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,16 +29,6 @@ class IkeGatewaysProtocolCommonFragmentation(BaseModel):
     """ # noqa: E501
     enable: Optional[StrictBool] = False
     __properties: ClassVar[List[str]] = ["enable"]
-
-    @field_validator('enable')
-    def enable_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['false']):
-            raise ValueError("must be one of enum values ('false')")
-        return value
 
     model_config = ConfigDict(
         populate_by_name=True,

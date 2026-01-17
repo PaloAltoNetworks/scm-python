@@ -107,12 +107,12 @@ def clean_tunnel(tunnel_api, dependency_ike_gateway):
     )
     
     logger.info(f"\n[SETUP] Creating IPsec Tunnel: {name}")
-    created_obj = tunnel_api.create_ipsec_tunnels(ipsec_tunnels=payload)
+    created_obj = tunnel_api.create_i_psec_tunnels(ipsec_tunnels=payload)
     yield created_obj
 
     logger.info(f"\n[TEARDOWN] Deleting IPsec Tunnel ID: {created_obj.id}")
     try:
-        tunnel_api.delete_ipsec_tunnels_by_id(id=created_obj.id)
+        tunnel_api.delete_i_psec_tunnels_by_id(id=created_obj.id)
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
@@ -136,7 +136,7 @@ def test_create_ipsec_tunnel(tunnel_api, dependency_ike_gateway):
     )
 
     try:
-        created_obj = tunnel_api.create_ipsec_tunnels(ipsec_tunnels=payload)
+        created_obj = tunnel_api.create_i_psec_tunnels(ipsec_tunnels=payload)
     except Exception as e:
         if hasattr(e, 'body'):
             print(f"\n[ERROR] API Response Body: {e.body}")
@@ -147,14 +147,14 @@ def test_create_ipsec_tunnel(tunnel_api, dependency_ike_gateway):
     assert created_obj.anti_replay is True
 
     # Cleanup
-    tunnel_api.delete_ipsec_tunnels_by_id(id=created_obj.id)
+    tunnel_api.delete_i_psec_tunnels_by_id(id=created_obj.id)
 
 
 def test_get_ipsec_tunnel_by_id(tunnel_api, clean_tunnel):
     """
     Test retrieving an IPsec Tunnel by ID.
     """
-    fetched_obj = tunnel_api.get_ipsec_tunnels_by_id(id=clean_tunnel.id)
+    fetched_obj = tunnel_api.get_i_psec_tunnels_by_id(id=clean_tunnel.id)
     assert fetched_obj.id == clean_tunnel.id
     assert fetched_obj.name == clean_tunnel.name
 
@@ -167,7 +167,7 @@ def test_update_ipsec_tunnel(tunnel_api, clean_tunnel):
     update_payload.copy_tos = True
     update_payload.anti_replay = False
     
-    updated_obj = tunnel_api.update_ipsec_tunnels_by_id(
+    updated_obj = tunnel_api.update_i_psec_tunnels_by_id(
         id=clean_tunnel.id,
         ipsec_tunnels=update_payload
     )
@@ -181,7 +181,7 @@ def test_list_ipsec_tunnels(tunnel_api, clean_tunnel):
     """
     Test listing IPsec Tunnels.
     """
-    response = tunnel_api.list_ipsec_tunnels(folder=TARGET_FOLDER)
+    response = tunnel_api.list_i_psec_tunnels(folder=TARGET_FOLDER)
     assert len(response.data) > 0
     
     found = False
@@ -208,12 +208,12 @@ def test_delete_ipsec_tunnel_by_id(tunnel_api, dependency_ike_gateway):
             ipsec_crypto_profile="PaloAlto-Networks-IPSec-Crypto"
         )
     )
-    created_obj = tunnel_api.create_ipsec_tunnels(ipsec_tunnels=payload)
+    created_obj = tunnel_api.create_i_psec_tunnels(ipsec_tunnels=payload)
     
-    tunnel_api.delete_ipsec_tunnels_by_id(id=created_obj.id)
+    tunnel_api.delete_i_psec_tunnels_by_id(id=created_obj.id)
     
     try:
-        tunnel_api.get_ipsec_tunnels_by_id(id=created_obj.id)
+        tunnel_api.get_i_psec_tunnels_by_id(id=created_obj.id)
         pytest.fail("Tunnel should be deleted")
     except Exception as e:
         assert "404" in str(e) or "Not Found" in str(e)
