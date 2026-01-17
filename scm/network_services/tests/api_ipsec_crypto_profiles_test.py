@@ -46,12 +46,12 @@ def clean_ipsec_profile(ipsec_api):
     )
     
     logger.info(f"\n[SETUP] Creating IPsec Crypto Profile: {name}")
-    created_obj = ipsec_api.create_ipsec_crypto_profiles(ipsec_crypto_profiles=payload)
+    created_obj = ipsec_api.create_i_psec_crypto_profiles(ipsec_crypto_profiles=payload)
     yield created_obj
 
     logger.info(f"\n[TEARDOWN] Deleting IPsec Crypto Profile ID: {created_obj.id}")
     try:
-        ipsec_api.delete_ipsec_crypto_profiles_by_id(id=created_obj.id)
+        ipsec_api.delete_i_psec_crypto_profiles_by_id(id=created_obj.id)
     except Exception as e:
         logger.info(f"Teardown failed: {e}")
 
@@ -75,7 +75,7 @@ def test_create_ipsec_crypto_profile(ipsec_api):
     )
 
     try:
-        created_obj = ipsec_api.create_ipsec_crypto_profiles(ipsec_crypto_profiles=payload)
+        created_obj = ipsec_api.create_i_psec_crypto_profiles(ipsec_crypto_profiles=payload)
     except Exception as e:
         if hasattr(e, 'body'):
             print(f"\n[ERROR] API Response Body: {e.body}")
@@ -87,14 +87,14 @@ def test_create_ipsec_crypto_profile(ipsec_api):
     assert created_obj.esp.encryption == ["aes-256-gcm"]
 
     # Cleanup
-    ipsec_api.delete_ipsec_crypto_profiles_by_id(id=created_obj.id)
+    ipsec_api.delete_i_psec_crypto_profiles_by_id(id=created_obj.id)
 
 
 def test_get_ipsec_crypto_profile_by_id(ipsec_api, clean_ipsec_profile):
     """
     Test retrieving an IPsec Crypto Profile by ID.
     """
-    fetched_obj = ipsec_api.get_ipsec_crypto_profiles_by_id(id=clean_ipsec_profile.id)
+    fetched_obj = ipsec_api.get_i_psec_crypto_profiles_by_id(id=clean_ipsec_profile.id)
     assert fetched_obj.id == clean_ipsec_profile.id
     assert fetched_obj.name == clean_ipsec_profile.name
     assert fetched_obj.dh_group == "group14"
@@ -108,7 +108,7 @@ def test_update_ipsec_crypto_profile(ipsec_api, clean_ipsec_profile):
     update_payload.dh_group = "group5"
     update_payload.esp.authentication = ["sha384"]
     
-    updated_obj = ipsec_api.update_ipsec_crypto_profiles_by_id(
+    updated_obj = ipsec_api.update_i_psec_crypto_profiles_by_id(
         id=clean_ipsec_profile.id,
         ipsec_crypto_profiles=update_payload
     )
@@ -122,7 +122,7 @@ def test_list_ipsec_crypto_profiles(ipsec_api, clean_ipsec_profile):
     """
     Test listing IPsec Crypto Profiles.
     """
-    response = ipsec_api.list_ipsec_crypto_profiles(folder=TARGET_FOLDER)
+    response = ipsec_api.list_i_psec_crypto_profiles(folder=TARGET_FOLDER)
     assert len(response.data) > 0
     
     found = False
@@ -151,12 +151,12 @@ def test_delete_ipsec_crypto_profile_by_id(ipsec_api):
         lifetime=IpsecCryptoProfilesLifetime(hours=1)
     )
     
-    created_obj = ipsec_api.create_ipsec_crypto_profiles(ipsec_crypto_profiles=payload)
+    created_obj = ipsec_api.create_i_psec_crypto_profiles(ipsec_crypto_profiles=payload)
     
-    ipsec_api.delete_ipsec_crypto_profiles_by_id(id=created_obj.id)
+    ipsec_api.delete_i_psec_crypto_profiles_by_id(id=created_obj.id)
     
     try:
-        ipsec_api.get_ipsec_crypto_profiles_by_id(id=created_obj.id)
+        ipsec_api.get_i_psec_crypto_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should be deleted")
     except Exception as e:
         assert "404" in str(e) or "Not Found" in str(e)
