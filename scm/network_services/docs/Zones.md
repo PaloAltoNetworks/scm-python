@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **dos_profile** | **str** |  | [optional] 
 **enable_device_identification** | **bool** |  | [optional] 
 **enable_user_identification** | **bool** |  | [optional] 
-**folder** | **str** |  | [optional] [readonly] 
+**folder** | **str** |  | [optional] 
 **id** | **str** | UUID of the resource | [optional] [readonly] 
 **name** | **str** | Alphanumeric string begin with letter: [0-9a-zA-Z._-] | 
 **network** | [**ZonesNetwork**](ZonesNetwork.md) |  | [optional] 

@@ -713,8 +713,6 @@ With workaround applied:
 
 ---
 
----
-
 ### Issue #4: VLAN Interfaces - API Class Naming Inconsistency
 
 **Date Identified**: 2026-01-16
@@ -885,68 +883,6 @@ Go SDK request includes folder field:
 }
 ```
 
-#### Temporary Fix Applied (MUST BE REVERTED)
-**File**: `scm/network_services/models/zones.py:100-102`
-
-```python
-# Temporary fix (IN GENERATED CODE - WILL BE LOST):
-excluded_fields: Set[str] = set([
-    "id",  # Removed "folder" from this set
-])
-```
-
-**⚠️ CRITICAL**: This fix is in auto-generated code and will be overwritten on next SDK regeneration!
-
-#### Required Permanent Fix
-Investigate and fix in **openapi-integration-creator** repository:
-
-**Step 1**: Check OpenAPI spec for zones
-```yaml
-# Look for:
-Zones:
-  properties:
-    folder:
-      type: string
-      readOnly: true  # ← If present, this is the problem
-```
-
-**Step 2a**: If `folder` is marked `readOnly`, remove it:
-```yaml
-Zones:
-  properties:
-    folder:
-      type: string
-      # No readOnly - folder is required for creation
-```
-
-**Step 2b**: If `folder` is NOT marked `readOnly`, investigate generator templates:
-- Check how openapi-generator decides which fields to exclude in `to_dict()`
-- May need custom template to handle container fields (folder/device/snippet)
-
-**Step 3**: Understand container field pattern
-Zones model has three container fields (only one should be provided):
-- `folder: Optional[StrictStr]` - for folder-scoped resources
-- `device: Optional[Annotated[str, ...]]` - for device-scoped resources
-- `snippet: Optional[Annotated[str, ...]]` - for snippet-scoped resources
-
-These should NOT be excluded from requests - the API needs one of them to know where to create the resource.
-
-#### Test Results
-With temporary fix:
-- ✅ `test_create_zone` - PASSED
-- ✅ `test_get_zone_by_id` - PASSED
-- ✅ `test_update_zone` - PASSED
-- ✅ `test_list_zones` - PASSED
-- ✅ `test_delete_zone_by_id` - PASSED
-
-**Result**: 5/5 tests passing (100%)
-
-#### Impact
-- **CRITICAL**: Without folder field, zones cannot be created
-- Affects all container-scoped resources (folder/device/snippet)
-- May affect other models beyond just Zones
-- Temporary fix will be lost on next SDK regeneration
-
 #### Permanent Fix Applied ✅
 **Date**: 2026-01-16
 
@@ -962,7 +898,6 @@ folder:
 
 **Status**:
 - ✅ OpenAPI spec fixed
-- ✅ Temporary fix in zones.py reverted
 - ✅ Fix documented in `openapi-integration-creator/SPEC_FIXES.md`
 - ⏳ Pending SDK regeneration to verify fix
 
@@ -971,20 +906,36 @@ folder:
 2. Verify all 5 zones tests still pass with regenerated code
 3. Audit other resources for similar `readOnly: true` on container fields
 
+#### Test Results
+With OpenAPI spec fix:
+- ✅ `test_create_zone` - PASSED
+- ✅ `test_get_zone_by_id` - PASSED
+- ✅ `test_update_zone` - PASSED
+- ✅ `test_list_zones` - PASSED
+- ✅ `test_delete_zone_by_id` - PASSED
+
+**Result**: 5/5 tests passing (100%)
+
+#### Impact
+- **CRITICAL**: Without folder field, zones cannot be created
+- Affects all container-scoped resources (folder/device/snippet)
+- May affect other models beyond just Zones
+- Permanent fix applied in OpenAPI spec
+
 #### Files Affected
-**Auto-Generated (TEMPORARY FIX - MUST REVERT)**:
-- `scm/network_services/models/zones.py:100-102`
+**OpenAPI Spec (FIXED)**:
+- `api/network-services.yaml:8342` - Removed `readOnly: true` from folder field
 
 **Test Files (Working)**:
 - `scm/network_services/tests/api_zones_test.py`
 
-**Investigation Needed**:
-- OpenAPI spec for zones resource
-- openapi-generator templates for `to_dict()` method generation
+**Documentation**:
+- `openapi-integration-creator/SPEC_FIXES.md` - Fix #1 documented
 
 #### References
 - Go test template: `openapi-integration-creator/cmd/generate/sdk/test_templates/api_zones_test_template.go:46-65`
 - Python test: `scm/network_services/tests/api_zones_test.py:33-39`
+- Spec fix documentation: `openapi-integration-creator/SPEC_FIXES.md`
 
 ---
 
