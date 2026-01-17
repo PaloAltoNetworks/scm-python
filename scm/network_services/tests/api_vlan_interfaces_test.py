@@ -22,7 +22,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def vlan_api(client):
-    return client.network_services.VlanInterfacesApi(client.network_services.api_client)
+    return client.network_services.VLANInterfacesApi(client.network_services.api_client)
 
 def create_vlan_interface_payload(name_prefix):
     """Helper to create a VLAN Interface payload."""
