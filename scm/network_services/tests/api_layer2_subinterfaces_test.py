@@ -72,12 +72,12 @@ def clean_l2_subinterface(l2_sub_api, parent_l2_interface):
     """Fixture for standard CRUD tests on L2 Subinterfaces."""
     vlan_tag = "200"
     sub_name = f"{parent_l2_interface.name}.{vlan_tag}"
-    
+
     payload = Layer2Subinterfaces(
         name=sub_name,
         folder=TARGET_FOLDER,
         parent_interface=parent_l2_interface.name,
-        tag=vlan_tag,  # Python SDK usually expects tag (string/int depending on model)
+        vlan_tag=vlan_tag,
         comment=f"L2 test subinterface for {sub_name}"
     )
     
@@ -100,12 +100,12 @@ def test_create_layer2_subinterface(l2_sub_api, parent_l2_interface):
     """
     vlan_tag = "400"
     sub_name = f"{parent_l2_interface.name}.{vlan_tag}"
-    
+
     payload = Layer2Subinterfaces(
         name=sub_name,
         folder=TARGET_FOLDER,
         parent_interface=parent_l2_interface.name,
-        tag=vlan_tag,
+        vlan_tag=vlan_tag,
         comment=f"L2 test subinterface for {sub_name}"
     )
 
@@ -171,12 +171,12 @@ def test_delete_layer2_subinterface_by_id(l2_sub_api, parent_l2_interface):
     """
     vlan_tag = "500"
     sub_name = f"{parent_l2_interface.name}.{vlan_tag}"
-    
+
     payload = Layer2Subinterfaces(
         name=sub_name,
         folder=TARGET_FOLDER,
         parent_interface=parent_l2_interface.name,
-        tag=vlan_tag
+        vlan_tag=vlan_tag
     )
     
     created_obj = l2_sub_api.create_layer2_subinterfaces(layer2_subinterfaces=payload)

@@ -71,7 +71,7 @@ def parent_l3_interface(eth_api):
 @pytest.fixture
 def clean_l3_subinterface(l3_sub_api, parent_l3_interface):
     """Fixture for standard CRUD tests on L3 Subinterfaces."""
-    vlan_tag = "200"
+    vlan_tag = 200
     sub_name = f"{parent_l3_interface.name}.{vlan_tag}"
     
     payload = Layer3Subinterfaces(
@@ -101,7 +101,7 @@ def test_create_layer3_subinterface(l3_sub_api, parent_l3_interface):
     """
     Test creation of a Layer 3 Subinterface.
     """
-    vlan_tag = "400"
+    vlan_tag = 400
     sub_name = f"{parent_l3_interface.name}.{vlan_tag}"
     
     payload = Layer3Subinterfaces(
@@ -177,7 +177,7 @@ def test_delete_layer3_subinterface_by_id(l3_sub_api, parent_l3_interface):
     """
     Test deleting a Layer 3 Subinterface.
     """
-    vlan_tag = "500"
+    vlan_tag = 500
     sub_name = f"{parent_l3_interface.name}.{vlan_tag}"
     
     payload = Layer3Subinterfaces(
