@@ -36,7 +36,7 @@ def clean_saml_profile(saml_profiles_api):
         id="",  # Workaround: id incorrectly marked as required in model
         name=profile_name,
         folder=TARGET_FOLDER,
-        certificate="Forward-Trust-CA",  # Changed from Global Authentication Cookie Cert which may not exist
+        certificate="Global Authentication Cookie Cert",
         entity_id="https://idp.example.com/entity",
         sso_url="https://idp.example.com/sso",
         sso_bindings="redirect"
@@ -68,7 +68,7 @@ def test_create_saml_profile(saml_profiles_api):
         id="",  # Workaround: id incorrectly marked as required in model
         name=profile_name,
         folder=TARGET_FOLDER,
-        certificate="Forward-Trust-CA",  # Changed from Global Authentication Cookie Cert which may not exist
+        certificate="Global Authentication Cookie Cert",
         entity_id="https://idp.complex.com/entity",
         sso_url="https://idp.complex.com/sso",
         sso_bindings="post",
@@ -145,7 +145,7 @@ def test_delete_saml_profile_by_id(saml_profiles_api):
         id="",  # Workaround: id incorrectly marked as required in model
         name=profile_name,
         folder=TARGET_FOLDER,
-        certificate="Forward-Trust-CA",  # Changed from Global Authentication Cookie Cert which may not exist
+        certificate="Global Authentication Cookie Cert",
         entity_id="https://idp.example.com/entity",
         sso_url="https://idp.example.com/sso",
         sso_bindings="redirect"
