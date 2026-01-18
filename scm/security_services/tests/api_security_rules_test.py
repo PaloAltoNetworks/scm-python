@@ -37,6 +37,7 @@ def clean_security_rule(security_rules_api):
     rule_name = f"scm-rule-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],
@@ -73,6 +74,7 @@ def test_create_security_rule(security_rules_api):
     rule_name = f"scm-rule-create-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],
@@ -155,6 +157,7 @@ def test_delete_security_rule_by_id(security_rules_api):
     rule_name = f"scm-rule-delete-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],

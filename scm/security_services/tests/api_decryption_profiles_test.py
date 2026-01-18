@@ -37,6 +37,7 @@ def clean_decryption_profile(decryption_profiles_api):
     profile_name = f"scm-decryption-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -65,6 +66,7 @@ def test_create_decryption_profile(decryption_profiles_api):
     profile_name = f"scm-decryption-create-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -134,6 +136,7 @@ def test_delete_decryption_profile_by_id(decryption_profiles_api):
     profile_name = f"scm-decryption-delete-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )

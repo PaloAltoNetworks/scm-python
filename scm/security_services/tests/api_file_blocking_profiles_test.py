@@ -37,6 +37,7 @@ def clean_file_blocking_profile(file_blocking_profiles_api):
     profile_name = f"scm-fb-{uuid.uuid4().hex[:6]}"
 
     payload = FileBlockingProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -65,6 +66,7 @@ def test_create_file_blocking_profile(file_blocking_profiles_api):
     profile_name = f"scm-fb-create-{uuid.uuid4().hex[:6]}"
 
     payload = FileBlockingProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -134,6 +136,7 @@ def test_delete_file_blocking_profile_by_id(file_blocking_profiles_api):
     profile_name = f"scm-fb-delete-{uuid.uuid4().hex[:6]}"
 
     payload = FileBlockingProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )

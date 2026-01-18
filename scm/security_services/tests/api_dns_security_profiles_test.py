@@ -37,6 +37,7 @@ def clean_dns_security_profile(dns_security_profiles_api):
     profile_name = f"scm-dns-{uuid.uuid4().hex[:6]}"
 
     payload = DnsSecurityProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -65,6 +66,7 @@ def test_create_dns_security_profile(dns_security_profiles_api):
     profile_name = f"scm-dns-create-{uuid.uuid4().hex[:6]}"
 
     payload = DnsSecurityProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -134,6 +136,7 @@ def test_delete_dns_security_profile_by_id(dns_security_profiles_api):
     profile_name = f"scm-dns-delete-{uuid.uuid4().hex[:6]}"
 
     payload = DnsSecurityProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )

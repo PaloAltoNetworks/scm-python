@@ -37,6 +37,7 @@ def clean_http_header_profile(http_header_profiles_api):
     profile_name = f"scm-http-{uuid.uuid4().hex[:6]}"
 
     payload = HttpHeaderProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -65,6 +66,7 @@ def test_create_http_header_profile(http_header_profiles_api):
     profile_name = f"scm-http-create-{uuid.uuid4().hex[:6]}"
 
     payload = HttpHeaderProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -134,6 +136,7 @@ def test_delete_http_header_profile_by_id(http_header_profiles_api):
     profile_name = f"scm-http-delete-{uuid.uuid4().hex[:6]}"
 
     payload = HttpHeaderProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )

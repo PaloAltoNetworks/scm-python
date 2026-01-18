@@ -37,6 +37,7 @@ def clean_anti_spyware_profile(anti_spyware_profiles_api):
     profile_name = f"scm-antispyware-{uuid.uuid4().hex[:6]}"
 
     payload = AntiSpywareProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -65,6 +66,7 @@ def test_create_anti_spyware_profile(anti_spyware_profiles_api):
     profile_name = f"scm-antispyware-create-{uuid.uuid4().hex[:6]}"
 
     payload = AntiSpywareProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )
@@ -134,6 +136,7 @@ def test_delete_anti_spyware_profile_by_id(anti_spyware_profiles_api):
     profile_name = f"scm-antispyware-delete-{uuid.uuid4().hex[:6]}"
 
     payload = AntiSpywareProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name
     )

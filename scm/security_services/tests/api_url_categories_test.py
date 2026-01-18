@@ -42,6 +42,7 @@ def clean_url_category(url_categories_api):
     category_name = f"test-url-cat-{uuid.uuid4().hex[:6]}"
 
     payload = UrlCategories(
+        id="",
         name=category_name,
         folder=TARGET_FOLDER,
         list=["example.com", "test.com"],
@@ -74,6 +75,7 @@ def test_create_url_category(url_categories_api):
     category_name = f"test-url-cat-create-{uuid.uuid4().hex[:6]}"
 
     payload = UrlCategories(
+        id="",
         name=category_name,
         folder=TARGET_FOLDER,
         list=["example.com", "test.com"],
@@ -164,6 +166,7 @@ def test_delete_url_category_by_id(url_categories_api):
     category_name = f"test-url-cat-del-{uuid.uuid4().hex[:6]}"
 
     payload = UrlCategories(
+        id="",
         name=category_name,
         folder=TARGET_FOLDER,
         list=["delete-test.com"],

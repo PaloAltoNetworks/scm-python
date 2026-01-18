@@ -42,6 +42,7 @@ def clean_url_access_profile(url_access_profiles_api):
     profile_name = f"test-url-prof-{uuid.uuid4().hex[:6]}"
 
     payload = UrlAccessProfiles(
+        id="",
         name=profile_name,
         folder=TARGET_FOLDER
     )
@@ -72,6 +73,7 @@ def test_create_url_access_profile(url_access_profiles_api):
     profile_name = f"test-url-create-{uuid.uuid4().hex[:6]}"
 
     payload = UrlAccessProfiles(
+        id="",
         name=profile_name,
         folder=TARGET_FOLDER
     )
@@ -154,6 +156,7 @@ def test_delete_url_access_profile_by_id(url_access_profiles_api):
     profile_name = f"test-url-del-{uuid.uuid4().hex[:6]}"
 
     payload = UrlAccessProfiles(
+        id="",
         name=profile_name,
         folder=TARGET_FOLDER
     )

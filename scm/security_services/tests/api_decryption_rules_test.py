@@ -37,6 +37,7 @@ def clean_decryption_rule(decryption_rules_api):
     rule_name = f"scm-decryption-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],
@@ -70,6 +71,7 @@ def test_create_decryption_rule(decryption_rules_api):
     rule_name = f"scm-decryption-create-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],
@@ -147,6 +149,7 @@ def test_delete_decryption_rule_by_id(decryption_rules_api):
     rule_name = f"scm-decryption-delete-{uuid.uuid4().hex[:6]}"
 
     payload = DecryptionRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         var_from=["any"],

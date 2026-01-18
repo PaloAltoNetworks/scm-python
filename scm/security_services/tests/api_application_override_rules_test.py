@@ -37,6 +37,7 @@ def clean_application_override_rule(application_override_rules_api):
     rule_name = f"scm-appoverride-{uuid.uuid4().hex[:6]}"
 
     payload = AppOverrideRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
@@ -71,6 +72,7 @@ def test_create_application_override_rule(application_override_rules_api):
     rule_name = f"scm-appoverride-create-{uuid.uuid4().hex[:6]}"
 
     payload = AppOverrideRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
@@ -151,6 +153,7 @@ def test_delete_application_override_rule_by_id(application_override_rules_api):
     rule_name = f"scm-appoverride-delete-{uuid.uuid4().hex[:6]}"
 
     payload = AppOverrideRules(
+        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
