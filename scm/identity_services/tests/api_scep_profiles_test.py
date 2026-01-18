@@ -52,7 +52,6 @@ def clean_scep_profile(scep_profiles_api):
     )
 
     payload = ScepProfiles(
-        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/",
@@ -107,7 +106,6 @@ def test_create_scep_profile(scep_profiles_api):
     )
 
     payload = ScepProfiles(
-        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/certsrv/mscep/mscep.dll",
@@ -203,7 +201,6 @@ def test_delete_scep_profile_by_id(scep_profiles_api):
     )
 
     payload = ScepProfiles(
-        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/",

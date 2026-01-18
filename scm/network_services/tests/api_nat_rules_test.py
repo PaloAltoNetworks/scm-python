@@ -59,7 +59,6 @@ def clean_nat_rule(nat_rules_api):
     )
 
     payload = NatRules(
-        id="",
         name=rule_name,
         description="Test NAT rule for CRUD",
         var_from=["any"],
@@ -117,7 +116,6 @@ def test_create_nat_rule(nat_rules_api):
     )
 
     payload = NatRules(
-        id="",
         name=rule_name,
         description="Test NAT rule for CRUD",
         var_from=["any"],
@@ -178,6 +176,25 @@ def test_update_nat_rule(nat_rules_api, clean_nat_rule):
     assert updated_obj.description == "Updated NAT rule description"
 
 
+def test_list_nat_rules(nat_rules_api, clean_nat_rule):
+    """Test listing NAT Rules."""
+    response = perform(
+        nat_rules_api.list_nat_rules_with_http_info,
+        position="pre",
+        folder=TARGET_FOLDER,
+        offset=10
+    )
+
+    assert response is not None
+    assert len(response.data) > 0
+
+    found = False
+    for item in response.data:
+        if item.id == clean_nat_rule.id:
+            found = True
+            break
+    assert found is True, f"Created rule {clean_nat_rule.id} not found in list response"
+
 
 def test_delete_nat_rule_by_id(nat_rules_api):
     """Test deleting a NAT Rule."""
@@ -202,7 +219,6 @@ def test_delete_nat_rule_by_id(nat_rules_api):
     )
 
     payload = NatRules(
-        id="",
         name=rule_name,
         description="Test NAT rule for CRUD",
         var_from=["any"],

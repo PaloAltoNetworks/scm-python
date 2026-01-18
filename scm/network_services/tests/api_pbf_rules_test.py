@@ -149,7 +149,9 @@ def test_list_pbf_rules(pbf_rules_api, clean_pbf_rule):
     """Test listing PBF Rules."""
     response = perform(
         pbf_rules_api.list_pbf_rules_with_http_info,
-        folder=TARGET_FOLDER
+        limit=50,
+        folder=TARGET_FOLDER,
+        offset=10
     )
 
     assert response is not None
