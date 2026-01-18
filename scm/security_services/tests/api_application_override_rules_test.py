@@ -2,7 +2,7 @@ import logging
 import uuid
 import pytest
 from scm import Scm
-from scm.security_services.models.application_override_rules import ApplicationOverrideRules
+from scm.security_services.models.app_override_rules import AppOverrideRules
 from scm.test_helpers import perform
 
 # Configure logging
@@ -26,7 +26,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def application_override_rules_api(client):
-    return client.security_services.ApplicationOverrideRulesApi(client.security_services.api_client)
+    return client.security_services.AppOverrideRulesApi(client.security_services.api_client)
 
 
 @pytest.fixture
@@ -36,7 +36,7 @@ def clean_application_override_rule(application_override_rules_api):
     """
     rule_name = f"scm-appoverride-{uuid.uuid4().hex[:6]}"
 
-    payload = ApplicationOverrideRules(
+    payload = AppOverrideRules(
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
@@ -50,7 +50,7 @@ def clean_application_override_rule(application_override_rules_api):
     logger.info(f"\n[SETUP] Creating Application Override Rule: {rule_name}")
     created_rule = perform(
         application_override_rules_api.create_application_override_rules_with_http_info,
-        response_type=ApplicationOverrideRules,
+        response_type=AppOverrideRules,
         application_override_rules=payload
     )
 
@@ -70,7 +70,7 @@ def test_create_application_override_rule(application_override_rules_api):
     """Test creation of an Application Override Rule."""
     rule_name = f"scm-appoverride-create-{uuid.uuid4().hex[:6]}"
 
-    payload = ApplicationOverrideRules(
+    payload = AppOverrideRules(
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
@@ -83,7 +83,7 @@ def test_create_application_override_rule(application_override_rules_api):
 
     created_obj = perform(
         application_override_rules_api.create_application_override_rules_with_http_info,
-        response_type=ApplicationOverrideRules,
+        response_type=AppOverrideRules,
         application_override_rules=payload
     )
 
@@ -150,7 +150,7 @@ def test_delete_application_override_rule_by_id(application_override_rules_api):
     """Test deleting an Application Override Rule."""
     rule_name = f"scm-appoverride-delete-{uuid.uuid4().hex[:6]}"
 
-    payload = ApplicationOverrideRules(
+    payload = AppOverrideRules(
         folder=TARGET_FOLDER,
         name=rule_name,
         application="custom-app",
@@ -163,7 +163,7 @@ def test_delete_application_override_rule_by_id(application_override_rules_api):
 
     created_obj = perform(
         application_override_rules_api.create_application_override_rules_with_http_info,
-        response_type=ApplicationOverrideRules,
+        response_type=AppOverrideRules,
         application_override_rules=payload
     )
 
