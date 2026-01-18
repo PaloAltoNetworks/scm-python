@@ -122,8 +122,8 @@ class TlsServiceProfilesProtocolSettings(BaseModel):
             "keyxchg_algo_dhe": obj.get("keyxchg_algo_dhe"),
             "keyxchg_algo_ecdhe": obj.get("keyxchg_algo_ecdhe"),
             "keyxchg_algo_rsa": obj.get("keyxchg_algo_rsa"),
-            "max_version": obj.get("max_version") if obj.get("max_version") is not None else '3',
-            "min_version": obj.get("min_version") if obj.get("min_version") is not None else '2'
+            "max_version": obj.get("max_version"),
+            "min_version": obj.get("min_version")
         })
         return _obj
 

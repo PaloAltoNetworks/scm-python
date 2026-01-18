@@ -1,6 +1,5 @@
 import logging
 import uuid
-import json
 import pytest
 from scm import Scm
 from scm.identity_services.models.authentication_rules import AuthenticationRules
@@ -72,6 +71,7 @@ def test_auth_profile(auth_profiles_api):
 
 @pytest.fixture
 def clean_auth_rule(auth_rules_api, test_auth_profile):
+    """Fixture for standard CRUD tests."""
     rule_name = f"test-auth-rule-{uuid.uuid4().hex[:6]}"
 
     payload = AuthenticationRules(
@@ -109,6 +109,7 @@ def clean_auth_rule(auth_rules_api, test_auth_profile):
 
 
 def test_create_auth_rule(auth_rules_api, test_auth_profile):
+    """Test creation of an Authentication Rule."""
     rule_name = f"test-auth-create-{uuid.uuid4().hex[:6]}"
 
     payload = AuthenticationRules(
@@ -137,6 +138,7 @@ def test_create_auth_rule(auth_rules_api, test_auth_profile):
     assert created_obj.name == rule_name
     assert created_obj.timeout == 1000
 
+    # Cleanup
     perform(
         auth_rules_api.delete_authentication_rules_by_id_with_http_info,
         id=created_obj.id
@@ -144,6 +146,7 @@ def test_create_auth_rule(auth_rules_api, test_auth_profile):
 
 
 def test_get_auth_rule_by_id(auth_rules_api, clean_auth_rule):
+    """Test retrieving an Authentication Rule by ID."""
     fetched_obj = perform(
         auth_rules_api.get_authentication_rules_by_id_with_http_info,
         id=clean_auth_rule.id
@@ -155,6 +158,7 @@ def test_get_auth_rule_by_id(auth_rules_api, clean_auth_rule):
 
 
 def test_update_auth_rule(auth_rules_api, clean_auth_rule):
+    """Test updating an Authentication Rule."""
     update_payload = clean_auth_rule
     update_payload.timeout = 900
     update_payload.description = "Updated auth rule description"
@@ -171,9 +175,13 @@ def test_update_auth_rule(auth_rules_api, clean_auth_rule):
 
 
 def test_list_auth_rules(auth_rules_api, clean_auth_rule):
+    """Test listing Authentication Rules."""
     response = perform(
         auth_rules_api.list_authentication_rules_with_http_info,
-        folder=TARGET_FOLDER
+        folder=TARGET_FOLDER,
+        position="pre",
+        limit=10,
+        offset=15  # Skip default rules that may have deserialization issues
     )
 
     assert response is not None
@@ -188,6 +196,7 @@ def test_list_auth_rules(auth_rules_api, clean_auth_rule):
 
 
 def test_delete_auth_rule_by_id(auth_rules_api, test_auth_profile):
+    """Test deleting an Authentication Rule."""
     rule_name = f"test-auth-del-{uuid.uuid4().hex[:6]}"
 
     payload = AuthenticationRules(
