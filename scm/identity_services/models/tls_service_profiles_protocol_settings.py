@@ -37,8 +37,8 @@ class TlsServiceProfilesProtocolSettings(BaseModel):
     keyxchg_algo_dhe: Optional[StrictBool] = Field(default=None, description="Allow DHE algorithm?")
     keyxchg_algo_ecdhe: Optional[StrictBool] = Field(default=None, description="Allow ECDHE algorithm?")
     keyxchg_algo_rsa: Optional[StrictBool] = Field(default=None, description="Allow RSA algorithm?")
-    max_version: Optional[StrictStr] = Field(default='3', description="Maximum TLS version")
-    min_version: Optional[StrictStr] = Field(default='2', description="Minimum TLS version")
+    max_version: Optional[StrictStr] = Field(default=None, description="Maximum TLS version")
+    min_version: Optional[StrictStr] = Field(default=None, description="Minimum TLS version")
     __properties: ClassVar[List[str]] = ["auth_algo_sha1", "auth_algo_sha256", "auth_algo_sha384", "enc_algo_aes_128_cbc", "enc_algo_aes_128_gcm", "enc_algo_aes_256_cbc", "enc_algo_aes_256_gcm", "keyxchg_algo_dhe", "keyxchg_algo_ecdhe", "keyxchg_algo_rsa", "max_version", "min_version"]
 
     @field_validator('max_version')

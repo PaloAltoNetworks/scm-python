@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **keyxchg_algo_dhe** | **bool** | Allow DHE algorithm? | [optional] 
 **keyxchg_algo_ecdhe** | **bool** | Allow ECDHE algorithm? | [optional] 
 **keyxchg_algo_rsa** | **bool** | Allow RSA algorithm? | [optional] 
-**max_version** | **str** | Maximum TLS version | [optional] [default to '3']
-**min_version** | **str** | Minimum TLS version | [optional] [default to '2']
+**max_version** | **str** | Maximum TLS version | [optional] 
+**min_version** | **str** | Minimum TLS version | [optional] 
 
 ## Example
 
