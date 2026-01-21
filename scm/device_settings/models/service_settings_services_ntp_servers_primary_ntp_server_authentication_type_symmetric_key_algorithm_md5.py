@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, SecretStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,7 +27,7 @@ class ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetr
     """
     ServiceSettingsServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5
     """ # noqa: E501
-    authentication_key: Optional[StrictStr] = None
+    authentication_key: Optional[SecretStr] = None
     __properties: ClassVar[List[str]] = ["authentication_key"]
 
     model_config = ConfigDict(
