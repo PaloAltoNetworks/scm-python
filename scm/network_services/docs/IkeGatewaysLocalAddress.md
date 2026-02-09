@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **interface** | **str** | Interface variable or hardcoded vlan/loopback. vlan will be passed as default value | [optional] [default to 'vlan']
+**ip** | **str** | IP Prefix of the assigned interface | [optional] 
 
 ## Example
 

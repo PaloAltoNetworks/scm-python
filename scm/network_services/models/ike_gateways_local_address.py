@@ -28,7 +28,8 @@ class IkeGatewaysLocalAddress(BaseModel):
     IkeGatewaysLocalAddress
     """ # noqa: E501
     interface: Optional[StrictStr] = Field(default='vlan', description="Interface variable or hardcoded vlan/loopback. vlan will be passed as default value")
-    __properties: ClassVar[List[str]] = ["interface"]
+    ip: Optional[StrictStr] = Field(default=None, description="IP Prefix of the assigned interface")
+    __properties: ClassVar[List[str]] = ["interface", "ip"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,7 +82,8 @@ class IkeGatewaysLocalAddress(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "interface": obj.get("interface") if obj.get("interface") is not None else 'vlan'
+            "interface": obj.get("interface") if obj.get("interface") is not None else 'vlan',
+            "ip": obj.get("ip")
         })
         return _obj
 
