@@ -188,6 +188,7 @@ def test_list_auth_portals(auth_portals_api, clean_auth_portal):
     assert found is True, f"Created portal {clean_auth_portal.id} not found in list response"
 
 
+
 def test_delete_auth_portal_by_id(auth_portals_api, test_auth_profile):
     """Test deleting an Authentication Portal."""
     payload = AuthenticationPortals(
@@ -211,8 +212,14 @@ def test_delete_auth_portal_by_id(auth_portals_api, test_auth_profile):
         id=created_obj.id
     )
 
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         auth_portals_api.get_authentication_portals_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Portal should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

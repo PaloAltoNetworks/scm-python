@@ -275,6 +275,35 @@ def test_list_service_groups(service_groups_api, clean_service_group):
     assert found is True
 
 
+
+
+def test_fetch_service_groups(service_groups_api, clean_service_group):
+    """
+    Test fetching a single service_groups by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = service_groups_api.fetch_service_groups(
+        name=clean_service_group.name,
+        folder=clean_service_group.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found service_groups '{clean_service_group.name}'"
+    assert fetched_obj.id == clean_service_group.id
+    assert fetched_obj.name == clean_service_group.name
+    assert fetched_obj.folder == clean_service_group.folder
+    logger.info(f"\n[SUCCESS] fetch_service_groups found object: {fetched_obj.name}")
+
+    # Test fetching non-existent service_groups (should return None)
+    not_found = service_groups_api.fetch_service_groups(
+        name="non-existent-service_groups-xyz-12345",
+        folder=clean_service_group.folder
+    )
+    assert not_found is None, "Should return None for non-existent service_groups"
+    logger.info(f"\n[SUCCESS] fetch_service_groups correctly returned None for non-existent service_groups")
+
+
 def test_delete_service_group_by_id(services_api, service_groups_api):
     """
     Test deletion specifically.
@@ -311,11 +340,17 @@ def test_delete_service_group_by_id(services_api, service_groups_api):
         service_groups_api.delete_service_groups_by_id(id=created_group.id)
 
         # 4. Verify 404
+        from scm.objects.exceptions import NotFoundException
+        from scm.error_parser import parse_scm_error
+        from scm.exceptions import ObjectNotPresentError
+
         try:
             service_groups_api.get_service_groups_by_id(id=created_group.id)
             pytest.fail("Group should be deleted")
-        except Exception as e:
-            assert "404" in str(e) or "Not Found" in str(e)
+        except ObjectNotPresentError as e:
+            # Exception is already parsed by decorator
+            logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+            logger.info(f"   Object ID: {created_group.id}")
 
     finally:
         # 5. Cleanup Group (If delete failed)

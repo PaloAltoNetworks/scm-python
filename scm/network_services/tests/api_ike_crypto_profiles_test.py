@@ -131,6 +131,35 @@ def test_list_ike_crypto_profiles(ike_api, clean_ike_profile):
     assert found is True
 
 
+
+
+def test_fetch_ike_crypto_profiles(ike_api, clean_ike_profile):
+    """
+    Test fetching a single ike_crypto_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = ike_api.fetch_ike_crypto_profiles(
+        name=clean_ike_profile.name,
+        folder=clean_ike_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found ike_crypto_profiles '{clean_ike_profile.name}'"
+    assert fetched_obj.id == clean_ike_profile.id
+    assert fetched_obj.name == clean_ike_profile.name
+    assert fetched_obj.folder == clean_ike_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_ike_crypto_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent ike_crypto_profiles (should return None)
+    not_found = ike_api.fetch_ike_crypto_profiles(
+        name="non-existent-ike_crypto_profiles-xyz-12345",
+        folder=clean_ike_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent ike_crypto_profiles"
+    logger.info(f"\n[SUCCESS] fetch_ike_crypto_profiles correctly returned None for non-existent ike_crypto_profiles")
+
+
 def test_delete_ike_crypto_profile_by_id(ike_api):
     """
     Test deleting an IKE Crypto Profile.
@@ -152,8 +181,14 @@ def test_delete_ike_crypto_profile_by_id(ike_api):
     
     ike_api.delete_ike_crypto_profiles_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         ike_api.get_ike_crypto_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

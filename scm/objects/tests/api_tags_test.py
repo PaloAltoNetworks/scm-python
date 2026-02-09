@@ -154,6 +154,35 @@ def test_list_tags(tags_api, clean_tag):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_tags(tags_api, clean_tag):
+    """
+    Test fetching a single tags by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = tags_api.fetch_tags(
+        name=clean_tag.name,
+        folder=clean_tag.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found tags '{clean_tag.name}'"
+    assert fetched_obj.id == clean_tag.id
+    assert fetched_obj.name == clean_tag.name
+    assert fetched_obj.folder == clean_tag.folder
+    logger.info(f"\n[SUCCESS] fetch_tags found object: {fetched_obj.name}")
+
+    # Test fetching non-existent tags (should return None)
+    not_found = tags_api.fetch_tags(
+        name="non-existent-tags-xyz-12345",
+        folder=clean_tag.folder
+    )
+    assert not_found is None, "Should return None for non-existent tags"
+    logger.info(f"\n[SUCCESS] fetch_tags correctly returned None for non-existent tags")
+
+
 def test_delete_tag_by_id(tags_api):
     """
     Test deletion specifically.
@@ -175,9 +204,14 @@ def test_delete_tag_by_id(tags_api):
     # Perform Delete
     tags_api.delete_tags_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         tags_api.get_tags_by_id(id=created_obj.id)
         pytest.fail("Tag should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

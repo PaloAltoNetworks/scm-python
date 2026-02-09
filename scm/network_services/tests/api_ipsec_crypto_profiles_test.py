@@ -133,6 +133,7 @@ def test_list_ipsec_crypto_profiles(ipsec_api, clean_ipsec_profile):
     assert found is True
 
 
+
 def test_delete_ipsec_crypto_profile_by_id(ipsec_api):
     """
     Test deleting an IPsec Crypto Profile.
@@ -155,8 +156,14 @@ def test_delete_ipsec_crypto_profile_by_id(ipsec_api):
     
     ipsec_api.delete_i_psec_crypto_profiles_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         ipsec_api.get_i_psec_crypto_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -186,6 +186,35 @@ def test_list_edls(edl_api, clean_edl):
     assert found is True
 
 
+
+
+def test_fetch_external_dynamic_lists(edl_api, clean_edl):
+    """
+    Test fetching a single external_dynamic_lists by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = edl_api.fetch_external_dynamic_lists(
+        name=clean_edl.name,
+        folder=clean_edl.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found external_dynamic_lists '{clean_edl.name}'"
+    assert fetched_obj.id == clean_edl.id
+    assert fetched_obj.name == clean_edl.name
+    assert fetched_obj.folder == clean_edl.folder
+    logger.info(f"\n[SUCCESS] fetch_external_dynamic_lists found object: {fetched_obj.name}")
+
+    # Test fetching non-existent external_dynamic_lists (should return None)
+    not_found = edl_api.fetch_external_dynamic_lists(
+        name="non-existent-external_dynamic_lists-xyz-12345",
+        folder=clean_edl.folder
+    )
+    assert not_found is None, "Should return None for non-existent external_dynamic_lists"
+    logger.info(f"\n[SUCCESS] fetch_external_dynamic_lists correctly returned None for non-existent external_dynamic_lists")
+
+
 def test_delete_edl_by_id(edl_api):
     random_suffix = uuid.uuid4().hex[:6]
     edl_name = f"test-edl-del-{random_suffix}"
@@ -208,8 +237,14 @@ def test_delete_edl_by_id(edl_api):
 
     edl_api.delete_external_dynamic_lists_by_id(id=created_obj.id)
 
+    from scm.objects.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         edl_api.get_external_dynamic_lists_by_id(id=created_obj.id)
         pytest.fail("EDL should have been deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

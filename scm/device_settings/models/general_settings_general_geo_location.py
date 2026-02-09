@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,8 +27,8 @@ class GeneralSettingsGeneralGeoLocation(BaseModel):
     """
     Geographic coordinates
     """ # noqa: E501
-    latitude: StrictStr = Field(description="Latitude")
-    longitude: StrictStr = Field(description="Longitude")
+    latitude: Optional[StrictStr] = Field(default=None, description="Latitude")
+    longitude: Optional[StrictStr] = Field(default=None, description="Longitude")
     __properties: ClassVar[List[str]] = ["latitude", "longitude"]
 
     model_config = ConfigDict(

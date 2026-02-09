@@ -170,6 +170,35 @@ def test_list_aggregate_interfaces(agg_api, clean_agg_interface):
     assert found is True
 
 
+
+
+def test_fetch_aggregate_interfaces(agg_api, clean_agg_interface):
+    """
+    Test fetching a single aggregate_interfaces by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = agg_api.fetch_aggregate_interfaces(
+        name=clean_agg_interface.name,
+        folder=clean_agg_interface.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found aggregate_interfaces '{clean_agg_interface.name}'"
+    assert fetched_obj.id == clean_agg_interface.id
+    assert fetched_obj.name == clean_agg_interface.name
+    assert fetched_obj.folder == clean_agg_interface.folder
+    logger.info(f"\n[SUCCESS] fetch_aggregate_interfaces found object: {fetched_obj.name}")
+
+    # Test fetching non-existent aggregate_interfaces (should return None)
+    not_found = agg_api.fetch_aggregate_interfaces(
+        name="non-existent-aggregate_interfaces-xyz-12345",
+        folder=clean_agg_interface.folder
+    )
+    assert not_found is None, "Should return None for non-existent aggregate_interfaces"
+    logger.info(f"\n[SUCCESS] fetch_aggregate_interfaces correctly returned None for non-existent aggregate_interfaces")
+
+
 def test_delete_aggregate_interface_by_id(agg_api):
     """
     Test deleting an Aggregate Interface.
@@ -181,8 +210,14 @@ def test_delete_aggregate_interface_by_id(agg_api):
 
     agg_api.delete_aggregate_interfaces_by_id(id=created_obj.id)
 
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         agg_api.get_aggregate_interfaces_by_id(id=created_obj.id)
         pytest.fail("Interface should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

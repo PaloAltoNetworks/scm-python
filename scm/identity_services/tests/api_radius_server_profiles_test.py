@@ -173,6 +173,35 @@ def test_list_radius_profiles(radius_profiles_api, clean_radius_profile):
     assert len(response.data) > 0
 
 
+
+
+def test_fetch_radius_server_profiles(radius_profiles_api, clean_radius_profile):
+    """
+    Test fetching a single radius_server_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = radius_profiles_api.fetch_radius_server_profiles(
+        name=clean_radius_profile.name,
+        folder=clean_radius_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found radius_server_profiles '{clean_radius_profile.name}'"
+    assert fetched_obj.id == clean_radius_profile.id
+    assert fetched_obj.name == clean_radius_profile.name
+    assert fetched_obj.folder == clean_radius_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_radius_server_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent radius_server_profiles (should return None)
+    not_found = radius_profiles_api.fetch_radius_server_profiles(
+        name="non-existent-radius_server_profiles-xyz-12345",
+        folder=clean_radius_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent radius_server_profiles"
+    logger.info(f"\n[SUCCESS] fetch_radius_server_profiles correctly returned None for non-existent radius_server_profiles")
+
+
 def test_delete_radius_profile_by_id(radius_profiles_api):
     """
     Test deletion specifically with logging.
@@ -208,8 +237,14 @@ def test_delete_radius_profile_by_id(radius_profiles_api):
     )
 
     # Verify Deletion
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         radius_profiles_api.get_radius_server_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

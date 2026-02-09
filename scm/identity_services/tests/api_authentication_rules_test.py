@@ -191,6 +191,7 @@ def test_list_auth_rules(auth_rules_api, clean_auth_rule):
     assert found is True, f"Created rule {clean_auth_rule.id} not found in list response"
 
 
+
 def test_delete_auth_rule_by_id(auth_rules_api, test_auth_profile):
     rule_name = f"test-auth-del-{uuid.uuid4().hex[:6]}"
 
@@ -218,8 +219,14 @@ def test_delete_auth_rule_by_id(auth_rules_api, test_auth_profile):
         id=created_obj.id
     )
 
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         auth_rules_api.get_authentication_rules_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Rule should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -41,8 +41,8 @@ class LogForwardingProfilesMatchListInner(BaseModel):
     @field_validator('log_type')
     def log_type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security']):
-            raise ValueError("must be one of enum values ('traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security')")
+        if value not in set(['traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security', 'gtp', 'sctp']):
+            raise ValueError("must be one of enum values ('traffic', 'threat', 'wildfire', 'url', 'data', 'tunnel', 'auth', 'decryption', 'dns-security', 'gtp', 'sctp')")
         return value
 
     model_config = ConfigDict(

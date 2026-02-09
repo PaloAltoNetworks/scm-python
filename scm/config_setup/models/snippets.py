@@ -40,8 +40,8 @@ class Snippets(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['predefined', 'custom']):
-            raise ValueError("must be one of enum values ('predefined', 'custom')")
+        if value not in set(['predefined', 'custom', 'readonly']):
+            raise ValueError("must be one of enum values ('predefined', 'custom', 'readonly')")
         return value
 
     model_config = ConfigDict(

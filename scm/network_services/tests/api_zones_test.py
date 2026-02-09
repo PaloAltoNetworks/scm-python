@@ -108,6 +108,7 @@ def test_list_zones(zones_api, clean_zone):
     assert found is True
 
 
+
 def test_delete_zone_by_id(zones_api):
     """Test deleting a Security Zone."""
     zone = create_full_test_zone("scm-zone-del-")
@@ -115,8 +116,14 @@ def test_delete_zone_by_id(zones_api):
     
     zones_api.delete_zones_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         zones_api.get_zones_by_id(id=created_obj.id)
         pytest.fail("Zone should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

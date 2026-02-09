@@ -45,8 +45,8 @@ class Variables(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d_\-. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d_\-. ]+$/")
         return value
 
     @field_validator('folder')
@@ -55,8 +55,8 @@ class Variables(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d_\-. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d_\-. ]+$/")
         return value
 
     @field_validator('snippet')
@@ -65,8 +65,8 @@ class Variables(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d_\-. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d_\-. ]+$/")
         return value
 
     @field_validator('type')

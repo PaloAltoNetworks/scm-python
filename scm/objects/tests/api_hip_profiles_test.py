@@ -155,6 +155,35 @@ def test_list_hip_profiles(hip_profiles_api, clean_hip_profile):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_hip_profiles(hip_profiles_api, clean_hip_profile):
+    """
+    Test fetching a single hip_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = hip_profiles_api.fetch_hip_profiles(
+        name=clean_hip_profile.name,
+        folder=clean_hip_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found hip_profiles '{clean_hip_profile.name}'"
+    assert fetched_obj.id == clean_hip_profile.id
+    assert fetched_obj.name == clean_hip_profile.name
+    assert fetched_obj.folder == clean_hip_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_hip_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent hip_profiles (should return None)
+    not_found = hip_profiles_api.fetch_hip_profiles(
+        name="non-existent-hip_profiles-xyz-12345",
+        folder=clean_hip_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent hip_profiles"
+    logger.info(f"\n[SUCCESS] fetch_hip_profiles correctly returned None for non-existent hip_profiles")
+
+
 def test_delete_hip_profile_by_id(hip_profiles_api):
     """
     Test deletion specifically.
@@ -175,9 +204,14 @@ def test_delete_hip_profile_by_id(hip_profiles_api):
     # Perform Delete
     hip_profiles_api.delete_hip_profiles_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         hip_profiles_api.get_hip_profiles_by_id(id=created_obj.id)
         pytest.fail("HIP Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

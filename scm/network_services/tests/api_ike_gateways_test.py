@@ -169,6 +169,35 @@ def test_list_ike_gateways(ike_gw_api, clean_ike_gateway):
     assert found is True
 
 
+
+
+def test_fetch_ike_gateways(ike_gw_api, clean_ike_gateway):
+    """
+    Test fetching a single ike_gateways by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = ike_gw_api.fetch_ike_gateways(
+        name=clean_ike_gateway.name,
+        folder=clean_ike_gateway.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found ike_gateways '{clean_ike_gateway.name}'"
+    assert fetched_obj.id == clean_ike_gateway.id
+    assert fetched_obj.name == clean_ike_gateway.name
+    assert fetched_obj.folder == clean_ike_gateway.folder
+    logger.info(f"\n[SUCCESS] fetch_ike_gateways found object: {fetched_obj.name}")
+
+    # Test fetching non-existent ike_gateways (should return None)
+    not_found = ike_gw_api.fetch_ike_gateways(
+        name="non-existent-ike_gateways-xyz-12345",
+        folder=clean_ike_gateway.folder
+    )
+    assert not_found is None, "Should return None for non-existent ike_gateways"
+    logger.info(f"\n[SUCCESS] fetch_ike_gateways correctly returned None for non-existent ike_gateways")
+
+
 def test_delete_ike_gateway_by_id(ike_gw_api, crypto_profile):
     """
     Test deleting an IKE Gateway.
@@ -195,8 +224,14 @@ def test_delete_ike_gateway_by_id(ike_gw_api, crypto_profile):
     
     ike_gw_api.delete_ike_gateways_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         ike_gw_api.get_ike_gateways_by_id(id=created_obj.id)
         pytest.fail("Gateway should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

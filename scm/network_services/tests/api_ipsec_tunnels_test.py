@@ -192,6 +192,7 @@ def test_list_ipsec_tunnels(tunnel_api, clean_tunnel):
     assert found is True
 
 
+
 def test_delete_ipsec_tunnel_by_id(tunnel_api, dependency_ike_gateway):
     """
     Test deleting an IPsec Tunnel.
@@ -212,8 +213,14 @@ def test_delete_ipsec_tunnel_by_id(tunnel_api, dependency_ike_gateway):
     
     tunnel_api.delete_i_psec_tunnels_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         tunnel_api.get_i_psec_tunnels_by_id(id=created_obj.id)
         pytest.fail("Tunnel should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -138,6 +138,35 @@ def test_list_saml_profiles(saml_profiles_api, clean_saml_profile):
     assert found is True, f"Created profile {clean_saml_profile.id} not found in list response"
 
 
+
+
+def test_fetch_saml_server_profiles(saml_profiles_api, clean_saml_profile):
+    """
+    Test fetching a single saml_server_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = saml_profiles_api.fetch_saml_server_profiles(
+        name=clean_saml_profile.name,
+        folder=clean_saml_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found saml_server_profiles '{clean_saml_profile.name}'"
+    assert fetched_obj.id == clean_saml_profile.id
+    assert fetched_obj.name == clean_saml_profile.name
+    assert fetched_obj.folder == clean_saml_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_saml_server_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent saml_server_profiles (should return None)
+    not_found = saml_profiles_api.fetch_saml_server_profiles(
+        name="non-existent-saml_server_profiles-xyz-12345",
+        folder=clean_saml_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent saml_server_profiles"
+    logger.info(f"\n[SUCCESS] fetch_saml_server_profiles correctly returned None for non-existent saml_server_profiles")
+
+
 def test_delete_saml_profile_by_id(saml_profiles_api):
     profile_name = f"test-saml-del-{uuid.uuid4().hex[:6]}"
 
@@ -162,8 +191,14 @@ def test_delete_saml_profile_by_id(saml_profiles_api):
         id=created_obj.id
     )
 
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         saml_profiles_api.get_saml_server_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

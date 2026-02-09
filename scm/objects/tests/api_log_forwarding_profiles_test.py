@@ -181,6 +181,35 @@ def test_list_log_forwarding_profiles(log_forwarding_profiles_api, clean_log_for
     assert found is True, f"Created profile {clean_log_forwarding_profile.name} not found in list response"
 
 
+
+
+def test_fetch_log_forwarding_profiles(log_forwarding_profiles_api, clean_log_forwarding_profile):
+    """
+    Test fetching a single log_forwarding_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = log_forwarding_profiles_api.fetch_log_forwarding_profiles(
+        name=clean_log_forwarding_profile.name,
+        folder=clean_log_forwarding_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found log_forwarding_profiles '{clean_log_forwarding_profile.name}'"
+    assert fetched_obj.id == clean_log_forwarding_profile.id
+    assert fetched_obj.name == clean_log_forwarding_profile.name
+    assert fetched_obj.folder == clean_log_forwarding_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_log_forwarding_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent log_forwarding_profiles (should return None)
+    not_found = log_forwarding_profiles_api.fetch_log_forwarding_profiles(
+        name="non-existent-log_forwarding_profiles-xyz-12345",
+        folder=clean_log_forwarding_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent log_forwarding_profiles"
+    logger.info(f"\n[SUCCESS] fetch_log_forwarding_profiles correctly returned None for non-existent log_forwarding_profiles")
+
+
 def test_delete_log_forwarding_profile_by_id(log_forwarding_profiles_api):
     """Test deleting a Log Forwarding Profile."""
     profile_name = f"test-log-fwd-delete-{uuid.uuid4().hex[:5]}"
@@ -210,8 +239,14 @@ def test_delete_log_forwarding_profile_by_id(log_forwarding_profiles_api):
         id=created_obj.id
     )
 
+    from scm.objects.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         log_forwarding_profiles_api.get_log_forwarding_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -29,6 +29,8 @@ from scm.config_operations.models.running_config_versions_response import Runnin
 from scm.config_operations.api_client import ApiClient, RequestSerialized
 from scm.config_operations.api_response import ApiResponse
 from scm.config_operations.rest import RESTResponseType
+from scm.decorators import with_error_handling
+
 
 
 class ConfigVersionsApi:
@@ -45,6 +47,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_candidate_config_versions(
         self,
         _request_timeout: Union[
@@ -113,6 +116,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_candidate_config_versions_with_http_info(
         self,
         _request_timeout: Union[
@@ -181,6 +185,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_candidate_config_versions_without_preload_content(
         self,
         _request_timeout: Union[
@@ -306,6 +311,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_config_versions_by_id(
         self,
         version: Annotated[StrictInt, Field(description="The configuration version number")],
@@ -377,6 +383,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_config_versions_by_id_with_http_info(
         self,
         version: Annotated[StrictInt, Field(description="The configuration version number")],
@@ -448,6 +455,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_config_versions_by_id_without_preload_content(
         self,
         version: Annotated[StrictInt, Field(description="The configuration version number")],
@@ -579,6 +587,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_running_config_versions(
         self,
         _request_timeout: Union[
@@ -646,6 +655,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_running_config_versions_with_http_info(
         self,
         _request_timeout: Union[
@@ -713,6 +723,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_running_config_versions_without_preload_content(
         self,
         _request_timeout: Union[
@@ -837,6 +848,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_config_versions(
         self,
         limit: Annotated[Optional[StrictInt], Field(description="The maximum number of results per page")] = None,
@@ -912,6 +924,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_config_versions_with_http_info(
         self,
         limit: Annotated[Optional[StrictInt], Field(description="The maximum number of results per page")] = None,
@@ -987,6 +1000,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_config_versions_without_preload_content(
         self,
         limit: Annotated[Optional[StrictInt], Field(description="The maximum number of results per page")] = None,
@@ -1129,6 +1143,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_config_versions(
         self,
         load_config: Annotated[Optional[LoadConfig], Field(description="Created")] = None,
@@ -1200,6 +1215,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_config_versions_with_http_info(
         self,
         load_config: Annotated[Optional[LoadConfig], Field(description="Created")] = None,
@@ -1271,6 +1287,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_config_versions_without_preload_content(
         self,
         load_config: Annotated[Optional[LoadConfig], Field(description="Created")] = None,
@@ -1415,6 +1432,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def push_candidate_config_versions(
         self,
         push_candidate_config_versions_request: Annotated[Optional[PushCandidateConfigVersionsRequest], Field(description="Created")] = None,
@@ -1486,6 +1504,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def push_candidate_config_versions_with_http_info(
         self,
         push_candidate_config_versions_request: Annotated[Optional[PushCandidateConfigVersionsRequest], Field(description="Created")] = None,
@@ -1557,6 +1576,7 @@ class ConfigVersionsApi:
 
 
     @validate_call
+    @with_error_handling
     def push_candidate_config_versions_without_preload_content(
         self,
         push_candidate_config_versions_request: Annotated[Optional[PushCandidateConfigVersionsRequest], Field(description="Created")] = None,

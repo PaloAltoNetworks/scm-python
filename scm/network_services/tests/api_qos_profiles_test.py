@@ -140,6 +140,7 @@ def test_list_qos_profiles(qos_profiles_api, clean_qos_profile):
     assert found is True
 
 
+
 def test_delete_qos_profile_by_id(qos_profiles_api):
     """Test deleting a QoS Profile."""
     payload = create_qos_profile_payload("qos-del-")
@@ -147,8 +148,14 @@ def test_delete_qos_profile_by_id(qos_profiles_api):
     
     qos_profiles_api.delete_qo_s_profiles_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         qos_profiles_api.get_qo_s_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

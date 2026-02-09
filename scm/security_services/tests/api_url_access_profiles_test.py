@@ -32,7 +32,7 @@ def url_access_profiles_api(client):
     """
     Fixture to return the URL Access Profiles API instance.
     """
-    return client.security_services.UrlAccessProfilesApi(client.security_services.api_client)
+    return client.security_services.URLAccessProfilesApi(client.security_services.api_client)
 
 @pytest.fixture
 def clean_url_access_profile(url_access_profiles_api):
@@ -148,6 +148,35 @@ def test_list_url_access_profiles(url_access_profiles_api, clean_url_access_prof
     assert found is True, f"Created profile {clean_url_access_profile.id} not found in list response"
 
 
+
+
+def test_fetch_url_access_profiles(url_access_profiles_api, clean_url_access_profile):
+    """
+    Test fetching a single url_access_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = url_access_profiles_api.fetch_url_access_profiles(
+        name=clean_url_access_profile.name,
+        folder=clean_url_access_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found url_access_profiles '{clean_url_access_profile.name}'"
+    assert fetched_obj.id == clean_url_access_profile.id
+    assert fetched_obj.name == clean_url_access_profile.name
+    assert fetched_obj.folder == clean_url_access_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_url_access_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent url_access_profiles (should return None)
+    not_found = url_access_profiles_api.fetch_url_access_profiles(
+        name="non-existent-url_access_profiles-xyz-12345",
+        folder=clean_url_access_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent url_access_profiles"
+    logger.info(f"\n[SUCCESS] fetch_url_access_profiles correctly returned None for non-existent url_access_profiles")
+
+
 def test_delete_url_access_profile_by_id(url_access_profiles_api):
     """
     Test deletion specifically with logging.
@@ -174,8 +203,14 @@ def test_delete_url_access_profile_by_id(url_access_profiles_api):
     )
 
     # Verify Deletion
+    from scm.security_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         url_access_profiles_api.get_url_access_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

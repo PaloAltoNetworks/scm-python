@@ -174,6 +174,7 @@ def test_list_applications(applications_api, clean_application):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
 def test_delete_application_by_id(applications_api):
     """
     Test deletion specifically.
@@ -201,9 +202,14 @@ def test_delete_application_by_id(applications_api):
     # Perform Delete
     applications_api.delete_applications_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         applications_api.get_applications_by_id(id=created_obj.id)
         pytest.fail("Application should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

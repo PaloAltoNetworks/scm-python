@@ -37,6 +37,8 @@ from scm.config_setup.models.snippet_snapshot_subscriber_compare_response import
 from scm.config_setup.api_client import ApiClient, RequestSerialized
 from scm.config_setup.api_response import ApiResponse
 from scm.config_setup.rest import RESTResponseType
+from scm.decorators import with_error_handling
+
 
 
 class SnippetSnapshotsApi:
@@ -53,6 +55,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def compare_snippet_snapshot(
         self,
         compare_snippet_snapshot_config_payload: Annotated[Optional[CompareSnippetSnapshotConfigPayload], Field(description="The `Snippet Snapshots To Compare` resource definition")] = None,
@@ -124,6 +127,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def compare_snippet_snapshot_with_http_info(
         self,
         compare_snippet_snapshot_config_payload: Annotated[Optional[CompareSnippetSnapshotConfigPayload], Field(description="The `Snippet Snapshots To Compare` resource definition")] = None,
@@ -195,6 +199,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def compare_snippet_snapshot_without_preload_content(
         self,
         compare_snippet_snapshot_config_payload: Annotated[Optional[CompareSnippetSnapshotConfigPayload], Field(description="The `Snippet Snapshots To Compare` resource definition")] = None,
@@ -339,6 +344,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def convert_snippet_snapshot(
         self,
         common_snippet_snapshot_payload: Annotated[Optional[CommonSnippetSnapshotPayload], Field(description="The `Snippet Snapshots To Convert` resource definition")] = None,
@@ -410,6 +416,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def convert_snippet_snapshot_with_http_info(
         self,
         common_snippet_snapshot_payload: Annotated[Optional[CommonSnippetSnapshotPayload], Field(description="The `Snippet Snapshots To Convert` resource definition")] = None,
@@ -481,6 +488,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def convert_snippet_snapshot_without_preload_content(
         self,
         common_snippet_snapshot_payload: Annotated[Optional[CommonSnippetSnapshotPayload], Field(description="The `Snippet Snapshots To Convert` resource definition")] = None,
@@ -625,6 +633,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def diff_snippet_snapshot(
         self,
         compare_tlo_payload: Annotated[Optional[CompareTloPayload], Field(description="The `Snippet Snapshots To Differentiate` resource definition")] = None,
@@ -696,6 +705,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def diff_snippet_snapshot_with_http_info(
         self,
         compare_tlo_payload: Annotated[Optional[CompareTloPayload], Field(description="The `Snippet Snapshots To Differentiate` resource definition")] = None,
@@ -767,6 +777,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def diff_snippet_snapshot_without_preload_content(
         self,
         compare_tlo_payload: Annotated[Optional[CompareTloPayload], Field(description="The `Snippet Snapshots To Differentiate` resource definition")] = None,
@@ -911,6 +922,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_snippet_snapshot(
         self,
         snippet_snapshot_load_snippet_payload: Annotated[Optional[SnippetSnapshotLoadSnippetPayload], Field(description="The `Snippet Snapshots To Load` resource definition")] = None,
@@ -982,6 +994,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_snippet_snapshot_with_http_info(
         self,
         snippet_snapshot_load_snippet_payload: Annotated[Optional[SnippetSnapshotLoadSnippetPayload], Field(description="The `Snippet Snapshots To Load` resource definition")] = None,
@@ -1053,6 +1066,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def load_snippet_snapshot_without_preload_content(
         self,
         snippet_snapshot_load_snippet_payload: Annotated[Optional[SnippetSnapshotLoadSnippetPayload], Field(description="The `Snippet Snapshots To Load` resource definition")] = None,
@@ -1197,6 +1211,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def publish_snippet_snapshot(
         self,
         snippet_snapshot_publish_request: Annotated[Optional[SnippetSnapshotPublishRequest], Field(description="The `Snippet Snapshots To Publish` resource definition")] = None,
@@ -1268,6 +1283,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def publish_snippet_snapshot_with_http_info(
         self,
         snippet_snapshot_publish_request: Annotated[Optional[SnippetSnapshotPublishRequest], Field(description="The `Snippet Snapshots To Publish` resource definition")] = None,
@@ -1339,6 +1355,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def publish_snippet_snapshot_without_preload_content(
         self,
         snippet_snapshot_publish_request: Annotated[Optional[SnippetSnapshotPublishRequest], Field(description="The `Snippet Snapshots To Publish` resource definition")] = None,
@@ -1483,6 +1500,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def save_snippet_snapshot(
         self,
         save_snippet_snapshot_payload: Annotated[Optional[SaveSnippetSnapshotPayload], Field(description="The `Save Snippet Snapshots` resource definition")] = None,
@@ -1554,6 +1572,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def save_snippet_snapshot_with_http_info(
         self,
         save_snippet_snapshot_payload: Annotated[Optional[SaveSnippetSnapshotPayload], Field(description="The `Save Snippet Snapshots` resource definition")] = None,
@@ -1625,6 +1644,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def save_snippet_snapshot_without_preload_content(
         self,
         save_snippet_snapshot_payload: Annotated[Optional[SaveSnippetSnapshotPayload], Field(description="The `Save Snippet Snapshots` resource definition")] = None,
@@ -1769,6 +1789,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_snippet_snapshot(
         self,
         snippet_snapshot_subscriber_compare_payload: Annotated[Optional[SnippetSnapshotSubscriberComparePayload], Field(description="The `Snippet Snapshots To Update` resource definition")] = None,
@@ -1840,6 +1861,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_snippet_snapshot_with_http_info(
         self,
         snippet_snapshot_subscriber_compare_payload: Annotated[Optional[SnippetSnapshotSubscriberComparePayload], Field(description="The `Snippet Snapshots To Update` resource definition")] = None,
@@ -1911,6 +1933,7 @@ class SnippetSnapshotsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_snippet_snapshot_without_preload_content(
         self,
         snippet_snapshot_subscriber_compare_payload: Annotated[Optional[SnippetSnapshotSubscriberComparePayload], Field(description="The `Snippet Snapshots To Update` resource definition")] = None,
@@ -1976,6 +1999,75 @@ class SnippetSnapshotsApi:
         )
         return response_data.response
 
+
+
+    def fetch_snippet_snapshots(
+        self,
+        name: str,
+        folder: Optional[str] = None,
+        snippet: Optional[str] = None,
+        device: Optional[str] = None,
+        **kwargs
+    ) -> Optional[Any]:
+        """
+        Fetch a single snippet_snapshots object by name.
+    
+        This is a convenience method that combines list and filter operations to retrieve
+        a specific object by its name within a container (folder, snippet, or device).
+    
+        Args:
+            name: The name of the object to fetch
+            folder: The folder in which the resource is defined
+            snippet: The snippet in which the resource is defined
+            device: The device in which the resource is defined
+            **kwargs: Additional keyword arguments
+    
+        Returns:
+            The matching object if found, None otherwise
+    
+        Example:
+            >>> obj = api.fetch_snippet_snapshots(name="my-object", folder="Texas")
+            >>> if obj:
+            ...     print(f"Found: {obj.name}")
+        """
+        # Use list method with pagination to get all objects
+        offset = 0
+        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
+    
+        while True:
+            # Build list parameters dynamically (only include non-None container params)
+            list_params = {'offset': offset, 'limit': limit}
+            if folder is not None:
+                list_params['folder'] = folder
+            if snippet is not None:
+                list_params['snippet'] = snippet
+            if device is not None:
+                list_params['device'] = device
+            # Note: Not passing 'name' to list() - we do client-side filtering instead
+            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
+            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
+    
+            response = self.list_snippet_snapshots(**list_params)
+    
+            # Filter by exact name match
+            if hasattr(response, 'data') and response.data:
+                for obj in response.data:
+                    # If object has 'name' attribute, verify it matches (client-side check)
+                    # Otherwise, trust server-side filtering (name was passed to list())
+                    if hasattr(obj, 'name'):
+                        if obj.name == name:
+                            return obj
+                    else:
+                        # No name attribute, trust server-side filtering, return first result
+                        return obj
+    
+            # Check if we've reached the end
+            if not response.data or len(response.data) < limit:
+                break
+    
+            offset += limit
+    
+        return None
 
     def _update_snippet_snapshot_serialize(
         self,

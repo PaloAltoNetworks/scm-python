@@ -178,12 +178,45 @@ def test_list_addresses(addresses_api, clean_address):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_addresses(addresses_api, clean_address):
+    """
+    Test fetching a single addresses by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = addresses_api.fetch_addresses(
+        name=clean_address.name,
+        folder=clean_address.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found addresses '{clean_address.name}'"
+    assert fetched_obj.id == clean_address.id
+    assert fetched_obj.name == clean_address.name
+    assert fetched_obj.folder == clean_address.folder
+    logger.info(f"\n[SUCCESS] fetch_addresses found object: {fetched_obj.name}")
+
+    # Test fetching non-existent addresses (should return None)
+    not_found = addresses_api.fetch_addresses(
+        name="non-existent-addresses-xyz-12345",
+        folder=clean_address.folder
+    )
+    assert not_found is None, "Should return None for non-existent addresses"
+    logger.info(f"\n[SUCCESS] fetch_addresses correctly returned None for non-existent addresses")
+
+
 def test_delete_address_by_id(addresses_api):
     """
     Test deletion specifically.
     Equivalent to Go: Test_objects_AddressesAPIService_DeleteByID
     We manually create and delete here to verify the delete logic explicitly.
+
+    UPDATED: Catches ObjectNotPresentError directly (decorator already converts exceptions).
     """
+    from scm.exceptions import ObjectNotPresentError
+
     # Setup
     object_name = f"test-addr-del-{uuid.uuid4().hex[:6]}"
     payload = Addresses(
@@ -206,10 +239,12 @@ def test_delete_address_by_id(addresses_api):
         id=created_obj.id
     )
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    # Decorator already converts NotFoundException to ObjectNotPresentError
     try:
         addresses_api.get_addresses_by_id(id=created_obj.id)
         pytest.fail("Address should have been deleted but was found.")
-    except Exception as e:
-        # SCM API typically returns 404 or a specific error code for not found
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

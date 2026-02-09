@@ -26,6 +26,8 @@ from scm.objects.models.tags_list_response import TagsListResponse
 from scm.objects.api_client import ApiClient, RequestSerialized
 from scm.objects.api_response import ApiResponse
 from scm.objects.rest import RESTResponseType
+from scm.decorators import with_error_handling
+
 
 
 class TagsApi:
@@ -42,6 +44,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_tags(
         self,
         tags: Annotated[Optional[Tags], Field(description="Created")] = None,
@@ -113,6 +116,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_tags_with_http_info(
         self,
         tags: Annotated[Optional[Tags], Field(description="Created")] = None,
@@ -184,6 +188,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_tags_without_preload_content(
         self,
         tags: Annotated[Optional[Tags], Field(description="Created")] = None,
@@ -328,6 +333,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_tags_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -400,6 +406,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_tags_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -472,6 +479,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_tags_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -604,6 +612,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_tags_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -675,6 +684,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_tags_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -746,6 +756,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_tags_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -877,6 +888,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_tags(
         self,
         name: Annotated[Optional[StrictStr], Field(description="The name of the configuration resource")] = None,
@@ -968,6 +980,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_tags_with_http_info(
         self,
         name: Annotated[Optional[StrictStr], Field(description="The name of the configuration resource")] = None,
@@ -1059,6 +1072,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_tags_without_preload_content(
         self,
         name: Annotated[Optional[StrictStr], Field(description="The name of the configuration resource")] = None,
@@ -1237,6 +1251,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_tags_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1313,6 +1328,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_tags_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1389,6 +1405,7 @@ class TagsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_tags_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1459,6 +1476,75 @@ class TagsApi:
         )
         return response_data.response
 
+
+
+    def fetch_tags(
+        self,
+        name: str,
+        folder: Optional[str] = None,
+        snippet: Optional[str] = None,
+        device: Optional[str] = None,
+        **kwargs
+    ) -> Optional[Any]:
+        """
+        Fetch a single tags object by name.
+    
+        This is a convenience method that combines list and filter operations to retrieve
+        a specific object by its name within a container (folder, snippet, or device).
+    
+        Args:
+            name: The name of the object to fetch
+            folder: The folder in which the resource is defined
+            snippet: The snippet in which the resource is defined
+            device: The device in which the resource is defined
+            **kwargs: Additional keyword arguments
+    
+        Returns:
+            The matching object if found, None otherwise
+    
+        Example:
+            >>> obj = api.fetch_tags(name="my-object", folder="Texas")
+            >>> if obj:
+            ...     print(f"Found: {obj.name}")
+        """
+        # Use list method with pagination to get all objects
+        offset = 0
+        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
+    
+        while True:
+            # Build list parameters dynamically (only include non-None container params)
+            list_params = {'offset': offset, 'limit': limit}
+            if folder is not None:
+                list_params['folder'] = folder
+            if snippet is not None:
+                list_params['snippet'] = snippet
+            if device is not None:
+                list_params['device'] = device
+            # Note: Not passing 'name' to list() - we do client-side filtering instead
+            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
+            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
+    
+            response = self.list_tags(**list_params)
+    
+            # Filter by exact name match
+            if hasattr(response, 'data') and response.data:
+                for obj in response.data:
+                    # If object has 'name' attribute, verify it matches (client-side check)
+                    # Otherwise, trust server-side filtering (name was passed to list())
+                    if hasattr(obj, 'name'):
+                        if obj.name == name:
+                            return obj
+                    else:
+                        # No name attribute, trust server-side filtering, return first result
+                        return obj
+    
+            # Check if we've reached the end
+            if not response.data or len(response.data) < limit:
+                break
+    
+            offset += limit
+    
+        return None
 
     def _update_tags_by_id_serialize(
         self,

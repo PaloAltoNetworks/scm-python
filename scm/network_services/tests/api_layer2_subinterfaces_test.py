@@ -165,6 +165,35 @@ def test_list_layer2_subinterfaces(l2_sub_api, clean_l2_subinterface):
     assert found is True
 
 
+
+
+def test_fetch_layer2_subinterfaces(l2_sub_api, clean_l2_subinterface):
+    """
+    Test fetching a single layer2_subinterfaces by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = l2_sub_api.fetch_layer2_subinterfaces(
+        name=clean_l2_subinterface.name,
+        folder=clean_l2_subinterface.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found layer2_subinterfaces '{clean_l2_subinterface.name}'"
+    assert fetched_obj.id == clean_l2_subinterface.id
+    assert fetched_obj.name == clean_l2_subinterface.name
+    assert fetched_obj.folder == clean_l2_subinterface.folder
+    logger.info(f"\n[SUCCESS] fetch_layer2_subinterfaces found object: {fetched_obj.name}")
+
+    # Test fetching non-existent layer2_subinterfaces (should return None)
+    not_found = l2_sub_api.fetch_layer2_subinterfaces(
+        name="non-existent-layer2_subinterfaces-xyz-12345",
+        folder=clean_l2_subinterface.folder
+    )
+    assert not_found is None, "Should return None for non-existent layer2_subinterfaces"
+    logger.info(f"\n[SUCCESS] fetch_layer2_subinterfaces correctly returned None for non-existent layer2_subinterfaces")
+
+
 def test_delete_layer2_subinterface_by_id(l2_sub_api, parent_l2_interface):
     """
     Test deleting a Layer 2 Subinterface.
@@ -183,8 +212,14 @@ def test_delete_layer2_subinterface_by_id(l2_sub_api, parent_l2_interface):
     
     l2_sub_api.delete_layer2_subinterfaces_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         l2_sub_api.get_layer2_subinterfaces_by_id(id=created_obj.id)
         pytest.fail("Subinterface should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

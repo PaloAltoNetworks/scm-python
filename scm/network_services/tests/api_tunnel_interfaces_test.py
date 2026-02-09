@@ -112,6 +112,35 @@ def test_list_tunnel_interfaces(tunnel_api, clean_tunnel_interface):
     assert found is True
 
 
+
+
+def test_fetch_tunnel_interfaces(tunnel_api, clean_tunnel_interface):
+    """
+    Test fetching a single tunnel_interfaces by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = tunnel_api.fetch_tunnel_interfaces(
+        name=clean_tunnel_interface.name,
+        folder=clean_tunnel_interface.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found tunnel_interfaces '{clean_tunnel_interface.name}'"
+    assert fetched_obj.id == clean_tunnel_interface.id
+    assert fetched_obj.name == clean_tunnel_interface.name
+    assert fetched_obj.folder == clean_tunnel_interface.folder
+    logger.info(f"\n[SUCCESS] fetch_tunnel_interfaces found object: {fetched_obj.name}")
+
+    # Test fetching non-existent tunnel_interfaces (should return None)
+    not_found = tunnel_api.fetch_tunnel_interfaces(
+        name="non-existent-tunnel_interfaces-xyz-12345",
+        folder=clean_tunnel_interface.folder
+    )
+    assert not_found is None, "Should return None for non-existent tunnel_interfaces"
+    logger.info(f"\n[SUCCESS] fetch_tunnel_interfaces correctly returned None for non-existent tunnel_interfaces")
+
+
 def test_delete_tunnel_interface_by_id(tunnel_api):
     """Test deleting a Tunnel Interface."""
     payload = create_tunnel_interface_payload("tun-del-")
@@ -119,8 +148,14 @@ def test_delete_tunnel_interface_by_id(tunnel_api):
     
     tunnel_api.delete_tunnel_interfaces_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         tunnel_api.get_tunnel_interfaces_by_id(id=created_obj.id)
         pytest.fail("Interface should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -211,6 +211,35 @@ def test_list_address_groups(address_groups_api, clean_address_group):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_address_groups(address_groups_api, clean_address_group):
+    """
+    Test fetching a single address_groups by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = address_groups_api.fetch_address_groups(
+        name=clean_address_group.name,
+        folder=clean_address_group.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found address_groups '{clean_address_group.name}'"
+    assert fetched_obj.id == clean_address_group.id
+    assert fetched_obj.name == clean_address_group.name
+    assert fetched_obj.folder == clean_address_group.folder
+    logger.info(f"\n[SUCCESS] fetch_address_groups found object: {fetched_obj.name}")
+
+    # Test fetching non-existent address_groups (should return None)
+    not_found = address_groups_api.fetch_address_groups(
+        name="non-existent-address_groups-xyz-12345",
+        folder=clean_address_group.folder
+    )
+    assert not_found is None, "Should return None for non-existent address_groups"
+    logger.info(f"\n[SUCCESS] fetch_address_groups correctly returned None for non-existent address_groups")
+
+
 def test_delete_address_group_by_id(addresses_api, address_groups_api):
     """
     Test deletion specifically.
@@ -234,12 +263,17 @@ def test_delete_address_group_by_id(addresses_api, address_groups_api):
     # 3. Perform Delete
     address_groups_api.delete_address_groups_by_id(id=created_group.id)
 
-    # 4. Verify Deletion (Expect 404 on Get)
+    # 4. Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         address_groups_api.get_address_groups_by_id(id=created_group.id)
         pytest.fail("Address Group should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_group.id}")
 
     # 5. Cleanup Dependency
     delete_test_address(addresses_api, addr1.id)

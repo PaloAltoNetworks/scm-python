@@ -52,6 +52,7 @@ def clean_scep_profile(scep_profiles_api):
     )
 
     payload = ScepProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/",
@@ -106,6 +107,7 @@ def test_create_scep_profile(scep_profiles_api):
     )
 
     payload = ScepProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/certsrv/mscep/mscep.dll",
@@ -186,6 +188,35 @@ def test_list_scep_profiles(scep_profiles_api, clean_scep_profile):
     assert found is True, f"Created profile {clean_scep_profile.name} not found in list response"
 
 
+
+
+def test_fetch_scep_profiles(scep_profiles_api, clean_scep_profile):
+    """
+    Test fetching a single scep_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = scep_profiles_api.fetch_scep_profiles(
+        name=clean_scep_profile.name,
+        folder=clean_scep_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found scep_profiles '{clean_scep_profile.name}'"
+    assert fetched_obj.id == clean_scep_profile.id
+    assert fetched_obj.name == clean_scep_profile.name
+    assert fetched_obj.folder == clean_scep_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_scep_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent scep_profiles (should return None)
+    not_found = scep_profiles_api.fetch_scep_profiles(
+        name="non-existent-scep_profiles-xyz-12345",
+        folder=clean_scep_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent scep_profiles"
+    logger.info(f"\n[SUCCESS] fetch_scep_profiles correctly returned None for non-existent scep_profiles")
+
+
 def test_delete_scep_profile_by_id(scep_profiles_api):
     """Test deleting a SCEP Profile."""
     profile_name = f"scm-scep-delete-{uuid.uuid4().hex[:6]}"
@@ -201,6 +232,7 @@ def test_delete_scep_profile_by_id(scep_profiles_api):
     )
 
     payload = ScepProfiles(
+        id="",
         folder=TARGET_FOLDER,
         name=profile_name,
         scep_url="https://scep.example.com/",
@@ -222,8 +254,14 @@ def test_delete_scep_profile_by_id(scep_profiles_api):
         id=created_obj.id
     )
 
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         scep_profiles_api.get_scep_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

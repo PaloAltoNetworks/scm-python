@@ -149,9 +149,8 @@ def test_list_pbf_rules(pbf_rules_api, clean_pbf_rule):
     """Test listing PBF Rules."""
     response = perform(
         pbf_rules_api.list_pbf_rules_with_http_info,
-        limit=50,
-        folder=TARGET_FOLDER,
-        offset=10
+        limit=10000,
+        folder=TARGET_FOLDER
     )
 
     assert response is not None
@@ -163,6 +162,35 @@ def test_list_pbf_rules(pbf_rules_api, clean_pbf_rule):
             found = True
             break
     assert found is True, f"Created rule {clean_pbf_rule.id} not found in list response"
+
+
+
+
+def test_fetch_pbf_rules(pbf_rules_api, clean_pbf_rule):
+    """
+    Test fetching a single pbf_rules by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = pbf_rules_api.fetch_pbf_rules(
+        name=clean_pbf_rule.name,
+        folder=clean_pbf_rule.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found pbf_rules '{clean_pbf_rule.name}'"
+    assert fetched_obj.id == clean_pbf_rule.id
+    assert fetched_obj.name == clean_pbf_rule.name
+    assert fetched_obj.folder == clean_pbf_rule.folder
+    logger.info(f"\n[SUCCESS] fetch_pbf_rules found object: {fetched_obj.name}")
+
+    # Test fetching non-existent pbf_rules (should return None)
+    not_found = pbf_rules_api.fetch_pbf_rules(
+        name="non-existent-pbf_rules-xyz-12345",
+        folder=clean_pbf_rule.folder
+    )
+    assert not_found is None, "Should return None for non-existent pbf_rules"
+    logger.info(f"\n[SUCCESS] fetch_pbf_rules correctly returned None for non-existent pbf_rules")
 
 
 def test_delete_pbf_rule_by_id(pbf_rules_api):
@@ -200,8 +228,14 @@ def test_delete_pbf_rule_by_id(pbf_rules_api):
         id=created_obj.id
     )
 
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         pbf_rules_api.get_pbf_rules_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Rule should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

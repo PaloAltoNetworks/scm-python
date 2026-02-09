@@ -188,6 +188,35 @@ def test_list_auth_sequences(auth_sequences_api, clean_auth_sequence):
     assert found is True, f"Created sequence {clean_auth_sequence.id} not found in list response"
 
 
+
+
+def test_fetch_authentication_sequences(auth_sequences_api, clean_auth_sequence):
+    """
+    Test fetching a single authentication_sequences by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = auth_sequences_api.fetch_authentication_sequences(
+        name=clean_auth_sequence.name,
+        folder=clean_auth_sequence.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found authentication_sequences '{clean_auth_sequence.name}'"
+    assert fetched_obj.id == clean_auth_sequence.id
+    assert fetched_obj.name == clean_auth_sequence.name
+    assert fetched_obj.folder == clean_auth_sequence.folder
+    logger.info(f"\n[SUCCESS] fetch_authentication_sequences found object: {fetched_obj.name}")
+
+    # Test fetching non-existent authentication_sequences (should return None)
+    not_found = auth_sequences_api.fetch_authentication_sequences(
+        name="non-existent-authentication_sequences-xyz-12345",
+        folder=clean_auth_sequence.folder
+    )
+    assert not_found is None, "Should return None for non-existent authentication_sequences"
+    logger.info(f"\n[SUCCESS] fetch_authentication_sequences correctly returned None for non-existent authentication_sequences")
+
+
 def test_delete_auth_sequence_by_id(auth_sequences_api, test_auth_profile):
     """
     Test deletion specifically with logging.
@@ -213,8 +242,14 @@ def test_delete_auth_sequence_by_id(auth_sequences_api, test_auth_profile):
         id=created_obj.id
     )
 
+    from scm.identity_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         auth_sequences_api.get_authentication_sequences_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Sequence should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -210,6 +210,35 @@ def test_list_dynamic_user_groups(dug_api, clean_dug):
     assert found is True
 
 
+
+
+def test_fetch_dynamic_user_groups(dug_api, clean_dug):
+    """
+    Test fetching a single dynamic_user_groups by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = dug_api.fetch_dynamic_user_groups(
+        name=clean_dug.name,
+        folder=clean_dug.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found dynamic_user_groups '{clean_dug.name}'"
+    assert fetched_obj.id == clean_dug.id
+    assert fetched_obj.name == clean_dug.name
+    assert fetched_obj.folder == clean_dug.folder
+    logger.info(f"\n[SUCCESS] fetch_dynamic_user_groups found object: {fetched_obj.name}")
+
+    # Test fetching non-existent dynamic_user_groups (should return None)
+    not_found = dug_api.fetch_dynamic_user_groups(
+        name="non-existent-dynamic_user_groups-xyz-12345",
+        folder=clean_dug.folder
+    )
+    assert not_found is None, "Should return None for non-existent dynamic_user_groups"
+    logger.info(f"\n[SUCCESS] fetch_dynamic_user_groups correctly returned None for non-existent dynamic_user_groups")
+
+
 def test_delete_dynamic_user_group_by_id(tags_api, dug_api):
     """
     Test deletion specifically.
@@ -234,12 +263,17 @@ def test_delete_dynamic_user_group_by_id(tags_api, dug_api):
     # 3. Perform Delete
     dug_api.delete_dynamic_user_groups_by_id(id=created_dug.id)
 
-    # 4. Verify Deletion (Expect 404 on Get)
+    # 4. Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         dug_api.get_dynamic_user_groups_by_id(id=created_dug.id)
         pytest.fail("DUG should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_dug.id}")
 
     # 5. Cleanup Dependency
     delete_test_tag(tags_api, tag_obj.id)

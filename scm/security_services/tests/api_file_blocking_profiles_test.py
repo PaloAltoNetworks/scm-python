@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 # -----------------------------------------------------------------------------
 # CONFIGURATION
 # -----------------------------------------------------------------------------
-TARGET_FOLDER = "All"
+TARGET_FOLDER = "Prisma Access"
 # -----------------------------------------------------------------------------
 
 
@@ -131,6 +131,35 @@ def test_list_file_blocking_profiles(file_blocking_profiles_api, clean_file_bloc
     assert found is True, f"Created profile {clean_file_blocking_profile.name} not found in list response"
 
 
+
+
+def test_fetch_file_blocking_profiles(file_blocking_profiles_api, clean_file_blocking_profile):
+    """
+    Test fetching a single file_blocking_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = file_blocking_profiles_api.fetch_file_blocking_profiles(
+        name=clean_file_blocking_profile.name,
+        folder=clean_file_blocking_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found file_blocking_profiles '{clean_file_blocking_profile.name}'"
+    assert fetched_obj.id == clean_file_blocking_profile.id
+    assert fetched_obj.name == clean_file_blocking_profile.name
+    assert fetched_obj.folder == clean_file_blocking_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_file_blocking_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent file_blocking_profiles (should return None)
+    not_found = file_blocking_profiles_api.fetch_file_blocking_profiles(
+        name="non-existent-file_blocking_profiles-xyz-12345",
+        folder=clean_file_blocking_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent file_blocking_profiles"
+    logger.info(f"\n[SUCCESS] fetch_file_blocking_profiles correctly returned None for non-existent file_blocking_profiles")
+
+
 def test_delete_file_blocking_profile_by_id(file_blocking_profiles_api):
     """Test deleting a File Blocking Profile."""
     profile_name = f"scm-fb-delete-{uuid.uuid4().hex[:6]}"
@@ -152,8 +181,14 @@ def test_delete_file_blocking_profile_by_id(file_blocking_profiles_api):
         id=created_obj.id
     )
 
+    from scm.security_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         file_blocking_profiles_api.get_file_blocking_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

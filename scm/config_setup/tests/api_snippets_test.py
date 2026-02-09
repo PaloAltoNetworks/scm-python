@@ -45,7 +45,8 @@ def clean_snippet(snippets_api):
     payload = Snippets(
         id="",
         name=snippet_name,
-        description="Created via Automated Pytest Fixture"
+        description="Created via Automated Pytest Fixture",
+        type="custom"  # Required for snippet to be updateable
     )
 
     logger.info(f"\n[SETUP] Creating Snippet: {snippet_name}")
@@ -129,7 +130,7 @@ def test_update_snippet(snippets_api, clean_snippet):
     # Prepare Update Payload
     update_payload = clean_snippet
     update_payload.description = "Updated test snippet description"
-    update_payload.labels = ["test-label-1", "test-label-2"]
+    # Note: labels field is read-only and cannot be updated via API
 
     # Perform Update using helper
     updated_obj = perform(
@@ -143,9 +144,6 @@ def test_update_snippet(snippets_api, clean_snippet):
     assert updated_obj.id == clean_snippet.id
     assert updated_obj.name == clean_snippet.name
     assert updated_obj.description == "Updated test snippet description"
-    assert updated_obj.labels is not None
-    assert "test-label-1" in updated_obj.labels
-    assert "test-label-2" in updated_obj.labels
 
 
 def test_list_snippets(snippets_api, clean_snippet):
@@ -171,6 +169,35 @@ def test_list_snippets(snippets_api, clean_snippet):
 
     assert found is True
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
+
+
+
+
+def test_fetch_snippets(snippets_api, clean_snippet):
+    """
+    Test fetching a single snippets by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = snippets_api.fetch_snippets(
+        name=clean_snippet.name,
+        folder=getattr(clean_snippet, "folder", None)
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found snippets '{clean_snippet.name}'"
+    assert fetched_obj.id == clean_snippet.id
+    assert fetched_obj.name == clean_snippet.name
+    # Folder attribute not applicable for this resource
+    logger.info(f"\n[SUCCESS] fetch_snippets found object: {fetched_obj.name}")
+
+    # Test fetching non-existent snippets (should return None)
+    not_found = snippets_api.fetch_snippets(
+        name="non-existent-snippets-xyz-12345",
+        folder=getattr(clean_snippet, "folder", None)
+    )
+    assert not_found is None, "Should return None for non-existent snippets"
+    logger.info(f"\n[SUCCESS] fetch_snippets correctly returned None for non-existent snippets")
 
 
 def test_delete_snippet_by_id(snippets_api):
@@ -199,9 +226,14 @@ def test_delete_snippet_by_id(snippets_api):
         id=created_obj.id
     )
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         snippets_api.get_snippet_by_id(id=created_obj.id)
         pytest.fail("Snippet should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

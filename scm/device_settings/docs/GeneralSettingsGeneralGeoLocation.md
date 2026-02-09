@@ -6,8 +6,8 @@ Geographic coordinates
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**latitude** | **str** | Latitude | 
-**longitude** | **str** | Longitude | 
+**latitude** | **str** | Latitude | [optional] 
+**longitude** | **str** | Longitude | [optional] 
 
 ## Example
 

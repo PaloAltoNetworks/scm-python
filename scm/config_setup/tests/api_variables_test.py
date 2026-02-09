@@ -40,7 +40,7 @@ def clean_variable(variables_api):
     """
     # 1. SETUP: Create Variable
     random_id = uuid.uuid4().hex[:6]
-    variable_name = f"test-var-{random_id}"
+    variable_name = f"$test-var-{random_id}"
 
     payload = Variables(
         id="",
@@ -79,7 +79,7 @@ def test_create_variable(variables_api):
     Equivalent to Go: Test_config_setup_VariablesAPIService_Create
     """
     random_suffix = uuid.uuid4().hex[:6]
-    variable_name = f"test-var-create-{random_suffix}"
+    variable_name = f"$test-var-create-{random_suffix}"
 
     payload = Variables(
         id="",
@@ -184,6 +184,35 @@ def test_list_variables(variables_api, clean_variable):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_variables(variables_api, clean_variable):
+    """
+    Test fetching a single variables by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = variables_api.fetch_variables(
+        name=clean_variable.name,
+        folder=clean_variable.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found variables '{clean_variable.name}'"
+    assert fetched_obj.id == clean_variable.id
+    assert fetched_obj.name == clean_variable.name
+    assert fetched_obj.folder == clean_variable.folder
+    logger.info(f"\n[SUCCESS] fetch_variables found object: {fetched_obj.name}")
+
+    # Test fetching non-existent variables (should return None)
+    not_found = variables_api.fetch_variables(
+        name="non-existent-variables-xyz-12345",
+        folder=clean_variable.folder
+    )
+    assert not_found is None, "Should return None for non-existent variables"
+    logger.info(f"\n[SUCCESS] fetch_variables correctly returned None for non-existent variables")
+
+
 def test_delete_variable_by_id(variables_api):
     """
     Test deletion specifically.
@@ -191,7 +220,7 @@ def test_delete_variable_by_id(variables_api):
     """
     # Setup
     random_suffix = uuid.uuid4().hex[:6]
-    variable_name = f"test-var-delete-{random_suffix}"
+    variable_name = f"$test-var-delete-{random_suffix}"
 
     payload = Variables(
         id="",
@@ -213,9 +242,14 @@ def test_delete_variable_by_id(variables_api):
         id=created_obj.id
     )
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         variables_api.get_variable_by_id(id=created_obj.id)
         pytest.fail("Variable should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

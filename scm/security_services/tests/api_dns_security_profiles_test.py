@@ -26,7 +26,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def dns_security_profiles_api(client):
-    return client.security_services.DnsSecurityProfilesApi(client.security_services.api_client)
+    return client.security_services.DNSSecurityProfilesApi(client.security_services.api_client)
 
 
 @pytest.fixture
@@ -131,6 +131,35 @@ def test_list_dns_security_profiles(dns_security_profiles_api, clean_dns_securit
     assert found is True, f"Created profile {clean_dns_security_profile.name} not found in list response"
 
 
+
+
+def test_fetch_dns_security_profiles(dns_security_profiles_api, clean_dns_security_profile):
+    """
+    Test fetching a single dns_security_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = dns_security_profiles_api.fetch_dns_security_profiles(
+        name=clean_dns_security_profile.name,
+        folder=clean_dns_security_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found dns_security_profiles '{clean_dns_security_profile.name}'"
+    assert fetched_obj.id == clean_dns_security_profile.id
+    assert fetched_obj.name == clean_dns_security_profile.name
+    assert fetched_obj.folder == clean_dns_security_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_dns_security_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent dns_security_profiles (should return None)
+    not_found = dns_security_profiles_api.fetch_dns_security_profiles(
+        name="non-existent-dns_security_profiles-xyz-12345",
+        folder=clean_dns_security_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent dns_security_profiles"
+    logger.info(f"\n[SUCCESS] fetch_dns_security_profiles correctly returned None for non-existent dns_security_profiles")
+
+
 def test_delete_dns_security_profile_by_id(dns_security_profiles_api):
     """Test deleting a DNS Security Profile."""
     profile_name = f"scm-dns-delete-{uuid.uuid4().hex[:6]}"
@@ -152,8 +181,14 @@ def test_delete_dns_security_profile_by_id(dns_security_profiles_api):
         id=created_obj.id
     )
 
+    from scm.security_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         dns_security_profiles_api.get_dns_security_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

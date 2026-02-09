@@ -25,6 +25,8 @@ from scm.config_operations.models.jobs_response import JobsResponse
 from scm.config_operations.api_client import ApiClient, RequestSerialized
 from scm.config_operations.api_response import ApiResponse
 from scm.config_operations.rest import RESTResponseType
+from scm.decorators import with_error_handling
+
 
 
 class JobsApi:
@@ -41,6 +43,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_jobs_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The ID of the job")],
@@ -112,6 +115,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_jobs_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The ID of the job")],
@@ -183,6 +187,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_jobs_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The ID of the job")],
@@ -314,6 +319,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_jobs(
         self,
         _request_timeout: Union[
@@ -381,6 +387,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_jobs_with_http_info(
         self,
         _request_timeout: Union[
@@ -448,6 +455,7 @@ class JobsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_jobs_without_preload_content(
         self,
         _request_timeout: Union[

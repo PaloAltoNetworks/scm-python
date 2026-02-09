@@ -26,7 +26,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def http_header_profiles_api(client):
-    return client.security_services.HttpHeaderProfilesApi(client.security_services.api_client)
+    return client.security_services.HTTPHeaderProfilesApi(client.security_services.api_client)
 
 
 @pytest.fixture
@@ -131,6 +131,35 @@ def test_list_http_header_profiles(http_header_profiles_api, clean_http_header_p
     assert found is True, f"Created profile {clean_http_header_profile.name} not found in list response"
 
 
+
+
+def test_fetch_http_header_profiles(http_header_profiles_api, clean_http_header_profile):
+    """
+    Test fetching a single http_header_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = http_header_profiles_api.fetch_http_header_profiles(
+        name=clean_http_header_profile.name,
+        folder=clean_http_header_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found http_header_profiles '{clean_http_header_profile.name}'"
+    assert fetched_obj.id == clean_http_header_profile.id
+    assert fetched_obj.name == clean_http_header_profile.name
+    assert fetched_obj.folder == clean_http_header_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_http_header_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent http_header_profiles (should return None)
+    not_found = http_header_profiles_api.fetch_http_header_profiles(
+        name="non-existent-http_header_profiles-xyz-12345",
+        folder=clean_http_header_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent http_header_profiles"
+    logger.info(f"\n[SUCCESS] fetch_http_header_profiles correctly returned None for non-existent http_header_profiles")
+
+
 def test_delete_http_header_profile_by_id(http_header_profiles_api):
     """Test deleting an HTTP Header Profile."""
     profile_name = f"scm-http-delete-{uuid.uuid4().hex[:6]}"
@@ -152,8 +181,14 @@ def test_delete_http_header_profile_by_id(http_header_profiles_api):
         id=created_obj.id
     )
 
+    from scm.security_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         http_header_profiles_api.get_http_header_profiles_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

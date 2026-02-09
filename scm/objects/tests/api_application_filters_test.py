@@ -167,6 +167,35 @@ def test_list_application_filters(app_filters_api, clean_application_filter):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_application_filters(app_filters_api, clean_application_filter):
+    """
+    Test fetching a single application_filters by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = app_filters_api.fetch_application_filters(
+        name=clean_application_filter.name,
+        folder=clean_application_filter.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found application_filters '{clean_application_filter.name}'"
+    assert fetched_obj.id == clean_application_filter.id
+    assert fetched_obj.name == clean_application_filter.name
+    assert fetched_obj.folder == clean_application_filter.folder
+    logger.info(f"\n[SUCCESS] fetch_application_filters found object: {fetched_obj.name}")
+
+    # Test fetching non-existent application_filters (should return None)
+    not_found = app_filters_api.fetch_application_filters(
+        name="non-existent-application_filters-xyz-12345",
+        folder=clean_application_filter.folder
+    )
+    assert not_found is None, "Should return None for non-existent application_filters"
+    logger.info(f"\n[SUCCESS] fetch_application_filters correctly returned None for non-existent application_filters")
+
+
 def test_delete_application_filter_by_id(app_filters_api):
     """
     Test deletion specifically.
@@ -190,9 +219,14 @@ def test_delete_application_filter_by_id(app_filters_api):
     # Perform Delete
     app_filters_api.delete_application_filters_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         app_filters_api.get_application_filters_by_id(id=created_obj.id)
         pytest.fail("Application Filter should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

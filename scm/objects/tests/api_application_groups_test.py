@@ -226,6 +226,35 @@ def test_list_application_groups(app_groups_api, clean_application_group):
     assert found is True
 
 
+
+
+def test_fetch_application_groups(app_groups_api, clean_application_group):
+    """
+    Test fetching a single application_groups by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = app_groups_api.fetch_application_groups(
+        name=clean_application_group.name,
+        folder=clean_application_group.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found application_groups '{clean_application_group.name}'"
+    assert fetched_obj.id == clean_application_group.id
+    assert fetched_obj.name == clean_application_group.name
+    assert fetched_obj.folder == clean_application_group.folder
+    logger.info(f"\n[SUCCESS] fetch_application_groups found object: {fetched_obj.name}")
+
+    # Test fetching non-existent application_groups (should return None)
+    not_found = app_groups_api.fetch_application_groups(
+        name="non-existent-application_groups-xyz-12345",
+        folder=clean_application_group.folder
+    )
+    assert not_found is None, "Should return None for non-existent application_groups"
+    logger.info(f"\n[SUCCESS] fetch_application_groups correctly returned None for non-existent application_groups")
+
+
 def test_delete_application_group_by_id(applications_api, app_groups_api):
     """
     Test deletion specifically.
@@ -253,11 +282,17 @@ def test_delete_application_group_by_id(applications_api, app_groups_api):
         app_groups_api.delete_application_groups_by_id(id=created_group.id)
 
         # 4. Verify 404
+        from scm.objects.exceptions import NotFoundException
+        from scm.error_parser import parse_scm_error
+        from scm.exceptions import ObjectNotPresentError
+
         try:
             app_groups_api.get_application_groups_by_id(id=created_group.id)
             pytest.fail("Group should be deleted")
-        except Exception as e:
-            assert "404" in str(e) or "Not Found" in str(e)
+        except ObjectNotPresentError as e:
+            # Exception is already parsed by decorator
+            logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+            logger.info(f"   Object ID: {created_group.id}")
 
     finally:
         # 5. Cleanup (If delete failed, try again)

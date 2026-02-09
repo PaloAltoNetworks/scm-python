@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 # -----------------------------------------------------------------------------
 # CONFIGURATION
 # -----------------------------------------------------------------------------
-TARGET_FOLDER = "All"
+TARGET_FOLDER = "Prisma Access"
 # -----------------------------------------------------------------------------
 
 
@@ -37,16 +37,22 @@ def clean_security_rule(security_rules_api):
     rule_name = f"scm-rule-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
-        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
+        policy_type="Security",
         var_from=["any"],
         to=["any"],
         source=["any"],
         destination=["any"],
         application=["any"],
         service=["any"],
-        action="allow"
+        category=["any"],
+        source_user=["any"],
+        action="allow",
+        # Explicitly set Internet-rule fields to None so they're not serialized
+        negate_user=None,
+        negate_source=None,
+        negate_destination=None
     )
 
     logger.info(f"\n[SETUP] Creating Security Rule: {rule_name}")
@@ -74,16 +80,22 @@ def test_create_security_rule(security_rules_api):
     rule_name = f"scm-rule-create-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
-        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
+        policy_type="Security",
         var_from=["any"],
         to=["any"],
         source=["any"],
         destination=["any"],
         application=["any"],
         service=["any"],
-        action="allow"
+        category=["any"],
+        source_user=["any"],
+        action="allow",
+        # Explicitly set Internet-rule fields to None so they're not serialized
+        negate_user=None,
+        negate_source=None,
+        negate_destination=None
     )
 
     created_obj = perform(
@@ -118,9 +130,26 @@ def test_get_security_rule_by_id(security_rules_api, clean_security_rule):
 
 def test_update_security_rule(security_rules_api, clean_security_rule):
     """Test updating a Security Rule."""
-    update_payload = clean_security_rule
-    update_payload.description = "Updated security rule"
-    update_payload.action = "deny"
+    # Create fresh payload for update (matching Go test pattern)
+    # Don't reuse the created object as it contains fields from the API response
+    update_payload = SecurityRules(
+        name=clean_security_rule.name,
+        description="Updated security rule",
+        policy_type="Security",
+        var_from=["any"],
+        to=["any"],
+        source=["any"],
+        destination=["any"],
+        application=["any"],
+        service=["any"],
+        category=["any"],
+        source_user=["any"],
+        action="deny",  # Changed from "allow"
+        # Explicitly set Internet-rule fields to None so they're not serialized
+        negate_user=None,
+        negate_source=None,
+        negate_destination=None
+    )
 
     updated_obj = perform(
         security_rules_api.update_security_rules_by_id_with_http_info,
@@ -136,9 +165,10 @@ def test_update_security_rule(security_rules_api, clean_security_rule):
 def test_list_security_rules(security_rules_api, clean_security_rule):
     """Test listing Security Rules."""
     response = perform(
-        security_rules_api.list_security_rules_with_http_info,
+        security_rules_api.list_rules_with_http_info,
         folder=TARGET_FOLDER,
-        position="pre"
+        position="pre",
+        limit=10000
     )
 
     assert response is not None
@@ -152,21 +182,28 @@ def test_list_security_rules(security_rules_api, clean_security_rule):
     assert found is True, f"Created rule {clean_security_rule.name} not found in list response"
 
 
+
 def test_delete_security_rule_by_id(security_rules_api):
     """Test deleting a Security Rule."""
     rule_name = f"scm-rule-delete-{uuid.uuid4().hex[:6]}"
 
     payload = SecurityRules(
-        id="",
         folder=TARGET_FOLDER,
         name=rule_name,
+        policy_type="Security",
         var_from=["any"],
         to=["any"],
         source=["any"],
         destination=["any"],
         application=["any"],
         service=["any"],
-        action="allow"
+        category=["any"],
+        source_user=["any"],
+        action="allow",
+        # Explicitly set Internet-rule fields to None so they're not serialized
+        negate_user=None,
+        negate_source=None,
+        negate_destination=None
     )
 
     created_obj = perform(
@@ -181,8 +218,14 @@ def test_delete_security_rule_by_id(security_rules_api):
         id=created_obj.id
     )
 
+    from scm.security_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         security_rules_api.get_security_rules_by_id_with_http_info(id=created_obj.id)
         pytest.fail("Rule should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

@@ -200,7 +200,7 @@ def test_list_ethernet_interfaces(eth_api, clean_eth_interface):
     """
     Test listing Ethernet Interfaces.
     """
-    response = eth_api.list_ethernet_interfaces(folder=TARGET_FOLDER, limit=10)
+    response = eth_api.list_ethernet_interfaces(folder=TARGET_FOLDER, limit=10000)
     assert len(response.data) > 0
 
     found = False
@@ -209,6 +209,35 @@ def test_list_ethernet_interfaces(eth_api, clean_eth_interface):
             found = True
             break
     assert found is True
+
+
+
+
+def test_fetch_ethernet_interfaces(eth_api, clean_eth_interface):
+    """
+    Test fetching a single ethernet_interfaces by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = eth_api.fetch_ethernet_interfaces(
+        name=clean_eth_interface.name,
+        folder=clean_eth_interface.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found ethernet_interfaces '{clean_eth_interface.name}'"
+    assert fetched_obj.id == clean_eth_interface.id
+    assert fetched_obj.name == clean_eth_interface.name
+    assert fetched_obj.folder == clean_eth_interface.folder
+    logger.info(f"\n[SUCCESS] fetch_ethernet_interfaces found object: {fetched_obj.name}")
+
+    # Test fetching non-existent ethernet_interfaces (should return None)
+    not_found = eth_api.fetch_ethernet_interfaces(
+        name="non-existent-ethernet_interfaces-xyz-12345",
+        folder=clean_eth_interface.folder
+    )
+    assert not_found is None, "Should return None for non-existent ethernet_interfaces"
+    logger.info(f"\n[SUCCESS] fetch_ethernet_interfaces correctly returned None for non-existent ethernet_interfaces")
 
 
 def test_delete_ethernet_interface_by_id(eth_api):
@@ -230,8 +259,14 @@ def test_delete_ethernet_interface_by_id(eth_api):
 
     eth_api.delete_ethernet_interfaces_by_id(id=created_obj.id)
 
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         eth_api.get_ethernet_interfaces_by_id(id=created_obj.id)
         pytest.fail("Interface should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

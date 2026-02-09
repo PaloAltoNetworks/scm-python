@@ -25,6 +25,8 @@ from scm.device_settings.models.motd_banner_settings import MotdBannerSettings
 from scm.device_settings.api_client import ApiClient, RequestSerialized
 from scm.device_settings.api_response import ApiResponse
 from scm.device_settings.rest import RESTResponseType
+from scm.decorators import with_error_handling
+
 
 
 class LoginBannerSettingsApi:
@@ -41,6 +43,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_login_banner_settings(
         self,
         motd_banner_settings: Optional[MotdBannerSettings] = None,
@@ -113,6 +116,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_login_banner_settings_with_http_info(
         self,
         motd_banner_settings: Optional[MotdBannerSettings] = None,
@@ -185,6 +189,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def create_login_banner_settings_without_preload_content(
         self,
         motd_banner_settings: Optional[MotdBannerSettings] = None,
@@ -330,6 +335,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_login_banner_settings_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -402,6 +408,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_login_banner_settings_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -474,6 +481,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def delete_login_banner_settings_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -606,6 +614,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_login_banner_settings_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -677,6 +686,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_login_banner_settings_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -748,6 +758,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def get_login_banner_settings_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -879,6 +890,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_login_banner_settings(
         self,
         folder: Annotated[Optional[StrictStr], Field(description="The folder in which the resource is defined ")] = None,
@@ -958,6 +970,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_login_banner_settings_with_http_info(
         self,
         folder: Annotated[Optional[StrictStr], Field(description="The folder in which the resource is defined ")] = None,
@@ -1037,6 +1050,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def list_login_banner_settings_without_preload_content(
         self,
         folder: Annotated[Optional[StrictStr], Field(description="The folder in which the resource is defined ")] = None,
@@ -1188,6 +1202,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_login_banner_settings_by_id(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1264,6 +1279,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_login_banner_settings_by_id_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1340,6 +1356,7 @@ class LoginBannerSettingsApi:
 
 
     @validate_call
+    @with_error_handling
     def update_login_banner_settings_by_id_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
@@ -1410,6 +1427,75 @@ class LoginBannerSettingsApi:
         )
         return response_data.response
 
+
+
+    def fetch_login_banner_settings(
+        self,
+        name: str,
+        folder: Optional[str] = None,
+        snippet: Optional[str] = None,
+        device: Optional[str] = None,
+        **kwargs
+    ) -> Optional[Any]:
+        """
+        Fetch a single login_banner_settings object by name.
+    
+        This is a convenience method that combines list and filter operations to retrieve
+        a specific object by its name within a container (folder, snippet, or device).
+    
+        Args:
+            name: The name of the object to fetch
+            folder: The folder in which the resource is defined
+            snippet: The snippet in which the resource is defined
+            device: The device in which the resource is defined
+            **kwargs: Additional keyword arguments
+    
+        Returns:
+            The matching object if found, None otherwise
+    
+        Example:
+            >>> obj = api.fetch_login_banner_settings(name="my-object", folder="Texas")
+            >>> if obj:
+            ...     print(f"Found: {obj.name}")
+        """
+        # Use list method with pagination to get all objects
+        offset = 0
+        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
+    
+        while True:
+            # Build list parameters dynamically (only include non-None container params)
+            list_params = {'offset': offset, 'limit': limit}
+            if folder is not None:
+                list_params['folder'] = folder
+            if snippet is not None:
+                list_params['snippet'] = snippet
+            if device is not None:
+                list_params['device'] = device
+            # Note: Not passing 'name' to list() - we do client-side filtering instead
+            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
+            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
+    
+            response = self.list_login_banner_settings(**list_params)
+    
+            # Filter by exact name match
+            if hasattr(response, 'data') and response.data:
+                for obj in response.data:
+                    # If object has 'name' attribute, verify it matches (client-side check)
+                    # Otherwise, trust server-side filtering (name was passed to list())
+                    if hasattr(obj, 'name'):
+                        if obj.name == name:
+                            return obj
+                    else:
+                        # No name attribute, trust server-side filtering, return first result
+                        return obj
+    
+            # Check if we've reached the end
+            if not response.data or len(response.data) < limit:
+                break
+    
+            offset += limit
+    
+        return None
 
     def _update_login_banner_settings_by_id_serialize(
         self,

@@ -237,6 +237,35 @@ def test_list_syslog_profiles(syslog_profiles_api, clean_syslog_profile):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_syslog_server_profiles(syslog_profiles_api, clean_syslog_profile):
+    """
+    Test fetching a single syslog_server_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = syslog_profiles_api.fetch_syslog_server_profiles(
+        name=clean_syslog_profile.name,
+        folder=clean_syslog_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found syslog_server_profiles '{clean_syslog_profile.name}'"
+    assert fetched_obj.id == clean_syslog_profile.id
+    assert fetched_obj.name == clean_syslog_profile.name
+    assert fetched_obj.folder == clean_syslog_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_syslog_server_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent syslog_server_profiles (should return None)
+    not_found = syslog_profiles_api.fetch_syslog_server_profiles(
+        name="non-existent-syslog_server_profiles-xyz-12345",
+        folder=clean_syslog_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent syslog_server_profiles"
+    logger.info(f"\n[SUCCESS] fetch_syslog_server_profiles correctly returned None for non-existent syslog_server_profiles")
+
+
 def test_delete_syslog_profile_by_id(syslog_profiles_api):
     """
     Test deletion specifically.
@@ -265,9 +294,14 @@ def test_delete_syslog_profile_by_id(syslog_profiles_api):
     # Perform Delete
     syslog_profiles_api.delete_syslog_server_profiles_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         syslog_profiles_api.get_syslog_server_profiles_by_id(id=created_obj.id)
         pytest.fail("Syslog Profile should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

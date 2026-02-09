@@ -260,6 +260,35 @@ def test_list_services(services_api, clean_service):
     logger.info(f"\n[SUCCESS] List returned {len(response.data)} items.")
 
 
+
+
+def test_fetch_services(services_api, clean_service):
+    """
+    Test fetching a single services by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = services_api.fetch_services(
+        name=clean_service.name,
+        folder=clean_service.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found services '{clean_service.name}'"
+    assert fetched_obj.id == clean_service.id
+    assert fetched_obj.name == clean_service.name
+    assert fetched_obj.folder == clean_service.folder
+    logger.info(f"\n[SUCCESS] fetch_services found object: {fetched_obj.name}")
+
+    # Test fetching non-existent services (should return None)
+    not_found = services_api.fetch_services(
+        name="non-existent-services-xyz-12345",
+        folder=clean_service.folder
+    )
+    assert not_found is None, "Should return None for non-existent services"
+    logger.info(f"\n[SUCCESS] fetch_services correctly returned None for non-existent services")
+
+
 def test_delete_service_by_id(services_api):
     """
     Test deletion specifically.
@@ -282,9 +311,14 @@ def test_delete_service_by_id(services_api):
     # Perform Delete
     services_api.delete_services_by_id(id=created_obj.id)
 
-    # Verify Deletion (Expect 404 on Get)
+    # Verify Deletion (Expect ObjectNotPresentError on Get)
+    from scm.exceptions import ObjectNotPresentError
+    # Decorator already converts NotFoundException to ObjectNotPresentError
+
     try:
         services_api.get_services_by_id(id=created_obj.id)
         pytest.fail("Service should have been deleted but was found.")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")

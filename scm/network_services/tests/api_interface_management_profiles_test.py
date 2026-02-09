@@ -135,6 +135,35 @@ def test_list_profiles(profile_api, clean_profile):
     assert found is True
 
 
+
+
+def test_fetch_interface_management_profiles(profile_api, clean_profile):
+    """
+    Test fetching a single interface_management_profiles by name using the fetch convenience method.
+    Equivalent to pan-scm-sdk's fetch() method.
+    """
+    # Fetch by exact name
+    fetched_obj = profile_api.fetch_interface_management_profiles(
+        name=clean_profile.name,
+        folder=clean_profile.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found interface_management_profiles '{clean_profile.name}'"
+    assert fetched_obj.id == clean_profile.id
+    assert fetched_obj.name == clean_profile.name
+    assert fetched_obj.folder == clean_profile.folder
+    logger.info(f"\n[SUCCESS] fetch_interface_management_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent interface_management_profiles (should return None)
+    not_found = profile_api.fetch_interface_management_profiles(
+        name="non-existent-interface_management_profiles-xyz-12345",
+        folder=clean_profile.folder
+    )
+    assert not_found is None, "Should return None for non-existent interface_management_profiles"
+    logger.info(f"\n[SUCCESS] fetch_interface_management_profiles correctly returned None for non-existent interface_management_profiles")
+
+
 def test_delete_profile_by_id(profile_api):
     """
     Test deleting a Profile.
@@ -144,8 +173,14 @@ def test_delete_profile_by_id(profile_api):
     
     profile_api.delete_interface_management_profiles_by_id(id=created_obj.id)
     
+    from scm.network_services.exceptions import NotFoundException
+    from scm.error_parser import parse_scm_error
+    from scm.exceptions import ObjectNotPresentError
+
     try:
         profile_api.get_interface_management_profiles_by_id(id=created_obj.id)
         pytest.fail("Profile should be deleted")
-    except Exception as e:
-        assert "404" in str(e) or "Not Found" in str(e)
+    except ObjectNotPresentError as e:
+        # Exception is already parsed by decorator
+        logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
+        logger.info(f"   Object ID: {created_obj.id}")
