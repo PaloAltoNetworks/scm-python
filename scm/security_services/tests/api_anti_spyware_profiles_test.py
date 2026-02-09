@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 # -----------------------------------------------------------------------------
 # CONFIGURATION
 # -----------------------------------------------------------------------------
-TARGET_FOLDER = "All"
+TARGET_FOLDER = "Prisma Access"
 # -----------------------------------------------------------------------------
 
 
@@ -100,8 +100,14 @@ def test_get_anti_spyware_profile_by_id(anti_spyware_profiles_api, clean_anti_sp
 
 def test_update_anti_spyware_profile(anti_spyware_profiles_api, clean_anti_spyware_profile):
     """Test updating an Anti-Spyware Profile."""
-    update_payload = clean_anti_spyware_profile
-    update_payload.name = f"{clean_anti_spyware_profile.name}-updated"
+    # Create fresh payload with all required fields to avoid Pydantic serialization issues
+    # Note: Name cannot be changed for anti-spyware profiles (same as decryption profiles)
+    update_payload = AntiSpywareProfiles(
+        id=clean_anti_spyware_profile.id,
+        name=clean_anti_spyware_profile.name,  # Name cannot be changed for anti-spyware profiles
+        folder=clean_anti_spyware_profile.folder,
+        description="Updated test anti-spyware profile description"
+    )
 
     updated_obj = perform(
         anti_spyware_profiles_api.update_anti_spyware_profiles_by_id_with_http_info,
@@ -110,7 +116,8 @@ def test_update_anti_spyware_profile(anti_spyware_profiles_api, clean_anti_spywa
     )
 
     assert updated_obj.id == clean_anti_spyware_profile.id
-    assert updated_obj.name == update_payload.name
+    assert updated_obj.name == clean_anti_spyware_profile.name
+    assert updated_obj.description == "Updated test anti-spyware profile description"
 
 
 def test_list_anti_spyware_profiles(anti_spyware_profiles_api, clean_anti_spyware_profile):

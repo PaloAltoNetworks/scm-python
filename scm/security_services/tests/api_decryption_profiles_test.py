@@ -3,6 +3,7 @@ import uuid
 import pytest
 from scm import Scm
 from scm.security_services.models.decryption_profiles import DecryptionProfiles
+from scm.security_services.models.decryption_profiles_ssl_inbound_proxy import DecryptionProfilesSslInboundProxy
 from scm.test_helpers import perform
 
 # Configure logging
@@ -12,7 +13,7 @@ logger = logging.getLogger(__name__)
 # -----------------------------------------------------------------------------
 # CONFIGURATION
 # -----------------------------------------------------------------------------
-TARGET_FOLDER = "All"
+TARGET_FOLDER = "Shared"
 # -----------------------------------------------------------------------------
 
 
@@ -100,8 +101,13 @@ def test_get_decryption_profile_by_id(decryption_profiles_api, clean_decryption_
 
 def test_update_decryption_profile(decryption_profiles_api, clean_decryption_profile):
     """Test updating a Decryption Profile."""
-    update_payload = clean_decryption_profile
-    update_payload.name = f"{clean_decryption_profile.name}-updated"
+    # Create fresh payload - name must stay the same, ssl_inbound_proxy required for updates
+    update_payload = DecryptionProfiles(
+        id=clean_decryption_profile.id,
+        name=clean_decryption_profile.name,  # Name cannot be changed for decryption profiles
+        folder=TARGET_FOLDER,
+        ssl_inbound_proxy=DecryptionProfilesSslInboundProxy()  # Required for updates
+    )
 
     updated_obj = perform(
         decryption_profiles_api.update_decryption_profiles_by_id_with_http_info,
@@ -110,7 +116,7 @@ def test_update_decryption_profile(decryption_profiles_api, clean_decryption_pro
     )
 
     assert updated_obj.id == clean_decryption_profile.id
-    assert updated_obj.name == update_payload.name
+    assert updated_obj.name == clean_decryption_profile.name
 
 
 def test_list_decryption_profiles(decryption_profiles_api, clean_decryption_profile):
