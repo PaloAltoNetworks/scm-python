@@ -580,6 +580,7 @@ from scm.network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner 
 from scm.network_services.models.tunnel_interfaces import TunnelInterfaces
 from scm.network_services.models.tunnel_interfaces_ip_inner import TunnelInterfacesIpInner
 from scm.network_services.models.tunnel_interfaces_ipv6 import TunnelInterfacesIpv6
+from scm.network_services.models.tunnel_interfaces_ipv6_address_inner import TunnelInterfacesIpv6AddressInner
 from scm.network_services.models.tunnel_interfaces_list_response import TunnelInterfacesListResponse
 from scm.network_services.models.vlan_interfaces_list_response import VLANInterfacesListResponse
 from scm.network_services.models.vlan_interfaces import VlanInterfaces

@@ -30,15 +30,15 @@ class LoopbackInterfaces(BaseModel):
     """
     LoopbackInterfaces
     """ # noqa: E501
-    comment: Optional[StrictStr] = Field(default=None, description="Description")
-    default_value: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Default interface assignment")
+    comment: Optional[StrictStr] = Field(default=None, description="Description for loopback interface")
+    default_value: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Default interface assignment for loopback interface")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
-    interface_management_profile: Optional[StrictStr] = Field(default=None, description="Interface management profile")
+    id: Optional[StrictStr] = Field(default=None, description="UUID of the resource loopback interface")
+    interface_management_profile: Optional[StrictStr] = Field(default=None, description="Interface management profile for loopback interface")
     ip: Optional[List[LoopbackInterfacesIpInner]] = Field(default=None, description="Loopback IP Parent")
     ipv6: Optional[LoopbackInterfacesIpv6] = None
-    mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU")
+    mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU for loopback interface")
     name: Annotated[str, Field(strict=True)] = Field(description="Loopback Interface name")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "snippet"]

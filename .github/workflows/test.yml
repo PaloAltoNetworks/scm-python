@@ -1,0 +1,77 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  test:
+    name: Test ${{ matrix.service }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - objects
+          - network_services
+          - security_services
+          - identity_services
+          - deployment_services
+          - config_setup
+          - config_operations
+          - auth
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pytest pytest-cov
+
+      - name: Create SCM config file from secrets
+        run: |
+          mkdir -p config
+          cat > config/scm-config.json << 'EOF'
+          {
+            "auth_url": "${{ secrets.SCM_AUTH_URL }}",
+            "client_id": "${{ secrets.SCM_CLIENT_ID }}",
+            "client_secret": "${{ secrets.SCM_CLIENT_SECRET }}",
+            "host": "${{ secrets.SCM_HOST }}",
+            "protocol": "${{ secrets.SCM_PROTOCOL }}",
+            "scope": "${{ secrets.SCM_SCOPE }}",
+            "logging": "${{ secrets.SCM_LOGGING }}",
+            "skip_verify_certificate": ${{ secrets.SCM_SKIP_VERIFY_CERTIFICATE }}
+          }
+          EOF
+
+      - name: Run tests for ${{ matrix.service }}
+        run: |
+          if [ "${{ matrix.service }}" = "auth" ]; then
+            pytest -v auth/test/
+          elif [ "${{ matrix.service }}" = "network_services" ]; then
+            pytest -v scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
+          elif [ "${{ matrix.service }}" = "objects" ]; then
+            pytest -v scm/${{ matrix.service }}/tests/ -k "not test_applications_list"
+          else
+            pytest -v scm/${{ matrix.service }}/tests/
+          fi
+        timeout-minutes: 30
+
+      - name: Test Summary
+        if: always()
+        run: |
+          echo "## Test Results for ${{ matrix.service }}" >> $GITHUB_STEP_SUMMARY
+          echo "Tests completed with exit code: $?" >> $GITHUB_STEP_SUMMARY

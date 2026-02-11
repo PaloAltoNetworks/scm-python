@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm.network_services.models.loopback_interfaces_ipv6_address_inner import LoopbackInterfacesIpv6AddressInner
+from scm.network_services.models.tunnel_interfaces_ipv6_address_inner import TunnelInterfacesIpv6AddressInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,9 +28,9 @@ class TunnelInterfacesIpv6(BaseModel):
     """
     Tunnel Interface IPv6 Configuration
     """ # noqa: E501
-    address: Optional[List[LoopbackInterfacesIpv6AddressInner]] = Field(default=None, description="IPv6 Address Parent")
-    enabled: Optional[StrictBool] = Field(default=False, description="Enable IPv6")
-    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID")
+    address: Optional[List[TunnelInterfacesIpv6AddressInner]] = Field(default=None, description="IPv6 Address Parent for tunnel interface")
+    enabled: Optional[StrictBool] = Field(default=False, description="Enable IPv6 for tunnel interface")
+    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID for tunnel interface")
     __properties: ClassVar[List[str]] = ["address", "enabled", "interface_id"]
 
     model_config = ConfigDict(
@@ -91,7 +91,7 @@ class TunnelInterfacesIpv6(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "address": [LoopbackInterfacesIpv6AddressInner.from_dict(_item) for _item in obj["address"]] if obj.get("address") is not None else None,
+            "address": [TunnelInterfacesIpv6AddressInner.from_dict(_item) for _item in obj["address"]] if obj.get("address") is not None else None,
             "enabled": obj.get("enabled") if obj.get("enabled") is not None else False,
             "interface_id": obj.get("interface_id") if obj.get("interface_id") is not None else 'EUI-64'
         })

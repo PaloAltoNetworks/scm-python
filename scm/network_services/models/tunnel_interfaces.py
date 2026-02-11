@@ -30,16 +30,16 @@ class TunnelInterfaces(BaseModel):
     """
     TunnelInterfaces
     """ # noqa: E501
-    comment: Optional[StrictStr] = Field(default=None, description="Description")
-    default_value: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Default interface assignment")
+    comment: Optional[StrictStr] = Field(default=None, description="Description for tunnel interface")
+    default_value: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Default interface assignment for tunnel interface")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
-    interface_management_profile: Optional[StrictStr] = Field(default=None, description="Interface management profile")
+    id: Optional[StrictStr] = Field(default=None, description="UUID of the resource for tunnel interface")
+    interface_management_profile: Optional[StrictStr] = Field(default=None, description="Interface management profile for tunnel interface")
     ip: Optional[List[TunnelInterfacesIpInner]] = Field(default=None, description="Tunnel Interface IP Parent")
     ipv6: Optional[TunnelInterfacesIpv6] = None
-    mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU")
-    name: StrictStr = Field(description="L3 sub-interface name")
+    mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU for tunnel interface")
+    name: StrictStr = Field(description="L3 sub-interface name for tunnel interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "snippet"]
 

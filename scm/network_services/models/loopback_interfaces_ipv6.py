@@ -28,9 +28,9 @@ class LoopbackInterfacesIpv6(BaseModel):
     """
     Loopback IPv6 Configuration
     """ # noqa: E501
-    address: Optional[List[LoopbackInterfacesIpv6AddressInner]] = Field(default=None, description="IPv6 Address Parent")
-    enabled: Optional[StrictBool] = Field(default=False, description="Enable IPv6")
-    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID")
+    address: Optional[List[LoopbackInterfacesIpv6AddressInner]] = Field(default=None, description="IPv6 Address Parent for loopback interface")
+    enabled: Optional[StrictBool] = Field(default=False, description="Enable IPv6 for loopback interface")
+    interface_id: Optional[StrictStr] = Field(default='EUI-64', description="Interface ID for loopback interface")
     __properties: ClassVar[List[str]] = ["address", "enabled", "interface_id"]
 
     model_config = ConfigDict(

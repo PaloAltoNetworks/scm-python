@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**anycast** | **object** | Anycast | [optional] 
-**enable_on_interface** | **bool** | Enable Address on Interface | [optional] [default to True]
-**name** | **str** | IPv6 Address | [optional] 
-**prefix** | **object** | Use interface ID as host portion | [optional] 
+**anycast** | **object** | Anycast for loopback interface | [optional] 
+**enable_on_interface** | **bool** | Enable Address on Interface for loopback interface | [optional] [default to True]
+**name** | **str** | IPv6 Address for loopback interface | [optional] 
+**prefix** | **object** | Use interface ID as host portion for loopback interface | [optional] 
 
 ## Example
 

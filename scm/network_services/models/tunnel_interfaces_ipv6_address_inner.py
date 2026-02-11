@@ -23,14 +23,14 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class LoopbackInterfacesIpv6AddressInner(BaseModel):
+class TunnelInterfacesIpv6AddressInner(BaseModel):
     """
-    LoopbackInterfacesIpv6AddressInner
+    TunnelInterfacesIpv6AddressInner
     """ # noqa: E501
-    anycast: Optional[Dict[str, Any]] = Field(default=None, description="Anycast for loopback interface")
-    enable_on_interface: Optional[StrictBool] = Field(default=True, description="Enable Address on Interface for loopback interface")
-    name: Optional[StrictStr] = Field(default=None, description="IPv6 Address for loopback interface")
-    prefix: Optional[Dict[str, Any]] = Field(default=None, description="Use interface ID as host portion for loopback interface")
+    anycast: Optional[Dict[str, Any]] = Field(default=None, description="Anycast for tunnel interface")
+    enable_on_interface: Optional[StrictBool] = Field(default=True, description="Enable Address on Interface for tunnel interface")
+    name: Optional[StrictStr] = Field(default=None, description="IPv6 Address for tunnel interface")
+    prefix: Optional[Dict[str, Any]] = Field(default=None, description="Use interface ID as host portion for tunnel interface")
     __properties: ClassVar[List[str]] = ["anycast", "enable_on_interface", "name", "prefix"]
 
     model_config = ConfigDict(
@@ -51,7 +51,7 @@ class LoopbackInterfacesIpv6AddressInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of LoopbackInterfacesIpv6AddressInner from a JSON string"""
+        """Create an instance of TunnelInterfacesIpv6AddressInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,7 +76,7 @@ class LoopbackInterfacesIpv6AddressInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of LoopbackInterfacesIpv6AddressInner from a dict"""
+        """Create an instance of TunnelInterfacesIpv6AddressInner from a dict"""
         if obj is None:
             return None
 

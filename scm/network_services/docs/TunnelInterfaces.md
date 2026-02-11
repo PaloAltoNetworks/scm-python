@@ -5,16 +5,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**comment** | **str** | Description | [optional] 
-**default_value** | **str** | Default interface assignment | [optional] 
+**comment** | **str** | Description for tunnel interface | [optional] 
+**default_value** | **str** | Default interface assignment for tunnel interface | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**id** | **str** | UUID of the resource | [optional] [readonly] 
-**interface_management_profile** | **str** | Interface management profile | [optional] 
+**id** | **str** | UUID of the resource for tunnel interface | [optional] [readonly] 
+**interface_management_profile** | **str** | Interface management profile for tunnel interface | [optional] 
 **ip** | [**List[TunnelInterfacesIpInner]**](TunnelInterfacesIpInner.md) | Tunnel Interface IP Parent | [optional] 
 **ipv6** | [**TunnelInterfacesIpv6**](TunnelInterfacesIpv6.md) |  | [optional] 
-**mtu** | **int** | MTU | [optional] 
-**name** | **str** | L3 sub-interface name | 
+**mtu** | **int** | MTU for tunnel interface | [optional] 
+**name** | **str** | L3 sub-interface name for tunnel interface | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 
 ## Example
