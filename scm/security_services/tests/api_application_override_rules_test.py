@@ -98,6 +98,8 @@ def test_create_application_override_rule(application_override_rules_api):
     assert created_obj.name == rule_name
     assert created_obj.application == "web-browsing"
     assert created_obj.port == "8080"
+    # Verify folder is either what we asked for OR 'Shared' (common SCM behavior)
+    assert created_obj.folder == TARGET_FOLDER or created_obj.folder == "Shared"
 
     perform(
         application_override_rules_api.delete_application_override_rules_by_id_with_http_info,
