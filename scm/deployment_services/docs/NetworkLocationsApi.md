@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **list_locations**
-> List[Locations] list_locations()
+> object list_locations()
 
 List locations
 
@@ -20,7 +20,6 @@ Retrieve a list of Prisma Access locations.
 
 ```python
 import scm.deployment_services
-from scm.deployment_services.models.locations import Locations
 from scm.deployment_services.rest import ApiException
 from pprint import pprint
 
@@ -62,7 +61,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List[Locations]**](Locations.md)
+**object**
 
 ### Authorization
 

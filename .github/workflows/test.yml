@@ -45,18 +45,33 @@ jobs:
         env:
           SCM_CLIENT_ID: ${{ secrets.SCM_CLIENT_ID }}
           SCM_CLIENT_SECRET: ${{ secrets.SCM_CLIENT_SECRET }}
-          SCM_TSG_ID: ${{ secrets.SCM_SCOPE }}
+          SCM_SCOPE: ${{ secrets.SCM_SCOPE }}
+          SCM_TSG_ID: ${{ secrets.SCM_TSG_ID }}
+          SCM_HOST: ${{ secrets.SCM_HOST }}
+          SCM_AUTH_URL: ${{ secrets.SCM_AUTH_URL }}
         run: |
           if [ "${{ matrix.service }}" = "auth" ]; then
-            pytest -v auth/test/
+            pytest -v -rs auth/test/
           elif [ "${{ matrix.service }}" = "network_services" ]; then
-            pytest -v scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
+            pytest -v -rs scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
           elif [ "${{ matrix.service }}" = "objects" ]; then
-            pytest -v scm/${{ matrix.service }}/tests/ -k "not test_applications_list"
+            pytest -v -rs scm/${{ matrix.service }}/tests/ -k "not test_applications_list"
           else
-            pytest -v scm/${{ matrix.service }}/tests/
+            pytest -v -rs scm/${{ matrix.service }}/tests/
           fi
         timeout-minutes: 30
+
+      - name: Print skip reasons
+        if: always()
+        run: |
+          echo "==================================="
+          echo "Summary of skipped tests (if any):"
+          echo "==================================="
+          echo "If tests were skipped, the reason should be shown above."
+          echo "Common reasons:"
+          echo "  - Missing environment variables (SCM_CLIENT_ID, SCM_CLIENT_SECRET, SCM_TSG_ID)"
+          echo "  - Client initialization failure (auth error)"
+          echo "  - Network connectivity issues"
 
       - name: Test Summary
         if: always()

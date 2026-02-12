@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_mfa_servers**
-> List[MfaServers] list_mfa_servers(position, name=name, folder=folder, snippet=snippet, device=device, limit=limit, offset=offset)
+> object list_mfa_servers(position, name=name, folder=folder, snippet=snippet, device=device, limit=limit, offset=offset)
 
 List MFA servers
 
@@ -271,7 +271,6 @@ Retrieve a list of MFA servers.
 
 ```python
 import scm.identity_services
-from scm.identity_services.models.mfa_servers import MfaServers
 from scm.identity_services.rest import ApiException
 from pprint import pprint
 
@@ -329,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[MfaServers]**](MfaServers.md)
+**object**
 
 ### Authorization
 
