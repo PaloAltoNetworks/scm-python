@@ -41,23 +41,11 @@ jobs:
           pip install -e .
           pip install pytest pytest-cov
 
-      - name: Create SCM config file from secrets
-        run: |
-          mkdir -p config
-          cat > config/scm-config.json << 'EOF'
-          {
-            "auth_url": "${{ secrets.SCM_AUTH_URL }}",
-            "client_id": "${{ secrets.SCM_CLIENT_ID }}",
-            "client_secret": "${{ secrets.SCM_CLIENT_SECRET }}",
-            "host": "${{ secrets.SCM_HOST }}",
-            "protocol": "${{ secrets.SCM_PROTOCOL }}",
-            "scope": "${{ secrets.SCM_SCOPE }}",
-            "logging": "${{ secrets.SCM_LOGGING }}",
-            "skip_verify_certificate": ${{ secrets.SCM_SKIP_VERIFY_CERTIFICATE }}
-          }
-          EOF
-
       - name: Run tests for ${{ matrix.service }}
+        env:
+          SCM_CLIENT_ID: ${{ secrets.SCM_CLIENT_ID }}
+          SCM_CLIENT_SECRET: ${{ secrets.SCM_CLIENT_SECRET }}
+          SCM_TSG_ID: ${{ secrets.SCM_SCOPE }}
         run: |
           if [ "${{ matrix.service }}" = "auth" ]; then
             pytest -v auth/test/
