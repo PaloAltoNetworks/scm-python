@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictInt, StrictStr, field_validator
-from typing import Any, Optional
+from typing import List, Optional
 from typing_extensions import Annotated
 from scm.identity_services.models.mfa_servers import MfaServers
 
@@ -909,7 +909,7 @@ class MFAServersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> List[MfaServers]:
         """List MFA servers
 
         Retrieve a list of MFA servers. 
@@ -965,7 +965,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[MfaServers]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1005,7 +1005,7 @@ class MFAServersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[List[MfaServers]]:
         """List MFA servers
 
         Retrieve a list of MFA servers. 
@@ -1061,7 +1061,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[MfaServers]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1157,7 +1157,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[MfaServers]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
