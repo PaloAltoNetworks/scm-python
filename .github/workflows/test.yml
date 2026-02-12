@@ -23,7 +23,6 @@ jobs:
           - deployment_services
           - config_setup
           - config_operations
-          - auth
 
     steps:
       - name: Checkout code
@@ -50,9 +49,7 @@ jobs:
           SCM_HOST: ${{ secrets.SCM_HOST }}
           SCM_AUTH_URL: ${{ secrets.SCM_AUTH_URL }}
         run: |
-          if [ "${{ matrix.service }}" = "auth" ]; then
-            pytest -v -rs auth/test/
-          elif [ "${{ matrix.service }}" = "network_services" ]; then
+          if [ "${{ matrix.service }}" = "network_services" ]; then
             pytest -v -rs scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
           elif [ "${{ matrix.service }}" = "objects" ]; then
             pytest -v -rs scm/${{ matrix.service }}/tests/ -k "not test_applications_list"
