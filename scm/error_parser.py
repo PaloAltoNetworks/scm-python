@@ -87,6 +87,7 @@ class ErrorHandler:
             "object_already_exists": NameNotUniqueError,
             "non_zero_refs": ReferenceNotZeroError,
             "reference not zero": ReferenceNotZeroError,
+            "default": InvalidObjectError,  # Fallback for other API_I00013 messages
         },
         "API_I00035": {
             "resource not present": ObjectNotPresentError,
