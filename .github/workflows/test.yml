@@ -48,30 +48,24 @@ jobs:
           SCM_TSG_ID: ${{ secrets.SCM_TSG_ID }}
           SCM_HOST: ${{ secrets.SCM_HOST }}
           SCM_AUTH_URL: ${{ secrets.SCM_AUTH_URL }}
+          PYTHONWARNINGS: ignore
+          SCM_LOGGING: quiet
         run: |
+          set +e
           if [ "${{ matrix.service }}" = "network_services" ]; then
-            pytest -v -rs scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
+            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py 2>&1)
           elif [ "${{ matrix.service }}" = "objects" ]; then
-            pytest -v -rs scm/${{ matrix.service }}/tests/ -k "not test_applications_list"
+            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ -k "not test_applications_list" 2>&1)
           else
-            pytest -v -rs scm/${{ matrix.service }}/tests/
+            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ 2>&1)
+          fi
+          exit_code=$?
+
+          if [ $exit_code -ne 0 ]; then
+            echo "❌ Tests failed for ${{ matrix.service }}"
+            echo "$output"
+            exit $exit_code
+          else
+            echo "✅ All tests passed for ${{ matrix.service }}"
           fi
         timeout-minutes: 30
-
-      - name: Print skip reasons
-        if: always()
-        run: |
-          echo "==================================="
-          echo "Summary of skipped tests (if any):"
-          echo "==================================="
-          echo "If tests were skipped, the reason should be shown above."
-          echo "Common reasons:"
-          echo "  - Missing environment variables (SCM_CLIENT_ID, SCM_CLIENT_SECRET, SCM_TSG_ID)"
-          echo "  - Client initialization failure (auth error)"
-          echo "  - Network connectivity issues"
-
-      - name: Test Summary
-        if: always()
-        run: |
-          echo "## Test Results for ${{ matrix.service }}" >> $GITHUB_STEP_SUMMARY
-          echo "Tests completed with exit code: $?" >> $GITHUB_STEP_SUMMARY
