@@ -85,6 +85,7 @@ class ErrorHandler:
             "operation impossible": ObjectNotPresentError,
             "object already exists": NameNotUniqueError,
             "object_already_exists": NameNotUniqueError,
+            "OBJECT_ALREADY_EXISTS": NameNotUniqueError,  # Nested errors[].type format
             "non_zero_refs": ReferenceNotZeroError,
             "reference not zero": ReferenceNotZeroError,
             "default": InvalidObjectError,  # Fallback for other API_I00013 messages
@@ -311,11 +312,15 @@ class ErrorHandler:
         error_type = details.get('errorType', '')
 
         # Check for nested error structure
-        if not error_type and 'errors' in details:
+        # Some APIs return errorType="Operation Failed" with specific type in errors[].type
+        if 'errors' in details:
             errors_list = details.get('errors', [])
             if isinstance(errors_list, list) and len(errors_list) > 0:
                 if isinstance(errors_list[0], dict):
-                    error_type = errors_list[0].get('type', '')
+                    nested_type = errors_list[0].get('type', '')
+                    # Prefer nested type if it's more specific than generic errorType
+                    if nested_type and (not error_type or error_type in ('Operation Failed', 'Generic Error')):
+                        error_type = nested_type
 
         # Extract object_id and object_name from details if available
         object_id = details.get('id') or details.get('object_id')

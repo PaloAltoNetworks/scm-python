@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
-from typing import Any, Optional
+from typing import List, Optional
 from typing_extensions import Annotated
 from scm.objects.models.quarantined_devices import QuarantinedDevices
 
@@ -630,7 +630,7 @@ class QuarantinedDevicesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> List[QuarantinedDevices]:
         """List quarantined devices
 
         Retrieve a list of quarantined devices 
@@ -671,7 +671,7 @@ class QuarantinedDevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[QuarantinedDevices]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -706,7 +706,7 @@ class QuarantinedDevicesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[List[QuarantinedDevices]]:
         """List quarantined devices
 
         Retrieve a list of quarantined devices 
@@ -747,7 +747,7 @@ class QuarantinedDevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[QuarantinedDevices]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -823,7 +823,7 @@ class QuarantinedDevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[QuarantinedDevices]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -835,75 +835,6 @@ class QuarantinedDevicesApi:
         )
         return response_data.response
 
-
-
-    def fetch_quarantined_devices(
-        self,
-        name: str,
-        folder: Optional[str] = None,
-        snippet: Optional[str] = None,
-        device: Optional[str] = None,
-        **kwargs
-    ) -> Optional[Any]:
-        """
-        Fetch a single quarantined_devices object by name.
-    
-        This is a convenience method that combines list and filter operations to retrieve
-        a specific object by its name within a container (folder, snippet, or device).
-    
-        Args:
-            name: The name of the object to fetch
-            folder: The folder in which the resource is defined
-            snippet: The snippet in which the resource is defined
-            device: The device in which the resource is defined
-            **kwargs: Additional keyword arguments
-    
-        Returns:
-            The matching object if found, None otherwise
-    
-        Example:
-            >>> obj = api.fetch_quarantined_devices(name="my-object", folder="Texas")
-            >>> if obj:
-            ...     print(f"Found: {obj.name}")
-        """
-        # Use list method with pagination to get all objects
-        offset = 0
-        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
-    
-        while True:
-            # Build list parameters dynamically (only include non-None container params)
-            list_params = {'offset': offset, 'limit': limit}
-            if folder is not None:
-                list_params['folder'] = folder
-            if snippet is not None:
-                list_params['snippet'] = snippet
-            if device is not None:
-                list_params['device'] = device
-            # Note: Not passing 'name' to list() - we do client-side filtering instead
-            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
-            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
-    
-            response = self.list_quarantined_devices(**list_params)
-    
-            # Filter by exact name match
-            if hasattr(response, 'data') and response.data:
-                for obj in response.data:
-                    # If object has 'name' attribute, verify it matches (client-side check)
-                    # Otherwise, trust server-side filtering (name was passed to list())
-                    if hasattr(obj, 'name'):
-                        if obj.name == name:
-                            return obj
-                    else:
-                        # No name attribute, trust server-side filtering, return first result
-                        return obj
-    
-            # Check if we've reached the end
-            if not response.data or len(response.data) < limit:
-                break
-    
-            offset += limit
-    
-        return None
 
     def _list_quarantined_devices_serialize(
         self,

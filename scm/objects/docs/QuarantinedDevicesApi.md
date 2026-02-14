@@ -174,7 +174,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_quarantined_devices**
-> object list_quarantined_devices(host_id=host_id, serial_number=serial_number)
+> List[QuarantinedDevices] list_quarantined_devices(host_id=host_id, serial_number=serial_number)
 
 List quarantined devices
 
@@ -186,6 +186,7 @@ Retrieve a list of quarantined devices
 
 ```python
 import scm.objects
+from scm.objects.models.quarantined_devices import QuarantinedDevices
 from scm.objects.rest import ApiException
 from pprint import pprint
 
@@ -233,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**List[QuarantinedDevices]**](QuarantinedDevices.md)
 
 ### Authorization
 

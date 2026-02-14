@@ -17,7 +17,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from typing import Any
+from typing import List
+from scm.deployment_services.models.locations import Locations
 
 from scm.deployment_services.api_client import ApiClient, RequestSerialized
 from scm.deployment_services.api_response import ApiResponse
@@ -55,7 +56,7 @@ class NetworkLocationsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> List[Locations]:
         """List locations
 
         Retrieve a list of Prisma Access locations. 
@@ -90,7 +91,7 @@ class NetworkLocationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[Locations]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -124,7 +125,7 @@ class NetworkLocationsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[List[Locations]]:
         """List locations
 
         Retrieve a list of Prisma Access locations. 
@@ -159,7 +160,7 @@ class NetworkLocationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[Locations]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -228,7 +229,7 @@ class NetworkLocationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "List[Locations]",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -241,75 +242,6 @@ class NetworkLocationsApi:
         )
         return response_data.response
 
-
-
-    def fetch_network_locations(
-        self,
-        name: str,
-        folder: Optional[str] = None,
-        snippet: Optional[str] = None,
-        device: Optional[str] = None,
-        **kwargs
-    ) -> Optional[Any]:
-        """
-        Fetch a single network_locations object by name.
-    
-        This is a convenience method that combines list and filter operations to retrieve
-        a specific object by its name within a container (folder, snippet, or device).
-    
-        Args:
-            name: The name of the object to fetch
-            folder: The folder in which the resource is defined
-            snippet: The snippet in which the resource is defined
-            device: The device in which the resource is defined
-            **kwargs: Additional keyword arguments
-    
-        Returns:
-            The matching object if found, None otherwise
-    
-        Example:
-            >>> obj = api.fetch_network_locations(name="my-object", folder="Texas")
-            >>> if obj:
-            ...     print(f"Found: {obj.name}")
-        """
-        # Use list method with pagination to get all objects
-        offset = 0
-        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
-    
-        while True:
-            # Build list parameters dynamically (only include non-None container params)
-            list_params = {'offset': offset, 'limit': limit}
-            if folder is not None:
-                list_params['folder'] = folder
-            if snippet is not None:
-                list_params['snippet'] = snippet
-            if device is not None:
-                list_params['device'] = device
-            # Note: Not passing 'name' to list() - we do client-side filtering instead
-            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
-            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
-    
-            response = self.list_network_locations(**list_params)
-    
-            # Filter by exact name match
-            if hasattr(response, 'data') and response.data:
-                for obj in response.data:
-                    # If object has 'name' attribute, verify it matches (client-side check)
-                    # Otherwise, trust server-side filtering (name was passed to list())
-                    if hasattr(obj, 'name'):
-                        if obj.name == name:
-                            return obj
-                    else:
-                        # No name attribute, trust server-side filtering, return first result
-                        return obj
-    
-            # Check if we've reached the end
-            if not response.data or len(response.data) < limit:
-                break
-    
-            offset += limit
-    
-        return None
 
     def _list_locations_serialize(
         self,
