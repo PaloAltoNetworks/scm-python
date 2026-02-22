@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **device** | **str** | The device in which the resource is defined | [optional] 
 **direction** | **str** |  | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**id** | **str** | UUID of the resource | [readonly] 
+**id** | **str** | UUID of the resource | [optional] [readonly] 
 **reference** | **List[str]** |  | [optional] 
 **severity** | **str** |  | [optional] 
 **signature** | [**AntiSpywareSignaturesSignature**](AntiSpywareSignaturesSignature.md) |  | [optional] 

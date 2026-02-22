@@ -28,24 +28,24 @@ class AppOverrideRules(BaseModel):
     """
     AppOverrideRules
     """ # noqa: E501
-    application: StrictStr
+    application: Optional[StrictStr] = None
     description: Optional[Annotated[str, Field(strict=True, max_length=1024)]] = None
-    destination: List[StrictStr]
+    destination: Optional[List[StrictStr]] = None
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     disabled: Optional[StrictBool] = False
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    var_from: List[StrictStr] = Field(alias="from")
+    var_from: Optional[List[StrictStr]] = Field(default=None, alias="from")
     group_tag: Optional[StrictStr] = None
     id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
     name: Annotated[str, Field(strict=True, max_length=63)]
     negate_destination: Optional[StrictBool] = False
     negate_source: Optional[StrictBool] = False
-    port: Annotated[str, Field(strict=True)]
-    protocol: StrictStr
+    port: Optional[Annotated[str, Field(strict=True)]] = None
+    protocol: Optional[StrictStr] = None
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    source: List[StrictStr]
+    source: Optional[List[StrictStr]] = None
     tag: Optional[List[StrictStr]] = None
-    to: List[StrictStr]
+    to: Optional[List[StrictStr]] = None
     __properties: ClassVar[List[str]] = ["application", "description", "destination", "device", "disabled", "folder", "from", "group_tag", "id", "name", "negate_destination", "negate_source", "port", "protocol", "snippet", "source", "tag", "to"]
 
     @field_validator('device')
@@ -78,6 +78,9 @@ class AppOverrideRules(BaseModel):
     @field_validator('protocol')
     def protocol_validate_enum(cls, value):
         """Validates the enum"""
+        if value is None:
+            return value
+
         if value not in set(['tcp', 'udp']):
             raise ValueError("must be one of enum values ('tcp', 'udp')")
         return value

@@ -41,8 +41,8 @@ class HaDevices(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
         return value
 
     @field_validator('folder')
@@ -51,8 +51,8 @@ class HaDevices(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
         return value
 
     @field_validator('snippet')
@@ -61,8 +61,8 @@ class HaDevices(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z\d-_\. ]+$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d-_\. ]+$/")
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
         return value
 
     model_config = ConfigDict(

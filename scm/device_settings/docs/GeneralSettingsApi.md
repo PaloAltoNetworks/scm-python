@@ -4,15 +4,15 @@ All URIs are relative to *https://api.strata.paloaltonetworks.com/config/device/
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**creeate_general_settings**](GeneralSettingsApi.md#creeate_general_settings) | **POST** /general-settings | Create general settings
+[**create_general_settings**](GeneralSettingsApi.md#create_general_settings) | **POST** /general-settings | Create general settings
 [**delete_general_settings_by_id**](GeneralSettingsApi.md#delete_general_settings_by_id) | **DELETE** /general-settings/{id} | Delete general settings
 [**get_general_settings_by_id**](GeneralSettingsApi.md#get_general_settings_by_id) | **GET** /general-settings/{id} | Get existing general settings
 [**list_general_settings**](GeneralSettingsApi.md#list_general_settings) | **GET** /general-settings | List general settings
 [**update_general_settings_by_id**](GeneralSettingsApi.md#update_general_settings_by_id) | **PUT** /general-settings/{id} | Update general settings
 
 
-# **creeate_general_settings**
-> GeneralSettings creeate_general_settings(general_settings=general_settings)
+# **create_general_settings**
+> GeneralSettings create_general_settings(general_settings=general_settings)
 
 Create general settings
 
@@ -52,11 +52,11 @@ with scm.device_settings.ApiClient(configuration) as api_client:
 
     try:
         # Create general settings
-        api_response = api_instance.creeate_general_settings(general_settings=general_settings)
-        print("The response of GeneralSettingsApi->creeate_general_settings:\n")
+        api_response = api_instance.create_general_settings(general_settings=general_settings)
+        print("The response of GeneralSettingsApi->create_general_settings:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GeneralSettingsApi->creeate_general_settings: %s\n" % e)
+        print("Exception when calling GeneralSettingsApi->create_general_settings: %s\n" % e)
 ```
 
 

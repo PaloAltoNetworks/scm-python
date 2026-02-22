@@ -1489,7 +1489,7 @@ class RoutePathAccessListsApi:
         """
         Fetch a single route_path_access_lists object by name.
     
-        This is a convenience method that combines list and filter operations to retrieve
+        This is a convenience method that uses server-side name filtering to retrieve
         a specific object by its name within a container (folder, snippet, or device).
     
         Args:
@@ -1507,42 +1507,35 @@ class RoutePathAccessListsApi:
             >>> if obj:
             ...     print(f"Found: {obj.name}")
         """
-        # Use list method with pagination to get all objects
-        offset = 0
-        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
+        # Build list parameters with server-side name filter
+        list_params = {'name': name, 'limit': 5000}
+        if folder is not None:
+            list_params['folder'] = folder
+        if snippet is not None:
+            list_params['snippet'] = snippet
+        if device is not None:
+            list_params['device'] = device
+        # Add any additional kwargs (excluding offset/limit/name which we handle separately)
+        list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
     
-        while True:
-            # Build list parameters dynamically (only include non-None container params)
-            list_params = {'offset': offset, 'limit': limit}
-            if folder is not None:
-                list_params['folder'] = folder
-            if snippet is not None:
-                list_params['snippet'] = snippet
-            if device is not None:
-                list_params['device'] = device
-            # Note: Not passing 'name' to list() - we do client-side filtering instead
-            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
-            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
-    
+        try:
             response = self.list_route_path_access_lists(**list_params)
+        except Exception as e:
+            # HTTP 404: object not found - return None
+            if hasattr(e, 'http_status_code') and e.http_status_code == 404:
+                return None
+            if hasattr(e, 'status') and e.status == 404:
+                return None
+            raise
     
-            # Filter by exact name match
-            if hasattr(response, 'data') and response.data:
-                for obj in response.data:
-                    # If object has 'name' attribute, verify it matches (client-side check)
-                    # Otherwise, trust server-side filtering (name was passed to list())
-                    if hasattr(obj, 'name'):
-                        if obj.name == name:
-                            return obj
-                    else:
-                        # No name attribute, trust server-side filtering, return first result
+        # Standard paginated response - verify exact name match
+        if hasattr(response, 'data') and response.data:
+            for obj in response.data:
+                if hasattr(obj, 'name'):
+                    if obj.name == name:
                         return obj
-    
-            # Check if we've reached the end
-            if not response.data or len(response.data) < limit:
-                break
-    
-            offset += limit
+                else:
+                    return obj
     
         return None
 

@@ -29,7 +29,7 @@ class LinkTags(BaseModel):
     LinkTags
     """ # noqa: E501
     color: Optional[StrictStr] = Field(default=None, description="The color of the link tag")
-    comments: Optional[Annotated[str, Field(strict=True, max_length=0)]] = Field(default=None, description="Description of the link tag")
+    comments: Optional[Annotated[str, Field(strict=True, max_length=1024)]] = Field(default=None, description="Description of the link tag")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
     id: Optional[StrictStr] = Field(default=None, description="UUID of the link tag")

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | The description of the folder | [optional] 
-**id** | **str** | The UUID of the folder | [readonly] 
+**id** | **str** | The UUID of the folder | [optional] [readonly] 
 **labels** | **List[str]** | Labels assigned to the folder | [optional] 
 **name** | **str** | The name of the folder | 
 **parent** | **str** | The parent folder | 

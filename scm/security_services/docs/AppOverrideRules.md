@@ -5,24 +5,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**application** | **str** |  | 
+**application** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**destination** | **List[str]** |  | [default to ["any"]]
+**destination** | **List[str]** |  | [optional] [default to ["any"]]
 **device** | **str** | The device in which the resource is defined | [optional] 
 **disabled** | **bool** |  | [optional] [default to False]
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**var_from** | **List[str]** |  | [default to ["any"]]
+**var_from** | **List[str]** |  | [optional] [default to ["any"]]
 **group_tag** | **str** |  | [optional] 
 **id** | **str** | UUID of the resource | [optional] [readonly] 
 **name** | **str** |  | 
 **negate_destination** | **bool** |  | [optional] [default to False]
 **negate_source** | **bool** |  | [optional] [default to False]
-**port** | **str** |  | 
-**protocol** | **str** |  | 
+**port** | **str** |  | [optional] 
+**protocol** | **str** |  | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
-**source** | **List[str]** |  | [default to ["any"]]
+**source** | **List[str]** |  | [optional] [default to ["any"]]
 **tag** | **List[str]** |  | [optional] 
-**to** | **List[str]** |  | [default to ["any"]]
+**to** | **List[str]** |  | [optional] [default to ["any"]]
 
 ## Example
 

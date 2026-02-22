@@ -44,7 +44,7 @@ class GeneralSettingsApi:
 
     @validate_call
     @with_error_handling
-    def creeate_general_settings(
+    def create_general_settings(
         self,
         general_settings: Optional[GeneralSettings] = None,
         _request_timeout: Union[
@@ -88,7 +88,7 @@ class GeneralSettingsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._creeate_general_settings_serialize(
+        _param = self._create_general_settings_serialize(
             general_settings=general_settings,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -117,7 +117,7 @@ class GeneralSettingsApi:
 
     @validate_call
     @with_error_handling
-    def creeate_general_settings_with_http_info(
+    def create_general_settings_with_http_info(
         self,
         general_settings: Optional[GeneralSettings] = None,
         _request_timeout: Union[
@@ -161,7 +161,7 @@ class GeneralSettingsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._creeate_general_settings_serialize(
+        _param = self._create_general_settings_serialize(
             general_settings=general_settings,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -190,7 +190,7 @@ class GeneralSettingsApi:
 
     @validate_call
     @with_error_handling
-    def creeate_general_settings_without_preload_content(
+    def create_general_settings_without_preload_content(
         self,
         general_settings: Optional[GeneralSettings] = None,
         _request_timeout: Union[
@@ -234,7 +234,7 @@ class GeneralSettingsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._creeate_general_settings_serialize(
+        _param = self._create_general_settings_serialize(
             general_settings=general_settings,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -257,7 +257,7 @@ class GeneralSettingsApi:
         return response_data.response
 
 
-    def _creeate_general_settings_serialize(
+    def _create_general_settings_serialize(
         self,
         general_settings,
         _request_auth,

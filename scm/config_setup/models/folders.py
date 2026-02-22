@@ -28,7 +28,7 @@ class Folders(BaseModel):
     Folders
     """ # noqa: E501
     description: Optional[StrictStr] = Field(default=None, description="The description of the folder")
-    id: StrictStr = Field(description="The UUID of the folder")
+    id: Optional[StrictStr] = Field(default=None, description="The UUID of the folder")
     labels: Optional[List[StrictStr]] = Field(default=None, description="Labels assigned to the folder")
     name: StrictStr = Field(description="The name of the folder")
     parent: StrictStr = Field(description="The parent folder")

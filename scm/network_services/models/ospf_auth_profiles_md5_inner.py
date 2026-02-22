@@ -28,7 +28,7 @@ class OspfAuthProfilesMd5Inner(BaseModel):
     """
     OspfAuthProfilesMd5Inner
     """ # noqa: E501
-    key: Optional[Annotated[str, Field(strict=True, max_length=16)]] = Field(default=None, description="MD5 hash")
+    key: Optional[Annotated[str, Field(strict=True, max_length=256)]] = Field(default=None, description="MD5 hash")
     name: Optional[Annotated[int, Field(le=255, strict=True, ge=1)]] = Field(default=None, description="Key ID")
     preferred: Optional[StrictBool] = Field(default=None, description="Preferred?")
     __properties: ClassVar[List[str]] = ["key", "name", "preferred"]

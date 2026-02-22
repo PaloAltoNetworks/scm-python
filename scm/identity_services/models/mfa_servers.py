@@ -31,7 +31,7 @@ class MfaServers(BaseModel):
     """ # noqa: E501
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    id: StrictStr = Field(description="The UUID of the MFA server")
+    id: Optional[StrictStr] = Field(default=None, description="The UUID of the MFA server")
     mfa_cert_profile: StrictStr = Field(description="The MFA server certificate profile")
     mfa_vendor_type: Optional[MfaServersMfaVendorType] = None
     name: StrictStr = Field(description="The name of the MFA server profile")

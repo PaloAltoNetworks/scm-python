@@ -43,17 +43,6 @@ class RouteCommunityListsTypeRegularRegularEntryInner(BaseModel):
             raise ValueError("must be one of enum values ('deny', 'permit')")
         return value
 
-    @field_validator('community')
-    def community_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        for i in value:
-            if i not in set(['blackhole', 'no-peer', 'graceful-shutdown', 'accept-own', 'local-as', 'route-filter-v4', 'route-filter-v6', 'no-advertise', 'no-export', 'internet']):
-                raise ValueError("each list item must be one of ('blackhole', 'no-peer', 'graceful-shutdown', 'accept-own', 'local-as', 'route-filter-v4', 'route-filter-v6', 'no-advertise', 'no-export', 'internet')")
-        return value
-
     model_config = ConfigDict(
         populate_by_name=True,
         validate_assignment=True,

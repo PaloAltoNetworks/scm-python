@@ -33,13 +33,13 @@ class ConfigVersion(BaseModel):
     var_date: datetime = Field(alias="date")
     deleted: Union[StrictFloat, StrictInt]
     description: StrictStr
-    edited_by: StrictStr
+    edited_by: Optional[StrictStr] = None
     id: StrictInt = Field(description="The configuration version")
-    impacted_devices: StrictStr
+    impacted_devices: Optional[StrictStr] = None
     ngfw_scope: Optional[StrictStr] = Field(default=None, description="A comma separated list of firewall serial numbers")
     scope: StrictStr
     swg_config: Optional[StrictStr] = None
-    types: StrictStr
+    types: Optional[StrictStr] = None
     updated: Union[StrictFloat, StrictInt]
     version: StrictStr = Field(description="The configuration version name")
     __properties: ClassVar[List[str]] = ["admin", "created", "date", "deleted", "description", "edited_by", "id", "impacted_devices", "ngfw_scope", "scope", "swg_config", "types", "updated", "version"]

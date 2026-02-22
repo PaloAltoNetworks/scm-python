@@ -28,7 +28,7 @@ class IpsecTunnelsTunnelMonitor(BaseModel):
     IpsecTunnelsTunnelMonitor
     """ # noqa: E501
     destination_ip: StrictStr = Field(description="Destination IP to send ICMP probe")
-    enable: Optional[StrictBool] = Field(default=True, description="Enable tunnel monitoring on this tunnel")
+    enable: Optional[StrictBool] = Field(default=False, description="Enable tunnel monitoring on this tunnel")
     proxy_id: Optional[StrictStr] = Field(default=None, description="Which proxy-id (or proxy-id-v6) the monitoring traffic will use")
     __properties: ClassVar[List[str]] = ["destination_ip", "enable", "proxy_id"]
 
@@ -84,7 +84,7 @@ class IpsecTunnelsTunnelMonitor(BaseModel):
 
         _obj = cls.model_validate({
             "destination_ip": obj.get("destination_ip"),
-            "enable": obj.get("enable") if obj.get("enable") is not None else True,
+            "enable": obj.get("enable") if obj.get("enable") is not None else False,
             "proxy_id": obj.get("proxy_id")
         })
         return _obj

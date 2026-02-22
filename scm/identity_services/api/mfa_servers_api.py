@@ -18,8 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictInt, StrictStr, field_validator
-from typing import List, Optional
+from typing import Optional
 from typing_extensions import Annotated
+from scm.identity_services.models.mfa_servers_list_response import MFAServersListResponse
 from scm.identity_services.models.mfa_servers import MfaServers
 
 from scm.identity_services.api_client import ApiClient, RequestSerialized
@@ -909,7 +910,7 @@ class MFAServersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[MfaServers]:
+    ) -> MFAServersListResponse:
         """List MFA servers
 
         Retrieve a list of MFA servers. 
@@ -965,7 +966,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[MfaServers]",
+            '200': "MFAServersListResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1005,7 +1006,7 @@ class MFAServersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[MfaServers]]:
+    ) -> ApiResponse[MFAServersListResponse]:
         """List MFA servers
 
         Retrieve a list of MFA servers. 
@@ -1061,7 +1062,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[MfaServers]",
+            '200': "MFAServersListResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1157,7 +1158,7 @@ class MFAServersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[MfaServers]",
+            '200': "MFAServersListResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -1505,7 +1506,7 @@ class MFAServersApi:
         """
         Fetch a single mfa_servers object by name.
     
-        This is a convenience method that combines list and filter operations to retrieve
+        This is a convenience method that uses server-side name filtering to retrieve
         a specific object by its name within a container (folder, snippet, or device).
     
         Args:
@@ -1523,42 +1524,35 @@ class MFAServersApi:
             >>> if obj:
             ...     print(f"Found: {obj.name}")
         """
-        # Use list method with pagination to get all objects
-        offset = 0
-        limit = kwargs.get('limit', 5000)  # Use larger limit for fetch
+        # Build list parameters with server-side name filter
+        list_params = {'name': name, 'limit': 5000}
+        if folder is not None:
+            list_params['folder'] = folder
+        if snippet is not None:
+            list_params['snippet'] = snippet
+        if device is not None:
+            list_params['device'] = device
+        # Add any additional kwargs (excluding offset/limit/name which we handle separately)
+        list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
     
-        while True:
-            # Build list parameters dynamically (only include non-None container params)
-            list_params = {'offset': offset, 'limit': limit}
-            if folder is not None:
-                list_params['folder'] = folder
-            if snippet is not None:
-                list_params['snippet'] = snippet
-            if device is not None:
-                list_params['device'] = device
-            # Note: Not passing 'name' to list() - we do client-side filtering instead
-            # Add any additional kwargs (excluding offset/limit/name which we handle separately)
-            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
-    
+        try:
             response = self.list_mfa_servers(**list_params)
+        except Exception as e:
+            # HTTP 404: object not found - return None
+            if hasattr(e, 'http_status_code') and e.http_status_code == 404:
+                return None
+            if hasattr(e, 'status') and e.status == 404:
+                return None
+            raise
     
-            # Filter by exact name match
-            if hasattr(response, 'data') and response.data:
-                for obj in response.data:
-                    # If object has 'name' attribute, verify it matches (client-side check)
-                    # Otherwise, trust server-side filtering (name was passed to list())
-                    if hasattr(obj, 'name'):
-                        if obj.name == name:
-                            return obj
-                    else:
-                        # No name attribute, trust server-side filtering, return first result
+        # Standard paginated response - verify exact name match
+        if hasattr(response, 'data') and response.data:
+            for obj in response.data:
+                if hasattr(obj, 'name'):
+                    if obj.name == name:
                         return obj
-    
-            # Check if we've reached the end
-            if not response.data or len(response.data) < limit:
-                break
-    
-            offset += limit
+                else:
+                    return obj
     
         return None
 

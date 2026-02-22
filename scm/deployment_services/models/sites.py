@@ -34,7 +34,7 @@ class Sites(BaseModel):
     address_line_2: Optional[StrictStr] = Field(default=None, description="The address in which the site exists (continued)")
     city: Optional[StrictStr] = Field(default=None, description="The city in which the site exists")
     country: Optional[StrictStr] = Field(default=None, description="The country in which the site exists")
-    id: StrictStr = Field(description="The UUID of the site")
+    id: Optional[StrictStr] = Field(default=None, description="The UUID of the site")
     latitude: Optional[StrictStr] = Field(default=None, description="The latitude coordinate for the site")
     license_type: Optional[Annotated[str, Field(strict=True, max_length=63)]] = Field(default=None, description="The license type of the site")
     longitude: Optional[StrictStr] = Field(default=None, description="The longitude coordinate for the site")

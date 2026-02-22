@@ -10,13 +10,13 @@ Name | Type | Description | Notes
 **var_date** | **datetime** |  | 
 **deleted** | **float** |  | 
 **description** | **str** |  | 
-**edited_by** | **str** |  | 
+**edited_by** | **str** |  | [optional] 
 **id** | **int** | The configuration version | 
-**impacted_devices** | **str** |  | 
+**impacted_devices** | **str** |  | [optional] 
 **ngfw_scope** | **str** | A comma separated list of firewall serial numbers | [optional] 
 **scope** | **str** |  | 
 **swg_config** | **str** |  | [optional] 
-**types** | **str** |  | 
+**types** | **str** |  | [optional] 
 **updated** | **float** |  | 
 **version** | **str** | The configuration version name | 
 

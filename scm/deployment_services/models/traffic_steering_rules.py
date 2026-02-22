@@ -31,7 +31,7 @@ class TrafficSteeringRules(BaseModel):
     action: Optional[TrafficSteeringRulesAction] = None
     category: Optional[List[StrictStr]] = None
     destination: Optional[List[StrictStr]] = None
-    folder: StrictStr = Field(description="The folder containing the traffic steering rule")
+    folder: Optional[StrictStr] = Field(default='Service Connections', description="The folder containing the traffic steering rule")
     id: StrictStr = Field(description="The UUID of the traffic steering rule")
     name: StrictStr
     service: List[StrictStr]

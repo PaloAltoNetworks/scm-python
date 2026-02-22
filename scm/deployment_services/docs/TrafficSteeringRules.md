@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **action** | [**TrafficSteeringRulesAction**](TrafficSteeringRulesAction.md) |  | [optional] 
 **category** | **List[str]** |  | [optional] 
 **destination** | **List[str]** |  | [optional] [default to ["any"]]
-**folder** | **str** | The folder containing the traffic steering rule | [default to 'Service Connections']
+**folder** | **str** | The folder containing the traffic steering rule | [optional] [default to 'Service Connections']
 **id** | **str** | The UUID of the traffic steering rule | [readonly] 
 **name** | **str** |  | 
 **service** | **List[str]** |  | [default to ["any"]]

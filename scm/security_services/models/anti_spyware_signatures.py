@@ -37,7 +37,7 @@ class AntiSpywareSignatures(BaseModel):
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     direction: Optional[StrictStr] = None
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    id: StrictStr = Field(description="UUID of the resource")
+    id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
     reference: Optional[List[StrictStr]] = None
     severity: Optional[StrictStr] = None
     signature: Optional[AntiSpywareSignaturesSignature] = None

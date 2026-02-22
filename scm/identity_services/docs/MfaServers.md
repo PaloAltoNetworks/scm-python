@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device** | **str** | The device in which the resource is defined | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**id** | **str** | The UUID of the MFA server | [readonly] 
+**id** | **str** | The UUID of the MFA server | [optional] [readonly] 
 **mfa_cert_profile** | **str** | The MFA server certificate profile | 
 **mfa_vendor_type** | [**MfaServersMfaVendorType**](MfaServersMfaVendorType.md) |  | [optional] 
 **name** | **str** | The name of the MFA server profile | 

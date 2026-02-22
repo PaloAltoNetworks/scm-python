@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **destination_ip** | **str** | Destination IP to send ICMP probe | 
-**enable** | **bool** | Enable tunnel monitoring on this tunnel | [optional] [default to True]
+**enable** | **bool** | Enable tunnel monitoring on this tunnel | [optional] [default to False]
 **proxy_id** | **str** | Which proxy-id (or proxy-id-v6) the monitoring traffic will use | [optional] 
 
 ## Example

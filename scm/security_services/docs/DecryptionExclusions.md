@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**id** | **str** | UUID of the resource | [readonly] 
+**id** | **str** | UUID of the resource | [optional] [readonly] 
 **name** | **str** |  | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 

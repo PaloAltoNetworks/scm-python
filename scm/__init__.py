@@ -132,7 +132,7 @@ class Scm:
     Configuration Priority:
     1. Constructor arguments
     2. Environment variables
-    3. JSON configuration file (~/.scm/config.json or SCM_CONFIG_FILE)
+    3. JSON configuration file (config/scm-config.json or SCM_CONFIG_FILE)
 
     JWT Token Handling (matching scm-go behavior):
     - Can pass pre-existing JWT token to avoid auth API rate limits
@@ -335,19 +335,34 @@ class Scm:
     def _load_config_from_file(self) -> Dict[str, Any]:
         """
         Loads configuration from a JSON file.
+
+        Search order:
+        1. SCM_CONFIG_FILE environment variable
+        2. config/scm-config.json (project-local, matches scm-go layout)
         """
-        config_path = os.environ.get("SCM_CONFIG_FILE", os.path.expanduser("~/.scm/config.json"))
-        path = Path(config_path)
-
-        if not path.exists():
+        # Explicit env var takes priority
+        env_path = os.environ.get("SCM_CONFIG_FILE")
+        if env_path:
+            path = Path(env_path)
+            if path.exists():
+                try:
+                    with open(path, "r") as f:
+                        return json.load(f)
+                except Exception as e:
+                    logger.warning(f"Failed to load config file at {env_path}: {e}")
+                    return {}
             return {}
 
-        try:
-            with open(path, "r") as f:
-                return json.load(f)
-        except Exception as e:
-            logger.warning(f"Failed to load config file at {config_path}: {e}")
-            return {}
+        # Check project-local config/scm-config.json (matches scm-go)
+        local_path = Path("config/scm-config.json")
+        if local_path.exists():
+            try:
+                with open(local_path, "r") as f:
+                    return json.load(f)
+            except Exception as e:
+                logger.warning(f"Failed to load config file at {local_path}: {e}")
+
+        return {}
 
     def _fetch_and_store_token(self) -> None:
         """

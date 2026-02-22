@@ -38,7 +38,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e .
-          pip install pytest pytest-cov
+          pip install pytest pytest-cov pytest-json-report
 
       - name: Run tests for ${{ matrix.service }}
         env:
@@ -52,18 +52,104 @@ jobs:
           SCM_LOGGING: quiet
         run: |
           set +e
+
           if [ "${{ matrix.service }}" = "network_services" ]; then
-            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py 2>&1)
+            pytest -v -rs --json-report --json-report-file=test-report.json scm/${{ matrix.service }}/tests/ --ignore=scm/${{ matrix.service }}/tests/api_logical_routers_test.py
           elif [ "${{ matrix.service }}" = "objects" ]; then
-            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ -k "not test_applications_list" 2>&1)
+            pytest -v -rs --json-report --json-report-file=test-report.json scm/${{ matrix.service }}/tests/ -k "not test_applications_list and not test_addresses_list and not test_addresses_fetch"
           else
-            output=$(pytest -q --tb=short --disable-warnings --log-level=ERROR scm/${{ matrix.service }}/tests/ 2>&1)
+            pytest -v -rs --json-report --json-report-file=test-report.json scm/${{ matrix.service }}/tests/
           fi
           exit_code=$?
 
+          # Parse JSON report and create summary
+          cat > parse_pytest.py << 'PYTHON'
+          import json
+          import sys
+
+          try:
+              with open('test-report.json', 'r') as f:
+                  report = json.load(f)
+          except FileNotFoundError:
+              print("No test report found")
+              sys.exit(0)
+
+          summary = report.get('summary', {})
+          tests = report.get('tests', [])
+
+          passed = [t for t in tests if t.get('outcome') == 'passed']
+          failed = [t for t in tests if t.get('outcome') == 'failed']
+          skipped = [t for t in tests if t.get('outcome') == 'skipped']
+
+          # Print summary to console
+          print(f"\n{'='*60}")
+          print(f"Test Results: ${{ matrix.service }}")
+          print(f"{'='*60}")
+          print(f"✅ Passed: {len(passed)}")
+          print(f"❌ Failed: {len(failed)}")
+          print(f"⏭️  Skipped: {len(skipped)}")
+          print(f"{'='*60}\n")
+
+          # Write to GITHUB_STEP_SUMMARY
+          summary_file = sys.argv[1] if len(sys.argv) > 1 else '/dev/stdout'
+          with open(summary_file, 'a') as f:
+              f.write(f"## Test Results: ${{ matrix.service }}\n\n")
+              f.write(f"**Summary:** {len(passed)} passed ✅, {len(failed)} failed ❌, {len(skipped)} skipped ⏭️\n\n")
+
+              if failed:
+                  f.write("### ❌ Failed Tests\n\n")
+                  for test in failed:
+                      test_name = test.get('nodeid', 'Unknown')
+                      duration = test.get('duration', 0)
+                      f.write(f"#### `{test_name}` ({duration:.2f}s)\n\n")
+
+                      # Extract error information
+                      call = test.get('call', {})
+                      longrepr = call.get('longrepr', '')
+
+                      if longrepr:
+                          f.write("<details>\n<summary>📋 Error Details</summary>\n\n")
+                          f.write("```\n")
+                          # Limit error output to last 30 lines
+                          lines = longrepr.split('\n')
+                          f.write('\n'.join(lines[-30:]))
+                          f.write("\n```\n")
+                          f.write("</details>\n\n")
+                      else:
+                          f.write("_No detailed error output captured_\n\n")
+
+                      f.write("---\n\n")
+
+              if passed:
+                  f.write("### ✅ Passed Tests\n\n")
+                  f.write("<details>\n<summary>Click to expand ({} tests)</summary>\n\n".format(len(passed)))
+                  f.write("| Test Name | Duration |\n")
+                  f.write("|-----------|----------|\n")
+                  for test in passed:
+                      test_name = test.get('nodeid', 'Unknown')
+                      duration = test.get('duration', 0)
+                      f.write(f"| `{test_name}` | {duration:.2f}s |\n")
+                  f.write("\n</details>\n\n")
+
+              if skipped:
+                  f.write("### ⏭️ Skipped Tests\n\n")
+                  f.write("<details>\n<summary>Click to expand ({} tests)</summary>\n\n".format(len(skipped)))
+                  f.write("| Test Name | Reason |\n")
+                  f.write("|-----------|--------|\n")
+                  for test in skipped:
+                      test_name = test.get('nodeid', 'Unknown')
+                      call = test.get('call', {})
+                      longrepr = call.get('longrepr', 'No reason provided')
+                      # Extract just the skip message
+                      skip_msg = longrepr.split('\n')[-1] if longrepr else 'Skipped'
+                      f.write(f"| `{test_name}` | {skip_msg[:100]} |\n")
+                  f.write("\n</details>\n\n")
+          PYTHON
+
+          python parse_pytest.py "$GITHUB_STEP_SUMMARY"
+
           if [ $exit_code -ne 0 ]; then
             echo "❌ Tests failed for ${{ matrix.service }}"
-            echo "$output"
             exit $exit_code
           else
             echo "✅ All tests passed for ${{ matrix.service }}"

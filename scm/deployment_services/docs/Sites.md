@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **address_line_2** | **str** | The address in which the site exists (continued) | [optional] 
 **city** | **str** | The city in which the site exists | [optional] 
 **country** | **str** | The country in which the site exists | [optional] 
-**id** | **str** | The UUID of the site | [readonly] 
+**id** | **str** | The UUID of the site | [optional] [readonly] 
 **latitude** | **str** | The latitude coordinate for the site | [optional] 
 **license_type** | **str** | The license type of the site | [optional] 
 **longitude** | **str** | The longitude coordinate for the site | [optional] 
