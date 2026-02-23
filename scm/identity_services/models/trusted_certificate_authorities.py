@@ -33,7 +33,7 @@ class TrustedCertificateAuthorities(BaseModel):
     filename: Optional[StrictStr] = Field(default=None, description="Certificate filename")
     id: Optional[StrictStr] = Field(default=None, description="The UUID of the trusted certificate authority")
     issuer: Optional[StrictStr] = Field(default=None, description="Issuer")
-    name: Optional[Annotated[str, Field(strict=True, max_length=63)]] = Field(default=None, description="The trusted certificate authority name")
+    name: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="The trusted certificate authority name")
     not_valid_after: Optional[StrictStr] = Field(default=None, description="Not valid after this date")
     not_valid_before: Optional[StrictStr] = Field(default=None, description="Not valid before this date")
     serial_number: Optional[StrictStr] = Field(default=None, description="Serial number")

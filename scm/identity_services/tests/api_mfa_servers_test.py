@@ -24,7 +24,7 @@ def mfa_servers_api(client):
 
 def test_list_mfa_servers(mfa_servers_api):
     """Test listing MFA Servers."""
-    response = mfa_servers_api.list_mfa_servers(folder=TARGET_FOLDER, limit=200, offset=0)
+    response = mfa_servers_api.list_mfa_servers(folder=TARGET_FOLDER, position="pre", limit=200, offset=0)
     assert response is not None
     logger.info(f"Listed MFA Servers successfully")
 
@@ -34,6 +34,7 @@ def test_fetch_mfa_servers(mfa_servers_api):
     result = mfa_servers_api.fetch_mfa_servers(
         name="non-existent-mfa-server-xyz-12345",
         folder=TARGET_FOLDER,
+        position="pre",
     )
     assert result is None, "Should return None for non-existent mfa server"
     logger.info("fetch_mfa_servers correctly returned None for non-existent object")
