@@ -208,3 +208,46 @@ def test_list_auth_portals(auth_portals_api, clean_auth_portal):
             found = True
             break
     assert found is True, f"Portal {clean_auth_portal.id} not found in list response"
+
+
+def test_delete_auth_portal(auth_portals_api, test_auth_profile):
+    """
+    Test deleting an Authentication Portal by ID.
+    Equivalent to Go: Test_identityservices_AuthenticationPortalsAPIService__DeleteByID
+    """
+    from scm.exceptions import NameNotUniqueError
+
+    # Create a portal to delete
+    payload = AuthenticationPortals(
+        folder=TARGET_FOLDER,
+        redirect_host=TEST_REDIRECT_HOST,
+        authentication_profile=test_auth_profile,
+        certificate_profile=CERT_PROFILE_NAME,
+        gp_udp_port=10,
+        idle_timer=10,
+        timer=12
+    )
+
+    try:
+        portal = perform(
+            auth_portals_api.create_authentication_portals_with_http_info,
+            response_type=AuthenticationPortals,
+            authentication_portals=payload
+        )
+        logger.info(f"Created Auth Portal for delete test: {portal.id}")
+    except NameNotUniqueError:
+        # Singleton — use existing portal
+        response = auth_portals_api.list_authentication_portals(folder=TARGET_FOLDER)
+        assert response is not None and response.data and len(response.data) > 0
+        portal = response.data[0]
+        logger.info(f"Using existing Auth Portal for delete test: {portal.id}")
+
+    assert portal is not None
+    portal_id = portal.id
+
+    # Delete the portal
+    perform(
+        auth_portals_api.delete_authentication_portals_by_id_with_http_info,
+        id=portal_id
+    )
+    logger.info(f"Successfully deleted Auth Portal: {portal_id}")
