@@ -166,7 +166,6 @@ def test_fetch_internal_dns_servers(internal_dns_servers_api, clean_internal_dns
     # Fetch by exact name
     fetched_obj = internal_dns_servers_api.fetch_internal_dns_servers(
         name=clean_internal_dns_server.name,
-        folder="Mobile Users"
     )
 
     # Verify
@@ -178,7 +177,6 @@ def test_fetch_internal_dns_servers(internal_dns_servers_api, clean_internal_dns
     # Test fetching non-existent internal_dns_servers (should return None)
     not_found = internal_dns_servers_api.fetch_internal_dns_servers(
         name="non-existent-internal-dns-xyz-12345",
-        folder="Mobile Users"
     )
     assert not_found is None, "Should return None for non-existent internal_dns_servers"
     logger.info(f"\n[SUCCESS] fetch_internal_dns_servers correctly returned None for non-existent internal_dns_servers")

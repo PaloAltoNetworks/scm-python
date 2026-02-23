@@ -91,6 +91,17 @@ class AuthenticationProfilesListResponse(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
+        # Detect bare object response (API returns single object instead of paginated list)
+        # This happens when server-side name filtering returns exactly one result
+        if "data" not in obj and "total" not in obj:
+            single_obj = AuthenticationProfiles.from_dict(obj)
+            return cls.model_validate({
+                "data": [single_obj] if single_obj is not None else [],
+                "limit": 1,
+                "offset": 0,
+                "total": 1 if single_obj is not None else 0,
+            })
+
         _obj = cls.model_validate({
             "data": [AuthenticationProfiles.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
             "limit": obj.get("limit") if obj.get("limit") is not None else 200,

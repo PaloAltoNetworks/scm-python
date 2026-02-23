@@ -1820,40 +1820,28 @@ class SecurityRulesApi:
     def fetch_security_rules(
         self,
         name: str,
-        folder: Optional[str] = None,
-        snippet: Optional[str] = None,
-        device: Optional[str] = None,
         **kwargs
     ) -> Optional[Any]:
         """
         Fetch a single security_rules object by name.
     
         This is a convenience method that uses server-side name filtering to retrieve
-        a specific object by its name within a container (folder, snippet, or device).
+        a specific object by its name.
     
         Args:
             name: The name of the object to fetch
-            folder: The folder in which the resource is defined
-            snippet: The snippet in which the resource is defined
-            device: The device in which the resource is defined
             **kwargs: Additional keyword arguments
     
         Returns:
             The matching object if found, None otherwise
     
         Example:
-            >>> obj = api.fetch_security_rules(name="my-object", folder="Texas")
+            >>> obj = api.fetch_security_rules(name="my-object")
             >>> if obj:
             ...     print(f"Found: {obj.name}")
         """
         # Build list parameters with server-side name filter
         list_params = {'name': name, 'limit': 5000}
-        if folder is not None:
-            list_params['folder'] = folder
-        if snippet is not None:
-            list_params['snippet'] = snippet
-        if device is not None:
-            list_params['device'] = device
         # Add any additional kwargs (excluding offset/limit/name which we handle separately)
         list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
     

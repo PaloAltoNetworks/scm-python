@@ -168,7 +168,6 @@ def test_fetch_snippets(snippets_api, clean_snippet):
     # Fetch by exact name
     fetched_obj = snippets_api.fetch_snippets(
         name=clean_snippet.name,
-        folder=getattr(clean_snippet, "folder", None)
     )
 
     # Verify
@@ -181,7 +180,6 @@ def test_fetch_snippets(snippets_api, clean_snippet):
     # Test fetching non-existent snippets (should return None)
     not_found = snippets_api.fetch_snippets(
         name="non-existent-snippets-xyz-12345",
-        folder=getattr(clean_snippet, "folder", None)
     )
     assert not_found is None, "Should return None for non-existent snippets"
     logger.info(f"\n[SUCCESS] fetch_snippets correctly returned None for non-existent snippets")

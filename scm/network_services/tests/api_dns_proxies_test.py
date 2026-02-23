@@ -34,7 +34,7 @@ def clean_dns_proxy(dns_proxies_api):
         id="",
         name=object_name,
         folder=TARGET_FOLDER,
-        var_default=DnsProxiesDefault(
+        default=DnsProxiesDefault(
             primary="8.8.8.8",
             secondary="8.8.4.4",
         ),
@@ -65,7 +65,7 @@ def test_create_dns_proxy(dns_proxies_api):
         id="",
         name=object_name,
         folder=TARGET_FOLDER,
-        var_default=DnsProxiesDefault(
+        default=DnsProxiesDefault(
             primary="8.8.8.8",
             secondary="8.8.4.4",
         ),
@@ -92,7 +92,7 @@ def test_get_dns_proxy_by_id(dns_proxies_api, clean_dns_proxy):
 
 def test_update_dns_proxy(dns_proxies_api, clean_dns_proxy):
     update_payload = clean_dns_proxy
-    update_payload.var_default = DnsProxiesDefault(
+    update_payload.default = DnsProxiesDefault(
         primary="1.1.1.1",
         secondary="1.0.0.1",
     )
@@ -104,7 +104,7 @@ def test_update_dns_proxy(dns_proxies_api, clean_dns_proxy):
     )
 
     assert updated_obj.id == clean_dns_proxy.id
-    assert updated_obj.var_default.primary == "1.1.1.1"
+    assert updated_obj.default.primary == "1.1.1.1"
 
 
 def test_list_dns_proxies(dns_proxies_api, clean_dns_proxy):
@@ -146,7 +146,7 @@ def test_delete_dns_proxy_by_id(dns_proxies_api):
         id="",
         name=object_name,
         folder=TARGET_FOLDER,
-        var_default=DnsProxiesDefault(
+        default=DnsProxiesDefault(
             primary="8.8.8.8",
         ),
     )
