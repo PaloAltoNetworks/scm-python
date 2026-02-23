@@ -1140,56 +1140,6 @@ class BandwidthAllocationsApi:
         return response_data.response
 
 
-
-    def fetch_bandwidth_allocations(
-        self,
-        name: str,
-        **kwargs
-    ) -> Optional[Any]:
-        """
-        Fetch a single bandwidth_allocations object by name.
-    
-        This is a convenience method that uses server-side name filtering to retrieve
-        a specific object by its name.
-    
-        Args:
-            name: The name of the object to fetch
-            **kwargs: Additional keyword arguments
-    
-        Returns:
-            The matching object if found, None otherwise
-    
-        Example:
-            >>> obj = api.fetch_bandwidth_allocations(name="my-object")
-            >>> if obj:
-            ...     print(f"Found: {obj.name}")
-        """
-        # Build list parameters with server-side name filter
-        list_params = {'name': name, 'limit': 5000}
-        # Add any additional kwargs (excluding offset/limit/name which we handle separately)
-        list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit', 'name']})
-    
-        try:
-            response = self.list_bandwidth_allocations(**list_params)
-        except Exception as e:
-            # HTTP 404: object not found - return None
-            if hasattr(e, 'http_status_code') and e.http_status_code == 404:
-                return None
-            if hasattr(e, 'status') and e.status == 404:
-                return None
-            raise
-    
-        # Standard paginated response - verify exact name match
-        if hasattr(response, 'data') and response.data:
-            for obj in response.data:
-                if hasattr(obj, 'name'):
-                    if obj.name == name:
-                        return obj
-                else:
-                    return obj
-    
-        return None
-
     def _update_bandwidth_allocations_serialize(
         self,
         bandwidth_allocations,
