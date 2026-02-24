@@ -26,8 +26,6 @@ def test_list_tcp_settings(tcp_settings_api):
     """Test listing TCP settings (singleton per folder)."""
     response = tcp_settings_api.list_tcp_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No TCP settings items found")
     logger.info(f"Listed {len(response)} TCP settings items")
 
 

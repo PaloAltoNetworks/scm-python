@@ -26,8 +26,6 @@ def test_list_session_timeouts_settings(session_timeouts_settings_api):
     """Test listing session timeouts settings (singleton per folder)."""
     response = session_timeouts_settings_api.list_session_timeouts_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No session timeouts settings items found")
     logger.info(f"Listed {len(response)} session timeouts settings items")
 
 

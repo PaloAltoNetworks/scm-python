@@ -26,8 +26,6 @@ def test_list_authentication_settings(authentication_settings_api):
     """Test listing authentication settings (singleton per folder)."""
     response = authentication_settings_api.list_authentication_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No authentication settings items found")
     logger.info(f"Listed {len(response)} authentication settings items")
 
 

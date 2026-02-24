@@ -26,8 +26,6 @@ def test_list_general_settings(general_settings_api):
     """Test listing general settings (singleton per folder)."""
     response = general_settings_api.list_general_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No general settings items found")
     logger.info(f"Listed {len(response)} general settings items")
 
 

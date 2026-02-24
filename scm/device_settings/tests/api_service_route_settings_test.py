@@ -26,8 +26,6 @@ def test_list_service_route_settings(service_route_settings_api):
     """Test listing service route settings (singleton per folder)."""
     response = service_route_settings_api.list_service_route_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No service route settings items found")
     logger.info(f"Listed {len(response)} service route settings items")
 
 

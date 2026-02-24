@@ -26,8 +26,6 @@ def test_list_content_id_settings(content_id_settings_api):
     """Test listing content ID settings (singleton per folder)."""
     response = content_id_settings_api.list_content_id_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No content ID settings items found")
     logger.info(f"Listed {len(response)} content ID settings items")
 
 

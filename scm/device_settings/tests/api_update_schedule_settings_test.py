@@ -26,8 +26,6 @@ def test_list_update_schedule_settings(update_schedule_settings_api):
     """Test listing update schedule settings (singleton per folder)."""
     response = update_schedule_settings_api.list_update_schedule_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No update schedule settings items found")
     logger.info(f"Listed {len(response)} update schedule settings items")
 
 

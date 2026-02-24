@@ -26,8 +26,6 @@ def test_list_device_redistribution_collector_settings(device_redistribution_col
     """Test listing device redistribution collector settings (singleton per folder)."""
     response = device_redistribution_collector_settings_api.list_device_redistribution_collector_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No device redistribution collector settings items found")
     logger.info(f"Listed {len(response)} device redistribution collector settings items")
 
 

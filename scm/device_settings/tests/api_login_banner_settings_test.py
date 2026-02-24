@@ -26,8 +26,6 @@ def test_list_login_banner_settings(login_banner_settings_api):
     """Test listing login banner settings (singleton per folder)."""
     response = login_banner_settings_api.list_login_banner_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No login banner settings items found")
     logger.info(f"Listed {len(response)} login banner settings items")
 
 

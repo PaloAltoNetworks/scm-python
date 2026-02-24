@@ -26,8 +26,6 @@ def test_list_management_interface_settings(management_interface_settings_api):
     """Test listing management interface settings (singleton per folder)."""
     response = management_interface_settings_api.list_management_interface_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No management interface settings items found")
     logger.info(f"Listed {len(response)} management interface settings items")
 
 

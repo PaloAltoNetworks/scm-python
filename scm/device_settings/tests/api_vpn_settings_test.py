@@ -26,8 +26,6 @@ def test_list_vpn_settings(vpn_settings_api):
     """Test listing VPN settings (singleton per folder)."""
     response = vpn_settings_api.list_vpn_settings(folder=TARGET_FOLDER)
     assert response is not None
-    if not response or len(response) == 0:
-        pytest.skip("No VPN settings items found")
     logger.info(f"Listed {len(response)} VPN settings items")
 
 
