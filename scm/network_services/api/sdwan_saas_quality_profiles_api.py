@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
-from scm.network_services.models.sdwan_saa_s_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
+from scm.network_services.models.sdwan_saas_quality_profiles_list_response import SDWANSaaSQualityProfilesListResponse
 from scm.network_services.models.sdwan_saas_quality_profiles import SdwanSaasQualityProfiles
 
 from scm.network_services.api_client import ApiClient, RequestSerialized
@@ -1478,7 +1478,7 @@ class SDWANSaaSQualityProfilesApi:
 
 
 
-    def fetch_sdwan_saa_s_quality_profiles(
+    def fetch_sdwan_saas_quality_profiles(
         self,
         name: str,
         folder: Optional[str] = None,
@@ -1487,7 +1487,7 @@ class SDWANSaaSQualityProfilesApi:
         **kwargs
     ) -> Optional[Any]:
         """
-        Fetch a single sdwan_saa_s_quality_profiles object by name.
+        Fetch a single sdwan_saas_quality_profiles object by name.
     
         This is a convenience method that uses server-side name filtering to retrieve
         a specific object by its name within a container (folder, snippet, or device).
@@ -1503,7 +1503,7 @@ class SDWANSaaSQualityProfilesApi:
             The matching object if found, None otherwise
     
         Example:
-            >>> obj = api.fetch_sdwan_saa_s_quality_profiles(name="my-object", folder="Texas")
+            >>> obj = api.fetch_sdwan_saas_quality_profiles(name="my-object", folder="Texas")
             >>> if obj:
             ...     print(f"Found: {obj.name}")
         """

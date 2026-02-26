@@ -17,8 +17,8 @@ from scm.network_services.api.dns_proxies_api import DNSProxiesApi
 from scm.network_services.api.ethernet_interfaces_api import EthernetInterfacesApi
 from scm.network_services.api.ike_crypto_profiles_api import IKECryptoProfilesApi
 from scm.network_services.api.ike_gateways_api import IKEGatewaysApi
-from scm.network_services.api.i_psec_crypto_profiles_api import IPsecCryptoProfilesApi
-from scm.network_services.api.i_psec_tunnels_api import IPsecTunnelsApi
+from scm.network_services.api.ipsec_crypto_profiles_api import IPsecCryptoProfilesApi
+from scm.network_services.api.ipsec_tunnels_api import IPsecTunnelsApi
 from scm.network_services.api.interface_management_profiles_api import InterfaceManagementProfilesApi
 from scm.network_services.api.lldp_profiles_api import LLDPProfilesApi
 from scm.network_services.api.layer2_subinterfaces_api import Layer2SubinterfacesApi
@@ -29,8 +29,8 @@ from scm.network_services.api.loopback_interfaces_api import LoopbackInterfacesA
 from scm.network_services.api.nat_rules_api import NATRulesApi
 from scm.network_services.api.ospf_authentication_profiles_api import OSPFAuthenticationProfilesApi
 from scm.network_services.api.pbf_rules_api import PBFRulesApi
-from scm.network_services.api.qo_s_profiles_api import QoSProfilesApi
-from scm.network_services.api.qo_s_rules_api import QoSRulesApi
+from scm.network_services.api.qos_profiles_api import QoSProfilesApi
+from scm.network_services.api.qos_rules_api import QoSRulesApi
 from scm.network_services.api.remote_networks_license_api import RemoteNetworksLicenseApi
 from scm.network_services.api.route_access_lists_api import RouteAccessListsApi
 from scm.network_services.api.route_community_lists_api import RouteCommunityListsApi
@@ -39,7 +39,7 @@ from scm.network_services.api.route_prefix_lists_api import RoutePrefixListsApi
 from scm.network_services.api.sdwan_error_correction_profiles_api import SDWANErrorCorrectionProfilesApi
 from scm.network_services.api.sdwan_path_quality_profiles_api import SDWANPathQualityProfilesApi
 from scm.network_services.api.sdwan_rules_api import SDWANRulesApi
-from scm.network_services.api.sdwan_saa_s_quality_profiles_api import SDWANSaaSQualityProfilesApi
+from scm.network_services.api.sdwan_saas_quality_profiles_api import SDWANSaaSQualityProfilesApi
 from scm.network_services.api.sdwan_traffic_distribution_profiles_api import SDWANTrafficDistributionProfilesApi
 from scm.network_services.api.security_zones_api import SecurityZonesApi
 from scm.network_services.api.ssl_decryption_settings_api import SslDecryptionSettingsApi

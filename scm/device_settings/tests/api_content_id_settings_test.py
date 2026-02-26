@@ -34,7 +34,7 @@ def test_get_content_id_settings_by_id(content_id_settings_api):
     response = content_id_settings_api.list_content_id_settings(folder=TARGET_FOLDER)
     assert response is not None
     if not response or len(response) == 0:
-        pytest.skip("No items to get")
+        pytest.skip("No items — device-specific setting, requires managed device")
     obj = content_id_settings_api.get_content_id_settings_by_id(id=response[0].id)
     assert obj is not None
     assert obj.id == response[0].id
@@ -46,7 +46,7 @@ def test_update_content_id_settings(content_id_settings_api):
     response = content_id_settings_api.list_content_id_settings(folder=TARGET_FOLDER)
     assert response is not None
     if not response or len(response) == 0:
-        pytest.skip("No items to update")
+        pytest.skip("No items — device-specific setting, requires managed device")
     existing = response[0]
     updated = content_id_settings_api.update_content_id_settings_by_id(
         id=existing.id,
