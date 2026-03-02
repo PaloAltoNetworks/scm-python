@@ -550,9 +550,6 @@ pytest
 
 # Run with coverage
 pytest --cov=scm --cov-report=html
-
-# Run auth tests specifically
-pytest auth/test/test_jwt_caching.py -v
 ```
 
 ### Project Structure
@@ -568,8 +565,6 @@ scm-python/
 │   ├── network_services/    # Network services API
 │   ├── objects/             # Objects API
 │   └── security_services/   # Security services API
-├── auth/
-│   └── test/                # Authentication tests
 ├── config/
 │   └── scm-config.json      # Local config (gitignored)
 └── README.md
