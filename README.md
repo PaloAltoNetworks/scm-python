@@ -26,7 +26,7 @@ THIS SOFTWARE IS RELEASED AS A PROOF OF CONCEPT FOR EXPERIMENTAL PURPOSES ONLY. 
 ## Installation
 
 ```bash
-pip install git+https://github.com/PaloAltoNetworks/scm-python.git@develop
+pip install git+https://github.com/PaloAltoNetworks/scm-python.git
 ```
 
 For local development (after cloning):
@@ -39,7 +39,7 @@ pip install -e .
 
 ### Configuration File
 
-Create a configuration file at `~/.scm/config.json` (or specify a custom path via `SCM_CONFIG_FILE` environment variable):
+Create a configuration file at `config/scm-config.json` in the project root, or specify a custom path via `SCM_CONFIG_FILE` environment variable:
 
 ```json
 {
@@ -58,7 +58,7 @@ Create a configuration file at `~/.scm/config.json` (or specify a custom path vi
 ```python
 from scm import Scm
 
-# Initialize the client (loads config from ~/.scm/config.json by default)
+# Initialize the client (loads config/scm-config.json or SCM_CONFIG_FILE)
 client = Scm()
 
 # Or specify config explicitly
@@ -74,12 +74,12 @@ client = Scm(
     client_secret="YOUR_CLIENT_SECRET",
     tsg_id="YOUR_TSG_ID",
     jwt="eyJ0eXAiOiJKV1Qi...",
-    jwt_expires_at="2026-01-21T10:30:00Z",
+    jwt_expires_at="2027-01-01T10:30:00Z",
     jwt_lifetime=900
 )
 
 # Example: List addresses
-addresses_api = client.objects.addresses_api
+addresses_api = client.objects.AddressesApi(client.objects.api_client)
 response = addresses_api.list_addresses(folder="All")
 
 # Print the first address
@@ -132,7 +132,7 @@ client = Scm(
     client_secret="YOUR_CLIENT_SECRET",
     tsg_id="YOUR_TSG_ID",
     jwt="eyJ0eXAiOiJKV1Qi...",                    # JWT token string
-    jwt_expires_at="2026-01-21T10:30:00Z",        # ISO format string
+    jwt_expires_at="2027-01-01T10:30:00Z",        # ISO format string
     jwt_lifetime=900                               # Lifetime in seconds
 )
 
@@ -152,7 +152,7 @@ client = Scm(
 The SDK follows this priority order when loading JWT tokens:
 
 1. **Constructor arguments** (highest priority) - JWT passed directly to `Scm()` constructor
-2. **Config file** - JWT loaded from `~/.scm/config.json` or `SCM_CONFIG_FILE`
+2. **Config file** - JWT loaded from `config/scm-config.json` or `SCM_CONFIG_FILE`
 3. **Fetch new token** (lowest priority) - Fetch from authentication API if no valid token available
 
 This matches the scm-go SDK behavior and provides maximum flexibility.
@@ -199,7 +199,8 @@ This matches the scm-go SDK behavior and provides maximum flexibility.
        )
        # ✅ Fast startup - no auth API call
 
-       addresses = client.objects.addresses_api.list_addresses(folder="Texas")
+       addresses_api = client.objects.AddressesApi(client.objects.api_client)
+       addresses = addresses_api.list_addresses(folder="Texas")
        return addresses
    ```
 
@@ -276,7 +277,7 @@ To work around this limitation, you can implement a token caching solution that 
 
 ### How It Works
 
-The scm-python SDK supports loading JWT tokens from the configuration file. The following fields can be included in your `~/.scm/config.json`:
+The scm-python SDK supports loading JWT tokens from the configuration file. The following fields can be included in your `config/scm-config.json`:
 
 **Preferred format (consistent with scm-go):**
 
@@ -287,7 +288,7 @@ The scm-python SDK supports loading JWT tokens from the configuration file. The 
   "scope": "tsg_id:1234567890",
   "host": "api.sase.paloaltonetworks.com",
   "jwt": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "jwt_expires_at": "2026-01-21T10:30:00Z",
+  "jwt_expires_at": "2027-01-01T10:30:00Z",
   "jwt_lifetime": 900
 }
 ```
@@ -301,7 +302,7 @@ The scm-python SDK supports loading JWT tokens from the configuration file. The 
   "tsg_id": "1234567890",
   "host": "api.sase.paloaltonetworks.com",
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "token_expires_at": "2026-01-21T10:30:00Z"
+  "token_expires_at": "2027-01-01T10:30:00Z"
 }
 ```
 
@@ -379,7 +380,7 @@ Below are sample implementations of token caching services. These are provided a
                          ┌──────────▼───────────┐
                          │                      │
                          │  Shared Config File  │
-                         │  ~/.scm/config.json  │
+                         │ config/scm-config.json │
                          │                      │
                          └──────────┬───────────┘
                                     │
@@ -402,7 +403,7 @@ Below are sample implementations of token caching services. These are provided a
    - Fetches new JWT token from SCM Auth API if needed
    - Writes updated token to shared config file (atomic write operation)
 
-2. **Shared Config File** (`~/.scm/config.json` or similar)
+2. **Shared Config File** (config/scm-config.json or SCM_CONFIG_FILE)
    - Contains `client_id`, `client_secret`, and cached `jwt` fields
    - Updated atomically by token cache service
    - Read by all SDK client instances
@@ -427,7 +428,6 @@ Fetches and caches JWT tokens for concurrent SCM operations
 import json
 import os
 import sys
-import tempfile
 from datetime import datetime, timedelta
 from pathlib import Path
 from scm import Scm
@@ -497,7 +497,7 @@ def refresh_and_cache_token(config_path: Path):
 def main():
     """Main entry point"""
     config_path = Path(os.getenv('SCM_CONFIG_FILE',
-                                  os.path.expanduser('~/.scm/config.json')))
+                                  'config/scm-config.json'))
 
     if should_refresh_token(config_path):
         print("Token expired or expiring soon, refreshing...")
@@ -525,7 +525,7 @@ chmod +x /path/to/token_cache_service.py
 ### Best Practices
 
 1. **Token Caching Service**: Implement a separate service that refreshes tokens and updates the config file
-2. **File Permissions**: Restrict config file access (e.g., `chmod 600 ~/.scm/config.json`)
+2. **File Permissions**: Restrict config file access (e.g., `chmod 600 config/scm-config.json`)
 3. **Expiration Buffer**: The SDK automatically uses a 60-second buffer (configurable via `Scm.TOKEN_EXPIRY_BUFFER`)
 4. **Error Handling**: Handle token refresh failures gracefully with retry logic
 5. **Security Isolation**: Each unique `client_id`/`client_secret` pair should have its own token cache file
@@ -570,7 +570,9 @@ scm-python/
 │   └── security_services/   # Security services API
 ├── auth/
 │   └── test/                # Authentication tests
-├── tests/                   # Additional tests
+├── config/
+│   └── scm-config.json      # Local config (gitignored)
+├── docs/                    # Additional documentation
 └── README.md
 ```
 
@@ -685,7 +687,6 @@ rule = SecurityRules(
     id="",
     name="allow-web-traffic",
     folder="Texas",
-    position="pre",
     source=["Trust-Zone"],
     source_user=["any"],
     destination=["Untrust-Zone"],
@@ -696,7 +697,8 @@ rule = SecurityRules(
     description="Allow web browsing from trust zone"
 )
 
-created = security_rules_api.create_security_rules(security_rules=rule)
+# Note: position is an API parameter, not a model field
+created = security_rules_api.create_security_rules(position="pre", security_rules=rule)
 print(f"Created security rule: {created.name}")
 ```
 
@@ -768,16 +770,17 @@ Comprehensive documentation is available in the `docs/` directory:
 - **fetch() method** - Fetch single objects by name with auto-pagination
 - **Token caching** - Share tokens across multiple processes
 - **Automatic token refresh** - Transparent token management
-- **Comprehensive test coverage** - 98.8% test pass rate (342/346 tests)
+- **Comprehensive test coverage** - Continuously tested against live SCM API
 - **Thread-safe** - Safe for concurrent operations
 
 ## Support
 
-This is auto-generated code provided as-is for experimental purposes. For issues or questions:
+This is auto-generated code provided as-is for experimental purposes. See [SUPPORT.md](SUPPORT.md) for the support policy.
+
+For issues or questions:
 
 1. Check the [GitHub Issues](https://github.com/PaloAltoNetworks/scm-python/issues)
 2. Review the [documentation](docs/)
-3. Contact Palo Alto Networks support for production issues
 
 ## License
 
