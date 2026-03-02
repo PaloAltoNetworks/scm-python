@@ -2,8 +2,6 @@
 
 Auto-generated SDK for Palo Alto Networks Strata Cloud Manager.
 
-[![PyPI version](https://badge.fury.io/py/scm-python.svg)](https://badge.fury.io/py/scm-python)
-
 NOTE: This SDK code is auto-generated.
 
 ---
@@ -28,10 +26,10 @@ THIS SOFTWARE IS RELEASED AS A PROOF OF CONCEPT FOR EXPERIMENTAL PURPOSES ONLY. 
 ## Installation
 
 ```bash
-pip install .
+pip install git+https://github.com/PaloAltoNetworks/scm-python.git@develop
 ```
 
-For development:
+For local development (after cloning):
 
 ```bash
 pip install -e .
