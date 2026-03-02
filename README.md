@@ -572,7 +572,6 @@ scm-python/
 │   └── test/                # Authentication tests
 ├── config/
 │   └── scm-config.json      # Local config (gitignored)
-├── docs/                    # Additional documentation
 └── README.md
 ```
 
@@ -729,38 +728,9 @@ except ScmException as e:
 
 All exceptions are automatically raised by decorators - you never need to manually parse errors.
 
-## Documentation
+## Compatibility
 
-Comprehensive documentation is available in the `docs/` directory:
-
-- **[Examples](docs/EXAMPLES.md)** - Practical examples for all service categories
-  - Objects (addresses, services, tags, etc.)
-  - Security Services (security rules, profiles)
-  - Network Services (IKE gateways, IPSec tunnels, QoS)
-  - Identity Services (LDAP, SAML profiles)
-  - Deployment Services (remote networks, service connections)
-
-- **[Common Patterns](docs/COMMON_PATTERNS.md)** - Best practices and workflows
-  - CRUD operation patterns
-  - Fetch-modify-update pattern
-  - Error handling strategies
-  - Bulk operations
-  - Pagination patterns
-  - Rule management
-  - Idempotent operations
-
-- **[Migration Guide](docs/MIGRATION_GUIDE.md)** - Migrating from pan-scm-sdk
-  - API access pattern changes
-  - CRUD operations comparison
-  - Exception handling differences
-  - Migration checklist
-
-- **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and solutions
-  - Authentication problems
-  - API request failures
-  - Model validation errors
-  - Token management
-  - Performance optimization
+This SDK is **not compatible** with [pan-scm-sdk](https://github.com/cdot65/pan-scm-sdk). They use different API clients, model structures, and authentication patterns. There is no migration path — this is a separate, independently generated SDK.
 
 ## Features
 
