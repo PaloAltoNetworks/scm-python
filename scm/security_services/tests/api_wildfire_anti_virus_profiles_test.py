@@ -139,7 +139,7 @@ def test_fetch_wild_fire_anti_virus_profiles(wild_fire_anti_virus_profiles_api, 
     Test fetching a single WildFire Anti-Virus Profile by name using the fetch convenience method.
     """
     # Fetch by exact name
-    fetched_obj = wild_fire_anti_virus_profiles_api.fetch_wild_fire_anti_virus_profiles(
+    fetched_obj = wild_fire_anti_virus_profiles_api.fetch_wildfire_anti_virus_profiles(
         name=clean_wild_fire_anti_virus_profile.name,
         folder=clean_wild_fire_anti_virus_profile.folder
     )
@@ -152,7 +152,7 @@ def test_fetch_wild_fire_anti_virus_profiles(wild_fire_anti_virus_profiles_api, 
     logger.info(f"\n[SUCCESS] fetch_wild_fire_anti_virus_profiles found object: {fetched_obj.name}")
 
     # Test fetching non-existent profile (should return None)
-    not_found = wild_fire_anti_virus_profiles_api.fetch_wild_fire_anti_virus_profiles(
+    not_found = wild_fire_anti_virus_profiles_api.fetch_wildfire_anti_virus_profiles(
         name="non-existent-wfav-profile-xyz-12345",
         folder=clean_wild_fire_anti_virus_profile.folder
     )
