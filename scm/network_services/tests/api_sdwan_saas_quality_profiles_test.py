@@ -110,7 +110,7 @@ def test_list_sdwan_saas_quality_profiles(sdwan_saas_quality_profiles_api, clean
 
 
 def test_fetch_sdwan_saas_quality_profiles(sdwan_saas_quality_profiles_api, clean_sdwan_saas_quality_profile):
-    fetched_obj = sdwan_saas_quality_profiles_api.fetch_sdwan_saa_s_quality_profiles(
+    fetched_obj = sdwan_saas_quality_profiles_api.fetch_sdwan_saas_quality_profiles(
         name=clean_sdwan_saas_quality_profile.name,
         folder=TARGET_FOLDER,
     )
@@ -118,7 +118,7 @@ def test_fetch_sdwan_saas_quality_profiles(sdwan_saas_quality_profiles_api, clea
     assert fetched_obj.name == clean_sdwan_saas_quality_profile.name
     logger.info(f"\n[SUCCESS] fetch_sdwan_saas_quality_profiles found object: {fetched_obj.name}")
 
-    not_found = sdwan_saas_quality_profiles_api.fetch_sdwan_saa_s_quality_profiles(
+    not_found = sdwan_saas_quality_profiles_api.fetch_sdwan_saas_quality_profiles(
         name="non-existent-sdwan-sqp-xyz-12345",
         folder=TARGET_FOLDER,
     )

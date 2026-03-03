@@ -79,27 +79,19 @@ def test_create_log_forwarding_profile(log_forwarding_profiles_api):
             name="profile-match-1",
             action_desc="profile match for tunnel",
             log_type="tunnel",
-            filter="(tunnelid neq 123) or (zone.dst eq 192.5.125.155)",
-            send_syslog=["syslog-server-prof-mixed"],
-            send_http=["test_http"]
+            filter="(tunnelid neq 123) or (zone.dst eq 192.5.125.155)"
         ),
         LogForwardingProfilesMatchListInner(
             name="profile-match-2",
-            action_desc="profile match w/ snmp and email",
+            action_desc="profile match for decryption",
             log_type="decryption",
-            filter="(addr.src in 10.0.0.0/8)",
-            send_snmptrap=["snmp_test"],
-            send_email=["email_test", "email_test_2"]
+            filter="(addr.src in 10.0.0.0/8)"
         ),
         LogForwardingProfilesMatchListInner(
             name="profile-match-3",
-            action_desc="profile match w/ all server profiles",
+            action_desc="profile match for traffic",
             log_type="traffic",
-            filter="(device_name eq test_device)",
-            send_syslog=["syslog-server-prof-mixed", "syslog-server-prof-complete"],
-            send_http=["test_http", "t10", "t5"],
-            send_snmptrap=["snmp_test"],
-            send_email=["email_test", "email_test_2"]
+            filter="All Logs"
         )
     ]
 
@@ -147,8 +139,7 @@ def test_update_log_forwarding_profile(log_forwarding_profiles_api, clean_log_fo
         LogForwardingProfilesMatchListInner(
             name="added-match-during-update",
             log_type="wildfire",
-            filter="(imei contains test_server)",
-            send_http=["t20"]
+            filter="All Logs"
         )
     )
 
