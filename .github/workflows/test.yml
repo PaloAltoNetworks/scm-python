@@ -134,11 +134,26 @@ jobs:
                       setup = test.get('setup', {})
                       longrepr = call.get('longrepr', '') or setup.get('longrepr', '')
 
-                      if longrepr:
+                      # Also capture stdout which contains our header logging
+                      stdout = call.get('stdout', '') or setup.get('stdout', '')
+
+                      if longrepr or stdout:
                           f.write("<details>\n<summary>Error Details</summary>\n\n")
                           f.write("```\n")
-                          lines = longrepr.split('\n')
-                          f.write('\n'.join(lines[-20:]))
+
+                          # Include stdout first (contains X-Request-ID, X-Trace-ID, etc.)
+                          if stdout:
+                              stdout_lines = stdout.strip().split('\n')
+                              # Look for our header block in stdout
+                              for line in stdout_lines:
+                                  if any(keyword in line for keyword in ['API RESPONSE HEADERS', 'API ERROR RESPONSE', 'X-Request-ID:', 'X-Trace-ID:', 'Status Code:', 'Error Body:']):
+                                      f.write(line + '\n')
+
+                          # Include traceback
+                          if longrepr:
+                              lines = longrepr.split('\n')
+                              f.write('\n'.join(lines[-20:]))
+
                           f.write("\n```\n")
                           f.write("</details>\n\n")
                       else:

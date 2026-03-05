@@ -52,9 +52,9 @@ def test_fetch_dos_protection_rules(dos_protection_rules_api):
     Equivalent to Go: Test_security_services_DoSProtectionRulesAPIService_Fetch
     """
     # Fetch non-existent (should return None)
-    not_found = dos_protection_rules_api.fetch_dos_protection_rules(
+    not_found = dos_protection_rules_api.fetch_do_s_protection_rules(
         name="non-existent-dos-rule-xyz-12345",
         folder=TARGET_FOLDER,
     )
     assert not_found is None, "Should return None for non-existent DoS protection rule"
-    logger.info("fetch_dos_protection_rules correctly returned None for non-existent rule")
+    logger.info("fetch_do_s_protection_rules correctly returned None for non-existent rule")

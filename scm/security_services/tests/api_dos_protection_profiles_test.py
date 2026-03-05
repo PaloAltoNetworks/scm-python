@@ -144,7 +144,7 @@ def test_fetch_dos_protection_profiles(dos_protection_profiles_api, clean_dos_pr
     Test fetching a single DoS Protection Profile by name using the fetch convenience method.
     """
     # Fetch by exact name
-    fetched_obj = dos_protection_profiles_api.fetch_dos_protection_profiles(
+    fetched_obj = dos_protection_profiles_api.fetch_do_s_protection_profiles(
         name=clean_dos_protection_profile.name,
         folder=clean_dos_protection_profile.folder
     )
@@ -154,15 +154,15 @@ def test_fetch_dos_protection_profiles(dos_protection_profiles_api, clean_dos_pr
     assert fetched_obj.id == clean_dos_protection_profile.id
     assert fetched_obj.name == clean_dos_protection_profile.name
     assert fetched_obj.folder == clean_dos_protection_profile.folder
-    logger.info(f"\n[SUCCESS] fetch_dos_protection_profiles found object: {fetched_obj.name}")
+    logger.info(f"\n[SUCCESS] fetch_do_s_protection_profiles found object: {fetched_obj.name}")
 
     # Test fetching non-existent profile (should return None)
-    not_found = dos_protection_profiles_api.fetch_dos_protection_profiles(
+    not_found = dos_protection_profiles_api.fetch_do_s_protection_profiles(
         name="non-existent-dos-profile-xyz-12345",
         folder=clean_dos_protection_profile.folder
     )
     assert not_found is None, "Should return None for non-existent DoS Protection Profile"
-    logger.info(f"\n[SUCCESS] fetch_dos_protection_profiles correctly returned None for non-existent profile")
+    logger.info(f"\n[SUCCESS] fetch_do_s_protection_profiles correctly returned None for non-existent profile")
 
 
 def test_delete_dos_protection_profile_by_id(dos_protection_profiles_api):

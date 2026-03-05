@@ -47,6 +47,8 @@ def clean_cert_profile(cert_profiles_api):
     ca_cert = CertificateProfilesCaCertificatesInner(
         name="Forward-Trust-CA",
         default_ocsp_url="http://test.com",
+        ocsp_verify_cert="Forward-Trust-CA-ECDSA",
+        template_name="something"
     )
 
     username_field = CertificateProfilesUsernameField(
@@ -98,6 +100,8 @@ def test_create_cert_profile(cert_profiles_api):
     ca_cert = CertificateProfilesCaCertificatesInner(
         name="Forward-Trust-CA",
         default_ocsp_url="http://test.com",
+        ocsp_verify_cert="Forward-Trust-CA-ECDSA",
+        template_name="something"
     )
 
     username_field = CertificateProfilesUsernameField(
@@ -134,6 +138,8 @@ def test_create_cert_profile(cert_profiles_api):
     assert len(created_obj.ca_certificates) == 1
     assert created_obj.ca_certificates[0].name == "Forward-Trust-CA"
     assert created_obj.ca_certificates[0].default_ocsp_url == "http://test.com"
+    assert created_obj.ca_certificates[0].ocsp_verify_cert == "Forward-Trust-CA-ECDSA"
+    assert created_obj.ca_certificates[0].template_name == "something"
     assert created_obj.domain == "test"
     assert created_obj.use_crl == True
     assert created_obj.use_ocsp == True
@@ -249,6 +255,8 @@ def test_delete_cert_profile_by_id(cert_profiles_api):
     ca_cert = CertificateProfilesCaCertificatesInner(
         name="Forward-Trust-CA",
         default_ocsp_url="http://test.com",
+        ocsp_verify_cert="Forward-Trust-CA-ECDSA",
+        template_name="something"
     )
 
     payload = CertificateProfiles(

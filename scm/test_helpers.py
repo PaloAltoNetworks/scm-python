@@ -10,6 +10,43 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def _log_error_headers(exception):
+    """
+    Log response headers on API errors for debugging.
+    Prints X-Request-ID and X-Trace-ID headers when available.
+    """
+    print("=== API RESPONSE HEADERS ===")
+
+    # Get status code
+    status = getattr(exception, 'status', None)
+    if status:
+        print(f"Status Code: {status}")
+
+    # Get headers from exception
+    headers = getattr(exception, 'headers', None)
+    if headers:
+        # Handle both dict and HTTPHeaderDict types
+        if hasattr(headers, 'get'):
+            request_id = headers.get('X-Request-ID', headers.get('x-request-id', ''))
+            trace_id = headers.get('X-Trace-ID', headers.get('x-trace-id', ''))
+            flow_error = headers.get('X-Request-Flow-Error', headers.get('x-request-flow-error', ''))
+
+            if request_id:
+                print(f"X-Request-ID: {request_id}")
+            if trace_id:
+                print(f"X-Trace-ID: {trace_id}")
+            if flow_error:
+                print(f"X-Request-Flow-Error: {flow_error}")
+
+    # Log error body if available
+    body = getattr(exception, 'body', None)
+    if body:
+        print("=== API ERROR RESPONSE ===")
+        print(f"Error Body: {body}")
+
+    print("============================")
+
+
 def perform(func, response_type=None, **kwargs):
     """
     Local utility to call an API function and log the request/response details.
@@ -43,8 +80,13 @@ def perform(func, response_type=None, **kwargs):
 
     logger.info(json.dumps(log_kwargs, indent=2, default=str))
 
-    # Execute
-    response = func(**kwargs)
+    # Execute with error header logging
+    try:
+        response = func(**kwargs)
+    except Exception as e:
+        # Log response headers on error for debugging
+        _log_error_headers(e)
+        raise
 
     # Log raw response info
     logger.info(f"\n<<< API RESPONSE [{func_name}]")
