@@ -171,13 +171,14 @@ def test_update_auth_rule(auth_rules_api, clean_auth_rule):
 
 
 def test_list_auth_rules(auth_rules_api, clean_auth_rule):
-    """Test listing Authentication Rules."""
+    """Test listing Authentication Rules filtered by name to avoid system rules with null fields."""
     response = perform(
         auth_rules_api.list_authentication_rules_with_http_info,
         folder=TARGET_FOLDER,
         position="pre",
+        name=clean_auth_rule.name,
         limit=10,
-        offset=15  # Skip default rules that may have deserialization issues
+        offset=0
     )
 
     assert response is not None
