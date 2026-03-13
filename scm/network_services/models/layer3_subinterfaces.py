@@ -43,10 +43,11 @@ class Layer3Subinterfaces(BaseModel):
     ip: Optional[List[Layer3SubinterfacesIpInner]] = Field(default=None, description="L3 sub-interface IP Parent")
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU")
     name: StrictStr = Field(description="L3 sub-interface name")
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     parent_interface: Optional[StrictStr] = Field(default=None, description="Parent interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     tag: Optional[Annotated[int, Field(le=4096, strict=True, ge=1)]] = Field(default=None, description="VLAN tag")
-    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "parent_interface", "snippet", "tag"]
+    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "parent_interface", "snippet", "tag"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -162,6 +163,7 @@ class Layer3Subinterfaces(BaseModel):
             "ip": [Layer3SubinterfacesIpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
             "mtu": obj.get("mtu"),
             "name": obj.get("name"),
+            "netflow_profile": obj.get("netflow_profile"),
             "parent_interface": obj.get("parent_interface"),
             "snippet": obj.get("snippet"),
             "tag": obj.get("tag")

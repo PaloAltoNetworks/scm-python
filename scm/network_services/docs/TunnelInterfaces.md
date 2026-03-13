@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ipv6** | [**TunnelInterfacesIpv6**](TunnelInterfacesIpv6.md) |  | [optional] 
 **mtu** | **int** | MTU for tunnel interface | [optional] 
 **name** | **str** | L3 sub-interface name for tunnel interface | 
+**netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 
 ## Example

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,8 +29,9 @@ class RemoteNetworksProtocolBgpPeer(BaseModel):
     """ # noqa: E501
     local_ip_address: Optional[StrictStr] = Field(default=None, description="Local peer IP address (secondary WAN)")
     peer_ip_address: Optional[StrictStr] = Field(default=None, description="Remote peer IP address (secondary WAN)")
+    same_as_primary: Optional[StrictBool] = Field(default=None, description="Same peer IP address as primary WAN")
     secret: Optional[SecretStr] = Field(default=None, description="BGP peering secret (secondary WAN)")
-    __properties: ClassVar[List[str]] = ["local_ip_address", "peer_ip_address", "secret"]
+    __properties: ClassVar[List[str]] = ["local_ip_address", "peer_ip_address", "same_as_primary", "secret"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,6 +86,7 @@ class RemoteNetworksProtocolBgpPeer(BaseModel):
         _obj = cls.model_validate({
             "local_ip_address": obj.get("local_ip_address"),
             "peer_ip_address": obj.get("peer_ip_address"),
+            "same_as_primary": obj.get("same_as_primary"),
             "secret": obj.get("secret")
         })
         return _obj

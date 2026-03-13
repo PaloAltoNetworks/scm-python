@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
@@ -40,7 +40,8 @@ class AggregateInterfacesLayer3(BaseModel):
     ip: Optional[List[AggregateInterfacesLayer3IpInner]] = Field(default=None, description="Aggregate Interface IP addresses")
     lacp: Optional[Lacp] = None
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=1500, description="MTU")
-    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "lacp", "mtu"]
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
+    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "lacp", "mtu", "netflow_profile"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -122,7 +123,8 @@ class AggregateInterfacesLayer3(BaseModel):
             "interface_management_profile": obj.get("interface_management_profile"),
             "ip": [AggregateInterfacesLayer3IpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
             "lacp": Lacp.from_dict(obj["lacp"]) if obj.get("lacp") is not None else None,
-            "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500
+            "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500,
+            "netflow_profile": obj.get("netflow_profile")
         })
         return _obj
 

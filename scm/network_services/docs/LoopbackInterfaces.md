@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ipv6** | [**LoopbackInterfacesIpv6**](LoopbackInterfacesIpv6.md) |  | [optional] 
 **mtu** | **int** | MTU for loopback interface | [optional] 
 **name** | **str** | Loopback Interface name | 
+**netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 
 ## Example

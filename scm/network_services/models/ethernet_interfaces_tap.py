@@ -18,31 +18,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from typing_extensions import Annotated
-from scm.network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
 from typing import Optional, Set
 from typing_extensions import Self
 
-class EthernetInterfacesLayer2(BaseModel):
+class EthernetInterfacesTap(BaseModel):
     """
-    EthernetInterfacesLayer2
+    EthernetInterfacesTap
     """ # noqa: E501
-    lldp: Optional[EthernetInterfacesLayer2Lldp] = None
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
-    vlan_tag: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Assign interface to VLAN tag")
-    __properties: ClassVar[List[str]] = ["lldp", "netflow_profile", "vlan_tag"]
-
-    @field_validator('vlan_tag')
-    def vlan_tag_validate_regular_expression(cls, value):
-        """Validates the regular expression"""
-        if value is None:
-            return value
-
-        if not re.match(r"^([1-9]\d{0,2}|[1-3]\d{3}|40[0-8]\d|409[0-6])$", value):
-            raise ValueError(r"must validate the regular expression /^([1-9]\d{0,2}|[1-3]\d{3}|40[0-8]\d|409[0-6])$/")
-        return value
+    __properties: ClassVar[List[str]] = ["netflow_profile"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -62,7 +48,7 @@ class EthernetInterfacesLayer2(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer2 from a JSON string"""
+        """Create an instance of EthernetInterfacesTap from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -83,14 +69,11 @@ class EthernetInterfacesLayer2(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of lldp
-        if self.lldp:
-            _dict['lldp'] = self.lldp.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer2 from a dict"""
+        """Create an instance of EthernetInterfacesTap from a dict"""
         if obj is None:
             return None
 
@@ -98,9 +81,7 @@ class EthernetInterfacesLayer2(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "lldp": EthernetInterfacesLayer2Lldp.from_dict(obj["lldp"]) if obj.get("lldp") is not None else None,
-            "netflow_profile": obj.get("netflow_profile"),
-            "vlan_tag": obj.get("vlan_tag")
+            "netflow_profile": obj.get("netflow_profile")
         })
         return _obj
 

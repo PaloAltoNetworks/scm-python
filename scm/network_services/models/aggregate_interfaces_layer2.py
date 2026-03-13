@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.lacp import Lacp
@@ -30,8 +30,9 @@ class AggregateInterfacesLayer2(BaseModel):
     AggregateInterfacesLayer2
     """ # noqa: E501
     lacp: Optional[Lacp] = None
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     vlan_tag: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="VLAN tag")
-    __properties: ClassVar[List[str]] = ["lacp", "vlan_tag"]
+    __properties: ClassVar[List[str]] = ["lacp", "netflow_profile", "vlan_tag"]
 
     @field_validator('vlan_tag')
     def vlan_tag_validate_regular_expression(cls, value):
@@ -98,6 +99,7 @@ class AggregateInterfacesLayer2(BaseModel):
 
         _obj = cls.model_validate({
             "lacp": Lacp.from_dict(obj["lacp"]) if obj.get("lacp") is not None else None,
+            "netflow_profile": obj.get("netflow_profile"),
             "vlan_tag": obj.get("vlan_tag")
         })
         return _obj

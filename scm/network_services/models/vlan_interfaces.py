@@ -44,9 +44,10 @@ class VlanInterfaces(BaseModel):
     ip: Optional[List[VlanInterfacesIpInner]] = Field(default=None, description="VLAN Interface IP Parent")
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU")
     name: StrictStr = Field(description="L3 sub-interface name")
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     vlan_tag: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="VLAN tag")
-    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "default_value", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "snippet", "vlan_tag"]
+    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "default_value", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "snippet", "vlan_tag"]
 
     @field_validator('default_value')
     def default_value_validate_regular_expression(cls, value):
@@ -183,6 +184,7 @@ class VlanInterfaces(BaseModel):
             "ip": [VlanInterfacesIpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
             "mtu": obj.get("mtu"),
             "name": obj.get("name"),
+            "netflow_profile": obj.get("netflow_profile"),
             "snippet": obj.get("snippet"),
             "vlan_tag": obj.get("vlan_tag")
         })

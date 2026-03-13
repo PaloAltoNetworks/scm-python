@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lacp** | [**Lacp**](Lacp.md) |  | [optional] 
+**netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **vlan_tag** | **str** | VLAN tag | [optional] 
 
 ## Example

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **local_ip_address** | **str** | Local peer IP address (secondary WAN) | [optional] 
 **peer_ip_address** | **str** | Remote peer IP address (secondary WAN) | [optional] 
+**same_as_primary** | **bool** | Same peer IP address as primary WAN | [optional] 
 **secret** | **str** | BGP peering secret (secondary WAN) | [optional] 
 
 ## Example

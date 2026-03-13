@@ -23,6 +23,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
 from scm.network_services.models.ethernet_interfaces_layer3 import EthernetInterfacesLayer3
+from scm.network_services.models.ethernet_interfaces_tap import EthernetInterfacesTap
 from scm.network_services.models.poe import Poe
 from typing import Optional, Set
 from typing_extensions import Self
@@ -45,7 +46,7 @@ class EthernetInterfaces(BaseModel):
     name: StrictStr = Field(description="Interface name")
     poe: Optional[Poe] = None
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    tap: Optional[Dict[str, Any]] = None
+    tap: Optional[EthernetInterfacesTap] = None
     __properties: ClassVar[List[str]] = ["aggregate_group", "comment", "default_value", "device", "folder", "id", "layer2", "layer3", "link_duplex", "link_speed", "link_state", "name", "poe", "snippet", "tap"]
 
     @field_validator('device')
@@ -158,6 +159,9 @@ class EthernetInterfaces(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of poe
         if self.poe:
             _dict['poe'] = self.poe.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of tap
+        if self.tap:
+            _dict['tap'] = self.tap.to_dict()
         return _dict
 
     @classmethod
@@ -184,7 +188,7 @@ class EthernetInterfaces(BaseModel):
             "name": obj.get("name"),
             "poe": Poe.from_dict(obj["poe"]) if obj.get("poe") is not None else None,
             "snippet": obj.get("snippet"),
-            "tap": obj.get("tap")
+            "tap": EthernetInterfacesTap.from_dict(obj["tap"]) if obj.get("tap") is not None else None
         })
         return _obj
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
@@ -39,8 +39,9 @@ class EthernetInterfacesLayer3(BaseModel):
     interface_management_profile: Optional[Annotated[str, Field(strict=True, max_length=31)]] = Field(default=None, description="Interface management profile")
     ip: Optional[List[EthernetInterfacesLayer3IpInner]] = Field(default=None, description="Ethernet Interface IP addresses")
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=1500, description="MTU")
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     pppoe: Optional[EthernetInterfacesLayer3Pppoe] = None
-    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "mtu", "pppoe"]
+    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "mtu", "netflow_profile", "pppoe"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -122,6 +123,7 @@ class EthernetInterfacesLayer3(BaseModel):
             "interface_management_profile": obj.get("interface_management_profile"),
             "ip": [EthernetInterfacesLayer3IpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
             "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500,
+            "netflow_profile": obj.get("netflow_profile"),
             "pppoe": EthernetInterfacesLayer3Pppoe.from_dict(obj["pppoe"]) if obj.get("pppoe") is not None else None
         })
         return _obj

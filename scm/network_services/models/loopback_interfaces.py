@@ -40,8 +40,9 @@ class LoopbackInterfaces(BaseModel):
     ipv6: Optional[LoopbackInterfacesIpv6] = None
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=None, description="MTU for loopback interface")
     name: Annotated[str, Field(strict=True)] = Field(description="Loopback Interface name")
+    netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "snippet"]
+    __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "netflow_profile", "snippet"]
 
     @field_validator('default_value')
     def default_value_validate_regular_expression(cls, value):
@@ -163,6 +164,7 @@ class LoopbackInterfaces(BaseModel):
             "ipv6": LoopbackInterfacesIpv6.from_dict(obj["ipv6"]) if obj.get("ipv6") is not None else None,
             "mtu": obj.get("mtu"),
             "name": obj.get("name"),
+            "netflow_profile": obj.get("netflow_profile"),
             "snippet": obj.get("snippet")
         })
         return _obj

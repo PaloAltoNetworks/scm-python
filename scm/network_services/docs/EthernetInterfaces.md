@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **name** | **str** | Interface name | 
 **poe** | [**Poe**](Poe.md) |  | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
-**tap** | **object** |  | [optional] 
+**tap** | [**EthernetInterfacesTap**](EthernetInterfacesTap.md) |  | [optional] 
 
 ## Example
 

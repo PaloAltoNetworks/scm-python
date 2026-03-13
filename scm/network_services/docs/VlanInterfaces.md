@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **ip** | [**List[VlanInterfacesIpInner]**](VlanInterfacesIpInner.md) | VLAN Interface IP Parent | [optional] 
 **mtu** | **int** | MTU | [optional] 
 **name** | **str** | L3 sub-interface name | 
+**netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **vlan_tag** | **str** | VLAN tag | [optional] 
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **ip** | [**List[Layer3SubinterfacesIpInner]**](Layer3SubinterfacesIpInner.md) | L3 sub-interface IP Parent | [optional] 
 **mtu** | **int** | MTU | [optional] 
 **name** | **str** | L3 sub-interface name | 
+**netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **parent_interface** | **str** | Parent interface | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **tag** | **int** | VLAN tag | [optional] 
