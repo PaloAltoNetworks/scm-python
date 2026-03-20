@@ -1,0 +1,30 @@
+# BgpRouteMapRedistributionsOspfBgp
+
+OSPF Root BGP
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**route_map** | [**List[BgpRouteMapRedistributionsOspfBgpRouteMapInner]**](BgpRouteMapRedistributionsOspfBgpRouteMapInner.md) | OSPF BGP Route maps | [optional] 
+
+## Example
+
+```python
+from scm.network_services.models.bgp_route_map_redistributions_ospf_bgp import BgpRouteMapRedistributionsOspfBgp
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of BgpRouteMapRedistributionsOspfBgp from a JSON string
+bgp_route_map_redistributions_ospf_bgp_instance = BgpRouteMapRedistributionsOspfBgp.from_json(json)
+# print the JSON string representation of the object
+print(BgpRouteMapRedistributionsOspfBgp.to_json())
+
+# convert the object into a dict
+bgp_route_map_redistributions_ospf_bgp_dict = bgp_route_map_redistributions_ospf_bgp_instance.to_dict()
+# create an instance of BgpRouteMapRedistributionsOspfBgp from a dict
+bgp_route_map_redistributions_ospf_bgp_from_dict = BgpRouteMapRedistributionsOspfBgp.from_dict(bgp_route_map_redistributions_ospf_bgp_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

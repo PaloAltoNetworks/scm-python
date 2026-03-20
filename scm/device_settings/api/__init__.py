@@ -1,0 +1,18 @@
+# flake8: noqa
+
+# import apis into api package
+from scm.device_settings.api.authentication_settings_api import AuthenticationSettingsApi
+from scm.device_settings.api.content_id_settings_api import ContentIDSettingsApi
+from scm.device_settings.api.device_redistribution_collector_settings_api import DeviceRedistributionCollectorSettingsApi
+from scm.device_settings.api.general_settings_api import GeneralSettingsApi
+from scm.device_settings.api.high_availability_devices_api import HighAvailabilityDevicesApi
+from scm.device_settings.api.login_banner_settings_api import LoginBannerSettingsApi
+from scm.device_settings.api.management_interface_settings_api import ManagementInterfaceSettingsApi
+from scm.device_settings.api.service_route_settings_api import ServiceRouteSettingsApi
+from scm.device_settings.api.service_settings_api import ServiceSettingsApi
+from scm.device_settings.api.session_settings_api import SessionSettingsApi
+from scm.device_settings.api.session_timeouts_settings_api import SessionTimeoutsSettingsApi
+from scm.device_settings.api.tcp_settings_api import TCPSettingsApi
+from scm.device_settings.api.update_schedule_settings_api import UpdateScheduleSettingsApi
+from scm.device_settings.api.vpn_settings_api import VPNSettingsApi
+

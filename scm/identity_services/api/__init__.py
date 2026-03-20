@@ -1,0 +1,22 @@
+# flake8: noqa
+
+# import apis into api package
+from scm.identity_services.api.authentication_portals_api import AuthenticationPortalsApi
+from scm.identity_services.api.authentication_profiles_api import AuthenticationProfilesApi
+from scm.identity_services.api.authentication_rules_api import AuthenticationRulesApi
+from scm.identity_services.api.authentication_sequences_api import AuthenticationSequencesApi
+from scm.identity_services.api.certificate_profiles_api import CertificateProfilesApi
+from scm.identity_services.api.certificates_api import CertificatesApi
+from scm.identity_services.api.kerberos_server_profiles_api import KerberosServerProfilesApi
+from scm.identity_services.api.ldap_server_profiles_api import LDAPServerProfilesApi
+from scm.identity_services.api.local_user_groups_api import LocalUserGroupsApi
+from scm.identity_services.api.local_users_api import LocalUsersApi
+from scm.identity_services.api.mfa_servers_api import MFAServersApi
+from scm.identity_services.api.ocsp_responders_api import OCSPRespondersApi
+from scm.identity_services.api.radius_server_profiles_api import RADIUSServerProfilesApi
+from scm.identity_services.api.saml_server_profiles_api import SAMLServerProfilesApi
+from scm.identity_services.api.scep_profiles_api import SCEPProfilesApi
+from scm.identity_services.api.tacacs_server_profiles_api import TACACSServerProfilesApi
+from scm.identity_services.api.tls_service_profiles_api import TLSServiceProfilesApi
+from scm.identity_services.api.trusted_certificate_authorities_api import TrustedCertificateAuthoritiesApi
+

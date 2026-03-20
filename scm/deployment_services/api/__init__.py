@@ -1,0 +1,15 @@
+# flake8: noqa
+
+# import apis into api package
+from scm.deployment_services.api.application_defaults_api import ApplicationDefaultsApi
+from scm.deployment_services.api.bgp_routing_api import BGPRoutingApi
+from scm.deployment_services.api.bandwidth_allocations_api import BandwidthAllocationsApi
+from scm.deployment_services.api.internal_dns_servers_api import InternalDNSServersApi
+from scm.deployment_services.api.network_locations_api import NetworkLocationsApi
+from scm.deployment_services.api.remote_networks_api import RemoteNetworksApi
+from scm.deployment_services.api.service_connection_groups_api import ServiceConnectionGroupsApi
+from scm.deployment_services.api.service_connections_api import ServiceConnectionsApi
+from scm.deployment_services.api.shared_infrastructure_settings_api import SharedInfrastructureSettingsApi
+from scm.deployment_services.api.sites_api import SitesApi
+from scm.deployment_services.api.traffic_steering_rules_api import TrafficSteeringRulesApi
+

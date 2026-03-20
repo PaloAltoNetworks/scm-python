@@ -1,0 +1,30 @@
+# BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **str** | BGP Root OSPF Route maps set Metric action | [optional] 
+**value** | **int** | BGP Root OSPF Route maps set Metric value | [optional] 
+
+## Example
+
+```python
+from scm.network_services.models.bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric import BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric from a JSON string
+bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric_instance = BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric.from_json(json)
+# print the JSON string representation of the object
+print(BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric.to_json())
+
+# convert the object into a dict
+bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric_dict = bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric_instance.to_dict()
+# create an instance of BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric from a dict
+bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric_from_dict = BgpRouteMapRedistributionsBgpOspfRouteMapInnerSetMetric.from_dict(bgp_route_map_redistributions_bgp_ospf_route_map_inner_set_metric_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

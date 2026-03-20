@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scm-python"
+version = "0.1.0"
+description = "Palo Alto Networks SCM Python SDK"
+authors = [
+  { name="Palo Alto Networks", email="devrel@paloaltonetworks.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "urllib3 >= 1.25.3, < 2.1.0",
+    "python-dateutil",
+    "pydantic >= 2.0.0",
+    "typing-extensions",
+    "oauthlib >= 3.3.0",
+    "requests-oauthlib >= 2.0.0",
+]
+
+# Define optional dependencies for developers
+[project.optional-dependencies]
+dev = [
+    "pytest >= 7.0",
+    "ruff >= 0.1.0",
+    "mypy >= 1.0",
+]
+
+# Configure Ruff (Linter)
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "D"]
+ignore = ["E501", "D203", "D213"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["scm"]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*"]
+log_cli = true
+log_cli_level = "DEBUG"

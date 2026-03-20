@@ -1,0 +1,32 @@
+# BGPAddressFamilyProfilesListResponse
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**List[BgpAddressFamilyProfiles]**](BgpAddressFamilyProfiles.md) |  | 
+**limit** | **int** | The maximum number of results per page | [default to 200]
+**offset** | **int** | The offset into the list of results returned | [default to 0]
+**total** | **int** | The total count of results | 
+
+## Example
+
+```python
+from scm.network_services.models.bgp_address_family_profiles_list_response import BGPAddressFamilyProfilesListResponse
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of BGPAddressFamilyProfilesListResponse from a JSON string
+bgp_address_family_profiles_list_response_instance = BGPAddressFamilyProfilesListResponse.from_json(json)
+# print the JSON string representation of the object
+print(BGPAddressFamilyProfilesListResponse.to_json())
+
+# convert the object into a dict
+bgp_address_family_profiles_list_response_dict = bgp_address_family_profiles_list_response_instance.to_dict()
+# create an instance of BGPAddressFamilyProfilesListResponse from a dict
+bgp_address_family_profiles_list_response_from_dict = BGPAddressFamilyProfilesListResponse.from_dict(bgp_address_family_profiles_list_response_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
