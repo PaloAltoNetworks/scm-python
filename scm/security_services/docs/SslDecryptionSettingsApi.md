@@ -1,6 +1,6 @@
-# scm.network_services.SslDecryptionSettingsApi
+# scm.security_services.SslDecryptionSettingsApi
 
-All URIs are relative to *https://api.strata.paloaltonetworks.com/config/network/v1*
+All URIs are relative to *https://api.strata.paloaltonetworks.com/config/security/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,15 +22,15 @@ DELETE Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.network_services
-from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm.network_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.network_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/network/v1"
+configuration = scm.security_services.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -39,14 +39,14 @@ configuration = scm.network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.network_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.network_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.security_services.SslDecryptionSettingsApi(api_client)
 
     try:
         # DELETE Ssl Decryption Settings
@@ -81,17 +81,17 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful response |  -  |
-**400** |  |  -  |
-**401** |  |  -  |
-**403** |  |  -  |
-**404** |  |  -  |
-**409** |  |  -  |
-**0** |  |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**0** | General Errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ssl_decryption_settings**
-> SslDecryptionSettings get_ssl_decryption_settings(folder=folder, snippet=snippet, device=device, offset=offset, limit=limit)
+> GetSslDecryptionSettingsListResponse get_ssl_decryption_settings(folder=folder, snippet=snippet, device=device, offset=offset, limit=limit)
 
 GET Ssl Decryption Settings
 
@@ -102,15 +102,15 @@ GET Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.network_services
-from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm.network_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.get_ssl_decryption_settings_list_response import GetSslDecryptionSettingsListResponse
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.network_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/network/v1"
+configuration = scm.security_services.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -119,14 +119,14 @@ configuration = scm.network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.network_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.network_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.security_services.SslDecryptionSettingsApi(api_client)
     folder = 'folder_example' # str | The folder in which the resource is defined  (optional)
     snippet = 'snippet_example' # str | The snippet in which the resource is defined  (optional)
     device = 'device_example' # str | The device in which the resource is defined  (optional)
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SslDecryptionSettings**](SslDecryptionSettings.md)
+[**GetSslDecryptionSettingsListResponse**](GetSslDecryptionSettingsListResponse.md)
 
 ### Authorization
 
@@ -173,11 +173,11 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful response |  -  |
-**400** |  |  -  |
-**401** |  |  -  |
-**403** |  |  -  |
-**404** |  |  -  |
-**0** |  |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+**0** | General Errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -193,15 +193,15 @@ POST Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.network_services
-from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm.network_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.network_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/network/v1"
+configuration = scm.security_services.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -210,15 +210,15 @@ configuration = scm.network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.network_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.network_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
-    ssl_decryption_settings = scm.network_services.SslDecryptionSettings() # SslDecryptionSettings | 
+    api_instance = scm.security_services.SslDecryptionSettingsApi(api_client)
+    ssl_decryption_settings = scm.security_services.SslDecryptionSettings() # SslDecryptionSettings | 
 
     try:
         # POST Ssl Decryption Settings
@@ -256,16 +256,16 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**400** |  |  -  |
-**401** |  |  -  |
-**403** |  |  -  |
-**409** |  |  -  |
-**0** |  |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**409** | Conflict |  -  |
+**0** | General Errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_ssl_decryption_settings**
-> SslDecryptionSettings put_ssl_decryption_settings()
+> SslDecryptionSettingsGetPut put_ssl_decryption_settings(ssl_decryption_settings_get_put)
 
 PUT Ssl Decryption Settings
 
@@ -276,15 +276,15 @@ PUT Ssl Decryption Settings
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.network_services
-from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
-from scm.network_services.rest import ApiException
+import scm.security_services
+from scm.security_services.models.ssl_decryption_settings_get_put import SslDecryptionSettingsGetPut
+from scm.security_services.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/network/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.network_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/network/v1"
+configuration = scm.security_services.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -293,18 +293,19 @@ configuration = scm.network_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.network_services.Configuration(
+configuration = scm.security_services.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.network_services.ApiClient(configuration) as api_client:
+with scm.security_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.network_services.SslDecryptionSettingsApi(api_client)
+    api_instance = scm.security_services.SslDecryptionSettingsApi(api_client)
+    ssl_decryption_settings_get_put = scm.security_services.SslDecryptionSettingsGetPut() # SslDecryptionSettingsGetPut | 
 
     try:
         # PUT Ssl Decryption Settings
-        api_response = api_instance.put_ssl_decryption_settings()
+        api_response = api_instance.put_ssl_decryption_settings(ssl_decryption_settings_get_put)
         print("The response of SslDecryptionSettingsApi->put_ssl_decryption_settings:\n")
         pprint(api_response)
     except Exception as e:
@@ -315,11 +316,14 @@ with scm.network_services.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ssl_decryption_settings_get_put** | [**SslDecryptionSettingsGetPut**](SslDecryptionSettingsGetPut.md)|  | 
 
 ### Return type
 
-[**SslDecryptionSettings**](SslDecryptionSettings.md)
+[**SslDecryptionSettingsGetPut**](SslDecryptionSettingsGetPut.md)
 
 ### Authorization
 
@@ -327,7 +331,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -335,12 +339,12 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**400** |  |  -  |
-**401** |  |  -  |
-**403** |  |  -  |
-**404** |  |  -  |
-**409** |  |  -  |
-**0** |  |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**0** | General Errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

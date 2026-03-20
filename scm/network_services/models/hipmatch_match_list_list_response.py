@@ -18,18 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from typing import Any, ClassVar, Dict, List
+from scm.network_services.models.hipmatch_match_list import HipmatchMatchList
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SslDecryptionSettingsForwardTrustCertificate(BaseModel):
+class HipmatchMatchListListResponse(BaseModel):
     """
-    SslDecryptionSettingsForwardTrustCertificate
+    HipmatchMatchListListResponse
     """ # noqa: E501
-    ecdsa: Optional[StrictStr] = None
-    rsa: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["ecdsa", "rsa"]
+    data: List[HipmatchMatchList]
+    limit: StrictInt = Field(description="The maximum number of results per page")
+    offset: StrictInt = Field(description="The offset into the list of results returned")
+    total: StrictInt = Field(description="The total count of results")
+    __properties: ClassVar[List[str]] = ["data", "limit", "offset", "total"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +52,7 @@ class SslDecryptionSettingsForwardTrustCertificate(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SslDecryptionSettingsForwardTrustCertificate from a JSON string"""
+        """Create an instance of HipmatchMatchListListResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -70,20 +73,40 @@ class SslDecryptionSettingsForwardTrustCertificate(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        _items = []
+        if self.data:
+            for _item_data in self.data:
+                if _item_data:
+                    _items.append(_item_data.to_dict())
+            _dict['data'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SslDecryptionSettingsForwardTrustCertificate from a dict"""
+        """Create an instance of HipmatchMatchListListResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
+        # Detect bare object response (API returns single object instead of paginated list)
+        # This happens when server-side name filtering returns exactly one result
+        if "data" not in obj and "total" not in obj:
+            single_obj = HipmatchMatchList.from_dict(obj)
+            return cls.model_validate({
+                "data": [single_obj] if single_obj is not None else [],
+                "limit": 1,
+                "offset": 0,
+                "total": 1 if single_obj is not None else 0,
+            })
+
         _obj = cls.model_validate({
-            "ecdsa": obj.get("ecdsa"),
-            "rsa": obj.get("rsa")
+            "data": [HipmatchMatchList.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
+            "limit": obj.get("limit") if obj.get("limit") is not None else 200,
+            "offset": obj.get("offset") if obj.get("offset") is not None else 0,
+            "total": obj.get("total")
         })
         return _obj
 

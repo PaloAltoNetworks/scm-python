@@ -5,8 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**default_gateway** | **str** | Default gateway | [optional] 
+**ip_address** | **str** | IP address | [optional] 
 **mgmt_type** | [**ManagementInterfaceManagementInterfaceMgmtType**](ManagementInterfaceManagementInterfaceMgmtType.md) |  | [optional] 
 **mtu** | **int** | MTU | [optional] [default to 1500]
+**netmask** | **str** | Netmask | [optional] 
 **permitted_ip** | [**List[ManagementInterfaceManagementInterfacePermittedIpInner]**](ManagementInterfaceManagementInterfacePermittedIpInner.md) | Permitting IP addresses | [optional] 
 **service** | [**ManagementInterfaceManagementInterfaceService**](ManagementInterfaceManagementInterfaceService.md) |  | [optional] 
 **speed_duplex** | **str** | Speed and duplex | [optional] [default to 'auto-negotiate']

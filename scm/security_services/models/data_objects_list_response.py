@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Device Settings
+    Security Services
 
-    These APIs are used for defining and managing device configurations within Strata Cloud Manager.
+    These APIs are used for defining and managing security services configurations within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,19 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
+from scm.security_services.models.data_objects import DataObjects
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ManagementInterfaceManagementInterfaceMgmtTypeStatic(BaseModel):
+class DataObjectsListResponse(BaseModel):
     """
-    ManagementInterfaceManagementInterfaceMgmtTypeStatic
+    DataObjectsListResponse
     """ # noqa: E501
-    default_gateway: StrictStr = Field(description="Default gateway")
-    ip_address: StrictStr = Field(description="IP address")
-    netmask: StrictStr = Field(description="Netmask")
-    __properties: ClassVar[List[str]] = ["default_gateway", "ip_address", "netmask"]
+    data: List[DataObjects]
+    limit: StrictInt = Field(description="The maximum number of results per page")
+    offset: StrictInt = Field(description="The offset into the list of results returned")
+    total: StrictInt = Field(description="The total count of results")
+    __properties: ClassVar[List[str]] = ["data", "limit", "offset", "total"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +52,7 @@ class ManagementInterfaceManagementInterfaceMgmtTypeStatic(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ManagementInterfaceManagementInterfaceMgmtTypeStatic from a JSON string"""
+        """Create an instance of DataObjectsListResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,21 +73,40 @@ class ManagementInterfaceManagementInterfaceMgmtTypeStatic(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        _items = []
+        if self.data:
+            for _item_data in self.data:
+                if _item_data:
+                    _items.append(_item_data.to_dict())
+            _dict['data'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ManagementInterfaceManagementInterfaceMgmtTypeStatic from a dict"""
+        """Create an instance of DataObjectsListResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
+        # Detect bare object response (API returns single object instead of paginated list)
+        # This happens when server-side name filtering returns exactly one result
+        if "data" not in obj and "total" not in obj:
+            single_obj = DataObjects.from_dict(obj)
+            return cls.model_validate({
+                "data": [single_obj] if single_obj is not None else [],
+                "limit": 1,
+                "offset": 0,
+                "total": 1 if single_obj is not None else 0,
+            })
+
         _obj = cls.model_validate({
-            "default_gateway": obj.get("default_gateway"),
-            "ip_address": obj.get("ip_address"),
-            "netmask": obj.get("netmask")
+            "data": [DataObjects.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
+            "limit": obj.get("limit") if obj.get("limit") is not None else 200,
+            "offset": obj.get("offset") if obj.get("offset") is not None else 0,
+            "total": obj.get("total")
         })
         return _obj
 

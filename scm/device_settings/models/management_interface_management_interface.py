@@ -30,12 +30,15 @@ class ManagementInterfaceManagementInterface(BaseModel):
     """
     ManagementInterfaceManagementInterface
     """ # noqa: E501
+    default_gateway: Optional[StrictStr] = Field(default=None, description="Default gateway")
+    ip_address: Optional[StrictStr] = Field(default=None, description="IP address")
     mgmt_type: Optional[ManagementInterfaceManagementInterfaceMgmtType] = None
     mtu: Optional[StrictInt] = Field(default=1500, description="MTU")
+    netmask: Optional[StrictStr] = Field(default=None, description="Netmask")
     permitted_ip: Optional[List[ManagementInterfaceManagementInterfacePermittedIpInner]] = Field(default=None, description="Permitting IP addresses")
     service: Optional[ManagementInterfaceManagementInterfaceService] = None
     speed_duplex: Optional[StrictStr] = Field(default='auto-negotiate', description="Speed and duplex")
-    __properties: ClassVar[List[str]] = ["mgmt_type", "mtu", "permitted_ip", "service", "speed_duplex"]
+    __properties: ClassVar[List[str]] = ["default_gateway", "ip_address", "mgmt_type", "mtu", "netmask", "permitted_ip", "service", "speed_duplex"]
 
     @field_validator('speed_duplex')
     def speed_duplex_validate_enum(cls, value):
@@ -111,8 +114,11 @@ class ManagementInterfaceManagementInterface(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "default_gateway": obj.get("default_gateway"),
+            "ip_address": obj.get("ip_address"),
             "mgmt_type": ManagementInterfaceManagementInterfaceMgmtType.from_dict(obj["mgmt_type"]) if obj.get("mgmt_type") is not None else None,
             "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500,
+            "netmask": obj.get("netmask"),
             "permitted_ip": [ManagementInterfaceManagementInterfacePermittedIpInner.from_dict(_item) for _item in obj["permitted_ip"]] if obj.get("permitted_ip") is not None else None,
             "service": ManagementInterfaceManagementInterfaceService.from_dict(obj["service"]) if obj.get("service") is not None else None,
             "speed_duplex": obj.get("speed_duplex") if obj.get("speed_duplex") is not None else 'auto-negotiate'

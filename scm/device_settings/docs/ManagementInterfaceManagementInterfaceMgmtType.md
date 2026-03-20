@@ -7,7 +7,7 @@ IP type
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dhcp_client** | [**ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient**](ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient.md) |  | [optional] 
-**static** | [**ManagementInterfaceManagementInterfaceMgmtTypeStatic**](ManagementInterfaceManagementInterfaceMgmtTypeStatic.md) |  | [optional] 
+**static** | **object** |  | [optional] 
 
 ## Example
 

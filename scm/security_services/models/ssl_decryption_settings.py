@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Network Services
+    Security Services
 
-    These APIs are used for defining and managing network services configuration within Strata Cloud Manager.
+    These APIs are used for defining and managing security services configurations within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,10 +18,11 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm.network_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
-from scm.network_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
+from typing_extensions import Annotated
+from scm.security_services.models.ssl_decryption_settings_forward_trust_certificate import SslDecryptionSettingsForwardTrustCertificate
+from scm.security_services.models.ssl_decryption_settings_ssl_exclude_cert_inner import SslDecryptionSettingsSslExcludeCertInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,13 +30,46 @@ class SslDecryptionSettings(BaseModel):
     """
     SslDecryptionSettings
     """ # noqa: E501
+    device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     disabled_ssl_exclude_cert_from_predefined: Optional[List[Dict[str, Any]]] = None
+    folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
     forward_trust_certificate: Optional[SslDecryptionSettingsForwardTrustCertificate] = None
     forward_untrust_certificate: Optional[SslDecryptionSettingsForwardTrustCertificate] = None
     root_ca_exclude_list: Optional[List[Dict[str, Any]]] = None
+    snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     ssl_exclude_cert: Optional[List[SslDecryptionSettingsSslExcludeCertInner]] = None
     trusted_root_ca: Optional[List[Dict[str, Any]]] = Field(default=None, alias="trusted_root_CA")
-    __properties: ClassVar[List[str]] = ["disabled_ssl_exclude_cert_from_predefined", "forward_trust_certificate", "forward_untrust_certificate", "root_ca_exclude_list", "ssl_exclude_cert", "trusted_root_CA"]
+    __properties: ClassVar[List[str]] = ["device", "disabled_ssl_exclude_cert_from_predefined", "folder", "forward_trust_certificate", "forward_untrust_certificate", "root_ca_exclude_list", "snippet", "ssl_exclude_cert", "trusted_root_CA"]
+
+    @field_validator('device')
+    def device_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
+        return value
+
+    @field_validator('folder')
+    def folder_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
+        return value
+
+    @field_validator('snippet')
+    def snippet_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
+        if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
+        return value
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -101,10 +135,13 @@ class SslDecryptionSettings(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "device": obj.get("device"),
             "disabled_ssl_exclude_cert_from_predefined": obj.get("disabled_ssl_exclude_cert_from_predefined"),
+            "folder": obj.get("folder"),
             "forward_trust_certificate": SslDecryptionSettingsForwardTrustCertificate.from_dict(obj["forward_trust_certificate"]) if obj.get("forward_trust_certificate") is not None else None,
             "forward_untrust_certificate": SslDecryptionSettingsForwardTrustCertificate.from_dict(obj["forward_untrust_certificate"]) if obj.get("forward_untrust_certificate") is not None else None,
             "root_ca_exclude_list": obj.get("root_ca_exclude_list"),
+            "snippet": obj.get("snippet"),
             "ssl_exclude_cert": [SslDecryptionSettingsSslExcludeCertInner.from_dict(_item) for _item in obj["ssl_exclude_cert"]] if obj.get("ssl_exclude_cert") is not None else None,
             "trusted_root_CA": obj.get("trusted_root_CA")
         })

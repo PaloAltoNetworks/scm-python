@@ -1,4 +1,4 @@
-# SslDecryptionSettings
+# SslDecryptionSettingsGetPutSslDecrypt
 
 
 ## Properties
@@ -15,19 +15,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm.network_services.models.ssl_decryption_settings import SslDecryptionSettings
+from scm.security_services.models.ssl_decryption_settings_get_put_ssl_decrypt import SslDecryptionSettingsGetPutSslDecrypt
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of SslDecryptionSettings from a JSON string
-ssl_decryption_settings_instance = SslDecryptionSettings.from_json(json)
+# create an instance of SslDecryptionSettingsGetPutSslDecrypt from a JSON string
+ssl_decryption_settings_get_put_ssl_decrypt_instance = SslDecryptionSettingsGetPutSslDecrypt.from_json(json)
 # print the JSON string representation of the object
-print(SslDecryptionSettings.to_json())
+print(SslDecryptionSettingsGetPutSslDecrypt.to_json())
 
 # convert the object into a dict
-ssl_decryption_settings_dict = ssl_decryption_settings_instance.to_dict()
-# create an instance of SslDecryptionSettings from a dict
-ssl_decryption_settings_from_dict = SslDecryptionSettings.from_dict(ssl_decryption_settings_dict)
+ssl_decryption_settings_get_put_ssl_decrypt_dict = ssl_decryption_settings_get_put_ssl_decrypt_instance.to_dict()
+# create an instance of SslDecryptionSettingsGetPutSslDecrypt from a dict
+ssl_decryption_settings_get_put_ssl_decrypt_from_dict = SslDecryptionSettingsGetPutSslDecrypt.from_dict(ssl_decryption_settings_get_put_ssl_decrypt_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

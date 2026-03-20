@@ -21,7 +21,6 @@ import json
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
 from scm.device_settings.models.management_interface_management_interface_mgmt_type_dhcp_client import ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient
-from scm.device_settings.models.management_interface_management_interface_mgmt_type_static import ManagementInterfaceManagementInterfaceMgmtTypeStatic
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +29,7 @@ class ManagementInterfaceManagementInterfaceMgmtType(BaseModel):
     IP type
     """ # noqa: E501
     dhcp_client: Optional[ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient] = None
-    static: Optional[ManagementInterfaceManagementInterfaceMgmtTypeStatic] = None
+    static: Optional[Dict[str, Any]] = None
     __properties: ClassVar[List[str]] = ["dhcp_client", "static"]
 
     model_config = ConfigDict(
@@ -75,9 +74,6 @@ class ManagementInterfaceManagementInterfaceMgmtType(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of dhcp_client
         if self.dhcp_client:
             _dict['dhcp_client'] = self.dhcp_client.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of static
-        if self.static:
-            _dict['static'] = self.static.to_dict()
         return _dict
 
     @classmethod
@@ -91,7 +87,7 @@ class ManagementInterfaceManagementInterfaceMgmtType(BaseModel):
 
         _obj = cls.model_validate({
             "dhcp_client": ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient.from_dict(obj["dhcp_client"]) if obj.get("dhcp_client") is not None else None,
-            "static": ManagementInterfaceManagementInterfaceMgmtTypeStatic.from_dict(obj["static"]) if obj.get("static") is not None else None
+            "static": obj.get("static")
         })
         return _obj
 

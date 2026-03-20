@@ -12,14 +12,18 @@ from scm.network_services.api.bgp_filtering_profiles_api import BGPFilteringProf
 from scm.network_services.api.bgp_redistribution_profiles_api import BGPRedistributionProfilesApi
 from scm.network_services.api.bgp_route_map_redistributions_api import BGPRouteMapRedistributionsApi
 from scm.network_services.api.bgp_route_maps_api import BGPRouteMapsApi
+from scm.network_services.api.config_match_list_api import ConfigMatchListApi
 from scm.network_services.api.dhcp_interfaces_api import DHCPInterfacesApi
 from scm.network_services.api.dns_proxies_api import DNSProxiesApi
 from scm.network_services.api.ethernet_interfaces_api import EthernetInterfacesApi
+from scm.network_services.api.globalprotect_match_list_api import GlobalprotectMatchListApi
+from scm.network_services.api.hipmatch_match_list_api import HipmatchMatchListApi
 from scm.network_services.api.ike_crypto_profiles_api import IKECryptoProfilesApi
 from scm.network_services.api.ike_gateways_api import IKEGatewaysApi
 from scm.network_services.api.ipsec_crypto_profiles_api import IPsecCryptoProfilesApi
 from scm.network_services.api.ipsec_tunnels_api import IPsecTunnelsApi
 from scm.network_services.api.interface_management_profiles_api import InterfaceManagementProfilesApi
+from scm.network_services.api.iptag_match_list_api import IptagMatchListApi
 from scm.network_services.api.lldp_profiles_api import LLDPProfilesApi
 from scm.network_services.api.layer2_subinterfaces_api import Layer2SubinterfacesApi
 from scm.network_services.api.layer3_subinterfaces_api import Layer3SubinterfacesApi
@@ -42,8 +46,9 @@ from scm.network_services.api.sdwan_rules_api import SDWANRulesApi
 from scm.network_services.api.sdwan_saas_quality_profiles_api import SDWANSaaSQualityProfilesApi
 from scm.network_services.api.sdwan_traffic_distribution_profiles_api import SDWANTrafficDistributionProfilesApi
 from scm.network_services.api.security_zones_api import SecurityZonesApi
-from scm.network_services.api.ssl_decryption_settings_api import SslDecryptionSettingsApi
+from scm.network_services.api.system_match_list_api import SystemMatchListApi
 from scm.network_services.api.tunnel_interfaces_api import TunnelInterfacesApi
+from scm.network_services.api.userid_match_list_api import UseridMatchListApi
 from scm.network_services.api.vlan_interfaces_api import VLANInterfacesApi
 from scm.network_services.api.zone_protection_profiles_api import ZoneProtectionProfilesApi
 

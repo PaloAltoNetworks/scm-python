@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.identity_services.models.ldap_server_profiles_server_inner import LdapServerProfilesServerInner
@@ -32,17 +32,17 @@ class LdapServerProfiles(BaseModel):
     base: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="The base DN")
     bind_dn: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="The bind DN")
     bind_password: Optional[Annotated[str, Field(strict=True, max_length=121)]] = Field(default=None, description="The bind password")
-    bind_timelimit: Optional[StrictStr] = Field(default=None, description="The bind timeout (seconds)")
+    bind_timelimit: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="The bind timeout (seconds)")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
     id: StrictStr = Field(description="The UUID of the LDAP server profile")
     ldap_type: Optional[StrictStr] = Field(default=None, description="The LDAP server time")
     name: StrictStr = Field(description="The name of the LDAP server profile")
-    retry_interval: Optional[StrictInt] = Field(default=None, description="The search retry interval (seconds)")
+    retry_interval: Optional[Annotated[int, Field(le=3600, strict=True, ge=60)]] = Field(default=None, description="The search retry interval (seconds)")
     server: List[LdapServerProfilesServerInner] = Field(description="The LDAP server configuration")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     ssl: Optional[StrictBool] = Field(default=None, description="Require SSL/TLS secured connection?")
-    timelimit: Optional[StrictInt] = Field(default=None, description="The search timeout (seconds)")
+    timelimit: Optional[Annotated[int, Field(le=30, strict=True, ge=1)]] = Field(default=None, description="The search timeout (seconds)")
     verify_server_certificate: Optional[StrictBool] = Field(default=None, description="Verify server certificate for SSL sessions?")
     __properties: ClassVar[List[str]] = ["base", "bind_dn", "bind_password", "bind_timelimit", "device", "folder", "id", "ldap_type", "name", "retry_interval", "server", "snippet", "ssl", "timelimit", "verify_server_certificate"]
 
