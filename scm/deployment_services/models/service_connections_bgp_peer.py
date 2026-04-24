@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, SecretStr, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,8 +31,9 @@ class ServiceConnectionsBgpPeer(BaseModel):
     local_ipv6_address: Optional[StrictStr] = None
     peer_ip_address: Optional[StrictStr] = None
     peer_ipv6_address: Optional[StrictStr] = None
+    same_as_primary: Optional[StrictBool] = Field(default=None, description="Same peer IP address for SC")
     secret: Optional[SecretStr] = None
-    __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "secret"]
+    __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "same_as_primary", "secret"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,6 +90,7 @@ class ServiceConnectionsBgpPeer(BaseModel):
             "local_ipv6_address": obj.get("local_ipv6_address"),
             "peer_ip_address": obj.get("peer_ip_address"),
             "peer_ipv6_address": obj.get("peer_ipv6_address"),
+            "same_as_primary": obj.get("same_as_primary"),
             "secret": obj.get("secret")
         })
         return _obj

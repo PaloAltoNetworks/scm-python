@@ -31,12 +31,9 @@ class ExportCertificatePayload(BaseModel):
     passphrase: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["format", "passphrase"]
 
-    @field_validator('passphrase')
-    def passphrase_validate_enum(cls, value):
+    @field_validator('format')
+    def format_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         if value not in set(['pkcs12', 'pem', 'der', 'pkcs10']):
             raise ValueError("must be one of enum values ('pkcs12', 'pem', 'der', 'pkcs10')")
         return value

@@ -167,3 +167,29 @@ def test_delete_ipsec_crypto_profile_by_id(ipsec_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_ipsec_crypto_profiles(ipsec_api, clean_ipsec_profile):
+    """
+    Test fetching a single IPsec crypto profile by name using the fetch convenience method.
+    Equivalent to Go: Test_network_services_IPsecCryptoProfilesAPIService_FetchIPsecCryptoProfiles
+    """
+    # Fetch by exact name
+    fetched_obj = ipsec_api.fetch_ipsec_crypto_profiles(
+        name=clean_ipsec_profile.name,
+        folder=TARGET_FOLDER
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found profile '{clean_ipsec_profile.name}'"
+    assert fetched_obj.id == clean_ipsec_profile.id
+    assert fetched_obj.name == clean_ipsec_profile.name
+    logger.info(f"\n[SUCCESS] fetch_ipsec_crypto_profiles found object: {fetched_obj.name}")
+
+    # Test fetching non-existent profile (should return None)
+    not_found = ipsec_api.fetch_ipsec_crypto_profiles(
+        name="non-existent-ipsec-crypto-profile-xyz-12345",
+        folder=TARGET_FOLDER
+    )
+    assert not_found is None, "Should return None for non-existent profile"
+    logger.info(f"\n[SUCCESS] fetch_ipsec_crypto_profiles correctly returned None for non-existent profile")

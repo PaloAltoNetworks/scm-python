@@ -63,3 +63,34 @@ def test_list_bandwidth_allocations(bandwidth_allocations_api):
     response = bandwidth_allocations_api.list_bandwidth_allocations()
     assert response is not None
     logger.info(f"Listed Bandwidth Allocations successfully")
+
+
+def test_fetch_bandwidth_allocations(bandwidth_allocations_api):
+    """
+    Test fetch method for bandwidth allocations.
+    Uses client-side pagination to find an object by name.
+    """
+    # First, list to find an existing allocation name
+    response = bandwidth_allocations_api.list_bandwidth_allocations()
+    if response is None or not hasattr(response, 'data') or not response.data:
+        pytest.skip("No bandwidth allocations found to test fetch")
+
+    target = response.data[0]
+    target_name = target.name
+    logger.info(f"Testing fetch for: {target_name}")
+
+    # Use fetch method (client-side pagination)
+    fetched = bandwidth_allocations_api.fetch_bandwidth_allocations(name=target_name)
+
+    assert fetched is not None
+    assert fetched.name == target_name
+    logger.info(f"Successfully fetched bandwidth allocation: {fetched.name}")
+
+
+def test_fetch_bandwidth_allocations_not_found(bandwidth_allocations_api):
+    """Test fetch returns None for non-existent allocation."""
+    result = bandwidth_allocations_api.fetch_bandwidth_allocations(
+        name="non-existent-bandwidth-allocation-xyz123"
+    )
+    assert result is None
+    logger.info("Correctly returned None for non-existent bandwidth allocation")

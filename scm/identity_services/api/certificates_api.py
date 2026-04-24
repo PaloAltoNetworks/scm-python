@@ -21,6 +21,7 @@ from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
 from scm.identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.models.certificates_import import CertificatesImport
 from scm.identity_services.models.certificates_list_response import CertificatesListResponse
 from scm.identity_services.models.certificates_post import CertificatesPost
 from scm.identity_services.models.export_certificate_payload import ExportCertificatePayload
@@ -673,7 +674,7 @@ class CertificatesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "ExportCertificateResponse",
+            '200': "ExportCertificateResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -749,7 +750,7 @@ class CertificatesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "ExportCertificateResponse",
+            '200': "ExportCertificateResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -825,7 +826,7 @@ class CertificatesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "ExportCertificateResponse",
+            '200': "ExportCertificateResponse",
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
@@ -920,9 +921,9 @@ class CertificatesApi:
 
     @validate_call
     @with_error_handling
-    def get_certificates_by_id(
+    def import_certificates(
         self,
-        id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
+        certificates_import: Annotated[Optional[CertificatesImport], Field(description="Import certificate payload")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -936,12 +937,12 @@ class CertificatesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> CertificatesGet:
-        """Get a certificate
+        """Import a certificate
 
-        Get an existing certificate. 
+        Import a certificate. 
 
-        :param id: The UUID of the configuration resource (required)
-        :type id: str
+        :param certificates_import: Import certificate payload
+        :type certificates_import: CertificatesImport
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -964,8 +965,8 @@ class CertificatesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_certificates_by_id_serialize(
-            id=id,
+        _param = self._import_certificates_serialize(
+            certificates_import=certificates_import,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -977,7 +978,6 @@ class CertificatesApi:
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
-            '404': "GenericError",
             '409': "GenericError",
         }
         response_data = self.api_client.call_api(
@@ -993,9 +993,9 @@ class CertificatesApi:
 
     @validate_call
     @with_error_handling
-    def get_certificates_by_id_with_http_info(
+    def import_certificates_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
+        certificates_import: Annotated[Optional[CertificatesImport], Field(description="Import certificate payload")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1009,12 +1009,12 @@ class CertificatesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[CertificatesGet]:
-        """Get a certificate
+        """Import a certificate
 
-        Get an existing certificate. 
+        Import a certificate. 
 
-        :param id: The UUID of the configuration resource (required)
-        :type id: str
+        :param certificates_import: Import certificate payload
+        :type certificates_import: CertificatesImport
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1037,8 +1037,8 @@ class CertificatesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_certificates_by_id_serialize(
-            id=id,
+        _param = self._import_certificates_serialize(
+            certificates_import=certificates_import,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1050,7 +1050,6 @@ class CertificatesApi:
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
-            '404': "GenericError",
             '409': "GenericError",
         }
         response_data = self.api_client.call_api(
@@ -1066,9 +1065,9 @@ class CertificatesApi:
 
     @validate_call
     @with_error_handling
-    def get_certificates_by_id_without_preload_content(
+    def import_certificates_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="The UUID of the configuration resource")],
+        certificates_import: Annotated[Optional[CertificatesImport], Field(description="Import certificate payload")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1082,12 +1081,12 @@ class CertificatesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get a certificate
+        """Import a certificate
 
-        Get an existing certificate. 
+        Import a certificate. 
 
-        :param id: The UUID of the configuration resource (required)
-        :type id: str
+        :param certificates_import: Import certificate payload
+        :type certificates_import: CertificatesImport
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1110,8 +1109,8 @@ class CertificatesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_certificates_by_id_serialize(
-            id=id,
+        _param = self._import_certificates_serialize(
+            certificates_import=certificates_import,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1123,7 +1122,6 @@ class CertificatesApi:
             '400': "GenericError",
             '401': "GenericError",
             '403': "GenericError",
-            '404': "GenericError",
             '409': "GenericError",
         }
         response_data = self.api_client.call_api(
@@ -1133,9 +1131,9 @@ class CertificatesApi:
         return response_data.response
 
 
-    def _get_certificates_by_id_serialize(
+    def _import_certificates_serialize(
         self,
-        id,
+        certificates_import,
         _request_auth,
         _content_type,
         _headers,
@@ -1157,12 +1155,12 @@ class CertificatesApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if id is not None:
-            _path_params['id'] = id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
+        if certificates_import is not None:
+            _body_params = certificates_import
 
 
         # set the HTTP header `Accept`
@@ -1173,6 +1171,19 @@ class CertificatesApi:
                 ]
             )
 
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1180,8 +1191,8 @@ class CertificatesApi:
         ]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/certificates/{id}',
+            method='POST',
+            resource_path='/certificates:import',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

@@ -213,3 +213,29 @@ def test_delete_application_by_id(applications_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_applications(applications_api, clean_application):
+    """
+    Test fetching a single application by name using the fetch convenience method.
+    Equivalent to Go: Test_objects_ApplicationsAPIService_FetchApplications
+    """
+    # Fetch by exact name
+    fetched_obj = applications_api.fetch_applications(
+        name=clean_application.name,
+        folder=clean_application.folder
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found application '{clean_application.name}'"
+    assert fetched_obj.id == clean_application.id
+    assert fetched_obj.name == clean_application.name
+    logger.info(f"\n[SUCCESS] fetch_applications found object: {fetched_obj.name}")
+
+    # Test fetching non-existent application (should return None)
+    not_found = applications_api.fetch_applications(
+        name="non-existent-application-xyz-12345",
+        folder=clean_application.folder
+    )
+    assert not_found is None, "Should return None for non-existent application"
+    logger.info(f"\n[SUCCESS] fetch_applications correctly returned None for non-existent application")

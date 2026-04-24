@@ -28,6 +28,9 @@ from scm.device_settings.configuration import Configuration as DeviceSettingsCon
 from scm.identity_services import api as identity_services_api
 from scm.identity_services.api_client import ApiClient as IdentityServicesApiClient
 from scm.identity_services.configuration import Configuration as IdentityServicesConfiguration
+from scm.mobile_agent import api as mobile_agent_api
+from scm.mobile_agent.api_client import ApiClient as MobileAgentApiClient
+from scm.mobile_agent.configuration import Configuration as MobileAgentConfiguration
 from scm.network_services import api as network_services_api
 from scm.network_services.api_client import ApiClient as NetworkServicesApiClient
 from scm.network_services.configuration import Configuration as NetworkServicesConfiguration
@@ -328,6 +331,7 @@ class Scm:
         self.deployment_services = self._init_deployment_services_client()
         self.device_settings = self._init_device_settings_client()
         self.identity_services = self._init_identity_services_client()
+        self.mobile_agent = self._init_mobile_agent_client()
         self.network_services = self._init_network_services_client()
         self.objects = self._init_objects_client()
         self.security_services = self._init_security_services_client()
@@ -515,6 +519,8 @@ class Scm:
             self.device_settings.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'identity_services') and hasattr(self.identity_services, 'api_client'):
             self.identity_services.api_client.configuration.access_token = self._access_token
+        if hasattr(self, 'mobile_agent') and hasattr(self.mobile_agent, 'api_client'):
+            self.mobile_agent.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'network_services') and hasattr(self.network_services, 'api_client'):
             self.network_services.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'objects') and hasattr(self.objects, 'api_client'):
@@ -636,6 +642,25 @@ class Scm:
 
         identity_services_api.api_client = client
         return identity_services_api
+    def _init_mobile_agent_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: /config/mobile-agent/v1
+        config = MobileAgentConfiguration(
+            host=f"https://{self.host}/config/mobile-agent/v1"
+        )
+        config.verify_ssl = self.verify_ssl
+        config.access_token = self._access_token
+
+        client = MobileAgentApiClient(config)
+
+        # Wrap the rest client's request method to auto-refresh tokens
+        client.rest_client.request = _create_auto_refresh_wrapper(
+            self, client.rest_client.request
+        )
+
+        mobile_agent_api.api_client = client
+        return mobile_agent_api
     def _init_network_services_client(self):
         # Construct base URL by appending the service-specific path suffix
         # Host: https://api.sase.paloaltonetworks.com

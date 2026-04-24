@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **protocol** | [**ServiceConnectionsProtocol**](ServiceConnectionsProtocol.md) |  | [optional] 
 **qos** | [**ServiceConnectionsQos**](ServiceConnectionsQos.md) |  | [optional] 
 **region** | **str** |  | 
+**region_tag** | **str** |  | [optional] 
 **secondary_ipsec_tunnel** | **str** |  | [optional] 
 **source_nat** | **bool** |  | [optional] 
 **subnets** | **List[str]** |  | [optional] 

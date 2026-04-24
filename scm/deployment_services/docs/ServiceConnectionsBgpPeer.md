@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **local_ipv6_address** | **str** |  | [optional] 
 **peer_ip_address** | **str** |  | [optional] 
 **peer_ipv6_address** | **str** |  | [optional] 
+**same_as_primary** | **bool** | Same peer IP address for SC | [optional] 
 **secret** | **str** |  | [optional] 
 
 ## Example
