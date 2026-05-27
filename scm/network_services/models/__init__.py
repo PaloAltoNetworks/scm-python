@@ -243,6 +243,7 @@ from scm.network_services.models.iptag_match_list import IptagMatchList
 from scm.network_services.models.iptag_match_list_list_response import IptagMatchListListResponse
 from scm.network_services.models.lldp_profiles_list_response import LLDPProfilesListResponse
 from scm.network_services.models.lacp import Lacp
+from scm.network_services.models.lacp_high_availability import LacpHighAvailability
 from scm.network_services.models.layer2_subinterfaces import Layer2Subinterfaces
 from scm.network_services.models.layer2_subinterfaces_list_response import Layer2SubinterfacesListResponse
 from scm.network_services.models.layer3_sub_interfaces_dhcp_client import Layer3SubInterfacesDhcpClient

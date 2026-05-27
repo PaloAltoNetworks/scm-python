@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Config Operations
+    Network Services
 
-    These APIs are used for Prisma Access and NGFW operations within Strata Cloud Manager.
+    These APIs are used for defining and managing network services configuration within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,21 +18,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PushCandidateConfigVersionsRequest(BaseModel):
+class LacpHighAvailability(BaseModel):
     """
-    PushCandidateConfigVersionsRequest
+    High Availability settings
     """ # noqa: E501
-    admin: Optional[List[StrictStr]] = Field(default=None, description="List the administrators and/or service accounts in this field. If you want to push folder named All, please do not add this admin field at all and list each of the folders under All in the folder field.")
-    description: Optional[StrictStr] = Field(default=None, description="A description of the changes being pushed")
-    devices: Optional[List[StrictStr]] = Field(default=None, description="The target devices for the configuration push")
-    folder: Optional[List[Annotated[str, Field(strict=True, max_length=64)]]] = Field(default=None, description="The target folders for the configuration push")
-    __properties: ClassVar[List[str]] = ["admin", "description", "devices", "folder"]
+    passive_pre_negotiation: Optional[StrictBool] = False
+    __properties: ClassVar[List[str]] = ["passive_pre_negotiation"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +48,7 @@ class PushCandidateConfigVersionsRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PushCandidateConfigVersionsRequest from a JSON string"""
+        """Create an instance of LacpHighAvailability from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -77,7 +73,7 @@ class PushCandidateConfigVersionsRequest(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PushCandidateConfigVersionsRequest from a dict"""
+        """Create an instance of LacpHighAvailability from a dict"""
         if obj is None:
             return None
 
@@ -85,10 +81,7 @@ class PushCandidateConfigVersionsRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "admin": obj.get("admin"),
-            "description": obj.get("description"),
-            "devices": obj.get("devices"),
-            "folder": obj.get("folder")
+            "passive_pre_negotiation": obj.get("passive_pre_negotiation") if obj.get("passive_pre_negotiation") is not None else False
         })
         return _obj
 
