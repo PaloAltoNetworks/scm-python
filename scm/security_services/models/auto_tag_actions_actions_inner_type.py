@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Objects
+    Security Services
 
-    These APIs are used for defining and managing policy object configurations within Strata Cloud Manager.
+    These APIs are used for defining and managing security services configurations within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,21 +18,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from scm.objects.models.auto_tag_actions import AutoTagActions
+from scm.security_services.models.auto_tag_actions_actions_inner_type_tagging import AutoTagActionsActionsInnerTypeTagging
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AutoTagActionsListResponse(BaseModel):
+class AutoTagActionsActionsInnerType(BaseModel):
     """
-    AutoTagActionsListResponse
+    AutoTagActionsActionsInnerType
     """ # noqa: E501
-    data: List[AutoTagActions]
-    limit: StrictInt = Field(description="The maximum number of results per page")
-    offset: StrictInt = Field(description="The offset into the list of results returned")
-    total: StrictInt = Field(description="The total count of results")
-    __properties: ClassVar[List[str]] = ["data", "limit", "offset", "total"]
+    tagging: AutoTagActionsActionsInnerTypeTagging
+    __properties: ClassVar[List[str]] = ["tagging"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +49,7 @@ class AutoTagActionsListResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AutoTagActionsListResponse from a JSON string"""
+        """Create an instance of AutoTagActionsActionsInnerType from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,40 +70,22 @@ class AutoTagActionsListResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
-        _items = []
-        if self.data:
-            for _item_data in self.data:
-                if _item_data:
-                    _items.append(_item_data.to_dict())
-            _dict['data'] = _items
+        # override the default output from pydantic by calling `to_dict()` of tagging
+        if self.tagging:
+            _dict['tagging'] = self.tagging.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AutoTagActionsListResponse from a dict"""
+        """Create an instance of AutoTagActionsActionsInnerType from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        # Detect bare object response (API returns single object instead of paginated list)
-        # This happens when server-side name filtering returns exactly one result
-        if "data" not in obj and "total" not in obj:
-            single_obj = AutoTagActions.from_dict(obj)
-            return cls.model_validate({
-                "data": [single_obj] if single_obj is not None else [],
-                "limit": 1,
-                "offset": 0,
-                "total": 1 if single_obj is not None else 0,
-            })
-
         _obj = cls.model_validate({
-            "data": [AutoTagActions.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
-            "limit": obj.get("limit") if obj.get("limit") is not None else 200,
-            "offset": obj.get("offset") if obj.get("offset") is not None else 0,
-            "total": obj.get("total")
+            "tagging": AutoTagActionsActionsInnerTypeTagging.from_dict(obj["tagging"]) if obj.get("tagging") is not None else None
         })
         return _obj
 

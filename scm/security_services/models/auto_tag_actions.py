@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Objects
+    Security Services
 
-    These APIs are used for defining and managing policy object configurations within Strata Cloud Manager.
+    These APIs are used for defining and managing security services configurations within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm.objects.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
+from scm.security_services.models.auto_tag_actions_actions_inner import AutoTagActionsActionsInner
 from typing import Optional, Set
 from typing_extensions import Self
 
