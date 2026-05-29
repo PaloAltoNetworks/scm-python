@@ -17,7 +17,7 @@ def client():
 
 @pytest.fixture(scope="module")
 def auto_tag_actions_api(client):
-    return client.objects.AutoTagActionsApi(client.objects.api_client)
+    return client.security_services.AutoTagActionsApi(client.security_services.api_client)
 
 
 def test_list_auto_tag_actions(auto_tag_actions_api):

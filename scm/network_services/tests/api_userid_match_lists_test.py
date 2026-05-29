@@ -47,6 +47,7 @@ def dependency_profiles(http_server_profiles_api, syslog_server_profiles_api):
     # Create HTTP Server Profile
     http_name = f"test-http-{random_id}"
     http_payload = HttpServerProfiles(
+        id="",
         name=http_name,
         folder=TARGET_FOLDER,
         server=[HttpServerProfilesServerInner(
@@ -63,6 +64,7 @@ def dependency_profiles(http_server_profiles_api, syslog_server_profiles_api):
     # Create Syslog Server Profile (shortened name to stay under 31 char limit)
     syslog_name = f"sys-{random_id}"
     syslog_payload = SyslogServerProfiles(
+        id="",
         name=syslog_name,
         folder=TARGET_FOLDER,
         server=[SyslogServerProfilesServerInner(
