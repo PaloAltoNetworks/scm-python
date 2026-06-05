@@ -1,8 +1,8 @@
 # SCM Python SDK
 
-[![PyPI version](https://img.shields.io/pypi/v/scm-python.svg)](https://pypi.org/project/scm-python/) [![Python versions](https://img.shields.io/pypi/pyversions/scm-python.svg)](https://pypi.org/project/scm-python/) [![License](https://img.shields.io/pypi/l/scm-python.svg)](https://github.com/PaloAltoNetworks/scm-python/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/scm-python.svg)](https://pypi.org/project/scm-python/) [![Python versions](https://img.shields.io/pypi/pyversions/scm-python.svg)](https://pypi.org/project/scm-python/) [![License](https://img.shields.io/pypi/l/scm-python.svg)](https://github.com/PaloAltoNetworks/scm-python/blob/develop/LICENSE)
 
-Auto-generated Python SDK for [Palo Alto Networks Strata Cloud Manager (SCM)](https://www.paloaltonetworks.com/strata-cloud-manager).
+Auto-generated Python SDK for [Palo Alto Networks Strata Cloud Manager (SCM)](https://www.paloaltonetworks.com/network-security/strata-cloud-manager).
 
 ## Beta Release Disclaimer
 

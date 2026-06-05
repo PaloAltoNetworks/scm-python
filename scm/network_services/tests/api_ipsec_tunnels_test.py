@@ -12,6 +12,8 @@ from scm.network_services.models import (
     IkeGatewaysAuthentication,
     IkeGatewaysAuthenticationPreSharedKey,
     IkeGatewaysPeerAddress,
+    IkeGatewaysPeerId,
+    IkeGatewaysLocalId,
     IkeGatewaysProtocol,
     IkeGatewaysProtocolIkev1,
     IkeCryptoProfiles,
@@ -69,6 +71,8 @@ def dependency_ike_gateway(ike_gw_api, ike_crypto_api):
             pre_shared_key=IkeGatewaysAuthenticationPreSharedKey(key="secret123")
         ),
         peer_address=IkeGatewaysPeerAddress(ip="1.1.1.1"),
+        peer_id=IkeGatewaysPeerId(type="ipaddr", id="10.3.3.4"),
+        local_id=IkeGatewaysLocalId(type="ipaddr", id="10.3.4.4"),
         protocol=IkeGatewaysProtocol(
             ikev1=IkeGatewaysProtocolIkev1(ike_crypto_profile=crypto_name),
             version="ikev1"

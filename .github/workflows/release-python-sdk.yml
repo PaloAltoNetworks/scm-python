@@ -1,35 +1,198 @@
-# Terraform Provider release workflow.
+# Python SDK release workflow.
+#
+# Tag-driven release: pushing a "vX.Y.Z" tag is the trigger. Before publishing,
+# the `check` job enforces two guards, either of which hard-fails the release:
+#   1. The tag version (vX.Y.Z -> X.Y.Z) MUST equal the version in
+#      pyproject.toml.
+#   2. That version must NOT already exist on PyPI (authoritative guard), so a
+#      mistaken or duplicate tag fails loudly instead of silently no-op'ing.
+#
+# Publishing uses PyPI Trusted Publishing (OIDC) and runs in the 'pypi'
+# environment. If that environment has required reviewers, the upload waits for
+# a manual approval: the trigger is automatic, the publish is gated.
+#
+# Release notes come from CHANGELOG.md: the `check` job extracts the section
+# matching the released version (the `## [X.Y.Z]` heading) and fails the release
+# early if no matching, non-empty section exists. That section becomes the
+# GitHub Release body. The GitHub Release is cut against the tag that triggered
+# this run.
 name: Release-Python-SDK
 
-# This GitHub action creates a release when a tag that matches the pattern
-# "v*" (e.g. v0.1.0) is created.
 on:
   push:
     tags:
       - 'v*'
 
+concurrency:
+  # Never allow two publishes in flight; do not cancel an in-progress publish.
+  group: pypi-release
+  cancel-in-progress: false
+
 jobs:
-    publish:
-      runs-on: ubuntu-latest
-      permissions:
-        contents: read
-      steps:
-        - uses: actions/checkout@v4
+  check:
+    name: Check release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.gate.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
 
-        - uses: actions/setup-python@v5
-          with:
-            python-version: "3.12"
+      - name: Validate tag against pyproject and PyPI
+        id: gate
+        run: |
+          set -euo pipefail
 
-        - name: Build
-          run: |
-            pip install build twine
-            python -m build
+          # Version from the tag that triggered this run (v1.2.3 -> 1.2.3).
+          TAG='${{ github.ref_name }}'
+          VERSION="${TAG#v}"
+          echo "Tag version: $VERSION"
 
-        - name: Check Distribution
-          run: twine check dist/*
+          # Authoritative version read from pyproject (tomllib, not a grep).
+          PYPROJECT_VERSION=$(python3 -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          echo "pyproject.toml version: $PYPROJECT_VERSION"
 
-        - name: Upload to PyPI
-          env:
-            TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-            TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-          run: twine upload dist/*
+          # Guard 1: the tag MUST match pyproject. Mismatch is a hard error.
+          if [ "$VERSION" != "$PYPROJECT_VERSION" ]; then
+            echo "ERROR: tag $TAG (version $VERSION) does not match pyproject.toml version $PYPROJECT_VERSION." >&2
+            echo "Bump pyproject.toml and the tag together, or delete and re-create the tag." >&2
+            exit 1
+          fi
+
+          # Guard 2: PyPI existence check. 404 == new (safe to publish); anything
+          # else means the version already exists -> hard fail so a mistaken or
+          # duplicate tag is loud, not a silent no-op.
+          HTTP_CODE=$(curl -s -o /dev/null -w '%{http_code}' "https://pypi.org/pypi/scm-python/$VERSION/json")
+          echo "PyPI lookup for $VERSION returned HTTP $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "404" ]; then
+            echo "ERROR: version $VERSION already exists on PyPI (HTTP $HTTP_CODE)." >&2
+            echo "Bump pyproject.toml to a new version and tag that, rather than re-tagging a published version." >&2
+            exit 1
+          fi
+
+          echo "Will publish $VERSION."
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      # Extract the CHANGELOG.md section for this version and HARD-FAIL the
+      # release if it is missing or empty. Runs in `check` (before the `pypi`
+      # environment approval gate) so a forgotten entry fails fast, not after a
+      # reviewer has already approved. The extracted notes are passed to the
+      # publish job as an artifact.
+      - name: Extract and validate release notes
+        env:
+          VERSION: ${{ steps.gate.outputs.version }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, re, sys
+
+          version = os.environ["VERSION"]
+          with open("CHANGELOG.md", encoding="utf-8") as fh:
+              lines = fh.readlines()
+
+          # Match the version heading, e.g. "## [1.2.0] - 2026-06-05".
+          # The date suffix is ignored; "[Unreleased]" never matches.
+          heading = re.compile(r'^##\s+\[' + re.escape(version) + r'\]')
+          start = None
+          for i, line in enumerate(lines):
+              if heading.match(line):
+                  start = i + 1
+                  break
+
+          if start is None:
+              sys.exit(
+                  f"ERROR: no CHANGELOG.md section for version {version} "
+                  f"(expected a '## [{version}]' heading). Add an entry before releasing."
+              )
+
+          # Collect until the next level-2 heading ('## '); '### ' subsections stay.
+          body = []
+          for line in lines[start:]:
+              if re.match(r'^## ', line):
+                  break
+              body.append(line)
+
+          # "Empty" means no real content: a section of only blank lines and
+          # empty '### Added/Changed/Fixed' buckets must fail the gate too.
+          content = [l for l in body if l.strip() and not re.match(r'^###\s', l)]
+          if not content:
+              sys.exit(
+                  f"ERROR: CHANGELOG.md section for version {version} has no entries "
+                  f"(only empty headings/blank lines). Add at least one change before releasing."
+              )
+
+          text = "".join(body).strip()
+
+          with open("release-notes.md", "w", encoding="utf-8") as fh:
+              fh.write(text + "\n")
+
+          print(f"Release notes for {version}:\n{text}")
+          PY
+
+      - name: Upload release notes
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: release-notes.md
+          retention-days: 1
+
+  publish:
+    name: Build and publish to PyPI
+    needs: check
+    runs-on: ubuntu-latest
+    # Publishing runs in the 'pypi' environment. Configure required reviewers on
+    # this environment in the repo settings (Settings -> Environments -> pypi) to
+    # gate every release behind a manual approval. The tag-push trigger is
+    # automatic; the actual upload waits for that approval.
+    environment:
+      name: pypi
+      url: https://pypi.org/p/scm-python
+    permissions:
+      # id-token: write is required for PyPI Trusted Publishing (OIDC) and for
+      # the PEP 740 provenance attestations emitted by gh-action-pypi-publish.
+      id-token: write
+      # contents: write is required to cut the GitHub Release.
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Release notes curated by the `check` job from CHANGELOG.md.
+      - name: Download release notes
+        uses: actions/download-artifact@v4
+        with:
+          name: release-notes
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build
+        run: |
+          pip install build twine
+          python -m build
+
+      - name: Check Distribution
+        run: twine check --strict dist/*
+
+      # PyPI Trusted Publishing (OIDC): no stored API token. PyPI must have a
+      # publisher registered for owner=PaloAltoNetworks, repo=scm-python,
+      # workflow=release-python-sdk.yml, environment=pypi. Because scm-python is
+      # not yet on PyPI, register this as a PENDING publisher before the first
+      # run; the project is created on first successful upload. Provenance
+      # attestations are on by default.
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.14.0
+
+      # The tag already exists (it triggered this run); cut the GitHub Release
+      # against it using the CHANGELOG-derived notes.
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG='${{ github.ref_name }}'
+          gh release create "$TAG" dist/* \
+            --title "$TAG" \
+            --notes-file release-notes.md

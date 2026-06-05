@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activate_rate** | **int** | Connection rate (cps) to activate SYN cookies proxy | [default to 0]
-**alarm_rate** | **int** | Connection rate (cps) to generate alarm | [default to 10000]
+**activate_rate** | **int** | Connection rate (cps) to activate SYN cookies proxy | [optional] [default to 0]
+**alarm_rate** | **int** | Connection rate (cps) to generate alarm | [optional] [default to 10000]
 **block** | [**DosProtectionProfilesFloodTcpSynSynCookiesBlock**](DosProtectionProfilesFloodTcpSynSynCookiesBlock.md) |  | [optional] 
-**maximal_rate** | **int** | Maximum connection rate (cps) allowed | [default to 1000000]
+**maximal_rate** | **int** | Maximum connection rate (cps) allowed | [optional] [default to 1000000]
 
 ## Example
 

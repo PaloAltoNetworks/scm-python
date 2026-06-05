@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm.objects.models.auto_tag_actions_actions_inner_type import AutoTagActionsActionsInnerType
+from scm.security_services.models.auto_tag_actions_actions_inner_type import AutoTagActionsActionsInnerType
 
 # TODO update the JSON string below
 json = "{}"
