@@ -29,10 +29,10 @@ class DosProtectionProfilesFloodIcmpRed(BaseModel):
     """
     DosProtectionProfilesFloodIcmpRed
     """ # noqa: E501
-    activate_rate: Optional[Annotated[int, Field(le=2000000, strict=True, ge=1)]] = Field(default=10000, description="Connection rate (cps) to start RED", alias="activate-rate")
-    alarm_rate: Optional[Annotated[int, Field(le=2000000, strict=True, ge=0)]] = Field(default=10000, description="Connection rate (cps) to generate alarm", alias="alarm-rate")
+    activate_rate: Annotated[int, Field(le=2000000, strict=True, ge=1)] = Field(description="Connection rate (cps) to start RED", alias="activate-rate")
+    alarm_rate: Annotated[int, Field(le=2000000, strict=True, ge=0)] = Field(description="Connection rate (cps) to generate alarm", alias="alarm-rate")
     block: Optional[DosProtectionProfilesFloodIcmpRedBlock] = None
-    maximal_rate: Optional[Annotated[int, Field(le=2000000, strict=True, ge=1)]] = Field(default=40000, description="Maximal connection rate (cps) allowed", alias="maximal-rate")
+    maximal_rate: Annotated[int, Field(le=2000000, strict=True, ge=1)] = Field(description="Maximal connection rate (cps) allowed", alias="maximal-rate")
     __properties: ClassVar[List[str]] = ["activate-rate", "alarm-rate", "block", "maximal-rate"]
 
     model_config = ConfigDict(

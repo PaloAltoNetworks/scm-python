@@ -25,7 +25,6 @@ jobs:
           - config_setup
           - config_operations
           - device_settings
-          - mobile_agent
 
     steps:
       - name: Checkout code

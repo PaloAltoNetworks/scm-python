@@ -4,7 +4,6 @@
 from scm.security_services.api.anti_spyware_profiles_api import AntiSpywareProfilesApi
 from scm.security_services.api.anti_spyware_signatures_api import AntiSpywareSignaturesApi
 from scm.security_services.api.application_override_rules_api import ApplicationOverrideRulesApi
-from scm.security_services.api.auto_tag_actions_api import AutoTagActionsApi
 from scm.security_services.api.dns_security_profiles_api import DNSSecurityProfilesApi
 from scm.security_services.api.data_filtering_api import DataFilteringApi
 from scm.security_services.api.data_objects_api import DataObjectsApi

@@ -1,6 +1,6 @@
-# scm.security_services.AutoTagActionsApi
+# scm.objects.AutoTagActionsApi
 
-All URIs are relative to *https://api.strata.paloaltonetworks.com/config/security/v1*
+All URIs are relative to *https://api.strata.paloaltonetworks.com/config/objects/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,15 +22,15 @@ Create a new auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.security_services
-from scm.security_services.models.auto_tag_actions import AutoTagActions
-from scm.security_services.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions import AutoTagActions
+from scm.objects.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.security_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
+configuration = scm.objects.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -39,15 +39,15 @@ configuration = scm.security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.security_services.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.security_services.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.security_services.AutoTagActionsApi(api_client)
-    auto_tag_actions = scm.security_services.AutoTagActions() # AutoTagActions | Created (optional)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
+    auto_tag_actions = scm.objects.AutoTagActions() # AutoTagActions | Created (optional)
 
     try:
         # Create an auto-tag action
@@ -105,14 +105,14 @@ Delete an auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.security_services
-from scm.security_services.rest import ApiException
+import scm.objects
+from scm.objects.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.security_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
+configuration = scm.objects.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -121,14 +121,14 @@ configuration = scm.security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.security_services.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.security_services.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.security_services.AutoTagActionsApi(api_client)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
     name = 'name_example' # str | The name of the configuration resource
 
     try:
@@ -186,15 +186,15 @@ Retrieve a list of auto-tag actions
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.security_services
-from scm.security_services.models.auto_tag_actions_list_response import AutoTagActionsListResponse
-from scm.security_services.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions_list_response import AutoTagActionsListResponse
+from scm.objects.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.security_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
+configuration = scm.objects.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -203,14 +203,14 @@ configuration = scm.security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.security_services.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.security_services.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.security_services.AutoTagActionsApi(api_client)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
     name = 'name_example' # str | The name of the configuration resource (optional)
     offset = 0 # int | The offset into the list of results returned (optional) (default to 0)
     limit = 200 # int | The maximum number of results per page (optional) (default to 200)
@@ -273,15 +273,15 @@ Update an existing auto-tag action.
 * Bearer (JWT) Authentication (scmToken):
 
 ```python
-import scm.security_services
-from scm.security_services.models.auto_tag_actions import AutoTagActions
-from scm.security_services.rest import ApiException
+import scm.objects
+from scm.objects.models.auto_tag_actions import AutoTagActions
+from scm.objects.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/security/v1
+# Defining the host is optional and defaults to https://api.strata.paloaltonetworks.com/config/objects/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = scm.security_services.Configuration(
-    host = "https://api.strata.paloaltonetworks.com/config/security/v1"
+configuration = scm.objects.Configuration(
+    host = "https://api.strata.paloaltonetworks.com/config/objects/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -290,15 +290,15 @@ configuration = scm.security_services.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): scmToken
-configuration = scm.security_services.Configuration(
+configuration = scm.objects.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with scm.security_services.ApiClient(configuration) as api_client:
+with scm.objects.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = scm.security_services.AutoTagActionsApi(api_client)
-    auto_tag_actions = scm.security_services.AutoTagActions() # AutoTagActions | OK (optional)
+    api_instance = scm.objects.AutoTagActionsApi(api_client)
+    auto_tag_actions = scm.objects.AutoTagActions() # AutoTagActions | OK (optional)
 
     try:
         # Update an auto-tag action

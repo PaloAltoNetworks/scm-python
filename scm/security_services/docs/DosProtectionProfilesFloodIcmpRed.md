@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activate_rate** | **int** | Connection rate (cps) to start RED | [optional] [default to 10000]
-**alarm_rate** | **int** | Connection rate (cps) to generate alarm | [optional] [default to 10000]
+**activate_rate** | **int** | Connection rate (cps) to start RED | [default to 10000]
+**alarm_rate** | **int** | Connection rate (cps) to generate alarm | [default to 10000]
 **block** | [**DosProtectionProfilesFloodIcmpRedBlock**](DosProtectionProfilesFloodIcmpRedBlock.md) |  | [optional] 
-**maximal_rate** | **int** | Maximal connection rate (cps) allowed | [optional] [default to 40000]
+**maximal_rate** | **int** | Maximal connection rate (cps) allowed | [default to 40000]
 
 ## Example
 

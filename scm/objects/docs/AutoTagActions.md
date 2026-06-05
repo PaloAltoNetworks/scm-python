@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm.security_services.models.auto_tag_actions import AutoTagActions
+from scm.objects.models.auto_tag_actions import AutoTagActions
 
 # TODO update the JSON string below
 json = "{}"

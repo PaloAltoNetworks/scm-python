@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from scm.security_services.models.auto_tag_actions_actions_inner_type_tagging import AutoTagActionsActionsInnerTypeTagging
+from scm.objects.models.auto_tag_actions_actions_inner_type_tagging import AutoTagActionsActionsInnerTypeTagging
 
 # TODO update the JSON string below
 json = "{}"

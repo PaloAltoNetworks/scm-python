@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Security Services
+    Objects
 
-    These APIs are used for defining and managing security services configurations within Strata Cloud Manager.
+    These APIs are used for defining and managing policy object configurations within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,19 +18,28 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
-from typing import Any, ClassVar, Dict, List
-from scm.security_services.models.auto_tag_actions_actions_inner_type import AutoTagActionsActionsInnerType
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List, Optional
+from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AutoTagActionsActionsInner(BaseModel):
+class AutoTagActionsActionsInnerTypeTagging(BaseModel):
     """
-    AutoTagActionsActionsInner
+    AutoTagActionsActionsInnerTypeTagging
     """ # noqa: E501
-    name: StrictStr
-    type: AutoTagActionsActionsInnerType
-    __properties: ClassVar[List[str]] = ["name", "type"]
+    action: StrictStr = Field(description="Add or Remove tag option")
+    tags: Optional[Annotated[List[Annotated[str, Field(strict=True, max_length=127)]], Field(max_length=64)]] = Field(default=None, description="Tags for address object")
+    target: StrictStr = Field(description="Source or Destination Address, User, X-Forwarded-For Address")
+    timeout: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["action", "tags", "target", "timeout"]
+
+    @field_validator('action')
+    def action_validate_enum(cls, value):
+        """Validates the enum"""
+        if value not in set(['add-tag', 'remove-tag']):
+            raise ValueError("must be one of enum values ('add-tag', 'remove-tag')")
+        return value
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +59,7 @@ class AutoTagActionsActionsInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AutoTagActionsActionsInner from a JSON string"""
+        """Create an instance of AutoTagActionsActionsInnerTypeTagging from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,14 +80,11 @@ class AutoTagActionsActionsInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of type
-        if self.type:
-            _dict['type'] = self.type.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AutoTagActionsActionsInner from a dict"""
+        """Create an instance of AutoTagActionsActionsInnerTypeTagging from a dict"""
         if obj is None:
             return None
 
@@ -86,8 +92,10 @@ class AutoTagActionsActionsInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "name": obj.get("name"),
-            "type": AutoTagActionsActionsInnerType.from_dict(obj["type"]) if obj.get("type") is not None else None
+            "action": obj.get("action"),
+            "tags": obj.get("tags"),
+            "target": obj.get("target"),
+            "timeout": obj.get("timeout")
         })
         return _obj
 
