@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scm-python"
-version = "0.1.0"
+version = "0.0.1-beta.2"
 description = "Palo Alto Networks Strata Cloud Manager (SCM) Python SDK"
 authors = [
   { name = "Palo Alto Networks", email = "devrel@paloaltonetworks.com" },
