@@ -1,6 +1,6 @@
 # SCM Python SDK
 
-[![PyPI version](https://img.shields.io/pypi/v/scm-python.svg)](https://pypi.org/project/scm-python/) [![Python versions](https://img.shields.io/pypi/pyversions/scm-python.svg)](https://pypi.org/project/scm-python/) [![License](https://img.shields.io/pypi/l/scm-python.svg)](https://github.com/PaloAltoNetworks/scm-python/blob/develop/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/scm-python.svg)](https://pypi.org/project/scm-python/) [![Python versions](https://img.shields.io/pypi/pyversions/scm-python.svg)](https://pypi.org/project/scm-python/) [![License](https://img.shields.io/pypi/l/scm-python.svg)](https://github.com/PaloAltoNetworks/scm-python/blob/develop/LICENSE) [![PyPI - Weekly Downloads](https://img.shields.io/pypi/dw/scm-python.svg)](https://pypistats.org/packages/scm-python) [![PyPI - Monthly Downloads](https://img.shields.io/pypi/dm/scm-python.svg)](https://pypistats.org/packages/scm-python) [![PyPI - Total Downloads](https://img.shields.io/pypi/dd/scm-python.svg)](https://pypistats.org/packages/scm-python)
 
 Auto-generated Python SDK for [Palo Alto Networks Strata Cloud Manager (SCM)](https://www.paloaltonetworks.com/network-security/strata-cloud-manager).
 
@@ -24,10 +24,10 @@ THIS SOFTWARE IS RELEASED AS A PROOF OF CONCEPT FOR EXPERIMENTAL PURPOSES ONLY. 
 
 ## Table of contents
 
-- [Installation](#installation)
-- [Using scm-python](#using-scm-python)
-- [Configuration File](#configuration-file)
-- [Basic Usage Example](#basic-usage-example)
+- Installation
+- Using scm-python
+- Configuration File
+- Basic Usage Example
 
 ## Installation
 
@@ -754,12 +754,13 @@ This SDK is **not compatible** with [pan-scm-sdk](https://github.com/cdot65/pan-
 
 ## Support
 
-This is auto-generated code provided as-is for experimental purposes. See [SUPPORT.md](SUPPORT.md) for the support policy.
+This is auto-generated code provided as-is for experimental purposes. See [SUPPORT.md](https://github.com/PaloAltoNetworks/sc
+m-python/blob/main/SUPPORT.md) for the support policy.
 
 For issues or questions:
 
 1. Check the [GitHub Issues](https://github.com/PaloAltoNetworks/scm-python/issues)
-2. Review the [documentation](docs/)
+2. Review the [documentation](https://github.com/PaloAltoNetworks/scm-python#readme/)
 
 ## License
 

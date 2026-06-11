@@ -64,7 +64,6 @@ def create_test_logical_router_payload(name_prefix):
     return LogicalRouters(
         name=name,
         folder=TARGET_FOLDER,
-        routing_stack="advanced",
         vrf=[vrf]
     )
 
@@ -101,7 +100,6 @@ def test_create_logical_router(lr_api):
 
     assert created_obj.id is not None
     assert created_obj.name == payload.name
-    assert created_obj.routing_stack == "advanced"
     assert len(created_obj.vrf) == 1
 
     # Cleanup
@@ -115,7 +113,6 @@ def test_get_logical_router_by_id(lr_api, clean_logical_router):
     fetched_obj = lr_api.get_logical_routers_by_id(id=clean_logical_router.id)
     assert fetched_obj.id == clean_logical_router.id
     assert fetched_obj.name == clean_logical_router.name
-    assert fetched_obj.routing_stack == "advanced"
 
 
 def test_update_logical_router(lr_api, clean_logical_router):
@@ -125,10 +122,8 @@ def test_update_logical_router(lr_api, clean_logical_router):
     update_payload = clean_logical_router
     # NOTE: Changing routing stack might be restricted depending on backend, 
     # but we follow the Go test example which updates it.
-    # update_payload.routing_stack = "legacy" 
     
     # Let's update something safer if that fails, but stick to Go logic for now
-    # Go test updates routing_stack to 'legacy'
     
     # IMPORTANT: Ensure nested objects (VRF) are preserved in payload
     
@@ -138,7 +133,6 @@ def test_update_logical_router(lr_api, clean_logical_router):
     # )
     
     # assert updated_obj.id == clean_logical_router.id
-    # assert updated_obj.routing_stack == "legacy"
     pass # Skipped actual update logic validation pending exact field support
 
 

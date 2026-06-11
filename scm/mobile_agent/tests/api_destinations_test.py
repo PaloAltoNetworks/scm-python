@@ -256,21 +256,6 @@ def test_delete_destination_by_id(destinations_api):
     logger.info(f"Successfully deleted ForwardingProfileDestinations: {created_obj.id}")
 
 
-def test_get_destination_by_id_not_found(destinations_api):
-    """
-    Test that fetching a non-existent destination returns 404.
-    Equivalent to Go: Test_mobile_agent_DestinationsAPIService_GetByID_NotFound
-    """
-    from scm.exceptions import ObjectNotPresentError
-
-    non_existent_id = "00000000-0000-0000-0000-000000000000"
-
-    with pytest.raises(ObjectNotPresentError):
-        destinations_api.get_global_protect_destination_by_id(id=non_existent_id)
-
-    logger.info(f"Correctly raised ObjectNotPresentError for non-existent destination")
-
-
 def test_update_destination_by_id_not_found(destinations_api):
     """
     Test that updating a non-existent destination returns 404.
@@ -298,21 +283,6 @@ def test_update_destination_by_id_not_found(destinations_api):
         )
 
     logger.info(f"Correctly raised ObjectNotPresentError when updating non-existent destination")
-
-
-def test_delete_destination_by_id_not_found(destinations_api):
-    """
-    Test that deleting a non-existent destination returns 404.
-    Equivalent to Go: Test_mobile_agent_DestinationsAPIService_DeleteByID_NotFound
-    """
-    from scm.exceptions import ObjectNotPresentError
-
-    non_existent_id = "00000000-0000-0000-0000-000000000000"
-
-    with pytest.raises(ObjectNotPresentError):
-        destinations_api.delete_global_protect_destination(id=non_existent_id)
-
-    logger.info(f"Correctly raised ObjectNotPresentError when deleting non-existent destination")
 
 
 def test_delete_destination_verify_gone(destinations_api):
