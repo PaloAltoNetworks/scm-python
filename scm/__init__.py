@@ -40,6 +40,9 @@ from scm.objects.configuration import Configuration as ObjectsConfiguration
 from scm.security_services import api as security_services_api
 from scm.security_services.api_client import ApiClient as SecurityServicesApiClient
 from scm.security_services.configuration import Configuration as SecurityServicesConfiguration
+from scm.ztna_connector_all import api as ztna_connector_all_api
+from scm.ztna_connector_all.api_client import ApiClient as ZtnaConnectorAllApiClient
+from scm.ztna_connector_all.configuration import Configuration as ZtnaConnectorAllConfiguration
 
 # Set up logging
 logging.basicConfig(level=logging.ERROR)
@@ -335,6 +338,7 @@ class Scm:
         self.network_services = self._init_network_services_client()
         self.objects = self._init_objects_client()
         self.security_services = self._init_security_services_client()
+        self.ztna_connector_all = self._init_ztna_connector_all_client()
 
     def _load_config_from_file(self) -> Dict[str, Any]:
         """
@@ -527,6 +531,8 @@ class Scm:
             self.objects.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'security_services') and hasattr(self.security_services, 'api_client'):
             self.security_services.api_client.configuration.access_token = self._access_token
+        if hasattr(self, 'ztna_connector_all') and hasattr(self.ztna_connector_all, 'api_client'):
+            self.ztna_connector_all.api_client.configuration.access_token = self._access_token
 
     @property
     def token_expires_soon(self) -> bool:
@@ -718,3 +724,22 @@ class Scm:
 
         security_services_api.api_client = client
         return security_services_api
+    def _init_ztna_connector_all_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: 
+        config = ZtnaConnectorAllConfiguration(
+            host=f"https://{self.host}"
+        )
+        config.verify_ssl = self.verify_ssl
+        config.access_token = self._access_token
+
+        client = ZtnaConnectorAllApiClient(config)
+
+        # Wrap the rest client's request method to auto-refresh tokens
+        client.rest_client.request = _create_auto_refresh_wrapper(
+            self, client.rest_client.request
+        )
+
+        ztna_connector_all_api.api_client = client
+        return ztna_connector_all_api
