@@ -247,7 +247,6 @@ from scm.network_services.models.ethernet_interfaces import EthernetInterfaces
 from scm.network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
 from scm.network_services.models.ethernet_interfaces_dhcp_client import EthernetInterfacesDhcpClient
 from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
-from scm.network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
 from scm.network_services.models.ethernet_interfaces_layer3 import EthernetInterfacesLayer3
 from scm.network_services.models.ethernet_interfaces_layer3_ddns_config import EthernetInterfacesLayer3DdnsConfig
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
@@ -324,6 +323,8 @@ from scm.network_services.models.license_info import LicenseInfo
 from scm.network_services.models.license_result import LicenseResult
 from scm.network_services.models.link_tags import LinkTags
 from scm.network_services.models.link_tags_list_response import LinkTagsListResponse
+from scm.network_services.models.lldp import Lldp
+from scm.network_services.models.lldp_high_availability import LldpHighAvailability
 from scm.network_services.models.lldp_profiles import LldpProfiles
 from scm.network_services.models.lldp_profiles_option_tlvs import LldpProfilesOptionTlvs
 from scm.network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress

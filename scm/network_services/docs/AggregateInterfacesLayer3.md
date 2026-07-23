@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **interface_management_profile** | **str** | Interface management profile | [optional] 
 **ip** | [**List[AggregateInterfacesLayer3IpInner]**](AggregateInterfacesLayer3IpInner.md) | Aggregate Interface IP addresses | [optional] 
 **lacp** | [**Lacp**](Lacp.md) |  | [optional] 
+**lldp** | [**Lldp**](Lldp.md) |  | [optional] 
 **mtu** | **int** | MTU | [optional] [default to 1500]
 **netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 

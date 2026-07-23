@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm.network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
+from scm.network_services.models.lldp import Lldp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class EthernetInterfacesLayer2(BaseModel):
     """
     EthernetInterfacesLayer2
     """ # noqa: E501
-    lldp: Optional[EthernetInterfacesLayer2Lldp] = None
+    lldp: Optional[Lldp] = None
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     vlan_tag: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Assign interface to VLAN tag")
     __properties: ClassVar[List[str]] = ["lldp", "netflow_profile", "vlan_tag"]
@@ -98,7 +98,7 @@ class EthernetInterfacesLayer2(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "lldp": EthernetInterfacesLayer2Lldp.from_dict(obj["lldp"]) if obj.get("lldp") is not None else None,
+            "lldp": Lldp.from_dict(obj["lldp"]) if obj.get("lldp") is not None else None,
             "netflow_profile": obj.get("netflow_profile"),
             "vlan_tag": obj.get("vlan_tag")
         })

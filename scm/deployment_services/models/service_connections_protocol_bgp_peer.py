@@ -18,20 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from scm.deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
-from scm.deployment_services.models.service_connections_protocol_bgp_peer import ServiceConnectionsProtocolBgpPeer
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ServiceConnectionsProtocol(BaseModel):
+class ServiceConnectionsProtocolBgpPeer(BaseModel):
     """
-    ServiceConnectionsProtocol
+    ServiceConnectionsProtocolBgpPeer
     """ # noqa: E501
-    bgp: Optional[ServiceConnectionsProtocolBgp] = None
-    bgp_peer: Optional[ServiceConnectionsProtocolBgpPeer] = None
-    __properties: ClassVar[List[str]] = ["bgp", "bgp_peer"]
+    local_ip_address: Optional[StrictStr] = Field(default=None, description="Local peer IP address (secondary WAN)")
+    local_ipv6_address: Optional[StrictStr] = Field(default=None, description="Local peer IPv6 address (secondary WAN)")
+    peer_ip_address: Optional[StrictStr] = Field(default=None, description="Remote peer IP address (secondary WAN)")
+    peer_ipv6_address: Optional[StrictStr] = Field(default=None, description="Remote peer IPv6 address (secondary WAN)")
+    secret: Optional[SecretStr] = Field(default=None, description="BGP peering secret (secondary WAN)")
+    __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "secret"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -51,7 +52,7 @@ class ServiceConnectionsProtocol(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsProtocol from a JSON string"""
+        """Create an instance of ServiceConnectionsProtocolBgpPeer from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,17 +73,11 @@ class ServiceConnectionsProtocol(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of bgp
-        if self.bgp:
-            _dict['bgp'] = self.bgp.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of bgp_peer
-        if self.bgp_peer:
-            _dict['bgp_peer'] = self.bgp_peer.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsProtocol from a dict"""
+        """Create an instance of ServiceConnectionsProtocolBgpPeer from a dict"""
         if obj is None:
             return None
 
@@ -90,8 +85,11 @@ class ServiceConnectionsProtocol(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "bgp": ServiceConnectionsProtocolBgp.from_dict(obj["bgp"]) if obj.get("bgp") is not None else None,
-            "bgp_peer": ServiceConnectionsProtocolBgpPeer.from_dict(obj["bgp_peer"]) if obj.get("bgp_peer") is not None else None
+            "local_ip_address": obj.get("local_ip_address"),
+            "local_ipv6_address": obj.get("local_ipv6_address"),
+            "peer_ip_address": obj.get("peer_ip_address"),
+            "peer_ipv6_address": obj.get("peer_ipv6_address"),
+            "secret": obj.get("secret")
         })
         return _obj
 

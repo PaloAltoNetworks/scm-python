@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, SecretStr, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,7 +28,7 @@ class ExportCertificatePayload(BaseModel):
     ExportCertificatePayload
     """ # noqa: E501
     format: StrictStr
-    passphrase: Optional[StrictStr] = None
+    passphrase: Optional[SecretStr] = None
     __properties: ClassVar[List[str]] = ["format", "passphrase"]
 
     @field_validator('format')

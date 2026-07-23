@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **dhcp_client** | [**EthernetInterfacesLayer3DhcpClient**](EthernetInterfacesLayer3DhcpClient.md) |  | [optional] 
 **interface_management_profile** | **str** | Interface management profile | [optional] 
 **ip** | [**List[EthernetInterfacesLayer3IpInner]**](EthernetInterfacesLayer3IpInner.md) | Ethernet Interface IP addresses | [optional] 
+**lldp** | [**Lldp**](Lldp.md) |  | [optional] 
 **mtu** | **int** | MTU | [optional] [default to 1500]
 **netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **pppoe** | [**EthernetInterfacesLayer3Pppoe**](EthernetInterfacesLayer3Pppoe.md) |  | [optional] 

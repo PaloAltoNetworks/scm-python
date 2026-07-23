@@ -18,17 +18,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
-from typing import Any, ClassVar, Dict, List
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
+from scm.network_services.models.lldp_high_availability import LldpHighAvailability
 from typing import Optional, Set
 from typing_extensions import Self
 
-class EthernetInterfacesLayer2Lldp(BaseModel):
+class Lldp(BaseModel):
     """
-    LLDP Settings
+    LLDP settings for the interface
     """ # noqa: E501
     enable: StrictBool = Field(description="Enable LLDP on Interface")
-    __properties: ClassVar[List[str]] = ["enable"]
+    high_availability: Optional[LldpHighAvailability] = None
+    profile: Optional[StrictStr] = Field(default=None, description="Name of the LLDP profile to assign to the interface")
+    __properties: ClassVar[List[str]] = ["enable", "high_availability", "profile"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +51,7 @@ class EthernetInterfacesLayer2Lldp(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer2Lldp from a JSON string"""
+        """Create an instance of Lldp from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,11 +72,14 @@ class EthernetInterfacesLayer2Lldp(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of high_availability
+        if self.high_availability:
+            _dict['high_availability'] = self.high_availability.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer2Lldp from a dict"""
+        """Create an instance of Lldp from a dict"""
         if obj is None:
             return None
 
@@ -81,7 +87,9 @@ class EthernetInterfacesLayer2Lldp(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "enable": obj.get("enable") if obj.get("enable") is not None else False
+            "enable": obj.get("enable") if obj.get("enable") is not None else False,
+            "high_availability": LldpHighAvailability.from_dict(obj["high_availability"]) if obj.get("high_availability") is not None else None,
+            "profile": obj.get("profile")
         })
         return _obj
 

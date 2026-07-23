@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Network Deployment
+    Network Services
 
-    These APIs are used for defining and managing Prisma Access Remote Network and Service Connection configurations within Strata Cloud Manager.
+    These APIs are used for defining and managing network services configuration within Strata Cloud Manager.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,22 +18,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ServiceConnectionsBgpPeer(BaseModel):
+class LldpHighAvailability(BaseModel):
     """
-    ServiceConnectionsBgpPeer
+    LLDP high availability settings
     """ # noqa: E501
-    local_ip_address: Optional[StrictStr] = None
-    local_ipv6_address: Optional[StrictStr] = None
-    peer_ip_address: Optional[StrictStr] = None
-    peer_ipv6_address: Optional[StrictStr] = None
-    same_as_primary: Optional[StrictBool] = Field(default=None, description="Same peer IP address for SC")
-    secret: Optional[SecretStr] = None
-    __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "same_as_primary", "secret"]
+    passive_pre_negotiation: Optional[StrictBool] = False
+    __properties: ClassVar[List[str]] = ["passive_pre_negotiation"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -53,7 +48,7 @@ class ServiceConnectionsBgpPeer(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsBgpPeer from a JSON string"""
+        """Create an instance of LldpHighAvailability from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -78,7 +73,7 @@ class ServiceConnectionsBgpPeer(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsBgpPeer from a dict"""
+        """Create an instance of LldpHighAvailability from a dict"""
         if obj is None:
             return None
 
@@ -86,12 +81,7 @@ class ServiceConnectionsBgpPeer(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "local_ip_address": obj.get("local_ip_address"),
-            "local_ipv6_address": obj.get("local_ipv6_address"),
-            "peer_ip_address": obj.get("peer_ip_address"),
-            "peer_ipv6_address": obj.get("peer_ipv6_address"),
-            "same_as_primary": obj.get("same_as_primary"),
-            "secret": obj.get("secret")
+            "passive_pre_negotiation": obj.get("passive_pre_negotiation") if obj.get("passive_pre_negotiation") is not None else False
         })
         return _obj
 

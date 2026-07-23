@@ -26,6 +26,7 @@ from scm.network_services.models.ethernet_interfaces_layer3_ddns_config import E
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
 from scm.network_services.models.ethernet_interfaces_layer3_ip_inner import EthernetInterfacesLayer3IpInner
 from scm.network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
+from scm.network_services.models.lldp import Lldp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -38,10 +39,11 @@ class EthernetInterfacesLayer3(BaseModel):
     dhcp_client: Optional[EthernetInterfacesLayer3DhcpClient] = None
     interface_management_profile: Optional[Annotated[str, Field(strict=True, max_length=31)]] = Field(default=None, description="Interface management profile")
     ip: Optional[List[EthernetInterfacesLayer3IpInner]] = Field(default=None, description="Ethernet Interface IP addresses")
+    lldp: Optional[Lldp] = None
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=1500, description="MTU")
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     pppoe: Optional[EthernetInterfacesLayer3Pppoe] = None
-    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "mtu", "netflow_profile", "pppoe"]
+    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "lldp", "mtu", "netflow_profile", "pppoe"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -102,6 +104,9 @@ class EthernetInterfacesLayer3(BaseModel):
                 if _item_ip:
                     _items.append(_item_ip.to_dict())
             _dict['ip'] = _items
+        # override the default output from pydantic by calling `to_dict()` of lldp
+        if self.lldp:
+            _dict['lldp'] = self.lldp.to_dict()
         # override the default output from pydantic by calling `to_dict()` of pppoe
         if self.pppoe:
             _dict['pppoe'] = self.pppoe.to_dict()
@@ -122,6 +127,7 @@ class EthernetInterfacesLayer3(BaseModel):
             "dhcp_client": EthernetInterfacesLayer3DhcpClient.from_dict(obj["dhcp_client"]) if obj.get("dhcp_client") is not None else None,
             "interface_management_profile": obj.get("interface_management_profile"),
             "ip": [EthernetInterfacesLayer3IpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
+            "lldp": Lldp.from_dict(obj["lldp"]) if obj.get("lldp") is not None else None,
             "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500,
             "netflow_profile": obj.get("netflow_profile"),
             "pppoe": EthernetInterfacesLayer3Pppoe.from_dict(obj["pppoe"]) if obj.get("pppoe") is not None else None

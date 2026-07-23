@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **var_from** | [**PbfRulesFrom**](PbfRulesFrom.md) |  | [optional] 
 **id** | **str** | UUID of the resource | [optional] [readonly] 
 **name** | **str** | PBF rule name | [optional] 
+**negate_destination** | **bool** | Negate destination address | [optional] [default to False]
+**negate_source** | **bool** | Negate source address | [optional] [default to False]
 **schedule** | **str** | Schedule | [optional] 
 **service** | **List[str]** | Services | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
