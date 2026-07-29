@@ -58,7 +58,7 @@ class SecurityRules(BaseModel):
     name: Optional[StrictStr] = Field(default=None, description="The name of the security rule")
     negate_destination: Optional[StrictBool] = Field(default=False, description="Negate the destination addresses(es)?")
     negate_source: Optional[StrictBool] = Field(default=False, description="Negate the source address(es)?")
-    negate_user: Optional[StrictBool] = False
+    negate_user: Optional[StrictBool] = None
     policy_type: Optional[StrictStr] = 'Security'
     profile_setting: Optional[SecurityRuleTypeProfileSetting] = None
     schedule: Optional[StrictStr] = Field(default=None, description="Schedule in which this rule will be applied")
@@ -216,7 +216,7 @@ class SecurityRules(BaseModel):
             "name": obj.get("name"),
             "negate_destination": obj.get("negate_destination") if obj.get("negate_destination") is not None else False,
             "negate_source": obj.get("negate_source") if obj.get("negate_source") is not None else False,
-            "negate_user": obj.get("negate_user") if obj.get("negate_user") is not None else False,
+            "negate_user": obj.get("negate_user"),
             "policy_type": obj.get("policy_type") if obj.get("policy_type") is not None else 'Security',
             "profile_setting": SecurityRuleTypeProfileSetting.from_dict(obj["profile_setting"]) if obj.get("profile_setting") is not None else None,
             "schedule": obj.get("schedule"),
