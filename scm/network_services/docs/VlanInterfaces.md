@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**adjust_tcp_mss** | [**AdjustTcpMss**](AdjustTcpMss.md) |  | [optional] 
 **arp** | [**List[VlanInterfacesArpInner]**](VlanInterfacesArpInner.md) | ARP configuration | [optional] 
 **comment** | **str** | Description | [optional] 
 **ddns_config** | [**VlanInterfacesDdnsConfig**](VlanInterfacesDdnsConfig.md) |  | [optional] 

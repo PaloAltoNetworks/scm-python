@@ -23,9 +23,9 @@ from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class EthernetInterfacesLayer3PppoePassive(BaseModel):
+class PppoePassive(BaseModel):
     """
-    EthernetInterfacesLayer3PppoePassive
+    PppoePassive
     """ # noqa: E501
     enable: StrictBool = Field(description="Passive Mode enabled")
     __properties: ClassVar[List[str]] = ["enable"]
@@ -48,7 +48,7 @@ class EthernetInterfacesLayer3PppoePassive(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3PppoePassive from a JSON string"""
+        """Create an instance of PppoePassive from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +73,7 @@ class EthernetInterfacesLayer3PppoePassive(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3PppoePassive from a dict"""
+        """Create an instance of PppoePassive from a dict"""
         if obj is None:
             return None
 

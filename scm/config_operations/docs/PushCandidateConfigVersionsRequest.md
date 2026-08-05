@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **admin** | **List[str]** | List the administrators and/or service accounts in this field. If you want to push folder named All, please do not add this admin field at all and list each of the folders under All in the folder field. | [optional] 
 **description** | **str** | A description of the changes being pushed | [optional] 
 **devices** | **List[str]** | The target devices for the configuration push | [optional] 
-**folder** | **List[str]** | The target folders for the configuration push | [optional] 
+**folders** | **List[str]** | The target folders for the configuration push | 
 
 ## Example
 

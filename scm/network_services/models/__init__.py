@@ -15,6 +15,7 @@
 
 
 # import models into model package
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
 from scm.network_services.models.agg_ethernet_dhcp_client import AggEthernetDhcpClient
 from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
@@ -186,9 +187,6 @@ from scm.network_services.models.ethernet_interfaces_layer3_ddns_config import E
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
 from scm.network_services.models.ethernet_interfaces_layer3_ip_inner import EthernetInterfacesLayer3IpInner
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive import EthernetInterfacesLayer3PppoePassive
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
 from scm.network_services.models.ethernet_interfaces_list_response import EthernetInterfacesListResponse
 from scm.network_services.models.ethernet_interfaces_tap import EthernetInterfacesTap
 from scm.network_services.models.generic_error import GenericError
@@ -452,6 +450,9 @@ from scm.network_services.models.pbf_rules_enforce_symmetric_return import PbfRu
 from scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
 from scm.network_services.models.pbf_rules_from import PbfRulesFrom
 from scm.network_services.models.poe import Poe
+from scm.network_services.models.pppoe import Pppoe
+from scm.network_services.models.pppoe_passive import PppoePassive
+from scm.network_services.models.pppoe_static_address import PppoeStaticAddress
 from scm.network_services.models.qos_policy_rules_list_response import QoSPolicyRulesListResponse
 from scm.network_services.models.qos_profiles_list_response import QoSProfilesListResponse
 from scm.network_services.models.qos_policy_rules import QosPolicyRules

@@ -24,9 +24,9 @@ from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class EthernetInterfacesLayer3PppoeStaticAddress(BaseModel):
+class PppoeStaticAddress(BaseModel):
     """
-    EthernetInterfacesLayer3PppoeStaticAddress
+    PppoeStaticAddress
     """ # noqa: E501
     ip: Annotated[str, Field(strict=True, max_length=63)] = Field(description="Static IP address")
     __properties: ClassVar[List[str]] = ["ip"]
@@ -49,7 +49,7 @@ class EthernetInterfacesLayer3PppoeStaticAddress(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3PppoeStaticAddress from a JSON string"""
+        """Create an instance of PppoeStaticAddress from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +74,7 @@ class EthernetInterfacesLayer3PppoeStaticAddress(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3PppoeStaticAddress from a dict"""
+        """Create an instance of PppoeStaticAddress from a dict"""
         if obj is None:
             return None
 

@@ -6,6 +6,7 @@ Aggregate Interface Layer 3 configuration
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**adjust_tcp_mss** | [**AdjustTcpMss**](AdjustTcpMss.md) |  | [optional] 
 **arp** | [**List[AggEthernetArpInner]**](AggEthernetArpInner.md) | Aggregate Ethernet ARP configuration | [optional] 
 **ddns_config** | [**AggregateInterfacesLayer3DdnsConfig**](AggregateInterfacesLayer3DdnsConfig.md) |  | [optional] 
 **dhcp_client** | [**AggEthernetDhcpClientDhcpClient**](AggEthernetDhcpClientDhcpClient.md) |  | [optional] 

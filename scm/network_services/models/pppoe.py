@@ -21,23 +21,23 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive import EthernetInterfacesLayer3PppoePassive
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
+from scm.network_services.models.pppoe_passive import PppoePassive
+from scm.network_services.models.pppoe_static_address import PppoeStaticAddress
 from typing import Optional, Set
 from typing_extensions import Self
 
-class EthernetInterfacesLayer3Pppoe(BaseModel):
+class Pppoe(BaseModel):
     """
-    EthernetInterfacesLayer3Pppoe
+    PPPoE configuration for the interface
     """ # noqa: E501
     access_concentrator: Optional[Annotated[str, Field(min_length=1, strict=True, max_length=255)]] = Field(default=None, description="Access concentrator")
     authentication: Optional[StrictStr] = Field(default=None, description="Authentication protocol")
     default_route_metric: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=10, description="Metric of the default route created")
-    enable: Optional[StrictBool] = True
-    passive: Optional[EthernetInterfacesLayer3PppoePassive] = None
+    enable: Optional[StrictBool] = Field(default=True, description="Enable PPPoE on the interface")
+    passive: Optional[PppoePassive] = None
     password: Annotated[str, Field(strict=True, max_length=255)] = Field(description="Password")
     service: Optional[Annotated[str, Field(min_length=1, strict=True, max_length=255)]] = Field(default=None, description="Service")
-    static_address: Optional[EthernetInterfacesLayer3PppoeStaticAddress] = None
+    static_address: Optional[PppoeStaticAddress] = None
     username: Annotated[str, Field(min_length=1, strict=True, max_length=255)] = Field(description="Username")
     __properties: ClassVar[List[str]] = ["access_concentrator", "authentication", "default_route_metric", "enable", "passive", "password", "service", "static_address", "username"]
 
@@ -69,7 +69,7 @@ class EthernetInterfacesLayer3Pppoe(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3Pppoe from a JSON string"""
+        """Create an instance of Pppoe from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -100,7 +100,7 @@ class EthernetInterfacesLayer3Pppoe(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of EthernetInterfacesLayer3Pppoe from a dict"""
+        """Create an instance of Pppoe from a dict"""
         if obj is None:
             return None
 
@@ -112,10 +112,10 @@ class EthernetInterfacesLayer3Pppoe(BaseModel):
             "authentication": obj.get("authentication"),
             "default_route_metric": obj.get("default_route_metric") if obj.get("default_route_metric") is not None else 10,
             "enable": obj.get("enable") if obj.get("enable") is not None else True,
-            "passive": EthernetInterfacesLayer3PppoePassive.from_dict(obj["passive"]) if obj.get("passive") is not None else None,
+            "passive": PppoePassive.from_dict(obj["passive"]) if obj.get("passive") is not None else None,
             "password": obj.get("password"),
             "service": obj.get("service"),
-            "static_address": EthernetInterfacesLayer3PppoeStaticAddress.from_dict(obj["static_address"]) if obj.get("static_address") is not None else None,
+            "static_address": PppoeStaticAddress.from_dict(obj["static_address"]) if obj.get("static_address") is not None else None,
             "username": obj.get("username")
         })
         return _obj

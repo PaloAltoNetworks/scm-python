@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.vlan_interfaces_arp_inner import VlanInterfacesArpInner
 from scm.network_services.models.vlan_interfaces_ddns_config import VlanInterfacesDdnsConfig
 from scm.network_services.models.vlan_interfaces_dhcp_client import VlanInterfacesDhcpClient
@@ -32,6 +33,7 @@ class VlanInterfaces(BaseModel):
     """
     VlanInterfaces
     """ # noqa: E501
+    adjust_tcp_mss: Optional[AdjustTcpMss] = None
     arp: Optional[List[VlanInterfacesArpInner]] = Field(default=None, description="ARP configuration")
     comment: Optional[StrictStr] = Field(default=None, description="Description")
     ddns_config: Optional[VlanInterfacesDdnsConfig] = None
@@ -47,7 +49,7 @@ class VlanInterfaces(BaseModel):
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     vlan_tag: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="VLAN tag")
-    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "default_value", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "snippet", "vlan_tag"]
+    __properties: ClassVar[List[str]] = ["adjust_tcp_mss", "arp", "comment", "ddns_config", "default_value", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "snippet", "vlan_tag"]
 
     @field_validator('default_value')
     def default_value_validate_regular_expression(cls, value):
@@ -140,6 +142,9 @@ class VlanInterfaces(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of adjust_tcp_mss
+        if self.adjust_tcp_mss:
+            _dict['adjust_tcp_mss'] = self.adjust_tcp_mss.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in arp (list)
         _items = []
         if self.arp:
@@ -172,6 +177,7 @@ class VlanInterfaces(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "adjust_tcp_mss": AdjustTcpMss.from_dict(obj["adjust_tcp_mss"]) if obj.get("adjust_tcp_mss") is not None else None,
             "arp": [VlanInterfacesArpInner.from_dict(_item) for _item in obj["arp"]] if obj.get("arp") is not None else None,
             "comment": obj.get("comment"),
             "ddns_config": VlanInterfacesDdnsConfig.from_dict(obj["ddns_config"]) if obj.get("ddns_config") is not None else None,
