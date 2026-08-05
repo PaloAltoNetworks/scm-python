@@ -1072,7 +1072,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_connector_images**
-> List[str] list_connector_images()
+> ConnectorImagesListResponse list_connector_images(offset=offset, limit=limit)
 
 List Connector Image Versions
 
@@ -1082,6 +1082,7 @@ List Connector Image Versions
 
 ```python
 import scm.ztna_connector_all
+from scm.ztna_connector_all.models.connector_images_list_response import ConnectorImagesListResponse
 from scm.ztna_connector_all.rest import ApiException
 from pprint import pprint
 
@@ -1105,10 +1106,12 @@ configuration = scm.ztna_connector_all.Configuration(
 with scm.ztna_connector_all.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = scm.ztna_connector_all.ConnectorApi(api_client)
+    offset = 56 # int | A 0-based offset into the collection. It is the index of the starting entry of the page  (optional)
+    limit = 56 # int | The max count in result entry (count per page) (optional)
 
     try:
         # List Connector Image Versions
-        api_response = api_instance.list_connector_images()
+        api_response = api_instance.list_connector_images(offset=offset, limit=limit)
         print("The response of ConnectorApi->list_connector_images:\n")
         pprint(api_response)
     except Exception as e:
@@ -1119,11 +1122,15 @@ with scm.ztna_connector_all.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | **int**| A 0-based offset into the collection. It is the index of the starting entry of the page  | [optional] 
+ **limit** | **int**| The max count in result entry (count per page) | [optional] 
 
 ### Return type
 
-**List[str]**
+[**ConnectorImagesListResponse**](ConnectorImagesListResponse.md)
 
 ### Authorization
 

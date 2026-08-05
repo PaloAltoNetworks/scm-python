@@ -20,6 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import List, Optional
 from typing_extensions import Annotated
+from scm.ztna_connector_all.models.connector_images_list_response import ConnectorImagesListResponse
 from scm.ztna_connector_all.models.connector_quiesce import ConnectorQuiesce
 from scm.ztna_connector_all.models.connector_scheduled_upgrade import ConnectorScheduledUpgrade
 from scm.ztna_connector_all.models.connector_upgrade_status import ConnectorUpgradeStatus
@@ -3792,6 +3793,8 @@ class ConnectorApi:
     @with_error_handling
     def list_connector_images(
         self,
+        offset: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="A 0-based offset into the collection. It is the index of the starting entry of the page ")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="The max count in result entry (count per page)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3804,10 +3807,14 @@ class ConnectorApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[str]:
+    ) -> ConnectorImagesListResponse:
         """List Connector Image Versions
 
 
+        :param offset: A 0-based offset into the collection. It is the index of the starting entry of the page 
+        :type offset: int
+        :param limit: The max count in result entry (count per page)
+        :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3831,6 +3838,8 @@ class ConnectorApi:
         """ # noqa: E501
 
         _param = self._list_connector_images_serialize(
+            offset=offset,
+            limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3838,7 +3847,7 @@ class ConnectorApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[str]",
+            '200': "ConnectorImagesListResponse",
             '400': "ErrorResponse",
             '401': "ErrorResponse",
         }
@@ -3857,6 +3866,8 @@ class ConnectorApi:
     @with_error_handling
     def list_connector_images_with_http_info(
         self,
+        offset: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="A 0-based offset into the collection. It is the index of the starting entry of the page ")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="The max count in result entry (count per page)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3869,10 +3880,14 @@ class ConnectorApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[str]]:
+    ) -> ApiResponse[ConnectorImagesListResponse]:
         """List Connector Image Versions
 
 
+        :param offset: A 0-based offset into the collection. It is the index of the starting entry of the page 
+        :type offset: int
+        :param limit: The max count in result entry (count per page)
+        :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3896,6 +3911,8 @@ class ConnectorApi:
         """ # noqa: E501
 
         _param = self._list_connector_images_serialize(
+            offset=offset,
+            limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3903,7 +3920,7 @@ class ConnectorApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[str]",
+            '200': "ConnectorImagesListResponse",
             '400': "ErrorResponse",
             '401': "ErrorResponse",
         }
@@ -3922,6 +3939,8 @@ class ConnectorApi:
     @with_error_handling
     def list_connector_images_without_preload_content(
         self,
+        offset: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="A 0-based offset into the collection. It is the index of the starting entry of the page ")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="The max count in result entry (count per page)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3938,6 +3957,10 @@ class ConnectorApi:
         """List Connector Image Versions
 
 
+        :param offset: A 0-based offset into the collection. It is the index of the starting entry of the page 
+        :type offset: int
+        :param limit: The max count in result entry (count per page)
+        :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3961,6 +3984,8 @@ class ConnectorApi:
         """ # noqa: E501
 
         _param = self._list_connector_images_serialize(
+            offset=offset,
+            limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3968,7 +3993,7 @@ class ConnectorApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[str]",
+            '200': "ConnectorImagesListResponse",
             '400': "ErrorResponse",
             '401': "ErrorResponse",
         }
@@ -3981,6 +4006,8 @@ class ConnectorApi:
 
     def _list_connector_images_serialize(
         self,
+        offset,
+        limit,
         _request_auth,
         _content_type,
         _headers,
@@ -4003,6 +4030,14 @@ class ConnectorApi:
 
         # process the path parameters
         # process the query parameters
+        if offset is not None:
+            
+            _query_params.append(('offset', offset))
+            
+        if limit is not None:
+            
+            _query_params.append(('limit', limit))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter

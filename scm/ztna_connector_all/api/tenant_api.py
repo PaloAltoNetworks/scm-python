@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from scm.ztna_connector_all.models.license_info import LicenseInfo
+from scm.ztna_connector_all.models.license import License
 from scm.ztna_connector_all.models.start_tenant_offboarding202_response import StartTenantOffboarding202Response
 from scm.ztna_connector_all.models.tenant_status import TenantStatus
 
@@ -61,7 +61,7 @@ class TenantApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> LicenseInfo:
+    ) -> License:
         """Get Tenant License Info
 
 
@@ -98,7 +98,7 @@ class TenantApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "LicenseInfo",
+            '200': "License",
             '401': "ErrorResponse",
             '424': "ErrorResponse",
         }
@@ -130,7 +130,7 @@ class TenantApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[LicenseInfo]:
+    ) -> ApiResponse[License]:
         """Get Tenant License Info
 
 
@@ -167,7 +167,7 @@ class TenantApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "LicenseInfo",
+            '200': "License",
             '401': "ErrorResponse",
             '424': "ErrorResponse",
         }
@@ -236,7 +236,7 @@ class TenantApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "LicenseInfo",
+            '200': "License",
             '401': "ErrorResponse",
             '424': "ErrorResponse",
         }

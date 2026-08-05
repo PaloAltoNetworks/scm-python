@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_license**
-> LicenseInfo get_license(x_panw_region=x_panw_region)
+> License get_license(x_panw_region=x_panw_region)
 
 Get Tenant License Info
 
@@ -21,7 +21,7 @@ Get Tenant License Info
 
 ```python
 import scm.ztna_connector_all
-from scm.ztna_connector_all.models.license_info import LicenseInfo
+from scm.ztna_connector_all.models.license import License
 from scm.ztna_connector_all.rest import ApiException
 from pprint import pprint
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LicenseInfo**](LicenseInfo.md)
+[**License**](License.md)
 
 ### Authorization
 

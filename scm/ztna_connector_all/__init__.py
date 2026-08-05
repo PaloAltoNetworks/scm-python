@@ -53,6 +53,8 @@ from scm.ztna_connector_all.models.connector_group_upgrade_status_data_inner imp
 from scm.ztna_connector_all.models.connector_group_wildcards import ConnectorGroupWildcards
 from scm.ztna_connector_all.models.connector_groups import ConnectorGroups
 from scm.ztna_connector_all.models.connector_groups_list_response import ConnectorGroupsListResponse
+from scm.ztna_connector_all.models.connector_images import ConnectorImages
+from scm.ztna_connector_all.models.connector_images_list_response import ConnectorImagesListResponse
 from scm.ztna_connector_all.models.connector_quiesce import ConnectorQuiesce
 from scm.ztna_connector_all.models.connector_scheduled_upgrade import ConnectorScheduledUpgrade
 from scm.ztna_connector_all.models.connector_status import ConnectorStatus
@@ -71,7 +73,7 @@ from scm.ztna_connector_all.models.error_detail import ErrorDetail
 from scm.ztna_connector_all.models.error_detail_causes_inner import ErrorDetailCausesInner
 from scm.ztna_connector_all.models.error_object import ErrorObject
 from scm.ztna_connector_all.models.error_response import ErrorResponse
-from scm.ztna_connector_all.models.license_info import LicenseInfo
+from scm.ztna_connector_all.models.license import License
 from scm.ztna_connector_all.models.packet_capture import PacketCapture
 from scm.ztna_connector_all.models.packet_capture_create import PacketCaptureCreate
 from scm.ztna_connector_all.models.start_tenant_offboarding202_response import StartTenantOffboarding202Response
