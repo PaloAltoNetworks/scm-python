@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **gp_udp_port** | **int** | The UDP port for inbound authentication prompts | [optional] 
 **id** | **str** | The UUID of the authentication portal | [optional] [readonly] 
 **idle_timer** | **int** | The idle timeout value (minutes) | [optional] 
-**redirect_host** | **str** | The authentication portal IP address or hostname | 
+**redirect_host** | **str** | The authentication portal IP address or hostname | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **timer** | **int** |  | [optional] 
 **tls_service_profile** | **str** | The SSL/TLS service profile | [optional] 
