@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lldp** | [**EthernetInterfacesLayer2Lldp**](EthernetInterfacesLayer2Lldp.md) |  | [optional] 
+**lldp** | [**Lldp**](Lldp.md) |  | [optional] 
 **netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **vlan_tag** | **str** | Assign interface to VLAN tag | [optional] 
 

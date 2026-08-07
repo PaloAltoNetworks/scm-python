@@ -1643,6 +1643,66 @@ class ConfigVersionsApi:
         return response_data.response
 
 
+
+    def fetch_config_versions(
+        self,
+        name: str,
+        **kwargs
+    ) -> Optional[Any]:
+        """
+        Fetch a single config_versions object by name.
+    
+        This is a convenience method that uses client-side pagination to retrieve
+        a specific object by its name. It iterates through all pages of results
+        until the matching object is found.
+    
+        Args:
+            name: The name of the object to fetch
+            **kwargs: Additional keyword arguments
+    
+        Returns:
+            The matching object if found, None otherwise
+    
+        Example:
+            >>> obj = api.fetch_config_versions(name="my-object")
+            >>> if obj:
+            ...     print(f"Found: {obj.name}")
+        """
+        offset = 0
+        limit = 5000
+    
+        while True:
+            # Build list parameters with pagination
+            list_params = {'offset': offset, 'limit': limit}
+            # Add any additional kwargs
+            list_params.update({k: v for k, v in kwargs.items() if k not in ['offset', 'limit']})
+    
+            try:
+                response = self.list_config_versions(**list_params)
+            except Exception as e:
+                # HTTP 404: object not found - return None
+                if hasattr(e, 'http_status_code') and e.http_status_code == 404:
+                    return None
+                if hasattr(e, 'status') and e.status == 404:
+                    return None
+                raise
+    
+            # Search for exact name match in response
+            if hasattr(response, 'data') and response.data:
+                for obj in response.data:
+                    if hasattr(obj, 'name') and obj.name == name:
+                        return obj
+    
+                # Check if we've reached the end (less than limit returned)
+                if len(response.data) < limit:
+                    break
+            else:
+                break
+    
+            offset += limit
+    
+        return None
+
     def _push_candidate_config_versions_serialize(
         self,
         push_candidate_config_versions_request,

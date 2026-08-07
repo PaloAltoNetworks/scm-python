@@ -20,7 +20,6 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from scm.deployment_services.models.service_connections_bgp_peer import ServiceConnectionsBgpPeer
 from scm.deployment_services.models.service_connections_protocol import ServiceConnectionsProtocol
 from scm.deployment_services.models.service_connections_qos import ServiceConnectionsQos
 from typing import Optional, Set
@@ -31,7 +30,6 @@ class ServiceConnections(BaseModel):
     ServiceConnections
     """ # noqa: E501
     backup_sc: Optional[StrictStr] = Field(default=None, alias="backup_SC")
-    bgp_peer: Optional[ServiceConnectionsBgpPeer] = None
     id: StrictStr = Field(description="The UUID of the service connection")
     ipsec_tunnel: StrictStr
     name: StrictStr = Field(description="The name of the service connection")
@@ -41,10 +39,11 @@ class ServiceConnections(BaseModel):
     protocol: Optional[ServiceConnectionsProtocol] = None
     qos: Optional[ServiceConnectionsQos] = None
     region: StrictStr
+    region_tag: Optional[StrictStr] = None
     secondary_ipsec_tunnel: Optional[StrictStr] = None
     source_nat: Optional[StrictBool] = None
     subnets: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["backup_SC", "bgp_peer", "id", "ipsec_tunnel", "name", "nat_pool", "no_export_community", "onboarding_type", "protocol", "qos", "region", "secondary_ipsec_tunnel", "source_nat", "subnets"]
+    __properties: ClassVar[List[str]] = ["backup_SC", "id", "ipsec_tunnel", "name", "nat_pool", "no_export_community", "onboarding_type", "protocol", "qos", "region", "region_tag", "secondary_ipsec_tunnel", "source_nat", "subnets"]
 
     @field_validator('no_export_community')
     def no_export_community_validate_enum(cls, value):
@@ -107,9 +106,6 @@ class ServiceConnections(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of bgp_peer
-        if self.bgp_peer:
-            _dict['bgp_peer'] = self.bgp_peer.to_dict()
         # override the default output from pydantic by calling `to_dict()` of protocol
         if self.protocol:
             _dict['protocol'] = self.protocol.to_dict()
@@ -129,7 +125,6 @@ class ServiceConnections(BaseModel):
 
         _obj = cls.model_validate({
             "backup_SC": obj.get("backup_SC"),
-            "bgp_peer": ServiceConnectionsBgpPeer.from_dict(obj["bgp_peer"]) if obj.get("bgp_peer") is not None else None,
             "id": obj.get("id"),
             "ipsec_tunnel": obj.get("ipsec_tunnel"),
             "name": obj.get("name"),
@@ -139,6 +134,7 @@ class ServiceConnections(BaseModel):
             "protocol": ServiceConnectionsProtocol.from_dict(obj["protocol"]) if obj.get("protocol") is not None else None,
             "qos": ServiceConnectionsQos.from_dict(obj["qos"]) if obj.get("qos") is not None else None,
             "region": obj.get("region"),
+            "region_tag": obj.get("region_tag"),
             "secondary_ipsec_tunnel": obj.get("secondary_ipsec_tunnel"),
             "source_nat": obj.get("source_nat"),
             "subnets": obj.get("subnets")

@@ -368,3 +368,29 @@ def test_delete_service_connection_by_id(service_connections_api, ipsec_tunnel_w
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_service_connections(service_connections_api, clean_service_connection):
+    """
+    Test fetching a single service connection by name using the fetch convenience method.
+    Equivalent to Go: Test_deployment_services_ServiceConnectionsAPIService_FetchServiceConnections
+    """
+    # Fetch by exact name
+    fetched_obj = service_connections_api.fetch_service_connections(
+        name=clean_service_connection.name,
+        folder=TARGET_FOLDER
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found connection '{clean_service_connection.name}'"
+    assert fetched_obj.id == clean_service_connection.id
+    assert fetched_obj.name == clean_service_connection.name
+    logger.info(f"\n[SUCCESS] fetch_service_connections found object: {fetched_obj.name}")
+
+    # Test fetching non-existent connection (should return None)
+    not_found = service_connections_api.fetch_service_connections(
+        name="non-existent-service-connection-xyz-12345",
+        folder=TARGET_FOLDER
+    )
+    assert not_found is None, "Should return None for non-existent connection"
+    logger.info(f"\n[SUCCESS] fetch_service_connections correctly returned None for non-existent connection")

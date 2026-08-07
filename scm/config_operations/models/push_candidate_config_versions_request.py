@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,9 +30,9 @@ class PushCandidateConfigVersionsRequest(BaseModel):
     """ # noqa: E501
     admin: Optional[List[StrictStr]] = Field(default=None, description="List the administrators and/or service accounts in this field. If you want to push folder named All, please do not add this admin field at all and list each of the folders under All in the folder field.")
     description: Optional[StrictStr] = Field(default=None, description="A description of the changes being pushed")
-    devices: Optional[List[Union[Annotated[float, Field(strict=True)], Annotated[int, Field(strict=True)]]]] = Field(default=None, description="The target devices for the configuration push")
-    folder: Optional[List[Annotated[str, Field(strict=True, max_length=64)]]] = Field(default=None, description="The target folders for the configuration push")
-    __properties: ClassVar[List[str]] = ["admin", "description", "devices", "folder"]
+    devices: Optional[List[StrictStr]] = Field(default=None, description="The target devices for the configuration push")
+    folders: List[Annotated[str, Field(strict=True, max_length=64)]] = Field(description="The target folders for the configuration push")
+    __properties: ClassVar[List[str]] = ["admin", "description", "devices", "folders"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -88,7 +88,7 @@ class PushCandidateConfigVersionsRequest(BaseModel):
             "admin": obj.get("admin"),
             "description": obj.get("description"),
             "devices": obj.get("devices"),
-            "folder": obj.get("folder")
+            "folders": obj.get("folders")
         })
         return _obj
 

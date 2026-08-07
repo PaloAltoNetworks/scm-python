@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.network_services.models.pbf_rules_action import PbfRulesAction
@@ -41,13 +41,15 @@ class PbfRules(BaseModel):
     var_from: Optional[PbfRulesFrom] = Field(default=None, alias="from")
     id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
     name: Optional[StrictStr] = Field(default=None, description="PBF rule name")
+    negate_destination: Optional[StrictBool] = Field(default=False, description="Negate destination address")
+    negate_source: Optional[StrictBool] = Field(default=False, description="Negate source address")
     schedule: Optional[StrictStr] = Field(default=None, description="Schedule")
     service: Optional[List[StrictStr]] = Field(default=None, description="Services")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     source: Optional[List[StrictStr]] = Field(default=None, description="Source addresses")
     source_user: Optional[List[StrictStr]] = Field(default=None, description="Source users")
     tag: Optional[List[StrictStr]] = Field(default=None, description="Tags")
-    __properties: ClassVar[List[str]] = ["action", "application", "description", "destination", "device", "enforce_symmetric_return", "folder", "from", "id", "name", "schedule", "service", "snippet", "source", "source_user", "tag"]
+    __properties: ClassVar[List[str]] = ["action", "application", "description", "destination", "device", "enforce_symmetric_return", "folder", "from", "id", "name", "negate_destination", "negate_source", "schedule", "service", "snippet", "source", "source_user", "tag"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -151,6 +153,8 @@ class PbfRules(BaseModel):
             "from": PbfRulesFrom.from_dict(obj["from"]) if obj.get("from") is not None else None,
             "id": obj.get("id"),
             "name": obj.get("name"),
+            "negate_destination": obj.get("negate_destination") if obj.get("negate_destination") is not None else False,
+            "negate_source": obj.get("negate_source") if obj.get("negate_source") is not None else False,
             "schedule": obj.get("schedule"),
             "service": obj.get("service"),
             "snippet": obj.get("snippet"),

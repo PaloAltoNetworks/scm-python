@@ -30,6 +30,7 @@ class InternetRuleTypeAllowWebApplicationInner(BaseModel):
     """
     InternetRuleTypeAllowWebApplicationInner
     """ # noqa: E501
+    app_id: Optional[StrictStr] = None
     application_function: Optional[List[StrictStr]] = None
     dlp: Optional[StrictStr] = None
     file_control: Optional[InternetRuleTypeAllowUrlCategoryInnerFileControl] = None
@@ -39,7 +40,7 @@ class InternetRuleTypeAllowWebApplicationInner(BaseModel):
     saas_user_list: Optional[List[StrictStr]] = None
     tenant_control: Optional[InternetRuleTypeAllowWebApplicationInnerTenantControl] = None
     type: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["application_function", "dlp", "file_control", "name", "saas_enterprise_control", "saas_tenant_list", "saas_user_list", "tenant_control", "type"]
+    __properties: ClassVar[List[str]] = ["app_id", "application_function", "dlp", "file_control", "name", "saas_enterprise_control", "saas_tenant_list", "saas_user_list", "tenant_control", "type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -101,6 +102,7 @@ class InternetRuleTypeAllowWebApplicationInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "app_id": obj.get("app_id"),
             "application_function": obj.get("application_function"),
             "dlp": obj.get("dlp"),
             "file_control": InternetRuleTypeAllowUrlCategoryInnerFileControl.from_dict(obj["file_control"]) if obj.get("file_control") is not None else None,

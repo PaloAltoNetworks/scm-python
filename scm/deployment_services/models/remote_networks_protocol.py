@@ -27,7 +27,7 @@ from typing_extensions import Self
 
 class RemoteNetworksProtocol(BaseModel):
     """
-    setup the protocol when ecmp_load_balancing is disable
+    setup the protocol when ecmp_load_balancing is disabled
     """ # noqa: E501
     bgp: Optional[RemoteNetworksProtocolBgp] = None
     bgp_peer: Optional[RemoteNetworksProtocolBgpPeer] = None

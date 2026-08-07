@@ -35,7 +35,7 @@ class AuthenticationPortals(BaseModel):
     gp_udp_port: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=None, description="The UDP port for inbound authentication prompts")
     id: Optional[StrictStr] = Field(default=None, description="The UUID of the authentication portal")
     idle_timer: Optional[Annotated[int, Field(le=1440, strict=True, ge=1)]] = Field(default=None, description="The idle timeout value (minutes)")
-    redirect_host: StrictStr = Field(description="The authentication portal IP address or hostname")
+    redirect_host: Optional[StrictStr] = Field(default=None, description="The authentication portal IP address or hostname")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     timer: Optional[Annotated[int, Field(le=1440, strict=True, ge=1)]] = None
     tls_service_profile: Optional[StrictStr] = Field(default=None, description="The SSL/TLS service profile")

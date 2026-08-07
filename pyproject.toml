@@ -4,39 +4,69 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scm-python"
-version = "0.1.0"
-description = "Palo Alto Networks SCM Python SDK"
+version = "0.0.1-beta.3"
+description = "Palo Alto Networks Strata Cloud Manager (SCM) Python SDK"
 authors = [
-  { name="Palo Alto Networks", email="devrel@paloaltonetworks.com" },
+  { name = "Palo Alto Networks", email = "vnarayanan@paloaltonetworks.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = [
+  "palo-alto-networks",
+  "scm",
+  "strata-cloud-manager",
+  "sase",
+  "prisma-access",
+  "sdk",
+  "security",
+]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: System :: Networking",
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "urllib3 >= 1.25.3, < 2.1.0",
-    "python-dateutil",
-    "pydantic >= 2.0.0",
-    "typing-extensions",
-    "oauthlib >= 3.3.0",
-    "requests-oauthlib >= 2.0.0",
+  "urllib3 >= 1.25.3, < 2.1.0",
+  "python-dateutil",
+  "pydantic >= 2.0.0",
+  "typing-extensions",
+  "oauthlib >= 3.3.0",
+  "requests-oauthlib >= 2.0.0",
 ]
 
-# Define optional dependencies for developers
+[project.urls]
+Homepage = "https://github.com/PaloAltoNetworks/scm-python"
+Documentation = "https://github.com/PaloAltoNetworks/scm-python#readme"
+Repository = "https://github.com/PaloAltoNetworks/scm-python"
+Issues = "https://github.com/PaloAltoNetworks/scm-python/issues"
+Changelog = "https://github.com/PaloAltoNetworks/scm-python/blob/develop/CHANGELOG.md"
+
 [project.optional-dependencies]
 dev = [
-    "pytest >= 7.0",
-    "ruff >= 0.1.0",
-    "mypy >= 1.0",
+  "pytest >= 7.0",
+  "ruff >= 0.1.0",
+  "mypy >= 1.0",
+  "packaging >= 23.0",
+  "build >= 1.0",
+  "twine >= 5.0",
 ]
 
-# Configure Ruff (Linter)
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+extend-exclude = ["scm"]  # auto-generated SDK code; not lint-clean by design
+force-exclude = true  # honor extend-exclude even when paths are passed explicitly
 
 [tool.ruff.lint]
 select = ["E", "F", "D"]
@@ -45,12 +75,16 @@ ignore = ["E501", "D203", "D213"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D100", "D101", "D103", "D104"]  # docstrings in tests are noise
+"scripts/__init__.py" = ["D104"]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["scm*"]
 
 [tool.pytest.ini_options]
-testpaths = ["scm"]
+testpaths = ["scm", "tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_functions = ["test_*"]
 log_cli = true

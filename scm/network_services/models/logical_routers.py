@@ -33,10 +33,9 @@ class LogicalRouters(BaseModel):
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
     id: Optional[StrictStr] = Field(default=None, description="UUID of the resource")
     name: StrictStr
-    routing_stack: Optional[StrictStr] = None
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     vrf: Optional[List[LogicalRoutersVrfInner]] = None
-    __properties: ClassVar[List[str]] = ["device", "folder", "id", "name", "routing_stack", "snippet", "vrf"]
+    __properties: ClassVar[List[str]] = ["device", "folder", "id", "name", "snippet", "vrf"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -56,16 +55,6 @@ class LogicalRouters(BaseModel):
 
         if not re.match(r"^[a-zA-Z\d\-_\. ]+$", value):
             raise ValueError(r"must validate the regular expression /^[a-zA-Z\d\-_\. ]+$/")
-        return value
-
-    @field_validator('routing_stack')
-    def routing_stack_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['legacy', 'advanced']):
-            raise ValueError("must be one of enum values ('legacy', 'advanced')")
         return value
 
     @field_validator('snippet')
@@ -142,7 +131,6 @@ class LogicalRouters(BaseModel):
             "folder": obj.get("folder"),
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "routing_stack": obj.get("routing_stack"),
             "snippet": obj.get("snippet"),
             "vrf": [LogicalRoutersVrfInner.from_dict(_item) for _item in obj["vrf"]] if obj.get("vrf") is not None else None
         })

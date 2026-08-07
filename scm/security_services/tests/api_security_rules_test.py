@@ -229,3 +229,31 @@ def test_delete_security_rule_by_id(security_rules_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_security_rules(security_rules_api, clean_security_rule):
+    """
+    Test fetching a single security rule by name using the fetch convenience method.
+    Equivalent to Go: Test_security_services_SecurityRulesAPIService_FetchSecurityRules
+    """
+    # Fetch by exact name (position is required for rules APIs)
+    fetched_obj = security_rules_api.fetch_security_rules(
+        name=clean_security_rule.name,
+        folder=clean_security_rule.folder,
+        position="pre"
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found rule '{clean_security_rule.name}'"
+    assert fetched_obj.id == clean_security_rule.id
+    assert fetched_obj.name == clean_security_rule.name
+    logger.info(f"\n[SUCCESS] fetch_security_rules found object: {fetched_obj.name}")
+
+    # Test fetching non-existent rule (should return None)
+    not_found = security_rules_api.fetch_security_rules(
+        name="non-existent-security-rule-xyz-12345",
+        folder=clean_security_rule.folder,
+        position="pre"
+    )
+    assert not_found is None, "Should return None for non-existent rule"
+    logger.info(f"\n[SUCCESS] fetch_security_rules correctly returned None for non-existent rule")

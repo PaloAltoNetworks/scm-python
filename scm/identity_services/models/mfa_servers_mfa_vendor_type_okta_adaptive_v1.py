@@ -31,7 +31,7 @@ class MfaServersMfaVendorTypeOktaAdaptiveV1(BaseModel):
     okta_api_host: Annotated[str, Field(min_length=10, strict=True)] = Field(description="Okta API hostname")
     okta_baseuri: Annotated[str, Field(min_length=2, strict=True)]
     okta_org: StrictStr = Field(description="Okta organization")
-    okta_timeout: Annotated[int, Field(le=600, strict=True, ge=5)] = Field(description="Okta timeout (seconds)")
+    okta_timeout: StrictStr = Field(description="Okta timeout (seconds)")
     okta_token: Annotated[str, Field(min_length=8, strict=True)] = Field(description="Okta API token")
     __properties: ClassVar[List[str]] = ["okta_api_host", "okta_baseuri", "okta_org", "okta_timeout", "okta_token"]
 
@@ -89,7 +89,7 @@ class MfaServersMfaVendorTypeOktaAdaptiveV1(BaseModel):
             "okta_api_host": obj.get("okta_api_host"),
             "okta_baseuri": obj.get("okta_baseuri") if obj.get("okta_baseuri") is not None else '/api/v1',
             "okta_org": obj.get("okta_org"),
-            "okta_timeout": obj.get("okta_timeout") if obj.get("okta_timeout") is not None else 30,
+            "okta_timeout": obj.get("okta_timeout") if obj.get("okta_timeout") is not None else '30',
             "okta_token": obj.get("okta_token")
         })
         return _obj

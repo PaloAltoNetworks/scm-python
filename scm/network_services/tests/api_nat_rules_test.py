@@ -256,3 +256,31 @@ def test_delete_nat_rule_by_id(nat_rules_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_nat_rules(nat_rules_api, clean_nat_rule):
+    """
+    Test fetching a single NAT rule by name using the fetch convenience method.
+    Equivalent to Go: Test_network_services_NATRulesAPIService_FetchNATRules
+    """
+    # Fetch by exact name (position is required for rules APIs)
+    fetched_obj = nat_rules_api.fetch_nat_rules(
+        name=clean_nat_rule.name,
+        folder=TARGET_FOLDER,
+        position="pre"
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found rule '{clean_nat_rule.name}'"
+    assert fetched_obj.id == clean_nat_rule.id
+    assert fetched_obj.name == clean_nat_rule.name
+    logger.info(f"\n[SUCCESS] fetch_nat_rules found object: {fetched_obj.name}")
+
+    # Test fetching non-existent rule (should return None)
+    not_found = nat_rules_api.fetch_nat_rules(
+        name="non-existent-nat-rule-xyz-12345",
+        folder=TARGET_FOLDER,
+        position="pre"
+    )
+    assert not_found is None, "Should return None for non-existent rule"
+    logger.info(f"\n[SUCCESS] fetch_nat_rules correctly returned None for non-existent rule")
