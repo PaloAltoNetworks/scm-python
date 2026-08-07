@@ -11,19 +11,19 @@ Name | Type | Description | Notes
 **device** | **str** | The device in which the resource is defined | [optional] 
 **disabled** | **bool** | Rule disabled? | [optional] [default to False]
 **folder** | **str** | The folder in which the resource is defined | [optional] 
-**var_from** | **List[str]** | List of source zones | [optional] 
+**var_from** | [**DosProtectionRulesFrom**](DosProtectionRulesFrom.md) |  | 
 **id** | **str** | The UUID of the DNS security profile | [optional] [readonly] 
 **log_setting** | **str** | Log forwarding profile name | [optional] [default to 'Cortex Data Lake']
 **name** | **str** | Rule name | 
 **position** | **str** | Position relative to local device rules | [optional] [default to 'pre']
-**protection** | [**DosProtectionRulesProtection**](DosProtectionRulesProtection.md) |  | [optional] 
+**protection** | [**DosProtectionRulesProtection**](DosProtectionRulesProtection.md) |  | 
 **schedule** | **str** | Schedule on which to enforce the rule | [optional] 
-**service** | **List[str]** | List of services | [optional] 
+**service** | **List[str]** | List of services | 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
-**source** | **List[str]** | List of source addresses | [optional] 
+**source** | **List[str]** | List of source addresses | 
 **source_user** | **List[str]** | List of source users and/or groups.  Reserved words include &#x60;any&#x60;, &#x60;pre-login&#x60;, &#x60;known-user&#x60;, and &#x60;unknown&#x60;. | [optional] 
 **tag** | **List[str]** | List of tags | [optional] 
-**to** | **List[str]** | List of destination zones | [optional] 
+**to** | [**DosProtectionRulesTo**](DosProtectionRulesTo.md) |  | 
 
 ## Example
 

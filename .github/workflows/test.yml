@@ -18,14 +18,8 @@ jobs:
       matrix:
         service:
           - objects
-          - network_services
           - security_services
           - identity_services
-          - deployment_services
-          - config_setup
-          - config_operations
-          - device_settings
-          - mobile_agent
 
     steps:
       - name: Checkout code

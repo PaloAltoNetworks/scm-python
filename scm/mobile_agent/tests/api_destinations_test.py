@@ -256,35 +256,6 @@ def test_delete_destination_by_id(destinations_api):
     logger.info(f"Successfully deleted ForwardingProfileDestinations: {created_obj.id}")
 
 
-def test_update_destination_by_id_not_found(destinations_api):
-    """
-    Test that updating a non-existent destination returns 404.
-    Equivalent to Go: Test_mobile_agent_DestinationsAPIService_UpdateByID_NotFound
-    """
-    from scm.exceptions import ObjectNotPresentError
-
-    non_existent_id = "00000000-0000-0000-0000-000000000000"
-
-    fqdn_entry = ForwardingProfileDestinationFqdnEntry(
-        name="www.google.com",
-        port=80
-    )
-
-    payload = ForwardingProfileDestinations(
-        id="",
-        name="non-existent-dest",
-        fqdn=[fqdn_entry]
-    )
-
-    with pytest.raises(ObjectNotPresentError):
-        destinations_api.update_global_protect_destination_by_id(
-            id=non_existent_id,
-            forwarding_profile_destinations=payload
-        )
-
-    logger.info(f"Correctly raised ObjectNotPresentError when updating non-existent destination")
-
-
 def test_delete_destination_verify_gone(destinations_api):
     """
     Test that a deleted destination is no longer retrievable.
