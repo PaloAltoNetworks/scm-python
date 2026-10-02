@@ -22,7 +22,9 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from scm.security_services.models.dos_protection_rules_action import DosProtectionRulesAction
+from scm.security_services.models.dos_protection_rules_from import DosProtectionRulesFrom
 from scm.security_services.models.dos_protection_rules_protection import DosProtectionRulesProtection
+from scm.security_services.models.dos_protection_rules_to import DosProtectionRulesTo
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -36,19 +38,19 @@ class DosProtectionRules(BaseModel):
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     disabled: Optional[StrictBool] = Field(default=False, description="Rule disabled?")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
-    var_from: Optional[List[StrictStr]] = Field(default=None, description="List of source zones", alias="from")
+    var_from: DosProtectionRulesFrom = Field(alias="from")
     id: Optional[StrictStr] = Field(default=None, description="The UUID of the DNS security profile")
     log_setting: Optional[StrictStr] = Field(default='Cortex Data Lake', description="Log forwarding profile name")
     name: Annotated[str, Field(strict=True, max_length=31)] = Field(description="Rule name")
     position: Optional[StrictStr] = Field(default='pre', description="Position relative to local device rules")
-    protection: Optional[DosProtectionRulesProtection] = None
+    protection: DosProtectionRulesProtection
     schedule: Optional[StrictStr] = Field(default=None, description="Schedule on which to enforce the rule")
-    service: Optional[List[StrictStr]] = Field(default=None, description="List of services")
+    service: List[StrictStr] = Field(description="List of services")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    source: Optional[List[StrictStr]] = Field(default=None, description="List of source addresses")
+    source: List[StrictStr] = Field(description="List of source addresses")
     source_user: Optional[List[StrictStr]] = Field(default=None, description="List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.")
     tag: Optional[List[StrictStr]] = Field(default=None, description="List of tags")
-    to: Optional[List[StrictStr]] = Field(default=None, description="List of destination zones")
+    to: DosProtectionRulesTo
     __properties: ClassVar[List[str]] = ["action", "description", "destination", "device", "disabled", "folder", "from", "id", "log_setting", "name", "position", "protection", "schedule", "service", "snippet", "source", "source_user", "tag", "to"]
 
     @field_validator('device')
@@ -135,9 +137,15 @@ class DosProtectionRules(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of action
         if self.action:
             _dict['action'] = self.action.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of var_from
+        if self.var_from:
+            _dict['from'] = self.var_from.to_dict()
         # override the default output from pydantic by calling `to_dict()` of protection
         if self.protection:
             _dict['protection'] = self.protection.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of to
+        if self.to:
+            _dict['to'] = self.to.to_dict()
         return _dict
 
     @classmethod
@@ -156,7 +164,7 @@ class DosProtectionRules(BaseModel):
             "device": obj.get("device"),
             "disabled": obj.get("disabled") if obj.get("disabled") is not None else False,
             "folder": obj.get("folder"),
-            "from": obj.get("from"),
+            "from": DosProtectionRulesFrom.from_dict(obj["from"]) if obj.get("from") is not None else None,
             "id": obj.get("id"),
             "log_setting": obj.get("log_setting") if obj.get("log_setting") is not None else 'Cortex Data Lake',
             "name": obj.get("name"),
@@ -168,7 +176,7 @@ class DosProtectionRules(BaseModel):
             "source": obj.get("source"),
             "source_user": obj.get("source_user"),
             "tag": obj.get("tag"),
-            "to": obj.get("to")
+            "to": DosProtectionRulesTo.from_dict(obj["to"]) if obj.get("to") is not None else None
         })
         return _obj
 

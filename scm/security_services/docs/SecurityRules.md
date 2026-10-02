@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **name** | **str** | The name of the security rule | [optional] 
 **negate_destination** | **bool** | Negate the destination addresses(es)? | [optional] [default to False]
 **negate_source** | **bool** | Negate the source address(es)? | [optional] [default to False]
-**negate_user** | **bool** |  | [optional] [default to False]
+**negate_user** | **bool** |  | [optional] 
 **policy_type** | **str** |  | [optional] [default to 'Security']
 **profile_setting** | [**SecurityRuleTypeProfileSetting**](SecurityRuleTypeProfileSetting.md) |  | [optional] 
 **schedule** | **str** | Schedule in which this rule will be applied | [optional] 

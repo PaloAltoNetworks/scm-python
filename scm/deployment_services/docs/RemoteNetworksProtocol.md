@@ -1,6 +1,6 @@
 # RemoteNetworksProtocol
 
-setup the protocol when ecmp_load_balancing is disable
+setup the protocol when ecmp_load_balancing is disabled
 
 ## Properties
 

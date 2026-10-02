@@ -16,9 +16,7 @@ logger = logging.getLogger(__name__)
 TARGET_FOLDER = "Prisma Access"
 # -----------------------------------------------------------------------------
 
-# NOTE: Regions do NOT support List or Fetch operations.
-# Go removed List/Fetch because predefined regions lack the 'id' field.
-# Only Create, GetByID, Update, and DeleteByID are tested.
+# NOTE: Regions support Fetch operations for user-created regions.
 
 
 @pytest.fixture(scope="module")
@@ -212,3 +210,56 @@ def test_delete_region_by_id(regions_api):
     except ObjectNotPresentError:
         logger.info(f"Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_regions(regions_api):
+    """
+    Test fetching a single region by name using the fetch convenience method.
+    Equivalent to Go: Test_objects_RegionsAPIService_FetchRegions
+    """
+    # Create a region first
+    random_suffix = uuid.uuid4().hex[:6]
+    region_name = f"test-rgn-fetch-{random_suffix}"
+
+    payload = Regions(
+        id="",
+        name=region_name,
+        folder=TARGET_FOLDER,
+        address=["10.100.0.0/16"],
+    )
+
+    created_obj = perform(
+        regions_api.create_regions_with_http_info,
+        response_type=Regions,
+        regions=payload,
+    )
+    assert created_obj.id is not None
+
+    try:
+        # Fetch by exact name
+        fetched_obj = regions_api.fetch_regions(
+            name=region_name,
+            folder=TARGET_FOLDER
+        )
+
+        # Verify
+        assert fetched_obj is not None, f"Should have found region '{region_name}'"
+        assert fetched_obj.id == created_obj.id
+        assert fetched_obj.name == region_name
+        logger.info(f"\n[SUCCESS] fetch_regions found object: {fetched_obj.name}")
+
+        # Test fetching non-existent region (should return None)
+        not_found = regions_api.fetch_regions(
+            name="non-existent-region-xyz-12345",
+            folder=TARGET_FOLDER
+        )
+        assert not_found is None, "Should return None for non-existent region"
+        logger.info(f"\n[SUCCESS] fetch_regions correctly returned None for non-existent region")
+
+    finally:
+        # Cleanup
+        perform(
+            regions_api.delete_regions_by_id,
+            id=created_obj.id,
+        )
+        logger.info(f"Successfully cleaned up region: {created_obj.id}")

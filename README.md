@@ -1,10 +1,9 @@
 # SCM Python SDK
 
-Auto-generated SDK for Palo Alto Networks Strata Cloud Manager.
+[![PyPI version](https://img.shields.io/pypi/v/scm-python.svg)](https://pypi.org/project/scm-python/) [![Python versions](https://img.shields.io/pypi/pyversions/scm-python.svg)](https://pypi.org/project/scm-python/) [![License](https://img.shields.io/pypi/l/scm-python.svg)](https://github.com/PaloAltoNetworks/scm-python/blob/develop/LICENSE) [![PyPI - Weekly Downloads](https://img.shields.io/pypi/dw/scm-python.svg)](https://pypistats.org/packages/scm-python) [![PyPI - Monthly Downloads](https://img.shields.io/pypi/dm/scm-python.svg)](https://pypistats.org/packages/scm-python) [![PyPI - Total Downloads](https://img.shields.io/pypi/dd/scm-python.svg)](https://pypistats.org/packages/scm-python)
 
-NOTE: This SDK code is auto-generated.
+Auto-generated Python SDK for [Palo Alto Networks Strata Cloud Manager (SCM)](https://www.paloaltonetworks.com/network-security/strata-cloud-manager).
 
----
 ## Beta Release Disclaimer
 
 **This software is a pre-release version and is not ready for production use.**
@@ -23,7 +22,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 THIS SOFTWARE IS RELEASED AS A PROOF OF CONCEPT FOR EXPERIMENTAL PURPOSES ONLY. USE IT AT OWN RISK. THIS SOFTWARE IS NOT SUPPORTED.
 
+## Table of contents
+
+- Installation
+- Using scm-python
+- Configuration File
+- Basic Usage Example
+
 ## Installation
+
+Install the released version from PyPI:
+
+```bash
+pip install scm-python
+```
+
+Install from source (latest `main`):
 
 ```bash
 pip install git+https://github.com/PaloAltoNetworks/scm-python.git
@@ -32,7 +46,7 @@ pip install git+https://github.com/PaloAltoNetworks/scm-python.git
 For local development (after cloning):
 
 ```bash
-pip install -e .
+pip install -e ".[dev]"
 ```
 
 ## Using scm-python
@@ -172,7 +186,7 @@ This matches the scm-go SDK behavior and provides maximum flexibility.
                cache.set("jwt_expires_at", client._token_expires_at.isoformat())
                cache.set("jwt_lifetime", client._jwt_lifetime)
            time.sleep(300)
-
+   
    # Worker processes use cached token
    worker_client = Scm(
        client_id="YOUR_ID",
@@ -198,7 +212,7 @@ This matches the scm-go SDK behavior and provides maximum flexibility.
            jwt_lifetime=int(os.environ["JWT_LIFETIME"])
        )
        # ✅ Fast startup - no auth API call
-
+   
        addresses_api = client.objects.AddressesApi(client.objects.api_client)
        addresses = addresses_api.list_addresses(folder="Texas")
        return addresses
@@ -210,7 +224,7 @@ This matches the scm-go SDK behavior and provides maximum flexibility.
    def test_api_call():
        mock_jwt = "test_token_12345"
        mock_expires = "2099-12-31T23:59:59Z"
-
+   
        client = Scm(
            client_id="test",
            client_secret="test",
@@ -740,12 +754,13 @@ This SDK is **not compatible** with [pan-scm-sdk](https://github.com/cdot65/pan-
 
 ## Support
 
-This is auto-generated code provided as-is for experimental purposes. See [SUPPORT.md](SUPPORT.md) for the support policy.
+This is auto-generated code provided as-is for experimental purposes. See [SUPPORT.md](https://github.com/PaloAltoNetworks/sc
+m-python/blob/main/SUPPORT.md) for the support policy.
 
 For issues or questions:
 
 1. Check the [GitHub Issues](https://github.com/PaloAltoNetworks/scm-python/issues)
-2. Review the [documentation](docs/)
+2. Review the [documentation](https://github.com/PaloAltoNetworks/scm-python#readme/)
 
 ## License
 

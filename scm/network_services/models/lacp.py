@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from scm.network_services.models.lacp_high_availability import LacpHighAvailability
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,11 +31,12 @@ class Lacp(BaseModel):
     """ # noqa: E501
     enable: Optional[StrictBool] = Field(default=False, description="Enable LACP?")
     fast_failover: Optional[StrictBool] = Field(default=False, description="Fast failover")
+    high_availability: Optional[LacpHighAvailability] = None
     max_ports: Optional[Annotated[int, Field(le=8, strict=True, ge=1)]] = Field(default=8, description="Maximum number of physical ports bundled in the LAG")
     mode: Optional[StrictStr] = Field(default='passive', description="Mode")
     system_priority: Optional[Annotated[int, Field(le=65535, strict=True, ge=1)]] = Field(default=32768, description="LACP system priority in system ID")
     transmission_rate: Optional[StrictStr] = Field(default='slow', description="Transmission mode")
-    __properties: ClassVar[List[str]] = ["enable", "fast_failover", "max_ports", "mode", "system_priority", "transmission_rate"]
+    __properties: ClassVar[List[str]] = ["enable", "fast_failover", "high_availability", "max_ports", "mode", "system_priority", "transmission_rate"]
 
     @field_validator('mode')
     def mode_validate_enum(cls, value):
@@ -95,6 +97,9 @@ class Lacp(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of high_availability
+        if self.high_availability:
+            _dict['high_availability'] = self.high_availability.to_dict()
         return _dict
 
     @classmethod
@@ -109,6 +114,7 @@ class Lacp(BaseModel):
         _obj = cls.model_validate({
             "enable": obj.get("enable") if obj.get("enable") is not None else False,
             "fast_failover": obj.get("fast_failover") if obj.get("fast_failover") is not None else False,
+            "high_availability": LacpHighAvailability.from_dict(obj["high_availability"]) if obj.get("high_availability") is not None else None,
             "max_ports": obj.get("max_ports") if obj.get("max_ports") is not None else 8,
             "mode": obj.get("mode") if obj.get("mode") is not None else 'passive',
             "system_priority": obj.get("system_priority") if obj.get("system_priority") is not None else 32768,

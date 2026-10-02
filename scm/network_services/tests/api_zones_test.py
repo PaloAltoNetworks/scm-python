@@ -99,7 +99,7 @@ def test_list_zones(zones_api, clean_zone):
     """Test listing Security Zones."""
     response = zones_api.list_zones(folder=TARGET_FOLDER, limit=10)
     assert len(response.data) > 0
-    
+
     found = False
     for item in response.data:
         if item.id == clean_zone.id:
@@ -107,6 +107,24 @@ def test_list_zones(zones_api, clean_zone):
             break
     assert found is True
 
+
+def test_fetch_security_zones(zones_api, clean_zone):
+    """Test fetching a Security Zone by name using the fetch convenience method."""
+    fetched_obj = zones_api.fetch_security_zones(
+        name=clean_zone.name,
+        folder=TARGET_FOLDER,
+    )
+    assert fetched_obj is not None
+    assert fetched_obj.id == clean_zone.id
+    assert fetched_obj.name == clean_zone.name
+    logger.info(f"\n[SUCCESS] fetch_security_zones found object: {fetched_obj.name}")
+
+    not_found = zones_api.fetch_security_zones(
+        name="non-existent-zone-xyz-12345",
+        folder=TARGET_FOLDER,
+    )
+    assert not_found is None
+    logger.info(f"\n[SUCCESS] fetch_security_zones correctly returned None for non-existent object")
 
 
 def test_delete_zone_by_id(zones_api):

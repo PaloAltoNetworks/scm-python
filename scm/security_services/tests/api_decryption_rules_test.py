@@ -207,3 +207,31 @@ def test_delete_decryption_rule_by_id(decryption_rules_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_decryption_rules(decryption_rules_api, clean_decryption_rule):
+    """
+    Test fetching a single decryption rule by name using the fetch convenience method.
+    Equivalent to Go: Test_security_services_DecryptionRulesAPIService_FetchDecryptionRules
+    """
+    # Fetch by exact name (position is required for rules APIs)
+    fetched_obj = decryption_rules_api.fetch_decryption_rules(
+        name=clean_decryption_rule.name,
+        folder=clean_decryption_rule.folder,
+        position="pre"
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found rule '{clean_decryption_rule.name}'"
+    assert fetched_obj.id == clean_decryption_rule.id
+    assert fetched_obj.name == clean_decryption_rule.name
+    logger.info(f"\n[SUCCESS] fetch_decryption_rules found object: {fetched_obj.name}")
+
+    # Test fetching non-existent rule (should return None)
+    not_found = decryption_rules_api.fetch_decryption_rules(
+        name="non-existent-decryption-rule-xyz-12345",
+        folder=clean_decryption_rule.folder,
+        position="pre"
+    )
+    assert not_found is None, "Should return None for non-existent rule"
+    logger.info(f"\n[SUCCESS] fetch_decryption_rules correctly returned None for non-existent rule")

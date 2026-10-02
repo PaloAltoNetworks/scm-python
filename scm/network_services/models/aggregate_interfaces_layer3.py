@@ -21,11 +21,13 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
 from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
 from scm.network_services.models.aggregate_interfaces_layer3_ddns_config import AggregateInterfacesLayer3DdnsConfig
 from scm.network_services.models.aggregate_interfaces_layer3_ip_inner import AggregateInterfacesLayer3IpInner
 from scm.network_services.models.lacp import Lacp
+from scm.network_services.models.lldp import Lldp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,15 +35,17 @@ class AggregateInterfacesLayer3(BaseModel):
     """
     Aggregate Interface Layer 3 configuration
     """ # noqa: E501
+    adjust_tcp_mss: Optional[AdjustTcpMss] = None
     arp: Optional[List[AggEthernetArpInner]] = Field(default=None, description="Aggregate Ethernet ARP configuration")
     ddns_config: Optional[AggregateInterfacesLayer3DdnsConfig] = None
     dhcp_client: Optional[AggEthernetDhcpClientDhcpClient] = None
     interface_management_profile: Optional[Annotated[str, Field(strict=True, max_length=31)]] = Field(default=None, description="Interface management profile")
     ip: Optional[List[AggregateInterfacesLayer3IpInner]] = Field(default=None, description="Aggregate Interface IP addresses")
     lacp: Optional[Lacp] = None
+    lldp: Optional[Lldp] = None
     mtu: Optional[Annotated[int, Field(le=9216, strict=True, ge=576)]] = Field(default=1500, description="MTU")
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
-    __properties: ClassVar[List[str]] = ["arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "lacp", "mtu", "netflow_profile"]
+    __properties: ClassVar[List[str]] = ["adjust_tcp_mss", "arp", "ddns_config", "dhcp_client", "interface_management_profile", "ip", "lacp", "lldp", "mtu", "netflow_profile"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,6 +86,9 @@ class AggregateInterfacesLayer3(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of adjust_tcp_mss
+        if self.adjust_tcp_mss:
+            _dict['adjust_tcp_mss'] = self.adjust_tcp_mss.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in arp (list)
         _items = []
         if self.arp:
@@ -105,6 +112,9 @@ class AggregateInterfacesLayer3(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of lacp
         if self.lacp:
             _dict['lacp'] = self.lacp.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of lldp
+        if self.lldp:
+            _dict['lldp'] = self.lldp.to_dict()
         return _dict
 
     @classmethod
@@ -117,12 +127,14 @@ class AggregateInterfacesLayer3(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "adjust_tcp_mss": AdjustTcpMss.from_dict(obj["adjust_tcp_mss"]) if obj.get("adjust_tcp_mss") is not None else None,
             "arp": [AggEthernetArpInner.from_dict(_item) for _item in obj["arp"]] if obj.get("arp") is not None else None,
             "ddns_config": AggregateInterfacesLayer3DdnsConfig.from_dict(obj["ddns_config"]) if obj.get("ddns_config") is not None else None,
             "dhcp_client": AggEthernetDhcpClientDhcpClient.from_dict(obj["dhcp_client"]) if obj.get("dhcp_client") is not None else None,
             "interface_management_profile": obj.get("interface_management_profile"),
             "ip": [AggregateInterfacesLayer3IpInner.from_dict(_item) for _item in obj["ip"]] if obj.get("ip") is not None else None,
             "lacp": Lacp.from_dict(obj["lacp"]) if obj.get("lacp") is not None else None,
+            "lldp": Lldp.from_dict(obj["lldp"]) if obj.get("lldp") is not None else None,
             "mtu": obj.get("mtu") if obj.get("mtu") is not None else 1500,
             "netflow_profile": obj.get("netflow_profile")
         })

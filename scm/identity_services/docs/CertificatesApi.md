@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**create_certificates**](CertificatesApi.md#create_certificates) | **POST** /certificates | Generate a certificate
 [**delete_certificates_by_id**](CertificatesApi.md#delete_certificates_by_id) | **DELETE** /certificates/{id} | Delete a certificate
 [**export_certificate_by_id**](CertificatesApi.md#export_certificate_by_id) | **POST** /certificates/{id}:export | Export a certificate
-[**get_certificates_by_id**](CertificatesApi.md#get_certificates_by_id) | **GET** /certificates/{id} | Get a certificate
+[**import_certificates**](CertificatesApi.md#import_certificates) | **POST** /certificates:import | Import a certificate
 [**list_certificates**](CertificatesApi.md#list_certificates) | **GET** /certificates | List certificates
 
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | OK |  -  |
+**200** | OK |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
@@ -262,12 +262,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_certificates_by_id**
-> CertificatesGet get_certificates_by_id(id)
+# **import_certificates**
+> CertificatesGet import_certificates(certificates_import=certificates_import)
 
-Get a certificate
+Import a certificate
 
-Get an existing certificate. 
+Import a certificate. 
 
 ### Example
 
@@ -276,6 +276,7 @@ Get an existing certificate.
 ```python
 import scm.identity_services
 from scm.identity_services.models.certificates_get import CertificatesGet
+from scm.identity_services.models.certificates_import import CertificatesImport
 from scm.identity_services.rest import ApiException
 from pprint import pprint
 
@@ -299,15 +300,15 @@ configuration = scm.identity_services.Configuration(
 with scm.identity_services.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = scm.identity_services.CertificatesApi(api_client)
-    id = '123e4567-e89b-12d3-a456-426655440000' # str | The UUID of the configuration resource
+    certificates_import = scm.identity_services.CertificatesImport() # CertificatesImport | Import certificate payload (optional)
 
     try:
-        # Get a certificate
-        api_response = api_instance.get_certificates_by_id(id)
-        print("The response of CertificatesApi->get_certificates_by_id:\n")
+        # Import a certificate
+        api_response = api_instance.import_certificates(certificates_import=certificates_import)
+        print("The response of CertificatesApi->import_certificates:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CertificatesApi->get_certificates_by_id: %s\n" % e)
+        print("Exception when calling CertificatesApi->import_certificates: %s\n" % e)
 ```
 
 
@@ -317,7 +318,7 @@ with scm.identity_services.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The UUID of the configuration resource | 
+ **certificates_import** | [**CertificatesImport**](CertificatesImport.md)| Import certificate payload | [optional] 
 
 ### Return type
 
@@ -329,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -340,7 +341,6 @@ Name | Type | Description  | Notes
 **400** | Bad Request |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
-**404** | Not Found |  -  |
 **409** | Conflict |  -  |
 **0** | General Errors |  -  |
 

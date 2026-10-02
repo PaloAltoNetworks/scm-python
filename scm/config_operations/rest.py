@@ -154,6 +154,12 @@ class RESTClientObject:
         post_params = post_params or {}
         headers = headers or {}
 
+        # Fix: urllib3 sets Accept-Encoding: identity when preload_content=False,
+        # but some endpoints return 500 error with this header.
+        # Set to gzip, deflate which servers typically accept.
+        if 'Accept-Encoding' not in headers:
+            headers['Accept-Encoding'] = 'gzip, deflate'
+
         timeout = None
         if _request_timeout:
             if isinstance(_request_timeout, (int, float)):

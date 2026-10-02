@@ -404,3 +404,29 @@ def test_delete_service_connection_group_by_id(service_connection_groups_api, se
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_service_connection_groups(service_connection_groups_api, clean_service_connection_group):
+    """
+    Test fetching a single service connection group by name using the fetch convenience method.
+    Equivalent to Go: Test_deployment_services_ServiceConnectionGroupsAPIService_FetchServiceConnectionGroups
+    """
+    # Fetch by exact name
+    fetched_obj = service_connection_groups_api.fetch_service_connection_groups(
+        name=clean_service_connection_group.name,
+        folder=TARGET_FOLDER
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found group '{clean_service_connection_group.name}'"
+    assert fetched_obj.id == clean_service_connection_group.id
+    assert fetched_obj.name == clean_service_connection_group.name
+    logger.info(f"\n[SUCCESS] fetch_service_connection_groups found object: {fetched_obj.name}")
+
+    # Test fetching non-existent group (should return None)
+    not_found = service_connection_groups_api.fetch_service_connection_groups(
+        name="non-existent-service-connection-group-xyz-12345",
+        folder=TARGET_FOLDER
+    )
+    assert not_found is None, "Should return None for non-existent group"
+    logger.info(f"\n[SUCCESS] fetch_service_connection_groups correctly returned None for non-existent group")

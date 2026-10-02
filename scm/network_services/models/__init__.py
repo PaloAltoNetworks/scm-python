@@ -15,6 +15,7 @@
 
 
 # import models into model package
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.agg_ethernet_arp_inner import AggEthernetArpInner
 from scm.network_services.models.agg_ethernet_dhcp_client import AggEthernetDhcpClient
 from scm.network_services.models.agg_ethernet_dhcp_client_dhcp_client import AggEthernetDhcpClientDhcpClient
@@ -181,15 +182,11 @@ from scm.network_services.models.ethernet_interfaces import EthernetInterfaces
 from scm.network_services.models.ethernet_interfaces_arp_inner import EthernetInterfacesArpInner
 from scm.network_services.models.ethernet_interfaces_dhcp_client import EthernetInterfacesDhcpClient
 from scm.network_services.models.ethernet_interfaces_layer2 import EthernetInterfacesLayer2
-from scm.network_services.models.ethernet_interfaces_layer2_lldp import EthernetInterfacesLayer2Lldp
 from scm.network_services.models.ethernet_interfaces_layer3 import EthernetInterfacesLayer3
 from scm.network_services.models.ethernet_interfaces_layer3_ddns_config import EthernetInterfacesLayer3DdnsConfig
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client import EthernetInterfacesLayer3DhcpClient
 from scm.network_services.models.ethernet_interfaces_layer3_dhcp_client_send_hostname import EthernetInterfacesLayer3DhcpClientSendHostname
 from scm.network_services.models.ethernet_interfaces_layer3_ip_inner import EthernetInterfacesLayer3IpInner
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe import EthernetInterfacesLayer3Pppoe
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_passive import EthernetInterfacesLayer3PppoePassive
-from scm.network_services.models.ethernet_interfaces_layer3_pppoe_static_address import EthernetInterfacesLayer3PppoeStaticAddress
 from scm.network_services.models.ethernet_interfaces_list_response import EthernetInterfacesListResponse
 from scm.network_services.models.ethernet_interfaces_tap import EthernetInterfacesTap
 from scm.network_services.models.generic_error import GenericError
@@ -243,6 +240,7 @@ from scm.network_services.models.iptag_match_list import IptagMatchList
 from scm.network_services.models.iptag_match_list_list_response import IptagMatchListListResponse
 from scm.network_services.models.lldp_profiles_list_response import LLDPProfilesListResponse
 from scm.network_services.models.lacp import Lacp
+from scm.network_services.models.lacp_high_availability import LacpHighAvailability
 from scm.network_services.models.layer2_subinterfaces import Layer2Subinterfaces
 from scm.network_services.models.layer2_subinterfaces_list_response import Layer2SubinterfacesListResponse
 from scm.network_services.models.layer3_sub_interfaces_dhcp_client import Layer3SubInterfacesDhcpClient
@@ -257,6 +255,8 @@ from scm.network_services.models.license_info import LicenseInfo
 from scm.network_services.models.license_result import LicenseResult
 from scm.network_services.models.link_tags import LinkTags
 from scm.network_services.models.link_tags_list_response import LinkTagsListResponse
+from scm.network_services.models.lldp import Lldp
+from scm.network_services.models.lldp_high_availability import LldpHighAvailability
 from scm.network_services.models.lldp_profiles import LldpProfiles
 from scm.network_services.models.lldp_profiles_option_tlvs import LldpProfilesOptionTlvs
 from scm.network_services.models.lldp_profiles_option_tlvs_management_address import LldpProfilesOptionTlvsManagementAddress
@@ -450,6 +450,9 @@ from scm.network_services.models.pbf_rules_enforce_symmetric_return import PbfRu
 from scm.network_services.models.pbf_rules_enforce_symmetric_return_nexthop_address_list_inner import PbfRulesEnforceSymmetricReturnNexthopAddressListInner
 from scm.network_services.models.pbf_rules_from import PbfRulesFrom
 from scm.network_services.models.poe import Poe
+from scm.network_services.models.pppoe import Pppoe
+from scm.network_services.models.pppoe_passive import PppoePassive
+from scm.network_services.models.pppoe_static_address import PppoeStaticAddress
 from scm.network_services.models.qos_policy_rules_list_response import QoSPolicyRulesListResponse
 from scm.network_services.models.qos_profiles_list_response import QoSProfilesListResponse
 from scm.network_services.models.qos_policy_rules import QosPolicyRules

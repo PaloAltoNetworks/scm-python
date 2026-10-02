@@ -47,7 +47,7 @@ class InternetRuleType(BaseModel):
     log_settings: Optional[InternetRuleTypeLogSettings] = None
     name: StrictStr = Field(description="The name of the security rule")
     negate_source: Optional[StrictBool] = Field(default=False, description="Negate the source address(es)?")
-    negate_user: Optional[StrictBool] = False
+    negate_user: Optional[StrictBool] = None
     policy_type: Optional[StrictStr] = 'Security'
     schedule: Optional[StrictStr] = Field(default=None, description="Schedule in which this rule will be applied")
     security_settings: Optional[InternetRuleTypeSecuritySettings] = None
@@ -159,7 +159,7 @@ class InternetRuleType(BaseModel):
             "log_settings": InternetRuleTypeLogSettings.from_dict(obj["log_settings"]) if obj.get("log_settings") is not None else None,
             "name": obj.get("name"),
             "negate_source": obj.get("negate_source") if obj.get("negate_source") is not None else False,
-            "negate_user": obj.get("negate_user") if obj.get("negate_user") is not None else False,
+            "negate_user": obj.get("negate_user"),
             "policy_type": obj.get("policy_type") if obj.get("policy_type") is not None else 'Security',
             "schedule": obj.get("schedule"),
             "security_settings": InternetRuleTypeSecuritySettings.from_dict(obj["security_settings"]) if obj.get("security_settings") is not None else None,

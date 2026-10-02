@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**adjust_tcp_mss** | [**AdjustTcpMss**](AdjustTcpMss.md) |  | [optional] 
 **comment** | **str** | Description for loopback interface | [optional] 
 **default_value** | **str** | Default interface assignment for loopback interface | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 

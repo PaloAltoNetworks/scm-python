@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**adjust_tcp_mss** | [**AdjustTcpMss**](AdjustTcpMss.md) |  | [optional] 
 **arp** | [**List[Layer3SubinterfacesArpInner]**](Layer3SubinterfacesArpInner.md) | Layer 3 sub Interfaces ARP configuration | [optional] 
 **comment** | **str** | Description | [optional] 
 **ddns_config** | [**Layer3SubinterfacesDdnsConfig**](Layer3SubinterfacesDdnsConfig.md) |  | [optional] 
@@ -18,6 +19,7 @@ Name | Type | Description | Notes
 **name** | **str** | L3 sub-interface name | 
 **netflow_profile** | **str** | Name of Netflow Profile to assign to Interface | [optional] 
 **parent_interface** | **str** | Parent interface | [optional] 
+**pppoe** | [**Pppoe**](Pppoe.md) |  | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **tag** | **int** | VLAN tag | [optional] 
 

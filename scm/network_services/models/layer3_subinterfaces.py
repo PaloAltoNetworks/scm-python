@@ -21,10 +21,12 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.layer3_sub_interfaces_dhcp_client_dhcp_client import Layer3SubInterfacesDhcpClientDhcpClient
 from scm.network_services.models.layer3_subinterfaces_arp_inner import Layer3SubinterfacesArpInner
 from scm.network_services.models.layer3_subinterfaces_ddns_config import Layer3SubinterfacesDdnsConfig
 from scm.network_services.models.layer3_subinterfaces_ip_inner import Layer3SubinterfacesIpInner
+from scm.network_services.models.pppoe import Pppoe
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,6 +34,7 @@ class Layer3Subinterfaces(BaseModel):
     """
     Layer3Subinterfaces
     """ # noqa: E501
+    adjust_tcp_mss: Optional[AdjustTcpMss] = None
     arp: Optional[List[Layer3SubinterfacesArpInner]] = Field(default=None, description="Layer 3 sub Interfaces ARP configuration")
     comment: Optional[StrictStr] = Field(default=None, description="Description")
     ddns_config: Optional[Layer3SubinterfacesDdnsConfig] = None
@@ -45,9 +48,10 @@ class Layer3Subinterfaces(BaseModel):
     name: StrictStr = Field(description="L3 sub-interface name")
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     parent_interface: Optional[StrictStr] = Field(default=None, description="Parent interface")
+    pppoe: Optional[Pppoe] = None
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     tag: Optional[Annotated[int, Field(le=4096, strict=True, ge=1)]] = Field(default=None, description="VLAN tag")
-    __properties: ClassVar[List[str]] = ["arp", "comment", "ddns_config", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "parent_interface", "snippet", "tag"]
+    __properties: ClassVar[List[str]] = ["adjust_tcp_mss", "arp", "comment", "ddns_config", "device", "dhcp_client", "folder", "id", "interface_management_profile", "ip", "mtu", "name", "netflow_profile", "parent_interface", "pppoe", "snippet", "tag"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -120,6 +124,9 @@ class Layer3Subinterfaces(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of adjust_tcp_mss
+        if self.adjust_tcp_mss:
+            _dict['adjust_tcp_mss'] = self.adjust_tcp_mss.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in arp (list)
         _items = []
         if self.arp:
@@ -140,6 +147,9 @@ class Layer3Subinterfaces(BaseModel):
                 if _item_ip:
                     _items.append(_item_ip.to_dict())
             _dict['ip'] = _items
+        # override the default output from pydantic by calling `to_dict()` of pppoe
+        if self.pppoe:
+            _dict['pppoe'] = self.pppoe.to_dict()
         return _dict
 
     @classmethod
@@ -152,6 +162,7 @@ class Layer3Subinterfaces(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "adjust_tcp_mss": AdjustTcpMss.from_dict(obj["adjust_tcp_mss"]) if obj.get("adjust_tcp_mss") is not None else None,
             "arp": [Layer3SubinterfacesArpInner.from_dict(_item) for _item in obj["arp"]] if obj.get("arp") is not None else None,
             "comment": obj.get("comment"),
             "ddns_config": Layer3SubinterfacesDdnsConfig.from_dict(obj["ddns_config"]) if obj.get("ddns_config") is not None else None,
@@ -165,6 +176,7 @@ class Layer3Subinterfaces(BaseModel):
             "name": obj.get("name"),
             "netflow_profile": obj.get("netflow_profile"),
             "parent_interface": obj.get("parent_interface"),
+            "pppoe": Pppoe.from_dict(obj["pppoe"]) if obj.get("pppoe") is not None else None,
             "snippet": obj.get("snippet"),
             "tag": obj.get("tag")
         })

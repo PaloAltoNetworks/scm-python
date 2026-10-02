@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **log_settings** | [**InternetRuleTypeLogSettings**](InternetRuleTypeLogSettings.md) |  | [optional] 
 **name** | **str** | The name of the security rule | 
 **negate_source** | **bool** | Negate the source address(es)? | [optional] [default to False]
-**negate_user** | **bool** |  | [optional] [default to False]
+**negate_user** | **bool** |  | [optional] 
 **policy_type** | **str** |  | [optional] [default to 'Security']
 **schedule** | **str** | Schedule in which this rule will be applied | [optional] 
 **security_settings** | [**InternetRuleTypeSecuritySettings**](InternetRuleTypeSecuritySettings.md) |  | [optional] 

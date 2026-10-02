@@ -4,6 +4,8 @@ import uuid
 import pytest
 from scm import Scm
 from scm.network_services.models.system_match_list import SystemMatchList
+from scm.objects.models.http_server_profiles import HttpServerProfiles, HttpServerProfilesServerInner
+from scm.objects.models.syslog_server_profiles import SyslogServerProfiles, SyslogServerProfilesServerInner
 from scm.test_helpers import perform
 
 logging.basicConfig(level=logging.DEBUG)
@@ -25,8 +27,79 @@ def system_match_list_api(client):
     return client.network_services.SystemMatchListApi(client.network_services.api_client)
 
 
+@pytest.fixture(scope="module")
+def http_server_profiles_api(client):
+    return client.objects.HTTPServerProfilesApi(client.objects.api_client)
+
+
+@pytest.fixture(scope="module")
+def syslog_server_profiles_api(client):
+    return client.objects.SyslogServerProfilesApi(client.objects.api_client)
+
+
 @pytest.fixture
-def clean_system_match_list(system_match_list_api):
+def dependency_profiles(http_server_profiles_api, syslog_server_profiles_api):
+    """
+    Creates HTTP and Syslog server profiles as dependencies for System Match List.
+    """
+    random_id = uuid.uuid4().hex[:6]
+
+    # Create HTTP Server Profile
+    http_name = f"test-http-{random_id}"
+    http_payload = HttpServerProfiles(
+        id="",
+        name=http_name,
+        folder=TARGET_FOLDER,
+        server=[HttpServerProfilesServerInner(
+            name="http-server-1",
+            address="192.168.1.100",
+            port=8080,
+            protocol="HTTP",
+            http_method="POST"
+        )]
+    )
+    logger.info(f"\n[SETUP] Creating HTTP Server Profile: {http_name}")
+    http_obj = http_server_profiles_api.create_http_server_profiles(http_server_profiles=http_payload)
+
+    # Create Syslog Server Profile (shortened name to stay under 31 char limit)
+    syslog_name = f"sys-{random_id}"
+    syslog_payload = SyslogServerProfiles(
+        id="",
+        name=syslog_name,
+        folder=TARGET_FOLDER,
+        server=[SyslogServerProfilesServerInner(
+            name="syslog-server-1",
+            server="192.168.1.101",
+            port=514,
+            format="BSD",
+            facility="LOG_USER",
+            transport="UDP"
+        )]
+    )
+    logger.info(f"\n[SETUP] Creating Syslog Server Profile: {syslog_name}")
+    syslog_obj = syslog_server_profiles_api.create_syslog_server_profiles(syslog_server_profiles=syslog_payload)
+
+    yield {
+        "http_name": http_name,
+        "http_id": http_obj.id,
+        "syslog_name": syslog_name,
+        "syslog_id": syslog_obj.id
+    }
+
+    # Cleanup
+    logger.info(f"\n[TEARDOWN] Deleting dependency profiles")
+    try:
+        http_server_profiles_api.delete_http_server_profiles_by_id(id=http_obj.id)
+    except Exception as e:
+        logger.info(f"Failed to delete HTTP profile: {e}")
+    try:
+        syslog_server_profiles_api.delete_syslog_server_profiles_by_id(id=syslog_obj.id)
+    except Exception as e:
+        logger.info(f"Failed to delete Syslog profile: {e}")
+
+
+@pytest.fixture
+def clean_system_match_list(system_match_list_api, dependency_profiles):
     """
     Fixture to create a temporary system match list for testing and automatically delete it after.
     """
@@ -38,11 +111,8 @@ def clean_system_match_list(system_match_list_api):
         folder=TARGET_FOLDER,
         description="Created via Automated Pytest Fixture",
         filter="All Logs",
-        send_syslog=["test-syslog"],
-        send_http=["some-http-profile"],
-        send_snmptrap=["snmp_test"],
-        send_email=["test-email"],
-        quarantine=False,
+        send_syslog=[dependency_profiles["syslog_name"]],
+        send_http=[dependency_profiles["http_name"]],
         send_to_panorama=False
     )
 
@@ -67,7 +137,7 @@ def clean_system_match_list(system_match_list_api):
         logger.info(f"Teardown failed (might have been deleted in test): {e}")
 
 
-def test_create_system_match_list(system_match_list_api):
+def test_create_system_match_list(system_match_list_api, dependency_profiles):
     """
     Test manual creation and deletion of a system match list.
     """
@@ -78,7 +148,7 @@ def test_create_system_match_list(system_match_list_api):
         folder=TARGET_FOLDER,
         description="Test system match list for create API testing",
         filter="All Logs",
-        send_syslog=["test-syslog"],
+        send_syslog=[dependency_profiles["syslog_name"]],
         send_to_panorama=False
     )
 
