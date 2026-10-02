@@ -1,0 +1,422 @@
+.github/workflows/release-python-sdk.yml
+  h_87e1a3c7c2076a 1-18,26-30,32-198
+.github/workflows/test.yml
+  h_87e1a3c7c2076a 28
+CHANGELOG.md
+  h_87e1a3c7c2076a 1-19
+README.md
+  h_87e1a3c7c2076a 3,5,27-30,757-758,763
+pyproject.toml
+  h_87e1a3c7c2076a 7,10,53
+scm/__init__.py
+  h_87e1a3c7c2076a 43-45,341,534-535,727-745
+scm/config_operations/docs/PushCandidateConfigVersionsRequest.md
+  h_87e1a3c7c2076a 11
+scm/config_operations/models/push_candidate_config_versions_request.py
+  h_87e1a3c7c2076a 34-35,91
+scm/deployment_services/__init__.py
+  h_87e1a3c7c2076a 71
+scm/deployment_services/docs/RemoteNetworksProtocol.md
+  h_87e1a3c7c2076a 3
+scm/deployment_services/docs/ServiceConnectionsProtocol.md
+  h_87e1a3c7c2076a 9
+scm/deployment_services/docs/ServiceConnectionsProtocolBgpPeer.md
+  h_87e1a3c7c2076a 1-33
+scm/deployment_services/models/__init__.py
+  h_87e1a3c7c2076a 44
+scm/deployment_services/models/remote_networks_protocol.py
+  h_87e1a3c7c2076a 30
+scm/deployment_services/models/service_connections.py
+  h_87e1a3c7c2076a 46
+scm/deployment_services/models/service_connections_protocol.py
+  h_87e1a3c7c2076a 24,33-34,78-80,93-94
+scm/deployment_services/models/service_connections_protocol_bgp_peer.py
+  h_87e1a3c7c2076a 21,26,28,30-35,55,80
+scm/identity_services/docs/AuthenticationPortals.md
+  h_87e1a3c7c2076a 15
+scm/identity_services/docs/AuthenticationRules.md
+  h_87e1a3c7c2076a 8
+scm/identity_services/models/authentication_portals.py
+  h_87e1a3c7c2076a 38
+scm/identity_services/models/authentication_rules.py
+  h_87e1a3c7c2076a 31,111
+scm/identity_services/models/export_certificate_payload.py
+  h_87e1a3c7c2076a 21,31
+scm/identity_services/tests/api_authentication_portals_test.py
+  h_87e1a3c7c2076a 13-14,32,34-35,37-38,40-42,44-47,49-52,54-56,59,61-65,67,69-71,73-74,76-77,79-90,92,94-96,98-100,102-111,115-118,121-126,129-136,138,141,143-144,146-147,149-150
+scm/network_services/__init__.py
+  h_87e1a3c7c2076a 84,324-325,519-521
+scm/network_services/docs/AdjustTcpMss.md
+  h_87e1a3c7c2076a 1-32
+scm/network_services/docs/AggregateInterfacesLayer2.md
+  h_87e1a3c7c2076a 9
+scm/network_services/docs/AggregateInterfacesLayer3.md
+  h_87e1a3c7c2076a 9,16
+scm/network_services/docs/EthernetInterfacesLayer2.md
+  h_87e1a3c7c2076a 8
+scm/network_services/docs/EthernetInterfacesLayer3.md
+  h_87e1a3c7c2076a 9,15,18
+scm/network_services/docs/Layer3Subinterfaces.md
+  h_87e1a3c7c2076a 8,22
+scm/network_services/docs/Lldp.md
+  h_87e1a3c7c2076a 1,3,10-11,16,20-21,23,26-28
+scm/network_services/docs/LldpHighAvailability.md
+  h_87e1a3c7c2076a 1-30
+scm/network_services/docs/LoopbackInterfaces.md
+  h_87e1a3c7c2076a 8
+scm/network_services/docs/PbfRules.md
+  h_87e1a3c7c2076a 18-19
+scm/network_services/docs/Pppoe.md
+  h_87e1a3c7c2076a 1,3,12-13,16,22,26-27,29,32-34
+scm/network_services/docs/PppoePassive.md
+  h_87e1a3c7c2076a 1,13,17-18,20,23-25
+scm/network_services/docs/PppoeStaticAddress.md
+  h_87e1a3c7c2076a 1,13,17-18,20,23-25
+scm/network_services/docs/VlanInterfaces.md
+  h_87e1a3c7c2076a 8
+scm/network_services/models/__init__.py
+  h_87e1a3c7c2076a 18,258-259,453-455
+scm/network_services/models/adjust_tcp_mss.py
+  h_87e1a3c7c2076a 1-93
+scm/network_services/models/aggregate_interfaces_layer2.py
+  h_87e1a3c7c2076a 25,34,37,91-93,107
+scm/network_services/models/aggregate_interfaces_layer3.py
+  h_87e1a3c7c2076a 24,30,38,45,48,89-91,115-117,130,137
+scm/network_services/models/ethernet_interfaces_layer2.py
+  h_87e1a3c7c2076a 24,32,101
+scm/network_services/models/ethernet_interfaces_layer3.py
+  h_87e1a3c7c2076a 24,29-30,38,44,47-48,89-91,112-114,130,136,139
+scm/network_services/models/ike_crypto_profiles.py
+  h_87e1a3c7c2076a 58-59
+scm/network_services/models/ipsec_crypto_profiles.py
+  h_87e1a3c7c2076a 63-64
+scm/network_services/models/layer3_subinterfaces.py
+  h_87e1a3c7c2076a 24,29,37,51,54,127-129,150-152,165,179
+scm/network_services/models/lldp.py
+  h_87e1a3c7c2076a 1-96
+scm/network_services/models/lldp_high_availability.py
+  h_87e1a3c7c2076a 21-22,26,28,30-31,51,76,84
+scm/network_services/models/logical_routers.py
+  h_87e1a3c7c2076a 38
+scm/network_services/models/loopback_interfaces.py
+  h_87e1a3c7c2076a 24,34,47,137-139,162
+scm/network_services/models/pbf_rules.py
+  h_87e1a3c7c2076a 21,44-45,52,156-157
+scm/network_services/models/pppoe.py
+  h_87e1a3c7c2076a 24-25,29,31,36-37,40,72,103,115,118
+scm/network_services/models/pppoe_passive.py
+  h_87e1a3c7c2076a 26,28,51,76
+scm/network_services/models/pppoe_static_address.py
+  h_87e1a3c7c2076a 27,29,52,77
+scm/network_services/models/vlan_interfaces.py
+  h_87e1a3c7c2076a 24,36,52,145-147,180
+scm/network_services/tests/api_config_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151,241
+scm/network_services/tests/api_globalprotect_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151
+scm/network_services/tests/api_hipmatch_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151
+scm/network_services/tests/api_ipsec_tunnels_test.py
+  h_87e1a3c7c2076a 15-16,74-75
+scm/network_services/tests/api_iptag_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151
+scm/network_services/tests/api_system_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151
+scm/network_services/tests/api_userid_match_lists_test.py
+  h_87e1a3c7c2076a 7-8,30-100,102,114-115,140,151
+scm/objects/tests/api_applications_test.py
+  h_87e1a3c7c2076a 158,219
+scm/objects/tests/api_auto_tag_actions_test.py
+  h_87e1a3c7c2076a 20
+scm/security_services/__init__.py
+  h_87e1a3c7c2076a 24,87-91,139,144
+scm/security_services/api/__init__.py
+  h_87e1a3c7c2076a 7
+scm/security_services/api/auto_tag_actions_api.py
+  h_87e1a3c7c2076a 4,6,23-24,26-28
+scm/security_services/docs/AutoTagActions.md
+  h_87e1a3c7c2076a 22
+scm/security_services/docs/AutoTagActionsActionsInner.md
+  h_87e1a3c7c2076a 14
+scm/security_services/docs/AutoTagActionsActionsInnerType.md
+  h_87e1a3c7c2076a 13
+scm/security_services/docs/AutoTagActionsActionsInnerTypeTagging.md
+  h_87e1a3c7c2076a 16
+scm/security_services/docs/AutoTagActionsApi.md
+  h_87e1a3c7c2076a 1,3,25-27,30,32-33,42,47,49-50,108-109,112,114-115,124,129,131,189-191,194,196-197,206,211,213,276-278,281,283-284,293,298,300-301
+scm/security_services/docs/AutoTagActionsListResponse.md
+  h_87e1a3c7c2076a 16
+scm/security_services/docs/DosProtectionProfilesFloodIcmpRed.md
+  h_87e1a3c7c2076a 8-9,11
+scm/security_services/docs/DosProtectionProfilesFloodTcpSynSynCookies.md
+  h_87e1a3c7c2076a 8-9,11
+scm/security_services/docs/DosProtectionRules.md
+  h_87e1a3c7c2076a 14,19,21,23,26
+scm/security_services/docs/DosProtectionRulesFrom.md
+  h_87e1a3c7c2076a 1-31
+scm/security_services/docs/DosProtectionRulesTo.md
+  h_87e1a3c7c2076a 1-31
+scm/security_services/docs/InternetRuleType.md
+  h_87e1a3c7c2076a 24
+scm/security_services/docs/SecurityRules.md
+  h_87e1a3c7c2076a 33
+scm/security_services/models/__init__.py
+  h_87e1a3c7c2076a 47-51,99,104
+scm/security_services/models/auto_tag_actions.py
+  h_87e1a3c7c2076a 4,6,24
+scm/security_services/models/auto_tag_actions_actions_inner.py
+  h_87e1a3c7c2076a 4,6,23
+scm/security_services/models/auto_tag_actions_actions_inner_type.py
+  h_87e1a3c7c2076a 4,6,23
+scm/security_services/models/auto_tag_actions_actions_inner_type_tagging.py
+  h_87e1a3c7c2076a 4,6
+scm/security_services/models/auto_tag_actions_list_response.py
+  h_87e1a3c7c2076a 4,6,23
+scm/security_services/models/dos_protection_profiles_flood_icmp_red.py
+  h_87e1a3c7c2076a 32-33,35
+scm/security_services/models/dos_protection_profiles_flood_tcp_syn_syn_cookies.py
+  h_87e1a3c7c2076a 32-33,35
+scm/security_services/models/dos_protection_rules.py
+  h_87e1a3c7c2076a 25,27,41,46,48,50,53,140-142,146-148,167,179
+scm/security_services/models/dos_protection_rules_from.py
+  h_87e1a3c7c2076a 1-90
+scm/security_services/models/dos_protection_rules_to.py
+  h_87e1a3c7c2076a 1-90
+scm/security_services/models/internet_rule_type.py
+  h_87e1a3c7c2076a 50,162
+scm/security_services/models/security_rules.py
+  h_87e1a3c7c2076a 61,219
+scm/security_services/tests/api_dos_protection_rules_test.py
+  h_87e1a3c7c2076a 3,5-12,38-80,108-255
+scm/ztna_connector_all/__init__.py
+  h_87e1a3c7c2076a 1-84
+scm/ztna_connector_all/api/__init__.py
+  h_87e1a3c7c2076a 1-11
+scm/ztna_connector_all/api/connector_api.py
+  h_87e1a3c7c2076a 1-6467
+scm/ztna_connector_all/api/connector_group_api.py
+  h_87e1a3c7c2076a 1-4666
+scm/ztna_connector_all/api/discovered_application_api.py
+  h_87e1a3c7c2076a 1-702
+scm/ztna_connector_all/api/fqdn_api.py
+  h_87e1a3c7c2076a 1-1895
+scm/ztna_connector_all/api/subnet_api.py
+  h_87e1a3c7c2076a 1-1895
+scm/ztna_connector_all/api/tenant_api.py
+  h_87e1a3c7c2076a 1-1115
+scm/ztna_connector_all/api/wildcard_api.py
+  h_87e1a3c7c2076a 1-1895
+scm/ztna_connector_all/api_client.py
+  h_87e1a3c7c2076a 1-798
+scm/ztna_connector_all/api_response.py
+  h_87e1a3c7c2076a 1-21
+scm/ztna_connector_all/configuration.py
+  h_87e1a3c7c2076a 1-460
+scm/ztna_connector_all/docs/Applications.md
+  h_87e1a3c7c2076a 1-39
+scm/ztna_connector_all/docs/ApplicationsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ApplicationsSpecInner.md
+  h_87e1a3c7c2076a 1-33
+scm/ztna_connector_all/docs/ConnectorApi.md
+  h_87e1a3c7c2076a 1-1805
+scm/ztna_connector_all/docs/ConnectorGroupApi.md
+  h_87e1a3c7c2076a 1-1261
+scm/ztna_connector_all/docs/ConnectorGroupConnectors.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ConnectorGroupConnectorsConnectors.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ConnectorGroupFqdnRules.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ConnectorGroupScheduledUpgrade.md
+  h_87e1a3c7c2076a 1-33
+scm/ztna_connector_all/docs/ConnectorGroupStatus.md
+  h_87e1a3c7c2076a 1-36
+scm/ztna_connector_all/docs/ConnectorGroupStatusCounts.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ConnectorGroupSubnetRules.md
+  h_87e1a3c7c2076a 1,8-9,14,18-19,21,24-26
+scm/ztna_connector_all/docs/ConnectorGroupUpgradeStatus.md
+  h_87e1a3c7c2076a 1-33
+scm/ztna_connector_all/docs/ConnectorGroupUpgradeStatusDataInner.md
+  h_87e1a3c7c2076a 1-37
+scm/ztna_connector_all/docs/ConnectorGroupWildcards.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ConnectorGroups.md
+  h_87e1a3c7c2076a 1-37
+scm/ztna_connector_all/docs/ConnectorGroupsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ConnectorImages.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ConnectorImagesListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ConnectorQuiesce.md
+  h_87e1a3c7c2076a 1-29
+scm/ztna_connector_all/docs/ConnectorScheduledUpgrade.md
+  h_87e1a3c7c2076a 1-31
+scm/ztna_connector_all/docs/ConnectorStatus.md
+  h_87e1a3c7c2076a 1-49
+scm/ztna_connector_all/docs/ConnectorStatusFlags.md
+  h_87e1a3c7c2076a 1-33
+scm/ztna_connector_all/docs/ConnectorStatusFlagsCapabilities.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ConnectorUpgradeStatus.md
+  h_87e1a3c7c2076a 1-38
+scm/ztna_connector_all/docs/Connectors.md
+  h_87e1a3c7c2076a 1-34
+scm/ztna_connector_all/docs/ConnectorsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/DiagnosticFileList.md
+  h_87e1a3c7c2076a 1-29
+scm/ztna_connector_all/docs/DiagnosticFileListDataInner.md
+  h_87e1a3c7c2076a 1-33
+scm/ztna_connector_all/docs/DiscoveredApplicationApi.md
+  h_87e1a3c7c2076a 1-182
+scm/ztna_connector_all/docs/DiscoveredApplications.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/DiscoveredApplicationsApplicationsInner.md
+  h_87e1a3c7c2076a 1-35
+scm/ztna_connector_all/docs/DiscoveredApplicationsApplicationsInnerAppSpecInner.md
+  h_87e1a3c7c2076a 1-31
+scm/ztna_connector_all/docs/DiscoveredApplicationsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ErrorDetail.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ErrorDetailCausesInner.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/ErrorObject.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/ErrorResponse.md
+  h_87e1a3c7c2076a 1-30
+scm/ztna_connector_all/docs/FQDNApi.md
+  h_87e1a3c7c2076a 1-509
+scm/ztna_connector_all/docs/License.md
+  h_87e1a3c7c2076a 1-34
+scm/ztna_connector_all/docs/PacketCapture.md
+  h_87e1a3c7c2076a 1-31
+scm/ztna_connector_all/docs/PacketCaptureCreate.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/StartTenantOffboarding202Response.md
+  h_87e1a3c7c2076a 1-29
+scm/ztna_connector_all/docs/SubnetApi.md
+  h_87e1a3c7c2076a 1-509
+scm/ztna_connector_all/docs/Subnets.md
+  h_87e1a3c7c2076a 1-37
+scm/ztna_connector_all/docs/SubnetsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/docs/TenantApi.md
+  h_87e1a3c7c2076a 1-324
+scm/ztna_connector_all/docs/TenantStatus.md
+  h_87e1a3c7c2076a 1-29
+scm/ztna_connector_all/docs/WildcardApi.md
+  h_87e1a3c7c2076a 1-509
+scm/ztna_connector_all/docs/Wildcards.md
+  h_87e1a3c7c2076a 1-45
+scm/ztna_connector_all/docs/WildcardsListResponse.md
+  h_87e1a3c7c2076a 1-32
+scm/ztna_connector_all/exceptions.py
+  h_87e1a3c7c2076a 1-200
+scm/ztna_connector_all/models/__init__.py
+  h_87e1a3c7c2076a 1-61
+scm/ztna_connector_all/models/applications.py
+  h_87e1a3c7c2076a 1-132
+scm/ztna_connector_all/models/applications_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/applications_spec_inner.py
+  h_87e1a3c7c2076a 1-114
+scm/ztna_connector_all/models/connector_group_connectors.py
+  h_87e1a3c7c2076a 1-98
+scm/ztna_connector_all/models/connector_group_connectors_connectors.py
+  h_87e1a3c7c2076a 1-99
+scm/ztna_connector_all/models/connector_group_fqdn_rules.py
+  h_87e1a3c7c2076a 1-98
+scm/ztna_connector_all/models/connector_group_scheduled_upgrade.py
+  h_87e1a3c7c2076a 1-97
+scm/ztna_connector_all/models/connector_group_status.py
+  h_87e1a3c7c2076a 1-106
+scm/ztna_connector_all/models/connector_group_status_counts.py
+  h_87e1a3c7c2076a 1-94
+scm/ztna_connector_all/models/connector_group_subnet_rules.py
+  h_87e1a3c7c2076a 1-98
+scm/ztna_connector_all/models/connector_group_upgrade_status.py
+  h_87e1a3c7c2076a 1-104
+scm/ztna_connector_all/models/connector_group_upgrade_status_data_inner.py
+  h_87e1a3c7c2076a 1-104
+scm/ztna_connector_all/models/connector_group_wildcards.py
+  h_87e1a3c7c2076a 1-98
+scm/ztna_connector_all/models/connector_groups.py
+  h_87e1a3c7c2076a 1-128
+scm/ztna_connector_all/models/connector_groups_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/connector_images.py
+  h_87e1a3c7c2076a 1-90
+scm/ztna_connector_all/models/connector_images_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/connector_quiesce.py
+  h_87e1a3c7c2076a 1-88
+scm/ztna_connector_all/models/connector_scheduled_upgrade.py
+  h_87e1a3c7c2076a 1-93
+scm/ztna_connector_all/models/connector_status.py
+  h_87e1a3c7c2076a 1-142
+scm/ztna_connector_all/models/connector_status_flags.py
+  h_87e1a3c7c2076a 1-100
+scm/ztna_connector_all/models/connector_status_flags_capabilities.py
+  h_87e1a3c7c2076a 1-90
+scm/ztna_connector_all/models/connector_upgrade_status.py
+  h_87e1a3c7c2076a 1-106
+scm/ztna_connector_all/models/connectors.py
+  h_87e1a3c7c2076a 1-122
+scm/ztna_connector_all/models/connectors_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/diagnostic_file_list.py
+  h_87e1a3c7c2076a 1-96
+scm/ztna_connector_all/models/diagnostic_file_list_data_inner.py
+  h_87e1a3c7c2076a 1-106
+scm/ztna_connector_all/models/discovered_applications.py
+  h_87e1a3c7c2076a 1-102
+scm/ztna_connector_all/models/discovered_applications_applications_inner.py
+  h_87e1a3c7c2076a 1-108
+scm/ztna_connector_all/models/discovered_applications_applications_inner_app_spec_inner.py
+  h_87e1a3c7c2076a 1-92
+scm/ztna_connector_all/models/discovered_applications_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/error_detail.py
+  h_87e1a3c7c2076a 1-100
+scm/ztna_connector_all/models/error_detail_causes_inner.py
+  h_87e1a3c7c2076a 1-90
+scm/ztna_connector_all/models/error_object.py
+  h_87e1a3c7c2076a 1-100
+scm/ztna_connector_all/models/error_response.py
+  h_87e1a3c7c2076a 1-92
+scm/ztna_connector_all/models/license.py
+  h_87e1a3c7c2076a 1-99
+scm/ztna_connector_all/models/packet_capture.py
+  h_87e1a3c7c2076a 1-92
+scm/ztna_connector_all/models/packet_capture_create.py
+  h_87e1a3c7c2076a 1-94
+scm/ztna_connector_all/models/start_tenant_offboarding202_response.py
+  h_87e1a3c7c2076a 1-88
+scm/ztna_connector_all/models/subnets.py
+  h_87e1a3c7c2076a 1-128
+scm/ztna_connector_all/models/subnets_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/models/tenant_status.py
+  h_87e1a3c7c2076a 1-95
+scm/ztna_connector_all/models/wildcards.py
+  h_87e1a3c7c2076a 1-158
+scm/ztna_connector_all/models/wildcards_list_response.py
+  h_87e1a3c7c2076a 1-113
+scm/ztna_connector_all/rest.py
+  h_87e1a3c7c2076a 1-264
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "ee56bf8a568ce8fcac8eadebe3eb420a8b2a7de1",
+  "prompts": {},
+  "humans": {
+    "h_87e1a3c7c2076a": {
+      "author": "Vaishnavi <vramanujan@paloaltonetworks.com>"
+    }
+  }
+}
