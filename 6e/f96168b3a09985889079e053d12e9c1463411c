@@ -1,0 +1,18 @@
+scm/network_services/models/ike_crypto_profiles.py
+  h_87e1a3c7c2076a 58-59
+scm/network_services/models/ipsec_crypto_profiles.py
+  h_87e1a3c7c2076a 63-64
+scm/ztna_connector_all/models/applications.py
+  h_87e1a3c7c2076a 38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "6ef96168b3a09985889079e053d12e9c1463411c",
+  "prompts": {},
+  "humans": {
+    "h_87e1a3c7c2076a": {
+      "author": "Vaishnavi <vramanujan@paloaltonetworks.com>"
+    }
+  }
+}
