@@ -35,7 +35,7 @@ class Applications(BaseModel):
     description: Optional[Annotated[str, Field(strict=True, max_length=1023)]] = Field(default=None, description="The description of the resource")
     group: StrictStr = Field(description="A comma separated list of connector group IDs")
     icmp_allowed: Optional[StrictBool] = Field(default=None, description="Whether ICMP is allowed for this FQDN rule.  If omitted, defaults to true.")
-    name: Annotated[str, Field(min_length=1, strict=True, max_length=63)] = Field(description="Name of the FQDN rule.")
+    name: Annotated[str, Field(min_length=1, strict=True, max_length=255)] = Field(description="Name of the FQDN rule.")
     oid: Optional[StrictStr] = Field(default=None, description="The UUID of the resource")
     spec: List[ApplicationsSpecInner]
     updated_time: Optional[StrictStr] = None
