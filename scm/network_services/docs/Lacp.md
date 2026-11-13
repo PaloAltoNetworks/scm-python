@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **enable** | **bool** | Enable LACP? | [optional] [default to False]
 **fast_failover** | **bool** | Fast failover | [optional] [default to False]
+**high_availability** | [**LacpHighAvailability**](LacpHighAvailability.md) |  | [optional] 
 **max_ports** | **int** | Maximum number of physical ports bundled in the LAG | [optional] [default to 8]
 **mode** | **str** | Mode | [optional] [default to 'passive']
 **system_priority** | **int** | LACP system priority in system ID | [optional] [default to 32768]

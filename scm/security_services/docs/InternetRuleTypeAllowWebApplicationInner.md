@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**app_id** | **str** |  | [optional] 
 **application_function** | **List[str]** |  | [optional] 
 **dlp** | **str** |  | [optional] 
 **file_control** | [**InternetRuleTypeAllowUrlCategoryInnerFileControl**](InternetRuleTypeAllowUrlCategoryInnerFileControl.md) |  | [optional] 

@@ -60,8 +60,8 @@ class IpsecCryptoProfiles(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['no-pfs', 'group1', 'group2', 'group5', 'group14', 'group19', 'group20']):
-            raise ValueError("must be one of enum values ('no-pfs', 'group1', 'group2', 'group5', 'group14', 'group19', 'group20')")
+        if value not in set(['no-pfs', 'group1', 'group2', 'group5', 'group14', 'group19', 'group20', 'group21', 'ml-kem-512', 'ml-kem-768', 'ml-kem-1024']):
+            raise ValueError("must be one of enum values ('no-pfs', 'group1', 'group2', 'group5', 'group14', 'group19', 'group20', 'group21', 'ml-kem-512', 'ml-kem-768', 'ml-kem-1024')")
         return value
 
     @field_validator('folder')

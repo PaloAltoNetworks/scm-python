@@ -206,3 +206,31 @@ def test_delete_application_override_rule_by_id(application_override_rules_api):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_application_override_rules(application_override_rules_api, clean_application_override_rule):
+    """
+    Test fetching a single application override rule by name using the fetch convenience method.
+    Equivalent to Go: Test_security_services_ApplicationOverrideRulesAPIService_FetchApplicationOverrideRules
+    """
+    # Fetch by exact name (position is required for rules APIs)
+    fetched_obj = application_override_rules_api.fetch_application_override_rules(
+        name=clean_application_override_rule.name,
+        folder=clean_application_override_rule.folder,
+        position="pre"
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found rule '{clean_application_override_rule.name}'"
+    assert fetched_obj.id == clean_application_override_rule.id
+    assert fetched_obj.name == clean_application_override_rule.name
+    logger.info(f"\n[SUCCESS] fetch_application_override_rules found object: {fetched_obj.name}")
+
+    # Test fetching non-existent rule (should return None)
+    not_found = application_override_rules_api.fetch_application_override_rules(
+        name="non-existent-app-override-rule-xyz-12345",
+        folder=clean_application_override_rule.folder,
+        position="pre"
+    )
+    assert not_found is None, "Should return None for non-existent rule"
+    logger.info(f"\n[SUCCESS] fetch_application_override_rules correctly returned None for non-existent rule")

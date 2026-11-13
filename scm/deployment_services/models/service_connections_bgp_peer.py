@@ -18,20 +18,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, SecretStr, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
 class ServiceConnectionsBgpPeer(BaseModel):
     """
-    ServiceConnectionsBgpPeer
+    Secondary BGP peer (secondary WAN)
     """ # noqa: E501
-    local_ip_address: Optional[StrictStr] = None
-    local_ipv6_address: Optional[StrictStr] = None
-    peer_ip_address: Optional[StrictStr] = None
-    peer_ipv6_address: Optional[StrictStr] = None
-    secret: Optional[SecretStr] = None
+    local_ip_address: Optional[StrictStr] = Field(default=None, description="Local peer IP address (secondary WAN)")
+    local_ipv6_address: Optional[StrictStr] = Field(default=None, description="Local peer IPv6 address (secondary WAN)")
+    peer_ip_address: Optional[StrictStr] = Field(default=None, description="Remote peer IP address (secondary WAN)")
+    peer_ipv6_address: Optional[StrictStr] = Field(default=None, description="Remote peer IPv6 address (secondary WAN)")
+    secret: Optional[SecretStr] = Field(default=None, description="BGP peering secret (secondary WAN)")
     __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "secret"]
 
     model_config = ConfigDict(

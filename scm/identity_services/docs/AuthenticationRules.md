@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**authentication_enforcement** | **str** | The authentication profile name | [optional] 
+**authentication_enforcement** | **str** | The authentication profile name | [optional] [default to 'default-no-captive-portal']
 **category** | **List[str]** | The destination URL categories | [optional] 
 **description** | **str** | The description of the authentication rule | [optional] 
 **destination** | **List[str]** | The destination addresses | 

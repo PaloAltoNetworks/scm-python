@@ -1,15 +1,16 @@
 # ServiceConnectionsBgpPeer
 
+Secondary BGP peer (secondary WAN)
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**local_ip_address** | **str** |  | [optional] 
-**local_ipv6_address** | **str** |  | [optional] 
-**peer_ip_address** | **str** |  | [optional] 
-**peer_ipv6_address** | **str** |  | [optional] 
-**secret** | **str** |  | [optional] 
+**local_ip_address** | **str** | Local peer IP address (secondary WAN) | [optional] 
+**local_ipv6_address** | **str** | Local peer IPv6 address (secondary WAN) | [optional] 
+**peer_ip_address** | **str** | Remote peer IP address (secondary WAN) | [optional] 
+**peer_ipv6_address** | **str** | Remote peer IPv6 address (secondary WAN) | [optional] 
+**secret** | **str** | BGP peering secret (secondary WAN) | [optional] 
 
 ## Example
 

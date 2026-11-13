@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from scm.network_services.models.adjust_tcp_mss import AdjustTcpMss
 from scm.network_services.models.loopback_interfaces_ip_inner import LoopbackInterfacesIpInner
 from scm.network_services.models.loopback_interfaces_ipv6 import LoopbackInterfacesIpv6
 from typing import Optional, Set
@@ -30,6 +31,7 @@ class LoopbackInterfaces(BaseModel):
     """
     LoopbackInterfaces
     """ # noqa: E501
+    adjust_tcp_mss: Optional[AdjustTcpMss] = None
     comment: Optional[StrictStr] = Field(default=None, description="Description for loopback interface")
     default_value: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Default interface assignment for loopback interface")
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
@@ -42,7 +44,7 @@ class LoopbackInterfaces(BaseModel):
     name: Annotated[str, Field(strict=True)] = Field(description="Loopback Interface name")
     netflow_profile: Optional[StrictStr] = Field(default=None, description="Name of Netflow Profile to assign to Interface")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
-    __properties: ClassVar[List[str]] = ["comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "netflow_profile", "snippet"]
+    __properties: ClassVar[List[str]] = ["adjust_tcp_mss", "comment", "default_value", "device", "folder", "id", "interface_management_profile", "ip", "ipv6", "mtu", "name", "netflow_profile", "snippet"]
 
     @field_validator('default_value')
     def default_value_validate_regular_expression(cls, value):
@@ -132,6 +134,9 @@ class LoopbackInterfaces(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of adjust_tcp_mss
+        if self.adjust_tcp_mss:
+            _dict['adjust_tcp_mss'] = self.adjust_tcp_mss.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in ip (list)
         _items = []
         if self.ip:
@@ -154,6 +159,7 @@ class LoopbackInterfaces(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "adjust_tcp_mss": AdjustTcpMss.from_dict(obj["adjust_tcp_mss"]) if obj.get("adjust_tcp_mss") is not None else None,
             "comment": obj.get("comment"),
             "default_value": obj.get("default_value"),
             "device": obj.get("device"),

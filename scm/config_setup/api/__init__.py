@@ -1,6 +1,7 @@
 # flake8: noqa
 
 # import apis into api package
+from scm.config_setup.api.devices_api import DevicesApi
 from scm.config_setup.api.folders_api import FoldersApi
 from scm.config_setup.api.labels_api import LabelsApi
 from scm.config_setup.api.shared_snippets_api import SharedSnippetsApi

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **okta_api_host** | **str** | Okta API hostname | 
 **okta_baseuri** | **str** |  | [default to '/api/v1']
 **okta_org** | **str** | Okta organization | 
-**okta_timeout** | **int** | Okta timeout (seconds) | [default to 30]
+**okta_timeout** | **str** | Okta timeout (seconds) | [default to '30']
 **okta_token** | **str** | Okta API token | 
 
 ## Example

@@ -23,6 +23,7 @@ from scm.config_setup.models.deleted_subscriber import DeletedSubscriber
 from scm.config_setup.models.devices import Devices
 from scm.config_setup.models.devices_available_licensess_inner import DevicesAvailableLicensessInner
 from scm.config_setup.models.devices_installed_licenses_inner import DevicesInstalledLicensesInner
+from scm.config_setup.models.devices_list_response import DevicesListResponse
 from scm.config_setup.models.devices_put import DevicesPut
 from scm.config_setup.models.error_detail_cause_info import ErrorDetailCauseInfo
 from scm.config_setup.models.folders import Folders

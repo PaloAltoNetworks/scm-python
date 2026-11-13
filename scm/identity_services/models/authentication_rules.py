@@ -28,7 +28,7 @@ class AuthenticationRules(BaseModel):
     """
     AuthenticationRules
     """ # noqa: E501
-    authentication_enforcement: Optional[StrictStr] = Field(default=None, description="The authentication profile name")
+    authentication_enforcement: Optional[StrictStr] = Field(default='default-no-captive-portal', description="The authentication profile name")
     category: Optional[List[StrictStr]] = Field(default=None, description="The destination URL categories")
     description: Optional[StrictStr] = Field(default=None, description="The description of the authentication rule")
     destination: List[StrictStr] = Field(description="The destination addresses")
@@ -108,7 +108,7 @@ class AuthenticationRules(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "authentication_enforcement": obj.get("authentication_enforcement"),
+            "authentication_enforcement": obj.get("authentication_enforcement") if obj.get("authentication_enforcement") is not None else 'default-no-captive-portal',
             "category": obj.get("category"),
             "description": obj.get("description"),
             "destination": obj.get("destination"),

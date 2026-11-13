@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **app_version** | **str** |  | [optional] [readonly] 
 **av_release_date** | **str** |  | [optional] [readonly] 
 **available_licensess** | [**List[DevicesAvailableLicensessInner]**](DevicesAvailableLicensessInner.md) |  | [optional] [readonly] 
-**connected_since** | **datetime** |  | [optional] [readonly] 
+**connected_since** | **str** |  | [optional] [readonly] 
 **description** | **str** | The description of the device | [optional] 
 **dev_cert_detail** | **str** |  | [optional] [readonly] 
 **dev_cert_expiry_date** | **str** |  | [optional] [readonly] 

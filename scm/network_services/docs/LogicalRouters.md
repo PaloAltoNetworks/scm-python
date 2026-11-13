@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **folder** | **str** | The folder in which the resource is defined | [optional] 
 **id** | **str** | UUID of the resource | [optional] [readonly] 
 **name** | **str** |  | 
-**routing_stack** | **str** |  | [optional] 
 **snippet** | **str** | The snippet in which the resource is defined | [optional] 
 **vrf** | [**List[LogicalRoutersVrfInner]**](LogicalRoutersVrfInner.md) |  | [optional] 
 

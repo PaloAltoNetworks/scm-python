@@ -6,7 +6,6 @@ from scm.objects.api.addresses_api import AddressesApi
 from scm.objects.api.application_filters_api import ApplicationFiltersApi
 from scm.objects.api.application_groups_api import ApplicationGroupsApi
 from scm.objects.api.applications_api import ApplicationsApi
-from scm.objects.api.auto_tag_actions_api import AutoTagActionsApi
 from scm.objects.api.dynamic_user_groups_api import DynamicUserGroupsApi
 from scm.objects.api.external_dynamic_lists_api import ExternalDynamicListsApi
 from scm.objects.api.hip_objects_api import HIPObjectsApi

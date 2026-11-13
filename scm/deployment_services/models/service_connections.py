@@ -41,10 +41,11 @@ class ServiceConnections(BaseModel):
     protocol: Optional[ServiceConnectionsProtocol] = None
     qos: Optional[ServiceConnectionsQos] = None
     region: StrictStr
+    region_tag: Optional[StrictStr] = None
     secondary_ipsec_tunnel: Optional[StrictStr] = None
     source_nat: Optional[StrictBool] = None
     subnets: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["backup_SC", "bgp_peer", "id", "ipsec_tunnel", "name", "nat_pool", "no_export_community", "onboarding_type", "protocol", "qos", "region", "secondary_ipsec_tunnel", "source_nat", "subnets"]
+    __properties: ClassVar[List[str]] = ["backup_SC", "bgp_peer", "id", "ipsec_tunnel", "name", "nat_pool", "no_export_community", "onboarding_type", "protocol", "qos", "region", "region_tag", "secondary_ipsec_tunnel", "source_nat", "subnets"]
 
     @field_validator('no_export_community')
     def no_export_community_validate_enum(cls, value):
@@ -139,6 +140,7 @@ class ServiceConnections(BaseModel):
             "protocol": ServiceConnectionsProtocol.from_dict(obj["protocol"]) if obj.get("protocol") is not None else None,
             "qos": ServiceConnectionsQos.from_dict(obj["qos"]) if obj.get("qos") is not None else None,
             "region": obj.get("region"),
+            "region_tag": obj.get("region_tag"),
             "secondary_ipsec_tunnel": obj.get("secondary_ipsec_tunnel"),
             "source_nat": obj.get("source_nat"),
             "subnets": obj.get("subnets")

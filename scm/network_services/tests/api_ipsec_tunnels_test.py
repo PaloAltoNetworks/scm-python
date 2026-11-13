@@ -12,6 +12,8 @@ from scm.network_services.models import (
     IkeGatewaysAuthentication,
     IkeGatewaysAuthenticationPreSharedKey,
     IkeGatewaysPeerAddress,
+    IkeGatewaysPeerId,
+    IkeGatewaysLocalId,
     IkeGatewaysProtocol,
     IkeGatewaysProtocolIkev1,
     IkeCryptoProfiles,
@@ -69,6 +71,8 @@ def dependency_ike_gateway(ike_gw_api, ike_crypto_api):
             pre_shared_key=IkeGatewaysAuthenticationPreSharedKey(key="secret123")
         ),
         peer_address=IkeGatewaysPeerAddress(ip="1.1.1.1"),
+        peer_id=IkeGatewaysPeerId(type="ipaddr", id="10.3.3.4"),
+        local_id=IkeGatewaysLocalId(type="ipaddr", id="10.3.4.4"),
         protocol=IkeGatewaysProtocol(
             ikev1=IkeGatewaysProtocolIkev1(ike_crypto_profile=crypto_name),
             version="ikev1"
@@ -224,3 +228,29 @@ def test_delete_ipsec_tunnel_by_id(tunnel_api, dependency_ike_gateway):
         # Exception is already parsed by decorator
         logger.info(f"✅ Correctly raised ObjectNotPresentError for deleted object")
         logger.info(f"   Object ID: {created_obj.id}")
+
+
+def test_fetch_ipsec_tunnels(tunnel_api, clean_tunnel):
+    """
+    Test fetching a single IPsec tunnel by name using the fetch convenience method.
+    Equivalent to Go: Test_network_services_IPsecTunnelsAPIService_FetchIPsecTunnels
+    """
+    # Fetch by exact name
+    fetched_obj = tunnel_api.fetch_ipsec_tunnels(
+        name=clean_tunnel.name,
+        folder=TARGET_FOLDER
+    )
+
+    # Verify
+    assert fetched_obj is not None, f"Should have found tunnel '{clean_tunnel.name}'"
+    assert fetched_obj.id == clean_tunnel.id
+    assert fetched_obj.name == clean_tunnel.name
+    logger.info(f"\n[SUCCESS] fetch_ipsec_tunnels found object: {fetched_obj.name}")
+
+    # Test fetching non-existent tunnel (should return None)
+    not_found = tunnel_api.fetch_ipsec_tunnels(
+        name="non-existent-ipsec-tunnel-xyz-12345",
+        folder=TARGET_FOLDER
+    )
+    assert not_found is None, "Should return None for non-existent tunnel"
+    logger.info(f"\n[SUCCESS] fetch_ipsec_tunnels correctly returned None for non-existent tunnel")

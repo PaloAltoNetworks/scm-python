@@ -18,7 +18,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from scm.config_setup.models.devices_available_licensess_inner import DevicesAvailableLicensessInner
@@ -35,7 +34,7 @@ class Devices(BaseModel):
     app_version: Optional[StrictStr] = None
     av_release_date: Optional[StrictStr] = None
     available_licensess: Optional[List[DevicesAvailableLicensessInner]] = None
-    connected_since: Optional[datetime] = None
+    connected_since: Optional[StrictStr] = None
     description: Optional[StrictStr] = Field(default=None, description="The description of the device")
     dev_cert_detail: Optional[StrictStr] = None
     dev_cert_expiry_date: Optional[StrictStr] = None

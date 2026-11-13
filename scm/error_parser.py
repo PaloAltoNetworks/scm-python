@@ -76,12 +76,16 @@ class ErrorHandler:
         504: GatewayTimeoutError,
     }
 
+    # Prefix the API may prepend to error codes
+    ERROR_CODE_PREFIX = "PRISMA_ACCESS_"
+
     # Map error codes to specific exception classes
     # Supports both direct mapping and nested mapping by errorType/message
     ERROR_CODE_MAP: Dict[str, Union[Type[ScmException], Dict[str, Type[ScmException]]]] = {
         # SCM API error codes
         "API_I00013": {
             "object not present": ObjectNotPresentError,
+            "ObjectNotPresent": ObjectNotPresentError,  # CamelCase errorType format
             "operation impossible": ObjectNotPresentError,
             "object already exists": NameNotUniqueError,
             "object_already_exists": NameNotUniqueError,
@@ -379,9 +383,14 @@ class ErrorHandler:
             else:
                 exception_cls = ScmException
 
+        # The API may prefix codes (e.g. PRISMA_ACCESS_API_I00013); match on the bare code
+        lookup_code = error_code
+        if lookup_code.startswith(cls.ERROR_CODE_PREFIX):
+            lookup_code = lookup_code[len(cls.ERROR_CODE_PREFIX):]
+
         # Refine based on error code
-        if error_code in cls.ERROR_CODE_MAP:
-            code_mapping = cls.ERROR_CODE_MAP[error_code]
+        if lookup_code in cls.ERROR_CODE_MAP:
+            code_mapping = cls.ERROR_CODE_MAP[lookup_code]
 
             # If mapping is a dict, match by errorType or message
             if isinstance(code_mapping, dict):

@@ -55,8 +55,8 @@ class IkeCryptoProfiles(BaseModel):
     def dh_group_validate_enum(cls, value):
         """Validates the enum"""
         for i in value:
-            if i not in set(['group1', 'group2', 'group5', 'group14', 'group19', 'group20']):
-                raise ValueError("each list item must be one of ('group1', 'group2', 'group5', 'group14', 'group19', 'group20')")
+            if i not in set(['group1', 'group2', 'group5', 'group14', 'group19', 'group20', 'group21', 'ml-kem-512', 'ml-kem-768', 'ml-kem-1024']):
+                raise ValueError("each list item must be one of ('group1', 'group2', 'group5', 'group14', 'group19', 'group20', 'group21', 'ml-kem-512', 'ml-kem-768', 'ml-kem-1024')")
         return value
 
     @field_validator('encryption')

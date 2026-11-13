@@ -18,7 +18,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
@@ -40,8 +39,8 @@ class CertificatesGet(BaseModel):
     issuer: Optional[StrictStr] = Field(default=None, description="Issuer")
     issuer_hash: Optional[StrictStr] = Field(default=None, description="Issue hash")
     name: Optional[StrictStr] = Field(default=None, description="The name of the certificate")
-    not_valid_after: Optional[date] = Field(default=None, description="Not valid after this date")
-    not_valid_before: Optional[date] = Field(default=None, description="Not valid before this date")
+    not_valid_after: Optional[StrictStr] = Field(default=None, description="Not valid after this date")
+    not_valid_before: Optional[StrictStr] = Field(default=None, description="Not valid before this date")
     public_key: Optional[StrictStr] = Field(default=None, description="Public key")
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     subject: Optional[StrictStr] = Field(default=None, description="Subject")
