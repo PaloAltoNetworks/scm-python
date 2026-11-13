@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Network Deployment
+    Cloud NGFW
 
-    These APIs are used for defining and managing Prisma Access Remote Network and Service Connection configurations within Strata Cloud Manager.
+    These APIs are used for reading and managing Cloud NGFW firewall resources on AWS.
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@paloaltonetworks.com
@@ -18,21 +18,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ServiceConnectionsProtocolBgpPeer(BaseModel):
+class NgfirewallPublicIp(BaseModel):
     """
-    ServiceConnectionsProtocolBgpPeer
+    A public IP address assigned to the firewall.
     """ # noqa: E501
-    local_ip_address: Optional[StrictStr] = Field(default=None, description="Local peer IP address (secondary WAN)")
-    local_ipv6_address: Optional[StrictStr] = Field(default=None, description="Local peer IPv6 address (secondary WAN)")
-    peer_ip_address: Optional[StrictStr] = Field(default=None, description="Remote peer IP address (secondary WAN)")
-    peer_ipv6_address: Optional[StrictStr] = Field(default=None, description="Remote peer IPv6 address (secondary WAN)")
-    secret: Optional[SecretStr] = Field(default=None, description="BGP peering secret (secondary WAN)")
-    __properties: ClassVar[List[str]] = ["local_ip_address", "local_ipv6_address", "peer_ip_address", "peer_ipv6_address", "secret"]
+    ip_address: Optional[StrictStr] = Field(default=None, description="The public IP address.", alias="IPAddress")
+    ip_source: Optional[StrictStr] = Field(default=None, description="The source of the IP address allocation.", alias="IPSource")
+    ip_status: Optional[StrictStr] = Field(default=None, description="The current status of this public IP.", alias="IPStatus")
+    __properties: ClassVar[List[str]] = ["IPAddress", "IPSource", "IPStatus"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +50,7 @@ class ServiceConnectionsProtocolBgpPeer(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsProtocolBgpPeer from a JSON string"""
+        """Create an instance of NgfirewallPublicIp from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -77,7 +75,7 @@ class ServiceConnectionsProtocolBgpPeer(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ServiceConnectionsProtocolBgpPeer from a dict"""
+        """Create an instance of NgfirewallPublicIp from a dict"""
         if obj is None:
             return None
 
@@ -85,11 +83,9 @@ class ServiceConnectionsProtocolBgpPeer(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "local_ip_address": obj.get("local_ip_address"),
-            "local_ipv6_address": obj.get("local_ipv6_address"),
-            "peer_ip_address": obj.get("peer_ip_address"),
-            "peer_ipv6_address": obj.get("peer_ipv6_address"),
-            "secret": obj.get("secret")
+            "IPAddress": obj.get("IPAddress"),
+            "IPSource": obj.get("IPSource"),
+            "IPStatus": obj.get("IPStatus")
         })
         return _obj
 

@@ -31,6 +31,7 @@ class WildfireAntiVirusProfiles(BaseModel):
     """
     WildfireAntiVirusProfiles
     """ # noqa: E501
+    cloud_inline_analysis: Optional[StrictBool] = None
     description: Optional[StrictStr] = None
     device: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The device in which the resource is defined")
     folder: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The folder in which the resource is defined")
@@ -41,7 +42,7 @@ class WildfireAntiVirusProfiles(BaseModel):
     rules: Optional[List[WildfireAntiVirusProfilesRulesInner]] = None
     snippet: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="The snippet in which the resource is defined")
     threat_exception: Optional[List[WildfireAntiVirusProfilesThreatExceptionInner]] = None
-    __properties: ClassVar[List[str]] = ["description", "device", "folder", "id", "mlav_exception", "name", "packet_capture", "rules", "snippet", "threat_exception"]
+    __properties: ClassVar[List[str]] = ["cloud_inline_analysis", "description", "device", "folder", "id", "mlav_exception", "name", "packet_capture", "rules", "snippet", "threat_exception"]
 
     @field_validator('device')
     def device_validate_regular_expression(cls, value):
@@ -154,6 +155,7 @@ class WildfireAntiVirusProfiles(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "cloud_inline_analysis": obj.get("cloud_inline_analysis"),
             "description": obj.get("description"),
             "device": obj.get("device"),
             "folder": obj.get("folder"),

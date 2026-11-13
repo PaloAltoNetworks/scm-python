@@ -6,7 +6,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bgp** | [**ServiceConnectionsProtocolBgp**](ServiceConnectionsProtocolBgp.md) |  | [optional] 
-**bgp_peer** | [**ServiceConnectionsProtocolBgpPeer**](ServiceConnectionsProtocolBgpPeer.md) |  | [optional] 
 
 ## Example
 
