@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **backup_sc** | **str** |  | [optional] 
+**bgp_peer** | [**ServiceConnectionsBgpPeer**](ServiceConnectionsBgpPeer.md) |  | [optional] 
 **id** | **str** | The UUID of the service connection | [readonly] 
 **ipsec_tunnel** | **str** |  | 
 **name** | **str** | The name of the service connection | 

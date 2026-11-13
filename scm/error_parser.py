@@ -82,6 +82,7 @@ class ErrorHandler:
         # SCM API error codes
         "API_I00013": {
             "object not present": ObjectNotPresentError,
+            "ObjectNotPresent": ObjectNotPresentError,  # CamelCase errorType format
             "operation impossible": ObjectNotPresentError,
             "object already exists": NameNotUniqueError,
             "object_already_exists": NameNotUniqueError,

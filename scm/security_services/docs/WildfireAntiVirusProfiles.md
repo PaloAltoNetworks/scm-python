@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**cloud_inline_analysis** | **bool** |  | [optional] 
 **description** | **str** |  | [optional] 
 **device** | **str** | The device in which the resource is defined | [optional] 
 **folder** | **str** | The folder in which the resource is defined | [optional] 

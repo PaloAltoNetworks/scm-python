@@ -32,12 +32,12 @@ class ConfigVersion(BaseModel):
     created: Union[StrictFloat, StrictInt]
     var_date: datetime = Field(alias="date")
     deleted: Union[StrictFloat, StrictInt]
-    description: StrictStr
+    description: Optional[StrictStr]
     edited_by: Optional[StrictStr] = None
     id: StrictInt = Field(description="The configuration version")
     impacted_devices: Optional[StrictStr] = None
     ngfw_scope: Optional[StrictStr] = Field(default=None, description="A comma separated list of firewall serial numbers")
-    scope: StrictStr
+    scope: Optional[StrictStr]
     swg_config: Optional[StrictStr] = None
     types: Optional[StrictStr] = None
     updated: Union[StrictFloat, StrictInt]
@@ -83,6 +83,16 @@ class ConfigVersion(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if description (nullable) is None
+        # and model_fields_set contains the field
+        if self.description is None and "description" in self.model_fields_set:
+            _dict['description'] = None
+
+        # set to None if scope (nullable) is None
+        # and model_fields_set contains the field
+        if self.scope is None and "scope" in self.model_fields_set:
+            _dict['scope'] = None
+
         return _dict
 
     @classmethod

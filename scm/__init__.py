@@ -13,6 +13,9 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # Import all sub-clients
+from scm.cloud_ngfw import api as cloud_ngfw_api
+from scm.cloud_ngfw.api_client import ApiClient as CloudNgfwApiClient
+from scm.cloud_ngfw.configuration import Configuration as CloudNgfwConfiguration
 from scm.config_operations import api as config_operations_api
 from scm.config_operations.api_client import ApiClient as ConfigOperationsApiClient
 from scm.config_operations.configuration import Configuration as ConfigOperationsConfiguration
@@ -329,6 +332,7 @@ class Scm:
             token_source = "auth API"
 
         # Initialize sub-clients
+        self.cloud_ngfw = self._init_cloud_ngfw_client()
         self.config_operations = self._init_config_operations_client()
         self.config_setup = self._init_config_setup_client()
         self.deployment_services = self._init_deployment_services_client()
@@ -513,6 +517,8 @@ class Scm:
 
         This is called after token refresh to ensure all API clients use the new token.
         """
+        if hasattr(self, 'cloud_ngfw') and hasattr(self.cloud_ngfw, 'api_client'):
+            self.cloud_ngfw.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'config_operations') and hasattr(self.config_operations, 'api_client'):
             self.config_operations.api_client.configuration.access_token = self._access_token
         if hasattr(self, 'config_setup') and hasattr(self.config_setup, 'api_client'):
@@ -553,6 +559,25 @@ class Scm:
     def access_token(self) -> Optional[str]:
         """Get the current access token."""
         return self._access_token
+    def _init_cloud_ngfw_client(self):
+        # Construct base URL by appending the service-specific path suffix
+        # Host: https://api.sase.paloaltonetworks.com
+        # Suffix: 
+        config = CloudNgfwConfiguration(
+            host=f"https://{self.host}"
+        )
+        config.verify_ssl = self.verify_ssl
+        config.access_token = self._access_token
+
+        client = CloudNgfwApiClient(config)
+
+        # Wrap the rest client's request method to auto-refresh tokens
+        client.rest_client.request = _create_auto_refresh_wrapper(
+            self, client.rest_client.request
+        )
+
+        cloud_ngfw_api.api_client = client
+        return cloud_ngfw_api
     def _init_config_operations_client(self):
         # Construct base URL by appending the service-specific path suffix
         # Host: https://api.sase.paloaltonetworks.com
