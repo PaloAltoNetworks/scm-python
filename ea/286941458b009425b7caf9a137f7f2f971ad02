@@ -1,0 +1,188 @@
+scm/__init__.py
+  h_55d70f393a1b06 16-18,335,520-521,562-580
+scm/cloud_ngfw/__init__.py
+  h_55d70f393a1b06 1-66
+scm/cloud_ngfw/api/__init__.py
+  h_55d70f393a1b06 1-5
+scm/cloud_ngfw/api/ngfirewalls_api.py
+  h_55d70f393a1b06 1-1641
+scm/cloud_ngfw/api_client.py
+  h_55d70f393a1b06 1-798
+scm/cloud_ngfw/api_response.py
+  h_55d70f393a1b06 1-21
+scm/cloud_ngfw/cngfw_helpers.py
+  h_55d70f393a1b06 1-219
+scm/cloud_ngfw/configuration.py
+  h_55d70f393a1b06 1-467
+scm/cloud_ngfw/docs/GenericError.md
+  h_55d70f393a1b06 1-30
+scm/cloud_ngfw/docs/GenericErrorErrorsInner.md
+  h_55d70f393a1b06 1-32
+scm/cloud_ngfw/docs/NgfirewallCloudwatchMetrics.md
+  h_55d70f393a1b06 1-32
+scm/cloud_ngfw/docs/NgfirewallCommitInfo.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallCreateRequest.md
+  h_55d70f393a1b06 1-44
+scm/cloud_ngfw/docs/NgfirewallCreateResponse.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallCreateResponseBody.md
+  h_55d70f393a1b06 1-41
+scm/cloud_ngfw/docs/NgfirewallEgressNatConfig.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallEgressNatSettings.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallEndpoint.md
+  h_55d70f393a1b06 1-39
+scm/cloud_ngfw/docs/NgfirewallEndpointPrefixes.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallFirewall.md
+  h_55d70f393a1b06 1-54
+scm/cloud_ngfw/docs/NgfirewallGwlbConfig.md
+  h_55d70f393a1b06 1-34
+scm/cloud_ngfw/docs/NgfirewallIpv6Config.md
+  h_55d70f393a1b06 1-30
+scm/cloud_ngfw/docs/NgfirewallLogConfig.md
+  h_55d70f393a1b06 1-35
+scm/cloud_ngfw/docs/NgfirewallNotification.md
+  h_55d70f393a1b06 1-33
+scm/cloud_ngfw/docs/NgfirewallNotificationLink.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallPrefixList.md
+  h_55d70f393a1b06 1-30
+scm/cloud_ngfw/docs/NgfirewallPrivateAccess.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallPublicIp.md
+  h_55d70f393a1b06 1-32
+scm/cloud_ngfw/docs/NgfirewallResponseBody.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallResponseStatus.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallStatus.md
+  h_55d70f393a1b06 1-40
+scm/cloud_ngfw/docs/NgfirewallTag.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallUpdateRequest.md
+  h_55d70f393a1b06 1-44
+scm/cloud_ngfw/docs/NgfirewallUpdateResponse.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallUpdateResponseBody.md
+  h_55d70f393a1b06 1-44
+scm/cloud_ngfw/docs/NgfirewallUserId.md
+  h_55d70f393a1b06 1-38
+scm/cloud_ngfw/docs/NgfirewallUserIdNetwork.md
+  h_55d70f393a1b06 1-33
+scm/cloud_ngfw/docs/Ngfirewalls.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallsApi.md
+  h_55d70f393a1b06 1-441
+scm/cloud_ngfw/docs/NgfirewallsListResponse.md
+  h_55d70f393a1b06 1-31
+scm/cloud_ngfw/docs/NgfirewallsListResponseBody.md
+  h_55d70f393a1b06 1-30
+scm/cloud_ngfw/exceptions.py
+  h_55d70f393a1b06 1-200
+scm/cloud_ngfw/models/__init__.py
+  h_55d70f393a1b06 1-49
+scm/cloud_ngfw/models/generic_error.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/generic_error_errors_inner.py
+  h_55d70f393a1b06 1-94
+scm/cloud_ngfw/models/ngfirewall_cloudwatch_metrics.py
+  h_55d70f393a1b06 1-93
+scm/cloud_ngfw/models/ngfirewall_commit_info.py
+  h_55d70f393a1b06 1-90
+scm/cloud_ngfw/models/ngfirewall_create_request.py
+  h_55d70f393a1b06 1-175
+scm/cloud_ngfw/models/ngfirewall_create_response.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewall_create_response_body.py
+  h_55d70f393a1b06 1-133
+scm/cloud_ngfw/models/ngfirewall_egress_nat_config.py
+  h_55d70f393a1b06 1-94
+scm/cloud_ngfw/models/ngfirewall_egress_nat_settings.py
+  h_55d70f393a1b06 1-100
+scm/cloud_ngfw/models/ngfirewall_endpoint.py
+  h_55d70f393a1b06 1-131
+scm/cloud_ngfw/models/ngfirewall_endpoint_prefixes.py
+  h_55d70f393a1b06 1-97
+scm/cloud_ngfw/models/ngfirewall_firewall.py
+  h_55d70f393a1b06 1-189
+scm/cloud_ngfw/models/ngfirewall_gwlb_config.py
+  h_55d70f393a1b06 1-96
+scm/cloud_ngfw/models/ngfirewall_ipv6_config.py
+  h_55d70f393a1b06 1-88
+scm/cloud_ngfw/models/ngfirewall_log_config.py
+  h_55d70f393a1b06 1-121
+scm/cloud_ngfw/models/ngfirewall_notification.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewall_notification_link.py
+  h_55d70f393a1b06 1-90
+scm/cloud_ngfw/models/ngfirewall_prefix_list.py
+  h_55d70f393a1b06 1-88
+scm/cloud_ngfw/models/ngfirewall_private_access.py
+  h_55d70f393a1b06 1-100
+scm/cloud_ngfw/models/ngfirewall_public_ip.py
+  h_55d70f393a1b06 1-92
+scm/cloud_ngfw/models/ngfirewall_response_body.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewall_response_status.py
+  h_55d70f393a1b06 1-90
+scm/cloud_ngfw/models/ngfirewall_status.py
+  h_55d70f393a1b06 1-176
+scm/cloud_ngfw/models/ngfirewall_tag.py
+  h_55d70f393a1b06 1-91
+scm/cloud_ngfw/models/ngfirewall_update_request.py
+  h_55d70f393a1b06 1-155
+scm/cloud_ngfw/models/ngfirewall_update_response.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewall_update_response_body.py
+  h_55d70f393a1b06 1-146
+scm/cloud_ngfw/models/ngfirewall_user_id.py
+  h_55d70f393a1b06 1-122
+scm/cloud_ngfw/models/ngfirewall_user_id_network.py
+  h_55d70f393a1b06 1-94
+scm/cloud_ngfw/models/ngfirewalls.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewalls_list_response.py
+  h_55d70f393a1b06 1-98
+scm/cloud_ngfw/models/ngfirewalls_list_response_body.py
+  h_55d70f393a1b06 1-96
+scm/cloud_ngfw/rest.py
+  h_55d70f393a1b06 1-264
+scm/cloud_ngfw/tests/api_ngfirewalls_test.py
+  h_55d70f393a1b06 1-370
+scm/config_operations/models/config_version.py
+  h_55d70f393a1b06 35,40,86-95
+scm/deployment_services/__init__.py
+  h_55d70f393a1b06 68
+scm/deployment_services/docs/ServiceConnections.md
+  h_55d70f393a1b06 9
+scm/deployment_services/docs/ServiceConnectionsBgpPeer.md
+  h_55d70f393a1b06 1,3,18,22-23,25,28-30
+scm/deployment_services/models/__init__.py
+  h_55d70f393a1b06 41
+scm/deployment_services/models/service_connections.py
+  h_55d70f393a1b06 23,34,48,111-113,133
+scm/deployment_services/models/service_connections_bgp_peer.py
+  h_55d70f393a1b06 26,28,55,80
+scm/deployment_services/models/service_connections_protocol.py
+  h_55d70f393a1b06 32,88
+scm/error_parser.py
+  h_55d70f393a1b06 85
+scm/security_services/docs/WildfireAntiVirusProfiles.md
+  h_55d70f393a1b06 8
+scm/security_services/models/wildfire_anti_virus_profiles.py
+  h_55d70f393a1b06 34,45,158
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "ea286941458b009425b7caf9a137f7f2f971ad02",
+  "prompts": {},
+  "humans": {
+    "h_55d70f393a1b06": {
+      "author": "Dhiren Chotwani <dchotwani@paloaltonetworks.com>"
+    }
+  }
+}
