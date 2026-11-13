@@ -21,7 +21,6 @@ import json
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
 from scm.deployment_services.models.service_connections_protocol_bgp import ServiceConnectionsProtocolBgp
-from scm.deployment_services.models.service_connections_protocol_bgp_peer import ServiceConnectionsProtocolBgpPeer
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,8 +29,7 @@ class ServiceConnectionsProtocol(BaseModel):
     ServiceConnectionsProtocol
     """ # noqa: E501
     bgp: Optional[ServiceConnectionsProtocolBgp] = None
-    bgp_peer: Optional[ServiceConnectionsProtocolBgpPeer] = None
-    __properties: ClassVar[List[str]] = ["bgp", "bgp_peer"]
+    __properties: ClassVar[List[str]] = ["bgp"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -75,9 +73,6 @@ class ServiceConnectionsProtocol(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of bgp
         if self.bgp:
             _dict['bgp'] = self.bgp.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of bgp_peer
-        if self.bgp_peer:
-            _dict['bgp_peer'] = self.bgp_peer.to_dict()
         return _dict
 
     @classmethod
@@ -90,8 +85,7 @@ class ServiceConnectionsProtocol(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "bgp": ServiceConnectionsProtocolBgp.from_dict(obj["bgp"]) if obj.get("bgp") is not None else None,
-            "bgp_peer": ServiceConnectionsProtocolBgpPeer.from_dict(obj["bgp_peer"]) if obj.get("bgp_peer") is not None else None
+            "bgp": ServiceConnectionsProtocolBgp.from_dict(obj["bgp"]) if obj.get("bgp") is not None else None
         })
         return _obj
 
