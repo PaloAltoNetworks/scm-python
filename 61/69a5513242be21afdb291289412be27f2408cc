@@ -1,0 +1,20 @@
+scm/error_parser.py
+  s_1f78d9fd769334::t_1129e9afc249a9 79-81,386-389,392-393
+  s_1f78d9fd769334::t_81fe4ccb3ce2e5 390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "6169a5513242be21afdb291289412be27f2408cc",
+  "prompts": {},
+  "sessions": {
+    "s_1f78d9fd769334": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0a846670-585f-41e4-ac62-5bd9b9b10d06",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Dhiren Chotwani <dchotwani@paloaltonetworks.com>"
+    }
+  }
+}
