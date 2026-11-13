@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.1-beta.4] - 2026-11-13
+
+### Added
+
+- Added support for ZTNA and CNGFW Modules to the Strata Cloud Manager (SCM) Python SDK
+
 ## [0.0.1-beta.3] - 2026-06-11
 
 ### Added
