@@ -1,0 +1,75 @@
+scm/cloud_ngfw_gcp/docs/LinkErrorResponse.md
+  s_b9ede404895335::t_9c7fcf8d6cee9a 1-29
+scm/cloud_ngfw_gcp/models/link_generate_result.py
+  s_b9ede404895335::t_b333eb69b2cabb 1-94
+scm/cloud_ngfw_gcp/models/__init__.py
+  s_b9ede404895335::t_d680ff051fa500 1-25
+scm/cloud_ngfw_gcp/models/link_generate_request.py
+  s_b9ede404895335::t_e714b0c479d5e5 1-96
+scm/cloud_ngfw_gcp/api/link_api.py
+  s_b9ede404895335::t_6515e6a1e0c898 1-647
+scm/cloud_ngfw_gcp/api/__init__.py
+  s_b9ede404895335::t_cbe14b4cb7a2db 1-5
+scm/cloud_ngfw_gcp/docs/LinkResponseStatus.md
+  s_b9ede404895335::t_8f791e11e0da4d 1-31
+scm/cloud_ngfw_gcp/docs/LinkGenerateResponse.md
+  s_b9ede404895335::t_16ff54c2fd9422 1-30
+scm/cloud_ngfw_gcp/tests/api_link_test.py
+  s_b9ede404895335::t_dcc5d1f244271e 1-183
+scm/cloud_ngfw_gcp/rest.py
+  s_b9ede404895335::t_5ab3a53f11f5c3 1-264
+scm/cloud_ngfw_gcp/models/link_unlink_response.py
+  s_b9ede404895335::t_321e82dc1e6112 1-98
+scm/cloud_ngfw_gcp/docs/LinkUnlinkResult.md
+  s_b9ede404895335::t_77f7fc7e35b515 1-30
+scm/cloud_ngfw_gcp/configuration.py
+  s_b9ede404895335::t_786d6c5d72c7d5 1-467
+scm/cloud_ngfw_gcp/models/link_unlink_result.py
+  s_b9ede404895335::t_c5368b03ea57ea 1-90
+scm/cloud_ngfw_gcp/docs/LinkApi.md
+  s_b9ede404895335::t_665f44d8cc95fb 1-180
+scm/__init__.py
+  s_b9ede404895335::t_55eb0d4c1a35fa 19-21,339,526-527,587-605
+scm/cloud_ngfw_gcp/api_response.py
+  s_b9ede404895335::t_3aed03b5edb8fb 1-21
+scm/cloud_ngfw_gcp/docs/LinkUnlinkRequest.md
+  s_b9ede404895335::t_fa5c5384002609 1-30
+scm/cloud_ngfw_gcp/models/link_unlink_request.py
+  s_b9ede404895335::t_24ac969ad8cc12 1-98
+scm/cloud_ngfw_gcp/__init__.py
+  s_b9ede404895335::t_2f5db4a029c865 1-42
+scm/cloud_ngfw_gcp/docs/LinkGenerateRequest.md
+  s_b9ede404895335::t_c11c393bd54e8a 1-29
+scm/cloud_ngfw_gcp/models/link_error_response.py
+  s_b9ede404895335::t_9c0c46ee90d2f4 1-92
+scm/cloud_ngfw_gcp/models/link_response_status.py
+  s_b9ede404895335::t_8e7cb66a75f1dc 1-92
+scm/cloud_ngfw_gcp/exceptions.py
+  s_b9ede404895335::t_ce6c90329495ea 1-200
+scm/cloud_ngfw_gcp/docs/LinkUnlinkResponse.md
+  s_b9ede404895335::t_6c1fb3d2124122 1-30
+scm/cloud_ngfw_gcp/models/link_generate_response.py
+  s_b9ede404895335::t_0a61b9303aa6a1 1-98
+scm/cloud_ngfw_gcp/docs/LinkGenerateResult.md
+  s_b9ede404895335::t_644bf3ef8edd91 1-32
+scm/cloud_ngfw_gcp/api_client.py
+  s_b9ede404895335::t_023e4f7d2a5f32 1-798
+.github/workflows/test.yml
+  s_b9ede404895335::t_c43db5f79c5526 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "1842784d335cd8a960545733138359e0062a305d",
+  "prompts": {},
+  "sessions": {
+    "s_b9ede404895335": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "923ba837-fd81-474b-b3de-339454339596",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Prateek Garg <pragarg@paloaltonetworks.com>"
+    }
+  }
+}
